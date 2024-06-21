@@ -1,0 +1,2 @@
+execute if score @s vsAddPoints matches 1 run function phan:game/4/race/results_show_5_plus_singular
+execute unless score @s vsAddPoints matches 1 run function phan:game/4/race/results_show_5_plus_plural

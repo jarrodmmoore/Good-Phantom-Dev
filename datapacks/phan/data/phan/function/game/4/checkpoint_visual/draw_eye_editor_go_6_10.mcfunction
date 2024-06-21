@@ -1,0 +1,6 @@
+#show particle to the proper players
+execute if score #checkpointNum value matches 6 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"14"}}} ~ ~ ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=5}]
+execute if score #checkpointNum value matches 7 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"14"}}} ~ ~ ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=6}]
+execute if score #checkpointNum value matches 8 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"14"}}} ~ ~ ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=7}]
+execute if score #checkpointNum value matches 9 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"14"}}} ~ ~ ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=8}]
+execute if score #checkpointNum value matches 10 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"14"}}} ~ ~ ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=9}]

@@ -1,0 +1,1 @@
+execute if entity @s[x=1349,y=100,z=2179,distance=..6] at @s run function phan:levels/shattered_city/a3_tp1

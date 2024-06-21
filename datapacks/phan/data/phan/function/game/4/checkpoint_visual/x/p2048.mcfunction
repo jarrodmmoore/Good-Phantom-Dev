@@ -1,0 +1,4 @@
+#execute if score #temp visualXoffset matches 4096.. run scoreboard players remove #temp visualXoffset 4096
+
+execute unless score #temp visualXoffset matches 2048.. run function phan:game/4/checkpoint_visual/x/p1024
+execute if score #temp visualXoffset matches 2048.. positioned ~-204.8 ~ ~ run function phan:game/4/checkpoint_visual/x/p1024

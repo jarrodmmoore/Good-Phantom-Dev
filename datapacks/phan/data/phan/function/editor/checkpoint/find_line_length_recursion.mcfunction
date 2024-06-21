@@ -1,0 +1,2 @@
+scoreboard players add #temp visualLength 1
+execute unless entity @a[tag=self_f,distance=..1] if score #temp visualLength matches ..50 positioned ^ ^ ^1 run function phan:editor/checkpoint/find_line_length_recursion

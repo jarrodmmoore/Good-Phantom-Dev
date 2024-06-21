@@ -1,0 +1,5 @@
+data modify block ~ ~ ~ front_text.messages[3] set value '["",{"text":"➀","color":"yellow"}]'
+data modify block ~ ~ ~1 front_text.messages[3] set value '["",{"text":"➁","color":"white"}]'
+data modify block ~ ~ ~2 front_text.messages[3] set value '["",{"text":"➂","color":"white"}]'
+data modify block ~ ~ ~3 front_text.messages[3] set value '["",{"text":"➃","color":"white"}]'
+data modify block ~ ~ ~4 front_text.messages[3] set value '["",{"text":"➄","color":"white"}]'

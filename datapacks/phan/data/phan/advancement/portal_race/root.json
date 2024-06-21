@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.root.portal_race",
+            "bold": true,
+            "color":"light_purple"
+        },
+        "description": {
+            "translate": "gp.advancement.description.portal_race"
+        },
+        "icon": {
+            "id": "minecraft:red_wool",
+            "components": {
+                "minecraft:custom_model_data":1111131
+            }
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/portal_race.png"
+    },
+    "criteria": {
+        "timeattack": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

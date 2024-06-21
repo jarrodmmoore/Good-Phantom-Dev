@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.full_combo"
+        },
+        "description": {
+            "translate": "gp.advancement.description.full_combo"
+        },
+        "icon": {
+            "id": "minecraft:yellow_wool",
+            "components": {
+                "minecraft:custom_model_data":1111112
+            }
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "fullcombo": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/root"
+}

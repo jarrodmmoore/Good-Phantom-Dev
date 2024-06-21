@@ -1,0 +1,10 @@
+execute if score @s scoreDigit1 matches 10 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE932\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 11 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE933\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 12 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE934\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 13 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE935\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 14 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE936\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 15 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE937\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 16 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE938\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 17 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE939\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 18 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE940\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}
+execute if score @s scoreDigit1 matches 19 run data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\uE941\\uF001\\uE918\\uF001\\uE904\\uF001","italic":false}'}

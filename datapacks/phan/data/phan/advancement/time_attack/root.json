@@ -1,0 +1,28 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.root.time_attack",
+            "bold": true,
+            "color":"red"
+        },
+        "description": {
+            "translate": "gp.advancement.description.time_attack"
+        },
+        "icon": {
+            "id": "minecraft:red_wool",
+            "components": {
+                "minecraft:custom_model_data":1111112
+            }
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/time_attack.png"
+    },
+    "criteria": {
+        "timeattack": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

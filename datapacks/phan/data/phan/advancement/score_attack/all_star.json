@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.all_star"
+        },
+        "description": {
+            "translate": "gp.advancement.description.all_star"
+        },
+        "icon": {
+            "id": "minecraft:gold_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "allstar": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/straight_a_student"
+}

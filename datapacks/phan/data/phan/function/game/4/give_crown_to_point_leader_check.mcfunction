@@ -1,0 +1,1 @@
+execute if score @s versusPoints > #test value run scoreboard players operation #test value = @s versusPoints

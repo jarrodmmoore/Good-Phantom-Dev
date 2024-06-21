@@ -1,0 +1,2 @@
+execute if score #posDisplayDigits value matches ..1 run function phan:custom_hud/versus_race/slot6_1digit
+execute if score #posDisplayDigits value matches 2.. run function phan:custom_hud/versus_race/slot6_2digit

@@ -1,0 +1,6 @@
+#based on checkpoint, listen for when we enter checkpoint hitbox
+execute if score #test2 value matches 20 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=21}] unless score @s editArg2 matches 1 run function phan:game/4/race/checkpoint/ender_pearl_check
+execute if score #test2 value matches 21 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=22}] unless score @s editArg2 matches 1 run function phan:game/4/race/checkpoint/ender_pearl_check
+execute if score #test2 value matches 22 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=23}] unless score @s editArg2 matches 1 run function phan:game/4/race/checkpoint/ender_pearl_check
+execute if score #test2 value matches 23 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=24}] unless score @s editArg2 matches 1 run function phan:game/4/race/checkpoint/ender_pearl_check
+execute if score #test2 value matches 24 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=25}] unless score @s editArg2 matches 1 run function phan:game/4/race/checkpoint/ender_pearl_check

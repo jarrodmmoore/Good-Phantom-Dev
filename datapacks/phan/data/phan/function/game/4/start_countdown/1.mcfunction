@@ -1,0 +1,50 @@
+#subtitle animation
+execute if score #321go value matches ..99 run title @a[tag=doneWithIntro] subtitle [""]
+execute if score #321go value matches 100 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-","color":"red"},{"text":"--------------","color":"white"}]
+execute if score #321go value matches 104 run title @a[tag=doneWithIntro] subtitle ["",{"text":"--","color":"red"},{"text":"-------------","color":"white"}]
+execute if score #321go value matches 108 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---","color":"red"},{"text":"------------","color":"white"}]
+execute if score #321go value matches 112 run title @a[tag=doneWithIntro] subtitle ["",{"text":"----","color":"red"},{"text":"-----------","color":"white"}]
+execute if score #321go value matches 116 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-----","color":"red"},{"text":"----------","color":"white"}]
+execute if score #321go value matches 120 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-","color":"gold"},{"text":"-----","color":"red"},{"text":"---------","color":"white"}]
+execute if score #321go value matches 124 run title @a[tag=doneWithIntro] subtitle ["",{"text":"--","color":"gold"},{"text":"-----","color":"red"},{"text":"--------","color":"white"}]
+execute if score #321go value matches 128 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---","color":"gold"},{"text":"-----","color":"red"},{"text":"-------","color":"white"}]
+execute if score #321go value matches 132 run title @a[tag=doneWithIntro] subtitle ["",{"text":"----","color":"gold"},{"text":"-----","color":"red"},{"text":"------","color":"white"}]
+execute if score #321go value matches 136 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-----","color":"gold"},{"text":"-----","color":"red"},{"text":"-----","color":"white"}]
+execute if score #321go value matches 140 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-","color":"yellow"},{"text":"-----","color":"gold"},{"text":"-----","color":"red"},{"text":"----","color":"white"}]
+execute if score #321go value matches 144 run title @a[tag=doneWithIntro] subtitle ["",{"text":"--","color":"yellow"},{"text":"-----","color":"gold"},{"text":"-----","color":"red"},{"text":"---","color":"white"}]
+execute if score #321go value matches 148 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---","color":"yellow"},{"text":"-----","color":"gold"},{"text":"-----","color":"red"},{"text":"--","color":"white"}]
+execute if score #321go value matches 152 run title @a[tag=doneWithIntro] subtitle ["",{"text":"----","color":"yellow"},{"text":"-----","color":"gold"},{"text":"-----","color":"red"},{"text":"-","color":"white"}]
+execute if score #321go value matches 156 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-----","color":"yellow"},{"text":"-----","color":"gold"},{"text":"-----","color":"red"}]
+execute if score #321go value matches 160 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---------------","color":"green"}]
+execute if score #321go value matches 161 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-------------","color":"green"}]
+execute if score #321go value matches 162 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-----------","color":"green"}]
+execute if score #321go value matches 163 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---------","color":"green"}]
+execute if score #321go value matches 164 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-------","color":"green"}]
+execute if score #321go value matches 165 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-----","color":"green"}]
+execute if score #321go value matches 166 run title @a[tag=doneWithIntro] subtitle ["",{"text":"---","color":"green"}]
+execute if score #321go value matches 167 run title @a[tag=doneWithIntro] subtitle ["",{"text":"-","color":"green"}]
+execute if score #321go value matches 168 run title @a[tag=doneWithIntro] subtitle [""]
+
+#sound effects
+execute if score #321go value matches 100 as @a[tag=doneWithIntro] at @s run playsound minecraft:block.note_block.pling master @s ~ ~100000 ~ 100000 .5
+execute if score #321go value matches 120 as @a[tag=doneWithIntro] at @s run playsound minecraft:block.note_block.pling master @s ~ ~100000 ~ 100000 .5
+execute if score #321go value matches 140 as @a[tag=doneWithIntro] at @s run playsound minecraft:block.note_block.pling master @s ~ ~100000 ~ 100000 .5
+execute if score #321go value matches 160 as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.firework_rocket.large_blast master @s ~ ~ ~ 100000 1
+
+#title animation
+execute if score #321go value matches ..99 run title @a[tag=doneWithIntro] title [""]
+execute if score #321go value matches 100..119 run title @a[tag=doneWithIntro] title ["",{"text":"3...","bold":true,"color":"red"}]
+execute if score #321go value matches 120..139 run title @a[tag=doneWithIntro] title ["",{"text":"2...","bold":true,"color":"gold"}]
+execute if score #321go value matches 140..159 run title @a[tag=doneWithIntro] title ["",{"text":"1...","bold":true,"color":"yellow"}]
+execute if score #321go value matches 160 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 162 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"dark_green"}]
+execute if score #321go value matches 164 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 166 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"dark_green"}]
+execute if score #321go value matches 168 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 170 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"dark_green"}]
+execute if score #321go value matches 172 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 174 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"dark_green"}]
+execute if score #321go value matches 176 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 178 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"dark_green"}]
+execute if score #321go value matches 180 run title @a[tag=doneWithIntro] title ["",{"translate":"gp.game.go_caps","bold":true,"color":"green"}]
+execute if score #321go value matches 182.. run title @a[tag=doneWithIntro] title [""]

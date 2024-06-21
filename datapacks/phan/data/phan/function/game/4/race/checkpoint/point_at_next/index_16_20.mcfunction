@@ -1,0 +1,5 @@
+execute if score @s checkFake matches 15 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=16}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 16 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=17}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 17 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=18}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 18 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=19}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 19 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=20}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference

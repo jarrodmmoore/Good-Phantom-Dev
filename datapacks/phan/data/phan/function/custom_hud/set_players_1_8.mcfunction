@@ -1,0 +1,28 @@
+#now u see me
+#(note: execution order is very important here!)
+bossbar set hud1a players @a[tag=!miniHUD,scores={hudNode=1,pShowHUD=1}]
+bossbar set hud2a players @a[tag=!miniHUD,scores={hudNode=2,pShowHUD=1}]
+bossbar set hud3a players @a[tag=!miniHUD,scores={hudNode=3,pShowHUD=1}]
+bossbar set hud4a players @a[tag=!miniHUD,scores={hudNode=4,pShowHUD=1}]
+bossbar set hud5a players @a[tag=!miniHUD,scores={hudNode=5,pShowHUD=1}]
+bossbar set hud6a players @a[tag=!miniHUD,scores={hudNode=6,pShowHUD=1}]
+bossbar set hud7a players @a[tag=!miniHUD,scores={hudNode=7,pShowHUD=1}]
+bossbar set hud8a players @a[tag=!miniHUD,scores={hudNode=8,pShowHUD=1}]
+
+bossbar set buffer1 players @a[tag=!miniHUD,scores={hudNode=1,pShowHUD=1}]
+bossbar set buffer2 players @a[tag=!miniHUD,scores={hudNode=2,pShowHUD=1}]
+bossbar set buffer3 players @a[tag=!miniHUD,scores={hudNode=3,pShowHUD=1}]
+bossbar set buffer4 players @a[tag=!miniHUD,scores={hudNode=4,pShowHUD=1}]
+bossbar set buffer5 players @a[tag=!miniHUD,scores={hudNode=5,pShowHUD=1}]
+bossbar set buffer6 players @a[tag=!miniHUD,scores={hudNode=6,pShowHUD=1}]
+bossbar set buffer7 players @a[tag=!miniHUD,scores={hudNode=7,pShowHUD=1}]
+bossbar set buffer8 players @a[tag=!miniHUD,scores={hudNode=8,pShowHUD=1}]
+
+bossbar set hud1b players @a[tag=!miniHUD,scores={hudNode=1,pShowHUD=1}]
+bossbar set hud2b players @a[tag=!miniHUD,scores={hudNode=2,pShowHUD=1}]
+bossbar set hud3b players @a[tag=!miniHUD,scores={hudNode=3,pShowHUD=1}]
+bossbar set hud4b players @a[tag=!miniHUD,scores={hudNode=4,pShowHUD=1}]
+bossbar set hud5b players @a[tag=!miniHUD,scores={hudNode=5,pShowHUD=1}]
+bossbar set hud6b players @a[tag=!miniHUD,scores={hudNode=6,pShowHUD=1}]
+bossbar set hud7b players @a[tag=!miniHUD,scores={hudNode=7,pShowHUD=1}]
+bossbar set hud8b players @a[tag=!miniHUD,scores={hudNode=8,pShowHUD=1}]

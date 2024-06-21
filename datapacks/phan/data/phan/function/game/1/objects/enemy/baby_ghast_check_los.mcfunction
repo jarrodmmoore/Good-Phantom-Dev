@@ -1,0 +1,14 @@
+#check LOS to nearest player
+scoreboard players set #checkLOS value 0
+scoreboard players set #recursions value 52
+execute facing entity @a[tag=playing,gamemode=adventure,distance=..49,limit=1,sort=nearest] eyes run function phan:game/1/objects/enemy/baby_ghast_check_los_recursive
+
+#validity of LOS is stored as "editArg1"
+scoreboard players operation @s editArg1 = #checkLOS value
+#found LOS to player? target them
+execute if score #checkLOS value matches 1 run scoreboard players operation @s targetID = @a[tag=playing,gamemode=adventure,distance=..50,limit=1,sort=nearest] playerID
+execute if score #checkLOS value matches 0 run scoreboard players reset @s targetID
+
+#check again in a few ticks
+#(randomized slightly in case there's multiple ghasts all tryna do this at the same time)
+scoreboard players operation @s age = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..3}] r

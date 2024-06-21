@@ -1,0 +1,10 @@
+execute if score @s scoreDigit7 matches 20 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE932\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 21 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE933\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 22 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE934\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 23 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE935\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 24 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE936\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 25 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE937\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 26 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE938\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 27 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE939\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 28 run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE940\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit7 matches 29.. run data merge entity 00000000-0000-0328-0000-00000000000a {CustomName:'{"text":"\\uE903\\uF001\\uE941\\uF001","italic":false,"color":"red"}'}

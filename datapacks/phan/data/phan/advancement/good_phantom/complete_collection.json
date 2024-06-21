@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.complete_collection"
+        },
+        "description": {
+            "translate": "gp.advancement.description.complete_collection"
+        },
+        "icon": {
+            "id": "minecraft:music_disc_13"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "soundsleeper": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:good_phantom/this_is_my_jam"
+}

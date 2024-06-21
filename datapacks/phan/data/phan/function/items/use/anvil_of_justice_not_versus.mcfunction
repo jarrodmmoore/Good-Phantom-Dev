@@ -1,0 +1,1 @@
+execute if score #success value matches 0 as @a[gamemode=adventure,tag=!dontgethit,limit=1,sort=random] at @s run function phan:items/anvil_spawn_on_player

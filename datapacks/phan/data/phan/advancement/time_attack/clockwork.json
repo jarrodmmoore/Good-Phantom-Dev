@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.clockwork"
+        },
+        "description": {
+            "translate": "gp.advancement.description.clockwork"
+        },
+        "icon": {
+            "id": "minecraft:red_wool",
+            "components": {
+                "minecraft:custom_model_data":1111133
+            }
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:time_attack/root"
+}

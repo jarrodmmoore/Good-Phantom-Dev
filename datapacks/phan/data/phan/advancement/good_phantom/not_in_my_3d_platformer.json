@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.not_in_my_3d_platformer"
+        },
+        "description": {
+            "translate": "gp.advancement.description.not_in_my_3d_platformer"
+        },
+        "icon": {
+            "id": "minecraft:yellow_stained_glass"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "notinmy3dplatformer": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:good_phantom/root"
+}

@@ -1,0 +1,1 @@
+execute if score @s enderEyes > #maxEyes value run scoreboard players operation #maxEyes value = @s enderEyes

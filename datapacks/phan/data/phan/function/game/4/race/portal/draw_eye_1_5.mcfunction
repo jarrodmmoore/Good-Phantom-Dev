@@ -1,0 +1,5 @@
+execute if score @s editArg2 matches 1 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"13"}}} ~ ~ ~ 0 0 0 0 1 force @a[scores={enderEyes=1..}]
+execute if score @s editArg2 matches 2 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"13"}}} ~ ~ ~ 0 0 0 0 1 force @a[scores={enderEyes=2..}]
+execute if score @s editArg2 matches 3 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"13"}}} ~ ~ ~ 0 0 0 0 1 force @a[scores={enderEyes=3..}]
+execute if score @s editArg2 matches 4 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"13"}}} ~ ~ ~ 0 0 0 0 1 force @a[scores={enderEyes=4..}]
+execute if score @s editArg2 matches 5 run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"13"}}} ~ ~ ~ 0 0 0 0 1 force @a[scores={enderEyes=5..}]

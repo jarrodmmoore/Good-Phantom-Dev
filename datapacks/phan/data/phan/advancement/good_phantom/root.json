@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.root.good_phantom",
+            "bold": true
+        },
+        "description": {
+            "translate": "gp.advancement.description.good_phantom"
+        },
+        "icon": {
+            "id": "minecraft:light_blue_wool",
+            "components": {
+                "minecraft:custom_model_data":1111111
+            }
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/good_phantom.png"
+    },
+    "criteria": {
+        "scoreattack": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

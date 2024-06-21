@@ -1,0 +1,8 @@
+execute if score @s compassDirection matches 1 run title @s actionbar ["",{"text":"\uE028"}]
+execute if score @s compassDirection matches 2 run title @s actionbar ["",{"text":"\uE029"}]
+execute if score @s compassDirection matches 3 run title @s actionbar ["",{"text":"\uE030"}]
+execute if score @s compassDirection matches 4 run title @s actionbar ["",{"text":"\uE031"}]
+execute if score @s compassDirection matches 5 run title @s actionbar ["",{"text":"\uE032"}]
+execute if score @s compassDirection matches 6 run title @s actionbar ["",{"text":"\uE033"}]
+execute if score @s compassDirection matches 7 run title @s actionbar ["",{"text":"\uE034"}]
+execute if score @s compassDirection matches 8 run title @s actionbar ["",{"text":"\uE035"}]

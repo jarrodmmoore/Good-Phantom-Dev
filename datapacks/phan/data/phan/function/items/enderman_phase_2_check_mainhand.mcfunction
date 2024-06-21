@@ -1,0 +1,2 @@
+#this is in its own function so the check on #success evaluates when it's supposed to (we should only be stealing from 1 player, not multiple!)
+execute if score #success value matches 0 if items entity @s weapon.mainhand *[custom_data~{item:1b}] run function phan:items/steal_item/_index

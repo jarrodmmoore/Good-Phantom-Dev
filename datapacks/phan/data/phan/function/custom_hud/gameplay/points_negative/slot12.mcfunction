@@ -1,0 +1,10 @@
+execute if score @s scoreDigit5 matches 20 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE932\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 21 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE933\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 22 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE934\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 23 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE935\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 24 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE936\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 25 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE937\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 26 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE938\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 27 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE939\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 28 run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE940\\uF001","italic":false,"color":"red"}'}
+execute if score @s scoreDigit5 matches 29.. run data merge entity 00000000-0000-0328-0000-00000000000c {CustomName:'{"text":"\\uE941\\uF001","italic":false,"color":"red"}'}

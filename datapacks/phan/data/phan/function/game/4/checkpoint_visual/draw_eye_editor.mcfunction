@@ -1,0 +1,2 @@
+execute if score #odd value matches 1 positioned ~ ~1 ~ run function phan:game/4/checkpoint_visual/draw_eye_editor_go
+execute if score #odd value matches 0 positioned ^ ^ ^0.5 positioned ~ ~1 ~ run function phan:game/4/checkpoint_visual/draw_eye_editor_go

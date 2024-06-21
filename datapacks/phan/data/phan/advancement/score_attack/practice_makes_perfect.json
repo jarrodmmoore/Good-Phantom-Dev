@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.practice_makes_perfect"
+        },
+        "description": {
+            "translate": "gp.advancement.description.practice_makes_perfect"
+        },
+        "icon": {
+            "id": "minecraft:target"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "practicemakesperfect": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/root"
+}

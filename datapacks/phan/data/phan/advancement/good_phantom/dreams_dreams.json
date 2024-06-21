@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.dreams_dreams"
+        },
+        "description": {
+            "translate": "gp.advancement.description.dreams_dreams"
+        },
+        "icon": {
+            "id": "minecraft:pink_candle"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:good_phantom/root"
+}

@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.speedrunner"
+        },
+        "description": {
+            "translate": "gp.advancement.description.speedrunner"
+        },
+        "icon": {
+            "id": "minecraft:diamond_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:time_attack/power_nap"
+}
