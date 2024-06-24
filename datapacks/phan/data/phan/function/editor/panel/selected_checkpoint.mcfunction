@@ -16,7 +16,7 @@ tellraw @s ["",{"text":"[Toggle wrong way warning]","color":"yellow","bold":fals
 tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"text":"[get tag command]","color":"gold","bold":false,"clickEvent":{"action":"suggest_command","value":"/tag @e[limit=1,sort=nearest,tag=checkpoint] add "},"hoverEvent":{"action":"show_text","value":"toggle missed cp warning"}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/home"},"hoverEvent":{"action":"show_text","value":"back"}}]
+tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":"back"}}]
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
 scoreboard players set @s editor 0

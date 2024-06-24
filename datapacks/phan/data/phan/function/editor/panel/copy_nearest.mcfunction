@@ -8,4 +8,4 @@ scoreboard players operation @s editLoadArea = @e[limit=1,tag=node,type=marker,s
 scoreboard players operation @s editArg1 = @e[limit=1,tag=node,type=marker,sort=nearest] editArg1
 scoreboard players operation @s editArg2 = @e[limit=1,tag=node,type=marker,sort=nearest] editArg2
 scoreboard players operation @s editArg3 = @e[limit=1,tag=node,type=marker,sort=nearest] editArg3
-function phan:editor/panel/spawn
+function phan:editor/panel/_spawn

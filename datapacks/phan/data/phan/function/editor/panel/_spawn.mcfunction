@@ -1,4 +1,4 @@
-execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]}] 1
+execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]},custom_name='{"text":"Node"}'] 1
 
 #editNode
 #editYaw
@@ -172,7 +172,7 @@ tellraw @s ["",{"text":"[copy nearest]","color":"yellow","bold":false,"clickEven
 tellraw @s ["",{"text":"[repair tags]","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_tags"},"hoverEvent":{"action":"show_text","value":"repair tags and update rotation of all nodes in loading distance"}}]
 tellraw @s ["",{"text":"[fix editLoadArea for certain nodes]","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_timers_and_presents"},"hoverEvent":{"action":"show_text","value":"set all portal cores, portal slots, clocks, present nodes to editLoadArea 0"}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/home"},"hoverEvent":{"action":"show_text","value":"back"}}]
+tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":"back"}}]
 
 #feedback
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000

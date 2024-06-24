@@ -2,10 +2,11 @@
 scoreboard players add #playersInEditMode value 1
 
 #show panel
-execute if score @s editor matches 1 run function phan:editor/panel/home
+execute if score @s editor matches 1 run function phan:editor/panel/_home
 
 #eggs do their thing
 execute as @e[tag=nodeSpawn,type=vex] at @s run function phan:editor/spawn/_index
+execute as @e[tag=waypointSpawn,type=vex] at @s run function phan:editor/spawn/_index_waypoint
 
 #visualize the nodes
 scoreboard players add @s editVisualTimer 1

@@ -1,0 +1,1 @@
+$summon marker ~ ~ ~ {Tags:["AIBC","setMe","wp1_$(tag1)","wp1_$(tag2)"]}

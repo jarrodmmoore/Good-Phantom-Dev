@@ -286,6 +286,17 @@ scoreboard objectives add visualZoffset dummy
 scoreboard objectives add visualYaw dummy
 scoreboard objectives add visualPitch dummy
 scoreboard objectives add visualLength dummy
+#editor--ai waypoints
+scoreboard objectives add AIBC_id dummy
+scoreboard objectives add AIBC_dir1 dummy
+scoreboard objectives add AIBC_dir2 dummy
+scoreboard objectives add AIBC_dir3 dummy
+scoreboard objectives add AIBC_dir4 dummy
+scoreboard objectives add AIBC_event dummy
+scoreboard objectives add AIBC_modifier dummy
+#tag=AIBC_requireGround
+#tag=AIBC_midAir (remember to re-calculate if waypoint moves)
+#...
 #parameter teleports
 scoreboard objectives add dummy_x dummy
 scoreboard objectives add dummy_y dummy
@@ -641,6 +652,7 @@ scoreboard players set #1200 value 1200
 scoreboard players set #9000 value 9000
 scoreboard players set #360 value 360
 scoreboard players set #36 value 36
+scoreboard players set #16 value 16
 
 #gamerules
 gamerule commandBlockOutput false

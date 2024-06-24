@@ -9,7 +9,7 @@ tellraw @s ["",{"text":"[Set boundary]","color":"gray","bold":false,"clickEvent"
 tellraw @s ["",{"text":"[Add to boundary]","color":"gray","bold":false,"clickEvent":{"action":"suggest_command","value":"/scoreboard players add @e[tag=selected] checkM"},"hoverEvent":{"action":"show_text","value":"add to boundary"}}]
 tellraw @s ["",{"text":"[Remove from boundary]","color":"gray","bold":false,"clickEvent":{"action":"suggest_command","value":"/scoreboard players remove @e[tag=selected] checkM"},"hoverEvent":{"action":"show_text","value":"remove from boundary"}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/home"},"hoverEvent":{"action":"show_text","value":"back"}}]
+tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":"back"}}]
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
 scoreboard players set @s editor 0

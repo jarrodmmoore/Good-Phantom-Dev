@@ -14,7 +14,7 @@ tellraw @s ["",{"text":"[act1/load4]","color":"gold","bold":false,"clickEvent":{
 tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"text":"[act1/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnA value 0"},"hoverEvent":{"action":"show_text","value":"act1/load5"}},{"text":"  "},{"text":"[act2/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnB value 0"},"hoverEvent":{"action":"show_text","value":"act2/load5"}},{"text":"  "},{"text":"[act3/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnC value 0"},"hoverEvent":{"action":"show_text","value":"act3/load5"}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/home"},"hoverEvent":{"action":"show_text","value":"back"}}]
+tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":"back"}}]
 
 #feedback
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000

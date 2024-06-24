@@ -6,4 +6,4 @@ scoreboard players set @s editLoadArea 0
 scoreboard players set @s editArg1 0
 scoreboard players set @s editArg2 0
 scoreboard players set @s editArg3 0
-function phan:editor/panel/spawn
+function phan:editor/panel/_spawn

@@ -2,7 +2,8 @@
 #has lots of stuff for selecting and modifying existing nodes
 
 tellraw @s ["",{"text":"\n==\\/== EDITOR ==\\/==","color":"#6666FF","bold":true}]
-tellraw @s ["",{"text":"[nodes]","color":"#AAFFAA","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/spawn"},"hoverEvent":{"action":"show_text","value":"nodes"}}]
+tellraw @s ["",{"text":"[nodes]","color":"#AAFFAA","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_spawn"},"hoverEvent":{"action":"show_text","value":"nodes"}}]
+tellraw @s ["",{"text":"[ai waypoints]","color":"#AAFFAA","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_ai_waypoints"},"hoverEvent":{"action":"show_text","value":"ai waypoints"}}]
 tellraw @s ["",{"text":"[modify selected trigger area]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/selected_trigger_area"},"hoverEvent":{"action":"show_text","value":"modify selected trigger area"}}]
 tellraw @s ["",{"text":"[modify selected checkpoint]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/selected_checkpoint"},"hoverEvent":{"action":"show_text","value":"modify selected checkpoint"}}]
 tellraw @s ["",{"text":"[respawn objects]","color":"#55FF55","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/respawns"},"hoverEvent":{"action":"show_text","value":"respawn objects in a specified area"}}]
