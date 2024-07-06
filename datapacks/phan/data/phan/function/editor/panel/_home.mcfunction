@@ -9,7 +9,7 @@ tellraw @s ["",{"text":"[modify selected checkpoint]","color":"white","bold":fal
 tellraw @s ["",{"text":"[respawn objects]","color":"#55FF55","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/respawns"},"hoverEvent":{"action":"show_text","value":"respawn objects in a specified area"}}]
 tellraw @s ["",{"text":" "}]
 execute if entity @e[tag=selected] run function phan:editor/panel/show_number_selected
-tellraw @s ["",{"text":"[select nearest]","color":"#CCCCCC","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/select_nearest"},"hoverEvent":{"action":"show_text","value":"select nearest"}}]
+tellraw @s ["",{"text":"[select nearest node]","color":"#CCCCCC","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/select_nearest"},"hoverEvent":{"action":"show_text","value":"select nearest"}}]
 tellraw @s ["",{"text":"[nudge selected]","color":"#AAAAAA","bold":false,"clickEvent":{"action":"suggest_command","value":"/execute as @e[tag=selected] at @s run tp @s ~ ~ ~"},"hoverEvent":{"action":"show_text","value":"nudge selected"}}]
 tellraw @s ["",{"text":"[modify selected]","color":"#AAAAAA","bold":false,"clickEvent":{"action":"suggest_command","value":"/scoreboard players set @e[tag=selected] edit"},"hoverEvent":{"action":"show_text","value":"modify selected"}}]
 tellraw @s ["",{"text":"[cancel selection]","color":"#777777","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/select_none"},"hoverEvent":{"action":"show_text","value":"cancel selection"}}]

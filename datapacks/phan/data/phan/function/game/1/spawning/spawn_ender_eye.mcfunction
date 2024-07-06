@@ -2,7 +2,7 @@
 scoreboard players remove #spawnRecursions value 1
 
 
-####################################
+#=====
 #ACTUAL SPAWN CODE
 #(everything else is for recursion)
 
@@ -25,7 +25,7 @@ scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=rando
 execute if score #random value matches 1 run tag @e[tag=setMe] add goUp
 
 tag @e[tag=setMe] remove setMe
-####################################
+#=====
 
 
 #no recursions left? tell the rest of the recursive command stack to get bent

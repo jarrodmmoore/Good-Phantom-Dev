@@ -7,7 +7,7 @@ execute if score #errorCheck value matches 100 run tellraw @a ["",{"text":"[ ! ]
 #(errorCheck gets set to 0 every time "phan:game/_state_index" executes properly)
 
 
-###################
+#=====
 #GENERAL GAME FUNCTION
 
 #determine if admins are needed to do stuff
@@ -46,7 +46,7 @@ tag @a[tag=!phan_edit,scores={editor=1}] add phan_edit
 scoreboard players set #playersInEditMode value 0
 execute as @a[tag=phan_edit] at @s run function phan:editor/_editor_main
 
-###################
+#=====
 #CLEAN-UP
 
 #no experience orbs, please
@@ -54,16 +54,14 @@ kill @e[type=experience_orb,tag=!stay]
 
 #lifespan score, applied to entities that are meant to be temporary
 #(this is a good way to /kill entities without having to worry about them generating garbage scoreboard data due to command stack tomfoolery)
-scoreboard players remove @e[scores={lifespan=1..}] lifespan 1
-execute as @e[type=!player,scores={lifespan=..0}] at @s run function phan:lifespan_expire
-kill @e[type=!player,scores={lifespan=..0}]
+execute as @e[scores={lifespan=-2147483648..2147483647}] run function phan:lifespan_tick
 
 #clear tags and stuff
 execute as @a run function phan:control/player_input_cleanup
 
 
 
-###################
+#=====
 #DEBUG
 
 #show a scoreboard value, always

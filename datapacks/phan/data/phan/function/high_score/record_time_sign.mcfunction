@@ -6,12 +6,12 @@
 #front_text.messages[2] = medal
 #front_text.messages[3] = placement (HANDLED LATER, NOT IN THIS FUNCTION)
 
-##############
+#=====
 # NAME
 data modify block ~ ~ ~ front_text.messages[0] set value '{"nbt":"tag.name","storage":"phan:data","interpret":true}'
-##############
+#=====
 
-##############
+#=====
 # TIME
 
 scoreboard players operation #arg value = #inputScore value
@@ -37,9 +37,9 @@ execute if score #showTimeSec value matches 10.. run data modify storage phan:da
 
 #now put on sign
 data modify block ~ ~ ~ front_text.messages[1] set value '{"nbt":"tag.score","storage":"phan:data","interpret":true}'
-##############
+#=====
 
-##############
+#=====
 # RANK
 
 execute if score #inputRank value matches ..1 run data modify storage phan:data tag.rank set value '{"text":"\\uE011","bold":false,"color":"white"}'
@@ -49,4 +49,4 @@ execute if score #inputRank value matches 4 run data modify storage phan:data ta
 execute if score #inputRank value matches 5.. run data modify storage phan:data tag.rank set value '{"text":"","bold":false,"color":"white"}'
 
 data modify block ~ ~ ~ front_text.messages[2] set value '{"nbt":"tag.rank","storage":"phan:data","interpret":true}'
-##############
+#=====

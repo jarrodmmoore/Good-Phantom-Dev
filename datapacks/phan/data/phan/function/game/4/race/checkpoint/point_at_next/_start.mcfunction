@@ -1,4 +1,4 @@
-#####################
+#=====
 # CALCULATION
 
 execute if entity @s[tag=!vsHomeStretch] if loaded ~ ~ ~ run function phan:game/4/race/checkpoint/point_at_next/index
@@ -6,7 +6,7 @@ execute if entity @s[tag=vsHomeStretch] if loaded ~ ~ ~ facing entity @e[limit=1
 #set timer to positive between 0 and 1 (probably 1 under normal circumstances)
 scoreboard players operation @s compassClock %= #2 value
 
-#####################
+#=====
 # DISPLAY
 
 #show compass if facing wrong way for too long

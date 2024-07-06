@@ -1,10 +1,10 @@
 #time attack gameplay
 
 #most game logic is run per-player now
-########################
+#=====
 #game logic on players
 execute as @a[tag=playing] at @s run function phan:game/3/_3_main_player
-########################
+#=====
 
 #global time
 scoreboard players add #gameTime value 1

@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #1 in 3 chance of not allowing blinding squid at all
 execute store result score #randomRoll2 value run random value 1..2
@@ -64,7 +64,7 @@ execute if score #givenMines value matches 12.. run tag @e[tag=randomize,type=ar
 execute if score #givenRockets value matches 10.. run tag @e[tag=randomize,type=armor_stand,scores={r=1..3}] add tempItemBan
 execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=4}] add tempItemBan
 
-#########################
+#=====
 
 #red rocket (2x) -- 1..2
 #homing rocket -- 3
@@ -84,7 +84,7 @@ execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=
 #enderman thief -- 15
 #blinding squid -- 16
 
-######################### ROLL THE DICE
+#===== ROLL THE DICE
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -116,4 +116,4 @@ execute if score #randomRoll value matches 14 run function phan:items/give/mine 
 execute if score #randomRoll value matches 15 run function phan:items/give/enderman_thief {count:1}
 execute if score #randomRoll value matches 16 run function phan:items/give/blinding_squid {count:1}
 
-#########################
+#=====

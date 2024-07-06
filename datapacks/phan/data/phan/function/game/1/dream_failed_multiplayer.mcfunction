@@ -1,6 +1,6 @@
 #john madden is cancelled
 
-##############################
+#=====
 #WAKE UP (except not really, we keep playing in multiplayer)
 
 #visual
@@ -18,16 +18,16 @@ execute if score @s pGameTime matches 1000001 run tellraw @a[tag=tellMe] ["",{"t
 #record score right now
 execute if score @s pGameTime matches 1000001 run function phan:game/1/dream_failed_multiplayer_record_score
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #BYE
 
 execute if score @s pGameTime matches 1000041..1000090 at @s run function phan:game/1/show_result/rank_fail
 
-##############################
+#=====
 
 
 #gameTime 1000120 means we're done here. start gameplay again!

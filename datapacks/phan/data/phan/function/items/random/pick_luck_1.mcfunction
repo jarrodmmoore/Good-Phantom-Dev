@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #mines and trapped chest can ALWAYS be pulled, no matter the conditions. this gives us a reliable fallback item
 
@@ -42,7 +42,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 #my hope is that this will give a players a more intuitive sense of what items they might pull from boxes and when
 #...and also stop games from being a blowout because one player is 5% more skilled than everyone else :smugcat:
 
-#########################
+#=====
 
 #ender pearl -- 1
 #speed pad -- 2
@@ -56,7 +56,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 #shield/sonic blast -- 12
 #trapped chest -- 13
 
-######################### ROLL NUMBER, GET ITEM
+#===== ROLL NUMBER, GET ITEM
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -82,7 +82,7 @@ execute if score #randomRoll value matches 12 if score #randomRollB value matche
 execute if score #randomRoll value matches 12 if score #randomRollB value matches 2 run function phan:items/give/sonic_blast {count:1}
 execute if score #randomRoll value matches 13 run function phan:items/give/trapped_chest {count:1}
 
-#########################
+#=====
 
 
 

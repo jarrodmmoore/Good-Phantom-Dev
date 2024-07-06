@@ -5,3 +5,6 @@ scoreboard players reset @s AIBC_dir4
 scoreboard players reset @s AIBC_event
 scoreboard players reset @s AIBC_modifier
 tag @s remove AIBC_requireGround
+
+tag @s remove eventBadSkill
+tag @s remove eventHighSkill

@@ -264,6 +264,7 @@ scoreboard objectives add walkDistance minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add sprintDistance minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add death minecraft.custom:minecraft.deaths
 #editor
+scoreboard objectives add editorTick dummy
 scoreboard objectives add editNode dummy
 scoreboard objectives add editYaw dummy
 scoreboard objectives add editPitch dummy
@@ -294,6 +295,10 @@ scoreboard objectives add AIBC_dir3 dummy
 scoreboard objectives add AIBC_dir4 dummy
 scoreboard objectives add AIBC_event dummy
 scoreboard objectives add AIBC_modifier dummy
+#editor--ai waypoint management
+scoreboard objectives add AIBC_selected dummy
+scoreboard objectives add AIBC_set_dir dummy
+scoreboard objectives add AIBC_mode dummy
 #tag=AIBC_requireGround
 #tag=AIBC_midAir (remember to re-calculate if waypoint moves)
 #...

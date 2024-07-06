@@ -29,7 +29,7 @@ scoreboard players operation @s previousLoad = @s currentLoad
 execute if score @s location_x matches 4084.. run function phan:game/1/player_respawn
 
 
-#######
+#=====
 #UNRELATED, but while we've got the player as the execution context, let's handle the teleporter at the bottom
 
 #teleport

@@ -3,7 +3,7 @@ execute store result score #test value run execute if entity @a[tag=playing,game
 execute if score #test value matches 1 store result score @s editArg3 run random value 2..100
 execute if score #test value matches 1 run return 0
 
-#################################
+#=====
 
 #visual effects and sound here
 playsound minecraft:entity.ender_eye.death master @a ~ ~ ~ 2 1

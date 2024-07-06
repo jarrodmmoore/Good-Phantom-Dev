@@ -6,12 +6,12 @@
 #front_text.messages[2] = rank letter
 #front_text.messages[3] = placement (HANDLED LATER, NOT IN THIS FUNCTION)
 
-##############
+#=====
 # NAME
 data modify block ~ ~ ~ front_text.messages[0] set value '{"nbt":"tag.name","storage":"phan:data","interpret":true}'
-##############
+#=====
 
-##############
+#=====
 # SCORE
 #(this is some absolutely unhinged datapack programmer behavior)
 
@@ -179,9 +179,9 @@ data modify storage phan:data tag.score set value '["",{"selector":"00000000-000
 
 #now put on sign
 data modify block ~ ~ ~ front_text.messages[1] set value '{"nbt":"tag.score","storage":"phan:data","interpret":true}'
-##############
+#=====
 
-##############
+#=====
 # RANK
 
 execute if score #inputRank value matches ..0 run data modify storage phan:data tag.rank set value '["",{"text":"| ","bold":false,"color":"white"},{"text":"☆","bold":false,"color":"#FFFF22"},{"text":" |","bold":false,"color":"white"}]'
@@ -191,4 +191,4 @@ execute if score #inputRank value matches 3 run data modify storage phan:data ta
 execute if score #inputRank value matches 4.. run data modify storage phan:data tag.rank set value '["",{"text":"| ","bold":false,"color":"white"},{"text":"D","bold":true,"color":"#403090"},{"text":" |","bold":false,"color":"white"}]'
 
 data modify block ~ ~ ~ front_text.messages[2] set value '{"nbt":"tag.rank","storage":"phan:data","interpret":true}'
-##############
+#=====

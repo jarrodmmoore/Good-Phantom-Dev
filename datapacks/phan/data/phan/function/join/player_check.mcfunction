@@ -30,7 +30,7 @@ execute if entity @s[tag=!doneWithIntro] at @s run function phan:join/intro/_int
 execute if score @s skyboxSet matches -2147483648..2147483647 at @s run function phan:skybox/player_get_skybox
 
 #players must have their equipment
-execute if entity @s[gamemode=adventure,tag=doneWithIntro,tag=!noInventory] unless entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra",count:1,components:{"minecraft:custom_data":{Tags:["playerEquipment"]}}}]}] run function phan:join/player_get_equipment
+execute if entity @s[gamemode=adventure,tag=doneWithIntro,tag=!noInventory] unless items entity @s armor.chest elytra[custom_data~{playerEquipment:1b}] run function phan:join/player_get_equipment
 #note: this MUST be run before the get_coordinates function!
 
 #check coordinates and move speed
@@ -57,7 +57,7 @@ execute if score @s tip matches 1.. run function phan:game/0/tip_show
 #count down hudFlashTime
 execute if score @s hudFlashTime matches 1.. run scoreboard players remove @s hudFlashTime 1
 
-#################
+#=====
 # ITEM STUFF
 
 #elytra particles (for the launch effect from the "Super Jump" item)
@@ -76,7 +76,7 @@ execute if score @s shieldTime matches 1.. at @s run function phan:items/shield_
 scoreboard players remove @s[scores={attackTime=1..}] attackTime 1
 scoreboard players reset @s[scores={attackTime=..0,attackerID=1..}] attackerID
 
-#################
+#=====
 # INPUT HANDLING
 #carrot on a stick for inputs
 function phan:control/carrot_on_stick
@@ -100,7 +100,7 @@ scoreboard players remove @s[scores={bufferInput1=1..}] bufferInput1 1
 scoreboard players remove @s[scores={bufferInput2=1..}] bufferInput2 1
 scoreboard players remove @s[scores={bufferInput3=1..}] bufferInput3 1
 scoreboard players remove @s[scores={bufferInput4=1..}] bufferInput4 1
-#################
+#=====
 
 #play music
 execute at @s run function phan:bgm/_player_main

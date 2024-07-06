@@ -8,7 +8,7 @@ scoreboard players set #waypointModifier value 0
 scoreboard players set #waypointHook value 0
 
 #get next waypoint id and get tags into storage
-function phan:editor/ai_waypoint/get_next_id
+function phan:editor/panel/ai_waypoint/get_next_id
 
 #get values from player
 execute as @a[limit=1,sort=nearest,tag=phan_edit] run function phan:editor/spawn/waypoint_get_values_from_player

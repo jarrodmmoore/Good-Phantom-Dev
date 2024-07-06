@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #2 in 3 chance of not allowing lightning at all
 execute store result score #randomRoll2 value run random value 1..3
@@ -57,7 +57,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,type=armor_stand,scores={r=1..2}] add tempItemBan
 execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=3}] add tempItemBan
 
-#########################
+#=====
 
 #red rocket (3x) -- 1
 #homing rocket -- 2
@@ -77,7 +77,7 @@ execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=
 #blinding squid -- 20
 #lightning -- 21
 
-######################### GET IT
+#===== GET IT
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -105,4 +105,4 @@ execute if score #randomRoll value matches 19 run function phan:items/give/ender
 execute if score #randomRoll value matches 20 run function phan:items/give/blinding_squid {count:1}
 execute if score #randomRoll value matches 21 run function phan:items/give/lightning_strike {count:1}
 
-#########################
+#=====

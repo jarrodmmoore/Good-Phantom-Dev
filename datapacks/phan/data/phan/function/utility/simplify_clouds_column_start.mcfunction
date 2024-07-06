@@ -1,4 +1,4 @@
-#################################
+#=====
 ##fill inbetweens with lapis
 
 ##set endpoint
@@ -14,11 +14,11 @@
 
 ##swap voids back to air
 #fill ~ 156 ~ ~ 180 ~ air replace structure_void
-#################################
+#=====
 
 
-#################################
+#=====
 #cut lapis from inbetween
 scoreboard players set #recursions value 40
 execute if block ~ ~ ~ air run function phan:utility/cleanup_up
-#################################
+#=====

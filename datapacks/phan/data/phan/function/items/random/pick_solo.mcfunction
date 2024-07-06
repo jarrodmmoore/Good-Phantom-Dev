@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #can't get certain items again if they're already in our inventory
 execute if score #hasSwiftness value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=7}] add tempItemBan
@@ -43,7 +43,7 @@ scoreboard players operation #eyeCheck value = #vEyesNeeded value
 scoreboard players operation #eyeCheck value -= @s enderEyes
 execute if score #eyeCheck value matches ..4 run tag @e[tag=randomize,type=armor_stand,scores={r=13..14}] add tempItemBan
 
-#########################
+#=====
 
 #red rocket -- 1
 #red rocket (3x) -- 2
@@ -61,7 +61,7 @@ execute if score #eyeCheck value matches ..4 run tag @e[tag=randomize,type=armor
 
 #mine -- 13..14
 
-######################### ROLL THE DICE
+#===== ROLL THE DICE
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -87,4 +87,4 @@ execute if score #randomRoll value matches 12 run function phan:items/give/warp 
 
 execute if score #randomRoll value matches 13..14 run function phan:items/give/mine {count:1}
 
-#########################
+#=====

@@ -2,7 +2,7 @@
 scoreboard players remove #spawnRecursions value 1
 
 
-####################################
+#=====
 #ACTUAL SPAWN CODE
 #(everything else is for recursion)
 
@@ -34,7 +34,7 @@ execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setM
 execute if score #getGravity value matches 1 as @e[tag=setMe] run data merge entity @s {NoGravity:0b}
 
 tag @e[tag=setMe] remove setMe
-####################################
+#=====
 
 
 #no recursions left? tell the rest of the recursive command stack to get bent

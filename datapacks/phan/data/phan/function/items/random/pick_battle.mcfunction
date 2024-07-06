@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #never get enderman if it's on global cooldown
 execute if score #cooldownEnderman value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=21}] add tempItemBan
@@ -46,7 +46,7 @@ execute if score #givenMines value matches 12.. run tag @e[tag=randomize,type=ar
 execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=1}] add tempItemBan
 execute if score #givenRockets value matches 14.. run tag @e[tag=randomize,type=armor_stand,scores={r=6}] add tempItemBan
 
-#########################
+#=====
 
 #red rocket -- 1..4
 #homing rocket -- 5
@@ -68,7 +68,7 @@ execute if score #givenRockets value matches 14.. run tag @e[tag=randomize,type=
 #enderman thief -- 21
 #blinding squid -- 22
 
-######################### ROLL THE DICE
+#===== ROLL THE DICE
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -101,4 +101,4 @@ execute if score #randomRoll value matches 20 run function phan:items/give/trapp
 execute if score #randomRoll value matches 21 run function phan:items/give/enderman_thief {count:1}
 execute if score #randomRoll value matches 22 run function phan:items/give/blinding_squid {count:1}
 
-#########################
+#=====

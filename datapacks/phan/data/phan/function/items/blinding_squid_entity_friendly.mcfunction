@@ -3,7 +3,7 @@ scoreboard players set @s lifespan 5
 
 #fly forward and away (if able)
 particle instant_effect ~ ~ ~ 0.2 0.2 0.2 0.1 2
-execute store result score #test value if block ~ ~.55 ~ #phan:not_solid
+execute store result score #test value run execute if block ~ ~.55 ~ #phan:not_solid
 execute if score #test value matches 1 run tp @s ~ ~.55 ~
 execute if score #test value matches 0 run scoreboard players add @s age 20
 

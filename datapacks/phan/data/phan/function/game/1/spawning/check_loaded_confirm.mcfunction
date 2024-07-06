@@ -1,10 +1,10 @@
 #deal with recursions
 scoreboard players remove #checkRecursions value 1
 
-#################
+#=====
 #if we got in here: the chunk is loaded! we're good... for now
 scoreboard players set #checkChunksLoaded value 1
-#################
+#=====
 
 #no recursions left? tell the rest of the recursive command stack to get bent
 execute if score #checkRecursions value matches ..0 run scoreboard players set #tempRecursions value -1

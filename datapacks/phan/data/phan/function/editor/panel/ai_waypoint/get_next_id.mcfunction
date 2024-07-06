@@ -2,6 +2,8 @@ execute if score #waypointID value matches -1 run tellraw @a ["",{"text":"[ ! ] 
 
 #increment
 scoreboard players add #waypointID value 1
+#and don't be 0
+execute if score #waypointID value matches 0 run scoreboard players add #waypointID value 1
 
 #get tags using modulus to speed up searches
 scoreboard players operation #test value = #waypointID value

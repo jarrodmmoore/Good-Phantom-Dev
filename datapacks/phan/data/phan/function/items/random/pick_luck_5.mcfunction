@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #never get squid if it's on global cooldown
 execute if score #cooldownSquid value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=18}] add tempItemBan
@@ -52,7 +52,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 #cut down on projectile spam from mid to back
 execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,type=armor_stand,scores={r=1..2}] add tempItemBan
 
-#########################
+#=====
 
 #throwable tnt (2x) -- 1..2
 
@@ -67,7 +67,7 @@ execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,type=a
 #blinding squid -- 18
 #lightning -- 19..20
 
-######################### YOU CAN DO IT
+#===== YOU CAN DO IT
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -90,4 +90,4 @@ execute if score #randomRoll value matches 13..17 run function phan:items/give/w
 execute if score #randomRoll value matches 18 run function phan:items/give/blinding_squid {count:1}
 execute if score #randomRoll value matches 19..20 run function phan:items/give/lightning_strike {count:1}
 
-#########################
+#=====

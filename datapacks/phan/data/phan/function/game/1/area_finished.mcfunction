@@ -56,7 +56,7 @@ scoreboard players add @s actsFinished 1
 execute if score @s actsFinished matches 3.. run function phan:bgm/stop_bgm_self
 
 
-###############
+#=====
 #ADVANCEMENTS
 
 #advancement when we finish our last portal without having taken any damage
@@ -71,7 +71,7 @@ execute if score #assist_enabled value matches 0 if score #chosenLevel value mat
 #advancement when we finish act 3 of moonlit mountains having run 3 full laps
 execute if score #gameState value matches 1 if score #assist_enabled value matches 0 if score #chosenLevel value matches 2 run advancement grant @s[scores={lap=2..,pCurrentArea=3}] only phan:score_attack/yeah_ive_got_time
 
-###############
+#=====
 
 
 #refresh skybox (sometimes it gets messed up...)

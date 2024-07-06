@@ -10,6 +10,7 @@ execute if score #freePlay value matches 1 as @a[tag=doneWithIntro] run function
 execute if score #freePlay value matches 1 if score #freePlayAct value matches 1 as @a[tag=playerReservation] run tellraw @a[tag=doneWithIntro] ["",{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea1"},"color":"yellow"}],"color":"yellow"}]
 execute if score #freePlay value matches 1 if score #freePlayAct value matches 2 as @a[tag=playerReservation] run tellraw @a[tag=doneWithIntro] ["",{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea2"},"color":"yellow"}],"color":"yellow"}]
 execute if score #freePlay value matches 1 if score #freePlayAct value matches 3 as @a[tag=playerReservation] run tellraw @a[tag=doneWithIntro] ["",{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea3"},"color":"yellow"}],"color":"yellow"}]
+execute if score #freePlay value matches 1 if score #assist_enabled value matches 1.. run tellraw @a[tag=doneWithIntro] ["",{"text":"❤","color":"#DD33FF"}]
 execute if score #gameCycle value matches ..3 run tellraw @a[tag=doneWithIntro] ["",{"text":" "}]
 
 #reset stuff in the level

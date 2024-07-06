@@ -1,6 +1,6 @@
 #john madden part 3
 
-##############################
+#=====
 #CAMERA SOUL STUFF
 
 #"parameters" for some later functions that previously worked on a global system but i was too lazy to overhaul
@@ -31,11 +31,11 @@ scoreboard players operation @s pTransitionProgress = #pTransitionProgress value
 spectate @e[limit=1,type=armor_stand,tag=currentCamera] @s
 scoreboard players set @s spectatingObject 2
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #FEEDBACK STUFF
 
 #remember ranks for previous 3 (run every tick now so other players don't mess with our stuff)
@@ -62,7 +62,7 @@ execute if score @s pGameTime matches 260 if score #gameState value matches 3 ru
 #sync pGameTime again
 scoreboard players operation @s pGameTime = #pGameTime value
 
-##############################
+#=====
 
 
 #run home jack

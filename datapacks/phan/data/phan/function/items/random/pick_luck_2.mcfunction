@@ -1,4 +1,4 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #1 in 3 chance of not allowing enderman thief at all
 execute store result score #randomRoll2 value run random value 1..3
@@ -45,7 +45,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 #can't get mines if there are too many on the field at once
 execute if score #givenMines value matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=5..6}] add tempItemBan
 
-#########################
+#=====
 
 #red rocket -- 1..2
 #homing rocket -- 3
@@ -64,7 +64,7 @@ execute if score #givenMines value matches 12.. run tag @e[tag=randomize,type=ar
 #enderman thief -- 15
 #blinding squid -- 16
 
-######################### SCRATCH CARD GLORY
+#===== SCRATCH CARD GLORY
 
 #pick random number
 scoreboard players set #randomRoll value 0
@@ -95,4 +95,4 @@ execute if score #randomRoll value matches 14 run function phan:items/give/super
 execute if score #randomRoll value matches 15 run function phan:items/give/enderman_thief {count:1}
 execute if score #randomRoll value matches 16 run function phan:items/give/blinding_squid {count:1}
 
-#########################
+#=====
