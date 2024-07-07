@@ -1,2 +1,2 @@
-$execute if score @s editArg1 matches 1.. run summon area_effect_cloud ~ ~1 ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"group $(cluster_group)","color":"light_purple"}]'}
-$execute if score @s editArg2 matches 1.. run summon area_effect_cloud ~ ~.8 ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"$(player_count)+ players","color":"light_purple"}]'}
+$execute if score @s editArg1 matches 1.. run summon area_effect_cloud ~ ~1 ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box.group","color":"light_purple","with":[{"text":"$(cluster_group)"}]}]'}
+$execute if score @s editArg2 matches 1.. run summon area_effect_cloud ~ ~.8 ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box.players","color":"light_purple","with":[{"text":"$(player_count)"}]}]'}
