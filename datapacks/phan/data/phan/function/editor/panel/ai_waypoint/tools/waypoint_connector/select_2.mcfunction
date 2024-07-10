@@ -9,8 +9,7 @@ execute unless score #test value matches 1.. run return 0
 scoreboard players operation #getID value = @e[type=marker,tag=AIBC,limit=1,sort=nearest,distance=..10,scores={AIBC_id=-2147483648..2147483647}] AIBC_id
 
 #abort if source and target have the same id
-$execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] if score @s AIBC_id = #getID value run scoreboard players set #test value 1
-execute if score #test value matches 1 run return run function phan:editor/panel/ai_waypoint/tools/waypoint_connector/error
+execute if score @s AIBC_selected = #getID value run return run function phan:editor/panel/ai_waypoint/tools/waypoint_connector/error
 
 #ok, we're in the clear now...
 

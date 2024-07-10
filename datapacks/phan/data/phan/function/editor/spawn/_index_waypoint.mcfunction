@@ -15,6 +15,7 @@ execute as @a[limit=1,sort=nearest,tag=phan_edit] run function phan:editor/spawn
 
 #summon the node with proper tags
 function phan:editor/spawn/waypoint_spawn_with_storage with storage phan:ai_waypoint
+
 execute as @e[type=marker,tag=setMe] at @s run function phan:editor/spawn/waypoint_inherit_values
 
 #now we perish

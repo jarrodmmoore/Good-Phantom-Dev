@@ -1,0 +1,1 @@
+$execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] at @s run particle entity_effect{color:[1.0,1.0,1.0,1.0]} ~ ~.15 ~ 0.1 0.1 0.1 0 2 force

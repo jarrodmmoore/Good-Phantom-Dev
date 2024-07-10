@@ -1,4 +1,4 @@
-execute if score @s editNode matches 9 run data modify storage phan:data display.node_name set value '["",{"translate":"gp.editor.node_type.baddie"}]'
+data modify storage phan:data display.node_name set value '["",{"translate":"gp.editor.node_type.baddie"}]'
 #baddie spawn type
 execute if score @s editArg1 matches ..-4 run tellraw @s ["",{"text":"(editArg1) spawn type: proximity spawner (100 blocks)","italic":true}]
 execute if score @s editArg1 matches -3 run tellraw @s ["",{"text":"(editArg1) spawn type: proximity spawner (10 blocks)","italic":true}]

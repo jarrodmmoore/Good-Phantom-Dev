@@ -33,17 +33,17 @@ execute if score @s editNode matches 23 run summon area_effect_cloud ~ ~ ~ {Dura
 execute if score @s editNode matches 24 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.hidden_music_disc","color":"gold"}]'}
 
 #show area
-execute if score @s editArea matches 1 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.a1","color":"white"}]'}
-execute if score @s editArea matches 2 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.a2","color":"white"}]'}
-execute if score @s editArea matches 3 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.a3","color":"white"}]'}
+execute if score @s editArea matches 1 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a1","color":"white"}]'}
+execute if score @s editArea matches 2 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a2","color":"white"}]'}
+execute if score @s editArea matches 3 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a3","color":"white"}]'}
 
 #show loading section
-execute if score @s editLoadArea matches 0 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l0","color":"white"}]'}
-execute if score @s editLoadArea matches 1 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l1","color":"white"}]'}
-execute if score @s editLoadArea matches 2 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l2","color":"white"}]'}
-execute if score @s editLoadArea matches 3 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l3","color":"white"}]'}
-execute if score @s editLoadArea matches 4 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l4","color":"white"}]'}
-execute if score @s editLoadArea matches 5 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.l5","color":"white"}]'}
+execute if score @s editLoadArea matches 0 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l0","color":"white"}]'}
+execute if score @s editLoadArea matches 1 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l1","color":"white"}]'}
+execute if score @s editLoadArea matches 2 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l2","color":"white"}]'}
+execute if score @s editLoadArea matches 3 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l3","color":"white"}]'}
+execute if score @s editLoadArea matches 4 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l4","color":"white"}]'}
+execute if score @s editLoadArea matches 5 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l5","color":"white"}]'}
 
 #special visualization?
 execute if score @s editNode matches 5..6 if score @s editArg2 matches 1.. run function phan:editor/node_visualize_spawn_recursion

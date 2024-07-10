@@ -1,2 +1,2 @@
 scoreboard players add @s AIBC_modifier 1
-function phan:editor/panel/_ai_waypoints
+function phan:editor/panel/ai_waypoint/reopen_waypoint_menu

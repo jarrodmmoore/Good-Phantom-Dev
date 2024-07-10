@@ -1,0 +1,1 @@
+$execute positioned ~$(spread_x) ~ ~$(spread_z) run function phan:editor/panel/ai_waypoint/visualize/waypoint_go_optimal_particle

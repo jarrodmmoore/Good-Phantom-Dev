@@ -9,7 +9,7 @@ tellraw @s ["",{"translate":"gp.editor.button.set_boundary","color":"gray","bold
 tellraw @s ["",{"translate":"gp.editor.button.add_to_boundary","color":"gray","bold":false,"clickEvent":{"action":"suggest_command","value":"/scoreboard players add @e[tag=selected] checkM"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.add_to_boundary"}]}}]
 tellraw @s ["",{"translate":"gp.editor.button.subtract_from_boundary","color":"gray","bold":false,"clickEvent":{"action":"suggest_command","value":"/scoreboard players remove @e[tag=selected] checkM"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.subtract_from_boundary"}]}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
+tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_meta_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
 scoreboard players set @s editor 0

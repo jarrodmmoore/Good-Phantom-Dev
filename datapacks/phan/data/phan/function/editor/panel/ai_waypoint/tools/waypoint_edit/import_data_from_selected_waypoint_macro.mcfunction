@@ -1,0 +1,1 @@
+$execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(selected)},limit=1,sort=nearest] run function phan:editor/panel/ai_waypoint/tools/waypoint_edit/copy_waypoint_data

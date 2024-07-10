@@ -1,0 +1,1 @@
+$execute positioned ~$(tp_x) ~ ~$(tp_z) run function phan:editor/panel/ai_waypoint/visualize/waypoint_go_spread_particle

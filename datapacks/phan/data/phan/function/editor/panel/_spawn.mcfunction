@@ -1,4 +1,4 @@
-execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]},custom_name='{"text":"Node"}',custom_model_data=1111111] 1
+execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]},custom_data={nodeTool:1b},custom_name='{"text":"Node"}',custom_model_data=1111111] 1
 
 #need values!
 execute unless score @s editNode matches 1.. run scoreboard players set @s editNode 1
@@ -25,7 +25,7 @@ function phan:editor/panel/editarg_info/prep
 #=====
 
 #node type select
-tellraw @s ["",{"text":"[-] ","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/button/editnode_prev"}},{"text":"[+] ","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/button/editnode_next"}},{"text":"editNode = "},{"score":{"name":"@s","objective":"editNode"}},{"text":" -- "},{"nbt":"display.node_name","storage":"phan:data","interpret":true}]
+tellraw @s ["",{"text":"[-] ","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/button/editnode_prev"}},{"text":"[+] ","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/button/editnode_next"}},{"text":"editNode = "},{"score":{"name":"@s","objective":"editNode"}},{"text":" ("},{"nbt":"display.node_name","storage":"phan:data","interpret":true},{"text":")"}]
 
 #generic node parameters
 tellraw @s ["",{"text":" "}]
@@ -42,7 +42,7 @@ tellraw @s ["",{"translate":"gp.editor.button.copy_nearest","color":"yellow","bo
 tellraw @s ["",{"translate":"gp.editor.button.repair_tags","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_tags"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.repair_tags"}]}}]
 tellraw @s ["",{"translate":"gp.editor.button.fix_editloadarea","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_timers_and_presents"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.fix_editloadarea"}]}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
+tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_meta_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
 
 #feedback
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000

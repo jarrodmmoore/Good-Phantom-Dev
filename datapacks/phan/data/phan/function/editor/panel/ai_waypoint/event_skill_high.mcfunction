@@ -5,4 +5,4 @@ execute if score #test value matches 1 run tag @s remove eventHighSkill
 
 tag @s remove eventBadSkill
 
-function phan:editor/panel/_ai_waypoints
+function phan:editor/panel/ai_waypoint/reopen_waypoint_menu

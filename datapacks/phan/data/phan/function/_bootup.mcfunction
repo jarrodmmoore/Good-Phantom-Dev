@@ -255,6 +255,7 @@ scoreboard objectives add enderEyes dummy
 scoreboard objectives add enderEyesShow dummy
 scoreboard objectives modify enderEyesShow displayname ["",{"text":"\uE027","bold":false,"color":"white"},{"text":" "},{"translate":"gp.versus.ever_eyes","bold":true},{"text":" "},{"text":"\uE027","bold":false,"color":"white"}]
 scoreboard objectives add editor trigger
+scoreboard objectives add editorState trigger
 scoreboard objectives add musicTime dummy
 scoreboard objectives add musicTrack dummy
 scoreboard objectives add musicProgress dummy
@@ -295,6 +296,8 @@ scoreboard objectives add AIBC_dir3 dummy
 scoreboard objectives add AIBC_dir4 dummy
 scoreboard objectives add AIBC_event dummy
 scoreboard objectives add AIBC_modifier dummy
+scoreboard objectives add AIBC_spread_x dummy
+scoreboard objectives add AIBC_spread_z dummy
 #editor--ai waypoint management
 scoreboard objectives add AIBC_selected dummy
 scoreboard objectives add AIBC_set_dir dummy

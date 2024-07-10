@@ -16,7 +16,7 @@ tellraw @s ["",{"translate":"gp.editor.button.toggle_wrong_way_warning","color":
 tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"translate":"gp.editor.button.get_tag_command","color":"gold","bold":false,"clickEvent":{"action":"suggest_command","value":"/tag @e[limit=1,sort=nearest,tag=checkpoint] add "},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.get_tag_command"}]}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_home"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
+tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_meta_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
 scoreboard players set @s editor 0
