@@ -1,4 +1,4 @@
-#run by a player
+#executed by a player
 #send in with a value for "arg" that you want to display
 
 #split our score into many digits so the subtitle HUD can use it

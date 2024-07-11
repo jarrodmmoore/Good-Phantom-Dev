@@ -1,0 +1,1 @@
+$function phan:game/2/bots/spawn_bot_in_team_select_macro_2 with storage phan:bot_data_$(id)

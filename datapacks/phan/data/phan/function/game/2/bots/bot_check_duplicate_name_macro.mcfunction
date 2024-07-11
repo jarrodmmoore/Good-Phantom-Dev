@@ -1,0 +1,1 @@
+$function phan:game/2/bots/bot_check_duplicate_name_macro_2 with storage phan:bot_data_$(id)

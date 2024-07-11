@@ -32,7 +32,7 @@ execute store result score #hasWarp value run clear @s lime_candle[custom_data~{
 
 #clean up temporary item bans
 #(note: there are 27 randomize armor stands)
-tag @e[type=armor_stand,tag=randomize,tag=tempItemBan] remove tempItemBan
+tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=tempItemBan] remove tempItemBan
 
 #index based on item luck
 #(lower itemLuck means you're closer to 1st place)

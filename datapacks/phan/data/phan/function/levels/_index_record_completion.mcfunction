@@ -20,3 +20,6 @@ execute if score #chosenLevel value matches 2 run scoreboard players set @s drea
 execute if score #chosenLevel value matches 3 run scoreboard players set @s dream3Completed 1
 execute if score #chosenLevel value matches 4 run scoreboard players set @s dream4Completed 1
 execute if score #chosenLevel value matches 5 run scoreboard players set @s dream5Completed 1
+
+#we finished a dream! wow
+scoreboard players add @s anyDreamCompleted 1

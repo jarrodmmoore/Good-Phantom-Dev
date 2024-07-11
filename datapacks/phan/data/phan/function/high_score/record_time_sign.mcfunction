@@ -1,4 +1,4 @@
-#run by a armor_stand entity that stores scores for some given level
+#executed by a armor_stand entity that stores scores for some given level
 #executed at the location of a sign we want to modify
 
 #front_text.messages[0] = player name

@@ -1,4 +1,4 @@
-#run by a player (at @s)
+#executed by a player (at @s)
 
 #summon visual enderman
 execute if score #endermanAge value matches 1 rotated ~ 0 positioned ^ ^ ^7 run function phan:items/enderman_phase_1_summon

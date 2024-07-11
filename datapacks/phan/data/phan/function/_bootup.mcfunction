@@ -359,6 +359,7 @@ scoreboard objectives add dream2Completed dummy
 scoreboard objectives add dream3Completed dummy
 scoreboard objectives add dream4Completed dummy
 scoreboard objectives add dream5Completed dummy
+scoreboard objectives add anyDreamCompleted dummy
 scoreboard objectives add dream1Rank dummy
 scoreboard objectives add dream2Rank dummy
 scoreboard objectives add dream3Rank dummy
@@ -636,6 +637,13 @@ scoreboard objectives add discFound9 dummy
 scoreboard objectives add discFound10 dummy
 scoreboard objectives add discFound11 dummy
 scoreboard objectives add discFound12 dummy
+#AI players
+scoreboard objectives add botName dummy
+scoreboard objectives add botID dummy
+scoreboard objectives add botSkill dummy
+scoreboard objectives add botPoints dummy
+#intialize some random stuff?
+scoreboard players add #beQuiet value 0
 #constants
 scoreboard players set #CONST_YAW_LOSS value 8
 scoreboard players set #CONST_ASSIST_TIME value 150
@@ -703,3 +711,18 @@ team add colorRed
 team modify colorRed color red
 team add colorPurple
 team modify colorPurple color dark_purple
+team add botDisplayVEasy
+team modify botDisplayVEasy color white
+team modify botDisplayVEasy prefix ["",{"text":"\uE038 ","color":"white"}]
+team add botDisplayEasy
+team modify botDisplayEasy color white
+team modify botDisplayEasy prefix ["",{"text":"\uE039 ","color":"white"}]
+team add botDisplayNormal
+team modify botDisplayNormal color white
+team modify botDisplayNormal prefix ["",{"text":"\uE040 ","color":"white"}]
+team add botDisplayHard
+team modify botDisplayHard color white
+team modify botDisplayHard prefix ["",{"text":"\uE041 ","color":"white"}]
+team add botDisplayTryhard
+team modify botDisplayTryhard color white
+team modify botDisplayTryhard prefix ["",{"text":"\uE042 ","color":"white"}]

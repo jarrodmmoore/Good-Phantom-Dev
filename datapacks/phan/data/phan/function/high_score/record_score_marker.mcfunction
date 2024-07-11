@@ -1,4 +1,4 @@
-#run by a armor_stand entity that stores scores for some given level
+#executed by a armor_stand entity that stores scores for some given level
 #run at the location of an array of signs that store the strings for the leaderboard of some given level
 
 #new best rank? record it

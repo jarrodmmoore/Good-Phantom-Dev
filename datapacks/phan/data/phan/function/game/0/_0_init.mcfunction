@@ -48,7 +48,7 @@ time set 18000
 weather clear
 
 #set bgm
-scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..5}] r
+execute store result score #random value run random value 1..5
 execute if score #dreamsCompleted value matches ..4 run scoreboard players set #bgm value 6
 execute if score #dreamsCompleted value matches 5.. if score #random value matches ..4 run scoreboard players set #bgm value 7
 execute if score #dreamsCompleted value matches 5.. if score #random value matches 5.. run scoreboard players set #bgm value 6

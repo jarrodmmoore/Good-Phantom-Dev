@@ -1,4 +1,4 @@
-#run by an ai waypoint
+#executed by an ai waypoint
 
 #get data from rotation
 execute store result score #waypointSpreadX value run data get entity @s Rotation[0] 10

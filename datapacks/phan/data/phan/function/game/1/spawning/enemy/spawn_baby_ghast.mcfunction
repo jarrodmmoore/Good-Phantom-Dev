@@ -24,7 +24,7 @@ scoreboard players set @e[tag=setLife2] lifespan 10
 team join colorRed @e[tag=setMe]
 
 #some minor animation randomization on the legs...
-scoreboard players operation @e[tag=setLife2] editArg2 = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..2}] r
+execute store result score @e[tag=setLife2] editArg2 run random value 1..2
 
 #armor_stand gets same rotation as whatever spawned it. also gets data for stuff
 execute as @e[tag=setLife] positioned ~ ~.5 ~ run tp @s ~ ~ ~ ~ ~

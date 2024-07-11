@@ -11,6 +11,11 @@ execute as @a[tag=doneWithIntro] at @s run function phan:game/2/player_check_tea
 execute as @a[limit=4,sort=random,scores={teamRequest=1}] at @s run particle dust{color:[0.8,0.0,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
 execute as @a[limit=4,sort=random,scores={teamRequest=2}] at @s run particle dust{color:[0.2,0.5,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
 
+#portal race: can add bots!
+execute if score #desiredGamemode value matches 3 run function phan:game/2/bots/tick
+scoreboard players set @e[tag=botPreviewEntity,type=zombie] lifespan 5
+execute as @e[tag=botPreviewEntity,type=zombie,limit=4,sort=random] at @s run particle dust{color:[0.2,0.5,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
+
 #if there's at least one player, start counting down to game start
 execute store result score #countPlayers value run execute if entity @a
 execute if entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players remove #timeUntilStart value 1

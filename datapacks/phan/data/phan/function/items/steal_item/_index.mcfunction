@@ -1,4 +1,4 @@
-#run by player who is getting their item stolen
+#executed by player who is getting their item stolen
 
 #this should get overridden
 scoreboard players set #stolenItem value 0

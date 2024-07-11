@@ -1,4 +1,4 @@
-#run by an ai waypoint
+#executed by an ai waypoint
 
 #must have both scores!
 execute unless score @s AIBC_spread_x matches -2147483648..2147483647 run return 0

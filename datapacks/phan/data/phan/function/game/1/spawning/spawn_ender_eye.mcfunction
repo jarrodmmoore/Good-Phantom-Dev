@@ -21,7 +21,7 @@ function phan:game/1/spawning/spawn__give_generic_data
 execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe] hitstun 10
 
 #50% chance we start the bobbing animation going down instead of up
-scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..2}] r
+execute store result score #random value run random value 1..2
 execute if score #random value matches 1 run tag @e[tag=setMe] add goUp
 
 tag @e[tag=setMe] remove setMe

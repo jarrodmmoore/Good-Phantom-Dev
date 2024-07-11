@@ -1,4 +1,4 @@
-#run by the player that picked up this present
+#executed by the player that picked up this present
 scoreboard players operation @s presentTime = #setTime value
 scoreboard players operation @s presentTimeMax = #setTime value
 scoreboard players operation @s presentGoal = #setGoal value

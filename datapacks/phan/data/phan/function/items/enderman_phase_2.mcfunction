@@ -1,4 +1,4 @@
-#run by the enderman controller
+#executed by the enderman controller
 
 #nab item in mainhand from player that isn't us
 scoreboard players set #success value 0

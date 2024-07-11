@@ -1,4 +1,4 @@
-#run by an ai waypoint
+#executed by an ai waypoint
 
 #show particle
 particle dust{color:[1.0,0.0,0.0],scale:1.2} ~ ~ ~

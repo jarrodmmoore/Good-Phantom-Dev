@@ -1,4 +1,4 @@
-#run by player
+#executed by player
 
 #score is stored in @s scoreShow
 
@@ -29,16 +29,16 @@ execute if score @s scoreShow > #scoreRankAT value run scoreboard players set #i
 execute if score @s scoreShow > #scoreRankST value run scoreboard players set #inputRank value 0
 
 #run comparisons and record data on the corresponding level armor_stand
-execute if score #chosenLevel value matches 1 as @e[type=armor_stand,tag=randomize,scores={r=1}] positioned 214 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 2 as @e[type=armor_stand,tag=randomize,scores={r=2}] positioned 213 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 3 as @e[type=armor_stand,tag=randomize,scores={r=3}] positioned 212 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 4 as @e[type=armor_stand,tag=randomize,scores={r=4}] positioned 211 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 5 as @e[type=armor_stand,tag=randomize,scores={r=5}] positioned 210 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 6 as @e[type=armor_stand,tag=randomize,scores={r=6}] positioned 209 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 7 as @e[type=armor_stand,tag=randomize,scores={r=7}] positioned 208 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 8 as @e[type=armor_stand,tag=randomize,scores={r=8}] positioned 207 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 9 as @e[type=armor_stand,tag=randomize,scores={r=9}] positioned 206 -16 106 run function phan:high_score/record_score_marker
-execute if score #chosenLevel value matches 10 as @e[type=armor_stand,tag=randomize,scores={r=10}] positioned 205 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 1 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1}] positioned 214 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 2 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=2}] positioned 213 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 3 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=3}] positioned 212 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 4 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=4}] positioned 211 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 5 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=5}] positioned 210 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 6 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=6}] positioned 209 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 7 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=7}] positioned 208 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 8 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=8}] positioned 207 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 9 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=9}] positioned 206 -16 106 run function phan:high_score/record_score_marker
+execute if score #chosenLevel value matches 10 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=10}] positioned 205 -16 106 run function phan:high_score/record_score_marker
 
 #clean up tags
 tag @s remove self

@@ -1,4 +1,4 @@
-#run by an aec
+#executed by an aec
 
 #find our place in the world
 scoreboard players operation @s goto_x = #checkMaxX value

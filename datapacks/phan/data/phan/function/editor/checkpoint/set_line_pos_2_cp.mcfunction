@@ -1,4 +1,4 @@
-#run by a checkpoint at its position
+#executed by a checkpoint at its position
 
 #make sure values exist!
 scoreboard players add @s visualXoffset 0

@@ -3,40 +3,40 @@
 #mines and trapped chest can ALWAYS be pulled, no matter the conditions. this gives us a reliable fallback item
 
 #don't pick a speed item if we're far ahead of 2nd place
-execute if score #1stPlaceLeadTime value matches 25.. run tag @e[tag=randomize,type=armor_stand,scores={r=1..3}] add tempItemBan
+execute if score #1stPlaceLeadTime value matches 25.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..3}] add tempItemBan
 
 #don't pick an offense item if we're really far ahead of 2nd place
-execute if score #1stPlaceLeadTime value matches 50.. run tag @e[tag=randomize,type=armor_stand,scores={r=4..7}] add tempItemBan
+execute if score #1stPlaceLeadTime value matches 50.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..7}] add tempItemBan
 
 #2 in 3 chance of not allowing enderman thief at all
 execute store result score #randomRoll2 value run random value 1..3
-execute if score #randomRoll2 value matches 2.. run tag @e[tag=randomize,type=armor_stand,scores={r=8}] add tempItemBan
+execute if score #randomRoll2 value matches 2.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
 
 #never get enderman if it's on global cooldown
-execute if score #cooldownEnderman value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=8}] add tempItemBan
+execute if score #cooldownEnderman value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
 
 #can't get certain items again if they're already in our inventory
-execute if score #hasEnderPearl value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=1}] add tempItemBan
-execute if score #hasSuperJump value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=3}] add tempItemBan
-execute if score #hasTnt value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=4..5}] add tempItemBan
-execute if score #hasEndermanThief value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=8}] add tempItemBan
-execute if score #hasShield value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=12}] add tempItemBan
-execute if score #hasSonicBlast value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=12}] add tempItemBan
+execute if score #hasEnderPearl value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1}] add tempItemBan
+execute if score #hasSuperJump value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=3}] add tempItemBan
+execute if score #hasTnt value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..5}] add tempItemBan
+execute if score #hasEndermanThief value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
+execute if score #hasShield value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12}] add tempItemBan
+execute if score #hasSonicBlast value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12}] add tempItemBan
 
 #cooldown on rolling utility items
-execute if score @s picksSinceUtility matches ..2 run tag @e[tag=randomize,type=armor_stand,scores={r=12}] add tempItemBan
+execute if score @s picksSinceUtility matches ..2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12}] add tempItemBan
 
 #cooldown on rolling offense items
-execute if score @s picksSinceOffense matches ..2 run tag @e[tag=randomize,type=armor_stand,scores={r=4..7}] add tempItemBan
+execute if score @s picksSinceOffense matches ..2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..7}] add tempItemBan
 
 #cooldown on rolling speed items
-execute if score @s picksSinceSpeed matches ..1 run tag @e[tag=randomize,type=armor_stand,scores={r=1..3}] add tempItemBan
+execute if score @s picksSinceSpeed matches ..1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..3}] add tempItemBan
 
 #cooldown on rolling global items
-execute if score @s picksSinceGlobal matches ..3 run tag @e[tag=randomize,type=armor_stand,scores={r=8}] add tempItemBan
+execute if score @s picksSinceGlobal matches ..3 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
 
 #can't get speed pad if there are too many on the field at once
-execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armor_stand,scores={r=2}] add tempItemBan
+execute if score #givenPads value matches 6.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=2}] add tempItemBan
 
 #geez, that's a lot of RULES, huh?
 #my hope is that this will give a players a more intuitive sense of what items they might pull from boxes and when
@@ -60,7 +60,7 @@ execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armo
 
 #pick random number
 scoreboard players set #randomRoll value 0
-scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=randomize,tag=!tempItemBan,type=armor_stand,scores={r=1..13}] r
+scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=!tempItemBan,type=armor_stand,scores={r=1..13}] r
 
 #will either get a shield or sonic blast if we get a 12
 execute store result score #randomRollB value run random value 1..2

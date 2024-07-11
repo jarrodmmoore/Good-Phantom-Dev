@@ -1,4 +1,4 @@
-#run by a player
+#executed by a player
 
 #show fancy thing on actionbar
 

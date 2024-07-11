@@ -27,7 +27,7 @@ execute if score #timeAttackUnlocked value matches 1 positioned 208 -20 118 posi
 
 #versus
 summon item 205 -21 123 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:red_wool",count:1,components:{"minecraft:custom_name":'{"translate":"gp.mode_select.versus","color":"light_purple","italic":false}',"minecraft:custom_model_data":1111131,"minecraft:hide_additional_tooltip":{},"minecraft:custom_data":{modeSelectVersus:1b}}}}
-execute positioned 205 -20 123 positioned ~ ~.4 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp"],see_through:1b,line_width:1000,billboard:"center",brightness:{sky:0,block:15},text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.2_to_24_players","bold":false,"color":"gray"}]'}
+execute positioned 205 -20 123 positioned ~ ~.4 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp"],see_through:1b,line_width:1000,billboard:"center",brightness:{sky:0,block:15},text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_24_players","bold":false,"color":"gray"}]'}
 
 #return to cabin
 summon item 191 -21 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":'{"translate":"gp.mode_select.return_to_cabin","color":"dark_green","italic":false}',"minecraft:hide_additional_tooltip":{},"minecraft:custom_data":{modeSelectCabin:1b}}}}

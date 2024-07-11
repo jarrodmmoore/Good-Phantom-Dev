@@ -1,4 +1,4 @@
-#run by the checkpoint that the player is collecting
+#executed by the checkpoint that the player is collecting
 
 #set respawn coordinates
 scoreboard players operation @a[tag=warpingPlayer] vsRespawnX = @s location_x

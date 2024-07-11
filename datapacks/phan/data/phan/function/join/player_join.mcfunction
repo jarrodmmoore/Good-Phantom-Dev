@@ -15,6 +15,9 @@ scoreboard players add @s joinCount 1
 #check if we're allowed to keep our admin tag
 function phan:join/get_reset_wave
 
+#if there are bots currently active, make sure none of them have our username
+execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:game/2/bots/bot_check_duplicate_name
+
 #must watch the intro thingy
 tag @s remove doneWithIntro
 scoreboard players set @s introProgress 0
@@ -45,6 +48,7 @@ tag @s remove trackPlayerTime
 scoreboard players set @s shootAware 0
 
 #initialize data
+scoreboard players add @s anyDreamCompleted 0
 scoreboard players add @s dream1Completed 0
 scoreboard players add @s dream2Completed 0
 scoreboard players add @s dream3Completed 0
@@ -147,8 +151,8 @@ execute if entity @s[tag=draw] run say @s has tag "draw" (you're gonna cause tro
 execute if entity @s[tag=simplify_clouds] run say removed simplify_clouds tag from @s
 tag @s[tag=simplify_clouds] remove simplify_clouds
 
-#need to swim fast!
-attribute @s minecraft:generic.water_movement_efficiency base set 1
+#attributes and stuff!
+function phan:movement/reset_speed_self
 
 #add into player queue
 function phan:player_queue/enqueue_player

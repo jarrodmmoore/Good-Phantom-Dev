@@ -11,4 +11,4 @@ execute if score #checkLOS value matches 0 run scoreboard players reset @s targe
 
 #check again in a few ticks
 #(randomized slightly in case there's multiple ghasts all tryna do this at the same time)
-scoreboard players operation @s age = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..3}] r
+execute store result score @s age run random value 1..3

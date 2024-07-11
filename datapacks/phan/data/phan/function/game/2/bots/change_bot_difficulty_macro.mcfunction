@@ -1,0 +1,1 @@
+$data modify storage phan:bot_data_$(id) colortag set value "$(prefix)"
