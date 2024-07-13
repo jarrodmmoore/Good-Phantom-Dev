@@ -54,7 +54,7 @@ execute as @a run scoreboard players add #playerCount value 1
 
 #give the player options or start the level right away?
 scoreboard players set #goToModeSelect value 1
-execute if score #timeAttackUnlocked value matches 0 if score #playerCount value matches ..1 run scoreboard players set #goToModeSelect value 0
+#execute if score #timeAttackUnlocked value matches 0 if score #playerCount value matches ..1 run scoreboard players set #goToModeSelect value 0
 execute if score #chosenLevel value matches 1 if score #dream1Completed value matches 1.. run scoreboard players set #goToModeSelect value 1
 execute if score #chosenLevel value matches 2 if score #dream2Completed value matches 1.. run scoreboard players set #goToModeSelect value 1
 execute if score #chosenLevel value matches 3 if score #dream3Completed value matches 1.. run scoreboard players set #goToModeSelect value 1

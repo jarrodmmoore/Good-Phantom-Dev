@@ -4,6 +4,3 @@ $tp @s ~ ~ ~ $(spread_x).$(spread_x2) $(spread_z).$(spread_z2)
 
 execute store result score #test value run data get entity @s Rotation[0] 10
 execute store result score #test2 value run data get entity @s Rotation[1] 10
-
-$tellraw @a ["",{"text":"$(spread_x).$(spread_x2) $(spread_z).$(spread_z2)"}]
-tellraw @a ["",{"text":"x="},{"score":{"name":"#test","objective":"value"}},{"text":", z="},{"score":{"name":"#test","objective":"value"}}]

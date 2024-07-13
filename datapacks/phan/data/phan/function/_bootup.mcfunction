@@ -1,3 +1,11 @@
+#max bots
+scoreboard players set #MAX_BOT_COUNT value 24
+
+#level randomization
+scoreboard players set #RANDOM_TRACK_COOLDOWN value 8
+tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=randomViable] remove randomViable
+tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..15}] add randomViable
+
 #get ready to catch errors with functions due to server host
 scoreboard players set #errorCheck value 0
 
@@ -496,6 +504,8 @@ scoreboard objectives add splitTime dummy
 #play queue
 scoreboard objectives add playQueue dummy
 scoreboard objectives add teamRequest dummy
+#level picking
+scoreboard objectives add randomCooldown dummy
 #present object
 scoreboard objectives add presentTime dummy
 scoreboard objectives add presentTimeMax dummy
@@ -572,6 +582,7 @@ scoreboard objectives add vsRespawnZ dummy
 scoreboard objectives add vsRespawnYaw dummy
 scoreboard objectives add vsRespawnPitch dummy
 scoreboard objectives add vsRespawnLaunch dummy
+scoreboard objectives add vsRespawnDimension dummy
 scoreboard objectives add hudFlashTime dummy
 scoreboard objectives add prevSpectateID dummy
 scoreboard objectives add spectateDelay dummy
@@ -642,6 +653,7 @@ scoreboard objectives add botName dummy
 scoreboard objectives add botID dummy
 scoreboard objectives add botSkill dummy
 scoreboard objectives add botPoints dummy
+scoreboard objectives add botInstance dummy
 #intialize some random stuff?
 scoreboard players add #beQuiet value 0
 #constants

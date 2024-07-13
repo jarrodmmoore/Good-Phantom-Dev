@@ -17,6 +17,11 @@ execute if score #subGameState value matches -1 if score #gameState value matche
 #3,2,1 GO
 execute if score #gameTime value matches 160..250 run function phan:game/4/start_countdown/_index
 
+#=====
+#bots do their thing
+execute if score #botCount value matches 1.. if score #gameState value matches 4 run function phan:bots/_global_bot_tick
+#=====
+
 #stuff depending on game type
 execute if score #vGameType value matches 1 run function phan:game/4/race/_race_main
 execute if score #vGameType value matches 2 run function phan:game/4/battle/_battle_main

@@ -2,6 +2,9 @@ scoreboard players set #queueHead value 1
 scoreboard players set #lastLevelPlayed value 0
 tag @s remove playing
 
+#reset random track cooldowns
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown 0
+
 #clear out any previous versus mode points
 function phan:game/4/new_versus_session
 

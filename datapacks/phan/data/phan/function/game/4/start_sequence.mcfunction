@@ -24,8 +24,11 @@ execute if score #gameTime value matches 40..50 if score #chunksAreLoaded value 
 execute if score #gameTime value matches ..39 run scoreboard players set #loadTime value 0
 execute if score #gameTime value matches 40..50 run scoreboard players add #loadTime value 1
 
-#show level title (multiplayer only)
+#show level title
 execute if score #gameTime value matches 100..120 as @a[tag=doneWithIntro] run function phan:levels/_index_title
+
+#show "practice mode" if we're solo
+execute if score #gameTime value matches 160 if score #botCount value matches ..0 if score #hudPeakPlayers value matches ..1 run title @a[tag=doneWithIntro,tag=playing] actionbar ["",{"translate":"gp.game.practice_mode"}]
 
 #let spectators know when we're done loading
 execute if score #gameTime value matches 80.. run scoreboard players set @a specDoneLoading 400
@@ -34,7 +37,11 @@ execute if score #gameTime value matches 80.. run scoreboard players set @a spec
 execute if score #gameTime value matches 80 run effect clear @a[tag=doneWithIntro] blindness
 execute if score #gameTime value matches 80 run effect give @a[tag=doneWithIntro,tag=playing] blindness 1 2 true
 execute if score #gameTime value matches 80 run tag @a[tag=doneWithIntro] remove noInventory
-execute if score #gameTime value matches 80..219 as @a[tag=playing] at @s run function phan:game/4/race/start_grid/player
+execute if score #gameTime value matches 80..219 as @e[tag=playing] at @s run function phan:game/4/race/start_grid/player
+execute if score #gameTime value matches 80..219 as @e[tag=ai,type=zombie] at @s run function phan:game/4/race/start_grid/player
+
+#initialize bots at #gameTime 80
+execute if score #gameTime value matches 80 if score #botCount value matches 1.. run function phan:bots/_initialize_all_bots
 
 #3.. 160
 #2.. 180

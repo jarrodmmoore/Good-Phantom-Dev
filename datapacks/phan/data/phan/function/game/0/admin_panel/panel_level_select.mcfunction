@@ -77,6 +77,11 @@ scoreboard players set #testSlot5C value 0
 execute if items entity @s enderchest.* magenta_dye[custom_data~{setAct5c:1b}] run scoreboard players set #testSlot5C value 1
 execute if score #testSlot5C value matches 0 run scoreboard players add #testReset value 1
 
+#reset
+scoreboard players set #testSlotR value 0
+execute if items entity @s enderchest.* player_head[custom_data~{setActRandom:1b}] run scoreboard players set #testSlotR value 1
+execute if score #testSlotR value matches 0 if score #dreamsCompleted value matches 5.. run scoreboard players add #testReset value 1
+
 
 #missing one slot but still have the others? we clicked something!
 execute if score #testReset value matches 1 if score #testSlotA value matches 0 run function phan:game/0/admin_panel/click_back_to_gamemode_select
@@ -101,6 +106,7 @@ execute if score #testReset value matches 1 if score #testSlot5A value matches 0
 execute if score #testReset value matches 1 if score #testSlot5B value matches 0 run function phan:game/0/admin_panel/try_act/d5a2
 execute if score #testReset value matches 1 if score #testSlot5C value matches 0 run function phan:game/0/admin_panel/try_act/d5a3
 
+execute if score #testReset value matches 1 if score #dreamsCompleted value matches 5.. if score #testSlotR value matches 0 run function phan:game/0/admin_panel/try_act/random
 
 
 #clear items if there's a we have something we shouldn't
@@ -110,7 +116,8 @@ execute if score #testReset value matches 1.. run function phan:game/0/admin_pan
 #restore inventory
 item replace entity @s enderchest.0 with minecraft:purple_dye[custom_name='{"translate":"gp.admin.go_back","bold":true,"italic":false}',custom_data={adminMenu:1b,goBack:1b}]
 item replace entity @s enderchest.9 with air
-item replace entity @s enderchest.18 with air
+execute if score #dreamsCompleted value matches ..4 run item replace entity @s enderchest.18 with air
+execute if score #dreamsCompleted value matches 5.. run item replace entity @s enderchest.18 with player_head[custom_data={setActRandom:1b,adminMenu:1b},minecraft:custom_name='{"translate":"gp.misc.random_act","color":"white","bold":true,"italic":false}',profile={id:[I;-2103393621,-1644083299,-1977678434,-2028972227],properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTk0NWY5MGVmNWQ4MjQxNGJjZjg1NGNiOGViODdkMGUzZTU3YTVmYTZjZjRjNWJiYTE5Y2NjNDM2ZTc4MGRlYSJ9fX0="}]}]
 
 item replace entity @s enderchest.1 with air
 item replace entity @s enderchest.10 with air

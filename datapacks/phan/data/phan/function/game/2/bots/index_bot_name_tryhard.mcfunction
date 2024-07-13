@@ -10,3 +10,5 @@ execute if score @s botName matches 9 run data modify storage phan:bot_args name
 execute if score @s botName matches 10 run data modify storage phan:bot_args name set value "clawful"
 execute if score @s botName matches 11 run data modify storage phan:bot_args name set value "JohnGlacious"
 execute if score @s botName matches 12 run data modify storage phan:bot_args name set value "Tai_zazanek"
+execute if score @s botName matches 13 run data modify storage phan:bot_args name set value "tari_cat"
+execute if score @s botName matches 14 run data modify storage phan:bot_args name set value "CosmicMary"

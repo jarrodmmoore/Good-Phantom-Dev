@@ -1,4 +1,4 @@
-#executed by the marker that controls a bot
+#executed by the block_display that controls a bot
 
 #if we were on the top of the stack of bots, decrement bot count
 execute if score @s botID = #botCount value run scoreboard players remove #botCount value 1

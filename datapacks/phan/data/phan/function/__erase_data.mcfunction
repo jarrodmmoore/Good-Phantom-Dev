@@ -15,5 +15,8 @@ function phan:__reset_level_progression
 #all admins currently on the server retain admin. all others will lose it
 execute if score #requireAdmin value matches 1 as @a[tag=admin] run scoreboard players operation @s resetWave = #resetWave value
 
+#delete all bots
+function phan:game/2/bots/delete_all_bots
+
 #no sidebar!
 scoreboard objectives setdisplay sidebar

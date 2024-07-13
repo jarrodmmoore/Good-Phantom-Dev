@@ -14,3 +14,6 @@ scoreboard players set #recursions value 0
 execute store result storage phan:ai_waypoint spread_x int 1 run scoreboard players get #waypointSpreadX value
 execute store result storage phan:ai_waypoint spread_z int 1 run scoreboard players get #waypointSpreadZ value
 function phan:editor/panel/ai_waypoint/visualize/waypoint_go_spread_randomize with storage phan:ai_waypoint
+execute if score #waypointSpreadX value matches 4.. run function phan:editor/panel/ai_waypoint/visualize/waypoint_go_spread_randomize with storage phan:ai_waypoint
+execute if score #waypointSpreadZ value matches 4.. run function phan:editor/panel/ai_waypoint/visualize/waypoint_go_spread_randomize with storage phan:ai_waypoint
+execute if score #waypointSpreadX value matches 4.. if score #waypointSpreadZ value matches 4.. run function phan:editor/panel/ai_waypoint/visualize/waypoint_go_spread_randomize with storage phan:ai_waypoint

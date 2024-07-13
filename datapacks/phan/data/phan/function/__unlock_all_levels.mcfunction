@@ -50,5 +50,10 @@ scoreboard players set #disc_found_10 value 1
 scoreboard players set #disc_found_11 value 1
 scoreboard players set #disc_found_12 value 1
 
+#avoid a bug...
+scoreboard players set @a[scores={enderChestMenu=10}] enderChestMenu 2
+scoreboard players set @a[scores={enderChestMenu=20}] enderChestMenu 2
+scoreboard players set @a[scores={enderChestMenu=30}] enderChestMenu 2
+
 #update visuals (texts) if we're in the lobby
 execute if score #gameState value matches 0 run function phan:game/0/summon_props

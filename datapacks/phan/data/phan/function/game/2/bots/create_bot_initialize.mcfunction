@@ -1,4 +1,10 @@
+#executed by a block_display that was just summoned and is destined to become a botController
+
+#so... become a botController!
 tag @s add botController
+
+#get a playerID
+function phan:join/player_get_id
 
 #assign bot ID
 scoreboard players add #botCount value 1
@@ -17,8 +23,8 @@ scoreboard players set #getID value 0
 scoreboard players set #getID2 value 0
 
 #try to get a tryhard name if we're a tryhard bot
-execute store result score #test value run execute if entity @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..12},tag=!nameTakenTryhard]
-execute if score @s botSkill matches 5..6 if score #test value matches 1.. run scoreboard players operation #getID value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..12},tag=!nameTakenTryhard] r
+execute store result score #test value run execute if entity @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..14},tag=!nameTakenTryhard]
+execute if score @s botSkill matches 5..6 if score #test value matches 1.. run scoreboard players operation #getID value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..14},tag=!nameTakenTryhard] r
 execute if score #getID value matches 1.. as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #getID value run tag @s add nameTakenTryhard
 execute if score #getID value matches 1.. run scoreboard players operation @s botName = #getID value
 execute if score #getID value matches 1.. run tag @s add tryhardName
@@ -37,12 +43,11 @@ execute if score @s[tag=tryhardName] botName matches 1.. run function phan:game/
 
 #macro
 function phan:game/2/bots/bot_name_storage with storage phan:bot_args
-
 #=====
 
-#init
+#init some scores
 scoreboard players set @s botPoints 0
+#...
 
-
-#spawn an entity representing ourselves in the team select area if we're in the proper gameState
+#spawn an entity representing ourselves in the team select area if we're in team select
 execute if score #gameState value matches 2 if score #subGameState value matches 1 if score #desiredGamemode value matches 3 positioned 203 -30 112 rotated 45 0 run function phan:game/2/bots/spawn_bot_in_team_select

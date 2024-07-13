@@ -97,6 +97,7 @@ scoreboard players set #brightMines value 0
 function phan:game/1/spawning/reset_all
 scoreboard players set #countdownType value 0
 scoreboard players set #checkLoadHeight value -64
+scoreboard players set #activeDimension value 1
 function phan:game/4/load_area_info
 execute if score #vGameType value matches 2 run scoreboard players set #hudMode value 4
 execute if score #vGameType value matches 2 run scoreboard players reset * enderEyesShow
@@ -111,6 +112,9 @@ scoreboard players set #versusSpawn value 0
 execute if score #vAct value matches 1 run scoreboard players set #area0SpawnA value 0
 execute if score #vAct value matches 2 run scoreboard players set #area0SpawnB value 0
 execute if score #vAct value matches 3 run scoreboard players set #area0SpawnC value 0
+
+#bot setup
+function phan:bots/_pre_round_bot_setup
 
 #position calculator stuff
 scoreboard players set #positionAssignMin value 1

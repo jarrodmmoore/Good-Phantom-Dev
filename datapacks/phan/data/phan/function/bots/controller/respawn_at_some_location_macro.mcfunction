@@ -1,0 +1,1 @@
+$execute positioned $(coord_x) $(coord_y) $(coord_z) rotated $(coord_yaw) 0 if loaded ~ ~ ~ run function phan:bots/spawn/respawn_entity with storage phan:bot_data

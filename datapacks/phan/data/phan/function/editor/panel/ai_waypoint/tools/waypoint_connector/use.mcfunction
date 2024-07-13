@@ -1,5 +1,5 @@
 #set cooldowns
-scoreboard players set @s inputCooldown 12
+scoreboard players set @s inputCooldown 6
 scoreboard players reset @s carrotInput
 
 #nothing selected yet? select the nearest thing

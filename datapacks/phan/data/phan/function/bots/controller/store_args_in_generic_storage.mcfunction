@@ -1,0 +1,1 @@
+$function phan:bots/controller/store_args_in_generic_storage_go with storage phan:bot_data_$(id)

@@ -7,6 +7,7 @@ scoreboard players set #countdownType value 1
 
 #check for stuff at y=0 in the end dimension
 scoreboard players set #checkLoadHeight value 0
+scoreboard players set #activeDimension value 3
 
 #act-specific stuff
 execute if score #vAct value matches 1 run scoreboard players set #vGameType value 1

@@ -1,6 +1,3 @@
-#if an item gets picked up, that means we selected that thing
-execute as @a if items entity @s hotbar.* *[custom_data~{modeSelectCabin:1b}] at @s run function phan:game/2/try_return_to_cabin
-
 #stop spectating admin if they exist
 execute if score #forceSpecAdmin value matches 1 positioned 198 -30 118 run function phan:game/2/force_spectate_admin_exit
 
@@ -16,16 +13,26 @@ execute if score #desiredGamemode value matches 3 run function phan:game/2/bots/
 scoreboard players set @e[tag=botPreviewEntity,type=zombie] lifespan 5
 execute as @e[tag=botPreviewEntity,type=zombie,limit=4,sort=random] at @s run particle dust{color:[0.2,0.5,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
 
-#if there's at least one player, start counting down to game start
-execute store result score #countPlayers value run execute if entity @a
-execute if entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players remove #timeUntilStart value 1
-execute if score #countPlayers value matches 1 if entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players remove #timeUntilStart value 1
-execute if score #10Hz value matches 0 if score #timeUntilStart value matches ..199 unless entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players add #timeUntilStart value 1
-execute if score #timeUntilStart value matches ..19 unless entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players set #timeUntilStart value 20
+#count down to game start
+execute store result score #countPlayers value run execute if entity @a[tag=doneWithIntro,scores={teamRequest=2}]
+#2+ players can always start a game
+execute if score #countPlayers value matches 2.. if entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players remove #timeUntilStart value 2
+#1 player, 4 or less dreams completed, solo players can't play without at least 1 bot
+execute if score #countPlayers value matches 1 if score #botCount value matches 1.. if score #dreamsCompleted value matches ..4 run scoreboard players remove #timeUntilStart value 3
+#1 player, 5+ dreams completed, allow solo player to practice alone
+execute if score #countPlayers value matches 1 if score #dreamsCompleted value matches 5.. run scoreboard players remove #timeUntilStart value 3
+#time goes back up if not enough players
+execute if score #timeUntilStart value matches ..199 run scoreboard players add #timeUntilStart value 1
+execute if score #countPlayers value matches 0 if score #timeUntilStart value matches ..19 run scoreboard players set #timeUntilStart value 20
 execute store result bossbar general_bossbar value run scoreboard players get #timeUntilStart value
 
 #figure out who's gonna play
 execute if score #timeUntilStart value matches ..0 run function phan:game/2/finalize_teams
+execute unless score #gameState value matches 2 run return 0
+
+
+#if an item gets picked up, that means we selected that thing
+execute as @a if items entity @s hotbar.* *[custom_data~{modeSelectCabin:1b}] at @s run function phan:game/2/try_return_to_cabin
 
 #return to cabin thing must always exist!
 execute if score #gameState value matches 2 unless entity @e[type=item,tag=modeSelect] run summon item 191 -29 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":'{"translate":"gp.mode_select.return_to_cabin","color":"dark_green","italic":false}',"minecraft:hide_additional_tooltip":{},"minecraft:custom_data":{modeSelectCabin:1b}}}}
