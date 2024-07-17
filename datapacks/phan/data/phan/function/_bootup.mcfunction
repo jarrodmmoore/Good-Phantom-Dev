@@ -339,6 +339,9 @@ scoreboard objectives add moving dummy
 scoreboard objectives add location_x dummy
 scoreboard objectives add location_y dummy
 scoreboard objectives add location_z dummy
+scoreboard objectives add location_xx dummy
+scoreboard objectives add location_yy dummy
+scoreboard objectives add location_zz dummy
 scoreboard objectives add location_yaw dummy
 scoreboard objectives add location_pitch dummy
 scoreboard objectives add rot_yaw dummy
@@ -405,6 +408,7 @@ scoreboard objectives add roughVelocity dummy
 scoreboard objectives add hitstun dummy
 scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
 scoreboard objectives add inWater dummy
+scoreboard objectives add onGround dummy
 scoreboard objectives add fallFlying dummy
 scoreboard objectives add stoppedTime dummy
 scoreboard objectives add rememberRoughV dummy
@@ -654,6 +658,27 @@ scoreboard objectives add botID dummy
 scoreboard objectives add botSkill dummy
 scoreboard objectives add botPoints dummy
 scoreboard objectives add botInstance dummy
+scoreboard objectives add botBehavior dummy
+scoreboard objectives add botHookBase dummy
+scoreboard objectives add botTargetX dummy
+scoreboard objectives add botTargetY dummy
+scoreboard objectives add botTargetZ dummy
+scoreboard objectives add botTargetX10 dummy
+scoreboard objectives add botTargetY10 dummy
+scoreboard objectives add botTargetZ10 dummy
+scoreboard objectives add botTargetXX dummy
+scoreboard objectives add botTargetYY dummy
+scoreboard objectives add botTargetYYCeiling dummy
+scoreboard objectives add botTargetZZ dummy
+scoreboard objectives add botTargetWaypoint dummy
+scoreboard objectives add botApproachX dummy
+scoreboard objectives add botApproachY dummy
+scoreboard objectives add botApproachZ dummy
+scoreboard objectives add botTimeInRange dummy
+scoreboard objectives add botLastDirection dummy
+scoreboard objectives add botWanderTime dummy
+scoreboard objectives add botBiasX dummy
+scoreboard objectives add botBiasZ dummy
 #intialize some random stuff?
 scoreboard players add #beQuiet value 0
 #constants

@@ -10,13 +10,15 @@ execute unless score @s sneakTime matches 1.. run tag @s[tag=sneaking] remove sn
 execute if score @s sneakTime matches 1.. run tag @s add sneaking
 scoreboard players reset @s sneakTime
 
+#check if we're on the ground
+execute store result score @s onGround run execute if entity @s[nbt={OnGround:1b}]
+
 #check if we're in water
 scoreboard players set @s inWater 1
 execute unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run scoreboard players set @s inWater 0
 
-#check if we're flying
-scoreboard players set @s fallFlying 0
-execute if entity @s[nbt={FallFlying:1b}] run scoreboard players set @s fallFlying 1
+#check if we're gliding
+execute store result score @s fallFlying run execute if entity @s[nbt={FallFlying:1b}]
 
 #cancel elytra flight if we sneak or go in water
 execute if entity @s[tag=sneaking,scores={fallFlying=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]

@@ -41,7 +41,7 @@ execute if score #gameTime value matches 80..219 as @e[tag=playing] at @s run fu
 execute if score #gameTime value matches 80..219 as @e[tag=ai,type=zombie] at @s run function phan:game/4/race/start_grid/player
 
 #initialize bots at #gameTime 80
-execute if score #gameTime value matches 80 if score #botCount value matches 1.. run function phan:bots/_initialize_all_bots
+execute if score #gameTime value matches 80 if score #botsEnabled value matches 1.. run function phan:bots/_initialize_all_bots
 
 #3.. 160
 #2.. 180

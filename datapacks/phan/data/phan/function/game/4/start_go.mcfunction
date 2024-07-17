@@ -31,6 +31,9 @@ function phan:bgm/set_bgm_delayed
 #prepare sidebar display
 scoreboard players set #showingRacePositions value 0
 
+#bots should start doing stuff
+execute if score #botsEnabled value matches 1.. run function phan:bots/_bots_start_moving
+
 #set spawnpoint
 execute as @a at @s run spawnpoint @s ~ ~1 ~
 

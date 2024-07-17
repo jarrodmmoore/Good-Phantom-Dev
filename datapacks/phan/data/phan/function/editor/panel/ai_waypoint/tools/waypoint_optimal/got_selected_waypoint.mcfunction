@@ -17,4 +17,4 @@ execute if score #waypointSpreadZ value matches ..-11 run scoreboard players set
 #apply the score directly to ourselves
 scoreboard players operation @s AIBC_spread_x = #waypointSpreadX value
 scoreboard players operation @s AIBC_spread_z = #waypointSpreadZ value
-#remember: when stored on a waypoint, AIBC_spread_X is actually the optimal spread!
+#remember: when stored on a waypoint, AIBC_spread_x is actually the optimal spread!

@@ -12,6 +12,9 @@ scoreboard players set #countdownType value 1
 #night vision in act 1 only
 execute if score #vAct value matches 1 run scoreboard players set #nightVision value 1
 
+#all acts support bots
+scoreboard players set #mapSupportsBots value 1
+
 #act-specific stuff
 execute if score #vAct value matches 1 run scoreboard players set #vGameType value 1
 execute if score #vAct value matches 1 run scoreboard players set #vCheckPoints value 16

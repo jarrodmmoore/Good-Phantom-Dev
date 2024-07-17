@@ -1,0 +1,1 @@
+execute if score #botsEnabled value matches 2.. run scoreboard players set @s botBehavior 1

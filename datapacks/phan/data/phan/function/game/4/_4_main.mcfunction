@@ -19,7 +19,7 @@ execute if score #gameTime value matches 160..250 run function phan:game/4/start
 
 #=====
 #bots do their thing
-execute if score #botCount value matches 1.. if score #gameState value matches 4 run function phan:bots/_global_bot_tick
+execute if score #botsEnabled value matches 1.. if score #gameState value matches 4 run function phan:bots/_global_bot_tick
 #=====
 
 #stuff depending on game type
