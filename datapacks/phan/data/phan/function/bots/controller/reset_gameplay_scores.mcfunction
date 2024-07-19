@@ -14,16 +14,11 @@ scoreboard players set @s lap 0
 scoreboard players set @s finishPos -1
 scoreboard players set @s startGrid -1
 scoreboard players set @s rawTime 0
-scoreboard players set @s eyeAddDelay 0
-scoreboard players set @s eyesToAdd 0
-scoreboard players set @s eyesToDeposit 0
-scoreboard players set @s hudFlashTime 0
 scoreboard players set @s KOs 0
 scoreboard players set @s deathsSinceKO 0
 tag @s[tag=vsHomeStretch] remove vsHomeStretch
 scoreboard players set @s itemLuck 1
 scoreboard players set @s timeBehind1st 0
-scoreboard players set @s playerGetEyes 0
 scoreboard players set @s timeInFirst 0
 
 #fallback respawn coordinates are the log cabin in the overworld (chosen because it's in the spawn chunks)

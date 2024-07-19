@@ -37,7 +37,7 @@ execute if score #gameTime value matches 80.. run scoreboard players set @a spec
 execute if score #gameTime value matches 80 run effect clear @a[tag=doneWithIntro] blindness
 execute if score #gameTime value matches 80 run effect give @a[tag=doneWithIntro,tag=playing] blindness 1 2 true
 execute if score #gameTime value matches 80 run tag @a[tag=doneWithIntro] remove noInventory
-execute if score #gameTime value matches 80..219 as @e[tag=playing] at @s run function phan:game/4/race/start_grid/player
+execute if score #gameTime value matches 80..219 as @a[tag=playing] at @s run function phan:game/4/race/start_grid/player
 execute if score #gameTime value matches 80..219 as @e[tag=ai,type=zombie] at @s run function phan:game/4/race/start_grid/player
 
 #initialize bots at #gameTime 80

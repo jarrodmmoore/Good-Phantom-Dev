@@ -31,6 +31,11 @@ scoreboard objectives setdisplay sidebar
 team modify player color aqua
 team modify observer color aqua
 team modify player friendlyFire false
+team modify botDisplayVEasy color aqua
+team modify botDisplayEasy color aqua
+team modify botDisplayNormal color aqua
+team modify botDisplayHard color aqua
+team modify botDisplayTryhard color aqua
 
 #no crown?
 execute unless score #allowCrown value matches 1 run tag @a[tag=vsCrown] remove vsCrown

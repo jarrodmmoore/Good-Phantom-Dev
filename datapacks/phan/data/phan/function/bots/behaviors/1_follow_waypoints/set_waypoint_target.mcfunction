@@ -35,6 +35,8 @@ scoreboard players set #recursions value 25
 scoreboard players operation #wpCeiling value = #wpY value
 execute if entity @s[tag=!AIBC_requireGround] at @s positioned ~ ~2 ~ if block ~ ~ ~ #phan:not_solid run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target_check_ceiling
 execute if entity @s[tag=AIBC_requireGround] run scoreboard players add #wpCeiling value 15
+#tellraw @a ["",{"text":"wpY="},{"score":{"name":"#wpY","objective":"value"}}]
+#tellraw @a ["",{"text":"wpCeiling="},{"score":{"name":"#wpCeiling","objective":"value"}}]
 
 #we did it
 scoreboard players set #foundNode value 1

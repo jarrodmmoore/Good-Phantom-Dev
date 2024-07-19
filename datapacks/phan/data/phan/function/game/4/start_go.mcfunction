@@ -10,11 +10,13 @@ scoreboard players set @a checkFake 0
 scoreboard players set @a lap 1
 scoreboard players set @a rawTime 0
 scoreboard players set @a timeSinceOpenBox 0
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/bot_set_self_scores_at_start
 
 #reset speeds and energy
 function phan:movement/reset_speeds
 scoreboard players set @a energy 0
 execute if score #vGameType value matches 2 run scoreboard players set @a energy 6
+execute if score #vGameType value matches 2 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players set @s energy 6
 
 #start showing the HUD
 scoreboard players set @a pShowHUD 1

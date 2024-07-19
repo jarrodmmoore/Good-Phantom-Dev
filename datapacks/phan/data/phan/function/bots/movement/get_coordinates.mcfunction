@@ -12,7 +12,9 @@ execute store result score @s location_pitch run data get entity @s Rotation[1] 
 #note: sneaking is when we're [tag=sneaking]
 
 #check if we're on the ground
-execute store result score @s onGround run execute if entity @s[nbt={OnGround:1b}]
+execute if entity @s[nbt={OnGround:1b}] run scoreboard players set @s onGround 2
+execute if score @s onGround matches 1 unless block ~ ~-.1 ~ #phan:not_solid unless block ~ ~-.1 ~ #minecraft:stairs[half=bottom] unless block ~ ~-.1 ~ #minecraft:slabs[type=bottom] run scoreboard players set @s onGround 2
+scoreboard players remove @s[scores={onGround=1..}] onGround 1
 
 #check if we're in water
 scoreboard players set @s inWater 1

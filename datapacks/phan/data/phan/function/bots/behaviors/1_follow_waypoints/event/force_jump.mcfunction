@@ -1,0 +1,1 @@
+scoreboard players operation @s botJumpTimer = #waypointModifier value

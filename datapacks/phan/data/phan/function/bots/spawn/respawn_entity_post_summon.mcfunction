@@ -33,6 +33,24 @@ scoreboard players set @s lifespan 10
 #set to behavior state 0 by default (which means do nothing until the game starts)
 scoreboard players set @s botBehavior 0
 
+#scores
+scoreboard players set @s onGround 0
+scoreboard players set @s fallFlying 0
+scoreboard players set @s botJumpPadTimeLow 0
+scoreboard players set @s botJumpPadTimeHigh 0
+scoreboard players set @s coord_x2 0
+scoreboard players set @s coord_y2 0
+scoreboard players set @s coord_z2 0
+scoreboard players set @s energy 0
+scoreboard players set @s speedBoost 0
+scoreboard players set @s speedBoost2 0
+scoreboard players set @s speedDecayDelay 0
+scoreboard players set @s hitstun 0
+scoreboard players set @s landCooldown 0
+scoreboard players set @s botHookBase 0
+scoreboard players set @s botHookModifier 0
+scoreboard players set @s botHookModifierTime 0
+
 #we need to target the nearest AI waypoint as soon as we start caring about that
 tag @s add botTargetNearestWP
 

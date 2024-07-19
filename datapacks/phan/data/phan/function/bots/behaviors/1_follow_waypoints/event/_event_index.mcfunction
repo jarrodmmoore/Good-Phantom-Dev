@@ -1,1 +1,3 @@
-say event_index
+execute if score #waypointEvent value matches 1 run function phan:bots/behaviors/1_follow_waypoints/event/force_jump
+execute if score #waypointEvent value matches 2 run function phan:bots/behaviors/1_follow_waypoints/event/enter_cancel_flight
+#...

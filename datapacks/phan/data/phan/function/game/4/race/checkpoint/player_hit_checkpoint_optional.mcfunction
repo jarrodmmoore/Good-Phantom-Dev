@@ -10,3 +10,6 @@ scoreboard players operation @s vsRespawnZ = #location_z value
 scoreboard players operation @s vsRespawnYaw = #location_yaw value
 scoreboard players operation @s vsRespawnPitch = #location_pitch value
 scoreboard players operation @s vsRespawnLaunch = #checkLaunchRespawn value
+
+#bot needs to update controller
+tag @s[tag=ai] add hasDataToSend

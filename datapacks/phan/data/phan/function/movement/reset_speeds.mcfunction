@@ -14,3 +14,6 @@ scoreboard players set @a swiftnessTime 0
 
 scoreboard players set @a walkDistance 0
 scoreboard players set @a sprintDistance 0
+
+#bots, too
+execute if score #botsEnabled value matches 1.. run function phan:bots/reset_speeds

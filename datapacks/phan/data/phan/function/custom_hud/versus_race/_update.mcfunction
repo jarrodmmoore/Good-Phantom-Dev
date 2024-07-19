@@ -96,7 +96,7 @@ execute if score #pearlsNeeded value matches 1.. run function phan:custom_hud/ga
 #SLOT 5
 execute unless score #hudLeftDebt value = #hudPrev5 value run function phan:custom_hud/gameplay/slot5
 
-#SLOT 6-8 (always blank)
+#SLOT 6-8 (position)
 execute unless score #playerPosition value = #hudPrev6 value run function phan:custom_hud/versus_race/slot6
 execute unless score #hudPeakPlayers value = #hudPrev7 value run function phan:custom_hud/versus_race/slot7
 execute unless score #hudPrev8 value matches -95 run function phan:custom_hud/versus_race/slot8

@@ -5,6 +5,11 @@ team modify player color white
 team modify observer color white
 team modify player nametagVisibility always
 team modify player friendlyFire false
+team modify botDisplayVEasy color white
+team modify botDisplayEasy color white
+team modify botDisplayNormal color white
+team modify botDisplayHard color white
+team modify botDisplayTryhard color white
 
 #if a player was just playing in a game, move them back in the player queue
 #we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing.

@@ -33,3 +33,15 @@ scoreboard players operation @s botApproachY -= @s location_yy
 scoreboard players operation @s botApproachZ = @s botTargetZZ
 scoreboard players operation @s botApproachZ -= @s location_zz
 scoreboard players set @s botTimeInRange 0
+
+#reset our "progress" in getting near the next waypoint
+scoreboard players set @s botProgressXX 2147483647
+scoreboard players set @s botProgressYY 2147483647
+scoreboard players set @s botProgressZZ 2147483647
+scoreboard players set @s botTimeSinceProgress 0
+
+#max y value we can target
+scoreboard players operation @s botTargetYYCeiling = #wpCeiling value
+
+#set target
+scoreboard players operation @s botTargetWaypoint = #wpTarget value

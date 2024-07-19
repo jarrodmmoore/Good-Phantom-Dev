@@ -9,12 +9,6 @@ execute if entity @s[tag=botUseNearestSpread] run function phan:bots/behaviors/1
 execute if entity @s[tag=!botUseNearestSpread] run function phan:bots/behaviors/1_follow_waypoints/spread/do_a_spread
 function phan:bots/behaviors/1_follow_waypoints/spread/set_target_coordinates
 
-#set target
-scoreboard players operation @s botTargetWaypoint = #wpTarget value
-
-#max y value we can target
-scoreboard players operation @s botTargetYYCeiling = #wpCeiling value
-
 #clean-up
 tag @s remove botUseNearestSpread
 tag @s remove botTargetNearestWP

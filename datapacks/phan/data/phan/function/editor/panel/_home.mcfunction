@@ -6,6 +6,8 @@ tellraw @s ["",{"translate":"gp.editor.button.nodes","color":"yellow","bold":fal
 tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"translate":"gp.editor.button.ai_waypoints","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/ai_waypoint/_meta_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.ai_waypoints"}]}}]
 tellraw @s ["",{"text":" "}]
+tellraw @s ["",{"translate":"gp.editor.button.utilities","color":"yellow","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/utility/_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.utilities"}]}}]
+tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"translate":"gp.editor.button.exit","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/exit"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.exit"}]}}]
 #go into creative if we aren't already
 execute if entity @s[gamemode=adventure] run tellraw @s ["",{"translate":"commands.gamemode.success.self","italic":true,"with":[{"translate":"gp.misc.creative_mode","italic":true}]}]

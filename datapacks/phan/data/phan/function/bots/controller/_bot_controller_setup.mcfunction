@@ -5,6 +5,7 @@ function phan:bots/controller/reset_gameplay_scores
 
 #need to pick a spawn!
 scoreboard players operation @s startGrid = #startGrid value
+scoreboard players operation @s vsRespawnDimension = #activeDimension value
 
 #remember who we is
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botID

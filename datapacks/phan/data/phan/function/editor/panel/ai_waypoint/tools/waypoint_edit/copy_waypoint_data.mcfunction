@@ -5,9 +5,9 @@ particle minecraft:sonic_boom ~ ~.2 ~ 0 0 0 0 1 force
 
 #get the data
 scoreboard players operation #waypointDir1 value = @s AIBC_dir1
-scoreboard players operation #waypointDir2 value = @s AIBC_dir1
-scoreboard players operation #waypointDir3 value = @s AIBC_dir1
-scoreboard players operation #waypointDir4 value = @s AIBC_dir1
+scoreboard players operation #waypointDir2 value = @s AIBC_dir2
+scoreboard players operation #waypointDir3 value = @s AIBC_dir3
+scoreboard players operation #waypointDir4 value = @s AIBC_dir4
 scoreboard players operation #waypointEvent value = @s AIBC_event
 scoreboard players operation #waypointModifier value = @s AIBC_modifier
 execute store result score #waypointSpreadX value run data get entity @s Rotation[0] 10

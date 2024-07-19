@@ -1,2 +1,2 @@
-#placeholder
-say in_range_gliding
+#change direction a bit early to account for elytra momentum
+execute if score #testY value matches ..30 if score @s location_yy <= @s botTargetYYCeiling run function phan:bots/behaviors/1_follow_waypoints/in_range_go

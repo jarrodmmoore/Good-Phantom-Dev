@@ -6,7 +6,7 @@ execute if score #waypointDir4 value matches 1.. run tag @e[tag=randomize,x=-1,y
 
 #pick one
 scoreboard players set #random value 0
-scoreboard players operation #random value = @e[limit=1,sort=random,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] r
+scoreboard players operation #random value = @e[limit=1,sort=random,tag=directionViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] r
 
 #interpret it
 scoreboard players set @s botLastDirection 0

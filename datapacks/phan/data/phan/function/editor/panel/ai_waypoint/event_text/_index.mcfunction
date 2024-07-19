@@ -1,4 +1,4 @@
-#1 = force jump (enter flight? 0=no, 1=yes, 2=yes + spam jump key)
+#1 = force jump (0 = instant, 1+ = delayed, -1 = force jump at next ledge)
 execute if score @s AIBC_event matches 1 run return run function phan:editor/panel/ai_waypoint/event_text/1_force_jump
 #2 = enter or cancel flight (0/1)
 execute if score @s AIBC_event matches 2 run return run function phan:editor/panel/ai_waypoint/event_text/2_enter_cancel_flight

@@ -216,6 +216,7 @@ bossbar set buffer32 color purple
 
 #scoreboard objectives
 scoreboard objectives add value dummy
+scoreboard objectives add dataTransfer dummy
 scoreboard objectives add lifespan dummy
 scoreboard objectives add join dummy
 scoreboard objectives add resetWave dummy
@@ -679,6 +680,19 @@ scoreboard objectives add botLastDirection dummy
 scoreboard objectives add botWanderTime dummy
 scoreboard objectives add botBiasX dummy
 scoreboard objectives add botBiasZ dummy
+scoreboard objectives add botJumpTimer dummy
+scoreboard objectives add botJumpPadTimeLow dummy
+scoreboard objectives add botJumpPadTimeHigh dummy
+scoreboard objectives add botEffectSpeedPad dummy
+scoreboard objectives add botEffectSpeedPad2 dummy
+scoreboard objectives add botEffectSpeedPotion dummy
+scoreboard objectives add botEffectSlowness dummy
+scoreboard objectives add botHookModifier dummy
+scoreboard objectives add botHookModifierTime dummy
+scoreboard objectives add botProgressXX dummy
+scoreboard objectives add botProgressYY dummy
+scoreboard objectives add botProgressZZ dummy
+scoreboard objectives add botTimeSinceProgress dummy
 #intialize some random stuff?
 scoreboard players add #beQuiet value 0
 #constants
