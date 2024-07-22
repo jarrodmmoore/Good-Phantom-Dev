@@ -1,6 +1,7 @@
 #count it
 scoreboard players add @s KOs 1
 scoreboard players set @s deathsSinceKO 0
+tag @s[tag=ai] add hasDataToSend
 
 #feedback
 tellraw @s ["",{"translate":"gp.versus.got_ko","color":"green","bold":true,"with":[{"selector":"@a[tag=ded_self]","bold":false}]}]

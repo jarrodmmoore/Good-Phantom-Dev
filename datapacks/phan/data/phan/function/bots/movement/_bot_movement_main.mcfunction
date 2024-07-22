@@ -6,9 +6,9 @@ execute store result storage phan:coords target_z int 1 run scoreboard players g
 execute store result storage phan:coords target_z_dec int 1 run scoreboard players get @s botTargetZ10
 
 #DEBUG -- show bot target
-execute store result storage phan:coords target_y int 1 run scoreboard players get @s botTargetY
-execute store result storage phan:coords target_y_dec int 1 run scoreboard players get @s botTargetY10
-function phan:utility/visualize_bot_target with storage phan:coords
+#execute store result storage phan:coords target_y int 1 run scoreboard players get @s botTargetY
+#execute store result storage phan:coords target_y_dec int 1 run scoreboard players get @s botTargetY10
+#function phan:utility/visualize_bot_target with storage phan:coords
 
 #count down rotation modifier time
 execute if score @s botHookModifierTime matches 1.. run function phan:bots/movement/rotation_modifier

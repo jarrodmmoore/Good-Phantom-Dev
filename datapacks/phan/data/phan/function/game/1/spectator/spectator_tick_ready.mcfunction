@@ -13,7 +13,7 @@ execute unless score @s spectateMode matches 1.. run function phan:game/1/specta
 #free-cam
 execute if score @s spectateMode matches 1 run function phan:game/1/spectator/spectator_free_cam
 #cinematic-cam
-execute if score @s spectateMode matches 2 run function phan:game/1/spectator/spectator_cinematic_cam
+#execute if score @s spectateMode matches 2 run function phan:game/1/spectator/spectator_cinematic_cam
 
 
 #clear some variables if we lost our spec target

@@ -1,3 +1,8 @@
+#must have tools!
+execute unless items entity @s hotbar.* piglin_spawn_egg unless items entity @s inventory.* piglin_spawn_egg run function phan:editor/panel/ai_waypoint/give_tools
+
+#=====
+
 #ai waypoint home panel
 #has lots of stuff for selecting and modifying existing nodes
 

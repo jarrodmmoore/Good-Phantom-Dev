@@ -4,3 +4,6 @@ scoreboard players set #cooldownAnvil value 700
 scoreboard players set #mandateAnvil value 0
 scoreboard players set @s picksSinceGlobal 0
 scoreboard players set @s lastItemPicked 11
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem11 $(count)

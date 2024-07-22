@@ -13,7 +13,7 @@ execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run 
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run effect give @a[tag=doneWithIntro] slow_falling 4 1 true
 
 #halt the sequence if we're watching the tutorial
-execute if score #gameTime value matches 35..39 as @a[tag=doneWithIntro,scores={tutorialProgress=..999}] run function phan:game/4/tutorial_slideshow
+execute if score #gameTime value matches 35..39 unless score #botsOnly value matches 1 as @a[tag=doneWithIntro,scores={tutorialProgress=..999}] run function phan:game/4/tutorial_slideshow
 
 #halt the sequence until chunks surrounding spawnpoint are loaded
 scoreboard players set #chunksAreLoaded value 0
@@ -31,7 +31,7 @@ execute if score #gameTime value matches 100..120 as @a[tag=doneWithIntro] run f
 execute if score #gameTime value matches 160 if score #botCount value matches ..0 if score #hudPeakPlayers value matches ..1 run title @a[tag=doneWithIntro,tag=playing] actionbar ["",{"translate":"gp.game.practice_mode"}]
 
 #let spectators know when we're done loading
-execute if score #gameTime value matches 80.. run scoreboard players set @a specDoneLoading 400
+execute if score #gameTime value matches 80.. run scoreboard players set @a specDoneLoading 600
 
 #go to starting grid
 execute if score #gameTime value matches 80 run effect clear @a[tag=doneWithIntro] blindness
@@ -42,6 +42,7 @@ execute if score #gameTime value matches 80..219 as @e[tag=ai,type=zombie] at @s
 
 #initialize bots at #gameTime 80
 execute if score #gameTime value matches 80 if score #botsEnabled value matches 1.. run function phan:bots/_initialize_all_bots
+execute if score #gameTime value matches 81 if score #botsOnly value matches 1 as @a[tag=doneWithIntro,tag=!playing,gamemode=spectator] at @e[limit=1,sort=random,tag=ai,type=zombie] positioned ^ ^2 ^-2 rotated ~ 45 run tp @s ~ ~ ~ ~ ~
 
 #3.. 160
 #2.. 180

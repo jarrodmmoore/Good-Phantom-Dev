@@ -1,6 +1,7 @@
 #expected precondition:
 #coord_xx and coord_zz are our target coordinates multiplied by 10
 
+#split into multiple variables to deal with decimal point
 scoreboard players operation @s botTargetXX = #coord_xx value
 scoreboard players operation @s botTargetYY = #wpY value
 scoreboard players operation @s botTargetZZ = #coord_zz value

@@ -21,6 +21,9 @@ scoreboard players operation #coord_z2 value -= #coord_z value
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001
 
+#perform a coyote jump?
+execute if entity @s[scores={botJumpTimer=-1,airTime=..10}] run function phan:bots/movement/jump/check_for_ledge_coyote
+
 #instead of setting velocity directly, let's try adding to it to mimic minecraft air acceleration
 #(note: lower scale on the data get Motion[X] means bot will have higher air mobility)
 #x

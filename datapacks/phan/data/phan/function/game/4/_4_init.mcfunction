@@ -131,6 +131,10 @@ scoreboard players operation #lastLevelPlayed value = #chosenLevel value
 #set state
 scoreboard players set #gameState value 4
 
+#mark if the game is spectator only
+scoreboard players set #botsOnly value 0
+execute if score #botCount value matches 1.. unless entity @a[tag=doneWithIntro,tag=playing] run scoreboard players set #botsOnly value 1
+
 
 #reset player gameplay scores (need to do this AFTER setting gameState due to a conditional)
 function phan:join/reset_gameplay_scores

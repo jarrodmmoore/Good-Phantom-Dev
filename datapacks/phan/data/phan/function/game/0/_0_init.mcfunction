@@ -74,18 +74,6 @@ scoreboard players add @a playerTipTime 200
 execute if score #freePlay value matches 1 run scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #freePlay value 0
 
-#should probably send players to lobby? iunno.
-function phan:movement/reset_speeds
-effect clear @a[tag=doneWithIntro] blindness
-effect give @a[tag=doneWithIntro] blindness 2 50 true
-gamemode adventure @a[tag=doneWithIntro]
-execute unless score #lastLevelPlayed value matches 1..5 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 1 in overworld as @a[tag=doneWithIntro] positioned 206 -1 134 rotated 0 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 2 in overworld as @a[tag=doneWithIntro] positioned 206 -1 102 rotated 180 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 3 in overworld as @a[tag=doneWithIntro] positioned 218 -1 119 rotated 270 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWithIntro] positioned 203 -6 134 rotated 0 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:varied_teleport
-
 #jukebox particles don't happen until we pick a song to play from it
 scoreboard players set #lobbyJukebox value 0
 
@@ -126,6 +114,18 @@ scoreboard players reset @a elytraTimer
 
 #summon temporary props
 function phan:game/0/summon_props
+
+#should probably send players to lobby? iunno.
+function phan:movement/reset_speeds
+effect clear @a[tag=doneWithIntro] blindness
+effect give @a[tag=doneWithIntro] blindness 2 50 true
+gamemode adventure @a[tag=doneWithIntro]
+execute unless score #lastLevelPlayed value matches 1..5 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 1 in overworld as @a[tag=doneWithIntro] positioned 206 -1 134 rotated 0 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 2 in overworld as @a[tag=doneWithIntro] positioned 206 -1 102 rotated 180 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 3 in overworld as @a[tag=doneWithIntro] positioned 218 -1 119 rotated 270 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWithIntro] positioned 203 -6 134 rotated 0 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:varied_teleport
 
 #all players check for Dreams Dreams advancement
 execute as @a if entity @s[scores={dream1Completed=1..,dream2Completed=1..,dream3Completed=1..,dream4Completed=1..,dream5Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams

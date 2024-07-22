@@ -102,7 +102,7 @@ scoreboard players set @s playerTipTime 0
 scoreboard players set @s spectatingID -1
 scoreboard players set @s spectatingObject 0
 scoreboard players add @s spectateMode 0
-scoreboard players set @s specDoneLoading 400
+scoreboard players set @s specDoneLoading 600
 scoreboard players set @s strengthTime 0
 scoreboard players set @s bodyHitbox 0
 scoreboard players set @s boostBuffer 0

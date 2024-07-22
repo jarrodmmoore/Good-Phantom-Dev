@@ -3,3 +3,6 @@ $give @s minecraft:blaze_rod[custom_name='{"translate":"gp.item.lightning_strike
 scoreboard players set #cooldownLightning value 2400
 scoreboard players set @s picksSinceGlobal 0
 scoreboard players set @s lastItemPicked 9
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem9 $(count)

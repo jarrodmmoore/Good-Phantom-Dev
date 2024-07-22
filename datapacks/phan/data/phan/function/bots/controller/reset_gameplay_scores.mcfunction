@@ -1,6 +1,7 @@
 #state tags
-tag @s remove botDisabled
+tag @s[type=block_display] remove botDisabled
 tag @s remove finished
+tag @s remove botHasSpawnpoint
 
 #generic stuff
 scoreboard players set @s energy 0
@@ -27,3 +28,58 @@ scoreboard players set @s vsRespawnY -7
 scoreboard players set @s vsRespawnZ 118
 scoreboard players set @s vsRespawnYaw 0
 scoreboard players set @s vsRespawnDimension 1
+
+#addpoints
+scoreboard players set @s vsAddPoints 0
+
+#ring stuff
+scoreboard players set @s ringID 0
+scoreboard players set @s hitRingA_head 0
+scoreboard players set @s hitRingB_head 0
+scoreboard players reset @s hitRing1a
+scoreboard players reset @s hitRing2a
+scoreboard players reset @s hitRing3a
+scoreboard players reset @s hitRing4a
+scoreboard players reset @s hitRing5a
+scoreboard players reset @s hitRing6a
+scoreboard players reset @s hitRing7a
+scoreboard players reset @s hitRing8a
+scoreboard players reset @s hitRing9a
+scoreboard players reset @s hitRing10a
+scoreboard players reset @s hitRing1b
+scoreboard players reset @s hitRing2b
+scoreboard players reset @s hitRing3b
+scoreboard players reset @s hitRing4b
+scoreboard players reset @s hitRing5b
+scoreboard players reset @s hitRing6b
+scoreboard players reset @s hitRing7b
+scoreboard players reset @s hitRing8b
+scoreboard players reset @s hitRing9b
+scoreboard players reset @s hitRing10b
+
+#item box stuff
+scoreboard players set @s boxID 0
+scoreboard players set @s hitBoxA_head 0
+scoreboard players set @s hitBoxB_head 0
+scoreboard players reset @s hitBox1a
+scoreboard players reset @s hitBox2a
+scoreboard players reset @s hitBox3a
+scoreboard players reset @s hitBox4a
+scoreboard players reset @s hitBox5a
+scoreboard players reset @s hitBox1b
+scoreboard players reset @s hitBox2b
+scoreboard players reset @s hitBox3b
+scoreboard players reset @s hitBox4b
+scoreboard players reset @s hitBox5b
+
+#reset info on previous items we recieved (on each individual player)
+scoreboard players set @a lastItemPicked 0
+scoreboard players set @a picksSinceSpeed 100
+scoreboard players set @a picksSinceBigSpeed 0
+scoreboard players set @a picksSinceOffense 100
+scoreboard players set @a picksSinceTrap 100
+scoreboard players set @a picksSinceGlobal 100
+scoreboard players set @a picksSinceUtility 100
+
+#items
+function phan:bots/clear_inventory

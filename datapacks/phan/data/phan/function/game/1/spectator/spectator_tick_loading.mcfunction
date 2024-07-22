@@ -15,8 +15,8 @@ execute if score #foundSpec value matches 1.. if score #5Hz value matches 1 run 
 execute if score #foundSpec value matches 1.. run effect give @s slow_falling 3 1 true
 
 #we're done loading when the player we're spectating is done loading
-execute if score #foundSpec value matches 1.. if entity @a[tag=specTarget,scores={specDoneLoading=400..}] run scoreboard players set @s specDoneLoading 400
-execute if score @s specDoneLoading matches 400.. run effect clear @s blindness
+execute if score #foundSpec value matches 1.. if entity @a[tag=specTarget,scores={specDoneLoading=600..}] run scoreboard players set @s specDoneLoading 600
+execute if score @s specDoneLoading matches 600.. run effect clear @s blindness
 
 #cleanup
 tag @a[tag=specTarget] remove specTarget

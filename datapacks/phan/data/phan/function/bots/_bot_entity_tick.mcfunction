@@ -10,6 +10,10 @@ execute unless items entity @s armor.chest elytra run item replace entity @s arm
 #coordinates
 function phan:bots/movement/get_coordinates
 
+#health calculations
+execute store result score @s botHp run data get entity @s Health
+execute if score @s botHp matches ..1019 run function phan:bots/take_damage
+
 #=====
 #behavior based on state
 function phan:bots/behaviors/_behavior_state_index
@@ -22,6 +26,22 @@ function phan:bots/movement/_bot_movement_main
 
 #publish sidebar stuff
 execute if score #vGameType value matches 1 run function phan:bots/race/publish_positions
+
+
+#hurtful time, used to detect when damage was caused by an enemy and needs time punishment
+scoreboard players remove @s[scores={hurtfulTime=1..}] hurtfulTime 1
+
+#bot must obey input cooldown the same as everyone else
+scoreboard players remove @s[scores={inputCooldown=1..}] inputCooldown 1
+
+#bot can only make mistakes every so often
+scoreboard players remove @s[scores={botMistakeCooldown=1..}] botMistakeCooldown 1
+
+
+
+#DEBUG
+#execute if score @s botID matches 1 if score #2sec value matches 1 run function phan:bots/debug_show_scores
+
 
 #send data to controller if we need to
 execute if entity @s[tag=hasDataToSend] run function phan:bots/stage_data_for_transfer

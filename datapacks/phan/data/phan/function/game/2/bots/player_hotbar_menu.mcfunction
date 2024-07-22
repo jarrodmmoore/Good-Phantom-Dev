@@ -1,3 +1,11 @@
+#SLOT 0 - start game immediately (solo player only)
+tag @s[tag=hasSlot0] remove hasSlot0
+execute if items entity @s hotbar.0 light_blue_dye[custom_data~{slot0:1b}] run tag @s add hasSlot0
+execute if score #editArg1 value matches 1.. run clear @s[gamemode=!creative,tag=!hasSlot0] light_blue_dye[custom_data~{slot0:1b}]
+execute if score #editArg1 value matches ..0 run clear @s[gamemode=!creative,tag=hasSlot0] light_blue_dye[custom_data~{slot0:1b}]
+execute if score #editArg1 value matches 1.. if entity @s[tag=!hasSlot0,tag=!noInventory] run item replace entity @s hotbar.0 with light_blue_dye[custom_model_data=1111123,custom_name='["",{"translate":"gp.mode_select.start_game","color":"green","italic":false}]',custom_data={slot0:1b,botmenu:1b}] 1
+
+
 #add bots?
 
 #SLOT 2 - very easy bot

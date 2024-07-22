@@ -2,3 +2,6 @@ $give @s minecraft:quartz[custom_name='{"translate":"gp.item.sonic_blast","color
 
 scoreboard players set @s picksSinceUtility 0
 scoreboard players set @s lastItemPicked 12
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem12 $(count)

@@ -27,7 +27,7 @@ execute if score #testZ value matches ..-1 run function phan:bots/behaviors/1_fo
 execute if score #testX value matches -44..44 if score #testZ value matches -44..44 run function phan:bots/behaviors/1_follow_waypoints/in_range_xz
 
 #reset if we aren't making progress
-execute if score @s botTimeSinceProgress matches 20.. if score #vGameType value matches 1 run tag @s add botRespawn
+execute if score @s botTimeSinceProgress matches 20.. if score #vGameType value matches 1 run function phan:bots/behaviors/1_follow_waypoints/bot_consider_respawning
 
 #i like to move it move it
 scoreboard players set #botWantsToMove value 1

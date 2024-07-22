@@ -1,0 +1,5 @@
+tellraw @a ["",{"text":" "}]
+tellraw @a ["",{"text":"energy = "},{"score":{"name":"@s","objective":"energy"}}]
+tellraw @a ["",{"text":"check = "},{"score":{"name":"@s","objective":"check"}}]
+tellraw @a ["",{"text":"lap = "},{"score":{"name":"@s","objective":"lap"}}]
+tellraw @a ["",{"text":"ringID = "},{"score":{"name":"@s","objective":"ringID"}}]

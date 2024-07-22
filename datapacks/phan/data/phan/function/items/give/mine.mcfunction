@@ -3,3 +3,6 @@ $execute if score #brightMines value matches 1 run give @s minecraft:red_wool[cu
 
 scoreboard players set @s picksSinceTrap 0
 scoreboard players set @s lastItemPicked 13
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem13 $(count)

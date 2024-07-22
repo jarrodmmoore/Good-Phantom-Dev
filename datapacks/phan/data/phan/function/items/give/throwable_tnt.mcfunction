@@ -3,3 +3,6 @@ $give @s minecraft:tnt[custom_name='{"translate":"gp.item.throwable_tnt","color"
 scoreboard players add #givenRockets value 3
 scoreboard players set @s picksSinceOffense 0
 scoreboard players set @s lastItemPicked 3
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem3 $(count)

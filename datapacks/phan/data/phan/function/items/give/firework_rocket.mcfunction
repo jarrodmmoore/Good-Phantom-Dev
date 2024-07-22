@@ -3,3 +3,6 @@ $give @s minecraft:firework_rocket[custom_name='{"translate":"gp.item.firework_r
 scoreboard players set @s picksSinceBigSpeed 0
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s lastItemPicked 17
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem17 $(count)

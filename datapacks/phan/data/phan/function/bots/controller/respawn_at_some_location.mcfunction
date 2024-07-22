@@ -1,5 +1,7 @@
-#haven't started the race yet? respawn at a random versus start point
-execute if score @s lap matches ..0 at @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},limit=1,sort=random] run return run function phan:bots/spawn/respawn_entity with storage phan:bot_data
+scoreboard players set #success value 0
+
+#don't have a saved spawn point? respawn at a random versus start point
+execute if entity @s[tag=!botHasSpawnpoint] at @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},limit=1,sort=random] run return run function phan:bots/spawn/respawn_entity with storage phan:bot_data
 
 #otherwise, respawn at our saved coordinates
 execute store result storage phan:coords coord_x int 1 run scoreboard players get @s vsRespawnX

@@ -1,6 +1,10 @@
 #put us in our place
 tp @s ~ ~ ~ ~ ~
 
+#sound and visual effects if "GO!" has already happened
+execute if score #botsEnabled value matches 2.. at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
+execute if score #botsEnabled value matches 2.. at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
+
 #identifiers
 scoreboard players operation @s playerID = #setID value
 scoreboard players operation @s botInstance = #editArg1 value
@@ -50,6 +54,9 @@ scoreboard players set @s landCooldown 0
 scoreboard players set @s botHookBase 0
 scoreboard players set @s botHookModifier 0
 scoreboard players set @s botHookModifierTime 0
+scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
+scoreboard players set @s inputCooldown 0
+scoreboard players set @s hurtfulTime 0
 
 #we need to target the nearest AI waypoint as soon as we start caring about that
 tag @s add botTargetNearestWP

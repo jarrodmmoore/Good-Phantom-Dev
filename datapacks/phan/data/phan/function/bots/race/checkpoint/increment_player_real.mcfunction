@@ -27,6 +27,9 @@ execute if score @s energy matches 19..99 run scoreboard players set @s energy 1
 #check or record timestamp on this checkpoint to figure out item balancing
 function phan:game/4/race/checkpoint/timestamp/_index
 
+#refresh the number of reroutes we can do
+scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
+
 #clear tags
 tag @s[tag=incrementCheckReal] remove incrementCheckReal
 #this overrides any optional check increment

@@ -16,6 +16,8 @@ execute store result score #waypointGround value run execute if entity @s[tag=AI
 execute store result score #waypointHookLeft value run execute if entity @s[tag=AIBC_hookLeft]
 execute store result score #waypointHookRight value run execute if entity @s[tag=AIBC_hookRight]
 execute store result score #waypointMidAir value run execute if entity @s[tag=AIBC_midAir]
+execute store result score #waypointBadSkill value run execute if entity @s[tag=eventBadSkill]
+execute store result score #waypointHighSkill value run execute if entity @s[tag=eventHighSkill]
 
 #apply to node
 execute store result storage phan:ai_waypoint selected int 1 run scoreboard players get @s AIBC_selected

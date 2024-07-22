@@ -1,7 +1,13 @@
+#note: #test = botSkill
+
 #poof into place
 function phan:varied_teleport_nonplayer
 execute if score #beQuiet value matches ..7 at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
-execute if score #beQuiet value matches ..1 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
+execute if score #beQuiet value matches ..1 if score #test value matches ..1 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.6
+execute if score #beQuiet value matches ..1 if score #test value matches 2 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.7
+execute if score #beQuiet value matches ..1 if score #test value matches 3 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.8
+execute if score #beQuiet value matches ..1 if score #test value matches 4 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.9
+execute if score #beQuiet value matches ..1 if score #test value matches 5.. at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 execute if score #beQuiet value matches 1.. run scoreboard players add #beQuiet value 1
 
 #use age as our ID, I guess

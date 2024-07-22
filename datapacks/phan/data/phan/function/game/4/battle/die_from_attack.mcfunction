@@ -22,4 +22,5 @@ execute if score #enderEyes value matches 19.. run scoreboard players remove @s 
 
 #die!
 scoreboard players set #playerDied value 1
-function phan:game/4/battle/respawn
+execute if entity @s[type=player] run function phan:game/4/battle/respawn
+execute if entity @s[tag=ai] run function phan:bots/battle/respawn

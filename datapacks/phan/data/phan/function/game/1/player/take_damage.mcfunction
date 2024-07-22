@@ -1,6 +1,7 @@
 execute if entity @e[tag=hurtful,distance=..5] run scoreboard players set @s hurtfulTime 1
 scoreboard players set #getGot value 0
 execute on attacker if entity @s[type=player,tag=playing] run scoreboard players set #getGot value 1
+execute on attacker if entity @s[tag=ai] run scoreboard players set #getGot value 1
 execute on attacker if entity @s[tag=hurtful] run scoreboard players set #getGot value 1
 execute if score #getGot value matches 1.. run scoreboard players set @s hurtfulTime 1
 
@@ -11,6 +12,7 @@ execute if score #gameState value matches 0..1 run scoreboard players set @s[sco
 #check if we got hurt by a player
 scoreboard players set #findAttacker value -1
 execute on attacker if entity @s[type=player,tag=playing] run scoreboard players operation #findAttacker value = @s playerID
+execute on attacker if entity @s[tag=ai] run scoreboard players operation #findAttacker value = @s playerID
 execute if score #findAttacker value matches 1.. run scoreboard players operation @s attackerID = #findAttacker value
 
 #play hitsound for player that hit us

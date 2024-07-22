@@ -9,6 +9,9 @@ scoreboard players set @s inputCooldownB 30
 #check or record timestamp on this checkpoint to figure out item balancing
 function phan:game/4/race/checkpoint/timestamp/_index
 
+#refresh the number of reroutes we can do
+scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
+
 #clear tag
 tag @s[tag=incrementCheckOptional] remove incrementCheckOptional
 

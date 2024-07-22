@@ -12,6 +12,8 @@ scoreboard players set #waypointHook value 0
 execute if entity @s[tag=AIBC_hookLeft,tag=!AIBC_hookRight] run scoreboard players set #waypointHook value 1
 execute if entity @s[tag=!AIBC_hookLeft,tag=AIBC_hookRight] run scoreboard players set #waypointHook value 2
 execute if entity @s[tag=AIBC_hookLeft,tag=AIBC_hookRight] run scoreboard players set #waypointHook value 3
+execute store result score #waypointEventSkill value run execute if entity @s[tag=eventBadSkill]
+execute if entity @s[tag=eventHighSkill] run scoreboard players set #waypointEventSkill value 2
 
 #we did it
 scoreboard players set #success value 1

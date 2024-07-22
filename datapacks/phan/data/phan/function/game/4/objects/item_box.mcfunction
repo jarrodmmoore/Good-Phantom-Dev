@@ -1,5 +1,6 @@
 #collect if player touches
 execute if score @s hitstun matches ..0 positioned ~-1 ~-1 ~-1 if entity @a[tag=playing,gamemode=adventure,dx=2,dy=2,dz=2] positioned ~1 ~1 ~1 run function phan:game/4/objects/item_box_check
+execute if score #botsEnabled value matches 1.. if score @s[tag=itemBox] hitstun matches ..0 positioned ~-1 ~-1 ~-1 if entity @e[tag=ai,type=zombie,dx=2,dy=2,dz=2] positioned ~1 ~1 ~1 run function phan:game/4/objects/item_box_check_bot
 
 #spin. looks cool. makes modified clients s*** themselves but they were warned to play vanilla so sorry not sorry
 scoreboard players add @s bobTime 1

@@ -64,6 +64,8 @@ execute if score #playersOnServer value matches ..1 run scoreboard players enabl
 scoreboard players enable @a[tag=nonSpectator] exit
 execute if entity @a[tag=nonSpectator,scores={restart=1..}] run function phan:game/4/restart_round
 execute as @a[tag=nonSpectator,scores={exit=1..}] run function phan:game/4/player_exit
+#triggers work differently if game is bots-only
+execute if score #botsOnly value matches 1 run function phan:game/4/bots_only_triggers
 scoreboard players enable @a[tag=playing,gamemode=adventure] respawn
 #player respawn trigger handled in _player_main...
 scoreboard players enable @a[tag=!playing] spectatorView
@@ -77,4 +79,5 @@ execute if score #showNametags value matches 0 unless entity @a[tag=playing,scor
 tag @a[tag=nonSpectator] remove nonSpectator
 
 #force end if no active player is found
-execute if score #gameState value matches 4 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init
+execute if score #gameState value matches 4 if score #botsOnly value matches 0 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init
+execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[tag=botController,type=block_display] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init

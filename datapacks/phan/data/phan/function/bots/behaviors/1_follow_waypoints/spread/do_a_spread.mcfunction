@@ -6,9 +6,9 @@
 #-> this also stops bots from constantly mobbing together in the center of the lane which would result from all of them picking a new random point every time
 #A: also yes that's entirely true
 
-#start in dead center
-scoreboard players operation #coord_xx value = #wpX value
-scoreboard players operation #coord_zz value = #wpZ value
+#start in dead center (commented out because this has already been handled)
+#scoreboard players operation #coord_xx value = #wpX value
+#scoreboard players operation #coord_zz value = #wpZ value
 
 #chance of taking optimal line depending on our skill
 #(very easy has 0 chance)

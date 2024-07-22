@@ -55,7 +55,7 @@ execute if score @s pGameTime matches 71..200 as @e[type=armor_stand,tag=current
 execute if score @s pGameTime matches 100..120 if score #multiplayer value matches 1 run function phan:levels/_index_title
 
 #let spectators know when we're done loading
-execute if score @s pGameTime matches 80.. run scoreboard players set @s specDoneLoading 400
+execute if score @s pGameTime matches 80.. run scoreboard players set @s specDoneLoading 600
 
 #make sure area info loaded...
 execute if score @s pGameTime matches 70 run function phan:game/1/load_area_info

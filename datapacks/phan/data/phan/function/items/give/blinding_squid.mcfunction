@@ -3,3 +3,6 @@ $give @s minecraft:cyan_dye[custom_model_data=1111115,custom_name='{"translate":
 scoreboard players set #cooldownSquid value 1100
 scoreboard players set @s picksSinceGlobal 0
 scoreboard players set @s lastItemPicked 10
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem10 $(count)
