@@ -32,6 +32,11 @@ scoreboard players operation @s racePosDisplay = @s finishPos
 #stop mandating anvils to stop 1st place
 scoreboard players set #1stPlaceLeadTime value 0
 
+#if only 1 player left, cancel any outstanding anvil mandate
+execute store result score #playerCount value run execute if entity @a[tag=playing]
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players add #playerCount value 1
+execute if score #playerCount value matches ..1 run scoreboard players set #mandateAnvil value 0
+
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me
 

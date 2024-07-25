@@ -2,11 +2,14 @@
 execute if score #botWantsToMove value matches 0 run return 0
 #=====
 
+#override coordinates if we have a temporary target
+execute unless score @s botTargetID matches 0 run function phan:bots/movement/override_coordinates_with_temporary_target_xz
+
 #project the target
 function phan:bots/movement/0_on_ground/project_target with storage phan:coords
 
 #face the target
-function phan:bots/movement/0_on_ground/face_target with storage phan:coords
+function phan:bots/movement/0_on_ground/face_target
 
 #find difference between our coordinates and projected target
 execute store result score #coord_x value run data get entity @s Pos[0] 100000
@@ -14,8 +17,14 @@ execute store result score #coord_z value run data get entity @s Pos[2] 100000
 scoreboard players operation #coord_x2 value -= #coord_x value
 scoreboard players operation #coord_z2 value -= #coord_z value
 
+#store the last yaw we looked at
+execute store result score @s botWanderYaw run data get entity @s Rotation[0] 1
+
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001
+
+#kick out if we're on pause time
+execute if score @s botPauseTime matches 1.. run return run scoreboard players set #botWantsToMove value 0
 
 #amplify velocity depending on effects and terrain
 execute positioned ~ ~-1 ~ if block ~ ~ ~ #phan:bot_odd_terrain run function phan:bots/movement/0_on_ground/odd_terrain

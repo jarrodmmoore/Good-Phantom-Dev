@@ -1,1 +1,1 @@
-execute if score #botsEnabled value matches 2.. run scoreboard players set @s botBehavior 1
+execute if score #botsEnabled value matches 2.. run function phan:bots/behaviors/0_await_start/get_started

@@ -42,3 +42,20 @@ scoreboard players operation #coord_zz value = #wpZ value
 
 #we did it
 scoreboard players set #foundNode value 1
+
+#=====
+#get IDs of child waypoints if we requested them
+execute if score #getChildIDs value matches 0 run return 0
+scoreboard players set #getChildIDs value 0
+
+scoreboard players operation #wpDir1 value = @s AIBC_dir1
+scoreboard players operation #wpDir2 value = @s AIBC_dir2
+scoreboard players operation #wpDir3 value = @s AIBC_dir3
+scoreboard players operation #wpDir4 value = @s AIBC_dir4
+
+#don't try to target child waypoints if we have an important event on us
+execute if score @s AIBC_event matches 1..2 run scoreboard players set #wpDir1 value -1
+execute if score @s AIBC_event matches 5 run scoreboard players set #wpDir1 value -1
+
+#send signal if we failed
+execute if score #wpDir1 value matches 0 if score #wpDir2 value matches 0 if score #wpDir3 value matches 0 if score #wpDir4 value matches 0 run scoreboard players set #wpDir1 value -1

@@ -6,8 +6,7 @@ execute if score #waypointEventSkill value matches 1..2 if function phan:bots/be
 execute unless items entity @s armor.chest elytra run item replace entity @s armor.chest with elytra[unbreakable={}]
 
 #0,1,2 mid air? just enter flight
-execute unless score #waypointModifier value matches 3 if score @s onGround matches ..0 run data merge entity @s {FallFlying:1b}
-execute unless score #waypointModifier value matches 3 if score @s onGround matches ..0 run scoreboard players set @s fallFlying 1
+execute unless score #waypointModifier value matches 3 if score @s onGround matches ..0 run function phan:bots/movement/1_air/transition_to_gliding
 
 #0,1,2 while grounded? do a jump, now or later, with possible spamming, and enter flight when airborne
 execute unless score #waypointModifier value matches 2..3 if score @s onGround matches 1.. run scoreboard players set @s botJumpTimer 0

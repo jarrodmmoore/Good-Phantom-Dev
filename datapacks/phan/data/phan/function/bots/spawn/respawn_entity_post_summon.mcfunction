@@ -9,7 +9,7 @@ execute if score #botsEnabled value matches 2.. at @s run playsound minecraft:en
 scoreboard players operation @s playerID = #setID value
 scoreboard players operation @s botInstance = #editArg1 value
 scoreboard players operation @s botID = #editArg2 value
-#(yes, bots have 3 different identifier scores. what of it?)
+#(yes, bots use 3 different identifier scores. what of it?)
 
 #go to the proper start grid location
 scoreboard players operation @s startGrid = #editPitch value
@@ -28,7 +28,7 @@ execute if score @s botSkill matches 6 run item replace entity @s armor.head wit
 execute store result score @s botBiasX run random value 0..10
 execute store result score @s botBiasZ run random value 0..10
 
-#i hope this doesn't f*** with our bot difficulty tag color
+#get the right name color (thankfully, this doesn't seem to muck up the difficulty tag)
 team join player @s
 
 #bot should only stay alive as long as we're running code on it
@@ -56,7 +56,19 @@ scoreboard players set @s botHookModifier 0
 scoreboard players set @s botHookModifierTime 0
 scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
 scoreboard players set @s inputCooldown 0
+scoreboard players set @s inputCooldownB 0
 scoreboard players set @s hurtfulTime 0
+execute store result score @s botReactionTimer run random value 1..20
+scoreboard players set @s AIBC_selected 0
+scoreboard players set @s AIBC_selected2 0
+execute store result score @s botRoamLookBias run random value 0..1
+scoreboard players set @s botRoamLookBias2 1
+execute store result score @s botWanderYaw run data get entity @s Rotation[0] 1
+scoreboard players set @s botPauseTime 0
+scoreboard players set @s botItemThinkTime 20
+scoreboard players set @s botMoveState 1
+scoreboard players set @s botTargetID 0
+scoreboard players set @s botHoldingItem 0
 
 #we need to target the nearest AI waypoint as soon as we start caring about that
 tag @s add botTargetNearestWP

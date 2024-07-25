@@ -18,7 +18,7 @@ scoreboard players operation #botHook value = @s botHookBase
 scoreboard players operation #botHook value += @s botHookModifier
 execute store result storage phan:coords yaw_offset int 1 run scoreboard players get #botHook value
 
-#handle artificial effects
+#handle artificial effect timers
 scoreboard players remove @s[scores={botJumpPadTimeLow=1..}] botJumpPadTimeLow 1
 scoreboard players remove @s[scores={botJumpPadTimeHigh=1..}] botJumpPadTimeHigh 1
 scoreboard players remove @s[scores={botEffectSpeedPad=1..}] botEffectSpeedPad 1
@@ -29,28 +29,38 @@ scoreboard players remove @s[scores={botEffectSlowness=1..}] botEffectSlowness 1
 #count down time until we want to jump
 scoreboard players remove @s[scores={botJumpTimer=1..}] botJumpTimer 1
 
-#moveState
+#botMoveState
 #0 = on ground
 #1 = airborne
 #2 = gliding
 #3 = in water
-scoreboard players set #moveState value 0
-execute if score @s onGround matches 0 run scoreboard players set #moveState value 1
-execute if score @s fallFlying matches 1 run scoreboard players set #moveState value 2
-execute if score @s inWater matches 1 run scoreboard players set #moveState value 3
+scoreboard players set @s botMoveState 0
+execute if score @s onGround matches 0 run scoreboard players set @s botMoveState 1
+execute if score @s fallFlying matches 1 run scoreboard players set @s botMoveState 2
+execute if score @s inWater matches 1 run scoreboard players set @s botMoveState 3
+
+#temporary target? override target coordinates
+execute unless score @s botMoveState matches 2 unless score @s botTargetID matches 0
 
 #movement related calculations
 function phan:bots/movement/movement_calculations
 
-#DEBUG
-#scoreboard players set @s moveVelocity 250
-#scoreboard players set @a moveVelocity 250
+#dismount and destroy vehicle armor stand when we're not gliding
+execute unless score @s botMoveState matches 1..2 if function phan:bots/movement/check_for_vehicle run function phan:bots/movement/cancel_flight
 
-#execute movements
-execute if score #moveState value matches 0 run function phan:bots/movement/0_on_ground/_on_ground
-execute if score #moveState value matches 1 run function phan:bots/movement/1_air/_air
-execute if score #moveState value matches 2 run function phan:bots/movement/2_gliding/_gliding
-execute if score #moveState value matches 3 run function phan:bots/movement/3_in_water/_in_water
+#=====
+#execute movements based on botMoveState
+execute if score @s botMoveState matches 0 run function phan:bots/movement/0_on_ground/_on_ground
+execute if score @s botMoveState matches 1 run function phan:bots/movement/1_air/_air
+execute if score @s botMoveState matches 2 run function phan:bots/movement/2_gliding/_gliding
+execute if score @s botMoveState matches 3 run function phan:bots/movement/3_in_water/_in_water
+#=====
+
+#count down pause time
+scoreboard players remove @s[scores={botPauseTime=1..}] botPauseTime 1
 
 #dance around things that might get us stuck
 execute unless score @s botHookModifierTime matches 1.. at @s positioned ~ ~1.2 ~ rotated ~ 0 run function phan:bots/movement/blocked_path_check
+
+#stop chasing temporary target if we reached it
+execute unless score @s botTargetID matches 0 run function phan:bots/movement/check_if_bot_reached_temporary_target

@@ -94,6 +94,7 @@ scoreboard objectives add AIBC_spread_x dummy
 scoreboard objectives add AIBC_spread_z dummy
 #editor--ai waypoint management
 scoreboard objectives add AIBC_selected dummy
+scoreboard objectives add AIBC_selected2 dummy
 scoreboard objectives add AIBC_set_dir dummy
 scoreboard objectives add AIBC_mode dummy
 #parameter teleports
@@ -459,7 +460,6 @@ scoreboard objectives add botApproachY dummy
 scoreboard objectives add botApproachZ dummy
 scoreboard objectives add botTimeInRange dummy
 scoreboard objectives add botLastDirection dummy
-scoreboard objectives add botWanderTime dummy
 scoreboard objectives add botBiasX dummy
 scoreboard objectives add botBiasZ dummy
 scoreboard objectives add botJumpTimer dummy
@@ -478,6 +478,22 @@ scoreboard objectives add botTimeSinceProgress dummy
 scoreboard objectives add botAllowedReroutes dummy
 scoreboard objectives add botHp dummy
 scoreboard objectives add botMistakeCooldown dummy
+scoreboard objectives add botReactionTimer dummy
+scoreboard objectives add botRoamLookBias dummy
+scoreboard objectives add botRoamLookBias2 dummy
+scoreboard objectives add botWanderTime dummy
+scoreboard objectives add botWanderYaw dummy
+scoreboard objectives add botPauseTime dummy
+scoreboard objectives add botItemThinkTime dummy
+scoreboard objectives add botMoveState dummy
+scoreboard objectives add botTargetID dummy
+scoreboard objectives add botTempTargetX dummy
+scoreboard objectives add botTempTargetX10 dummy
+scoreboard objectives add botTempTargetY dummy
+scoreboard objectives add botTempTargetY10 dummy
+scoreboard objectives add botTempTargetZ dummy
+scoreboard objectives add botTempTargetZ10 dummy
+scoreboard objectives add botHoldingItem dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy

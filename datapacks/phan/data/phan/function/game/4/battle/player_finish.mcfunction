@@ -40,6 +40,11 @@ execute if entity @s[scores={finishPos=1,KOs=..0}] if entity @a[tag=playing] run
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me
 
+#if only 1 player left, cancel any outstanding anvil mandate
+execute store result score #playerCount value run execute if entity @a[tag=playing]
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players add #playerCount value 1
+execute if score #playerCount value matches ..1 run scoreboard players set #mandateAnvil value 0
+
 #make sure HUD doesn't get stuck on a blank timer thing
 scoreboard players set @s hudFlashTime 0
 function phan:custom_hud/versus_battle/_update

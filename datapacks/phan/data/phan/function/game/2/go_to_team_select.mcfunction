@@ -1,6 +1,9 @@
 #set subGameState so we know what to do with the game loop and mid-game player joins
 scoreboard players set #subGameState value 1
 
+#get ready to show a possible trophy
+scoreboard players set #offerTrophy value 0
+
 #sound
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.activate master @s ~ 100000 ~ 100000 1.9
 

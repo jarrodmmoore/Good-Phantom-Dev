@@ -58,6 +58,3 @@ execute if score #checkLoadHeight value matches 0 if block ~ 1 ~ #phan:area_chec
 
 #take damage?
 execute if entity @s[scores={damage=1..}] run function phan:game/1/player/take_damage
-
-#xp bar (energy display)
-function phan:game/1/player/xp_bar/xp_main

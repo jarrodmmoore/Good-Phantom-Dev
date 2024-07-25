@@ -41,6 +41,10 @@ scoreboard players set @s botProgressYY 2147483647
 scoreboard players set @s botProgressZZ 2147483647
 scoreboard players set @s botTimeSinceProgress 0
 
+#remember the last two nodes we targeted
+scoreboard players operation @s AIBC_selected2 = @s AIBC_selected
+scoreboard players operation @s AIBC_selected = #wpTarget value
+
 #max y value we can target
 scoreboard players operation @s botTargetYYCeiling = #wpCeiling value
 

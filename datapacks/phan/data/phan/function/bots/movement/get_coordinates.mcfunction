@@ -21,4 +21,9 @@ scoreboard players set @s inWater 1
 execute unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run scoreboard players set @s inWater 0
 
 #check if we're flying
-execute store result score @s fallFlying run execute if entity @s[nbt={FallFlying:1b}]
+#execute store result score @s fallFlying run execute if entity @s[nbt={FallFlying:1b}]
+execute store result score @s fallFlying run execute on vehicle if entity @s[tag=botElytraHeightFix]
+
+
+#kill bot if it fell into the void
+execute if score @s location_y matches ..-65 run tag @s[tag=!botRespawn] add botRespawn

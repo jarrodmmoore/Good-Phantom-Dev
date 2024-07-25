@@ -9,9 +9,9 @@ execute if score @s AIBC_event matches 4 run return run function phan:editor/pan
 #5 = portal finished? take alt route
 execute if score @s AIBC_event matches 5 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"portal finished? take alt route"}
 #6 = take alt route if priority is items
-execute if score @s AIBC_event matches 6 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if priority is items"}
+execute if score @s AIBC_event matches 6 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if behind (want items)"}
 #7 = take alt route if priority is NOT items
-execute if score @s AIBC_event matches 7 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if priority is NOT items"}
+execute if score @s AIBC_event matches 7 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if ahead"}
 #8 = at max speed? boost + take alt route
 execute if score @s AIBC_event matches 8 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"at max speed? boost + take alt route"}
 #9 = use super jump + take alt route

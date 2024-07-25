@@ -17,21 +17,20 @@ function phan:items/use/warp_race_try
 
 #subsequent checkpoints: must be within our warp range (determined by how far behind 1st we are)
 scoreboard players set #minWarpDistance value 0
-execute if score #timeBehind1st value matches 100..119 run scoreboard players set #minWarpDistance value 8
-execute if score #timeBehind1st value matches 120..139 run scoreboard players set #minWarpDistance value 16
-execute if score #timeBehind1st value matches 140..159 run scoreboard players set #minWarpDistance value 24
-execute if score #timeBehind1st value matches 160..179 run scoreboard players set #minWarpDistance value 32
-execute if score #timeBehind1st value matches 180..189 run scoreboard players set #minWarpDistance value 40
-execute if score #timeBehind1st value matches 190..204 run scoreboard players set #minWarpDistance value 48
-execute if score #timeBehind1st value matches 205..229 run scoreboard players set #minWarpDistance value 56
-execute if score #timeBehind1st value matches 230..244 run scoreboard players set #minWarpDistance value 64
-execute if score #timeBehind1st value matches 245.. run scoreboard players set #minWarpDistance value 72
+execute if score #timeBehind1st value matches 100..119 run scoreboard players set #minWarpDistance value 7
+execute if score #timeBehind1st value matches 120..139 run scoreboard players set #minWarpDistance value 14
+execute if score #timeBehind1st value matches 140..159 run scoreboard players set #minWarpDistance value 21
+execute if score #timeBehind1st value matches 160..179 run scoreboard players set #minWarpDistance value 28
+execute if score #timeBehind1st value matches 180..189 run scoreboard players set #minWarpDistance value 35
+execute if score #timeBehind1st value matches 190..204 run scoreboard players set #minWarpDistance value 42
+execute if score #timeBehind1st value matches 205..229 run scoreboard players set #minWarpDistance value 49
+execute if score #timeBehind1st value matches 230..244 run scoreboard players set #minWarpDistance value 56
+execute if score #timeBehind1st value matches 245.. run scoreboard players set #minWarpDistance value 63
 
 #also limit the number of jumps we can make depending on time behind 1st (reason: track could make a u-turn allowing for an unusually long warp in some part of the track)
-scoreboard players set #warpLimit value 5
-execute if score #timeBehind1st value matches ..289 run scoreboard players set #warpLimit value 4
-execute if score #timeBehind1st value matches ..239 run scoreboard players set #warpLimit value 3
-execute if score #timeBehind1st value matches ..189 run scoreboard players set #warpLimit value 2
+scoreboard players set #warpLimit value 4
+execute if score #timeBehind1st value matches ..289 run scoreboard players set #warpLimit value 3
+execute if score #timeBehind1st value matches ..214 run scoreboard players set #warpLimit value 2
 execute if score #timeBehind1st value matches ..139 run scoreboard players set #warpLimit value 1
 
 #take off 1 warp before we start, just to make number add up...

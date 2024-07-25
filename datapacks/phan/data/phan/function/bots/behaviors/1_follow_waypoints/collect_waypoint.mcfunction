@@ -17,3 +17,4 @@ execute if entity @s[tag=eventHighSkill] run scoreboard players set #waypointEve
 
 #we did it
 scoreboard players set #success value 1
+execute if entity @s[tag=AIBC_requireGround] run scoreboard players set #success value 2

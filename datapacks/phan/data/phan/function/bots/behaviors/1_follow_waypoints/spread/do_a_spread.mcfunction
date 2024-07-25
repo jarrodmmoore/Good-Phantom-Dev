@@ -25,7 +25,7 @@ execute if score #random value matches ..10 unless score #wpOptimalX value match
 #still here? probably take a spread based on our bias
 
 #chance of changing our bias by either mutating it or re-rolling completely
-execute store result score #random value run random value 1..10
+execute store result score #random value run random value 1..12
 execute if score #random value matches 1 run function phan:bots/behaviors/1_follow_waypoints/spread/set_bias_random
 execute if score #random value matches 2..4 run function phan:bots/behaviors/1_follow_waypoints/spread/mutate_bias
 

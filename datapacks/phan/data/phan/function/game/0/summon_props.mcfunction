@@ -21,6 +21,9 @@ tag @e[tag=rotateText,type=text_display] remove rotateText
 execute if score #scoresRecorded value matches 0 run setblock 194 -8 125 spruce_planks
 execute if score #scoresRecorded value matches 0 run fill 194 -7 125 194 -6 125 air
 
+#trophies
+function phan:game/0/summon_trophies
+
 #practice area text
 summon text_display 192 -4 118 {Tags:["lobbyProp","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.practice.practice_area","fallback":"Practice Area","color":"white"}'}
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~-.3 ~.6 ~ 270 ~

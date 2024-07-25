@@ -6,11 +6,14 @@ execute if score @s fallFlying matches 1 run return 0
 execute if score #botWantsToMove value matches 0 run return 0
 #=====
 
+#override coordinates if we have a temporary target
+execute unless score @s botTargetID matches 0 run function phan:bots/movement/override_coordinates_with_temporary_target_xz
+
 #project the target
 function phan:bots/movement/0_on_ground/project_target with storage phan:coords
 
-#face the target
-#function phan:bots/movement/0_on_ground/face_target with storage phan:coords
+#face the target (jk, don't do that while airborne. super broken.)
+#function phan:bots/movement/0_on_ground/face_target
 
 #find difference between our coordinates and projected target
 execute store result score #coord_x value run data get entity @s Pos[0] 100000

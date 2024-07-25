@@ -31,6 +31,9 @@ execute store result bossbar general_bossbar value run scoreboard players get #t
 execute if score #timeUntilStart value matches ..0 run function phan:game/2/finalize_teams
 execute unless score #gameState value matches 2 run return 0
 
+#not in free play mode? show a possible trophy as a reward
+execute if score #freePlay value matches 0 run function phan:game/2/bots/trophy/_offer_tick
+execute if score #10Hz value matches 0 as @e[type=item_display,tag=offerTrophy,limit=1] at @s run particle instant_effect ~ ~ ~ 0.25 0.25 0.25 0.05 1
 
 #if an item gets picked up, that means we selected that thing
 execute as @a if items entity @s hotbar.* *[custom_data~{modeSelectCabin:1b}] at @s run function phan:game/2/try_return_to_cabin

@@ -1,7 +1,7 @@
 #(executed by a waypoint)
 
 #particle to indicate we modified this waypoint
-particle minecraft:happy_villager ~ ~.2 ~ 0.1 0.1 0.1 0.05 1 force
+particle minecraft:sonic_boom ~ ~.2 ~ 0.1 0.1 0.1 0.05 1 force
 
 #apply data to ourselves
 scoreboard players operation @s AIBC_dir1 = #waypointDir1 value
@@ -33,6 +33,10 @@ execute if score @s AIBC_dir3 matches 0 run scoreboard players reset @s AIBC_dir
 execute if score @s AIBC_dir4 matches 0 run scoreboard players reset @s AIBC_dir4
 execute if score @s AIBC_event matches 0 run scoreboard players reset @s AIBC_event
 execute if score @s AIBC_modifier matches 0 run scoreboard players reset @s AIBC_modifier
+
+#check if we're an object of interest to bots
+tag @s remove botObjectOfInterest
+execute if score @s AIBC_event matches 3 run tag @s add botObjectOfInterest
 
 #check if we should have a 5th route
 tag @s remove AIBC_hasRoute5

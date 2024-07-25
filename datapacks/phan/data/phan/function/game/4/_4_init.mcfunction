@@ -56,11 +56,6 @@ scoreboard players set #eyeShowAssign value 2147483647
 scoreboard players set #versusPointsShowing value 0
 execute as @a run function phan:game/4/reset_player_scores
 
-#show tutorial to everyone if nobody has seen it yet
-scoreboard players add @a tutorialProgress 0
-execute unless entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 0
-execute if entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 1000
-
 #reset timestamps on checkpoints
 function phan:game/4/race/checkpoint/timestamp/reset_all
 
@@ -134,6 +129,11 @@ scoreboard players set #gameState value 4
 #mark if the game is spectator only
 scoreboard players set #botsOnly value 0
 execute if score #botCount value matches 1.. unless entity @a[tag=doneWithIntro,tag=playing] run scoreboard players set #botsOnly value 1
+
+#show tutorial to everyone if nobody has seen it yet
+scoreboard players add @a tutorialProgress 0
+execute unless entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] if score #botsOnly value matches 0 run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 0
+execute if entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 1000
 
 
 #reset player gameplay scores (need to do this AFTER setting gameState due to a conditional)

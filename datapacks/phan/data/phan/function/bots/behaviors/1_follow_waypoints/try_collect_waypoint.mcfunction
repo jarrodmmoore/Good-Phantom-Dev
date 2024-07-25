@@ -12,4 +12,4 @@ $execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(id)},distance=..5,limit=1,
 $execute if score #success value matches 0 as @e[type=marker,tag=AIBC,scores={AIBC_id=$(id)},distance=..50,limit=1,sort=nearest] at @s run function phan:bots/behaviors/1_follow_waypoints/collect_waypoint
 
 #adopt data if we found the waypoint and it didn't reject us
-execute if score #success value matches 1 run function phan:bots/behaviors/1_follow_waypoints/adopt_new_waypoint_data
+execute if score #success value matches 1.. run function phan:bots/behaviors/1_follow_waypoints/adopt_new_waypoint_data

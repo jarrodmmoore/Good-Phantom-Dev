@@ -15,7 +15,8 @@ execute if score @s editNode matches 11 run summon area_effect_cloud ~ ~ ~ {Dura
 execute if score @s editNode matches 12 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.present","color":"light_purple"}]'}
 execute if score @s editNode matches 13 run function phan:editor/node_visualize_name_baddie
 execute if score @s editNode matches 14 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.small_target","color":"red"}]'}
-execute if score @s editNode matches 15 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box","color":"light_purple"}]'}
+execute if score @s editNode matches 15 if score @s editArg3 matches ..0 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box","color":"light_purple"}]'}
+execute if score @s editNode matches 15 if score @s editArg3 matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box","color":"white"}]'}
 execute if score @s editNode matches 15 run function phan:editor/node_visualize_name_chest
 #...
 execute if score @s editNode matches 17 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.big_target","color":"red"}]'}
