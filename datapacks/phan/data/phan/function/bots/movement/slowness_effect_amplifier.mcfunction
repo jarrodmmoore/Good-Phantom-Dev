@@ -8,3 +8,6 @@ scoreboard players operation #coord_y2 value *= #multiplier value
 scoreboard players operation #coord_y2 value /= #100 value
 scoreboard players operation #coord_z2 value *= #multiplier value
 scoreboard players operation #coord_z2 value /= #100 value
+
+#don't be on fire due to lightning!
+data merge entity @s {Fire:0}

@@ -1,7 +1,7 @@
 #messages
 
 #success! stole item
-tellraw @s ["",{"text":"\n"},{"translate":"gp.item.enderman_thief_steal_item_success","with":[{"selector":"@a[tag=gotRobbed]"}]},{"text":"\n"}]
+execute if entity @s[type=player] run tellraw @s ["",{"text":"\n"},{"translate":"gp.item.enderman_thief_steal_item_success","with":[{"selector":"@e[tag=gotRobbed]"}]},{"text":"\n"}]
 
 #oh no! item stolen
 tellraw @a[tag=gotRobbed] ["",{"text":"\n"},{"translate":"gp.item.enderman_thief_stolen_item","with":[{"selector":"@s"}]},{"text":"\n"}]

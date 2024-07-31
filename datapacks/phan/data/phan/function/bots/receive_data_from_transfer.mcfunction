@@ -24,6 +24,7 @@ scoreboard players operation @s vsRespawnY = #vsRespawnY dataTransfer
 scoreboard players operation @s vsRespawnZ = #vsRespawnZ dataTransfer
 scoreboard players operation @s vsRespawnYaw = #vsRespawnYaw dataTransfer
 scoreboard players operation @s vsRespawnDimension = #vsRespawnDimension dataTransfer
+scoreboard players operation @s vsRespawnLaunch = #vsRespawnLaunch dataTransfer
 
 scoreboard players operation @s ringID = #ringID dataTransfer
 scoreboard players operation @s hitRingA_head = #hitRingA_head dataTransfer
@@ -90,3 +91,9 @@ scoreboard players operation @s botHasItem16 = #botHasItem16 dataTransfer
 scoreboard players operation @s botHasItem17 = #botHasItem17 dataTransfer
 scoreboard players operation @s botHasItem18 = #botHasItem18 dataTransfer
 scoreboard players operation @s botHasItem19 = #botHasItem19 dataTransfer
+
+#bots checks if it's on the final lap
+execute if entity @s[tag=ai] run function phan:bots/race/determine_if_on_final_lap
+
+#bot gets launched?
+execute if score #test1 dataTransfer matches 1.. run function phan:bots/movement/bot_get_respawn_launch

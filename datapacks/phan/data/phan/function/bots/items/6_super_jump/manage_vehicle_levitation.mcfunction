@@ -1,0 +1,2 @@
+execute if score @s elytraTimer matches ..9 on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run effect give @s levitation 1 50 true
+execute if score @s elytraTimer matches 10.. on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run effect clear @s levitation

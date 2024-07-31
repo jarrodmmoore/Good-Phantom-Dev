@@ -25,9 +25,13 @@ scoreboard players remove @s[scores={botEffectSpeedPad=1..}] botEffectSpeedPad 1
 scoreboard players remove @s[scores={botEffectSpeedPad2=1..}] botEffectSpeedPad2 1
 scoreboard players remove @s[scores={botEffectSpeedPotion=1..}] botEffectSpeedPotion 1
 scoreboard players remove @s[scores={botEffectSlowness=1..}] botEffectSlowness 1
+scoreboard players remove @s[scores={botEffectBoost=1..}] botEffectBoost 1
 
 #count down time until we want to jump
 scoreboard players remove @s[scores={botJumpTimer=1..}] botJumpTimer 1
+
+#if we're transitioning from airborne or gliding to ground, remove botImprovFlight tag
+execute if entity @s[tag=botImprovFlight,scores={botMoveState=1..2,onGround=1..}] run tag @s remove botImprovFlight
 
 #botMoveState
 #0 = on ground
@@ -38,9 +42,6 @@ scoreboard players set @s botMoveState 0
 execute if score @s onGround matches 0 run scoreboard players set @s botMoveState 1
 execute if score @s fallFlying matches 1 run scoreboard players set @s botMoveState 2
 execute if score @s inWater matches 1 run scoreboard players set @s botMoveState 3
-
-#temporary target? override target coordinates
-execute unless score @s botMoveState matches 2 unless score @s botTargetID matches 0
 
 #movement related calculations
 function phan:bots/movement/movement_calculations

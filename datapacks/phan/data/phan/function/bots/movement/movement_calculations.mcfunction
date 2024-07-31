@@ -11,14 +11,14 @@ scoreboard players operation @s trans_y = @s coord_y
 scoreboard players operation @s trans_y -= @s coord_y2
 scoreboard players operation @s trans_z = @s coord_z
 scoreboard players operation @s trans_z -= @s coord_z2
-#how fast are we looking?
-scoreboard players operation @s trans_yaw = @s rot_yaw
-scoreboard players operation @s trans_yaw -= @s rot_yaw2
-#slow down proportionally to how fast we move our view
-execute if score @s trans_yaw matches ..-1 run scoreboard players operation @s trans_yaw *= #-1 value
-execute if score @s trans_yaw matches 181.. run scoreboard players remove @s trans_yaw 360
-execute if score @s trans_yaw matches ..-1 run scoreboard players operation @s trans_yaw *= #-1 value
-scoreboard players operation @s trans_yaw /= #CONST_YAW_LOSS value
+##how fast are we looking?
+#scoreboard players operation @s trans_yaw = @s rot_yaw
+#scoreboard players operation @s trans_yaw -= @s rot_yaw2
+##slow down proportionally to how fast we move our view
+#execute if score @s trans_yaw matches ..-1 run scoreboard players operation @s trans_yaw *= #-1 value
+#execute if score @s trans_yaw matches 181.. run scoreboard players remove @s trans_yaw 360
+#execute if score @s trans_yaw matches ..-1 run scoreboard players operation @s trans_yaw *= #-1 value
+#scoreboard players operation @s trans_yaw /= #CONST_YAW_LOSS value
 
 
 
@@ -66,7 +66,7 @@ execute if score @s moving matches 0..1 run scoreboard players set @s airTime 0
 execute if score @s stoppedTime matches 0..2 if score @s moveVelocity matches ..280 run scoreboard players add @s moveVelocity 3
 execute if score @s stoppedTime matches 3.. if score @s moveVelocity matches 240.. run scoreboard players set @s moveVelocity 240
 execute if score @s stoppedTime matches 3.. if score @s moveVelocity matches 0.. run scoreboard players remove @s moveVelocity 20
-scoreboard players operation @s moveVelocity -= @s trans_yaw
+#scoreboard players operation @s moveVelocity -= @s trans_yaw
 execute if score @s moveVelocity matches ..-1 run scoreboard players set @s moveVelocity 0
 
 #cap player speed at 550
@@ -84,7 +84,7 @@ scoreboard players remove @s[scores={speedDecayDelay=1..}] speedDecayDelay 1
 #reason: i think we need to lower the skill ceiling a bit to make the game between novice and expert players less extreme
 
 #buffered speed boost takes effect when we're on the ground
-#execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buffer
+execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buffer
 
 #check for effect pads!
 #speed

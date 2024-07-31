@@ -1,27 +1,27 @@
 #===== CONSTRAINTS
 
 #can't get certain items again if they're already in our inventory
-execute if score #hasSwiftness value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7}] add tempItemBan
-execute if score #hasEnderPearl value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
-execute if score #hasSuperJump value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=9}] add tempItemBan
-execute if score #hasEnergyPotion value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=10}] add tempItemBan
-execute if score #hasFirework value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=11}] add tempItemBan
-execute if score #hasWarp value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12}] add tempItemBan
+execute if score #hasSwiftness value matches 1.. run tag 00000000-0000-0328-0000-000000000007 add tempItemBan
+execute if score #hasEnderPearl value matches 1.. run tag 00000000-0000-0328-0000-000000000008 add tempItemBan
+execute if score #hasSuperJump value matches 1.. run tag 00000000-0000-0328-0000-000000000009 add tempItemBan
+execute if score #hasEnergyPotion value matches 1.. run tag 00000000-0000-0328-0000-00000000000a add tempItemBan
+execute if score #hasFirework value matches 1.. run tag 00000000-0000-0328-0000-00000000000b add tempItemBan
+execute if score #hasWarp value matches 1.. run tag 00000000-0000-0328-0000-00000000000c add tempItemBan
 
 #don't get same speed item twice in a row
 #speed pad
 execute if score @s lastItemPicked matches 7..8 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..6}] add tempItemBan
 #swiftness potion
-execute if score @s lastItemPicked matches 5 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7}] add tempItemBan
+execute if score @s lastItemPicked matches 5 run tag 00000000-0000-0328-0000-000000000007 add tempItemBan
 #ender pearl
-execute if score @s lastItemPicked matches 15 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8}] add tempItemBan
+execute if score @s lastItemPicked matches 15 run tag 00000000-0000-0328-0000-000000000008 add tempItemBan
 #super jump
-execute if score @s lastItemPicked matches 6 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=9}] add tempItemBan
+execute if score @s lastItemPicked matches 6 run tag 00000000-0000-0328-0000-000000000009 add tempItemBan
 #energy potion
-execute if score @s lastItemPicked matches 4 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=10}] add tempItemBan
+execute if score @s lastItemPicked matches 4 run tag 00000000-0000-0328-0000-00000000000a add tempItemBan
 
 #don't get an energy potion if we're near full energy
-execute if score @s energy matches 10.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=10}] add tempItemBan
+execute if score @s energy matches 10.. run tag 00000000-0000-0328-0000-00000000000a add tempItemBan
 
 #cooldown on rolling big speed items
 execute if score @s picksSinceBigSpeed matches ..2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=11..12}] add tempItemBan

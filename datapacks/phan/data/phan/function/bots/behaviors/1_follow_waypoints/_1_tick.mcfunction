@@ -1,11 +1,4 @@
-#in this state we need to
-#1) set our movement target to the location of a waypoint
-#2) detect when we reach each movement target (waypoint)
-#3) detect when we get stuck
-#4) dodge stuff?
-#5) go after item chests that are hittable
-
-#target nearest waypoint?
+#target nearest waypoint if tag told us to
 execute if entity @s[tag=botTargetNearestWP] run function phan:bots/behaviors/1_follow_waypoints/target_nearest
 
 #check if we're somewhat near the target
@@ -26,8 +19,8 @@ execute if score #testZ value matches ..-1 run function phan:bots/behaviors/1_fo
 #in range? possibly adopt the target waypoint
 execute if score #testX value matches -44..44 if score #testZ value matches -44..44 run function phan:bots/behaviors/1_follow_waypoints/in_range_xz
 
-#reset if we aren't making progress
-execute if score @s botTimeSinceProgress matches 20.. if score #vGameType value matches 1 run function phan:bots/behaviors/1_follow_waypoints/bot_consider_respawning
+#redirect or reset if we aren't making progress
+execute if score @s botTimeSinceProgress matches 15.. if score #vGameType value matches 1 run function phan:bots/behaviors/1_follow_waypoints/bot_consider_respawning
 
 #i like to move it move it
 scoreboard players set #botWantsToMove value 1

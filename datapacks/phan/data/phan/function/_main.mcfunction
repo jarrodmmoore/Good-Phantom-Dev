@@ -11,16 +11,15 @@ execute if score #errorCheck value matches 100 run tellraw @a ["",{"text":"[ ! ]
 #GENERAL GAME FUNCTION
 
 #determine if admins are needed to do stuff
-#(this has to come first in the main loop due to a weird case in game/0/_0_main)
 scoreboard players set #requireAdmin value 0
 execute if score #adminMode value matches 1.. if entity @a[tag=admin,scores={idleTime=..3600}] run scoreboard players set #requireAdmin value 1
+
+#get ready to count players in editor mode
+scoreboard players set #playersInEditMode value 0
 
 #integrate players once they join the world
 function phan:join/_tick
 #players also run a lot of miscellaneous logic on themselves here
-
-#effects
-function phan:global_effects
 
 #different tick timers
 scoreboard players add #10Hz value 1
@@ -39,12 +38,20 @@ function phan:custom_hud/_ch_tick
 #item code is globally active
 function phan:items/_tick
 
+#=====
+#DEBUG
 
-#node editor
-scoreboard players enable @a[gamemode=creative] editor
-tag @a[tag=!phan_edit,scores={editor=1}] add phan_edit
-scoreboard players set #playersInEditMode value 0
-execute as @a[tag=phan_edit] at @s run function phan:editor/_editor_main
+#show a scoreboard value, always
+#title @a actionbar ["",{"text":"gameState = "},{"score":{"name":"#gameState","objective":"value"}}]
+
+#draw boundaries for out of bounds
+#execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -64 ~3 red_wool replace air
+
+#very dangerous function. don't run it unless you 100% know what it does and where to use it
+#execute as @a[tag=simplify_clouds] at @s run function phan:utility/simplify_clouds
+
+#show variables for a player
+#execute as @a[tag=debugScores,limit=1] run function phan:debug_scores
 
 #=====
 #CLEAN-UP
@@ -58,18 +65,3 @@ execute as @e[scores={lifespan=-2147483648..2147483647}] run function phan:lifes
 
 #clear tags and stuff
 execute as @a run function phan:control/player_input_cleanup
-
-
-
-#=====
-#DEBUG
-
-#show a scoreboard value, always
-#title @a actionbar ["",{"text":"gameState = "},{"score":{"name":"#gameState","objective":"value"}}]
-
-#draw boundaries for out of bounds and whatnot
-#execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -64 ~3 red_wool replace air
-#execute as @a[tag=simplify_clouds] at @s run function phan:utility/simplify_clouds
-
-#show variables for a player
-#execute as @a[tag=debugScores,limit=1] run function phan:debug_scores

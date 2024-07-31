@@ -1,3 +1,7 @@
+#done using super jump if we're grounded
+tag @s[tag=botUsingSuperJump] remove botUsingSuperJump
+
+
 #exit out if we're not moving
 execute if score #botWantsToMove value matches 0 run return 0
 #=====
@@ -9,7 +13,8 @@ execute unless score @s botTargetID matches 0 run function phan:bots/movement/ov
 function phan:bots/movement/0_on_ground/project_target with storage phan:coords
 
 #face the target
-function phan:bots/movement/0_on_ground/face_target
+execute unless score @s botTempRotTime matches 1.. run function phan:bots/movement/0_on_ground/face_target
+execute if score @s botTempRotTime matches 1.. run function phan:bots/movement/face_saved_direction
 
 #find difference between our coordinates and projected target
 execute store result score #coord_x value run data get entity @s Pos[0] 100000

@@ -19,6 +19,10 @@ execute if score #gameState value matches 4 run function phan:items/random/pick_
 execute as @e[type=tnt] at @s run function phan:items/tnt
 
 
+#keep track of whether an enderman thief is active
+execute if score #activeEnderman value matches 1.. run scoreboard players remove #activeEnderman value 1
+
+
 #various ticking objects
 execute as @e[tag=tickObject] run function phan:items/object_tick
 

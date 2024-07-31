@@ -1,12 +1,13 @@
 #give attack credit
 tag @s add self
-#enemy players lose elytra momentum when hit
-#execute as @a[gamemode=adventure,tag=!explosionOwner,scores={fallFlying=1},distance=..3] run tp @s @s
 #note the @e here. this can also hit baddies!
 scoreboard players operation @e[tag=tntCanHit,distance=..5,tag=!self] attackerID = @s playerID
 scoreboard players set @a[tag=tntCanHit,distance=..5,tag=!self] attackTime 100
 scoreboard players set @a[tag=tntCanHit,distance=..5,tag=!self,tag=!baddy] hitstun 2
 scoreboard players set @a[tag=tntCanHit,distance=..5,tag=!self,tag=!explosionOwner] hurtfulTime 5
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=tntCanHit,tag=ai,type=zombie,distance=..5,tag=!self] attackTime 100
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=tntCanHit,tag=ai,type=zombie,distance=..5,tag=!self,tag=!baddy] hitstun 2
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=tntCanHit,tag=ai,type=zombie,distance=..5,tag=!self,tag=!explosionOwner] hurtfulTime 5
 #instant kill on baddies
 tag @e[tag=tntCanHit,distance=..5,tag=!self,tag=baddy] add ohKO
 #advancement credit for reflecting something

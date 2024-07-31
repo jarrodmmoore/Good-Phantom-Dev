@@ -5,7 +5,8 @@ scoreboard players set @s hurtfulTime 3
 
 #get got
 summon minecraft:lightning_bolt ~ ~ ~
-effect give @s minecraft:slowness 4 2 true
+effect give @s[type=player] minecraft:slowness 4 2 true
+scoreboard players set @s[tag=ai] botEffectSlowness 80
 
 #lose half of magic meter (unless shielded)
 scoreboard players operation #test value = @s energy

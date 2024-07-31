@@ -1,4 +1,4 @@
-clear @s prismarine_crystals[custom_data~{superJump:1b}] 1
+clear @s[type=player] prismarine_crystals[custom_data~{superJump:1b}] 1
 
 #do launch
 function phan:items/launch_effect

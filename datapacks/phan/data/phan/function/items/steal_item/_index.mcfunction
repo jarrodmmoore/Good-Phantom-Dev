@@ -31,7 +31,8 @@ scoreboard players operation #victimID value = @s playerID
 #give item to player who stole the thing
 tag @s add gotRobbed
 execute as @a[tag=doneWithIntro] if score @s playerID = #thisEndermanID value run function phan:items/steal_item/give_to_stealer
-tag @a[tag=gotRobbed] remove gotRobbed
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #thisEndermanID value run function phan:items/steal_item/give_to_stealer
+tag @s remove gotRobbed
 
 
 #i'd like to report a robbery

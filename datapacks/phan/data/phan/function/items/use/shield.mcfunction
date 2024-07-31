@@ -1,4 +1,4 @@
-clear @s light_gray_candle[custom_data~{shield:1b}] 1
+clear @s[type=player] light_gray_candle[custom_data~{shield:1b}] 1
 
 #set shield timer
 scoreboard players set @s shieldTime 165

@@ -10,7 +10,7 @@ $execute unless entity @e[type=marker,tag=checkpoint,tag=posCalc,scores={versusS
 #found checkpoint? collect checkpoint and set respawn coords to its location
 tag @s add warpingPlayer
 $execute unless score #inRange value matches -1 as @e[type=marker,tag=checkpoint,tag=posCalc,scores={versusSpawn=1,editArg1=$(targetCheckpoint)},limit=1,sort=nearest] at @s run function phan:items/use/warp_race_collect_checkpoint
-tag @a[tag=warpingPlayer] remove warpingPlayer
+tag @s remove warpingPlayer
 
 #did at least 1 jump? success.
 execute unless score #inRange value matches -1 run scoreboard players set #success value 1

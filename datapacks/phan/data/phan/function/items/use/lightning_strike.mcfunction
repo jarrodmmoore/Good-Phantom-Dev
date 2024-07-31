@@ -1,4 +1,4 @@
-clear @s blaze_rod[custom_data~{lightningStrike:1b}] 1
+clear @s[type=player] blaze_rod[custom_data~{lightningStrike:1b}] 1
 
 #strike up to 5 players
 #if in versus mode, only target top 5
@@ -6,6 +6,7 @@ clear @s blaze_rod[custom_data~{lightningStrike:1b}] 1
 tag @s add dontgethit
 scoreboard players operation #attackerID value = @s playerID
 execute if score #gameState value matches 4 as @a[tag=playing,tag=!dontgethit] if score @s itemPosition matches ..5 if score @s itemLuck matches ..4 at @s run function phan:items/lightning_strike_hit_player
+execute if score #gameState value matches 4 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=!dontgethit] if score @s itemPosition matches ..5 if score @s itemLuck matches ..4 at @s run function phan:items/lightning_strike_hit_player
 execute unless score #gameState value matches 4 as @a[gamemode=adventure,tag=doneWithIntro,tag=!dontgethit,limit=5,sort=random] at @s run function phan:items/lightning_strike_hit_player
 
 #play sound

@@ -38,6 +38,7 @@ scoreboard players set @s lifespan 10
 scoreboard players set @s botBehavior 0
 
 #scores
+scoreboard players set @s moveVelocity 0
 scoreboard players set @s onGround 0
 scoreboard players set @s fallFlying 0
 scoreboard players set @s botJumpPadTimeLow 0
@@ -66,9 +67,19 @@ scoreboard players set @s botRoamLookBias2 1
 execute store result score @s botWanderYaw run data get entity @s Rotation[0] 1
 scoreboard players set @s botPauseTime 0
 scoreboard players set @s botItemThinkTime 20
+scoreboard players set @s botBoostThinkTime 10
 scoreboard players set @s botMoveState 1
 scoreboard players set @s botTargetID 0
 scoreboard players set @s botHoldingItem 0
+scoreboard players set @s botHoldingItemPrev 0
+scoreboard players set @s botTempRotYaw 0
+scoreboard players set @s botTempRotPitch 0
+scoreboard players set @s botTeleportTimer -1
+scoreboard players set @s attackTime 0
+
+#should we be a rival?
+execute if score #setBotAsRival value matches 1 run tag @s add botRival
+scoreboard players set #setBotAsRival value 0
 
 #we need to target the nearest AI waypoint as soon as we start caring about that
 tag @s add botTargetNearestWP

@@ -1,3 +1,9 @@
+#executed by a bot at the moment a race ends
+
+#in this case, we did NOT get disabled because time ran out.
+#we got disabled because all humans finished and we didn't want to wait for the remaining bots.
+#so we're going to take our current race position and publish it as our finish position so we can get some points.
+
 #save current position as finish position
 scoreboard players operation @s finishPos = @s racePosDisplay
 

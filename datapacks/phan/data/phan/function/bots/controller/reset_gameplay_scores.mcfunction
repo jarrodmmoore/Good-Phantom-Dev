@@ -28,6 +28,7 @@ scoreboard players set @s vsRespawnY -7
 scoreboard players set @s vsRespawnZ 118
 scoreboard players set @s vsRespawnYaw 0
 scoreboard players set @s vsRespawnDimension 1
+scoreboard players set @s vsRespawnLaunch 0
 
 #addpoints
 scoreboard players set @s vsAddPoints 0

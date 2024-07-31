@@ -1,6 +1,6 @@
 #summon the explosion and have it do a reasonable amount of damage
 effect give @a[distance=..5] resistance 1 3 true
-execute if loaded ~ ~ ~ run summon creeper ~ ~ ~ {Invulnerable:1,NoGravity:1b,Silent:1b,Health:1.0f,Fuse:0,attributes:[{id:"generic.knockback_resistance",base:1}]}
+execute if loaded ~ ~ ~ run summon creeper ~ ~ ~ {Invulnerable:1b,NoGravity:1b,Silent:1b,Health:1.0f,Fuse:0,attributes:[{id:"generic.knockback_resistance",base:1}]}
 #we also need to damage baddies with artificial HP. we'll between 20 and 40 damage.
 scoreboard players remove @e[tag=baddy,tag=artificialHP,distance=..5] enemyHP 20
 scoreboard players remove @e[tag=baddy,tag=artificialHP,distance=..4] enemyHP 10

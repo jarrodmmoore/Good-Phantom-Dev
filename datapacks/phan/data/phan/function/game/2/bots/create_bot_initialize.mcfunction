@@ -3,16 +3,19 @@
 #so... become a botController!
 tag @s add botController
 
-#get a playerID
-function phan:join/player_get_id
-
 #assign bot ID
 scoreboard players add #botCount value 1
 scoreboard players operation @s botID = #botCount value
 
+#get a playerID (use bot ID + 2000000000)
+#playerIDs over 2000000000 are reserved for bots and are easily re-used, wheras human player IDs are assigned once and then never again
+scoreboard players set @s playerID 2000000000
+scoreboard players operation @s playerID += @s botID
+
 #assign bot difficulty
 execute unless score #botDifficulty value matches 1..6 store result score #botDifficulty value run random value 1..5
 scoreboard players operation @s botSkill = #botDifficulty value
+scoreboard players operation @s botOriginalSkill = @s botSkill
 
 #=====
 #assign bot name

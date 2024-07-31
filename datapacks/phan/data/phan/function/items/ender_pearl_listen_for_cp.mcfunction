@@ -2,6 +2,7 @@
 scoreboard players set #test2 value 0
 scoreboard players operation #getID value = @s playerID
 execute as @a[tag=playing] if score @s playerID = #getID value run scoreboard players operation #test2 value = @s check
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #getID value run scoreboard players operation #test2 value = @s check
 
 #store our coordinates
 execute store result score #coord_x value run data get entity @s Pos[0]

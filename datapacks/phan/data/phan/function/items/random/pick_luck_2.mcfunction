@@ -2,27 +2,27 @@
 
 #1 in 3 chance of not allowing enderman thief at all
 execute store result score #randomRoll2 value run random value 1..3
-execute if score #randomRoll2 value matches 3.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15}] add tempItemBan
+execute if score #randomRoll2 value matches 3.. run tag 00000000-0000-0328-0000-00000000000f add tempItemBan
 
 #1 in 2 chance of not allowing blinding squid at all
 execute store result score #randomRoll2 value run random value 1..2
-execute if score #randomRoll2 value matches 2.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=16}] add tempItemBan
+execute if score #randomRoll2 value matches 2.. run tag 00000000-0000-0328-0000-000000000010 add tempItemBan
 
 #never get enderman if it's on global cooldown
-execute if score #cooldownEnderman value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15}] add tempItemBan
+execute if score #cooldownEnderman value matches 1.. run tag 00000000-0000-0328-0000-00000000000f add tempItemBan
 
 #never get squid if it's on global cooldown
-execute if score #cooldownSquid value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=16}] add tempItemBan
+execute if score #cooldownSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000010 add tempItemBan
 
 #can't get certain items again if they're already in our inventory
-execute if score #hasTnt value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4}] add tempItemBan
+execute if score #hasTnt value matches 1.. run tag 00000000-0000-0328-0000-000000000004 add tempItemBan
 execute if score #hasSonicBlast value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..8}] add tempItemBan
 execute if score #hasShield value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..8}] add tempItemBan
 execute if score #hasSwiftness value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=11..12}] add tempItemBan
-execute if score #hasEnderPearl value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13}] add tempItemBan
-execute if score #hasSuperJump value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=14}] add tempItemBan
-execute if score #hasEndermanThief value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15}] add tempItemBan
-execute if score #hasBlindingSquid value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=16}] add tempItemBan
+execute if score #hasEnderPearl value matches 1.. run tag 00000000-0000-0328-0000-00000000000d add tempItemBan
+execute if score #hasSuperJump value matches 1.. run tag 00000000-0000-0328-0000-00000000000e add tempItemBan
+execute if score #hasEndermanThief value matches 1.. run tag 00000000-0000-0328-0000-00000000000f add tempItemBan
+execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000010 add tempItemBan
 
 #cooldown on rolling utility items
 execute if score @s picksSinceUtility matches ..1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..8}] add tempItemBan

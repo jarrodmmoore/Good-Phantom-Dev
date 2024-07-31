@@ -1,4 +1,4 @@
-clear @s red_wool[custom_data~{trappedChest:1b}] 1
+clear @s[type=player] red_wool[custom_data~{trappedChest:1b}] 1
 scoreboard players operation #attackerID value = @s playerID
 
 #trapped chest is exactly the same as a mine. just has a different model

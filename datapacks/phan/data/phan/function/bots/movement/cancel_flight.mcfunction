@@ -6,6 +6,15 @@
 #close wings
 data merge entity @s {FallFlying:0b}
 
+#not flying anymore
+scoreboard players set @s fallFlying 0
+
+#exit out if we have no vehicle
+scoreboard players set #testReset value 0
+execute on vehicle run scoreboard players set #testReset value 1
+execute if score #testReset value matches 0 run return 0
+#=====
+
 #delete vehicle
 execute on vehicle on vehicle run function phan:bots/movement/cancel_flight_destroy_vehicle
 ride @s dismount
@@ -15,6 +24,3 @@ tp @s ~ ~ ~ ~ ~
 execute store result entity @s Motion[0] double 0.00001 run scoreboard players get #xVelocity value
 execute store result entity @s Motion[1] double 0.00001 run scoreboard players get #yVelocity value
 execute store result entity @s Motion[2] double 0.00001 run scoreboard players get #zVelocity value
-
-#not flying anymore
-scoreboard players set @s fallFlying 0

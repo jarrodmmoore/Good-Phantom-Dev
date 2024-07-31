@@ -4,7 +4,9 @@ scoreboard players set #multiplier value 100
 execute if score @s botEffectSpeedPotion matches 1.. run scoreboard players set #multiplier value 158
 #equivalent of speed 2
 execute if score @s botEffectSpeedPad matches 1.. run scoreboard players set #multiplier value 158
-#equivalent of speed 4
+#equivalent of speed 3
+execute if score @s botEffectBoost matches 1.. run scoreboard players set #multiplier value 172
+#equivalent of speed 5
 execute if score @s botEffectSpeedPad2 matches 1.. run scoreboard players set #multiplier value 199
 
 #don't do math for no reason

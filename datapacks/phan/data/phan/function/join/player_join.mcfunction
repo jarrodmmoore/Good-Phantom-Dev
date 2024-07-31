@@ -2,23 +2,20 @@
 #great opportunity to get all values n stuff set up
 
 
-#go to place
-tp @s 55 -13 155 180 0
-spawnpoint @s 0 47 0
-
 #sync up with global join score
 scoreboard players operation @s join = #join_global value
 
 #count how many times we've logged in
 scoreboard players add @s joinCount 1
 
-#check if we're allowed to keep our admin tag
+#check if we're allowed to keep our admin tag and other saved information (we lose it if someone hits the "erase all data" button)
 function phan:join/get_reset_wave
 
 #if there are bots currently active, make sure none of them have our username
 execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:game/2/bots/bot_check_duplicate_name
 
-#must watch the intro thingy
+#must watch the intro slides before going anywhere. go to the time-out room.
+tp @s 55 -13 155 180 0
 tag @s remove doneWithIntro
 scoreboard players set @s introProgress 0
 
@@ -45,7 +42,6 @@ title @s subtitle [""]
 title @s title [""]
 effect give @s invisibility 20 0 true
 tag @s remove trackPlayerTime
-scoreboard players set @s shootAware 0
 
 #initialize data
 scoreboard players add @s anyDreamCompleted 0
@@ -126,6 +122,7 @@ scoreboard players set @s KOs 0
 scoreboard players set @s deathsSinceKO 0
 scoreboard players set @s pPenaltyTime 0
 scoreboard players set @s pPenaltyPoints 0
+scoreboard players set @s shootAware 0
 
 #set spawnpoint
 spawnpoint @s 198 -6 118
@@ -136,7 +133,7 @@ execute unless score @s versusSession = #versusSession value run scoreboard play
 scoreboard players operation @s versusSession = #versusSession value
 
 #get player ID if we don't have one yet
-execute unless entity @s[scores={playerID=1..}] run function phan:join/player_get_id
+execute unless score @s playerID matches 1.. run function phan:join/player_get_id
 
 #are we alone? restart things
 tag @s add jself

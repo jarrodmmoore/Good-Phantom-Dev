@@ -10,7 +10,7 @@ execute if score #endermanAge value matches ..29 rotated ~ 0 positioned ^ ^ ^7 r
 execute if score #endermanAge value matches 16 as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.enderman.ambient master @s ~ 100000 ~ 100000
 #yes, we're making it globally audible.
 #why?
-#because i think this will lead to some interesting counter-play and mind games >:)
+#because i think this will lead to some interesting mind games >:)
 
 #enderman teleports away
 execute if score #endermanAge value matches 30 as @e[type=enderman,tag=endermanProp] if score @s originalID = #thisEndermanOG value run function phan:items/enderman_teleports_away

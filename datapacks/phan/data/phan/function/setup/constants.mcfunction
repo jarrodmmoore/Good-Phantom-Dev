@@ -5,6 +5,9 @@ scoreboard players set #BOT_ALLOWED_REROUTES value 1
 #value dictating how much turning your view quickly eats your momentum
 scoreboard players set #CONST_YAW_LOSS value 8
 
-#time multipliers when assist mode increases the time limit (150 = 1.5x)
+#multipliers (150 = 1.5x)
+
+#"Easy" time limit multiplier (Assist Mode)
 scoreboard players set #CONST_ASSIST_TIME value 150
+#"Peaceful" time limit multiplier for Present pickups (Assist Mode)
 scoreboard players set #CONST_ASSIST_TIME_2 value 200

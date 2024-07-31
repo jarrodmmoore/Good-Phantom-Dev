@@ -1,0 +1,1 @@
+$execute positioned $(coord_x) $(coord_y) $(coord_z) if loaded ~ ~ ~ run tp @s ~ ~ ~ ~ ~

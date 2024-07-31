@@ -22,6 +22,7 @@ scoreboard players operation #vsRespawnY dataTransfer = @s vsRespawnY
 scoreboard players operation #vsRespawnZ dataTransfer = @s vsRespawnZ
 scoreboard players operation #vsRespawnYaw dataTransfer = @s vsRespawnYaw
 scoreboard players operation #vsRespawnDimension dataTransfer = @s vsRespawnDimension
+scoreboard players operation #vsRespawnLaunch dataTransfer = @s vsRespawnLaunch
 
 scoreboard players operation #ringID dataTransfer = @s ringID
 scoreboard players operation #hitRingA_head dataTransfer = @s hitRingA_head

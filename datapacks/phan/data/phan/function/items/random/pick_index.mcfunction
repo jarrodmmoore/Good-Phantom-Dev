@@ -6,7 +6,7 @@ execute if score #removeLast value matches 1 run tag @s[tag=lastPlace] remove la
 #solo race: use special randomization table that makes all relevant items available for training
 execute if score #gameState value matches 4 if score #hudPeakPlayers value matches ..1 run scoreboard players set @s itemLuck -1
 
-#battle mode uses its own randomization...
+#battle mode uses its own randomization. no item luck, here
 execute if score #gameState value matches 4 if score #vGameType value matches 2 run scoreboard players set @s itemLuck 0
 
 #count number of speed pads on the field

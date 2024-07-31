@@ -2,9 +2,6 @@
 execute if score #botWantsToMove value matches 0 run return 0
 #=====
 
-#override coordinates if we have a temporary target
-execute unless score @s botTargetID matches 0 run function phan:bots/movement/override_coordinates_with_temporary_target_xyz
-
 #cancel flight if we're in water
 execute if score @s fallFlying matches 1 run function phan:bots/movement/cancel_flight
 
@@ -12,11 +9,15 @@ execute if score @s fallFlying matches 1 run function phan:bots/movement/cancel_
 execute store result storage phan:coords target_y int 1 run scoreboard players get @s botTargetY
 execute store result storage phan:coords target_y_dec int 1 run scoreboard players get @s botTargetY10
 
+#override coordinates if we have a temporary target
+execute unless score @s botTargetID matches 0 run function phan:bots/movement/override_coordinates_with_temporary_target_xyz
+
 #project the target
 function phan:bots/movement/3_in_water/project_target with storage phan:coords
 
 #face the target
-function phan:bots/movement/3_in_water/face_target
+execute unless score @s botTempRotTime matches 1.. run function phan:bots/movement/3_in_water/face_target
+execute if score @s botTempRotTime matches 1.. run function phan:bots/movement/face_saved_direction
 
 #store the last yaw we looked at
 execute store result score @s botWanderYaw run data get entity @s Rotation[0] 1

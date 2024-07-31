@@ -1,4 +1,4 @@
-clear @s cyan_dye[custom_data~{superSpeedPad:1b}] 1
+clear @s[type=player] cyan_dye[custom_data~{superSpeedPad:1b}] 1
 
 playsound minecraft:block.metal.place master @a ~ ~ ~ 2 1.3
 playsound minecraft:block.metal.place master @a ~ ~ ~ 2 1.1
@@ -20,10 +20,13 @@ execute if score #test value matches 1 run data modify storage phan:coords coord
 function phan:items/use/speed_pad_part2 with storage phan:coords
 #why are we using macros? because relative coordinates won't cancel our y velocity
 
+#bot: force cancel y velocity and become grounded
+execute if entity @s[tag=ai] unless score @s botMoveState matches 3 run function phan:bots/items/7_speed_pad/cancel_y_velocity
+
 #spawn speed pad
 execute at @s run summon armor_stand ~ ~ ~ {Tags:["tickObject","superSpeedPadEntity","giveID","hurtful","dontResetNearMe","speedPadCount"],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["setLife"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111114}}}]}
-execute at @s as @e[type=armor_stand,tag=giveID] run tp @s ~ ~ ~ ~ ~
-execute as @e[type=armor_stand,tag=giveID] at @s on passengers run tp @s ~ ~ ~ ~ 0
+execute at @s as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~
+execute as @e[type=armor_stand,tag=giveID,distance=..4] at @s on passengers run tp @s ~ ~ ~ ~ 0
 
 #spawn temporary barriers to stand on
 execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
@@ -32,21 +35,21 @@ execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~-.5 ~-.7 ~-.5 if block ~
 execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~-.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
 
 #cancel elytra flight
-execute if entity @s[scores={fallFlying=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]
+execute if entity @s[type=player,scores={fallFlying=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]
 
 #get boost immediately
 scoreboard players set @s speedDecayDelay 0
 execute at @s run function phan:movement/speed_pad_super
 
 #entity can only exist in this current game session
-scoreboard players set @e[tag=giveID] itemValidSpawn 1
+scoreboard players set @e[tag=giveID,type=armor_stand,distance=..4] itemValidSpawn 1
 
 #we did this. it was us.
-scoreboard players operation @e[limit=1,tag=giveID] playerID = @s playerID
-scoreboard players set @e[tag=setLife] lifespan 3
-scoreboard players set @e[tag=giveID] lifespan 300
-tag @e[limit=1,tag=giveID] remove giveID
-tag @e[tag=setLife] remove setLife
+scoreboard players operation @e[limit=1,tag=giveID,type=armor_stand,distance=..4] playerID = @s playerID
+scoreboard players set @e[tag=setLife,type=item_display,distance=..4] lifespan 3
+scoreboard players set @e[tag=giveID,type=armor_stand,distance=..4] lifespan 300
+tag @e[limit=1,tag=giveID,type=armor_stand,distance=..4] remove giveID
+tag @e[tag=setLife,type=item_display,distance=..4] remove setLife
 
 #cooldown
 scoreboard players reset @s carrotInput

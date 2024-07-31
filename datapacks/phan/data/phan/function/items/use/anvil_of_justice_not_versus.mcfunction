@@ -1,1 +1,2 @@
-execute if score #success value matches 0 as @a[gamemode=adventure,tag=!dontgethit,limit=1,sort=random] at @s run function phan:items/anvil_spawn_on_player
+execute if score #success value matches 0 if score #botsEnabled value matches ..0 as @a[gamemode=adventure,tag=!dontgethit,limit=1,sort=random] at @s run function phan:items/anvil_spawn_on_player
+execute if score #success value matches 0 if score #botsEnabled value matches 1.. as @e[tag=playing,tag=!dontgethit,limit=1,sort=random] at @s run function phan:items/anvil_spawn_on_player

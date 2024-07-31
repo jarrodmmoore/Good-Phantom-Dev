@@ -1,7 +1,8 @@
-clear @s prismarine_shard[custom_data~{swiftnessPotion:1b}] 1
+clear @s[type=player] prismarine_shard[custom_data~{swiftnessPotion:1b}] 1
 
 #set swiftness timer
-scoreboard players set @s swiftnessTime 200
+scoreboard players set @s[type=player] swiftnessTime 200
+scoreboard players set @s[tag=ai] botEffectSpeedPotion 200
 
 #feedback
 playsound minecraft:entity.generic.drink master @a ~ ~1 ~ 2 1

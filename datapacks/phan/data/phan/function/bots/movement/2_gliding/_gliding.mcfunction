@@ -9,7 +9,10 @@ data merge entity @s {FallFlying:1b}
 execute store result storage phan:coords target_y int 1 run scoreboard players get @s botTargetY
 execute store result storage phan:coords target_y_dec int 1 run scoreboard players get @s botTargetY10
 
-#vehicle must face target and also not be in an inavlid place
+#are we in improvised flight mode? target a potentially higher y coordinate
+execute if entity @s[tag=botImprovFlight] run function phan:bots/movement/2_gliding/use_improvised_y_coordinate
+
+#vehicle must face target and also not be in an invalid place
 scoreboard players set #success value 0
 execute on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] at @s run function phan:bots/movement/2_gliding/manage_vehicle
 

@@ -466,6 +466,7 @@ scoreboard objectives add botJumpTimer dummy
 scoreboard objectives add botJumpPadTimeLow dummy
 scoreboard objectives add botJumpPadTimeHigh dummy
 scoreboard objectives add botEffectSpeedPad dummy
+scoreboard objectives add botEffectBoost dummy
 scoreboard objectives add botEffectSpeedPad2 dummy
 scoreboard objectives add botEffectSpeedPotion dummy
 scoreboard objectives add botEffectSlowness dummy
@@ -494,6 +495,17 @@ scoreboard objectives add botTempTargetY10 dummy
 scoreboard objectives add botTempTargetZ dummy
 scoreboard objectives add botTempTargetZ10 dummy
 scoreboard objectives add botHoldingItem dummy
+scoreboard objectives add botHoldingItemPrev dummy
+scoreboard objectives add botTempRotYaw dummy
+scoreboard objectives add botTempRotPitch dummy
+scoreboard objectives add botTempRotTime dummy
+scoreboard objectives add botOriginalSkill dummy
+scoreboard objectives add botTeleportTimer dummy
+scoreboard objectives add botTeleportX dummy
+scoreboard objectives add botTeleportY dummy
+scoreboard objectives add botTeleportZ dummy
+scoreboard objectives add botFireworkTime dummy
+scoreboard objectives add botBoostThinkTime dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy
