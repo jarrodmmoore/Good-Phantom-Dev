@@ -76,6 +76,7 @@ scoreboard players set @s botTempRotYaw 0
 scoreboard players set @s botTempRotPitch 0
 scoreboard players set @s botTeleportTimer -1
 scoreboard players set @s attackTime 0
+scoreboard players set @s botRubberbanding 0
 
 #should we be a rival?
 execute if score #setBotAsRival value matches 1 run tag @s add botRival

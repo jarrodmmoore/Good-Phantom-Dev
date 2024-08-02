@@ -5,8 +5,8 @@ scoreboard players add @s age 1
 execute unless score @s editArg1 matches 1 if score @s age matches 10.. if entity @s[nbt={OnGround:1b}] run scoreboard players set @s editArg1 1
 
 #while falling: hit players on the head
-execute unless score @s editArg1 matches 1 positioned ~-.5 ~-2 ~-.5 run damage @a[gamemode=adventure,dx=1,dy=1,dz=1,limit=1] 4 mob_attack by @s from @s
-execute if score #botsEnabled value matches 1.. unless score @s editArg1 matches 1 positioned ~-.5 ~-2 ~-.5 run damage @e[tag=ai,type=zombie,dx=1,dy=1,dz=1,limit=1] 4 mob_attack by @s from @s
+execute unless score @s editArg1 matches 1 positioned ~-.5 ~-2 ~-.5 run damage @a[gamemode=adventure,dx=1,dy=1,dz=1,limit=1,tag=!inWater] 4 mob_attack by @s from @s
+execute if score #botsEnabled value matches 1.. unless score @s editArg1 matches 1 positioned ~-.5 ~-2 ~-.5 run damage @e[tag=ai,type=zombie,dx=1,dy=1,dz=1,limit=1,scores={botMoveState=..2}] 4 mob_attack by @s from @s
 
 
 #act like a speed pad (because we ARE one!)

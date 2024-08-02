@@ -8,6 +8,8 @@ scoreboard players set @s energy 0
 
 #game variables
 scoreboard players set @s check -1
+scoreboard players set @s botRememberCP -1
+scoreboard players set @s botTimeSinceCP -999999
 scoreboard players set @s checkFake -1
 scoreboard players set @s enderEyes 0
 scoreboard players set @s lap 0
@@ -29,6 +31,8 @@ scoreboard players set @s vsRespawnZ 118
 scoreboard players set @s vsRespawnYaw 0
 scoreboard players set @s vsRespawnDimension 1
 scoreboard players set @s vsRespawnLaunch 0
+tag @s remove botNeedMarkerToRespawn
+tag @s remove botEntityMissing
 
 #addpoints
 scoreboard players set @s vsAddPoints 0

@@ -40,6 +40,9 @@ execute positioned ~ ~1 ~ unless block ~ ~ ~ water unless block ~ ~ ~ #phan:wate
 function phan:bots/movement/speed_effect_amplifier
 execute if score @s botEffectSlowness matches 1.. run function phan:bots/movement/slowness_effect_amplifier
 
+#amplify velocity if rubberbanding
+execute unless score @s botRubberbanding matches 0 run function phan:bots/movement/rubber_band_amplifier
+
 #perform a jump?
 #execute if score @s botJumpTimer matches 0 run function phan:bots/movement/jump/_jump_index
 

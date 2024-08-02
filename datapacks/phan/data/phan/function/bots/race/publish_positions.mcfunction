@@ -16,3 +16,6 @@ tag @s[tag=lastPlace] remove lastPlace
 scoreboard players operation #test2 value = #positionAssign value
 scoreboard players remove #test2 value 1
 execute if score @s[scores={racePosCalc=2..}] racePosCalc = #test2 value run tag @s add lastPlace
+
+#clear rpcalc if we're botcontroller
+execute if entity @s[tag=botController] run scoreboard players reset @s racePosCalc

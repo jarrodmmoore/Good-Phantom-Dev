@@ -1,0 +1,1 @@
+execute if score @s racePosDisplay < #foundBestHuman value run scoreboard players operation #foundBestHuman value = @s racePosDisplay

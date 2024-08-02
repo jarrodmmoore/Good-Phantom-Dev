@@ -15,5 +15,8 @@ execute if score #botCountNormal value matches 3.. run scoreboard players set #m
 execute if score #botCountHard value matches 3.. run scoreboard players set #math value 4
 execute if score #botCountTryhard value matches 3.. run scoreboard players set #math value 5
 
+#never offer trophy if assist mode enabled
+execute if score #assist_enabled value matches 1.. run scoreboard players set #math value 0
+
 #value changed? do something about it
 execute unless score #math value = #offerTrophy value run function phan:game/2/bots/trophy/update_trophy

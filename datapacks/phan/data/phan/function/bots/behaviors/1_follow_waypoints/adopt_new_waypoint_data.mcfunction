@@ -16,7 +16,8 @@ execute if score #waypointHook value matches 3 store result score @s botHookBase
 execute if score #waypointHook value matches 3 run scoreboard players remove @s botHookBase 25
 
 #choose which direction to go if we didn't take an alt route
-execute if score #botChoseAltRoute value matches 0 run function phan:bots/behaviors/1_follow_waypoints/pick_direction/_index
+execute if score #botChoseAltRoute value matches 0 if entity @s[tag=botImprovFlight] run function phan:bots/behaviors/1_follow_waypoints/pick_direction/_index_improv_flight
+execute if score #botChoseAltRoute value matches 0 unless entity @s[tag=botImprovFlight] run function phan:bots/behaviors/1_follow_waypoints/pick_direction/_index
 scoreboard players set @s botTargetWaypoint 0
 execute if score @s botLastDirection matches 1 run scoreboard players operation @s botTargetWaypoint = #waypointDir1 value
 execute if score @s botLastDirection matches 2 run scoreboard players operation @s botTargetWaypoint = #waypointDir2 value

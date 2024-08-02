@@ -1,3 +1,6 @@
+#executed by a player or bot who just opened an item box and is rolling an item
+# !! MUST BE RUN IN THE OVERWORLD !! --> "execute in overworld run function phan:items/random/pick_index"
+
 #lose the last place tag if gamemode is NOT versus race
 scoreboard players set #removeLast value 1
 execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players set #removeLast value 0

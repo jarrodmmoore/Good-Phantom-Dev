@@ -11,6 +11,7 @@ scoreboard players set @a lap 1
 scoreboard players set @a rawTime 0
 scoreboard players set @a timeSinceOpenBox 0
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/bot_set_self_scores_at_start
+scoreboard players set @a[tag=debugCheckpointTimes] debug 0
 
 #reset speeds and energy
 function phan:movement/reset_speeds

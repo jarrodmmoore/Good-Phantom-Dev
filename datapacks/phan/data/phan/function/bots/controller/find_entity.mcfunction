@@ -1,1 +1,1 @@
-$execute as @e[type=zombie,tag=ai,scores={botID=$(botid),botInstance=$(botinstance)}] at @s run function phan:bots/_bot_entity_tick
+$execute as @e[type=zombie,tag=ai,scores={botID=$(botid),botInstance=$(botinstance)}] at @s if loaded ~ ~ ~ run function phan:bots/_bot_entity_tick

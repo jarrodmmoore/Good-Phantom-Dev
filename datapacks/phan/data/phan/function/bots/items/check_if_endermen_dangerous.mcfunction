@@ -1,5 +1,5 @@
 scoreboard players operation #checkID value = @s playerID
-execute as @e[type=marker,tag=endermanIsDangerous,x=198,y=-6,z=118,distance=..1] unless score @s playerID = #checkID value run scoreboard players set #botFearsEnderman value 1
+execute in overworld as @e[type=marker,tag=endermanIsDangerous,x=198,y=-6,z=118,distance=..1] unless score @s playerID = #checkID value run scoreboard players set #botFearsEnderman value 1
 
 #small chance of ignoring the enderman and just going at it anyway
 scoreboard players set #random2 value 0

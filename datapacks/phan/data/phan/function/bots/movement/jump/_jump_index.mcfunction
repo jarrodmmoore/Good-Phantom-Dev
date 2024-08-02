@@ -3,6 +3,9 @@
 #clear jump input
 scoreboard players reset @s botJumpTimer
 
+#no longer grounded
+scoreboard players set @s onGround 0
+
 #super jump pad
 execute if entity @s[tag=!botSpamJumpKey,scores={botJumpPadTimeHigh=1..}] run return run function phan:bots/movement/jump/high_pad_no_spam
 execute if entity @s[tag=botSpamJumpKey,scores={botJumpPadTimeHigh=1..}] run return run function phan:bots/movement/jump/high_pad_spam

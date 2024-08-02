@@ -15,6 +15,10 @@ kill @e[type=drowned,tag=!stay]
 #should bot be rival?
 execute if entity @s[tag=botRival] run scoreboard players set #setBotAsRival value 1
 
+#if we respawned the bot at the location of a marker, quickly record coordinates and send back to botController
+execute if entity @s[tag=botNeedMarkerToRespawn] as @e[tag=setMe,type=zombie] at @s run function phan:bots/spawn/respawn_entity_post_summon_coordinates
+execute if entity @s[tag=botNeedMarkerToRespawn] run function phan:bots/spawn/update_coordinates
+
 #important post-summon stuff on zombie
 scoreboard players operation #setID value = @s playerID
 scoreboard players operation #editArg1 value = @s botInstance

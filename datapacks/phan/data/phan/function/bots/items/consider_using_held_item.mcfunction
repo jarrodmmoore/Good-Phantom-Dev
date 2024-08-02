@@ -8,8 +8,8 @@ execute if score @s botSkill matches 5.. store result score #random value run ra
 
 #high level bots will put item away if enderman did global sound cue and is about to strike
 scoreboard players operation #checkID value = @s playerID
-execute if score @s botSkill matches 4 as @e[type=marker,tag=endermanController,x=198,y=-6,z=118,distance=..1,scores={age=30..99}] unless score @s playerID = #checkID value run scoreboard players add #random value 4
-execute if score @s botSkill matches 5.. as @e[type=marker,tag=endermanController,x=198,y=-6,z=118,distance=..1,scores={age=16..99}] unless score @s playerID = #checkID value run scoreboard players set #random value 99
+execute if score @s botSkill matches 4 in overworld as @e[type=marker,tag=endermanController,x=198,y=-6,z=118,distance=..1,scores={age=30..99}] unless score @s playerID = #checkID value run scoreboard players add #random value 4
+execute if score @s botSkill matches 5.. in overworld as @e[type=marker,tag=endermanController,x=198,y=-6,z=118,distance=..1,scores={age=16..99}] unless score @s playerID = #checkID value run scoreboard players set #random value 99
 
 #we can be forced to keep using with a tag
 execute if entity @s[tag=botUseItemSoon] run scoreboard players set #random value 1

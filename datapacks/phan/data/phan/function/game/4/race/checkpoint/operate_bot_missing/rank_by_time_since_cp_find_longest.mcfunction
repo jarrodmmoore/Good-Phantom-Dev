@@ -1,0 +1,1 @@
+execute if score @s botTimeSinceCP > #longestTimeSinceCP value run scoreboard players operation #longestTimeSinceCP value = @s botTimeSinceCP

@@ -7,3 +7,6 @@ execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,d
 
 #just to be safe, make sure everyone gets a point
 scoreboard players set @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,tag=finished,scores={vsAddPoints=..0}] vsAddPoints 1
+
+#if peak player count was 0, give 0 points to everyone
+execute if score #hudPeakPlayers value matches ..1 run scoreboard players set @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] vsAddPoints 0

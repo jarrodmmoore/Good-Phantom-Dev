@@ -1,5 +1,10 @@
 #count time
 scoreboard players add @s rawTime 1
+#DEBUG: count time between checkpoints
+#scoreboard players add @s[tag=debugCheckpointTimes] debug 1
+
+#don't bully other players!
+effect give @s weakness 5 15 true
 
 #count down time since we tried opening a box
 scoreboard players remove @s[scores={timeSinceOpenBox=1..}] timeSinceOpenBox 4

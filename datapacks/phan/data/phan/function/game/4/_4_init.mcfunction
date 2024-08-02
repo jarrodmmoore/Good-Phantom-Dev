@@ -94,6 +94,7 @@ scoreboard players set #nightVision value 0
 scoreboard players set #brightMines value 0
 
 #load area info!
+function phan:bots/controller/reset_checkpoint_info
 function phan:game/1/spawning/reset_all
 function phan:game/4/load_area_info
 execute if score #vGameType value matches 2 run scoreboard players set #hudMode value 4

@@ -43,11 +43,15 @@ scoreboard players set #relevantLapMin value 2147483647
 execute as @a[tag=playing] at @s run function phan:game/4/race/race_player_tick
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/race/race_player_tick
 
+#make sure lap range includes any missing bots
+execute if score #checkMissingPlayerLaps value matches 1 run function phan:game/4/race/checkpoint/operate_bot_missing/get_missing_bot_laps
+
 #start assigning positions at the set minimum value
 #(this increments if somebody finishes and is no longer looking at checkpoints)
 scoreboard players operation #positionAssign value = #positionAssignMin value
 
 #players with enough eyes to enter the portal are in the home stretch. give them position solely based on distance to the portal
+execute if score #checkDoMissingPlayersHS value matches 1 run function phan:game/4/race/checkpoint/operate_bot_missing/homestretch
 execute if score #vsHomeStretch value matches 1 as @e[type=marker,tag=portalCore,scores={versusSpawn=1},limit=1] at @s run function phan:game/4/race/portal_core_home_stretch
 
 #all checkpoints do their thing
@@ -59,6 +63,7 @@ scoreboard players operation #test value -= #relevantLapMin value
 execute if score #test value matches 500.. run function phan:game/4/race/checkpoint/catch_abnormal_lap_gap
 #iterate through checkpoints to assign positions. also check trigger areas
 function phan:game/4/race/checkpoint/lap_loop
+execute if score #clearBotMissingFlags value matches 1 run function phan:game/4/race/checkpoint/operate_bot_missing/clear_missing_flags
 
 #handle reset zones
 execute as @e[type=marker,tag=resetZone,scores={versusSpawn=1}] at @s run function phan:game/4/race/checkpoint/operate/reset_zone

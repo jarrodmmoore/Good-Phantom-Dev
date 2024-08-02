@@ -22,7 +22,7 @@ execute if score #vGameType value matches 1 run function phan:game/4/race/_race_
 execute if score #vGameType value matches 2 run function phan:game/4/battle/_battle_main
 
 #=====
-#bots do their thing
+#bots do their thing (note that this happens AFTER the race or battle loop. this is important to remember!)
 execute if score #botsEnabled value matches 1.. if score #gameState value matches 4 run function phan:bots/_global_bot_tick
 #=====
 
@@ -60,7 +60,8 @@ scoreboard players reset @a[scores={damage=1..}] damage
 execute as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
 
 #can use triggers
-execute if score #playersOnServer value matches ..1 run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #hudPeakPlayers value matches ..1 run scoreboard players enable @a[tag=nonSpectator] restart
 scoreboard players enable @a[tag=nonSpectator] exit
 execute if entity @a[tag=nonSpectator,scores={restart=1..}] run function phan:game/4/restart_round
 execute as @a[tag=nonSpectator,scores={exit=1..}] run function phan:game/4/player_exit

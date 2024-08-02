@@ -506,6 +506,9 @@ scoreboard objectives add botTeleportY dummy
 scoreboard objectives add botTeleportZ dummy
 scoreboard objectives add botFireworkTime dummy
 scoreboard objectives add botBoostThinkTime dummy
+scoreboard objectives add botRubberbanding dummy
+scoreboard objectives add botRememberCP dummy
+scoreboard objectives add botTimeSinceCP dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy

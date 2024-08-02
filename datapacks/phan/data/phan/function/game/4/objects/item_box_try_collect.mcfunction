@@ -51,7 +51,7 @@ execute if entity @s[scores={boxID=1..,hitBoxB_head=4}] run scoreboard players o
 execute if entity @s[scores={boxID=1..,hitBoxB_head=5}] run scoreboard players operation @s hitBox5b = #thisGroupID value
 
 #get item
-function phan:items/random/pick_index
+execute in overworld run function phan:items/random/pick_index
 
 #player successfully got the box
 scoreboard players set @s timeSinceOpenBox 0

@@ -2,7 +2,7 @@
 tag @s remove ai
 scoreboard players set @s lifespan 0
 scoreboard players operation #checkID value = @s botID
-execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botID = #checkID value run function phan:bots/race/player_finish_controller
+execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botID = #checkID value run function phan:bots/race/player_finish_controller
 
 #let other bots know when rival has finished
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished value 1

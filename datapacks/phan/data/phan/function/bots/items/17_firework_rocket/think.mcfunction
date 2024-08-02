@@ -41,4 +41,11 @@ execute if score @s onGround matches 1.. run return run function phan:bots/items
 #use it (also we enter "improvised flight" mode)
 tag @s add botImprovFlight
 execute unless function phan:bots/movement/check_for_vehicle run function phan:bots/movement/1_air/transition_to_gliding
-execute rotated ~ ~-30 run function phan:bots/items/17_firework_rocket/use
+
+#random trajectory
+execute store result score #random value run random value 1..4
+execute if score @s botSkill matches 4.. store result score #random value run random value 1..3
+execute if score #random value matches 1 rotated ~ ~-10 run return run function phan:bots/items/17_firework_rocket/use
+execute if score #random value matches 2 rotated ~ ~-20 run return run function phan:bots/items/17_firework_rocket/use
+execute if score #random value matches 3 rotated ~ ~-30 run return run function phan:bots/items/17_firework_rocket/use
+execute if score #random value matches 4 rotated ~ ~-40 run function phan:bots/items/17_firework_rocket/use

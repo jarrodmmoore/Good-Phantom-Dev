@@ -11,6 +11,9 @@ scoreboard players set @a[tag=playerReservation,scores={vsAddPoints=..0}] vsAddP
 #no points for DNF'd players
 scoreboard players set @a[tag=playerReservation,scores={finishPos=-1}] vsAddPoints 0
 
+#if peak player count was 0, give 0 points to everyone
+execute if score #hudPeakPlayers value matches ..1 run scoreboard players set @a[tag=playerReservation] vsAddPoints 0
+
 #points operations for bots
 execute if score #botsEnabled value matches 1.. run function phan:bots/race/assign_bot_points
 

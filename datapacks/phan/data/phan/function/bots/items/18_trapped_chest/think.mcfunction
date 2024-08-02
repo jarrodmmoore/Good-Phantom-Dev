@@ -35,7 +35,5 @@ execute if entity @s[scores={botSkill=4..},tag=vsHomeStretch] run scoreboard pla
 execute unless score #test value matches 0 run return run scoreboard players set @s[scores={botSkill=2..4}] botHoldingItem 18
 
 
-#hold item and use it next time we think
-scoreboard players set @s botHoldingItem 18
-execute if entity @s[tag=botUseItemSoon] run return run function phan:bots/items/18_trapped_chest/use
-tag @s add botUseItemSoon
+#use item
+function phan:bots/items/18_trapped_chest/use

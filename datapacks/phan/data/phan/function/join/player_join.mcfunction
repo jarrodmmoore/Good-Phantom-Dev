@@ -144,6 +144,7 @@ tag @s remove jself
 #announce any debug tags this player has
 execute if entity @s[tag=debugMultiplayer] run say @s has tag "debugMultiplayer"
 execute if entity @s[tag=debugScores] run say @s has tag "debugScores"
+execute if entity @s[tag=debugCheckpointTimes] run say @s has tag "debugCheckpointTimes"
 execute if entity @s[tag=draw] run say @s has tag "draw" (you're gonna cause trouble! stop it!)
 execute if entity @s[tag=simplify_clouds] run say removed simplify_clouds tag from @s
 tag @s[tag=simplify_clouds] remove simplify_clouds
