@@ -13,7 +13,11 @@ execute store result storage phan:coords target_y_dec int 1 run scoreboard playe
 execute unless score @s botTargetID matches 0 run function phan:bots/movement/override_coordinates_with_temporary_target_xyz
 
 #project the target
-function phan:bots/movement/3_in_water/project_target with storage phan:coords
+scoreboard players set #botAtBottomOfWater value 0
+execute if block ~ ~-0.3 ~ #phan:not_solid run scoreboard players set #botAtBottomOfWater value 1
+execute if score #botAtBottomOfWater value matches 0 run function phan:bots/movement/3_in_water/project_target with storage phan:coords
+execute if score #botAtBottomOfWater value matches 1 run function phan:bots/movement/0_on_ground/project_target with storage phan:coords
+
 
 #face the target
 execute unless score @s botTempRotTime matches 1.. run function phan:bots/movement/3_in_water/face_target
@@ -34,7 +38,7 @@ scoreboard players operation #coord_z2 value -= #coord_z value
 kill 0001e453-0000-0000-0000-000000000001
 
 #reduce speed somewhat when head is above water
-execute positioned ~ ~1 ~ unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run function phan:bots/movement/3_in_water/head_above_water_penalty
+execute unless score #botAtBottomOfWater value matches 1 positioned ~ ~1 ~ unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run function phan:bots/movement/3_in_water/head_above_water_penalty
 
 #amplify velocity while under speed and slowness effects
 function phan:bots/movement/speed_effect_amplifier
@@ -62,3 +66,6 @@ execute if score @s moveVelocity matches 400..439 run function phan:bots/movemen
 execute if score @s moveVelocity matches 440..579 run function phan:bots/movement/3_in_water/apply_velocity {arg:"0.008877"}
 execute if score @s moveVelocity matches 480..519 run function phan:bots/movement/3_in_water/apply_velocity {arg:"0.009338"}
 execute if score @s moveVelocity matches 520.. run function phan:bots/movement/3_in_water/apply_velocity {arg:"0.0098"}
+
+#jump up and out of water near the edge
+execute at @s rotated ~ 0 unless block ^ ^ ^0.5 #phan:not_solid if block ^ ^1 ^0.5 #phan:not_solid if block ^ ^2 ^0.5 #phan:not_solid if block ~ ~2 ~ #phan:not_solid run function phan:bots/movement/jump/normal_no_spam

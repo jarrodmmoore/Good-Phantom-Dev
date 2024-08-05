@@ -1,8 +1,9 @@
 #kick out if on cooldown
 execute if score @s inputCooldown matches 1.. run return 0
 
-#exit out if we don't want to get our item stolen (unless we're hard+, in which case we might burn this item to get rid of an enderman)
-execute if entity @s[scores={botSkill=2..3}] if score #botFearsEnderman value matches 1 run return 0
+#exit out if we don't want to get our item stolen (unless we're hard+ with normal+ opponents, in which case we might burn this item to get rid of an enderman)
+execute if entity @s[scores={botSkill=2..3}] if score @s botFearsEnderman matches 1 run return 0
+execute if score @s botSkill matches 4.. if score @s botFearsEnderman matches 1 in overworld if entity @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={botSkill=..2}] run return 0
 
 #=====
 
@@ -16,7 +17,10 @@ scoreboard players set #test value 0
 execute store result score #random value run random value 1..100
 #very easy .. normal: might randomly set mine with no logic
 execute if score @s botSkill matches ..2 if score #random value matches ..25 run scoreboard players set #test value 1
-execute if score @s botSkill matches 3 if score #random value matches ..15 run scoreboard players set #test value 1
+execute if score @s botSkill matches 3 if score #random value matches ..13 run scoreboard players set #test value 1
+
+#very easy: don't use if player nearby
+execute if score @s botSkill matches ..1 if entity @a[tag=playing,distance=..16] run scoreboard players set #test value 0
 
 #normal+ bot: be a punk and put mines in congested areas
 execute if score @s botSkill matches 3.. if function phan:bots/items/13_mine/check_for_thin_lane run scoreboard players set #test value 1
@@ -32,7 +36,7 @@ execute if entity @s[scores={botSkill=4..},tag=vsHomeStretch] run scoreboard pla
 
 #=====
 #abort if we didn't decide to use
-execute unless score #test value matches 0 run return run scoreboard players set @s[scores={botSkill=2..4}] botHoldingItem 13
+execute if score #test value matches 0 run return run scoreboard players set @s[scores={botSkill=2..4}] botHoldingItem 13
 
 
 #use item

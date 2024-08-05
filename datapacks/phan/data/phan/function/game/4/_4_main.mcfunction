@@ -80,5 +80,5 @@ execute if score #showNametags value matches 0 unless entity @a[tag=playing,scor
 tag @a[tag=nonSpectator] remove nonSpectator
 
 #force end if no active player is found
-execute if score #gameState value matches 4 if score #botsOnly value matches 0 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init
-execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[tag=botController,type=block_display] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init
+execute if score #gameState value matches 4 if score #botsOnly value matches 0 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early
+execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[tag=botController,type=block_display] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early

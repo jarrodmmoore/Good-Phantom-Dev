@@ -11,10 +11,12 @@ tag @a[gamemode=adventure,scores={shieldTime=1..},distance=..10] add explosionOw
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #checkID value run tag @s add explosionOwner
 execute if score #botsEnabled value matches 1.. run tag @e[tag=ai,type=zombie,scores={shieldTime=1..},distance=..10] add explosionOwner
 #give advancement for doing this (if in versus mode)
-execute if score #gameState value matches 4 at @s as @a[gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..3] run advancement grant @s only phan:portal_race/pro_strats
+execute if score #gameState value matches 4 at @s as @a[gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..4] run advancement grant @s only phan:portal_race/pro_strats
 #teleport tnt behind us (if explosion owner) for a sick speed boost
-execute if score #botsEnabled value matches ..0 at @s if entity @a[gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..3] at @a[limit=1,sort=nearest,gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..3] positioned ^ ^ ^-.2 run tp @e[tag=setme,type=armor_stand,distance=..10] ~ ~ ~
-execute if score #botsEnabled value matches 1.. at @s if entity @e[tag=explosionOwner,scores={fallFlying=1},distance=..3] at @e[limit=1,sort=nearest,tag=explosionOwner,scores={fallFlying=1},distance=..3] positioned ^ ^ ^-.2 run tp @e[tag=setme,type=armor_stand,distance=..10] ~ ~ ~
+execute if score #botsEnabled value matches ..0 at @s if entity @a[gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..4] at @a[limit=1,sort=nearest,gamemode=adventure,tag=explosionOwner,scores={fallFlying=1},distance=..4] positioned ^ ^ ^-.2 run tp @e[tag=setme,type=armor_stand,distance=..10] ~ ~ ~
+execute if score #botsEnabled value matches 1.. at @s as @e[tag=ai,type=zombie,tag=explosionOwner,scores={fallFlying=1},distance=..4,limit=1,sort=nearest] run function phan:bots/movement/2_gliding/react_to_explosion_boost
+execute if score #botsEnabled value matches 1.. at @s if entity @e[tag=explosionOwner,scores={fallFlying=1},distance=..4] at @e[limit=1,sort=nearest,tag=explosionOwner,scores={fallFlying=1},distance=..4] positioned ^ ^ ^-.2 run tp @e[tag=setme,type=armor_stand,distance=..10] ~ ~ ~
+
 #run part 2 at location of explosion
 execute at @e[tag=setme,limit=1,type=armor_stand,distance=..10] run function phan:items/generic_explode_friendly_part2
 tag @a[tag=explosionOwner] remove explosionOwner

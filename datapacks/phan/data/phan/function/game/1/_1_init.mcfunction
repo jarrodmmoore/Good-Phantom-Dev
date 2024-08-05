@@ -1,3 +1,6 @@
+#keep track of the last mode we played so we can show relevant tips
+scoreboard players set #lastModePlayed value 1
+
 #get HUD ready, but don't show it yet
 scoreboard players set #showHUD value 1
 scoreboard players set @a pShowHUD 0

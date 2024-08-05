@@ -1,5 +1,5 @@
 #feedback noise to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 execute if score #10Hz value matches 1 as @a[tag=tellMe] at @s run playsound minecraft:block.note_block.bit master @s ~ 100000 ~ 100000 2
 
 #gradual point adding (because it looks cool for the bonus)

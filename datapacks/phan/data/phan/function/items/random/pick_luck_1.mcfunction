@@ -6,7 +6,8 @@
 execute if score #1stPlaceLeadTime value matches 25.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..3}] add tempItemBan
 
 #don't pick an offense item if we're really far ahead of 2nd place
-execute if score #1stPlaceLeadTime value matches 50.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..7}] add tempItemBan
+execute if score #1stPlaceLeadTime value matches 50.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=5..6}] add tempItemBan
+execute if score #1stPlaceLeadTime value matches 100.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..7}] add tempItemBan
 
 #2 in 3 chance of not allowing enderman thief at all
 execute store result score #randomRoll2 value run random value 1..3

@@ -15,5 +15,11 @@ execute if score #testX value matches -25..25 if score #testZ value matches -25.
 execute if score #testX value matches -18..18 if score #testZ value matches -18..18 run scoreboard players add @s botTimeInRange 4
 execute if score #testX value matches -10..10 if score #testZ value matches -10..10 run scoreboard players add @s botTimeInRange 8
 
+#if we're dodging or boosting off a mine, grant the check
+execute unless score @s botPreparedToBoostTrap matches 0 run scoreboard players add @s botTimeInRange 15
+
+#instant check if we're rocket boosting
+execute if score @s botFireworkTime matches 15.. run scoreboard players add @s botTimeInRange 15
+
 #if we've been in range for long enough, grant check
 execute if score @s botTimeInRange matches 8.. run scoreboard players set #test value 2

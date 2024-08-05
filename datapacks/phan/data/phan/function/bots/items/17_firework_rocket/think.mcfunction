@@ -2,7 +2,7 @@
 execute if score @s inputCooldown matches 1.. run return 0
 
 #exit out if we don't want to get our item stolen
-execute if score #botFearsEnderman value matches 1 run return 0
+execute if score @s botFearsEnderman matches 1 run return 0
 
 #=====
 
@@ -12,22 +12,33 @@ execute if entity @s[scores={inWater=1..}] run return 0
 #very easy bots will never use
 execute if score @s botSkill matches ..1 run return 0
 
+
+#yse "test" to keep track of whether we want to use this
+scoreboard players set #test value 1
+
 #hard+ bots won't use until homestrech (should probably prioritize the pre-defined shortcuts)
-execute if score #vGameType value matches 1 if entity @s[scores={botSkill=4..},tag=!vsHomeStretch] run return 0
+execute if score #vGameType value matches 1 if entity @s[scores={botSkill=4..},tag=!vsHomeStretch] run scoreboard players set #test value 0
 
 #normal bots have 50% chance of not using
 execute store result score #random2 value run random value 1..2
-execute if score #vGameType value matches 1 if entity @s[scores={botSkill=3},tag=!vsHomeStretch] if score #random2 value matches 1 run return 0
+execute if score #vGameType value matches 1 if entity @s[scores={botSkill=3},tag=!vsHomeStretch] if score #random2 value matches 1 run scoreboard players set #test value 0
 
 #easy+ bots won't use if there's a ceiling above them
 scoreboard players set #test1 value 0
 execute positioned ~ ~2 ~ run function phan:bots/items/6_super_jump/count_blocks_to_ceiling
-execute if score #test1 value matches ..15 run return 0
+execute if score #test1 value matches ..15 run scoreboard players set #test value 0
 #also don't use if the waypoint we're currently targeting has a ceiling above it
 scoreboard players operation #test2 value = @s botTargetYYCeiling
 scoreboard players operation #test2 value -= @s botTargetYY
-execute if score @s botBehavior matches 1 if score #test2 value matches ..200 run return 0
+execute if score @s botBehavior matches 1 if score #test2 value matches ..200 run scoreboard players set #test value 0
 
+#bot WILL use if they're in a panic
+execute if entity @e[tag=botFlightPanic] run scoreboard players set #test value 1
+execute if entity @e[tag=botFlightPanic] run tag @s remove botFlightPanic
+
+
+#exit out if we're not using this
+execute if score #test value matches 0 run return 0
 #=====
 
 #hold item

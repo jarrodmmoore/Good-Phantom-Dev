@@ -1,3 +1,6 @@
+#keep track of the last mode we played so we can show relevant tips
+scoreboard players set #lastModePlayed value 4
+
 #spectators who joined in the middle of a set of versus rounds get incorporated into the game right here
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] add playing
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] remove vsMidGameJoin
@@ -36,6 +39,7 @@ team modify botDisplayEasy color aqua
 team modify botDisplayNormal color aqua
 team modify botDisplayHard color aqua
 team modify botDisplayTryhard color aqua
+team modify botDisplayTryharder color aqua
 
 #no crown?
 execute unless score #allowCrown value matches 1 run tag @a[tag=vsCrown] remove vsCrown

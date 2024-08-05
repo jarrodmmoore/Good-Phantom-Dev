@@ -4,7 +4,7 @@ scoreboard players add @s checkFake 1
 execute if score @s check < @s checkFake run scoreboard players operation @s check = @s checkFake
 
 #respawn cooldown
-scoreboard players set @s inputCooldownB 30
+scoreboard players set @s[type=player] inputCooldownB 30
 
 #check or record timestamp on this checkpoint to figure out item balancing
 function phan:game/4/race/checkpoint/timestamp/_index

@@ -1,5 +1,5 @@
 #play sound at a guaranteed volume for projectileOwner and their spectators
-execute as @a[tag=projectileOwner] run function phan:tell_spectators
+execute as @a[tag=projectileOwner] run function phan:player/tell_spectators
 execute unless score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a[tag=tellMe] ~ ~ ~ 2.5 .9 .3
 execute at @s run playsound minecraft:custom_sfx/pickup1 master @a[tag=!tellMe] ~ ~ ~ 2.5 .9
 

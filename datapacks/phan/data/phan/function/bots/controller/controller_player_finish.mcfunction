@@ -4,6 +4,7 @@ scoreboard players set @s botTimeSinceCP -999999
 
 #let other bots know when rival has finished
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished value 1
+execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value 2147483647
 
 #race will end 75 seconds after any finish
 scoreboard players operation #newTimeLimit value = #vTimeLimit value

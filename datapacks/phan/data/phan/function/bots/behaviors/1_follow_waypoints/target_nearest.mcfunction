@@ -1,5 +1,9 @@
 #go for the nearest waypoint
 
+#get ready to do stuff...
+scoreboard players set #foundNode value 0
+scoreboard players set #oldWpX value -2147483648
+
 #prep: should we be concerned with checking the children of whatever we target?
 execute if entity @s[tag=!botUseNearestSpread] run scoreboard players set #getChildIDs value 1
 
@@ -7,10 +11,10 @@ execute if entity @s[tag=!botUseNearestSpread] run scoreboard players set #getCh
 scoreboard players set #setGoal value 0
 execute if entity @s[tag=botTargetMidAir] run scoreboard players set #setGoal value 1
 execute if entity @s[scores={botMoveState=3}] run scoreboard players set #setGoal value 1
-execute if score #setGoal value matches 1 as @e[limit=1,sort=nearest,type=marker,tag=AIBC,tag=AIBC_midAir] run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
+execute if score #setGoal value matches 1 as @e[limit=1,sort=nearest,type=marker,distance=..60,tag=AIBC,tag=AIBC_midAir,tag=!AIBC_deadEnd] run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
 
 #otherwise, target a grounded waypoint
-execute if score #setGoal value matches 0 as @e[limit=1,sort=nearest,type=marker,tag=AIBC,tag=!AIBC_midAir] run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
+execute if score #setGoal value matches 0 as @e[limit=1,sort=nearest,type=marker,distance=..60,tag=AIBC,tag=!AIBC_midAir,tag=!AIBC_deadEnd] run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
 
 #if not using nearest spread, check if we can target the next breadcrumb from the nearest waypoint we found
 #(this helps reduce bots going in the wrong direction for a moment and then doing a 180)
@@ -29,3 +33,7 @@ function phan:bots/behaviors/1_follow_waypoints/spread/set_target_coordinates
 tag @s remove botUseNearestSpread
 tag @s[tag=botTargetNearestWP] remove botTargetNearestWP
 tag @s[tag=botTargetMidAir] remove botTargetMidAir
+
+#=====
+#nothing found? enter roam mode
+execute if score #foundNode value matches 0 run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary

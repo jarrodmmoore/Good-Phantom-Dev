@@ -1,5 +1,5 @@
 #don't do anything if we're afraid of enderman stealing our protection
-execute if score #botFearsEnderman value matches 1.. run return 0
+execute if score @s botFearsEnderman matches 1.. run return 0
 #bot will just wait and hope somebody screws up and triggers the enderman so it can eventually use item to stop the anvil
 
 

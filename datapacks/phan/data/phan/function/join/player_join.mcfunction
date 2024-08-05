@@ -36,7 +36,7 @@ xp set @s 0 points
 effect clear @s
 gamemode adventure @s
 clear @s
-function phan:set_title_times
+function phan:player/set_title_times
 title @s actionbar [""]
 title @s subtitle [""]
 title @s title [""]

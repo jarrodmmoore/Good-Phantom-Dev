@@ -30,5 +30,5 @@ execute unless score #testY value matches -100..100 run return run scoreboard pl
 execute unless score #testZ value matches -100..100 run return run scoreboard players set @s botTargetID 0
 
 #stop targeting if we reached it on x and z
-execute if score #testX value matches -11..11 if score #testZ value matches -11..11 run scoreboard players set @s botTargetID 0
-execute if score @s moveVelocity matches 300.. if score #testX value matches -16..16 if score #testZ value matches -16..16 run scoreboard players set @s botTargetID 0
+execute if score #testX value matches -15..15 if score #testZ value matches -15..15 run scoreboard players set @s botTargetID 0
+execute if score @s moveVelocity matches 300.. if score #testX value matches -21..21 if score #testZ value matches -21..21 run scoreboard players set @s botTargetID 0

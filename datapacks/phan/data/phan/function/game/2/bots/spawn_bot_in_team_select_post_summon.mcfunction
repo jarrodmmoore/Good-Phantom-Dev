@@ -8,6 +8,7 @@ execute if score #beQuiet value matches ..1 if score #test value matches 2 at @s
 execute if score #beQuiet value matches ..1 if score #test value matches 3 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.8
 execute if score #beQuiet value matches ..1 if score #test value matches 4 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 1.9
 execute if score #beQuiet value matches ..1 if score #test value matches 5.. at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
+execute if score #beQuiet value matches ..1 if score #test value matches 6 at @s run playsound minecraft:entity.ender_dragon.ambient master @a ~ ~ ~ .5 1.8 .5
 execute if score #beQuiet value matches 1.. run scoreboard players add #beQuiet value 1
 
 #use age as our ID, I guess

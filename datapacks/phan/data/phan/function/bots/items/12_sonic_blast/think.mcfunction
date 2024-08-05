@@ -2,7 +2,7 @@
 execute if score @s inputCooldown matches 1.. run return 0
 
 #exit out if we're near 1st and don't want to lose the horn
-execute if entity @s[scores={botSkill=4..,itemLuck=..2}] if score #botFearsEnderman value matches 1 run return 0
+execute if entity @s[scores={botSkill=4..,itemLuck=..2}] if score @s botFearsEnderman matches 1 run return 0
 
 #=====
 

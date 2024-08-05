@@ -1,7 +1,7 @@
 #change bot speed based on rubber band value
 scoreboard players set #multiplier value 100
-execute if score @s botRubberbanding matches -2 run scoreboard players set #multiplier value 85
-execute if score @s botRubberbanding matches -1 run scoreboard players set #multiplier value 95
+execute if score @s botRubberbanding matches -2 run scoreboard players set #multiplier value 84
+execute if score @s botRubberbanding matches -1 run scoreboard players set #multiplier value 92
 execute if score @s botRubberbanding matches 1 run scoreboard players set #multiplier value 105
 execute if score @s botRubberbanding matches 2 run scoreboard players set #multiplier value 110
 

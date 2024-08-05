@@ -252,6 +252,7 @@ scoreboard objectives add bufferInput1 dummy
 scoreboard objectives add bufferInput2 dummy
 scoreboard objectives add bufferInput3 dummy
 scoreboard objectives add bufferInput4 dummy
+scoreboard objectives add jump minecraft.custom:minecraft.jump
 #high score storage
 scoreboard objectives add bestScore1 dummy
 scoreboard objectives add bestScore2 dummy
@@ -509,6 +510,14 @@ scoreboard objectives add botBoostThinkTime dummy
 scoreboard objectives add botRubberbanding dummy
 scoreboard objectives add botRememberCP dummy
 scoreboard objectives add botTimeSinceCP dummy
+scoreboard objectives add botTimeSinceFlightProgress dummy
+scoreboard objectives add botPreparedToDodgeTrap dummy
+scoreboard objectives add botPreparedToBoostTrap dummy
+scoreboard objectives add botRouteAfterExplosionBoost dummy
+scoreboard objectives add botFearsEnderman dummy
+scoreboard objectives add botExplosionBoostTime dummy
+scoreboard objectives add botVaultUpwardTime dummy
+scoreboard objectives add botHullFallFlying dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy

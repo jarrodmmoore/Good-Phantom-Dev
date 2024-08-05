@@ -14,4 +14,4 @@ scoreboard players add @s join 1
 
 #while we're in here, let's do a bunch of stuff
 #(these used to be in _main and other looped functions, but I realized inlining them here would avoid a lot of @a's)
-function phan:player_tick
+function phan:player/_player_tick

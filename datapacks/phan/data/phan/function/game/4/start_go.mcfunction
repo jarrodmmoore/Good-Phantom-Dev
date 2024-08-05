@@ -19,6 +19,10 @@ scoreboard players set @a energy 0
 execute if score #vGameType value matches 2 run scoreboard players set @a energy 6
 execute if score #vGameType value matches 2 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players set @s energy 6
 
+#curb projectile spam toward the start of the game
+scoreboard players operation #givenRockets value = #hudPeakPlayers value
+execute if score #givenRockets value matches 16.. run scoreboard players set #givenRockets value 15
+
 #start showing the HUD
 scoreboard players set @a pShowHUD 1
 

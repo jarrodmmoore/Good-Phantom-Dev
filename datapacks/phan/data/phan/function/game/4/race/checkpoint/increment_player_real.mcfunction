@@ -3,7 +3,7 @@ function phan:game/4/race/checkpoint/operate/checkpoint_add_1
 scoreboard players operation @s checkFake = @s check
 
 #sound effect... just to be consistent with Sprint Racer ;)
-function phan:tell_spectators
+function phan:player/tell_spectators
 execute if score @s playerGetEyes matches 0.. at @s run playsound minecraft:block.note_block.xylophone master @a[tag=tellMe] ~ 100000 ~ 100000 1
 
 #flash split time
@@ -38,7 +38,7 @@ execute if score @s itemLuck matches 5 run scoreboard players add @s energy 3
 execute if score @s energy matches 19..99 run scoreboard players set @s energy 18
 
 #respawn cooldown
-scoreboard players set @s inputCooldownB 30
+scoreboard players set @s[type=player] inputCooldownB 30
 
 #check or record timestamp on this checkpoint to figure out item balancing
 function phan:game/4/race/checkpoint/timestamp/_index

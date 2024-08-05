@@ -24,9 +24,14 @@ function phan:items/use/speed_pad_part2 with storage phan:coords
 execute if entity @s[tag=ai] unless score @s botMoveState matches 3 run function phan:bots/items/7_speed_pad/cancel_y_velocity
 
 #spawn speed pad
-execute at @s run summon armor_stand ~ ~ ~ {Tags:["tickObject","superSpeedPadEntity","giveID","hurtful","dontResetNearMe","speedPadCount"],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["setLife"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111114}}}]}
+execute at @s run summon armor_stand ~ ~ ~ {Tags:["tickObject","superSpeedPadEntity","giveID","hurtful","dontResetNearMe","speedPadCount"],attributes:[{id:"minecraft:generic.scale",base:0.0625}],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["setLife","botObjectOfInterest","speedPadDisplay"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111114}}}]}
 execute at @s as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~
 execute as @e[type=armor_stand,tag=giveID,distance=..4] at @s on passengers run tp @s ~ ~ ~ ~ 0
+
+#get a unique ID (for bot temporary target system)
+scoreboard players add #uniqieBoxID value 1
+execute if score #uniqieBoxID value matches 0 run scoreboard players add #uniqieBoxID value 1
+scoreboard players operation @e[tag=setLife,type=item_display,distance=..4] ringID = #uniqieBoxID value
 
 #spawn temporary barriers to stand on
 execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor

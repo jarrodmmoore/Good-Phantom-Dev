@@ -9,7 +9,7 @@ execute if score @s shieldTime matches 61 run effect give @s resistance 3 200 fa
 execute if score @s shieldTime matches 0 run effect clear @s resistance
 
 #fancy particles
-function phan:tell_spectators
+function phan:player/tell_spectators
 scoreboard players operation #test value = @s shieldTime
 scoreboard players operation #test value %= #36 value
 execute if score @s fallFlying matches 1.. rotated ~ 0 positioned ^ ^ ^.8 run function phan:items/shield_active_particles_index

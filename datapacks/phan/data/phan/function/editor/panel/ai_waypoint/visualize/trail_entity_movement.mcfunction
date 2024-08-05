@@ -8,7 +8,7 @@ execute if score #test value matches 1 run return run scoreboard players set @s 
 execute if entity @s[tag=light_green] run particle dust{color:[0.5,1.0,0.5],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
 execute if entity @s[tag=yellow] run particle dust{color:[1.0,1.0,0.0],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
 execute if entity @s[tag=light_blue] run particle dust{color:[0.0,1.0,1.0],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
-execute if entity @s[tag=dark_green] run particle dust{color:[0.0,1.0,0.0],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
+execute if entity @s[tag=dark_green] run particle dust{color:[0.0,8.0,0.0],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
 execute if entity @s[tag=dark_blue] run particle dust{color:[0.0,0.0,1.0],scale:2} ~ ~.2 ~ 0 0 0 0 1 force
 execute if entity @s[tag=pearl] run particle enchanted_hit ~ ~.2 ~ 0 0 0 0 1 force
 

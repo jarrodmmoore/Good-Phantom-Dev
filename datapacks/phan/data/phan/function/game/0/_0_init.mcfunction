@@ -10,6 +10,7 @@ team modify botDisplayEasy color white
 team modify botDisplayNormal color white
 team modify botDisplayHard color white
 team modify botDisplayTryhard color white
+team modify botDisplayTryharder color white
 
 #if a player was just playing in a game, move them back in the player queue
 #we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing.
@@ -36,7 +37,7 @@ execute unless score #allowCrown value matches 1 run tag @a[tag=vsCrown] remove 
 scoreboard players set #allowCrown value 0
 
 #clear bossbars and HUD
-execute as @a run function phan:set_title_times
+execute as @a run function phan:player/set_title_times
 scoreboard players set #showHUD value 0
 scoreboard players set @a pShowHUD 0
 function phan:custom_hud/clear_bossbars

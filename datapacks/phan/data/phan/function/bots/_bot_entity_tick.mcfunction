@@ -15,7 +15,8 @@ execute if score @s botHp matches ..1019 run function phan:bots/take_damage
 
 #check for nearby objects of interest
 scoreboard players remove @s botReactionTimer 1
-execute if score @s botReactionTimer matches ..0 run function phan:bots/reaction/_check_objects_of_interest
+execute if score @s botReactionTimer matches ..0 unless score @s botPreparedToBoostTrap matches 1.. run function phan:bots/reaction/_check_objects_of_interest
+execute if score @s botPreparedToBoostTrap matches 1.. run function phan:bots/reaction/_check_objects_of_interest_mine_boost
 
 #=====
 #ITEM EFFECTS
@@ -50,6 +51,10 @@ function phan:bots/behaviors/_behavior_state_index
 
 #=====
 #MOVEMENT
+
+#dodge traps (or jump them) if we're checking for them at 20Hz
+execute unless score @s botPreparedToDodgeTrap matches 0 unless score @s squidBlindTime matches 1.. run function phan:bots/movement/try_to_dodge_trap
+execute if score @s botPreparedToBoostTrap matches 1.. run function phan:bots/movement/bot_prepared_to_boost_trap
 
 #perform movement
 function phan:bots/movement/_bot_movement_main
@@ -90,7 +95,7 @@ scoreboard players remove @s[scores={botMistakeCooldown=1..}] botMistakeCooldown
 
 
 #DEBUG, SHOW SCORES FOR BOT W/ ID 1
-#execute if score @s botID matches 1 if score #2sec value matches 1 run function phan:bots/debug_show_scores
+#execute if score @s botID matches 1 if score #5Hz value matches 1 run function phan:bots/debug_show_scores
 
 
 #stay alive as long as we're running this function
@@ -108,6 +113,6 @@ execute if entity @s[tag=botRespawn] at @s run function phan:bots/race/respawn
 #send data to controller if we need to
 execute if entity @s[tag=hasDataToSend] run function phan:bots/stage_data_for_transfer
 
-#let the botController know that we exist and ran this function
+#let our botController know that we exist and ran this function
 scoreboard players set #botSuccess value 1
 #=====

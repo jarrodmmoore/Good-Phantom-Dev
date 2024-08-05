@@ -2,7 +2,7 @@
 execute if score @s inputCooldown matches 1.. run return 0
 
 #exit out if we don't want to get our item stolen
-execute if score #botFearsEnderman value matches 1 run return 0
+execute if score @s botFearsEnderman matches 1 run return 0
 
 #=====
 
@@ -51,7 +51,7 @@ execute if score #random value matches 0 run return 0
 #=====
 
 #leading the shot? shoot at a projected target
-execute as @e[limit=1,sort=random,tag=viableLeadTarget,distance=..50] at @s run summon marker ^ ^ ^5 {UUID:[I;123987,0,0,4]}
+execute as @e[limit=1,sort=random,tag=viableLeadTarget,distance=..50] at @s run summon marker ^ ^ ^3 {UUID:[I;123987,0,0,4]}
 execute facing entity 0001e453-0000-0000-0000-000000000004 eyes rotated ~ ~-1 run function phan:bots/items/shoot_projectile_with_aim_offset with storage phan:coords
 kill 0001e453-0000-0000-0000-000000000004
 tag @e[tag=viableLeadTarget,distance=..51] remove viableLeadTarget

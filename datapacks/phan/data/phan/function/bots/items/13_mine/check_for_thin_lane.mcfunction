@@ -2,16 +2,16 @@
 
 scoreboard players set #test1 value 1
 scoreboard players set #recursions value 5
-execute rotated 0 90 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
+execute rotated 90 0 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
 scoreboard players set #recursions value 5
-execute rotated 0 -90 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
+execute rotated -90 0 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
 execute if score #test1 value matches ..4 run return 1
 
 scoreboard players set #test1 value 1
 scoreboard players set #recursions value 5
 execute rotated 0 0 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
 scoreboard players set #recursions value 5
-execute rotated 0 180 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
+execute rotated 180 0 positioned ^ ^ ^1 run function phan:bots/items/13_mine/check_for_thin_lane_recursion
 execute if score #test1 value matches ..4 run return 1
 
 #lane is thick

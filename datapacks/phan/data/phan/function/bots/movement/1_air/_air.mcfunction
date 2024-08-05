@@ -1,4 +1,6 @@
 #exit out if we want to transition to flight
+execute if function phan:bots/movement/check_for_vehicle run return run tag @s remove botFlyWhenInAir
+execute if entity @s[tag=botFlyWhenInAir,scores={airTime=2..,botVaultUpwardTime=1..}] run return run function phan:bots/movement/1_air/transition_to_gliding_wait_upward
 execute if entity @s[tag=botFlyWhenInAir,scores={airTime=12..}] run return run function phan:bots/movement/1_air/transition_to_gliding_wait
 execute if score @s fallFlying matches 1 run return 0
 
@@ -23,6 +25,9 @@ scoreboard players operation #coord_z2 value -= #coord_z value
 
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001
+
+#perform pad jump?
+execute if entity @s[tag=botPadJumpWhenMidAir,scores={airTime=12..}] run function phan:bots/movement/1_air/perform_pad_jump
 
 #perform a coyote jump?
 execute if entity @s[scores={botJumpTimer=-1,airTime=..10}] run function phan:bots/movement/jump/check_for_ledge_coyote

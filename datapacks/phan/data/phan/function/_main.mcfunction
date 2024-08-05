@@ -42,7 +42,7 @@ function phan:items/_tick
 #DEBUG
 
 #show a scoreboard value, always
-#title @a actionbar ["",{"text":"gameState = "},{"score":{"name":"#gameState","objective":"value"}}]
+#title @a actionbar ["",{"text":"#givenRockets = "},{"score":{"name":"#givenRockets","objective":"value"}}]
 
 #draw boundaries for out of bounds
 #execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -64 ~3 red_wool replace air
@@ -51,7 +51,7 @@ function phan:items/_tick
 #execute as @a[tag=simplify_clouds] at @s run function phan:utility/simplify_clouds
 
 #show variables for a player
-#execute as @a[tag=debugScores,limit=1] run function phan:debug_scores
+#execute as @a[tag=debugScores,limit=1] run function phan:utility/debug_scores
 
 #=====
 #CLEAN-UP

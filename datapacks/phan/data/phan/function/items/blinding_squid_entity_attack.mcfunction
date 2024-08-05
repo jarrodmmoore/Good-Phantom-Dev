@@ -9,8 +9,8 @@ execute as @a[tag=doneWithIntro] if score @s playerID = #getID value run tag @s 
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #getID value run tag @s add squidTarget
 
 #follow target's view
-execute as @a[tag=squidTarget,limit=1] at @s anchored eyes positioned ^ ^ ^4 if loaded ~ ~ ~ run tp @e[type=squid,tag=squidEnt] ~ ~ ~ ~ ~
-execute if score #botsEnabled value matches 1.. as @e[type=zombie,tag=squidTarget,limit=1] at @s anchored eyes positioned ^ ^ ^4 if loaded ~ ~ ~ run tp @e[type=squid,tag=squidEnt] ~ ~ ~ ~ ~
+execute as @a[tag=squidTarget,limit=1] at @s anchored eyes positioned ^ ^ ^5 if loaded ~ ~ ~ run tp @e[type=squid,tag=squidEnt] ~ ~ ~ ~ ~
+execute if score #botsEnabled value matches 1.. as @e[type=zombie,tag=squidTarget,limit=1] at @s anchored eyes positioned ^ ^ ^5 if loaded ~ ~ ~ run tp @e[type=squid,tag=squidEnt] ~ ~ ~ ~ ~
 
 #stay alive as long as we're following someone
 execute if entity @a[tag=squidTarget] run scoreboard players set @s lifespan 5

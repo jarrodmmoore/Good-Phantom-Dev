@@ -48,6 +48,9 @@ execute if entity @s[tag=!vsHomeStretch,scores={botSkill=5..,botEffectSpeedPotio
 #hard+ bot will save at least 1 boost for shortcuts or the home stretch
 execute if entity @s[tag=!vsHomeStretch,scores={botSkill=4..,energy=..5}] run return 0
 
+#never use if we're ahead of the rival bot without full energy
+execute if score @s[scores={energy=..15}] racePosDisplay < #botRivalPosition value run return 0
+
 #=====
 
 #random chance of not using boost
@@ -61,6 +64,9 @@ execute if entity @s[scores={botSkill=4..,energy=10..}] run scoreboard players r
 
 #hard+ bots on home stretch: unload boost
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] run scoreboard players set #random value 1
+
+#rival bot more likely to use, especially when behind
+execute if entity @s[tag=botRival] run scoreboard players operation #random value -= @s itemPosition
 
 #need to roll a 2 or lower to boost
 execute if score #random value matches 3.. run return 0

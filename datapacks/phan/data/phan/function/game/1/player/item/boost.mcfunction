@@ -4,7 +4,8 @@ scoreboard players remove @s energy 3
 scoreboard players set @s boostBuffer 20
 
 #feedback
-playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 1 1.5
+playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 1 1.55
+playsound minecraft:entity.allay.item_taken master @a ~ ~ ~ 1 1.3
 
 #cooldown / input management
 scoreboard players set @s inputCooldownD 16

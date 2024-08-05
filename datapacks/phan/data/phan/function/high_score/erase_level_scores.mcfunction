@@ -1,4 +1,4 @@
-#this is run by the "randomize" marker that corresponds to a level
+#executed by the "randomize" marker that corresponds to a level
 scoreboard players set @s bestScore1 -1
 scoreboard players set @s bestScore2 -1
 scoreboard players set @s bestScore3 -1

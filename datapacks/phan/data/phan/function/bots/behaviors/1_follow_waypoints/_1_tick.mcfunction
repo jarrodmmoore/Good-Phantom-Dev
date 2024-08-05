@@ -1,3 +1,6 @@
+#target waypoint if we're explosion boosting after an event
+execute if score @s botExplosionBoostTime matches 1.. if score @s botMoveState matches 2 run function phan:bots/behaviors/1_follow_waypoints/handle_explosion_boost
+
 #target nearest waypoint if tag told us to
 execute if entity @s[tag=botTargetNearestWP] run function phan:bots/behaviors/1_follow_waypoints/target_nearest
 

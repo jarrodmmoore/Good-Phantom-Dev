@@ -6,6 +6,9 @@ scoreboard players operation #random value += @s itemLuck
 execute store result score #random2 value run random value -2..8
 scoreboard players operation #random2 value += @s botSkill
 
+#botRival gets +1 on skill roll
+execute if entity @s[tag=botRival] run scoreboard players add #random2 value 1
+
 #bad decision event? deny if skill roll 2 or higher
 execute if score #waypointEventSkill value matches 1 if score #random2 value matches 2.. run return 1
 #also deny if we're on mistake cooldown

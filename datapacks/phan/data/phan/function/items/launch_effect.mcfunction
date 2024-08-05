@@ -8,6 +8,7 @@ scoreboard players set @s elytraTimer 1
 #bot behavior management
 tag @s[tag=ai] add botUsingSuperJump
 tag @s[tag=ai] add botFlyWhenInAir
+execute if entity @s[tag=ai] run function phan:bots/movement/cancel_flight
 
 #we're not stuck! don't try to re-route
 scoreboard players set @s botTimeSinceProgress -40

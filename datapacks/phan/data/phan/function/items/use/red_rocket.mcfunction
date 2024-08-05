@@ -5,7 +5,8 @@ playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 2.5 0.85
 
 #spawn rocket (item_display riding an armor stand)
 summon armor_stand ~ ~1 ~ {Tags:["tickObject","rocket","giveID"],Marker:1b,Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["setLife"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111111}}}]}
-execute at @s positioned ~ ~1.6 ~ as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~-1.5
+execute if entity @e[type=player] at @s positioned ~ ~1.6 ~ as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~-1.5
+execute if entity @e[type=!player] positioned ~ ~1.6 ~ as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~-1.5
 
 #entity can only exist in this current game session
 scoreboard players set @e[type=armor_stand,tag=giveID,distance=..4] itemValidSpawn 1

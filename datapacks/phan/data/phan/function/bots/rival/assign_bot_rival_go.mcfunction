@@ -17,9 +17,18 @@ scoreboard players set #test value 1
 execute if score #botHighestSkill value matches 2 if score #humanPointsAhead value matches ..-3 run scoreboard players set #test value 0
 execute if score #botHighestSkill value matches 3 if score #humanPointsAhead value matches ..-5 run scoreboard players set #test value 0
 
-#match max level?
-execute if score #test value matches 0 run return 0
+#no rival if we don't even want to match max level
+execute if score #test value matches 0 run return run tag @s remove botRival
+
+#match max level
 scoreboard players operation @s botSkill = #botHighestSkill value
+scoreboard players operation #botRivalID value = @s playerID
+
+#=====
+#if only 1 bot was originally max level and did NOT become rival, drag them down 1 level
+scoreboard players set #test2 value 0
+execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botOriginalSkill >= #botHighestSkill value run scoreboard players add #test2 value 1
+execute if score #test2 value matches 1 as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,tag=!botRival] if score @s botOriginalSkill >= #botHighestSkill value run function phan:bots/rival/demote_1_level
 
 #=====
 #ok, we matched max level. should we go beyond max level as well?

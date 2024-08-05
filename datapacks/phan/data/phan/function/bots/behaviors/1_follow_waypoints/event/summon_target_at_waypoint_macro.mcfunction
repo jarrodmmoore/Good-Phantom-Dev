@@ -1,0 +1,4 @@
+scoreboard players set #test value 0
+$execute as @e[type=marker,distance=..30,tag=AIBC,scores={AIBC_id=$(id)}] at @s if loaded ~ ~ ~ run function phan:bots/behaviors/1_follow_waypoints/event/summon_target_at_waypoint_go
+$execute if score #test value matches 0 as @e[type=marker,distance=..80,tag=AIBC,scores={AIBC_id=$(id)}] at @s if loaded ~ ~ ~ run function phan:bots/behaviors/1_follow_waypoints/event/summon_target_at_waypoint_go
+$execute if score #test value matches 0 as @e[type=marker,distance=..300,tag=AIBC,scores={AIBC_id=$(id)}] at @s if loaded ~ ~ ~ run function phan:bots/behaviors/1_follow_waypoints/event/summon_target_at_waypoint_go

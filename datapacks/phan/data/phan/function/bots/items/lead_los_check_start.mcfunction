@@ -1,9 +1,9 @@
 #position ahead must be loaded
-execute positioned ^ ^ ^5 unless loaded ~ ~ ~ run return 0
+execute positioned ^ ^ ^3 unless loaded ~ ~ ~ run return 0
 #=====
 
 #project a target
-execute at @s run summon marker ^ ^ ^5 {UUID:[I;123987,0,0,3]}
+execute at @s run summon marker ^ ^ ^3 {UUID:[I;123987,0,0,3]}
 #also known as
 #0001e453-0000-0000-0000-000000000003
 

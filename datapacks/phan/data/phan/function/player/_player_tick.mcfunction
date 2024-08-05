@@ -11,7 +11,7 @@ tag @s[tag=!tntCanHit,gamemode=adventure] add tntCanHit
 execute if entity @s[tag=!doneWithIntro] at @s run function phan:join/intro/_intro_main
 
 #manage skybox for this player
-execute if score @s skyboxSet matches -2147483648..2147483647 at @s run function phan:skybox/player_get_skybox
+execute if score @s skyboxSet matches -2147483648..2147483647 at @s run function phan:player/player_get_skybox
 
 #players must have their equipment
 execute if entity @s[gamemode=adventure,tag=doneWithIntro,tag=!noInventory] unless items entity @s armor.chest elytra[custom_data~{playerEquipment:1b}] run function phan:join/player_get_equipment
@@ -93,8 +93,8 @@ effect give @s[gamemode=!creative] invisibility infinite 1 true
 effect clear @s[gamemode=creative] invisibility
 
 #instant health to anyone below max hp
-execute if entity @s[scores={hp=..20}] run function phan:player_health_set
-execute if entity @s[scores={hp=21..423}] run function phan:player_health
+execute if entity @s[scores={hp=..20}] run function phan:player/player_health_set
+execute if entity @s[scores={hp=21..423}] run function phan:player/player_health
 
 #saturation
 effect give @s saturation infinite 10 true

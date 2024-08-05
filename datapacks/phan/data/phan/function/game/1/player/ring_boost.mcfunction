@@ -4,6 +4,7 @@ execute if entity @s[scores={fallFlying=1,airTime=2..}] run scoreboard players s
 #get explosion boost if flying with elytra
 execute if score #test value matches 1 run effect give @s resistance 1 100 true
 execute if score #test value matches 1 at @s rotated ~ 0 run summon creeper ^ ^0.35 ^-0.2 {Fuse:0}
+execute if score #test value matches 1 if entity @s[tag=ai] run function phan:bots/movement/2_gliding/react_to_explosion_boost
 
 #don't mess up the velocity of other nearby flying players. teleport them to us so they also get the boost
 tag @s add boostSelf
@@ -13,7 +14,8 @@ execute if score #test value matches 1 at @s as @a[gamemode=adventure,tag=!boost
 tag @s remove boostSelf
 
 #get normal boost on ground or in water
-execute if score #test value matches 0 run function phan:movement/speed_pad_super
+execute if entity @s[type=player] if score #test value matches 0 run function phan:movement/speed_pad_super
+execute if entity @s[tag=ai] if score #test value matches 0 run function phan:bots/movement/speed_pad_super
 
 #feedback
 particle falling_dust{block_state:"diamond_block"} ~ ~1 ~ 0.4 0.4 0.4 1 20

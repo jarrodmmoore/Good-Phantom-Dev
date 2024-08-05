@@ -13,7 +13,7 @@ execute if entity @s[tag=!vsHomeStretch,scores={botSkill=5..,botHasItem15=..1}] 
 execute if entity @s[tag=vsHomeStretch,tag=!botRival] if score #botRivalFinished value matches 0 run return 0
 
 #hard+: if in home strech: keep holding ender pearl regardless if we can use it. keep checking los!
-execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] if score #botFearsEnderman value matches 0 run scoreboard players set @s botHoldingItem 15
+execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] if score @s botFearsEnderman matches 0 run scoreboard players set @s botHoldingItem 15
 
 #never use if we have another ender pearl entity in flight
 execute if score @s botTeleportTimer matches 0.. run return 0

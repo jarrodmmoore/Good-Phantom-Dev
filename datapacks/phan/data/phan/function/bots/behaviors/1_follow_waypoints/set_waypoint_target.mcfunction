@@ -44,6 +44,10 @@ scoreboard players operation #coord_zz value = #wpZ value
 scoreboard players set #foundNode value 1
 
 #=====
+#summon marker at target if we requested that
+execute if score #summonTargetAtWaypoint value matches 1 run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target_summon_extra_target
+
+#=====
 #get IDs of child waypoints if we requested them
 execute if score #getChildIDs value matches 0 run return 0
 scoreboard players set #getChildIDs value 0

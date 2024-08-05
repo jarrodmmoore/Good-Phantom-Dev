@@ -10,6 +10,15 @@
 #scoreboard players operation #coord_xx value = #wpX value
 #scoreboard players operation #coord_zz value = #wpZ value
 
+
+#is the old waypoint's origin within 1m of the new waypoint? set the coordinates to our exact location, then
+#(this lets us do some compond waypoint events without the bots doing a weird double-take)
+scoreboard players operation #oldWpX value -= #coord_xx value
+scoreboard players operation #oldWpY value -= #coord_yy value
+scoreboard players operation #oldWpZ value -= #coord_zz value
+execute if score #oldWpX value matches -10..10 if score #oldWpY value matches -10..10 if score #oldWpZ value matches -10..10 run return run function phan:bots/behaviors/1_follow_waypoints/spread/instant_collect_spread
+#=====
+
 #chance of taking optimal line depending on our skill
 #(very easy has 0 chance)
 scoreboard players set #random value 100

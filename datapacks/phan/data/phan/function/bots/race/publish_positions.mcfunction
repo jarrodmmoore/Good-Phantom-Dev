@@ -5,6 +5,7 @@ execute unless score @s racePosCalc matches 1.. run scoreboard players operation
 scoreboard players operation @s racePosDisplay = @s racePosCalc
 scoreboard players operation @s[tag=finished] racePosDisplay = @s finishPos
 function phan:game/4/get_item_position
+execute if entity @s[tag=botRival] run scoreboard players operation #botRivalPosition value = @s racePosDisplay
 
 #show top 8 in reverse order
 tag @s[scores={racePosDisplay=1..8}] add showTopPlayers

@@ -11,5 +11,8 @@ execute if score #foundBestHuman value matches 2147483647 run return 0
 #are we ahead of the best ranked player? slow down slightly
 execute if score @s racePosDisplay < #foundBestHuman value run scoreboard players set @s botRubberbanding -1
 
-#is there a human near us? don't slow down, actually
-execute if score @s botRubberbanding matches ..-1 positioned ~-9 ~-9 ~-9 if entity @a[tag=playing,gamemode=adventure,dx=18,dy=18,dz=18] run scoreboard players set @s botRubberbanding 0
+#are we ahead of the rival? slow down slightly
+execute if score @s racePosDisplay < #botRivalPosition value run scoreboard players set @s botRubberbanding -1
+
+#is there a human near us? also slow down
+execute if score @s botRubberbanding matches ..-1 positioned ~-9 ~-9 ~-9 if entity @a[tag=playing,gamemode=adventure,dx=18,dy=18,dz=18] run scoreboard players set @s botRubberbanding -1

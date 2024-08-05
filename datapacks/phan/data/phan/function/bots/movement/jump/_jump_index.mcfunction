@@ -1,5 +1,8 @@
 #what kind of jump are we doing?
 
+#reset modifier for hook if not blinded by squid
+execute unless score @s squidBlindTime matches 1.. run scoreboard players set @s[scores={botHookModifierTime=1..}] botHookModifier 0
+
 #clear jump input
 scoreboard players reset @s botJumpTimer
 

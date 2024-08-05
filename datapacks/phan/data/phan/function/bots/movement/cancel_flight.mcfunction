@@ -8,6 +8,8 @@ data merge entity @s {FallFlying:0b}
 
 #not flying anymore
 scoreboard players set @s fallFlying 0
+scoreboard players set @s botExplosionBoostTime 0
+tag @s[tag=botFlightPanic] remove botFlightPanic
 
 #exit out if we have no vehicle
 scoreboard players set #testReset value 0

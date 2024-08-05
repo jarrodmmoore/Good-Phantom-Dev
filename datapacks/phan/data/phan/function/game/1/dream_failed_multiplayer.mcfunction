@@ -8,7 +8,7 @@ execute if score @s pGameTime matches 1000001 run scoreboard players set @s curr
 execute if score @s pGameTime matches 1000001 run scoreboard players set @s hudFlashTime 20
 
 #sound
-execute if score @s pGameTime matches 1000001 run function phan:tell_spectators
+execute if score @s pGameTime matches 1000001 run function phan:player/tell_spectators
 execute if score @s pGameTime matches 1000001 if score @s pPenaltyTime matches 1.. as @a[tag=tellMe] at @s run playsound minecraft:entity.iron_golem.death master @s ~ 100000 ~ 100000 1.35
 execute if score @s pGameTime matches 1000001 unless score @s pPenaltyTime matches 1.. as @a[tag=tellMe] at @s run playsound minecraft:custom_sfx/alarm_bell master @s ~ 100000 ~ 100000
 execute if score @s pGameTime matches 1000001 run gamemode spectator @s

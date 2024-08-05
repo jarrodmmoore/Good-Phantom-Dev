@@ -12,6 +12,7 @@ execute if score #5Hz value matches 0 run function phan:editor/panel/ai_waypoint
 
 #show what event we have
 execute if score #2sec value matches 0 if score @s AIBC_event matches 1.. positioned ~ ~1 ~ run function phan:editor/panel/ai_waypoint/visualize/event_type
+execute if score #2sec value matches 0 if score @s AIBC_event matches ..-1 positioned ~ ~1 ~ run function phan:editor/panel/ai_waypoint/visualize/event_type
 
 #generate trails to show what we're pointing at
 execute if score #2sec value matches 10 run function phan:editor/panel/ai_waypoint/visualize/generate_trails

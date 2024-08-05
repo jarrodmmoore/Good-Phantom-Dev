@@ -13,9 +13,9 @@ execute if entity @s[scores={inputCooldown=1..,botSkill=5..}] run return run exe
 #=====
 
 #run this function again in a random amount of time depending on skill level
-execute if score @s botSkill matches ..1 store result score @s botItemThinkTime run random value 13..30
-execute if score @s botSkill matches 2 store result score @s botItemThinkTime run random value 11..20
-execute if score @s botSkill matches 3 store result score @s botItemThinkTime run random value 9..17
+execute if score @s botSkill matches ..1 store result score @s botItemThinkTime run random value 20..50
+execute if score @s botSkill matches 2 store result score @s botItemThinkTime run random value 13..30
+execute if score @s botSkill matches 3 store result score @s botItemThinkTime run random value 11..20
 execute if score @s botSkill matches 4 store result score @s botItemThinkTime run random value 7..14
 execute if score @s botSkill matches 5 store result score @s botItemThinkTime run random value 5..11
 execute if score @s botSkill matches 6.. store result score @s botItemThinkTime run random value 3..8
@@ -26,9 +26,13 @@ execute if entity @s[scores={inputCooldown=1..,botSkill=..2}] run return 0
 #enderman thief active? determine if it's a danger to us
 scoreboard players set #botFearsEnderman value 0
 execute if score @s botSkill matches 2.. if score #activeEnderman value matches 1.. run function phan:bots/items/check_if_endermen_dangerous
+scoreboard players operation @s botFearsEnderman = #botFearsEnderman value
 
 #anvil about to hit us? higher level bots should react ASAP
 execute if score @s botSkill matches 4.. if entity @e[tag=anvilEntity,type=armor_stand,distance=..8] if function phan:bots/items/check_if_anvil_dangerous run function phan:bots/items/try_reacting_to_anvil
+
+#lost momentum while flying? higher level bots should react ASAP
+execute if score @s[tag=botFlightPanic] botSkill matches 4.. run function phan:bots/items/try_recovering_from_flight_problem
 
 #already holding an item? chance we'll stick to using that same item instead of switching around
 execute if score @s botHoldingItem matches 1.. if function phan:bots/items/consider_using_held_item run return run function phan:bots/items/try_using_held_item_again
@@ -92,8 +96,8 @@ execute if score #test value matches 1 run tag 00000000-0000-0328-0000-000000000
 execute if score @s botSkill matches ..1 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=20..27}] add improvViable
 execute if score @s botSkill matches 2 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=21..27}] add improvViable
 execute if score @s botSkill matches 3 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=22..27}] add improvViable
-execute if score @s botSkill matches 4 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=24..27}] add improvViable
-execute if score @s botSkill matches 5 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=26..27}] add improvViable
+execute if score @s botSkill matches 4 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=23..27}] add improvViable
+execute if score @s botSkill matches 5 in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=24..27}] add improvViable
 execute if score @s botSkill matches 6.. in overworld run tag 00000000-0000-0328-0000-00000000001b add improvViable
 
 #=====

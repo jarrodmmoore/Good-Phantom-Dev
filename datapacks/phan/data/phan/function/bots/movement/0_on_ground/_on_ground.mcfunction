@@ -1,6 +1,8 @@
 #done using super jump if we're grounded
 tag @s[tag=botUsingSuperJump] remove botUsingSuperJump
 
+#after falling: we're ready to jump at next ledge
+execute if score @s botJumpTimer matches -2 run scoreboard players set @s botJumpTimer -1
 
 #exit out if we're not moving
 execute if score #botWantsToMove value matches 0 run return 0

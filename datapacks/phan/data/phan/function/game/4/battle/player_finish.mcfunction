@@ -13,6 +13,8 @@ scoreboard players display numberformat @s enderEyesShow fixed ["",{"text":"\uE0
 
 #visuals
 particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
+scoreboard players set @s squidBlindTime 0
+effect clear @s blindness
 
 #battle will end 95 seconds after any finish
 scoreboard players operation #newTimeLimit value = #vTimeLimit value
@@ -50,7 +52,7 @@ scoreboard players set @s hudFlashTime 0
 function phan:custom_hud/versus_battle/_update
 
 #tell self that we finished
-function phan:tell_spectators
+function phan:player/tell_spectators
 title @a[tag=tellMe] subtitle [""]
 title @a[tag=tellMe] title ["",{"translate":"gp.versus.finished","color":"yellow","bold":true}]
 

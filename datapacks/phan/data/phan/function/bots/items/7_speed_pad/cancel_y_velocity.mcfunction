@@ -10,3 +10,4 @@ function phan:bots/movement/cancel_flight
 #we're grounded now. trust.
 scoreboard players set @s onGround 2
 scoreboard players set @s botMoveState 0
+scoreboard players set @s airTime 0

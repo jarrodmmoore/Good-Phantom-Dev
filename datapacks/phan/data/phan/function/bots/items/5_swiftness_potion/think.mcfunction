@@ -2,7 +2,7 @@
 execute if score @s inputCooldown matches 1.. run return 0
 
 #exit out if we don't want to get our item stolen
-execute if score #botFearsEnderman value matches 1 run return 0
+execute if score @s botFearsEnderman matches 1 run return 0
 
 #=====
 

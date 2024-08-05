@@ -2,9 +2,13 @@
 execute if score @s inputCooldown matches 1.. run return 0
 
 #exit out if we're near 1st and don't want to lose the shield
-execute if entity @s[scores={botSkill=4..,itemLuck=..2}] if score #botFearsEnderman value matches 1 run return 0
+execute if entity @s[scores={botSkill=4..,itemLuck=..2}] if score @s botFearsEnderman matches 1 run return 0
 
 #=====
+
+#normal+: don't use if we're already shielded
+execute if entity @s[scores={botSkill=3..,shieldTime=1..}] run return run tag @s[tag=botUseItemSoon] remove botUseItemSoon
+
 
 #use #test to determine whether to use
 scoreboard players set #test value 0

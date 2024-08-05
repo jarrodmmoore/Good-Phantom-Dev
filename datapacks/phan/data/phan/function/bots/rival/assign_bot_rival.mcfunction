@@ -5,6 +5,9 @@ tag @e[type=block_display,tag=botRival,x=197,y=-11,z=117,dx=1,dy=1,dz=1] remove 
 #restore the original assigned skill level of each bot
 execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:game/2/bots/update_bot_difficulty
 
+#no rival if only 1 bot
+execute if score #botCount value matches ..1 run return 0
+
 #find highest skill bot
 scoreboard players set #botHighestSkill value 0
 execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:bots/rival/find_max_skill

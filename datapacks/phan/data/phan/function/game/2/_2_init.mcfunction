@@ -22,7 +22,7 @@ scoreboard objectives setdisplay sidebar
 scoreboard players set #showActNumber value 0
 
 #clear bossbars and HUD
-execute as @a run function phan:set_title_times
+execute as @a run function phan:player/set_title_times
 scoreboard players set #showHUD value 0
 function phan:custom_hud/clear_bossbars
 

@@ -8,3 +8,4 @@ clear @s *[custom_data~{waypointTool:1b}]
 
 #cancel selection, unless there's another player knocking about in editor mode
 execute unless entity @a[tag=phan_edit] run tag @e[tag=selected] remove selected
+execute unless entity @a[tag=phan_edit] run tag @e[tag=selectedWaypoint] remove selectedWaypoint

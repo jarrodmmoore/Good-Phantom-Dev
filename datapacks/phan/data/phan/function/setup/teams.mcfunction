@@ -25,3 +25,5 @@ team add botDisplayHard
 team modify botDisplayHard prefix ["",{"text":"\uE041 ","color":"white"}]
 team add botDisplayTryhard
 team modify botDisplayTryhard prefix ["",{"text":"\uE042 ","color":"white"}]
+team add botDisplayTryharder
+team modify botDisplayTryharder prefix ["",{"text":"\uE043 ","color":"white"}]

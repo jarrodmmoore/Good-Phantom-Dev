@@ -57,6 +57,9 @@ execute if score @s onGround matches 0 unless block ~ ~ ~ water run function pha
 execute if entity @s[scores={landCooldown=..0,airTime=20..,onGround=1..}] run function phan:movement/get_velocity
 scoreboard players remove @s[scores={landCooldown=1..}] landCooldown 1
 
+#jump?
+execute if score @s jump matches -2147483648..2147483647 at @s run function phan:movement/player_jumped
+
 #figure out what direction we're moving in
 scoreboard players set @s moveDirection 0
 execute if score @s trans_z matches ..-1501 if score @s trans_x matches -1500..1500 run scoreboard players set @s moveDirection 1

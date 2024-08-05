@@ -8,7 +8,8 @@ $execute unless score @s botSkill matches 2..6 run data modify storage phan:bot_
 $execute if score @s botSkill matches 2 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayEasy"
 $execute if score @s botSkill matches 3 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayNormal"
 $execute if score @s botSkill matches 4 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayHard"
-$execute if score @s botSkill matches 5..6 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayTryhard"
+$execute if score @s botSkill matches 5 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayTryhard"
+$execute if score @s botSkill matches 6 run data modify storage phan:bot_data_$(id) botteam set value "botDisplayTryharder"
 
 #make sure we don't have the same username as a human player! that can cause problems on sidebar when we show points
 function phan:game/2/bots/bot_check_duplicate_name
