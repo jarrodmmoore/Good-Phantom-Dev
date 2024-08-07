@@ -1,10 +1,8 @@
-#data merge entity @s {FallFlying:0b}
-
-#put elytra back on
-#item replace entity @s armor.chest with elytra[unbreakable={}]
-
 #close wings
 data merge entity @s {FallFlying:0b}
+
+#clear elytra and get it back in a second
+item replace entity @s armor.chest with air
 
 #not flying anymore
 scoreboard players set @s fallFlying 0

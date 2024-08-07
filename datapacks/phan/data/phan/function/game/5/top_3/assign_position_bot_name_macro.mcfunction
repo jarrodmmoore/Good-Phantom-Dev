@@ -1,0 +1,1 @@
+$function phan:game/5/top_3/assign_position_bot_name_macro_go with storage phan:bot_data_$(id)

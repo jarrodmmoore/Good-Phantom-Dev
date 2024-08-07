@@ -2,6 +2,10 @@
 function phan:bots/stage_data_for_transfer
 tag @s[tag=hasDataToSend] remove hasDataToSend
 
+#don't delay, respawn right now!
+scoreboard players operation #getID value = @s botID
+execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botID = #getID value run scoreboard players set @s botTimeInRange 5
+
 #perish
 scoreboard players set @s lifespan 1
 tag @s remove ai

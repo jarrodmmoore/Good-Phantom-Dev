@@ -1,6 +1,12 @@
+#exit out if we're climbing a staircase
+execute if block ^0.3 ^ ^0.6 #minecraft:stairs[half=bottom] if block ^0.3 ^1 ^0.6 #phan:not_solid run return 0
+execute if block ^-0.3 ^ ^0.6 #minecraft:stairs[half=bottom] if block ^-0.3 ^1 ^0.6 #phan:not_solid run return 0
+
+#=====
+
 #figure out which sides are open
-execute store result score #test value run execute if block ^1 ^ ^0.8 #phan:not_solid
-execute store result score #test2 value run execute if block ^-1 ^ ^0.8 #phan:not_solid
+execute store result score #test value run execute if block ^1 ^ ^0.6 #phan:not_solid
+execute store result score #test2 value run execute if block ^-1 ^ ^0.6 #phan:not_solid
 
 #go a random way
 scoreboard players set #random value 0

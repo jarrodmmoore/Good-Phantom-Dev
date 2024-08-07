@@ -5,6 +5,9 @@
 #bot isn't moving unless it declared it wants to move
 scoreboard players set #botWantsToMove value 0
 
+#make sure we have elyta
+execute unless items entity @s armor.chest elytra run item replace entity @s armor.chest with elytra[unbreakable={}]
+
 #coordinates
 function phan:bots/movement/get_coordinates
 

@@ -6,8 +6,8 @@ execute if score @s botSkill matches 4.. run scoreboard players add #random valu
 execute if score @s botSkill matches 5.. run scoreboard players add #random value 1
 execute if score @s botSkill matches 6.. run scoreboard players add #random value 1
 
-#botRival gets +1 on skill roll
-execute if entity @s[tag=botRival] run scoreboard players add #random value 1
+#botRival gets +2 on skill roll
+execute if entity @s[tag=botRival] run scoreboard players add #random value 2
 
 #if we're ahead of the bot rival, -3 on skill roll
 execute if score #vGameType value matches 1 if score @s racePosDisplay < #botRivalPosition value run scoreboard players remove #random value 3

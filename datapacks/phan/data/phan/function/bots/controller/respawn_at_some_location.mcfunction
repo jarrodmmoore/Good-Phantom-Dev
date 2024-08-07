@@ -1,5 +1,13 @@
 scoreboard players set #success value 0
 
+#=====
+#wait a few ticks before respawning so we can have an opportunity to advance forward a checkpoint
+scoreboard players add @s botTimeInRange 1
+execute if score @s botTimeInRange matches ..4 run return 0
+#this is useful if the bot's spawnpoint is loaded but it's destination is unloaded
+#...which could prevent a bot from progressing and completely ruin the challenge of racing bots
+#=====
+
 #don't have a saved spawn point? respawn at a random versus start point
 execute if entity @s[tag=!botHasSpawnpoint] run return run execute at @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},limit=1,sort=random] if loaded ~ ~ ~ run function phan:bots/spawn/respawn_entity with storage phan:bot_data
 

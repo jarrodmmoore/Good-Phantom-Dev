@@ -16,12 +16,12 @@ execute if score #inWater value matches 1 if score @s editArg1 matches 1 run sum
 function phan:game/1/spawning/spawn__give_generic_data
 
 #glow in assist mode
-execute if score #assist_navigation value matches 1.. run data merge entity @e[limit=1,tag=setMe] {Glowing:1b}
+execute if score #assist_navigation value matches 1.. run data merge entity @e[limit=1,tag=setMe,type=item,distance=..2] {Glowing:1b}
 
 #we're unshootable for a few ticks if we were dropped as loot
-execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe] hitstun 10
+execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe,type=item,distance=..2] hitstun 10
 
 #gravity? ok
-execute if score #getGravity value matches 1 as @e[tag=setMe] run data merge entity @s {NoGravity:0b}
+execute if score #getGravity value matches 1 as @e[tag=setMe,type=item,distance=..2] run data merge entity @s {NoGravity:0b}
 
-tag @e[tag=setMe] remove setMe
+tag @e[tag=setMe,type=item,distance=..2] remove setMe

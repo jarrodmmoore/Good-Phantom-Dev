@@ -40,6 +40,8 @@ execute if score @s editNode matches 19 run scoreboard players set @s editArg3 0
 execute if score @s editNode matches 23 run function phan:game/4/spawning/setup_eye_spawner
 #hidden music disc
 execute if score @s editNode matches 24 run function phan:game/1/spawning/spawn_music_disc
+#podium
+execute if score @s editNode matches 25 run function phan:game/1/spawning/podium_setup
 
 #failed to spawn? abort and try again soon
 execute if entity @s[tag=spawn_failed] run return 0

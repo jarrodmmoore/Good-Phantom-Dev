@@ -4,6 +4,12 @@ execute at @s run particle heart ~ ~.5 ~ 0 0 0 1 1
 #tag @s remove AIBC_midAir
 #execute at @s if block ~ ~-1 ~ #phan:not_solid_not_water if block ~ ~-2 ~ #phan:not_solid_not_water run tag @s add AIBC_midAir
 
+#fixed messed up spread
+execute if score @s AIBC_spread_x matches 100.. run scoreboard players set @s AIBC_spread_x 0
+execute if score @s AIBC_spread_x matches ..-100 run scoreboard players set @s AIBC_spread_x 0
+execute if score @s AIBC_spread_z matches 100.. run scoreboard players set @s AIBC_spread_z 0
+execute if score @s AIBC_spread_z matches ..-100 run scoreboard players set @s AIBC_spread_z 0
+
 #to save memory, reset any values that are 0
 execute if score @s AIBC_dir1 matches 0 run scoreboard players reset @s AIBC_dir1
 execute if score @s AIBC_dir2 matches 0 run scoreboard players reset @s AIBC_dir2

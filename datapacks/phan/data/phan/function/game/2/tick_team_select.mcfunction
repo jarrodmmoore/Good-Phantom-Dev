@@ -18,10 +18,10 @@ execute store result score #countPlayers value run execute if entity @a[tag=done
 #2+ players can always start a game
 execute if score #countPlayers value matches 2.. if entity @a[tag=doneWithIntro,scores={teamRequest=2}] run scoreboard players remove #timeUntilStart value 2
 #1 player, 4 or less dreams completed, solo players can't play without at least 1 bot
-execute if score #countPlayers value matches 1 if score #botCount value matches 1.. if score #dreamsCompleted value matches ..4 run scoreboard players remove #timeUntilStart value 2
+execute if score #countPlayers value matches 1 if score #freePlay value matches 0 if score #botCount value matches 1.. if score #dreamsCompleted value matches ..4 run scoreboard players remove #timeUntilStart value 2
+execute if score #countPlayers value matches 1 if score #freePlay value matches 1.. if score #dreamsCompleted value matches ..4 run scoreboard players remove #timeUntilStart value 2
 #1 player, 5+ dreams completed, allow solo player to practice alone
-execute if score #countPlayers value matches 1 if score #dreamsCompleted value matches 5.. if score #botCount value matches ..0 run scoreboard players remove #timeUntilStart value 3
-execute if score #countPlayers value matches 1 if score #dreamsCompleted value matches 5.. if score #botCount value matches 1.. run scoreboard players remove #timeUntilStart value 2
+execute if score #countPlayers value matches 1 if score #dreamsCompleted value matches 5.. run scoreboard players remove #timeUntilStart value 2
 #time goes back up if not enough players
 execute if score #timeUntilStart value matches ..199 run scoreboard players add #timeUntilStart value 1
 execute if score #countPlayers value matches 0 if score #timeUntilStart value matches 0..19 run scoreboard players set #timeUntilStart value 20

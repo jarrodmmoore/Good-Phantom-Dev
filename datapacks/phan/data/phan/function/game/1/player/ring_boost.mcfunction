@@ -20,5 +20,5 @@ execute if entity @s[tag=ai] if score #test value matches 0 run function phan:bo
 #feedback
 particle falling_dust{block_state:"diamond_block"} ~ ~1 ~ 0.4 0.4 0.4 1 20
 playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 1 0.7
-playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 5 1
-playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 5 1.2
+playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 2 1
+playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 2 1.2

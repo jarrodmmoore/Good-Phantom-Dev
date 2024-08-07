@@ -41,7 +41,7 @@ scoreboard players remove @s[scores={botJumpTimer=1..}] botJumpTimer 1
 execute if entity @s[tag=botImprovFlight,scores={botMoveState=1..2,onGround=1..}] run tag @s remove botImprovFlight
 
 #need to exit flight if we're not riding a vehicle
-execute if score @s botHullFallFlying matches 1.. unless function phan:bots/movement/check_for_vehicle run data merge entity @s {FallFlying:0b}
+#execute if score @s botHullFallFlying matches 1.. unless function phan:bots/movement/check_for_vehicle run function phan:bots/movement/cancel_flight
 
 #botMoveState
 #0 = on ground

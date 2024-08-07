@@ -15,8 +15,6 @@ execute if score @s editNode matches 11 run summon area_effect_cloud ~ ~ ~ {Dura
 execute if score @s editNode matches 12 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.present","color":"light_purple"}]'}
 execute if score @s editNode matches 13 run function phan:editor/node_visualize_name_baddie
 execute if score @s editNode matches 14 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.small_target","color":"red"}]'}
-execute if score @s editNode matches 15 if score @s editArg3 matches ..0 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box","color":"light_purple"}]'}
-execute if score @s editNode matches 15 if score @s editArg3 matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.item_box","color":"white"}]'}
 execute if score @s editNode matches 15 run function phan:editor/node_visualize_name_chest
 #...
 execute if score @s editNode matches 17 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.big_target","color":"red"}]'}
@@ -32,6 +30,8 @@ execute if score @s editNode matches 21 run function phan:editor/node_visualize_
 execute if score @s editNode matches 22 run function phan:editor/node_visualize_name_loading_zone
 execute if score @s editNode matches 23 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.ever_eye_spawn","color":"yellow"}]'}
 execute if score @s editNode matches 24 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.hidden_music_disc","color":"gold"}]'}
+execute if score @s editNode matches 25 run function phan:editor/node_visualize_name_podium_spawner
+execute if score @s editNode matches 26 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.podium_camera","color":"white"}]'}
 
 #show area
 execute if score @s editArea matches 1 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a1","color":"white"}]'}

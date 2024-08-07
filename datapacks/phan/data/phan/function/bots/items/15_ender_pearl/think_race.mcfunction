@@ -10,13 +10,16 @@ execute if entity @s[scores={botSkill=2,itemLuck=..3}] run return 0
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=..3}] run return 0
 
 #hard+: don't burn ender pearls on checkpoint throws until the final lap
-execute if score @s botSkill matches 4.. unless entity @s[tag=botOnFinalLap] unless entity @s[tag=vsHomeStretch] run return 0
+execute if score @s botSkill matches 4.. unless entity @s[tag=botOnFinalLap] unless entity @s[tag=vsHomeStretch] unless entity @s[tag=botFlightPanic] run return 0
 
 #if we're not the rival bot: don't ender pearl at the end portal if rival bot hasn't finished yet
 execute if entity @s[tag=vsHomeStretch,tag=!botRival] if score #botRivalFinished value matches 0 run return 0
 
 #hard+: if in home strech: keep holding ender pearl regardless if we can use it. keep checking los!
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] if score @s botFearsEnderman matches 0 run scoreboard players set @s botHoldingItem 15
+
+#if in flight panic mode, constantly check if we can ender pearl somewhere
+execute if entity @s[tag=botFlightPanic,scores={botFearsEnderman=0}] run scoreboard players set @s botHoldingItem 15
 
 #never use if we have another ender pearl entity in flight
 execute if score @s botTeleportTimer matches 0.. run return 0
@@ -39,6 +42,9 @@ execute if entity @s[tag=vsHomeStretch] positioned ~ ~1.8 ~ rotated ~ 0 run func
 execute if score #targetExists value matches 0 run return 0
 
 #=====
+
+#clear flight panic tag if we found target
+tag @s[tag=botFlightPanic] remove botFlightPanic
 
 #use item while rotated facing target
 execute if entity @s[tag=!vsHomeStretch] if entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..25] facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-5 run function phan:bots/items/15_ender_pearl/use

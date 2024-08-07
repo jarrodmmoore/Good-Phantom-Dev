@@ -6,12 +6,14 @@ scoreboard players set #inLobby value 0
 #2 = LOBBY - selecting mode before entering a level
 #3 = GAMEPLAY - time attack
 #4 = GAMEPLAY - portal race (formerly known as "versus". is internally reffered to as such)
+#5 = CUTSCENE - podium sequence after a portal race or grand prix
 
 execute if score #gameState value matches 0 run function phan:game/0/_0_main
 execute if score #gameState value matches 1 run function phan:game/1/_1_main
 execute if score #gameState value matches 2 run function phan:game/2/_2_main
 execute if score #gameState value matches 3 run function phan:game/3/_3_main
 execute if score #gameState value matches 4 run function phan:game/4/_4_main
+execute if score #gameState value matches 5 run function phan:game/5/_5_main
 
 #this function was run successfully :)
 scoreboard players set #errorCheck value 0

@@ -3,7 +3,7 @@ scoreboard players remove @s botWanderTime 1
 
 
 #not airborne? we need to face the correct yaw
-execute unless score @s onGround matches 0 if score @s botWanderYaw matches -2147483648..2147483647 run function phan:bots/behaviors/2_roam/face_proper_direction
+execute unless score @s botMoveState matches 1 if score @s botWanderYaw matches -2147483648..2147483647 run function phan:bots/behaviors/2_roam/face_proper_direction
 
 #turn randomly as we move (very similar to squid blindness)
 execute store result score #random value run random value 1..2
