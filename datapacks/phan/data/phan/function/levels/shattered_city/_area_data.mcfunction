@@ -29,9 +29,8 @@ scoreboard players set #targetTimeAct2 value 110
 #act 3
 scoreboard players set @s[tag=playing,scores={pCurrentArea=3}] pPearlsNeeded 24
 scoreboard players set @s[tag=playing,scores={pCurrentArea=3}] pTimeRemaining 3019
-scoreboard players set #scoreRankS3 value 80000
-scoreboard players set #scoreRankA3 value 65000
+scoreboard players set #scoreRankS3 value 90000
+scoreboard players set #scoreRankA3 value 70000
 scoreboard players set #scoreRankB3 value 45000
 scoreboard players set #scoreRankC3 value 35000
 scoreboard players set #targetTimeAct3 value 150
-scoreboard players set @s[tag=playing,scores={pCurrentArea=3}] arenaProgress 0

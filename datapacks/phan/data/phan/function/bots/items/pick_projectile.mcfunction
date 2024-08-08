@@ -16,6 +16,19 @@ execute if score @s botHasItem2 matches 1.. run tag 00000000-0000-0328-0000-0000
 #tnt -- 3
 execute if score @s botHasItem3 matches 1.. run tag 00000000-0000-0328-0000-000000000003 add improvViable
 
+#blank slots added to make lower level bots less trigger happy
+execute if score @s botSkill matches ..1 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=4..10}] add improvViable
+execute if score @s botSkill matches 2 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=4..9}] add improvViable
+execute if score @s botSkill matches 3 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=4..7}] add improvViable
+execute if score @s botSkill matches 4 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=4..5}] add improvViable
+execute if score @s botSkill matches 5 run tag 00000000-0000-0328-0000-000000000004 add improvViable
+
+#low level bots are even less likely to fire anything off in the first 20-30 seconds of the game
+execute if score @s botSkill matches ..1 if score #gameTime value matches ..820 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=11..26}] add improvViable
+execute if score @s botSkill matches 2 if score #gameTime value matches ..720 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=11..22}] add improvViable
+execute if score @s botSkill matches 3 if score #gameTime value matches ..620 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=11..18}] add improvViable
+execute if score @s botSkill matches 4 if score #gameTime value matches ..620 run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=11..16}] add improvViable
+
 #=====
 #pick one at random
 scoreboard players set #improvPick value 99

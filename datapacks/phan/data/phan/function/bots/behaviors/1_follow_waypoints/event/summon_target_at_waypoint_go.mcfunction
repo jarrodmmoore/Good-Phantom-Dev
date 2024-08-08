@@ -3,7 +3,7 @@ execute if score #test value matches 1.. run return 0
 #=====
 
 #summon target
-summon marker ~ ~ ~ {UUID:[I;777,0,0,10]}
+execute if loaded ~ ~ ~ run summon marker ~ ~ ~ {UUID:[I;777,0,0,10]}
 #00000309-0000-0000-0000-00000000000a
 
 #we did it

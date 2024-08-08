@@ -2,6 +2,7 @@
 tag @s[type=block_display] remove botDisabled
 tag @s remove finished
 tag @s remove botHasSpawnpoint
+tag @s add naturalBotRespawn
 
 #generic stuff
 scoreboard players set @s energy 0

@@ -8,6 +8,7 @@ execute as @e[type=zombie,tag=formerlyAI] run function phan:bots/controller/rese
 scoreboard players set #botRivalFinished value -1
 scoreboard players set #botRivalPosition value -1
 scoreboard players set #botRivalID value -1
+scoreboard players set #botRivalDifficultyFloor value 0
 function phan:bots/rival/assign_bot_rival
 
 #determine if we should accommodate bots

@@ -20,4 +20,5 @@ scoreboard players operation @s botTempTargetZ10 %= #10 value
 scoreboard players operation @s botTargetID = #botTargetID value
 
 #small grace period where we're allowed to not make progress
-scoreboard players set @s botTimeSinceProgress -15
+#scoreboard players set @s botTimeSinceProgress -15
+#lol no jk this causes horrible bugs

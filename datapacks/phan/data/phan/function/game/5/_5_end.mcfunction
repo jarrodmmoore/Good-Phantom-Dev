@@ -14,5 +14,5 @@ scoreboard objectives setdisplay sidebar
 #it's the lobby innit ?
 scoreboard players set #test value 0
 execute as @a[tag=doneWithIntro] run scoreboard players add #test value 1
-execute if score #test value matches ..4 run scoreboard players set #lastLevelPlayed value 0
+execute if score #test value matches 5.. run scoreboard players set #lastLevelPlayed value 0
 function phan:game/0/_0_init

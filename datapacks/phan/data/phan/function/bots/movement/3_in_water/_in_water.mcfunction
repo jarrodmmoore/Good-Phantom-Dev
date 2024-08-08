@@ -14,7 +14,7 @@ execute unless score @s botTargetID matches 0 run function phan:bots/movement/ov
 
 #project the target
 scoreboard players set #botAtBottomOfWater value 0
-execute if block ~ ~-0.3 ~ #phan:not_solid run scoreboard players set #botAtBottomOfWater value 1
+execute unless block ~ ~-0.3 ~ #phan:not_solid run scoreboard players set #botAtBottomOfWater value 1
 execute if score #botAtBottomOfWater value matches 0 run function phan:bots/movement/3_in_water/project_target with storage phan:coords
 execute if score #botAtBottomOfWater value matches 1 run function phan:bots/movement/0_on_ground/project_target with storage phan:coords
 

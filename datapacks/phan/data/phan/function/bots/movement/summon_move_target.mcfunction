@@ -1,4 +1,4 @@
-summon marker ^ ^ ^0.001 {UUID:[I;123987,0,0,1]}
+execute if loaded ^ ^ ^0.001 run summon marker ^ ^ ^0.001 {UUID:[I;123987,0,0,1]}
 #also known as
 #0001e453-0000-0000-0000-000000000001
 

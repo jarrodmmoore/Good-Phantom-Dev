@@ -1,5 +1,9 @@
 #executed by a waypoint we're trying to target
 
+#not loaded? kick out of function
+execute at @s unless loaded ~ ~ ~ run return 0
+#=====
+
 #get id
 scoreboard players operation #wpTarget value = @s AIBC_id
 #get coordinates and spread (both x10 for extra accuracy)
@@ -33,8 +37,9 @@ scoreboard players operation #wpMinZ value -= #wpSpreadZ value
 #calculate the highest possible y coordinate a player is allowed hit this at
 scoreboard players set #recursions value 25
 scoreboard players operation #wpCeiling value = #wpY value
-execute if entity @s[tag=!AIBC_requireGround] at @s positioned ~ ~2 ~ if block ~ ~ ~ #phan:not_solid run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target_check_ceiling
+execute if entity @s[tag=!AIBC_requireGround,tag=!AIBC_lowHeight] at @s positioned ~ ~2 ~ if block ~ ~ ~ #phan:not_solid run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target_check_ceiling
 execute if entity @s[tag=AIBC_requireGround] run scoreboard players add #wpCeiling value 15
+execute if entity @s[tag=AIBC_lowHeight,tag=!AIBC_requireGround] run scoreboard players add #wpCeiling value 30
 
 #save coords here for future function calls
 scoreboard players operation #coord_xx value = #wpX value

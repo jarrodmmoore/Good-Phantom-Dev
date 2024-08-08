@@ -20,4 +20,4 @@ execute as @e[type=marker,tag=setMe] at @s run function phan:editor/spawn/waypoi
 
 #now we perish
 scoreboard players set @s lifespan 1
-tag @s remove nodeSpawn
+tag @s remove waypointSpawn

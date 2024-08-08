@@ -1,3 +1,6 @@
+#not loaded? exit out now
+execute unless loaded ~ ~ ~ run return 0
+
 #we require ground and the player is airborne? kick out of the function
 execute if entity @s[tag=AIBC_requireGround] if score #OnGround value matches 0 unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run return 0
 

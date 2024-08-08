@@ -35,6 +35,10 @@ execute if score @s botLastDirection matches 4 run scoreboard players operation 
 execute if score #botChoseAltRoute value matches 1.. run scoreboard players operation @s botTargetWaypoint = #waypointModifier value
 scoreboard players set #botCheckTrapsAltRoute value 0
 
+#waypoint had NO directions on it? enter roam mode right away
+execute if score @s botTargetWaypoint matches 0 run tellraw @a[tag=phan_edit] ["",{"text":"[EDIT WARNING] Bot reached a waypoint with no valid outgoing directions.","color":"red"}]
+execute if score @s botTargetWaypoint matches 0 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
+
 #target the next waypoint
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botTargetWaypoint
 function phan:bots/behaviors/1_follow_waypoints/find_targeted_waypoint with storage phan:bot_args

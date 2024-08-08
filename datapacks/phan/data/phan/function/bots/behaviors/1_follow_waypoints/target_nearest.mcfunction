@@ -16,6 +16,10 @@ execute if score #setGoal value matches 1 as @e[limit=1,sort=nearest,type=marker
 #otherwise, target a grounded waypoint
 execute if score #setGoal value matches 0 as @e[limit=1,sort=nearest,type=marker,distance=..60,tag=AIBC,tag=!AIBC_midAir,tag=!AIBC_deadEnd] run function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
 
+#no target was found? exit out and do some stuck logic
+execute if score #foundNode value matches 0 run return run function phan:bots/behaviors/1_follow_waypoints/bot_consider_respawning
+#=====
+
 #if not using nearest spread, check if we can target the next breadcrumb from the nearest waypoint we found
 #(this helps reduce bots going in the wrong direction for a moment and then doing a 180)
 execute if entity @s[tag=!botUseNearestSpread] unless score #wpDir1 value matches -1 run function phan:bots/behaviors/1_follow_waypoints/check_los_to_children_of_nearest_waypoint
@@ -33,7 +37,3 @@ function phan:bots/behaviors/1_follow_waypoints/spread/set_target_coordinates
 tag @s remove botUseNearestSpread
 tag @s[tag=botTargetNearestWP] remove botTargetNearestWP
 tag @s[tag=botTargetMidAir] remove botTargetMidAir
-
-#=====
-#nothing found? enter roam mode
-execute if score #foundNode value matches 0 run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary

@@ -17,7 +17,13 @@ tag @s remove AIBC_requireGround
 tag @s remove AIBC_hookLeft
 tag @s remove AIBC_hookRight
 tag @s remove AIBC_midAir
+tag @s remove AIBC_lowHeight
+tag @s remove eventHighSkill
+tag @s remove eventBadSkill
 execute if score #waypointGround value matches 1 run tag @s add AIBC_requireGround
 execute if score #waypointHookLeft value matches 1 run tag @s add AIBC_hookLeft
 execute if score #waypointHookRight value matches 1 run tag @s add AIBC_hookRight
 execute if score #waypointMidAir value matches 1 run tag @s add AIBC_midAir
+execute if score #waypointLowHeight value matches 1 run tag @s add AIBC_lowHeight
+execute if score #waypointHighSkill value matches 1 run tag @s add eventHighSkill
+execute if score #waypointBadSkill value matches 1 run tag @s add eventBadSkill

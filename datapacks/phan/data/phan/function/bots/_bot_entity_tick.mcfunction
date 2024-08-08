@@ -103,11 +103,13 @@ scoreboard players remove @s[scores={botMistakeCooldown=1..}] botMistakeCooldown
 
 #stay alive as long as we're running this function
 scoreboard players set @s lifespan 10
+scoreboard players add @s botTimeBeenAlive 1
 
 #handle teleport from ender pearl (or other sources maybe?)
 execute if score @s botTeleportTimer matches 0.. run function phan:bots/bot_handle_scheduled_teleport
 
 #respawn?
+execute if entity @s[tag=botRespawnAdvance] at @s run function phan:bots/race/respawn_consider_advancing
 execute if entity @s[tag=botRespawn] at @s run function phan:bots/race/respawn
 
 #=====

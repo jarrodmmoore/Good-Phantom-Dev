@@ -10,8 +10,11 @@ execute if entity @s[tag=!botUseNearestSpread,tag=!botIgnoreSpread] run function
 tag @s[tag=botIgnoreSpread] remove botIgnoreSpread
 function phan:bots/behaviors/1_follow_waypoints/spread/set_target_coordinates
 
-#nothing found? enter roam mode
-execute if score #foundNode value matches 0 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
+#target waypoint isn't loaded?
+#race: respawn, possibly get advanced forward a checkpoint if it's been a while
+execute if score #foundNode value matches 0 if score #vGameType value matches 1 run return run function phan:bots/race/respawn_consider_advancing
+#battle: panic and go into "wander" mode for a few seconds
+execute if score #foundNode value matches 0 if score #vGameType value matches 2 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
 #=====
 
 #get boost (because vanilla explosion unreliable...)

@@ -6,6 +6,10 @@ tag @s add botRival
 #remember: bot rival exists but has not finished yet
 scoreboard players set #botRivalFinished value 0
 
+#keep track of this bot's difficulty globally
+scoreboard players operation #botRivalDifficultyFloor value = @s botSkill
+scoreboard players remove #botRivalDifficultyFloor value 1
+
 #=====
 #0 = do nothing
 #1 = match max level
@@ -57,6 +61,10 @@ execute if score #test value matches 1 run scoreboard players add @s[scores={bot
 #====
 
 #if we made it here, we need to update our difficulty tags!
+
+#keep track of this bot's difficulty globally
+scoreboard players operation #botRivalDifficultyFloor value = @s botSkill
+scoreboard players remove #botRivalDifficultyFloor value 1
 
 #set display stuff
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botID
