@@ -1,4 +1,4 @@
-scoreboard players set #success value 0
+scoreboard players set #botSpawnSuccess value 0
 
 #was this NOT a natural respawn? consider advancing the bot forward 1 checkpoint in race mode if it's been long enough
 execute if entity @s[tag=!naturalBotRespawn] if score #vGameType value matches 1 run function phan:bots/controller/no_bot_found_consider_advancing_cp
@@ -12,7 +12,7 @@ execute if entity @s[tag=botNeedMarkerToRespawn] run return run function phan:bo
 
 #otherwise, respawn at our saved coordinates
 execute store result storage phan:coords coord_x int 1 run scoreboard players get @s vsRespawnX
-execute if score @s vsRespawnY matches ..-60 run scoreboard players set @s vsRespawnY -55
+execute if score @s vsRespawnY matches ..-64 run scoreboard players set @s vsRespawnY -60
 execute store result storage phan:coords coord_y int 1 run scoreboard players get @s vsRespawnY
 execute store result storage phan:coords coord_z int 1 run scoreboard players get @s vsRespawnZ
 execute store result storage phan:coords coord_yaw int 1 run scoreboard players get @s vsRespawnYaw

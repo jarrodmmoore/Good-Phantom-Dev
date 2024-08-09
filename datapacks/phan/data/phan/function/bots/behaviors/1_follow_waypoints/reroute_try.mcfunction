@@ -13,4 +13,4 @@ execute if score #foundNode value matches 1.. run function phan:bots/behaviors/1
 tag @e[type=marker,tag=validReroute,distance=..20] remove validReroute
 
 #count down the number of times we're allowed to do this
-scoreboard players remove @s botAllowedReroutes 1
+execute if score #foundNode value matches 1 run scoreboard players remove @s botAllowedReroutes 1

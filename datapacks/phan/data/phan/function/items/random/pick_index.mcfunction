@@ -41,7 +41,7 @@ execute if score @s itemLuck matches ..-1 run function phan:items/random/pick_so
 #if we have the lastPlace tag, we might get some bonus trap items to mess with 1st place
 execute if entity @s[tag=lastPlace] run function phan:items/random/pick_bonus_mine
 
-#one-off: any player who is not in 1st will get a bonus anvil of justice if the game deemed one neccessary
+#one-off: any player who is not in 1st will get a bonus anvil of justice if the game deemed one necessary
 execute if entity @s[tag=!pickedBonusMine] if score #cooldownAnvil value matches ..0 if score #gameState value matches 4 if score #vGameType value matches 1 if score @s racePosDisplay matches 2.. if score #mandateAnvil value matches 1 run function phan:items/give/anvil_of_justice {count:1}
 tag @s[tag=pickedBonusMine] remove pickedBonusMine
 

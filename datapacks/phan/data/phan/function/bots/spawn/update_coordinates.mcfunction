@@ -6,5 +6,5 @@ scoreboard players operation @s vsRespawnPitch = #location_pitch value
 scoreboard players operation @s vsRespawnLaunch = #vsRespawnLaunch value
 scoreboard players operation @s vsRespawnDimension = #location_dimension value
 
-#clean up tag
+#clean up tag on botController
 tag @s remove botNeedMarkerToRespawn

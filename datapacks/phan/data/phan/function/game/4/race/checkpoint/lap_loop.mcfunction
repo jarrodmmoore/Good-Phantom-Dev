@@ -6,7 +6,7 @@
 #BUT-- checking the trigger areas on the checkpoints only needs to be done once, not for EVERY LAP, thus we have two sets of functions (second set doesn't bother with checking trigger areas)
 
 #only deal with relevant checkpoints
-#(gross use of @e here, but this is a neccesary evil since the checkpoints need to be processed in reverse order)
+#(gross use of @e here, but this is a necessary evil since the checkpoints need to be processed in reverse order)
 
 execute if score #check25exists value matches 1 as @e[type=marker,tag=checkpoint,scores={versusSpawn=1,editArg1=25}] at @s run function phan:game/4/race/checkpoint/operate/25
 execute if score #checkDoMissingPlayers24 value matches 1 run function phan:game/4/race/checkpoint/operate_bot_missing/checkpoint_macro {checkFake:24}

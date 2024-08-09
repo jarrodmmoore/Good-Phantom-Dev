@@ -518,7 +518,6 @@ scoreboard objectives add botFearsEnderman dummy
 scoreboard objectives add botExplosionBoostTime dummy
 scoreboard objectives add botVaultUpwardTime dummy
 scoreboard objectives add botHullFallFlying dummy
-scoreboard objectives add botTimeBeenAlive dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy
@@ -539,7 +538,7 @@ scoreboard objectives add botHasItem16 dummy
 scoreboard objectives add botHasItem17 dummy
 scoreboard objectives add botHasItem18 dummy
 scoreboard objectives add botHasItem19 dummy
-#intialize some random stuff?
+#initialize some random stuff?
 scoreboard players add #beQuiet value 0
 #constants
 scoreboard players set #-1 value -1

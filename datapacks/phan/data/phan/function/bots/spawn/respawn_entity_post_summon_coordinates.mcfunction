@@ -1,7 +1,6 @@
 #executed by the bot we just summoned
 
-#we have a spawn point! wow
-tag @s add botHasSpawnpoint
+#bot has data to send
 tag @s add hasDataToSend
 
 #save checkpoint node location as our new respawn point

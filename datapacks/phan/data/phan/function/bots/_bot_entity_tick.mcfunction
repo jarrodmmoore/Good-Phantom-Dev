@@ -5,7 +5,7 @@
 #bot isn't moving unless it declared it wants to move
 scoreboard players set #botWantsToMove value 0
 
-#make sure we have elyta
+#make sure we have elytra
 execute unless items entity @s armor.chest elytra run item replace entity @s armor.chest with elytra[unbreakable={}]
 
 #coordinates
@@ -103,7 +103,6 @@ scoreboard players remove @s[scores={botMistakeCooldown=1..}] botMistakeCooldown
 
 #stay alive as long as we're running this function
 scoreboard players set @s lifespan 10
-scoreboard players add @s botTimeBeenAlive 1
 
 #handle teleport from ender pearl (or other sources maybe?)
 execute if score @s botTeleportTimer matches 0.. run function phan:bots/bot_handle_scheduled_teleport
@@ -121,3 +120,6 @@ execute if entity @s[tag=hasDataToSend] run function phan:bots/stage_data_for_tr
 #let our botController know that we exist and ran this function
 scoreboard players set #botSuccess value 1
 #=====
+
+#inlined lifespan handling to prevent insane entity pile-ups
+execute if score @s lifespan matches ..0 at @s run function phan:lifespan_expire

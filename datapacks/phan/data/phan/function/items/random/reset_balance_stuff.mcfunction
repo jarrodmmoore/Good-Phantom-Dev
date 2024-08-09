@@ -3,7 +3,7 @@ scoreboard players set #givenRockets value 0
 scoreboard players set #givenMines value 0
 scoreboard players set #givenPads value 0
 
-#reset info on previous items we recieved (on each individual player)
+#reset info on previous items we received (on each individual player)
 scoreboard players set @a lastItemPicked 0
 scoreboard players set @a picksSinceSpeed 100
 scoreboard players set @a picksSinceBigSpeed 0

@@ -13,4 +13,5 @@ execute if score #random value matches 2.. run return 0
 execute at @s if entity @e[type=marker,tag=AIBC,distance=..60] run return run scoreboard players set @s botBehavior 1
 
 #no waypoint nearby? roam around randomly
+execute if score #vGameType value matches 1.. if entity @s[tag=botHasSpawnpoint] run return run function phan:bots/race/respawn_consider_advancing
 function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary

@@ -73,5 +73,5 @@ scoreboard players set @s time2portalMin 0
 #time attack: get the timer started if it hasn't started already
 tag @s add trackPlayerTime
 
-#this is not neccesary
+#this is not necessary
 scoreboard players set @s pGameTime 500

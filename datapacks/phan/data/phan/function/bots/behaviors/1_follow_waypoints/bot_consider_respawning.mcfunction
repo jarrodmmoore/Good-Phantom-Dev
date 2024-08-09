@@ -17,5 +17,4 @@ execute if score #foundNode value matches 1 run return 0
 execute if score #vGameType value matches 2 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
 
 #respawn if we didn't successfully re-route anywhere
-execute if score @s botTimeBeenAlive matches 80.. run return run tag @s add botRespawn
 tag @s add botRespawnAdvance

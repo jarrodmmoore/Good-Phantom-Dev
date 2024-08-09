@@ -17,7 +17,7 @@ function phan:bots/controller/find_entity with storage phan:bot_data
 execute if score #botSuccess value matches 0 run function phan:bots/controller/respawn_at_some_location
 execute if score #botSuccess value matches 1 run tag @s[tag=botEntityMissing] remove botEntityMissing
 #bot still missing? try to cope
-execute if score #botSuccess value matches 0 if score #success value matches 0 run function phan:bots/controller/no_bot_found
+execute if score #botSuccess value matches 0 if score #botSpawnSuccess value matches 0 run function phan:bots/controller/no_bot_found
 
 #adopt data returned from the bot if something changed
 execute if score #botDataUpdate value matches 1 run function phan:bots/receive_data_from_transfer

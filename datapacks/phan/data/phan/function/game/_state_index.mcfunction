@@ -5,7 +5,7 @@ scoreboard players set #inLobby value 0
 #1 = GAMEPLAY - score attack mode
 #2 = LOBBY - selecting mode before entering a level
 #3 = GAMEPLAY - time attack
-#4 = GAMEPLAY - portal race (formerly known as "versus". is internally reffered to as such)
+#4 = GAMEPLAY - portal race (formerly known as "versus". is internally referred to as such)
 #5 = CUTSCENE - podium sequence after a portal race or grand prix
 
 execute if score #gameState value matches 0 run function phan:game/0/_0_main

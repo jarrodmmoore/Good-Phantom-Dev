@@ -6,6 +6,7 @@ tag @s add botNeedMarkerToRespawn
 
 #increment checkpoint
 scoreboard players operation @s check = #check value
+scoreboard players add @s check 1
 scoreboard players operation @s checkFake = @s check
 
 #get eyes from the checkpoint
