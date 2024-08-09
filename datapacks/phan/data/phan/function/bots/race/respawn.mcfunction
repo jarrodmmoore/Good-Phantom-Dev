@@ -4,9 +4,9 @@ tag @s[tag=hasDataToSend] remove hasDataToSend
 
 #controller should be informed that this was an intentional respawn, not a respawn due to the bot getting eaten by an unloaded chunk
 scoreboard players operation #getID value = @s botID
-execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botID = #getID value run tag @s add naturalBotRespawn
+execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] if score @s botID = #getID value run tag @s add naturalBotRespawn
 
 #perish
-scoreboard players set @s lifespan 1
+scoreboard players set @s lifespan 0
 tag @s remove ai
 tag @s remove botRespawn

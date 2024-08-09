@@ -26,4 +26,4 @@ execute store result score @s fallFlying run execute on vehicle if entity @s[tag
 
 
 #kill bot if it fell into the void
-execute if score @s location_y matches ..-60 run tag @s[tag=!botRespawnAdvance] add botRespawnAdvance
+execute if score @s location_y matches ..-64 run tag @s[tag=!botRespawnAdvance] add botRespawnAdvance

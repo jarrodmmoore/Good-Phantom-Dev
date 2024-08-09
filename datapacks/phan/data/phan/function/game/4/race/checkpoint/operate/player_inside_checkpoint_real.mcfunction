@@ -5,7 +5,6 @@
 execute if entity @s[type=player] if entity @s[gamemode=!adventure] run return 0
 
 
-
 scoreboard players set #doRespawn value 0
 
 

@@ -7,6 +7,7 @@ tag @s add hasDataToSend
 #save checkpoint node location as our new respawn point
 execute store result score #location_x value run data get entity @s Pos[0] 1
 execute store result score #location_y value run data get entity @s Pos[1] 1
+scoreboard players add #location_y value 100
 execute store result score #location_z value run data get entity @s Pos[2] 1
 execute store result score #location_yaw value run data get entity @s Rotation[0] 1
 execute store result score #location_pitch value run data get entity @s Rotation[1] 1

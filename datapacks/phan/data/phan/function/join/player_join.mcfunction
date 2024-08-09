@@ -12,7 +12,7 @@ scoreboard players add @s joinCount 1
 function phan:join/get_reset_wave
 
 #if there are bots currently active, make sure none of them have our username
-execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:game/2/bots/bot_check_duplicate_name
+execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:game/2/bots/bot_check_duplicate_name
 
 #must watch the intro slides before going anywhere. go to the time-out room.
 tp @s 55 -13 155 180 0
