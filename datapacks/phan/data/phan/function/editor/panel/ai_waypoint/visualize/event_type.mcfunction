@@ -4,9 +4,6 @@
 execute if entity @s[tag=eventBadSkill] run summon area_effect_cloud ~ ~.33 ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"bad decision","color":"#BBBBBB"}]'}
 execute if entity @s[tag=eventHighSkill] run summon area_effect_cloud ~ ~.33 ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"high skill","color":"#BBBBBB"}]'}
 
-#low height
-execute if entity @s[tag=AIBC_lowHeight] run summon area_effect_cloud ~ ~.5 ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"can\'t collect at high height","color":"#BBBBBB"}]'}
-
 #=====
 
 #1 = force jump

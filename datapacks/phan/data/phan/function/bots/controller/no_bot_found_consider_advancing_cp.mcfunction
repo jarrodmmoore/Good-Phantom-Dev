@@ -9,6 +9,9 @@ execute if score @s botSkill matches 3 run scoreboard players remove #math value
 execute if score @s botSkill matches 5 run scoreboard players add #math value 6
 execute if score @s botSkill matches 6 run scoreboard players add #math value 16
 
+#longer wait for the end portal
+execute if score @s enderEyes >= #vEyesNeeded value run scoreboard players remove #math value 60
+
 scoreboard players operation #math value -= #botTimeBetweenCPs value
 execute if score #math value matches 0.. run function phan:bots/controller/try_advance_checkpoint
 

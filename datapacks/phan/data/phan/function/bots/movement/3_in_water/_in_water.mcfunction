@@ -68,4 +68,4 @@ execute if score @s moveVelocity matches 480..519 run function phan:bots/movemen
 execute if score @s moveVelocity matches 520.. run function phan:bots/movement/3_in_water/apply_velocity {arg:"0.0098"}
 
 #jump up and out of water near the edge
-execute at @s rotated ~ 0 unless block ^ ^ ^0.5 #phan:not_solid if block ^ ^1 ^0.5 #phan:not_solid if block ^ ^2 ^0.5 #phan:not_solid if block ~ ~2 ~ #phan:not_solid run function phan:bots/movement/jump/normal_no_spam
+execute at @s rotated ~ 0 unless block ^ ^ ^0.5 #phan:not_solid if block ^ ^1 ^0.5 #phan:not_solid if block ^ ^2 ^0.5 #phan:not_solid if block ~ ~2 ~ #phan:not_solid run function phan:bots/movement/3_in_water/consider_jumping_out_of_water

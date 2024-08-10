@@ -19,6 +19,7 @@ execute if score @s botFearsEnderman matches 1.. run return 0
 #need to be mid air to use
 tag @s remove botImprovFlight
 execute if score @s botMoveState matches 0 run scoreboard players set @s botJumpTimer 0
+execute if score @s botMoveState matches 1 run scoreboard players set @s[scores={airTime=..9}] botJumpTimer -1
 
 #don't try to boost or use a different item while we're preparing to do the jump
 scoreboard players set @s[scores={botItemThinkTime=..19}] botItemThinkTime 20

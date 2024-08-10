@@ -30,6 +30,9 @@ execute if score @s botEffectSlowness matches 1.. run function phan:bots/movemen
 #use firework if we've been waiting to do that
 execute if entity @s[tag=botUseFireworkInAir,scores={inputCooldown=..0}] run function phan:bots/movement/2_gliding/try_use_firework
 
+#perform pad jump?
+execute if entity @s[tag=botPadJumpWhenMidAir] run function phan:bots/movement/1_air/perform_pad_jump
+
 #count down explosion boost time
 scoreboard players remove @s[scores={botExplosionBoostTime=1..}] botExplosionBoostTime 1
 

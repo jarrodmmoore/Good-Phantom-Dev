@@ -16,7 +16,7 @@ tag @s[tag=botPadJumpWhenMidAir] remove botPadJumpWhenMidAir
 execute if score @s botMoveState matches 2 run scoreboard players set #random value 2
 
 #do jump?
-execute if score #random value matches ..3 run scoreboard players set @s botJumpTimer -1
+execute if score #random value matches ..3 run tag @s add botDelayPadJump
 
 #do elytra?
 execute if score #random value matches ..2 run tag @s add botFlyWhenInAir

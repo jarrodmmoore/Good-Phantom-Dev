@@ -15,3 +15,7 @@ execute if score #foundNode value matches 1.. run return run function phan:bots/
 #=====
 #found nothing? try again in a random amount of time
 execute store result score @s botWanderTime run random value 10..40
+scoreboard players remove @s botAllowedReroutes 1
+
+#reset if in race mode and waypoints exist
+execute if score #vGameType value matches 1 if score @s botAllowedReroutes matches ..0 if entity @e[type=marker,tag=AIBC,limit=1,distance=..100] run tag @s add botRespawnAdvance

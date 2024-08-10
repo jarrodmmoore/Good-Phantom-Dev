@@ -88,7 +88,7 @@ scoreboard players remove @s[scores={bufferInput4=1..}] bufferInput4 1
 #=====
 # GLOBAL PASSIVE EFFECTS
 
-#invis
+#invisibility
 effect give @s[gamemode=!creative] invisibility infinite 1 true
 effect clear @s[gamemode=creative] invisibility
 
@@ -112,6 +112,9 @@ execute if entity @s[tag=playing] run scoreboard players set @s wasPlayingLastTi
 
 #if we're ever in adventure mode for ANY REASON, we'll make the game reload position next time we enter spectator
 execute if entity @s[gamemode=adventure,tag=!spectatorBuck] run tag @s add spectatorBuck
+
+#momentum cancel?
+execute if entity @s[tag=playerCancelMomentum] run function phan:player/cancel_momentum
 
 #keep track of whether we're spectating an object or not
 execute if score @s spectatingObject matches 1.. run scoreboard players remove @s spectatingObject 1

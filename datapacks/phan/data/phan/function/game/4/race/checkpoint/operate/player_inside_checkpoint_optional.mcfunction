@@ -23,4 +23,5 @@ execute if score #checkWrongWay value matches 1.. if score @s checkFake > #check
 
 #do a respawn if we requested one
 execute if score #doRespawn value matches 1.. if score @s[type=player] inputCooldownB matches ..0 unless entity @s[tag=vsHomeStretch] run function phan:game/4/race/respawn
+execute if score #doRespawn value matches 1.. if entity @s[tag=ai,tag=!vsHomeStretch] run tag @s add botFindMarker
 execute if score #doRespawn value matches 1.. if entity @s[tag=ai,tag=!vsHomeStretch] run tag @s add botRespawn

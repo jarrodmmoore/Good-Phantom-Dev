@@ -10,7 +10,7 @@ scoreboard players operation #coord_y2 value %= #10 value
 execute if score #coord_y2 value matches 5.. run scoreboard players set #test value 2
 execute if block ~ ~ ~ #minecraft:slabs[type=bottom] run scoreboard players set #test value 1
 execute if score #test value matches 2 run scoreboard players add #coord_y value 1
-#store desired coodinate
+#store desired coordinate
 execute store result storage phan:coords coord_y int 1 run scoreboard players get #coord_y value
 execute unless score #test value matches 1 run data modify storage phan:coords coord_y2 set value 0
 execute if score #test value matches 1 run data modify storage phan:coords coord_y2 set value 5

@@ -24,6 +24,7 @@ tag @s[tag=vsHomeStretch] remove vsHomeStretch
 scoreboard players set @s itemLuck 1
 scoreboard players set @s timeBehind1st 0
 scoreboard players set @s timeInFirst 0
+scoreboard players set @s botMistakeCooldown 0
 
 #fallback respawn coordinates are the log cabin in the overworld (chosen because it's in the spawn chunks)
 scoreboard players set @s vsRespawnX 198

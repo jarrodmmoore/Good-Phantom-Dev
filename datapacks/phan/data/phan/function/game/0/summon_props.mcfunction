@@ -3,6 +3,10 @@
 #while we're here: update lighting
 function phan:game/0/lighting/update
 
+#replace the ender chest to fix an animation bug?
+setblock 209 -7 118 air
+setblock 209 -7 118 minecraft:ender_chest[facing=east]
+
 #clean up old stuff first
 kill @e[tag=lobbyProp]
 

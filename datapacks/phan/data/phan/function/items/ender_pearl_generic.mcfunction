@@ -8,7 +8,7 @@ execute unless score @s playerID matches 1.. run function phan:items/ender_pearl
 execute if score #gameState value matches 4 if score @s playerID matches 1.. run function phan:items/ender_pearl_listen_for_cp
 
 #don't put our owner inside an end portal block, please...
-execute if score @s playerID matches 1.. if block ~ ~-1 ~ #phan:ender_pearl_problematic run function phan:items/ender_pearl_avoid_dunking_player_in_portal
+execute if entity @s[tag=!botEnderPearl,scores={playerID=1..}] if block ~ ~-1 ~ #phan:ender_pearl_problematic run function phan:items/ender_pearl_avoid_dunking_player_in_portal
 
 #if owned by a bot, keep them up to date on what coordinates they should be teleported to
 execute if entity @s[tag=botEnderPearl] run function phan:items/ender_pearl_update_bot_teleport_location

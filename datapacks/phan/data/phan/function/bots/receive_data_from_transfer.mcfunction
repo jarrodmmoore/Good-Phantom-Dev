@@ -8,6 +8,8 @@ scoreboard players operation @s checkFake = #checkFake dataTransfer
 scoreboard players operation @s enderEyes = #enderEyes dataTransfer
 scoreboard players operation @s lap = #lap dataTransfer
 
+scoreboard players operation @s botMistakeCooldown = #botMistakeCooldown dataTransfer
+
 scoreboard players operation @s finishPos = #finishPos dataTransfer
 scoreboard players operation @s startGrid = #startGrid dataTransfer
 scoreboard players operation @s rawTime = #rawTime dataTransfer

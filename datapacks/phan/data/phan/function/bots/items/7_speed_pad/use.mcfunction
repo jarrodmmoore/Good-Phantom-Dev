@@ -13,8 +13,15 @@ execute if score @s botHasItem7 matches ..0 run scoreboard players set @s botHol
 tag @s add hasDataToSend
 #=====
 
+#using speed pad cancels flight
+function phan:bots/movement/cancel_flight
+
 #if in mid-air, there's a chance we'll jump off the pad and maybe even enter flight
 execute if score @s botMoveState matches 1..2 run function phan:bots/items/7_speed_pad/consider_flying_after_boost
 
 #do the thing
 function phan:items/use/speed_pad
+
+#delayed jump
+execute if entity @s[tag=botDelayPadJump] run function phan:bots/movement/jump/_jump_index
+tag @s remove botDelayPadJump

@@ -13,7 +13,7 @@ execute as @e[limit=1,sort=random,type=skeleton,tag=needSpread] at @s run summon
 
 #bots need spread out if there are multiple
 scoreboard players set #varyTeleportNPC value 0
-execute as @e[sort=random,type=skeleton,tag=needSpread] at @s run function phan:varied_teleport_nonplayer
+execute as @e[sort=random,type=skeleton,tag=needSpread] at @s run function phan:game/5/top_3/podium_varied_teleport
 
 #clean up tag on puppets
 tag @e[type=skeleton,tag=needSpread] remove needSpread

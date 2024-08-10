@@ -1,3 +1,6 @@
+#always ok if this is a bad decision event
+execute if score #waypointEventSkill value matches 1 run return 0
+
 #never allow non-rival v.easy bots
 execute if score @s[tag=!botRival] botSkill matches 1 run return 1
 

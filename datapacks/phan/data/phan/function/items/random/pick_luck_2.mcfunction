@@ -47,6 +47,11 @@ execute if score #givenMines value matches 12.. run tag @e[tag=randomize,x=-1,y=
 
 #=====
 
+#rival bot hackery
+execute if score #botCount value matches 2.. if entity @s[tag=ai,tag=botRival,scores={botSkill=4..}] run function phan:items/random/rival_hackery_luck_2
+
+#=====
+
 #red rocket -- 1..2
 #homing rocket -- 3
 #throwable tnt -- 4..5

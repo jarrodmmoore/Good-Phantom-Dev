@@ -28,10 +28,9 @@ execute if score #timeBehind1st value matches 230..244 run scoreboard players se
 execute if score #timeBehind1st value matches 245.. run scoreboard players set #minWarpDistance value 63
 
 #also limit the number of jumps we can make depending on time behind 1st (reason: track could make a u-turn allowing for an unusually long warp in some part of the track)
-scoreboard players set #warpLimit value 4
-execute if score #timeBehind1st value matches ..289 run scoreboard players set #warpLimit value 3
-execute if score #timeBehind1st value matches ..214 run scoreboard players set #warpLimit value 2
-execute if score #timeBehind1st value matches ..139 run scoreboard players set #warpLimit value 1
+scoreboard players set #warpLimit value 3
+execute if score #timeBehind1st value matches ..289 run scoreboard players set #warpLimit value 2
+execute if score #timeBehind1st value matches ..214 run scoreboard players set #warpLimit value 1
 
 #take off 1 warp before we start, just to make number add up...
 scoreboard players remove #warpLimit value 1
@@ -65,6 +64,7 @@ execute unless score #warpedToPortal value matches 1 run function phan:warp_to_s
 
 #cancel momentum
 execute at @s run tp @s @s
+tag @s add playerCancelMomentum
 
 #get vertical launch if that's a thing we have
 execute unless score #warpedToPortal value matches 1 if score @s vsRespawnLaunch matches 1.. run function phan:items/launch_effect

@@ -13,7 +13,7 @@ execute if entity @s[scores={botMoveState=1..,airTime=11..}] unless function pha
 
 #0,1,2 while grounded? do a jump, now or later, with possible spamming, and enter flight when airborne
 tag @s add botFlyWhenInAir
-execute unless score #waypointModifier value matches -3 if entity @s[scores={botMoveState=1}] run scoreboard players set @s botJumpTimer -1
+execute unless score #waypointModifier value matches -3 if score @s botMoveState matches 1 run scoreboard players set @s botJumpTimer -1
 execute unless score #waypointModifier value matches -3 if score @s botMoveState matches 0 run scoreboard players set @s botJumpTimer 0
 execute if score #waypointModifier value matches -2 run tag @s add botSpamJumpKey
 execute if score #waypointModifier value matches -3 if score @s botMoveState matches 0 run scoreboard players set @s botJumpTimer -1
