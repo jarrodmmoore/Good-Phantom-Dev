@@ -16,15 +16,8 @@ particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
 scoreboard players set @s squidBlindTime 0
 effect clear @s blindness
 
-#battle will end 95 seconds after any finish
-scoreboard players operation #newTimeLimit value = #vTimeLimit value
-execute if score #newTimeLimit value matches 1900.. run scoreboard players set #newTimeLimit value 1900
-#must abide by minimum time limit for level
-scoreboard players operation #test value = #vTimeElapsed value
-scoreboard players add #test value 1900
-execute if score #test value < #vMinTimeLimit value run scoreboard players operation #newTimeLimit value = #vMinTimeLimit value
-#apply the new time limit
-scoreboard players operation #vTimeLimit value = #newTimeLimit value
+#figure out how long everyone else has to finish
+function phan:game/4/battle/player_finish_set_battle_end_time
 
 #set music
 tag @s add noSpecDataAdopt
@@ -37,7 +30,7 @@ scoreboard players add #positionAssignMin value 1
 scoreboard players operation @s racePosDisplay = @s finishPos
 
 #advancement if we won with 0 KOs (there must be at least one other player in the game)
-execute if entity @s[scores={finishPos=1,KOs=..0}] if entity @a[tag=playing] run advancement grant @s only phan:portal_race/pacifist_run
+execute if score #assist_enabled_portalrace value matches 0 if entity @s[scores={finishPos=1,KOs=..0}] if entity @a[tag=playing] run advancement grant @s only phan:portal_race/pacifist_run
 
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me

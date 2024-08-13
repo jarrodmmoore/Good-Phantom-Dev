@@ -3,7 +3,7 @@ execute if score @s addPointsLater matches 1.. run scoreboard players operation 
 execute if score @s addPointsLater matches 1.. run scoreboard players set @s addPointsLater 0
 
 #advancement for finishing practice course with 100k points
-execute if score #assist_enabled value matches 0 run advancement grant @s[scores={scoreCurrent=100000..}] only phan:score_attack/practice_makes_perfect
+execute if score #assist_enabled_scoreattack value matches 0 run advancement grant @s[scores={scoreCurrent=100000..}] only phan:score_attack/practice_makes_perfect
 
 #clear inv
 clear @s

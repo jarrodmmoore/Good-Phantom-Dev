@@ -4,8 +4,8 @@
 
 #=====
 #assist mode is on? notify the player and kick out of this function
-execute if score #assist_enabled value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.scores_will_not_be_saved","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
-execute if score #assist_enabled value matches 1.. run return 0
+execute if score #assist_enabled_scoreattack value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.scores_will_not_be_saved","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
+execute if score #assist_enabled_scoreattack value matches 1.. run return 0
 #=====
 
 #a score is getting recorded! count up the number of times this has happened.
@@ -28,9 +28,9 @@ execute if score @s rawTime <= #timeSilver value run scoreboard players set #inp
 execute if score @s rawTime <= #timeGold value run scoreboard players set #inputRank value 2
 execute if score @s rawTime <= #timeDiamond value run scoreboard players set #inputRank value 1
 
-#record what medal we got as an indiviual player
+#record what medal we got as an individual player
 scoreboard players operation @s rankFinal = #inputRank value
-execute if score #assist_enabled value matches 0 run function phan:levels/_index_record_best_medal
+execute if score #assist_enabled_scoreattack value matches 0 run function phan:levels/_index_record_best_medal
 
 #run comparisons and record data on the corresponding level armor_stand
 execute if score #chosenLevel value matches 1 as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1}] positioned 214 -16 118 run function phan:high_score/record_time_marker

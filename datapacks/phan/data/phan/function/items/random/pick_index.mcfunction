@@ -26,6 +26,10 @@ execute if entity @s[tag=ai] run function phan:items/random/log_items_bot_has
 #(note: there are 27 randomize armor stands)
 tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=tempItemBan] remove tempItemBan
 
+#force luck to be 3 if item catch-up is disabled
+execute if score #assist_catch_up value matches 1.. run scoreboard players set @s[scores={itemLuck=1..5}] itemLuck 3
+
+#=====
 #index based on item luck
 #(lower itemLuck means you're closer to 1st place)
 execute if score @s itemLuck matches 1 run function phan:items/random/pick_luck_1
@@ -44,6 +48,7 @@ execute if entity @s[tag=lastPlace] run function phan:items/random/pick_bonus_mi
 #one-off: any player who is not in 1st will get a bonus anvil of justice if the game deemed one necessary
 execute if entity @s[tag=!pickedBonusMine] if score #cooldownAnvil value matches ..0 if score #gameState value matches 4 if score #vGameType value matches 1 if score @s racePosDisplay matches 2.. if score #mandateAnvil value matches 1 run function phan:items/give/anvil_of_justice {count:1}
 tag @s[tag=pickedBonusMine] remove pickedBonusMine
+#=====
 
 #count up time since we've gotten certain stuff
 scoreboard players add @s picksSinceSpeed 1

@@ -89,10 +89,10 @@ execute if score #bonus value matches ..0 if score #timeCompareResult value matc
 
 #advancement for finishing all 3 portals in a row without going over target time
 execute if score #timeCompareResult value matches 0.. run scoreboard players add @a[tag=lastDonor] targetTimesHit 1
-execute if score #assist_enabled value matches 0 unless score #gameState value matches 0 run advancement grant @a[tag=lastDonor,scores={targetTimesHit=3..}] only phan:good_phantom/eyes_on_the_prize
+execute if score #assist_enabled_scoreattack value matches 0 unless score #gameState value matches 0 run advancement grant @a[tag=lastDonor,scores={targetTimesHit=3..}] only phan:score_attack/eyes_on_the_prize
 
 #advancement for using teleporter to finish portal under target time in pastel palace
-execute if score #assist_enabled value matches 0 if score #chosenLevel value matches 1 if score #timeCompareResult value matches 0.. run advancement grant @a[tag=lastDonor,scores={teleportersUsed=1..}] only phan:good_phantom/nice_shortcut
+execute if score #assist_enabled_scoreattack value matches 0 if score #chosenLevel value matches 1 if score #timeCompareResult value matches 0.. run advancement grant @a[tag=lastDonor,scores={teleportersUsed=1..}] only phan:score_attack/nice_shortcut
 
 #=====
 

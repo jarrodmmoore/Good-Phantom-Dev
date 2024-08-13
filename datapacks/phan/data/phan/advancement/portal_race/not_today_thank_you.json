@@ -1,13 +1,13 @@
 {
     "display": {
         "title": {
-            "translate": "gp.advancement.title.not_in_my_3d_platformer"
+            "translate": "gp.advancement.title.not_today_thank_you"
         },
         "description": {
-            "translate": "gp.advancement.description.not_in_my_3d_platformer"
+            "translate": "gp.advancement.description.not_today_thank_you"
         },
         "icon": {
-            "id": "minecraft:yellow_stained_glass"
+            "id": "minecraft:anvil"
         },
         "frame": "task",
         "show_toast": true,
@@ -15,9 +15,9 @@
         "hidden": false
     },
     "criteria": {
-        "notinmy3dplatformer": {
+        "dreamsdreams": {
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "phan:good_phantom/root"
+    "parent": "phan:portal_race/root"
 }

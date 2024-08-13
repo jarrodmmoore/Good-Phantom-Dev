@@ -8,6 +8,9 @@ execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,d
 #no rival if only 1 bot
 execute if score #botCount value matches ..1 run return 0
 
+#no rival if rivals are disabled
+execute if score #assist_rival_bot value matches 1.. run return 0
+
 #find highest skill bot
 scoreboard players set #botHighestSkill value 0
 execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:bots/rival/find_max_skill

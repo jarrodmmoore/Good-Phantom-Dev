@@ -16,4 +16,4 @@ execute if score #botCountHard value matches 3.. run scoreboard players set #mat
 execute if score #botCountTryhard value matches 3.. run scoreboard players set #math value 5
 
 #never offer trophy if assist mode enabled
-execute if score #assist_enabled value matches 1.. run scoreboard players set #math value 0
+execute if score #assist_enabled_portalrace value matches 1.. run scoreboard players set #math value 0

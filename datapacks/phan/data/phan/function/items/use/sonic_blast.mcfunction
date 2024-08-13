@@ -8,6 +8,9 @@ playsound minecraft:entity.wither.hurt master @a ~ ~ ~ 2 1.2
 particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=!blastSelf]
 execute anchored eyes positioned ^ ^ ^3 run particle flash ~ ~ ~ 0 0 0 1 1 force @a[tag=blastSelf]
 
+#get advancement for destroying an anvil that is targeting us
+execute if entity @s[type=player] as @e[tag=anvilEntity,type=armor_stand,distance=..9] if score @s playerID = #attackerID value run advancement grant @a[tag=blastSelf,distance=..1] only phan:portal_race/not_today_thank_you
+
 #destroy some items
 execute as @e[tag=sonicBlastDestroys,distance=..9] run function phan:items/use/sonic_blast_destroy_item
 

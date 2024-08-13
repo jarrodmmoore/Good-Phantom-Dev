@@ -2,5 +2,14 @@
 execute as @a[tag=playing,gamemode=adventure,scores={location_y=..35}] run function phan:game/4/race/respawn
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,scores={location_y=..35}] run tag @s add botRespawn
 
-#fun setup phase stuff
-execute if score #gameTime value matches ..300 run function phan:levels/moonlit_mountains/versus_act_3_countdown
+#-1842 78 -80 -1842 82 -77
+
+#make sure gates is closed on lap 1
+execute if score #mmAct3State value matches 0 if loaded -1842 78 -80 if block -1842 78 -80 structure_void run fill -1842 78 -80 -1842 82 -77 orange_stained_glass replace structure_void
+
+#listen for player to hit lap 2
+execute if score #mmAct3State value matches 0 if entity @a[tag=playing,scores={lap=2..}] run scoreboard players add #mmAct3State value 1
+execute if score #mmAct3State value matches 0 if score #botsEnabled value matches 1.. if entity @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={lap=2..}] run scoreboard players add #mmAct3State value 1
+
+#door to cave opens up on lap 2
+execute if score #mmAct3State value matches 1 if loaded -1842 78 -80 if block -1842 78 -80 orange_stained_glass run fill -1842 78 -80 -1842 82 -77 structure_void replace orange_stained_glass

@@ -22,6 +22,7 @@ scoreboard players set @s introProgress 0
 #advancement stuff
 advancement grant @s only phan:good_phantom/root
 advancement grant @s only phan:score_attack/root
+advancement grant @s only phan:score_attack/dream_challenges
 execute if score #timeAttackUnlocked value matches 1 run advancement grant @s only phan:time_attack/root
 advancement grant @s only phan:portal_race/root
 

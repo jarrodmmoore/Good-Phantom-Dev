@@ -165,6 +165,11 @@ scoreboard objectives add dream2Medal dummy
 scoreboard objectives add dream3Medal dummy
 scoreboard objectives add dream4Medal dummy
 scoreboard objectives add dream5Medal dummy
+scoreboard objectives add dream1Trophy dummy
+scoreboard objectives add dream2Trophy dummy
+scoreboard objectives add dream3Trophy dummy
+scoreboard objectives add dream4Trophy dummy
+scoreboard objectives add dream5Trophy dummy
 #advancement related
 scoreboard objectives add targetTimesHit dummy
 scoreboard objectives add timesBeenHit dummy

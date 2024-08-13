@@ -40,6 +40,7 @@ scoreboard players set @s botBehavior 0
 #scores
 scoreboard players set @s moveVelocity 0
 scoreboard players set @s onGround 0
+scoreboard players set @s airTime 10
 scoreboard players set @s fallFlying 0
 scoreboard players set @s botJumpPadTimeLow 0
 scoreboard players set @s botJumpPadTimeHigh 0

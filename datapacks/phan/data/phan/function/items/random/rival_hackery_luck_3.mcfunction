@@ -1,5 +1,8 @@
 #later overrides have higher priority
 
+#if item catch-up is disabled, don't hack item luck if we're 2nd or better
+execute if score #assist_catch_up value matches 1.. if score @s itemPosition matches ..2 run return 0
+
 #override 1
 #if we can get speed items, we WILL get speed items
 #ban anything that's not speed

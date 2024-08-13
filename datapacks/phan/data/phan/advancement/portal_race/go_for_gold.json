@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.go_for_gold"
+        },
+        "description": {
+            "translate": "gp.advancement.description.go_for_gold"
+        },
+        "icon": {
+            "id": "minecraft:gold_block",
+            "components": {
+                "minecraft:custom_model_data":1111111
+            }
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:portal_race/root"
+}

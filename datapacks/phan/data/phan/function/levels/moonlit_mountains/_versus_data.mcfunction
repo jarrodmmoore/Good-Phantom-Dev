@@ -5,6 +5,9 @@ weather clear
 #skybox
 scoreboard players set @a skyboxSet 3
 
+#state for acts
+scoreboard players set #mmAct3State value 0
+
 #countdown type
 scoreboard players set #countdownType value 2
 

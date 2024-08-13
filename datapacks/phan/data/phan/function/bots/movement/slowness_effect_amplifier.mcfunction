@@ -10,6 +10,7 @@ scoreboard players operation #coord_z2 value *= #multiplier value
 scoreboard players operation #coord_z2 value /= #100 value
 
 #don't be on fire due to lightning!
-data merge entity @s {Fire:0}
-execute on vehicle run data merge entity @s {Fire:0}
-execute on vehicle if entity @s[tag=botElytraHeightFix] on vehicle run data merge entity @s {Fire:0}
+execute if score #5Hz value matches 2 run data merge entity @s {Fire:0}
+execute if score #5Hz value matches 2 on vehicle run data merge entity @s {Fire:0}
+execute if score #5Hz value matches 2 on vehicle if entity @s[tag=botElytraHeightFix] on vehicle run data merge entity @s {Fire:0}
+#(this only seems to work *sometimes*. i do not know why)

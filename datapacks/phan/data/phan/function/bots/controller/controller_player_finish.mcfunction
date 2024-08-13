@@ -6,15 +6,8 @@ scoreboard players set @s botTimeSinceCP -999999
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished value 1
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value 2147483647
 
-#race will end 75 seconds after any finish
-scoreboard players operation #newTimeLimit value = #vTimeLimit value
-execute if score #newTimeLimit value matches 1500.. run scoreboard players set #newTimeLimit value 1500
-#must abide by minimum time limit for level
-scoreboard players operation #test value = #vTimeElapsed value
-scoreboard players add #test value 1500
-execute if score #test value < #vMinTimeLimit value run scoreboard players operation #newTimeLimit value = #vMinTimeLimit value
-#apply the new time limit
-scoreboard players operation #vTimeLimit value = #newTimeLimit value
+#figure out how long everyone else has to finish
+function phan:game/4/race/player_finish_set_race_end_time
 
 #increment the min position assignment number by 1
 scoreboard players add #positionAssignMin value 1

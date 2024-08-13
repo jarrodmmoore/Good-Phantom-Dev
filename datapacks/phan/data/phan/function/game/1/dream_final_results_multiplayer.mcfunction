@@ -40,7 +40,7 @@ scoreboard players operation #pGameTime value = @s pGameTime
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=10..}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=1..9}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_low
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=..0}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_done
-execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score #assist_enabled value matches ..0 run function phan:game/1/show_result/rank_bonuses_show
+execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score #assist_enabled_scoreattack value matches ..0 run function phan:game/1/show_result/rank_bonuses_show
 execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score @s scoreShow matches 1.. at @s in minecraft:overworld run function phan:high_score/record_score_start
 execute if score @s pGameTime matches 100..299 at @s if score #gameState value matches 1 run function phan:game/1/show_result/rank_final
 

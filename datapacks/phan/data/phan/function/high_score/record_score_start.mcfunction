@@ -4,8 +4,8 @@
 
 #=====
 #assist mode is on? notify the player and kick out of this function
-execute if score #assist_enabled value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.scores_will_not_be_saved","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
-execute if score #assist_enabled value matches 1.. run return 0
+execute if score #assist_enabled_scoreattack value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.scores_will_not_be_saved","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
+execute if score #assist_enabled_scoreattack value matches 1.. run return 0
 #=====
 
 #a score is getting recorded! count up the number of times this has happened.

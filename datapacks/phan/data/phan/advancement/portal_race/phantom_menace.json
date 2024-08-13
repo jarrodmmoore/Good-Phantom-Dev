@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.phantom_menace"
+        },
+        "description": {
+            "translate": "gp.advancement.description.phantom_menace"
+        },
+        "icon": {
+            "id": "minecraft:light_blue_wool",
+            "components": {
+                "minecraft:custom_model_data":1111114
+            }
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:portal_race/try_harder"
+}
