@@ -17,6 +17,9 @@ execute if score @s AIBC_selected = #getID value run return run function phan:ed
 $execute if score @s AIBC_set_dir matches 1..4 run scoreboard players operation @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] AIBC_dir$(set_dir) = #getID value
 $execute if score @s AIBC_set_dir matches 5 run scoreboard players operation @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] AIBC_modifier = #getID value
 
+#source node (point 1) needs to check if it's still a dead end or not
+$execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] run function phan:editor/panel/ai_waypoint/repair_tags
+
 #feedback
 execute at @e[type=marker,tag=AIBC,limit=1,sort=nearest,distance=..10,scores={AIBC_id=-2147483648..2147483647}] run particle happy_villager ~ ~.15 ~ 0.1 0.1 0.1 0 10 force
 playsound block.note_block.chime master @a ~ ~ ~ 2 1

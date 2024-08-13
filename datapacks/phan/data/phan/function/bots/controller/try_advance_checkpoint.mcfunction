@@ -1,5 +1,6 @@
 #if we're in the home stretch, just finish right away
-execute if entity @s[tag=vsHomeStretch] run return run function phan:bots/controller/controller_player_finish
+execute if entity @s[tag=vsHomeStretch] unless function phan:bots/controller/check_if_player_watching_portal run return run function phan:bots/controller/controller_player_finish
+execute if entity @s[tag=vsHomeStretch] run return 0
 #=====
 
 #-2 = doesn't exist

@@ -1,4 +1,4 @@
-#use damamge command if we have real HP
+#use damage command if we have real HP
 execute if entity @s[tag=!artificialHP] if score #projDamage value matches 1 run damage @s 10 generic at ~ ~ ~
 execute if entity @s[tag=!artificialHP] if score #projDamage value matches 2 run damage @s 20 generic at ~ ~ ~
 execute if entity @s[tag=!artificialHP] if score #projDamage value matches 3 run damage @s 30 generic at ~ ~ ~
@@ -21,7 +21,7 @@ execute if entity @s[tag=artificialHP] if score #projDamage value matches 6.. ru
 #attacker is attacker
 scoreboard players operation @s attackerID = #projID value
 
-#remember the last two projeciles that hit us. we won't take damage from them again.
+#remember the last two projectiles that hit us. we won't take damage from them again.
 scoreboard players add @s hitByProjectileH 1
 execute if score @s hitByProjectileH matches 3.. run scoreboard players set @s hitByProjectileH 1
 execute if score @s hitByProjectileH matches ..1 run scoreboard players operation @s hitByProjectile1 = #projUID value

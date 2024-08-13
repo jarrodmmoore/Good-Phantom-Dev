@@ -47,7 +47,6 @@ scoreboard players set #showNametags value 0
 team modify player nametagVisibility never
 
 #load area info!
-function phan:game/1/spawning/reset_all
 function phan:game/5/load_sequence_info
 execute store result storage phan:podium_sequence location_x int 1 run scoreboard players get #podiumSequenceX value
 execute store result storage phan:podium_sequence location_y int 1 run scoreboard players get #podiumSequenceY value

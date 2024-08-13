@@ -7,6 +7,9 @@ scoreboard players set @a pShowHUD 0
 scoreboard players set #hudMode value 1
 function phan:custom_hud/setup
 
+#bots don't exist anymore
+scoreboard players set #botsEnabled value 0
+
 #manage item entities
 function phan:items/reset_valid_objective
 

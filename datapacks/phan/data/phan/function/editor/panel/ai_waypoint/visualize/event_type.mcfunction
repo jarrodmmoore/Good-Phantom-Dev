@@ -74,6 +74,8 @@ execute if score @s AIBC_event matches 26 run summon area_effect_cloud ~ ~ ~ {Du
 execute if score @s AIBC_event matches 27 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"use super jump or firework + take alt route (improv flight)","color":"yellow","underlined":true}]'}
 #28 = have mine? take alt route
 execute if score @s AIBC_event matches 28 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"have mine? take alt route","color":"yellow","underlined":true}]'}
+#29 = take alt route if not occupied by baddie
+execute if score @s AIBC_event matches 29 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if not occupied by baddie","color":"yellow","underlined":true}]'}
 
 #=====
 #-1 = enter/cancel improv flight

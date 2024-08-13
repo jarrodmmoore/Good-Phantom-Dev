@@ -9,6 +9,3 @@ scoreboard players set @s[scores={checkFake=5}] checkFake 6
 #after tp
 execute at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1.4 1
 execute at @s run particle falling_dust{block_state:"magenta_concrete"} ~ ~1 ~ 0.3 0.5 0.3 0 20
-
-#sound post-teleport
-execute at @s run playsound entity.enderman.teleport master @a ~ ~1 ~ 1.2 1

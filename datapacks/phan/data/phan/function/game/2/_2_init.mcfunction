@@ -26,6 +26,9 @@ execute as @a run function phan:player/set_title_times
 scoreboard players set #showHUD value 0
 function phan:custom_hud/clear_bossbars
 
+#bots don't exist anymore
+scoreboard players set #botsEnabled value 0
+
 #time and weather
 time set 18000
 weather clear

@@ -12,6 +12,9 @@ team modify botDisplayHard color white
 team modify botDisplayTryhard color white
 team modify botDisplayTryharder color white
 
+#bots don't exist anymore
+scoreboard players set #botsEnabled value 0
+
 #if a player was just playing in a game, move them back in the player queue
 #we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing.
 tag @a[tag=playerReservation] add playing

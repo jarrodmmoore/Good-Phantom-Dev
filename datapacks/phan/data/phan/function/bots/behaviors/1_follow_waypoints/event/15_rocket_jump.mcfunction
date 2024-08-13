@@ -19,7 +19,7 @@ tag @s add botFlyWhenInAir
 tag @s add botImprovFlight
 
 #take alt route
-scoreboard players set #botChoseAltRoute value 1
+scoreboard players set #botChoseAltRoute value 2
 
 #shoot at our feet to get a vertical boost
 execute if score @s botHasItem1 matches 1.. rotated ~ 90 run return run function phan:bots/items/1_red_rocket/use

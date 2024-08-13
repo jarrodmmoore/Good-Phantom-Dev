@@ -43,3 +43,7 @@ execute if score @s AIBC_event matches 3 run tag @s add botObjectOfInterest
 #check if we should have a 5th route
 tag @s remove AIBC_hasRoute5
 execute if score @s AIBC_event matches 4.. run tag @s add AIBC_hasRoute5
+
+#tag as dead end if we have no paths
+tag @s remove AIBC_deadEnd
+execute unless score @s AIBC_dir1 matches -2147483648..2147483647 unless score @s AIBC_dir2 matches -2147483648..2147483647 unless score @s AIBC_dir3 matches -2147483648..2147483647 unless score @s AIBC_dir4 matches -2147483648..2147483647 run tag @s add AIBC_deadEnd

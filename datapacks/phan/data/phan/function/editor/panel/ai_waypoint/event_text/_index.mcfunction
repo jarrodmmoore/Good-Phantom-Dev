@@ -57,6 +57,8 @@ execute if score @s AIBC_event matches 26 run return run function phan:editor/pa
 execute if score @s AIBC_event matches 27 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"use super jump or firework + take alt route (improv flight)"}
 #28 = have mine? take alt route
 execute if score @s AIBC_event matches 28 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"have mine? take alt route"}
+#29 = take alt route if not occupied by baddie
+execute if score @s AIBC_event matches 29 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if not occupied by baddie"}
 
 #tags:
 

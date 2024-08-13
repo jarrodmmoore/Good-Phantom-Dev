@@ -27,6 +27,7 @@ execute if score #botsEnabled value matches 1.. if score #gameState value matche
 #=====
 
 #selected track runs its code
+execute if score #gameTime value matches ..300 run function phan:levels/_index_versus_countdown
 execute if score #subGameState value matches 0 run function phan:levels/_index_versus_loop
 
 #night vision?
@@ -57,7 +58,8 @@ execute as @e[type=arrow,tag=hurtfulArrow] at @s run function phan:game/1/object
 scoreboard players reset @a[scores={damage=1..}] damage
 
 #projectiles do stuff
-execute as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
+execute if score #botsEnabled value matches ..0 as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
+execute if score #botsEnabled value matches 1.. as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index_bot_inclusive
 
 #can use triggers
 execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. run scoreboard players enable @a[tag=nonSpectator] restart

@@ -1,3 +1,9 @@
+#note: game/5 is started at gameTime=30
+
+#wait a second before loading objects
+execute if score #gameTime value matches 35 run function phan:game/1/spawning/reset_all
+execute if score #gameTime value matches 37.. run function phan:game/5/handle_object_loading
+
 #teleport to proper area and hold players in place for a second
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run function phan:game/5/players_teleport_to_podium_area
 

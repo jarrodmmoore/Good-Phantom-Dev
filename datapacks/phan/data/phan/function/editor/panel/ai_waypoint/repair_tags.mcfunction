@@ -1,4 +1,4 @@
-execute at @s run particle heart ~ ~.5 ~ 0 0 0 1 1
+#execute at @s run particle heart ~ ~.5 ~ 0 0 0 1 1
 
 #re-calculate if we're mid-air
 #tag @s remove AIBC_midAir
@@ -23,6 +23,10 @@ execute if score @s AIBC_spread_z matches 0 run scoreboard players reset @s AIBC
 #tag as dead end if we have no paths
 tag @s remove AIBC_deadEnd
 execute unless score @s AIBC_dir1 matches -2147483648..2147483647 unless score @s AIBC_dir2 matches -2147483648..2147483647 unless score @s AIBC_dir3 matches -2147483648..2147483647 unless score @s AIBC_dir4 matches -2147483648..2147483647 run tag @s add AIBC_deadEnd
+
+#check if we're an object of interest to bots
+tag @s remove botObjectOfInterest
+execute if score @s AIBC_event matches 3 run tag @s add botObjectOfInterest
 
 #do we have a route 5?
 tag @s remove AIBC_hasRoute5

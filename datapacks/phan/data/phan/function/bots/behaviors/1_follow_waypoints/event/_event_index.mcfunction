@@ -28,3 +28,4 @@ execute if score #waypointEvent value matches 25 run return run function phan:bo
 execute if score #waypointEvent value matches 26 run return run function phan:bots/behaviors/1_follow_waypoints/event/26_take_route_if_not_obstructed
 execute if score #waypointEvent value matches 27 run return run function phan:bots/behaviors/1_follow_waypoints/event/27_boost_flight_and_enter_improv_flight
 execute if score #waypointEvent value matches 28 run return run function phan:bots/behaviors/1_follow_waypoints/event/28_have_item_mine
+execute if score #waypointEvent value matches 29 run return run function phan:bots/behaviors/1_follow_waypoints/event/29_take_route_if_no_baddie
