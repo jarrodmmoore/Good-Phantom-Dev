@@ -69,6 +69,7 @@ scoreboard players operation @s hitBox5b = #hitBox5b dataTransfer
 scoreboard players operation @s lastItemPicked = #lastItemPicked dataTransfer
 scoreboard players operation @s picksSinceSpeed = #picksSinceSpeed dataTransfer
 scoreboard players operation @s picksSinceBigSpeed = #picksSinceBigSpeed dataTransfer
+scoreboard players operation @s picksSinceWarp = #picksSinceWarp dataTransfer
 scoreboard players operation @s picksSinceOffense = #picksSinceOffense dataTransfer
 scoreboard players operation @s picksSinceTrap = #picksSinceTrap dataTransfer
 scoreboard players operation @s picksSinceGlobal = #picksSinceGlobal dataTransfer

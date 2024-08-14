@@ -83,6 +83,7 @@ scoreboard players reset @s hitBox5b
 scoreboard players set @a lastItemPicked 0
 scoreboard players set @a picksSinceSpeed 100
 scoreboard players set @a picksSinceBigSpeed 0
+scoreboard players set @a picksSinceWarp 0
 scoreboard players set @a picksSinceOffense 100
 scoreboard players set @a picksSinceTrap 100
 scoreboard players set @a picksSinceGlobal 100

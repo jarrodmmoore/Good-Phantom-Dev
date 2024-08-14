@@ -57,6 +57,7 @@ scoreboard players add @s picksSinceOffense 1
 scoreboard players add @s picksSinceTrap 1
 scoreboard players add @s picksSinceGlobal 1
 scoreboard players add @s picksSinceUtility 1
+scoreboard players add @s picksSinceWarp 1
 
 #count down number of things given globally
 execute if score #givenRockets value matches 1.. run scoreboard players remove #givenRockets value 1

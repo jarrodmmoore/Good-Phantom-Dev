@@ -2,6 +2,7 @@ $give @s minecraft:lime_candle[custom_name='{"translate":"gp.item.warp","color":
 
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s picksSinceBigSpeed 0
+scoreboard players set @s picksSinceWarp 0
 scoreboard players set @s lastItemPicked 14
 
 tag @s[tag=ai] add hasDataToSend

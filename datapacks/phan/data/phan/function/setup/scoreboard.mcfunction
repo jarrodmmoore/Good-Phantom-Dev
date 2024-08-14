@@ -321,6 +321,7 @@ scoreboard objectives add picksSinceTrap dummy
 scoreboard objectives add picksSinceGlobal dummy
 scoreboard objectives add picksSinceUtility dummy
 scoreboard objectives add picksSinceBigSpeed dummy
+scoreboard objectives add picksSinceWarp dummy
 #player-specific game logic?
 scoreboard objectives add pGameTime dummy
 scoreboard objectives add pTransitionProgress dummy

@@ -1,16 +1,16 @@
-tag @a[limit=1,sort=nearest,tag=playing] add catcher
+tag @a[limit=1,sort=nearest,tag=playing,distance=..3] add catcher
 execute at @a[limit=1,tag=catcher] positioned ~ ~1 ~ run tp @s ~ ~ ~
-execute if entity @s[tag=!hiddenMusicDisc] as @a[limit=1,tag=catcher] run function phan:game/1/player/score_ender_eye
-execute if entity @s[tag=hiddenMusicDisc] as @a[limit=1,tag=catcher] run function phan:game/1/player/score_music_disc
+execute if entity @s[tag=!hiddenMusicDisc] as @a[limit=1,tag=catcher,distance=..3] run function phan:game/1/player/score_ender_eye
+execute if entity @s[tag=hiddenMusicDisc] as @a[limit=1,tag=catcher,distance=..3] run function phan:game/1/player/score_music_disc
 execute unless score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a ~ ~ ~ 2.5 .8
-execute if score #gameState value matches 4 as @a[tag=catcher] run function phan:player/tell_spectators
+execute if score #gameState value matches 4 as @a[tag=catcher,distance=..3] run function phan:player/tell_spectators
 execute if score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a[tag=tellMe] ~ ~ ~ 2.5 .8
 
 #found a hidden music disc!
 execute if entity @s[tag=hiddenMusicDisc] run function phan:game/1/objects/hidden_music_disc/_index
 
 #clean up tag
-tag @a[tag=catcher] remove catcher
+tag @a[tag=catcher,distance=..3] remove catcher
 
 #do we have a spawner? tell it we're done
 scoreboard players operation #getID value = @s eyeSpawnerID

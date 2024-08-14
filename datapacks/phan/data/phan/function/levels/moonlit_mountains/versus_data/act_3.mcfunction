@@ -1,7 +1,7 @@
 scoreboard players set #vGameType value 1
 scoreboard players set #vCheckPoints value 17
-scoreboard players set #vLaps value 2
-scoreboard players set #vEyesNeeded value 16
+scoreboard players set #vLaps value 3
+scoreboard players set #vEyesNeeded value 24
 scoreboard players set #vMinTimeLimit value 2400
 scoreboard players set #vTimeLimit value 6000
 

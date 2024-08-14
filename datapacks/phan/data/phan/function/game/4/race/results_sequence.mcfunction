@@ -1,7 +1,7 @@
 #gameTime to 100000 if not there already
 execute if score #gameTime value matches ..99999 run scoreboard players set #gameTime value 100000
 
-#hide sidebar so the switch to the points display is more noticable
+#hide sidebar so the switch to the points display is more noticeable
 execute if score #gameTime value matches 100000 run scoreboard objectives setdisplay sidebar
 execute if score #gameTime value matches 100000 run scoreboard players set @a[tag=doneWithIntro] pShowHUD 0
 

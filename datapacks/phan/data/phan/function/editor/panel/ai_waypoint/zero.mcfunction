@@ -6,6 +6,7 @@ scoreboard players reset @s AIBC_event
 scoreboard players reset @s AIBC_modifier
 tag @s remove AIBC_requireGround
 tag @s remove AIBC_midAir
+tag @s remove AIBC_lowHeight
 scoreboard players reset @s AIBC_spread_x
 scoreboard players reset @s AIBC_spread_z
 
