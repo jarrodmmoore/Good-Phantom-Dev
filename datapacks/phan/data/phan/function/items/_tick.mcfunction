@@ -15,7 +15,7 @@ execute as @e[type=item] run function phan:items/item_entity_check
 execute if score #gameState value matches 4 run function phan:items/random/pick_cooldowns
 
 
-#tnts
+#tnt
 execute as @e[type=tnt] at @s run function phan:items/tnt
 
 

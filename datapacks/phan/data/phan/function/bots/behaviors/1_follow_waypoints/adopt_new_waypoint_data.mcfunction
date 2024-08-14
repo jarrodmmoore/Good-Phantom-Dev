@@ -39,6 +39,9 @@ scoreboard players set #botCheckTrapsAltRoute value 0
 execute if score @s botTargetWaypoint matches 0 run tellraw @a[tag=phan_edit] ["",{"text":"[EDIT WARNING] Bot reached a waypoint with no valid outgoing directions.","color":"red"},{"text":" located "},{"score":{"name":"@s","objective":"location_x"}},{"text":" "},{"score":{"name":"@s","objective":"location_y"}},{"text":" "},{"score":{"name":"@s","objective":"location_z"}}]
 execute if score @s botTargetWaypoint matches 0 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
 
+#battle mode: refresh the counter for number of times we're allowed to re-route
+execute if score #vGameType value matches 2 run scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
+
 #target the next waypoint
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botTargetWaypoint
 function phan:bots/behaviors/1_follow_waypoints/find_targeted_waypoint with storage phan:bot_args

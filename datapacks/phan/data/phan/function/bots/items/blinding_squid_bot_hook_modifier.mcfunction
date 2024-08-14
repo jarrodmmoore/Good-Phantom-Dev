@@ -19,11 +19,11 @@ scoreboard players set @s botHookModifierTime 5
 execute if entity @s[scores={botSkill=3,botHookModifier=90..}] run scoreboard players set @s botHookModifier 89
 execute if entity @s[scores={botSkill=3,botHookModifier=..-90}] run scoreboard players set @s botHookModifier -89
 
-execute if entity @s[scores={botSkill=4,botHookModifier=60..}] run scoreboard players set @s botHookModifier 59
-execute if entity @s[scores={botSkill=4,botHookModifier=..-60}] run scoreboard players set @s botHookModifier -59
+execute if entity @s[scores={botSkill=4,botHookModifier=70..}] run scoreboard players set @s botHookModifier 69
+execute if entity @s[scores={botSkill=4,botHookModifier=..-70}] run scoreboard players set @s botHookModifier -69
 
-execute if entity @s[scores={botSkill=5,botHookModifier=40..}] run scoreboard players set @s botHookModifier 39
-execute if entity @s[scores={botSkill=5,botHookModifier=..-40}] run scoreboard players set @s botHookModifier -39
+execute if entity @s[scores={botSkill=5,botHookModifier=50..}] run scoreboard players set @s botHookModifier 49
+execute if entity @s[scores={botSkill=5,botHookModifier=..-50}] run scoreboard players set @s botHookModifier -49
 
 execute if entity @s[scores={botSkill=6,botHookModifier=20..}] run scoreboard players set @s botHookModifier 19
 execute if entity @s[scores={botSkill=6,botHookModifier=..-20}] run scoreboard players set @s botHookModifier -19

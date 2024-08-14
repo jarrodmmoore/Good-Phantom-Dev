@@ -1,3 +1,5 @@
+#executed by a bot entity
+
 #fallback: remember where we first respawned when the game started
 scoreboard players operation #vsRespawnX value = @s vsRespawnX
 scoreboard players operation #vsRespawnY value = @s vsRespawnY
@@ -53,6 +55,6 @@ scoreboard players set #playerDied value 0
 function phan:bots/stage_data_for_transfer
 
 #perish
-scoreboard players set @s lifespan 1
+scoreboard players set @s lifespan 0
 tag @s remove ai
 tag @s remove botRespawn

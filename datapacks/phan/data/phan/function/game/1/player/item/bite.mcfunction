@@ -23,6 +23,7 @@ tag @s remove attacker
 
 #versus mode: do damage
 execute if score #gameState value matches 4 run function phan:game/4/projectile/detect_player_bite
+execute if score #gameState value matches 4 if score #botsEnabled value matches 1.. run function phan:game/4/projectile/detect_player_bite_bot
 
 scoreboard players set @s inputCooldownA 15
 scoreboard players set @s bufferInput1 0

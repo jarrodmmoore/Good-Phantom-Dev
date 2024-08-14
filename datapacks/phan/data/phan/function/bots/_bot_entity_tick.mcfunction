@@ -82,6 +82,7 @@ execute unless score @s botHoldingItem = @s botHoldingItemPrev run function phan
 
 #publish sidebar stuff
 execute if score #vGameType value matches 1 run function phan:bots/race/publish_positions
+execute if score #vGameType value matches 2 run function phan:bots/battle/publish_positions
 
 
 #hurtful time, used to detect when damage was caused by an enemy and needs time punishment

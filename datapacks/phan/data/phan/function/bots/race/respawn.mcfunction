@@ -1,3 +1,7 @@
+#alt function for battle mode
+execute if score #vGameType value matches 2 run return run function phan:bots/battle/respawn
+#=====
+
 #send data to controller one last time before we perish
 function phan:bots/stage_data_for_transfer
 tag @s[tag=hasDataToSend] remove hasDataToSend
