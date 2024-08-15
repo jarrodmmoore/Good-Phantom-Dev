@@ -18,7 +18,7 @@ execute if score @s botHp matches ..1019 run function phan:bots/take_damage
 
 #check for nearby objects of interest
 scoreboard players remove @s botReactionTimer 1
-execute if score @s botReactionTimer matches ..0 unless score @s botPreparedToBoostTrap matches 1.. run function phan:bots/reaction/_check_objects_of_interest
+execute if score @s botReactionTimer matches ..0 unless score @s botPreparedToBoostTrap matches 1.. unless score @s botTargetPriority matches 1.. run function phan:bots/reaction/_check_objects_of_interest
 execute if score @s botPreparedToBoostTrap matches 1.. run function phan:bots/reaction/_check_objects_of_interest_mine_boost
 
 #=====
@@ -46,6 +46,9 @@ scoreboard players reset @s[scores={attackTime=..0,attackerID=1..}] attackerID
 
 #rubber-banding with low level bots
 execute if score #5Hz value matches 0 if score @s botSkill matches ..3 run function phan:bots/rubber_band/_index
+
+#battle mode: look for important targets
+execute if score #vGameType value matches 2 run function phan:bots/battle/_battle_logic
 
 #behavior based on state
 function phan:bots/behaviors/_behavior_state_index

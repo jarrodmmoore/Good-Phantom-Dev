@@ -52,11 +52,9 @@ execute store result storage phan:podium_sequence location_x int 1 run scoreboar
 execute store result storage phan:podium_sequence location_y int 1 run scoreboard players get #podiumSequenceY value
 execute store result storage phan:podium_sequence location_z int 1 run scoreboard players get #podiumSequenceZ value
 
-#tell the nodes for this act to start loading
-scoreboard players set #versusSpawn value 0
-execute if score #vAct value matches 1 run scoreboard players set #area0SpawnA value 0
-execute if score #vAct value matches 2 run scoreboard players set #area0SpawnB value 0
-execute if score #vAct value matches 3 run scoreboard players set #area0SpawnC value 0
+#relevant nodes will be loaded when the time comes
+function phan:game/1/spawning/reset_all
+function phan:game/1/spawning/reset/reset_versus
 
 #set state
 scoreboard players set #gameState value 5

@@ -13,6 +13,7 @@ tag @s remove enderEye
 
 #projectile owner gets da points
 execute as @a[tag=projectileOwner] run function phan:game/1/player/score_ender_eye
+execute if score #botsEnabled value matches 1.. as @e[tag=projectileOwner,type=zombie] run function phan:game/1/player/score_ender_eye
 
 #can't be shot again
 tag @s remove shootable

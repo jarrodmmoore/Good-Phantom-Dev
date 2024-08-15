@@ -53,6 +53,9 @@ execute if score #givenPads value matches 6.. run tag 00000000-0000-0328-0000-00
 #can't get a warp twice in a row
 execute if score @s picksSinceWarp matches ..1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..17}] add tempItemBan
 
+#can't get warp in the home stretch
+execute if entity @s[tag=vsHomeStretch] run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..17}] add tempItemBan
+
 #cut down on projectile spam from mid to back
 execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..2}] add tempItemBan
 

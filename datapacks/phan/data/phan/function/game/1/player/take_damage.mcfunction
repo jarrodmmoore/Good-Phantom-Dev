@@ -5,6 +5,9 @@ execute on attacker if entity @s[tag=ai] run scoreboard players set #getGot valu
 execute on attacker if entity @s[tag=hurtful] run scoreboard players set #getGot value 1
 execute if score #getGot value matches 1.. run scoreboard players set @s hurtfulTime 1
 
+#shield blocks damage!
+execute if entity @s[scores={shieldTime=1..,hurtfulTime=1..}] run function phan:items/shield_block_damage
+
 #lose 3sec for getting hit in score attack mode
 execute if score #gameState value matches 0..1 run scoreboard players remove @s[scores={hurtfulTime=1..,hitstun=..0}] timerAdd 3
 execute if score #gameState value matches 0..1 run scoreboard players set @s[scores={hurtfulTime=1..,hitstun=..0}] timerAddDelay 20

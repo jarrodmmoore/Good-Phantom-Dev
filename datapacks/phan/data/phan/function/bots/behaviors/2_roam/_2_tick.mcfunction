@@ -14,7 +14,8 @@ execute if score #random2 value matches 1 store result score @s botRoamLookBias2
 scoreboard players set @s botHookModifierTime 4
 
 #don't run into pits, silly goose! do a 180
-execute if score @s airTime matches ..4 at @s rotated ~ 0 if block ^ ^ ^1 #phan:not_solid unless block ^ ^ ^1 water if block ^ ^-1 ^1 #phan:not_solid unless block ^ ^-1 ^1 water if block ^ ^-2 ^1 #phan:not_solid if block ^ ^-3 ^1 #phan:not_solid run scoreboard players add @s botHookModifier 180
+#execute if score @s airTime matches ..4 at @s rotated ~ 0 if block ^ ^ ^1 #phan:not_solid unless block ^ ^ ^1 water if block ^ ^-1 ^1 #phan:not_solid unless block ^ ^-1 ^1 water if block ^ ^-2 ^1 #phan:not_solid if block ^ ^-3 ^1 #phan:not_solid run scoreboard players add @s botHookModifier 180
+#^ DISABLED, because it resulted in bots getting stuck more often than not. this was especially bad in Shattered City III's giant trees.
 
 #turn sharply if we're rubbing against a wall
 execute store result score #test value run random value 1..50

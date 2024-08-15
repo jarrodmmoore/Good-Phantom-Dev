@@ -12,7 +12,7 @@ execute if entity @s[scores={inWater=1..}] run return 0
 #don't chain super jumps into one another
 execute if entity @s[tag=botUsingSuperJump] run return 0
 
-#hard+ bots won't use until homestrech (should probably prioritize the pre-defined shortcuts)
+#hard+ bots won't use until homestretch (should probably prioritize the pre-defined shortcuts)
 execute if score #vGameType value matches 1 if entity @s[scores={botSkill=4..},tag=!vsHomeStretch] run return 0
 
 #normal bots have 50% chance of not using

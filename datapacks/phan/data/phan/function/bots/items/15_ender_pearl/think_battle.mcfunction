@@ -12,7 +12,7 @@ execute if entity @s[tag=!vsHomeStretch,scores={botSkill=5..,botHasItem15=..1}] 
 #if we're not the rival bot: don't ender pearl at the end portal if rival bot hasn't finished yet
 execute if entity @s[tag=vsHomeStretch,tag=!botRival] if score #botRivalFinished value matches 0 run return 0
 
-#hard+: if in home strech: keep holding ender pearl regardless if we can use it. keep checking los!
+#hard+: if in home stretch: keep holding ender pearl regardless if we can use it. keep checking los!
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] if score @s botFearsEnderman matches 0 run scoreboard players set @s botHoldingItem 15
 
 #never use if we have another ender pearl entity in flight
@@ -24,24 +24,28 @@ execute if score @s botTeleportTimer matches 0.. run return 0
 
 scoreboard players set #targetExists value 0
 
-#might throw ender pearl at a player!
-execute if entity @s[tag=!vsHomeStretch] anchored eyes rotated ~ 0 as @e[tag=playing,tag=!botRival,distance=10..50,limit=5,sort=random] facing entity @s eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/pearl_check_los_start_direct
+#might throw ender pearl at an ever eye
+execute if entity @s[tag=!vsHomeStretch,scores={botSkill=3..}] positioned ~ ~1.8 ~ rotated ~ 0 as @e[type=marker,tag=enderEye,distance=10..50,limit=5,sort=random] run function phan:bots/items/15_ender_pearl/find_possible_targets_race_direct
 
-#might use ender pearl for the portal
-execute if entity @s[tag=vsHomeStretch] anchored eyes rotated ~ 0 run function phan:bots/items/15_ender_pearl/find_possible_targets_race_portal
+#might throw ender pearl at a player! (unless we already decided to throw at an ever eye)
+execute if entity @s[tag=!vsHomeStretch] positioned ~ ~1.8 ~ rotated ~ 0 as @e[tag=playing,tag=!botRival,distance=10..50,limit=5,sort=random] run function phan:bots/items/15_ender_pearl/find_possible_targets_race_direct
+
+#homestretch: might use ender pearl for the portal
+execute if entity @s[tag=vsHomeStretch] positioned ~ ~1.8 ~ rotated ~ 0 as @e[type=marker,tag=portalCore,scores={versusSpawn=1},distance=..70] run function phan:bots/items/15_ender_pearl/find_possible_targets_race_direct
 
 #no viable target found? exit out now
 execute if score #targetExists value matches 0 run return 0
 
 #=====
 
-#use item facing target
-execute if entity @s[tag=!vsHomeStretch] facing entity @e[limit=1,sort=nearest,tag=viableTarget,distance=..52] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
-execute if entity @s[tag=vsHomeStretch] if score #rot_pitch value matches -15 facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
-execute if entity @s[tag=vsHomeStretch] if score #rot_pitch value matches -20 facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
-execute if entity @s[tag=vsHomeStretch] if score #rot_pitch value matches -25 facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
-execute if entity @s[tag=vsHomeStretch] if score #rot_pitch value matches -30 facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
-execute if entity @s[tag=vsHomeStretch] if score #rot_pitch value matches -35 facing entity @e[limit=1,sort=nearest,tag=viableTarget,type=marker,distance=..72] eyes rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
+#clear flight panic tag if we found target
+tag @s[tag=botFlightPanic] remove botFlightPanic
+
+#use item while rotated facing target
+execute if score #rot_pitch value matches -15 facing entity @e[limit=1,sort=nearest,tag=viableTarget,distance=..72] feet rotated ~ ~-15 run function phan:bots/items/15_ender_pearl/use
+execute if score #rot_pitch value matches -25 facing entity @e[limit=1,sort=nearest,tag=viableTarget,distance=..72] feet rotated ~ ~-25 run function phan:bots/items/15_ender_pearl/use
+execute if score #rot_pitch value matches -35 facing entity @e[limit=1,sort=nearest,tag=viableTarget,distance=..72] feet rotated ~ ~-35 run function phan:bots/items/15_ender_pearl/use
+execute if score #rot_pitch value matches -45 facing entity @e[limit=1,sort=nearest,tag=viableTarget,distance=..72] feet rotated ~ ~-45 run function phan:bots/items/15_ender_pearl/use
 
 #clean up tags
-tag @e[tag=viableTarget,distance=..52] remove viableTarget
+tag @e[tag=viableTarget,distance=..72] remove viableTarget

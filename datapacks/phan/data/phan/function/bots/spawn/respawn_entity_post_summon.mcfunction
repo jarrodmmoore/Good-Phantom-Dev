@@ -59,6 +59,8 @@ scoreboard players set @s botHookModifierTime 0
 scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value
 scoreboard players set @s inputCooldown 0
 scoreboard players set @s inputCooldownB 0
+scoreboard players set @s inputCooldownC 0
+scoreboard players set @s inputCooldownC 0
 scoreboard players set @s hurtfulTime 0
 execute store result score @s botReactionTimer run random value 1..20
 scoreboard players set @s AIBC_selected 0
@@ -79,6 +81,10 @@ scoreboard players set @s botTeleportTimer -1
 scoreboard players set @s attackTime 0
 scoreboard players set @s botRubberbanding 0
 scoreboard players set @s botPreparedToDodgeTrap 0
+scoreboard players set @s botTargetPriority 0
+scoreboard players set @s botBattleThinkTime 30
+scoreboard players set @s botProjectileThinkTime 40
+scoreboard players set @s botBiteThinkTime 40
 
 #should we be a rival?
 execute if score #setBotAsRival value matches 1 run tag @s add botRival

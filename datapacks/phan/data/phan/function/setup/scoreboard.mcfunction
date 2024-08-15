@@ -524,6 +524,11 @@ scoreboard objectives add botFearsEnderman dummy
 scoreboard objectives add botExplosionBoostTime dummy
 scoreboard objectives add botVaultUpwardTime dummy
 scoreboard objectives add botHullFallFlying dummy
+scoreboard objectives add botTargetPriority dummy
+scoreboard objectives add botBattleThinkTime dummy
+scoreboard objectives add botIgnoreEyeID dummy
+scoreboard objectives add botProjectileThinkTime dummy
+scoreboard objectives add botBiteThinkTime dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy

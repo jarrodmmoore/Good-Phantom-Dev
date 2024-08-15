@@ -2,6 +2,7 @@
 scoreboard players set #dontConsumeItem value 1
 
 execute as @a[tag=doneWithIntro] if score @s playerID = #projID value run tag @s add projectileOwner
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #projID value run tag @s add projectileOwner
 
 #what are we?
 execute if entity @s[tag=stardust] at @s unless score @s hitstun matches 1.. run function phan:game/1/projectile/get_hit_stardust

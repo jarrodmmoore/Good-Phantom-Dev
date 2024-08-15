@@ -13,10 +13,10 @@ execute if entity @s[scores={inWater=1..}] run return 0
 execute if score @s botSkill matches ..1 run return 0
 
 
-#yse "test" to keep track of whether we want to use this
+#use "test" to keep track of whether we want to use this
 scoreboard players set #test value 1
 
-#hard+ bots won't use until homestrech (should probably prioritize the pre-defined shortcuts)
+#hard+ bots won't use until homestretch (should probably prioritize the pre-defined shortcuts)
 execute if score #vGameType value matches 1 if entity @s[scores={botSkill=4..},tag=!vsHomeStretch] run scoreboard players set #test value 0
 
 #normal bots have 50% chance of not using

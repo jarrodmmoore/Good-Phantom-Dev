@@ -18,4 +18,4 @@ execute if score #takePearls value matches 2.. if entity @a[limit=1,tag=playing,
 
 
 #advancement for finishing portal in deep dive 1 without using the teleporter
-execute if score #chosenLevel value matches 5 if score #assist_enabled_scoreattack value matches 0 if score #takePearls value matches ..1 run advancement grant @a[tag=lastDonor,scores={pCurrentArea=1,teleportersUsed=..0}] only phan:score_attack/one_and_done
+execute if score #chosenLevel value matches 5 if score #gameState value matches 1.. if score #assist_enabled_scoreattack value matches 0 if score #takePearls value matches ..1 run advancement grant @a[tag=lastDonor,scores={pCurrentArea=1,teleportersUsed=..0}] only phan:score_attack/one_and_done

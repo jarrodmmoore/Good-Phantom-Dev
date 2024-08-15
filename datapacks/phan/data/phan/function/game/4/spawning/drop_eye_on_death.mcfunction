@@ -11,6 +11,9 @@ team join colorPurple @e[tag=setMe,type=item_display,distance=..2]
 #glow!
 data merge entity @e[limit=1,tag=setMe,type=item_display,distance=..2] {Glowing:1b}
 
+#each eye gets a unique ID
+execute as @e[tag=setMe,type=item_display,distance=..2] run function phan:game/4/spawning/eye_get_unique_id
+
 #glow in battle mode
 #execute if score #assist_navigation value matches ..0 if score #gameState value matches 4 if score #vGameType value matches 2 run data merge entity @e[limit=1,tag=setMe] {Glowing:1b}
 

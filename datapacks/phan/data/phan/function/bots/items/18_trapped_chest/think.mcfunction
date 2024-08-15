@@ -26,13 +26,13 @@ execute if score @s botSkill matches ..1 if entity @a[tag=playing,distance=..16]
 execute if score @s botSkill matches 3.. if function phan:bots/items/13_mine/check_for_thin_lane run scoreboard players set #test value 1
 
 #tryhard bot: hold onto at least 1 mine unless it's the final lap
-execute if entity @s[tag=!botOnFinalLap,scores={botSkill=5..,botHasItem13=..1}] run scoreboard players set #test value 0
+execute if score #vGameType value matches 1 if entity @s[tag=!botOnFinalLap,scores={botSkill=5..,botHasItem13=..1}] run scoreboard players set #test value 0
 
 #hard+ bot: use mine to hit player directly behind us
 execute if score @s botSkill matches 4.. positioned ^ ^ ^-5 if entity @e[tag=playing,distance=..4,tag=!botRival] run scoreboard players set #test value 1
 
 #hard+ bot: dump all mines in home stretch
-execute if entity @s[scores={botSkill=4..},tag=vsHomeStretch] run scoreboard players set #test value 1
+execute if score #vGameType value matches 1 if entity @s[scores={botSkill=4..},tag=vsHomeStretch] run scoreboard players set #test value 1
 
 #=====
 #abort if we didn't decide to use

@@ -13,7 +13,7 @@ execute store result storage phan:coords target_z_dec int 1 run scoreboard playe
 #count down rotation modifier time
 execute if score @s botHookModifierTime matches 1.. run function phan:bots/movement/rotation_modifier
 
-#couunt down pitch modifier time
+#count down pitch modifier time
 execute if score @s botVaultUpwardTime matches 1.. unless entity @s[scores={botMoveState=0,botJumpTimer=..-1}] run scoreboard players remove @s botVaultUpwardTime 1
 
 #store rotation (sum of base + modifier)

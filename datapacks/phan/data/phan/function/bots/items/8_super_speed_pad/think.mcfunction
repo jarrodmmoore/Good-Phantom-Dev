@@ -7,7 +7,7 @@ execute if score @s botFearsEnderman matches 1 run return 0
 #=====
 
 #tryhard+ bot: hold onto at least 1 pad for waypoint shortcuts until final lap
-execute if entity @s[tag=!botOnFinalLap,tag=!botFlightPanic,scores={botSkill=5..,botHasItem8=..1}] run return 0
+execute if score #vGameType value matches 1 if entity @s[tag=!botOnFinalLap,tag=!botFlightPanic,scores={botSkill=5..,botHasItem8=..1}] run return 0
 
 #never use while gliding (unless improv flying)
 execute if score @s botMoveState matches 2 unless entity @s[tag=botImprovFlight,scores={botSkill=3..}] unless entity @s[tag=botFlightPanic] run return run scoreboard players set @s botHoldingItem 0

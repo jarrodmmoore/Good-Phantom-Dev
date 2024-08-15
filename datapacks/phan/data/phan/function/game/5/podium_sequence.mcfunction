@@ -1,7 +1,7 @@
 #note: game/5 is started at gameTime=30
 
 #wait a second before loading objects
-execute if score #gameTime value matches 35 run function phan:game/1/spawning/reset_all
+execute if score #gameTime value matches 35 run function phan:game/1/spawning/reset/reset_versus
 execute if score #gameTime value matches 37.. run function phan:game/5/handle_object_loading
 
 #teleport to proper area and hold players in place for a second
@@ -18,7 +18,7 @@ execute if score #gameTime value matches 40..50 run scoreboard players add #load
 
 #go to camera
 execute if score #gameTime value matches 80 run effect clear @a[tag=doneWithIntro] blindness
-execute if score #gameTime value matches 80..319 as @e[type=armor_stand,tag=podiumPlayerCamera,limit=1] at @s run function phan:game/5/podium_camera_hold_players
+execute if score #gameTime value matches 80..379 as @e[type=armor_stand,tag=podiumPlayerCamera,limit=1] at @s run function phan:game/5/podium_camera_hold_players
 
 #calculate who got top 3
 execute if score #gameTime value matches 80 run function phan:game/5/top_3/calculate_point_placements
