@@ -10,6 +10,10 @@ scoreboard players set @s check 0
 scoreboard players set @s checkFake 0
 scoreboard players set @s lap 1
 scoreboard players set @s rawTime 0
+scoreboard players set @s pShowHUD 1
+
+#bots only? not anymore!
+scoreboard players set #botsOnly value 0
 
 #hi
 tellraw @s ["",{"translate":"gp.misc.playing","color":"aqua","italic":true}]

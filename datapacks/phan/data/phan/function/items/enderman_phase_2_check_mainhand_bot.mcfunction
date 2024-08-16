@@ -1,0 +1,2 @@
+#this is in its own function so the check on #success evaluates when it's supposed to (we should only be stealing from 1 player, not multiple!)
+execute if score #success value matches 0 if score @s botHoldingItem matches 1.. run function phan:items/steal_item/_index_bot

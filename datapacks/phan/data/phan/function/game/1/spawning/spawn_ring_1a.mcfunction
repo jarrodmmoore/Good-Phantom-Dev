@@ -5,5 +5,5 @@ execute if score @s editNode matches 4 run summon item_display ~ ~1.6 ~ {Tags:["
 
 function phan:game/1/spawning/spawn__ring_rotate
 function phan:game/1/spawning/spawn__give_generic_data
-execute if score #gameState value matches 4 as @e[tag=setMe,limit=1,type=item_display] run function phan:game/1/spawning/ring_get_id
-tag @e[tag=setMe] remove setMe
+execute if score #gameState value matches 4 as @e[tag=setMe,limit=1,type=item_display,distance=..2] run function phan:game/1/spawning/ring_get_id
+tag @e[tag=setMe,distance=..2] remove setMe

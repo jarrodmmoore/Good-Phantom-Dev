@@ -2,3 +2,6 @@ $give @s minecraft:amethyst_shard[custom_name='{"translate":"gp.item.energy_poti
 
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s lastItemPicked 4
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem4 $(count)

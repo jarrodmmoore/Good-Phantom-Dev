@@ -21,7 +21,13 @@ execute if score #gameTime value matches 160..250 run function phan:game/4/start
 execute if score #vGameType value matches 1 run function phan:game/4/race/_race_main
 execute if score #vGameType value matches 2 run function phan:game/4/battle/_battle_main
 
+#=====
+#bots do their thing (note that this happens AFTER the race or battle loop. this is important to remember!)
+execute if score #botsEnabled value matches 1.. if score #gameState value matches 4 run function phan:bots/_global_bot_tick
+#=====
+
 #selected track runs its code
+execute if score #gameTime value matches ..300 run function phan:levels/_index_versus_countdown
 execute if score #subGameState value matches 0 run function phan:levels/_index_versus_loop
 
 #night vision?
@@ -52,13 +58,17 @@ execute as @e[type=arrow,tag=hurtfulArrow] at @s run function phan:game/1/object
 scoreboard players reset @a[scores={damage=1..}] damage
 
 #projectiles do stuff
-execute as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
+execute if score #botsEnabled value matches ..0 as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
+execute if score #botsEnabled value matches 1.. as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index_bot_inclusive
 
 #can use triggers
-execute if score #playersOnServer value matches ..1 run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #hudPeakPlayers value matches ..1 run scoreboard players enable @a[tag=nonSpectator] restart
 scoreboard players enable @a[tag=nonSpectator] exit
 execute if entity @a[tag=nonSpectator,scores={restart=1..}] run function phan:game/4/restart_round
 execute as @a[tag=nonSpectator,scores={exit=1..}] run function phan:game/4/player_exit
+#triggers work differently if game is bots-only
+execute if score #botsOnly value matches 1 run function phan:game/4/bots_only_triggers
 scoreboard players enable @a[tag=playing,gamemode=adventure] respawn
 #player respawn trigger handled in _player_main...
 scoreboard players enable @a[tag=!playing] spectatorView
@@ -72,4 +82,5 @@ execute if score #showNametags value matches 0 unless entity @a[tag=playing,scor
 tag @a[tag=nonSpectator] remove nonSpectator
 
 #force end if no active player is found
-execute if score #gameState value matches 4 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/0/_0_init
+execute if score #gameState value matches 4 if score #botsOnly value matches 0 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early
+execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[tag=botController,type=block_display] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early

@@ -7,7 +7,7 @@ execute if score @s rawTime <= #timeBronze value run scoreboard players set #inp
 execute if score @s rawTime <= #timeSilver value run scoreboard players set #inputRank value 3
 execute if score @s rawTime <= #timeGold value run scoreboard players set #inputRank value 2
 execute if score @s rawTime <= #timeDiamond value run scoreboard players set #inputRank value 1
-#execute if score #assist_enabled value matches 1.. run scoreboard players set #inputRank value 5
+#execute if score #assist_enabled_scoreattack value matches 1.. run scoreboard players set #inputRank value 5
 
 tellraw @a[tag=doneWithIntro] ["",{"text":" "}]
 
@@ -55,4 +55,4 @@ execute unless score #inputRank value matches 4.. run tellraw @a[tag=doneWithInt
 execute if score #inputRank value matches 5.. run function phan:game/1/show_result/time_raw_print
 
 
-execute if score #assist_enabled value matches 0 run tellraw @a[tag=doneWithIntro] ["",{"text":" "}]
+execute if score #assist_enabled_scoreattack value matches 0 run tellraw @a[tag=doneWithIntro] ["",{"text":" "}]

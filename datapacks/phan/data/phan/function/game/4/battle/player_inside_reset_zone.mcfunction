@@ -13,4 +13,5 @@ execute if score #resetCondition value matches 4 unless entity @s[scores={fallFl
 
 
 #do a respawn if we made it this far into the function
-function phan:game/4/battle/respawn
+execute if entity @s[type=player] run function phan:game/4/battle/respawn
+execute if entity @s[tag=ai] run tag @s add botRespawn

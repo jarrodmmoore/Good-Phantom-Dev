@@ -2,3 +2,6 @@ $give @s minecraft:red_wool[custom_model_data=1111150,custom_name='{"translate":
 
 scoreboard players set @s picksSinceTrap 0
 scoreboard players set @s lastItemPicked 18
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem18 $(count)

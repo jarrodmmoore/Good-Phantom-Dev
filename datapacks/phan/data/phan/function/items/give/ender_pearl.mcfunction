@@ -2,3 +2,6 @@ $give @s minecraft:ender_pearl[custom_name='{"translate":"gp.item.ender_pearl","
 
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s lastItemPicked 15
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem15 $(count)

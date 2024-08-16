@@ -15,6 +15,8 @@ execute if score #assist_enabled value matches 1.. run scoreboard players set #a
 execute if score #assist_enabled value matches 1.. run scoreboard players set #assist_energy value 1
 execute if score #assist_enabled value matches 1.. run scoreboard players set #assist_combos value 1
 execute if score #assist_enabled value matches 1.. run scoreboard players set #assist_navigation value 1
+execute if score #assist_enabled value matches 1.. run scoreboard players set #assist_rival_bot value 1
+execute if score #assist_enabled value matches 1.. run scoreboard players set #assist_race_end_time value 1
 #disabled
 execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_time_limit value 0
 execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_movement value 0
@@ -22,6 +24,10 @@ execute if score #assist_enabled value matches ..0 run scoreboard players set #a
 execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_energy value 0
 execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_combos value 0
 execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_navigation value 0
+execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_rival_bot value 0
+execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_race_end_time value 0
+execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_items value 0
+execute if score #assist_enabled value matches ..0 run scoreboard players set #assist_catch_up value 0
 
 #feedback sound
 execute at @s run playsound minecraft:block.note_block.hat master @a ~ ~ ~ 1 1

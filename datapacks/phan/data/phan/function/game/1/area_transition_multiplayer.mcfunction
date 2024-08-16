@@ -1,6 +1,6 @@
 #john madden in an alternate universe that has multiple john maddens
 
-##############################
+#=====
 #CAMERA + SOUL STUFF
 
 #remember our ID
@@ -38,11 +38,11 @@ scoreboard players operation @s pGameTime = #pGameTime value
 #camera looks at playerSoul and follows it when it gets too far away
 execute if score #pGameTime value matches 100040..100140 if score #followStraightUp value matches 1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_look
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #FEEDBACK STUFF
 
 #show rank
@@ -56,7 +56,7 @@ execute if score @s pGameTime matches 100060..100499 at @s if score #gameState v
 #execute if score @s pGameTime matches 100060.. if score @s pTimerGoal matches 1.. if score @s pTimeRemaining < @s pTimerGoal run scoreboard players add @s pTimeRemaining 40
 #execute if score @s pGameTime matches 100060.. if score @s pTimerGoal matches 1.. if score @s pTimeRemaining > @s pTimerGoal run scoreboard players operation @s pTimeRemaining = @s pTimerGoal
 
-##############################
+#=====
 
 
 #free play + time attack: stop the timer

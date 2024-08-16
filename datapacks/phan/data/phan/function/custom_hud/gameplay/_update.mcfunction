@@ -94,7 +94,7 @@ execute if score #hudShowT100 value matches 0 run scoreboard players remove #hud
 #special stuff happens if we're showing a score threshold we just beat
 execute if score @s hudFlashTime matches 1.. run scoreboard players add @s scoreDigit1 100
 
-###########
+#=====
 #only update slots if they changed since from the previous run
 
 #SLOT 1-4 (handled in different ways depending if the objective is complete or not)
@@ -127,7 +127,7 @@ execute unless score @s scoreDigit2 = #hudPrev15 value run function phan:custom_
 #SLOT 16
 execute unless score @s scoreDigit1 = #hudPrev16 value run function phan:custom_hud/gameplay/slot16
 
-###########
+#=====
 
 #remember how many digits we showed?
 scoreboard players operation #hudDigitShow2 value = #hudDigitShow value

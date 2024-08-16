@@ -2,3 +2,6 @@ $give @s minecraft:prismarine_shard[custom_name='{"translate":"gp.item.swiftness
 
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s lastItemPicked 5
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem5 $(count)

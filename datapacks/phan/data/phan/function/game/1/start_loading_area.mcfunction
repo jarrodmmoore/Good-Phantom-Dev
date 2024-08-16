@@ -1,4 +1,4 @@
-#run by a player
+#executed by a player
 #reset all object spawns
 #make sure area0 and area1 are spawned
 execute if score @s pCurrentArea matches 1 run function phan:game/1/spawning/reset_all_a

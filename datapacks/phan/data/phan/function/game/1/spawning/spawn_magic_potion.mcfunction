@@ -3,4 +3,4 @@ particle instant_effect ~ ~2 ~ 0 0 0 0.2 10 force
 execute at @s run playsound minecraft:entity.ender_eye.death master @a ~ ~ ~ 1.5 1.25
 
 function phan:game/1/spawning/spawn__give_generic_data
-tag @e[tag=setMe] remove setMe
+tag @e[tag=setMe,type=item,distance=..2] remove setMe

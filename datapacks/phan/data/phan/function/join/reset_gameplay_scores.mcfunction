@@ -34,3 +34,5 @@ scoreboard players set @a pPenaltyTime 0
 scoreboard players set @a pPenaltyPoints 0
 
 scoreboard players set @a enemiesBeatRed 0
+
+scoreboard players set @a vsRespawnX -2147483648

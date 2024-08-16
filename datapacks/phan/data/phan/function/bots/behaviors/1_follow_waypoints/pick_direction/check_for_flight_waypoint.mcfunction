@@ -1,0 +1,3 @@
+$execute as @e[type=marker,tag=AIBC,distance=..16,scores={AIBC_id=$(id)}] run return run function phan:bots/behaviors/1_follow_waypoints/pick_direction/found_flight_friendly_waypoint {dir:$(max_distance)}
+$execute as @e[type=marker,tag=AIBC,distance=..40,scores={AIBC_id=$(id)}] run return run function phan:bots/behaviors/1_follow_waypoints/pick_direction/found_flight_friendly_waypoint {dir:$(max_distance)}
+$execute as @e[type=marker,tag=AIBC,distance=..100,scores={AIBC_id=$(id)}] run return run function phan:bots/behaviors/1_follow_waypoints/pick_direction/found_flight_friendly_waypoint {dir:$(max_distance)}

@@ -1,0 +1,1 @@
+execute if block ^ ^-0.2 ^0.5 #phan:not_solid if block ^ ^-1.2 ^0.5 #phan:not_solid if block ^ ^0.9 ^0.5 #phan:not_solid run scoreboard players set @s botJumpTimer 0

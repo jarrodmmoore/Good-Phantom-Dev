@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.dream_challenges",
+            "italic": true,
+            "color": "#FFFFAA"
+        },
+        "description": {
+            "translate": "gp.advancement.description.dream_challenges",
+            "italic": true,
+            "color": "white"
+        },
+        "icon": {
+            "id": "minecraft:ochre_froglight"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/rip_and_tear"
+}

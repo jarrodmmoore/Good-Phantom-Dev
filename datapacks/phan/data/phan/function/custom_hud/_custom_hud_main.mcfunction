@@ -5,7 +5,7 @@ scoreboard players set #hudNodesAvailable value 1
 #all active players must be assigned their own HUD node
 execute as @a[gamemode=adventure,tag=playing] unless score @s hudNode matches 1.. run function phan:custom_hud/get_hud_node
 
-########################
+#=====
 #generic stuff that we're going to calculate globally
 
 #player count
@@ -15,7 +15,7 @@ execute if score #gameState value matches 4 run function phan:custom_hud/count_p
 scoreboard players set #hudLeftDebt value 0
 scoreboard players set #hudRightDebt value 0
 
-########################
+#=====
 
 #HUD modes
 #1 = score attack (gameplay)

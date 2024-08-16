@@ -1,7 +1,7 @@
 scoreboard players set #movePoints value 1
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #calculate sound
 execute if score #10Hz value matches 1 run playsound minecraft:block.note_block.bit master @a[tag=tellMe] ~ 1000000 ~ 1000000 1.65

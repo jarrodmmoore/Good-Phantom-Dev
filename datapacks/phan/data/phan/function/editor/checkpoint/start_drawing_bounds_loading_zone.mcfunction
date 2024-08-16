@@ -1,4 +1,4 @@
-#run by the reset zone node
+#executed by the reset zone node
 
 #store coords
 scoreboard players operation #checkMaxX value = @s checkMaxX

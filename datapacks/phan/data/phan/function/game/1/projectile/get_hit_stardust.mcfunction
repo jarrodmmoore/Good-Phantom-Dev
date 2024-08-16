@@ -1,6 +1,6 @@
 #die
 scoreboard players set @s lifespan 1
-execute as @a[tag=projectileOwner] run function phan:tell_spectators
+execute as @a[tag=projectileOwner] run function phan:player/tell_spectators
 playsound minecraft:block.amethyst_block.hit master @a[tag=!tellMe] ~ ~1 ~ 2 1.5
 playsound minecraft:block.amethyst_block.hit master @a[tag=tellMe] ~ ~1 ~ 2 1.5 .3
 

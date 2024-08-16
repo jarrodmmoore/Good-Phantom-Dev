@@ -5,6 +5,15 @@ team modify player color white
 team modify observer color white
 team modify player nametagVisibility always
 team modify player friendlyFire false
+team modify botDisplayVEasy color white
+team modify botDisplayEasy color white
+team modify botDisplayNormal color white
+team modify botDisplayHard color white
+team modify botDisplayTryhard color white
+team modify botDisplayTryharder color white
+
+#bots don't exist anymore
+scoreboard players set #botsEnabled value 0
 
 #if a player was just playing in a game, move them back in the player queue
 #we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing.
@@ -31,7 +40,7 @@ execute unless score #allowCrown value matches 1 run tag @a[tag=vsCrown] remove 
 scoreboard players set #allowCrown value 0
 
 #clear bossbars and HUD
-execute as @a run function phan:set_title_times
+execute as @a run function phan:player/set_title_times
 scoreboard players set #showHUD value 0
 scoreboard players set @a pShowHUD 0
 function phan:custom_hud/clear_bossbars
@@ -48,7 +57,7 @@ time set 18000
 weather clear
 
 #set bgm
-scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..5}] r
+execute store result score #random value run random value 1..5
 execute if score #dreamsCompleted value matches ..4 run scoreboard players set #bgm value 6
 execute if score #dreamsCompleted value matches 5.. if score #random value matches ..4 run scoreboard players set #bgm value 7
 execute if score #dreamsCompleted value matches 5.. if score #random value matches 5.. run scoreboard players set #bgm value 6
@@ -68,18 +77,6 @@ scoreboard players add @a playerTipTime 200
 #we are no longer in free play mode!
 execute if score #freePlay value matches 1 run scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #freePlay value 0
-
-#should probably send players to lobby? iunno.
-function phan:movement/reset_speeds
-effect clear @a[tag=doneWithIntro] blindness
-effect give @a[tag=doneWithIntro] blindness 2 50 true
-gamemode adventure @a[tag=doneWithIntro]
-execute unless score #lastLevelPlayed value matches 1..5 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 1 in overworld as @a[tag=doneWithIntro] positioned 206 -1 134 rotated 0 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 2 in overworld as @a[tag=doneWithIntro] positioned 206 -1 102 rotated 180 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 3 in overworld as @a[tag=doneWithIntro] positioned 218 -1 119 rotated 270 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWithIntro] positioned 203 -6 134 rotated 0 0 run function phan:varied_teleport
-execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:varied_teleport
 
 #jukebox particles don't happen until we pick a song to play from it
 scoreboard players set #lobbyJukebox value 0
@@ -121,6 +118,18 @@ scoreboard players reset @a elytraTimer
 
 #summon temporary props
 function phan:game/0/summon_props
+
+#should probably send players to lobby? iunno.
+function phan:movement/reset_speeds
+effect clear @a[tag=doneWithIntro] blindness
+effect give @a[tag=doneWithIntro] blindness 2 50 true
+gamemode adventure @a[tag=doneWithIntro]
+execute unless score #lastLevelPlayed value matches 1..5 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 1 in overworld as @a[tag=doneWithIntro] positioned 206 -1 134 rotated 0 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 2 in overworld as @a[tag=doneWithIntro] positioned 206 -1 102 rotated 180 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 3 in overworld as @a[tag=doneWithIntro] positioned 218 -1 119 rotated 270 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWithIntro] positioned 203 -6 134 rotated 0 0 run function phan:varied_teleport
+execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:varied_teleport
 
 #all players check for Dreams Dreams advancement
 execute as @a if entity @s[scores={dream1Completed=1..,dream2Completed=1..,dream3Completed=1..,dream4Completed=1..,dream5Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams

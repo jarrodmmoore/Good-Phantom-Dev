@@ -2,7 +2,7 @@
 scoreboard players remove #spawnRecursions value 1
 
 
-####################################
+#=====
 #ACTUAL SPAWN CODE
 #(everything else is for recursion)
 
@@ -24,17 +24,16 @@ execute if score #inWater value matches 1 if score @s editArg1 matches 5 run sum
 function phan:game/1/spawning/spawn__give_generic_data
 
 #done messing with the itemHolder
-execute if score #inWater value matches 1 run scoreboard players set @e[tag=setMe,tag=itemHolder] lifespan 10
-execute if score #inWater value matches 1 run tag @e[tag=setMe,tag=itemHolder] remove setMe
+execute if score #inWater value matches 1 run scoreboard players set @e[type=area_effect_cloud,tag=itemHolder,distance=..2] lifespan 10
 
 #we're unshootable for a few ticks if we were dropped as loot
-execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe] hitstun 10
+execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe,type=item,distance=..2] hitstun 10
 
 #gravity? ok
-execute if score #getGravity value matches 1 as @e[tag=setMe] run data merge entity @s {NoGravity:0b}
+execute if score #getGravity value matches 1 as @e[tag=setMe,type=item,distance=..2] run data merge entity @s {NoGravity:0b}
 
-tag @e[tag=setMe] remove setMe
-####################################
+tag @e[tag=setMe,type=item,distance=..2] remove setMe
+#=====
 
 
 #no recursions left? tell the rest of the recursive command stack to get bent

@@ -1,4 +1,4 @@
-#run by a player
+#executed by a player
 scoreboard players reset @s hitBox1b
 scoreboard players reset @s hitBox2b
 scoreboard players reset @s hitBox3b

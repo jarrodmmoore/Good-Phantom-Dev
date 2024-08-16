@@ -1,7 +1,7 @@
 #another hilariously over-engineered display function. love to see it
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #count down time
 scoreboard players remove @s presentTime 1

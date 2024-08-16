@@ -1,4 +1,4 @@
-#RUN BY A PLAYER
+#executed by a player
 
 #need to run logic in practice area!
 scoreboard players set #practiceLogic value 1

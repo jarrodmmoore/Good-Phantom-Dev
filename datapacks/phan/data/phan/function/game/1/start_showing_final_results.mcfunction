@@ -28,5 +28,5 @@ scoreboard players operation @s scoreCurrent = @s scoreTotal
 execute unless score #gameState value matches 3 run scoreboard players set @s pShowHUD 0
 #function phan:custom_hud/clear_bossbars
 
-#this is neccesary
+#this is necessary
 scoreboard players set @s pGameTime 0

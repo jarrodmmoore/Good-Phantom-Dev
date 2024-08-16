@@ -34,6 +34,8 @@ execute if score @s editNode matches 14 run function phan:game/1/spawning/target
 execute if score @s editNode matches 17 run function phan:game/1/spawning/spawn_big_target
 #hidden music disc
 execute if score @s editNode matches 24 run function phan:game/1/spawning/spawn_music_disc
+#podium
+execute if score @s editNode matches 25 run function phan:game/1/spawning/podium_setup
 
 
 #failed to spawn? abort and try again soon

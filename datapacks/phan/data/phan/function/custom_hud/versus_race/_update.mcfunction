@@ -86,7 +86,7 @@ execute if score #pearlsNeeded value matches ..0 run scoreboard players set #hud
 scoreboard players set #hudRightDebt value 112
 execute unless score #showTimeMin10 value matches 0 run scoreboard players add #hudRightDebt value 14
 
-###########
+#=====
 #only update slots if they changed since from the previous run
 
 #SLOT 1-4 (handled in different ways depending if the objective is complete or not)
@@ -96,7 +96,7 @@ execute if score #pearlsNeeded value matches 1.. run function phan:custom_hud/ga
 #SLOT 5
 execute unless score #hudLeftDebt value = #hudPrev5 value run function phan:custom_hud/gameplay/slot5
 
-#SLOT 6-8 (always blank)
+#SLOT 6-8 (position)
 execute unless score #playerPosition value = #hudPrev6 value run function phan:custom_hud/versus_race/slot6
 execute unless score #hudPeakPlayers value = #hudPrev7 value run function phan:custom_hud/versus_race/slot7
 execute unless score #hudPrev8 value matches -95 run function phan:custom_hud/versus_race/slot8
@@ -119,7 +119,7 @@ execute unless score #showTimeMsec2 value = #hudPrev15 value run function phan:c
 #SLOT 16
 execute unless score #hudPrev16 value matches -97 run function phan:custom_hud/time_attack/slot16
 
-###########
+#=====
 
 #ok, NOW we do the index
 execute if score @s hudNode matches 1..6 run function phan:custom_hud/_update_index_1_6

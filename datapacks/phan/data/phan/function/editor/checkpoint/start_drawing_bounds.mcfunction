@@ -1,4 +1,4 @@
-#run by the checkpoint node
+#executed by the checkpoint node
 
 #store coords
 scoreboard players operation #checkMaxX value = @s checkMaxX

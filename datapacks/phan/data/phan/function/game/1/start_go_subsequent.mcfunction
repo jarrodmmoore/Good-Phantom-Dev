@@ -7,7 +7,7 @@ execute at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
 execute at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #title
 title @a[tag=tellMe] subtitle [""]
@@ -73,5 +73,5 @@ scoreboard players set @s time2portalMin 0
 #time attack: get the timer started if it hasn't started already
 tag @s add trackPlayerTime
 
-#this is not neccesary
+#this is not necessary
 scoreboard players set @s pGameTime 500

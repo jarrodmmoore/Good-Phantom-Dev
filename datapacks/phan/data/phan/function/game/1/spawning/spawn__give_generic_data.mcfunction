@@ -6,12 +6,12 @@ execute if entity @s[tag=nodeArea2] run function phan:game/1/spawning/spawn__giv
 execute if entity @s[tag=nodeArea3] run function phan:game/1/spawning/spawn__give_generic_data_c
 
 #act tag
-execute if entity @s[tag=nodeLoadArea0] run tag @e[tag=setMe] add area0Spawn
-execute if entity @s[tag=nodeLoadArea1] run tag @e[tag=setMe] add area1Spawn
-execute if entity @s[tag=nodeLoadArea2] run tag @e[tag=setMe] add area2Spawn
-execute if entity @s[tag=nodeLoadArea3] run tag @e[tag=setMe] add area3Spawn
-execute if entity @s[tag=nodeLoadArea4] run tag @e[tag=setMe] add area4Spawn
-execute if entity @s[tag=nodeLoadArea5] run tag @e[tag=setMe] add area5Spawn
+execute if entity @s[tag=nodeLoadArea0] run tag @e[tag=setMe,distance=..4] add area0Spawn
+execute if entity @s[tag=nodeLoadArea1] run tag @e[tag=setMe,distance=..4] add area1Spawn
+execute if entity @s[tag=nodeLoadArea2] run tag @e[tag=setMe,distance=..4] add area2Spawn
+execute if entity @s[tag=nodeLoadArea3] run tag @e[tag=setMe,distance=..4] add area3Spawn
+execute if entity @s[tag=nodeLoadArea4] run tag @e[tag=setMe,distance=..4] add area4Spawn
+execute if entity @s[tag=nodeLoadArea5] run tag @e[tag=setMe,distance=..4] add area5Spawn
 
 #enemy gets movement pattern if we have one defined
-execute if score @s editNode matches 13 if score @s editArg3 matches 1.. run scoreboard players operation @e[tag=setMe] movementPattern = @s editArg3
+execute if score @s editNode matches 13 if score @s editArg3 matches 1.. run scoreboard players operation @e[tag=setMe,distance=..2] movementPattern = @s editArg3

@@ -3,7 +3,7 @@ scoreboard players add @s editArg2 1
 execute if score @s editArg2 matches 3.. run scoreboard players set @s editArg2 1
 
 #slightly randomize the speed at which the animation happens
-scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..4}] r
+execute store result score #random value run random value 1..4
 scoreboard players add #random value 18
 
 #apply the transformation

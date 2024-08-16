@@ -4,7 +4,7 @@ scoreboard players add @s enderEyes 1
 execute if score @s enderEyes <= #vEyesNeeded value run scoreboard players add @s eyesToDeposit 1
 
 #also play sound for spectators
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #play sound effect
 playsound minecraft:custom_sfx/pickup1 master @a[tag=tellMe] ~ 100000 ~ 100000 .8

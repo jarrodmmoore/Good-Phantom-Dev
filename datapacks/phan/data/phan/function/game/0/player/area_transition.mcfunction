@@ -3,7 +3,7 @@
 #count up time
 scoreboard players add @s pGameTime 1
 
-##############################
+#=====
 #CAMERA + SOUL STUFF
 
 #remember our ID
@@ -47,11 +47,11 @@ scoreboard players operation @s pTransitionProgress = #pTransitionProgress value
 #camera looks at playerSoul and follows it when it gets too far away
 execute if score #pGameTime value matches 100040..100140 if score #followStraightUp value matches 1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_final
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #FEEDBACK STUFF
 
 #show rank
@@ -61,7 +61,7 @@ execute if score @s pGameTime matches 100001..100059 if entity @s[scores={scoreC
 #execute if score @s pGameTime matches 100060..100499 at @s if score #gameState value matches 1 run function phan:game/1/show_result/rank
 #tellraw @a[tag=playing] ["",{"text":"gameTime = "},{"score":{"name":"#gameTime","objective":"value"}}]
 
-##############################
+#=====
 
 
 #gameTime 500 means we're done here. start gameplay again!

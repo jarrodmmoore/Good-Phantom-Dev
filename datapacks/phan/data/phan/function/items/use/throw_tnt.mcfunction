@@ -1,4 +1,4 @@
-clear @s tnt[custom_data~{throwableTnt:1b}] 1
+clear @s[type=player] tnt[custom_data~{throwableTnt:1b}] 1
 
 playsound minecraft:entity.tnt.primed master @a
 
@@ -20,22 +20,22 @@ scoreboard players operation #coord_dz value -= #coord_z value
 #summon a TNT and give it the right velocity
 execute facing entity 00000309-0000-0000-0000-000000000001 feet positioned ^ ^ ^.5 if loaded ~ ~1.8 ~ run summon tnt ~ ~1.8 ~ {fuse:1000,Tags:["giveVel","giveID","sonicBlastDestroys"]}
 execute at @e[limit=1,tag=giveID] run playsound minecraft:entity.snowball.throw master @a ~ ~ ~ .75 .5
-execute store result entity @e[limit=1,tag=giveVel] Motion[0] double 0.0156 run scoreboard players get #coord_dx value
-execute store result entity @e[limit=1,tag=giveVel] Motion[1] double 0.0156 run scoreboard players get #coord_dy value
-execute store result entity @e[limit=1,tag=giveVel] Motion[2] double 0.0156 run scoreboard players get #coord_dz value
-tag @e[tag=giveVel,limit=1] remove giveVel
+execute store result entity @e[limit=1,tag=giveVel,type=tnt,distance=..4] Motion[0] double 0.0156 run scoreboard players get #coord_dx value
+execute store result entity @e[limit=1,tag=giveVel,type=tnt,distance=..4] Motion[1] double 0.0156 run scoreboard players get #coord_dy value
+execute store result entity @e[limit=1,tag=giveVel,type=tnt,distance=..4] Motion[2] double 0.0156 run scoreboard players get #coord_dz value
+tag @e[tag=giveVel,limit=1,type=tnt,distance=..4] remove giveVel
 
 #get rid of that marker we used to grab second position
 kill 00000309-0000-0000-0000-000000000001
 
 #entity can only exist in this current game session
-scoreboard players set @e[tag=giveID] itemValidSpawn 1
+scoreboard players set @e[tag=giveID,type=tnt,distance=..4] itemValidSpawn 1
 
 #we did this. it was us.
-scoreboard players operation @e[limit=1,tag=giveID] playerID = @s playerID
-scoreboard players operation @e[limit=1,tag=giveID] originalID = @s playerID
-team join colorRed @e[limit=1,tag=giveID]
-tag @e[limit=1,tag=giveID] remove giveID
+scoreboard players operation @e[limit=1,tag=giveID,type=tnt,distance=..4] playerID = @s playerID
+scoreboard players operation @e[limit=1,tag=giveID,type=tnt,distance=..4] originalID = @s playerID
+team join colorRed @e[limit=1,tag=giveID,type=tnt,distance=..4]
+tag @e[limit=1,tag=giveID,type=tnt,distance=..4] remove giveID
 
 #cooldown
 scoreboard players reset @s carrotInput

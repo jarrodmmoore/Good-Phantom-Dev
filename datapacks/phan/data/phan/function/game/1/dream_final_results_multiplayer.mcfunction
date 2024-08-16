@@ -1,6 +1,6 @@
 #john madden sees the face of god
 
-##############################
+#=====
 #CAMERA SOUL STUFF
 
 #remember our ID
@@ -23,11 +23,11 @@ execute if score #10Hz value matches 0 as @e[tag=currentSoul,type=armor_stand] a
 spectate @e[limit=1,type=armor_stand,tag=currentCamera] @s
 scoreboard players set @s spectatingObject 2
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #FEEDBACK STUFF
 
 #remember ranks for previous 3 (run every tick now so other players don't mess with our stuff)
@@ -40,7 +40,7 @@ scoreboard players operation #pGameTime value = @s pGameTime
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=10..}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=1..9}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_low
 execute if score @s pGameTime matches 41..99 as @s[scores={scoreCurrent=..0}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_done
-execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score #assist_enabled value matches ..0 run function phan:game/1/show_result/rank_bonuses_show
+execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score #assist_enabled_scoreattack value matches ..0 run function phan:game/1/show_result/rank_bonuses_show
 execute if score @s pGameTime matches 100 if score #gameState value matches 1 if score @s scoreShow matches 1.. at @s in minecraft:overworld run function phan:high_score/record_score_start
 execute if score @s pGameTime matches 100..299 at @s if score #gameState value matches 1 run function phan:game/1/show_result/rank_final
 
@@ -49,7 +49,7 @@ execute if score @s pGameTime matches 100..299 at @s if score #gameState value m
 tag @s[tag=trackPlayerTime] remove trackPlayerTime
 execute if score @s pGameTime matches 100 if score #gameState value matches 3 if score @s rawTime matches 1.. at @s in minecraft:overworld run function phan:high_score/record_time_start
 
-##############################
+#=====
 
 
 #go spectator mode and wait for everyone else to finish up

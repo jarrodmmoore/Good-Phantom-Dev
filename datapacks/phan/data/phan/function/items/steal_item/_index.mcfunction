@@ -1,4 +1,4 @@
-#run by player who is getting their item stolen
+#executed by player who is getting their item stolen
 
 #this should get overridden
 scoreboard players set #stolenItem value 0
@@ -23,7 +23,7 @@ execute if items entity @s weapon.mainhand *[custom_data~{enderPearl:1b}] run fu
 execute if items entity @s weapon.mainhand *[custom_data~{endermanThief:1b}] run function phan:items/steal_item/16_enderman_thief
 execute if items entity @s weapon.mainhand *[custom_data~{fireworkRocket:1b}] run function phan:items/steal_item/17_firework_rocket
 execute if items entity @s weapon.mainhand *[custom_data~{trappedChest:1b}] run function phan:items/steal_item/18_trapped_chest
-execute if items entity @s weapon.mainhand *[custom_data~{shieldItem:1b}] run function phan:items/steal_item/19_shield
+execute if items entity @s weapon.mainhand *[custom_data~{shield:1b}] run function phan:items/steal_item/19_shield
 
 #remember our id
 scoreboard players operation #victimID value = @s playerID
@@ -31,7 +31,8 @@ scoreboard players operation #victimID value = @s playerID
 #give item to player who stole the thing
 tag @s add gotRobbed
 execute as @a[tag=doneWithIntro] if score @s playerID = #thisEndermanID value run function phan:items/steal_item/give_to_stealer
-tag @a[tag=gotRobbed] remove gotRobbed
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #thisEndermanID value run function phan:items/steal_item/give_to_stealer
+tag @s remove gotRobbed
 
 
 #i'd like to report a robbery

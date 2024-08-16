@@ -3,6 +3,7 @@ execute if entity @s[tag=!mineArmed] run function phan:game/1/objects/enemy/mine
 
 #explode if player touches
 execute positioned ~ ~0.4 ~ if entity @a[gamemode=adventure,distance=..2] if score #noExplode value matches 0 run scoreboard players set @s enemyHP 500
+execute if score #botsEnabled value matches 1.. positioned ~ ~0.4 ~ if entity @e[tag=ai,type=zombie,distance=..2] if score #noExplode value matches 0 run scoreboard players set @s enemyHP 500
 
 
 #random start value for spin

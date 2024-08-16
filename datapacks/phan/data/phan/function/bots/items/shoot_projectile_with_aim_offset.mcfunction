@@ -1,0 +1,1 @@
+$execute rotated ~$(coord_yaw) ~$(coord_pitch) run function $(functioncall)

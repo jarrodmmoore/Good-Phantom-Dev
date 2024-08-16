@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.rip_and_tear"
+        },
+        "description": {
+            "translate": "gp.advancement.description.rip_and_tear"
+        },
+        "icon": {
+            "id": "minecraft:pink_glazed_terracotta"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "ripandtear": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/one_and_done"
+}

@@ -44,7 +44,7 @@ execute if score #bonus value matches 40001.. run scoreboard players set #bonus 
 execute if entity @a[tag=lastDonor,scores={pPenaltyTime=1..}] run scoreboard players set #bonus value 0
 #if bonus is positive, add it to our score!
 execute if score #bonus value matches 1.. run scoreboard players operation @a[tag=lastDonor] addPointsLater += #bonus value
-###########################################
+#=====
 #show the player what the target time was and how their time compared to it
 
 #get target time in displayable format [X:XX]
@@ -89,12 +89,12 @@ execute if score #bonus value matches ..0 if score #timeCompareResult value matc
 
 #advancement for finishing all 3 portals in a row without going over target time
 execute if score #timeCompareResult value matches 0.. run scoreboard players add @a[tag=lastDonor] targetTimesHit 1
-execute if score #assist_enabled value matches 0 unless score #gameState value matches 0 run advancement grant @a[tag=lastDonor,scores={targetTimesHit=3..}] only phan:good_phantom/eyes_on_the_prize
+execute if score #assist_enabled_scoreattack value matches 0 unless score #gameState value matches 0 run advancement grant @a[tag=lastDonor,scores={targetTimesHit=3..}] only phan:score_attack/eyes_on_the_prize
 
 #advancement for using teleporter to finish portal under target time in pastel palace
-execute if score #assist_enabled value matches 0 if score #chosenLevel value matches 1 if score #timeCompareResult value matches 0.. run advancement grant @a[tag=lastDonor,scores={teleportersUsed=1..}] only phan:good_phantom/nice_shortcut
+execute if score #assist_enabled_scoreattack value matches 0 if score #chosenLevel value matches 1 if score #timeCompareResult value matches 0.. run advancement grant @a[tag=lastDonor,scores={teleportersUsed=1..}] only phan:score_attack/nice_shortcut
 
-###########################################
+#=====
 
 #announce our bonus
 execute if score #bonus value matches 1.. if score #gameState value matches 0..1 run tellraw @a[tag=lastDonor] ["",{"text":" "},{"text":" "},{"translate":"gp.game.time_bonus","color":"white","italic":true},{"text":": ","color":"white","italic":true},{"score":{"name":"#bonus","objective":"value"}}]

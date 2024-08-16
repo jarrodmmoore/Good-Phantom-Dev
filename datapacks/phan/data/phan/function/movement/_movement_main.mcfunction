@@ -51,11 +51,14 @@ execute if entity @s[tag=sneaking] run scoreboard players set @s moving 0
 scoreboard players remove @s[scores={hitstun=1..}] hitstun 1
 
 #don't lose speed while airborne
-execute if entity @s[nbt={OnGround:0b}] unless block ~ ~ ~ water run function phan:movement/airborne
+execute if score @s onGround matches 0 unless block ~ ~ ~ water run function phan:movement/airborne
 
 #elytra: landing speed of 8000 is full speed
-execute if entity @s[scores={landCooldown=..0,airTime=20..}] run function phan:movement/get_velocity
+execute if entity @s[scores={landCooldown=..0,airTime=20..,onGround=1..}] run function phan:movement/get_velocity
 scoreboard players remove @s[scores={landCooldown=1..}] landCooldown 1
+
+#jump?
+execute if score @s jump matches -2147483648..2147483647 at @s run function phan:movement/player_jumped
 
 #figure out what direction we're moving in
 scoreboard players set @s moveDirection 0

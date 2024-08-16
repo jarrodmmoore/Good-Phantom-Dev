@@ -20,5 +20,5 @@ execute if score @s tutorialProgress matches 210 run title @s title [""]
 execute if score @s tutorialProgress matches 210..240 run title @s actionbar ["",{"translate":"gp.tutorial.press_button_to_glide","with":[{"keybind":"key.jump","color":"yellow"}]}]
 
 #we're done!
-execute if score @s tutorialProgress matches 310.. run function phan:set_title_times
+execute if score @s tutorialProgress matches 310.. run function phan:player/set_title_times
 execute if score @s tutorialProgress matches 310.. run scoreboard players set @s tutorialProgress 1000

@@ -1,5 +1,5 @@
 #menu title
-tellraw @s ["",{"text":"\n==\\/== RESPAWN OBJECTS ==\\/==","color":"#6666FF","bold":true}]
+tellraw @s ["",{"text":"\n==\\/== ","color":"#6666FF","bold":true},{"translate":"gp.editor.title.respawn_objects","color":"#6666FF","bold":true},{"text":" ==\\/==","color":"#6666FF","bold":true}]
 
 #generic node parameters
 tellraw @s ["",{"text":"[act1/load0]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area0SpawnA value 0"},"hoverEvent":{"action":"show_text","value":"act1/load0"}},{"text":"  "},{"text":"[act2/load0]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area0SpawnB value 0"},"hoverEvent":{"action":"show_text","value":"act2/load0"}},{"text":"  "},{"text":"[act3/load0]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area0SpawnC value 0"},"hoverEvent":{"action":"show_text","value":"act3/load0"}}]
@@ -14,7 +14,7 @@ tellraw @s ["",{"text":"[act1/load4]","color":"gold","bold":false,"clickEvent":{
 tellraw @s ["",{"text":" "}]
 tellraw @s ["",{"text":"[act1/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnA value 0"},"hoverEvent":{"action":"show_text","value":"act1/load5"}},{"text":"  "},{"text":"[act2/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnB value 0"},"hoverEvent":{"action":"show_text","value":"act2/load5"}},{"text":"  "},{"text":"[act3/load5]","color":"gold","bold":false,"clickEvent":{"action":"run_command","value":"/scoreboard players set #area5SpawnC value 0"},"hoverEvent":{"action":"show_text","value":"act3/load5"}}]
 tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[back]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/home"},"hoverEvent":{"action":"show_text","value":"back"}}]
+tellraw @s ["",{"translate":"gp.editor.button.back","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/function phan:editor/panel/_meta_menu"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.editor.hover.back"}]}}]
 
 #feedback
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000

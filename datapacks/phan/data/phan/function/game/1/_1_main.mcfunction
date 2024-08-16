@@ -2,10 +2,10 @@
 
 #most game logic is run per-player now
 #so we can have 3 players playing concurrently in different acts of a level
-########################
+#=====
 #game logic on players
 execute as @a[tag=playing] at @s run function phan:game/1/_1_main_player
-########################
+#=====
 
 #global time
 scoreboard players add #gameTime value 1

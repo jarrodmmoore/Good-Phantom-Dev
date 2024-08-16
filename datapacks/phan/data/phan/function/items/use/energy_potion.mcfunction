@@ -1,4 +1,4 @@
-clear @s amethyst_shard[custom_data~{energyPotion:1b}] 1
+clear @s[type=player] amethyst_shard[custom_data~{energyPotion:1b}] 1
 
 #refill 9 energy (9 is half of max)
 scoreboard players add @s energy 9

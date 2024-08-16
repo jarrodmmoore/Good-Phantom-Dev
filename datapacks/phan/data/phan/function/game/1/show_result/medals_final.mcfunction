@@ -1,5 +1,5 @@
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #bronze
 execute if score #pGameTime value matches 40 if score @s rawTime <= #timeBronze value run title @a[tag=tellMe] subtitle ["",{"translate":"gp.game.medal_beaten_bronze","color":"gold"}]

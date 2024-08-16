@@ -1,3 +1,6 @@
+#must have valid coordinates!
+execute if score @s vsRespawnX matches -2147483648 run return 0
+
 scoreboard players operation @s goto_x = @s vsRespawnX
 scoreboard players operation @s goto_y = @s vsRespawnY
 scoreboard players operation @s goto_z = @s vsRespawnZ

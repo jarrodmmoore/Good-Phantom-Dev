@@ -16,6 +16,14 @@ scoreboard players set @s dream3Medal 6
 scoreboard players set @s dream4Medal 6
 scoreboard players set @s dream5Medal 6
 
+scoreboard players set @s dream1Trophy 0
+scoreboard players set @s dream2Trophy 0
+scoreboard players set @s dream3Trophy 0
+scoreboard players set @s dream4Trophy 0
+scoreboard players set @s dream5Trophy 0
+
+scoreboard players set @s anyDreamCompleted 0
+
 scoreboard players reset @s tutorialProgress
 
 scoreboard players set @s discFound1 0

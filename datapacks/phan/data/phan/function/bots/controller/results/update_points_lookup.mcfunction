@@ -1,0 +1,1 @@
+$function phan:bots/controller/results/update_points_go with storage phan:bot_data_$(id)

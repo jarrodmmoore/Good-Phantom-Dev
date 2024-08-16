@@ -10,7 +10,7 @@ scoreboard players operation @s scoreTotal += @s scoreCurrent
 scoreboard players set @s scoreCurrent2 0
 
 #advancement for entering with 100 combo and <1 sec on clock
-execute if score #assist_enabled value matches 0 if score @s combo matches 100.. if score @s pTimeRemaining matches ..39 run advancement grant @s only phan:score_attack/cutting_it_close
+execute if score #assist_enabled_scoreattack value matches 0 if score @s combo matches 100.. if score @s pTimeRemaining matches ..39 run advancement grant @s only phan:score_attack/cutting_it_close
 
 #clear inv
 clear @s
@@ -56,22 +56,22 @@ scoreboard players add @s actsFinished 1
 execute if score @s actsFinished matches 3.. run function phan:bgm/stop_bgm_self
 
 
-###############
+#=====
 #ADVANCEMENTS
 
 #advancement when we finish our last portal without having taken any damage
-execute if score #assist_enabled value matches 0 run advancement grant @s[scores={actsFinished=3..,timesBeenHit=..0}] only phan:good_phantom/sound_sleeper
+execute if score #assist_enabled_scoreattack value matches 0 run advancement grant @s[scores={actsFinished=3..,timesBeenHit=..0}] only phan:score_attack/sound_sleeper
 
 #advancement when we finish a single act without dropping combo
-execute if score #assist_enabled value matches 0 run advancement grant @s[scores={combosDropped=..0}] only phan:score_attack/full_combo
+execute if score #assist_enabled_scoreattack value matches 0 run advancement grant @s[scores={combosDropped=..0}] only phan:score_attack/full_combo
 
 #advancement when we finish act 2 of neon nightway without shooting any targets
-execute if score #assist_enabled value matches 0 if score #chosenLevel value matches 4 run advancement grant @s[scores={targetsShot=..0,pCurrentArea=2}] only phan:good_phantom/not_in_my_3d_platformer
+execute if score #assist_enabled_scoreattack value matches 0 if score #chosenLevel value matches 4 run advancement grant @s[scores={targetsShot=..0,pCurrentArea=2}] only phan:score_attack/not_in_my_3d_platformer
 
 #advancement when we finish act 3 of moonlit mountains having run 3 full laps
-execute if score #gameState value matches 1 if score #assist_enabled value matches 0 if score #chosenLevel value matches 2 run advancement grant @s[scores={lap=2..,pCurrentArea=3}] only phan:score_attack/yeah_ive_got_time
+execute if score #gameState value matches 1 if score #assist_enabled_scoreattack value matches 0 if score #chosenLevel value matches 2 run advancement grant @s[scores={lap=2..,pCurrentArea=3}] only phan:score_attack/yeah_ive_got_time
 
-###############
+#=====
 
 
 #refresh skybox (sometimes it gets messed up...)

@@ -3,7 +3,7 @@ execute if score #pGameTime value matches 100 run scoreboard players operation @
 execute if score #pGameTime value matches 100 run scoreboard players set @s scoreCurrent 0
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #display "scoreShow" on subtitle using the nicer looking custom font characters
 scoreboard players operation #arg value = @s scoreShow

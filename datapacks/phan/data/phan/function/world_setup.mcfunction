@@ -11,7 +11,7 @@ scoreboard players set #hudMode value 1
 scoreboard players add #gameState value 0
 
 #summon stands
-kill @e[type=armor_stand,tag=randomize]
+kill @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1]
 summon armor_stand 0 -63 0 {Marker:1b,Tags:["randomize","setup"],UUID:[I;0,808,0,1]}
 scoreboard players set @e[tag=setup] r 1
 tag @e[tag=setup] remove setup

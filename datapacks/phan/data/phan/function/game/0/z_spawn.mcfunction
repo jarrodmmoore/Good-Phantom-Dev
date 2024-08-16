@@ -1,5 +1,5 @@
-scoreboard players operation #random value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,scores={r=1..6}] r
-scoreboard players operation #random2 value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,scores={r=1..7}] r
+execute store result score #random value run random value 1..6
+execute store result score #random2 value run random value 1..7
 
 execute if score #random2 value matches 1 positioned ~.2 ~ ~.2 run summon armor_stand ~ ~ ~ {CustomName:'["",{"text":"z"}]',CustomNameVisible:1b,Tags:["lobbyProp","floatUp","setLife"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959}
 execute if score #random2 value matches 2 positioned ~.2 ~ ~-.2 run summon armor_stand ~ ~ ~ {CustomName:'["",{"text":"z"}]',CustomNameVisible:1b,Tags:["lobbyProp","floatUp","setLife"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959}

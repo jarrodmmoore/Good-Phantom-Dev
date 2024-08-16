@@ -2,3 +2,6 @@ $give @s minecraft:prismarine_crystals[custom_name='{"translate":"gp.item.super_
 
 scoreboard players set @s picksSinceSpeed 0
 scoreboard players set @s lastItemPicked 6
+
+tag @s[tag=ai] add hasDataToSend
+$scoreboard players add @s[tag=ai] botHasItem6 $(count)

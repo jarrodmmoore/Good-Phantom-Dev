@@ -18,7 +18,7 @@ playsound minecraft:block.note_block.hat master @a[tag=tellMe] ~ 100000 ~ 100000
 execute if score @s scoreShow matches 1.. run function phan:levels/_index_record_completion
 
 #player remembers best rank for this level
-execute if score #assist_enabled value matches 0 run function phan:levels/_index_record_best_rank
+execute if score #assist_enabled_scoreattack value matches 0 run function phan:levels/_index_record_best_rank
 
 #we did not fail
 execute if score #multiplayer value matches 0 run scoreboard players remove @s[scores={fails=1..}] fails 1

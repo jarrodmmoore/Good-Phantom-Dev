@@ -1,0 +1,1 @@
+$execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(selection)}] at @s run function phan:editor/panel/ai_waypoint/tools/waypoint_optimal/got_selected_waypoint

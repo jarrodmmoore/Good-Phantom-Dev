@@ -6,7 +6,8 @@ scoreboard players add @s age 1
 execute if score @s age matches 10.. if entity @s[tag=!declawed] positioned ~ ~1.6 ~ run function phan:game/1/objects/enemy/tnt_golem_check_los
 
 #targeting a player? run aggro code
-execute if score @s editArg1 matches 1 run function phan:game/1/objects/enemy/tnt_golem_aggro
+execute if score @s editArg1 matches 1 if score #botsEnabled value matches ..0 run function phan:game/1/objects/enemy/tnt_golem_aggro
+execute if score @s editArg1 matches 1 if score #botsEnabled value matches 1.. run function phan:game/1/objects/enemy/tnt_golem_aggro_bot_inclusive
 
 #otherwise do nothing and reset attack cooldown
 execute unless score @s editArg1 matches 1 run scoreboard players set @s editArg2 0

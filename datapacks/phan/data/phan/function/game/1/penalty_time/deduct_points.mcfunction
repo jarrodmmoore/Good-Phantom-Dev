@@ -24,7 +24,7 @@ scoreboard players operation @s scoreCurrent2 -= #pointsToRemove value
 scoreboard players operation @s pPenaltyPoints = #pointsToRemove value
 
 #scary point loss sound
-function phan:tell_spectators
+function phan:player/tell_spectators
 execute if score @s scoreCurrent matches 1.. as @a[tag=tellMe] at @s run playsound entity.wither.hurt master @s ~ 100000 ~ 100000 1.7
 
 #fail when we run out of points

@@ -1,0 +1,1 @@
+$execute unless loaded $(target_x) ~ $(target_z) run tag @s add botRespawnAdvance

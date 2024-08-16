@@ -1,4 +1,4 @@
-#run by an individual player
+#executed by an individual player
 
 #record rank if it's better than what we already have
 execute if score #chosenLevel value matches 1 if score @s rankFinal < @s dream1Rank run scoreboard players operation @s dream1Rank = @s rankFinal

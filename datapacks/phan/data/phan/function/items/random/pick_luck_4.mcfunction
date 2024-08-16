@@ -1,63 +1,68 @@
-######################### CONSTRAINTS
+#===== CONSTRAINTS
 
 #2 in 3 chance of not allowing lightning at all
 execute store result score #randomRoll2 value run random value 1..3
-execute if score #randomRoll2 value matches 2.. run tag @e[tag=randomize,type=armor_stand,scores={r=21}] add tempItemBan
+execute if score #randomRoll2 value matches 2.. run tag 00000000-0000-0328-0000-000000000015 add tempItemBan
 
 #never get enderman if it's on global cooldown
-execute if score #cooldownEnderman value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=19}] add tempItemBan
+execute if score #cooldownEnderman value matches 1.. run tag 00000000-0000-0328-0000-000000000013 add tempItemBan
 
 #never get squid if it's on global cooldown
-execute if score #cooldownSquid value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=20}] add tempItemBan
+execute if score #cooldownSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000014 add tempItemBan
 
 #never get lightning if it's on global cooldown
-execute if score #cooldownLightning value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=21}] add tempItemBan
+execute if score #cooldownLightning value matches 1.. run tag 00000000-0000-0328-0000-000000000015 add tempItemBan
 
 #can't get certain items again if they're already in our inventory
-execute if score #hasSonicBlast value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=4}] add tempItemBan
-execute if score #hasShield value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=4..5}] add tempItemBan
-execute if score #hasSwiftness value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=10..11}] add tempItemBan
-execute if score #hasSuperJump value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=12}] add tempItemBan
-execute if score #hasEnergyPotion value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=13..14}] add tempItemBan
-execute if score #hasFirework value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=15..18}] add tempItemBan
-execute if score #hasWarp value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=15..18}] add tempItemBan
-execute if score #hasEndermanThief value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=19}] add tempItemBan
-execute if score #hasBlindingSquid value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=20}] add tempItemBan
-execute if score #hasLightning value matches 1.. run tag @e[tag=randomize,type=armor_stand,scores={r=21}] add tempItemBan
+execute if score #hasSonicBlast value matches 1.. run tag 00000000-0000-0328-0000-000000000004 add tempItemBan
+execute if score #hasShield value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..5}] add tempItemBan
+execute if score #hasSwiftness value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=10..11}] add tempItemBan
+execute if score #hasSuperJump value matches 1.. run tag 00000000-0000-0328-0000-00000000000c add tempItemBan
+execute if score #hasEnergyPotion value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..14}] add tempItemBan
+execute if score #hasFirework value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15..18}] add tempItemBan
+execute if score #hasWarp value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15..18}] add tempItemBan
+execute if score #hasEndermanThief value matches 1.. run tag 00000000-0000-0328-0000-000000000013 add tempItemBan
+execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000014 add tempItemBan
+execute if score #hasLightning value matches 1.. run tag 00000000-0000-0328-0000-000000000015 add tempItemBan
 
 #don't get an energy potion if we're near full energy
-execute if score @s energy matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=13..14}] add tempItemBan
+execute if score @s energy matches 12.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..14}] add tempItemBan
 
 #don't get same speed item twice in a row
 #speed pad
-execute if score @s lastItemPicked matches 7..8 run tag @e[tag=randomize,type=armor_stand,scores={r=6..9}] add tempItemBan
+execute if score @s lastItemPicked matches 7..8 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=6..9}] add tempItemBan
 #swiftness potion
-execute if score @s lastItemPicked matches 5 run tag @e[tag=randomize,type=armor_stand,scores={r=10..11}] add tempItemBan
+execute if score @s lastItemPicked matches 5 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=10..11}] add tempItemBan
 #super jump
-execute if score @s lastItemPicked matches 6 run tag @e[tag=randomize,type=armor_stand,scores={r=12}] add tempItemBan
+execute if score @s lastItemPicked matches 6 run tag 00000000-0000-0328-0000-00000000000c add tempItemBan
 #energy potion
-execute if score @s lastItemPicked matches 4 run tag @e[tag=randomize,type=armor_stand,scores={r=13..14}] add tempItemBan
+execute if score @s lastItemPicked matches 4 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..14}] add tempItemBan
 
 #don't get a speed item if we recently got a really powerful one
-execute if score @s picksSinceBigSpeed matches ..1 run tag @e[tag=randomize,type=armor_stand,scores={r=6..18}] add tempItemBan
+execute if score @s picksSinceBigSpeed matches ..1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=6..18}] add tempItemBan
 
 #cooldown on rolling utility items
-execute if score @s picksSinceUtility matches ..1 run tag @e[tag=randomize,type=armor_stand,scores={r=4..5}] add tempItemBan
+execute if score @s picksSinceUtility matches ..1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..5}] add tempItemBan
 
 #cooldown on rolling offense items
-execute if score @s picksSinceOffense matches ..3 run tag @e[tag=randomize,type=armor_stand,scores={r=1..3}] add tempItemBan
+execute if score @s picksSinceOffense matches ..3 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..3}] add tempItemBan
 
 #cooldown on rolling global items
-execute if score @s picksSinceGlobal matches ..2 run tag @e[tag=randomize,type=armor_stand,scores={r=19..21}] add tempItemBan
+execute if score @s picksSinceGlobal matches ..2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=19..21}] add tempItemBan
 
 #can't get speed pad if there are too many on the field at once
-execute if score #givenPads value matches 6.. run tag @e[tag=randomize,type=armor_stand,scores={r=6..9}] add tempItemBan
+execute if score #givenPads value matches 6.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=6..9}] add tempItemBan
 
 #cut down on projectile spam from mid to back
-execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,type=armor_stand,scores={r=1..2}] add tempItemBan
-execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=armor_stand,scores={r=3}] add tempItemBan
+execute if score #givenRockets value matches 9.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..2}] add tempItemBan
+execute if score #givenRockets value matches 12.. run tag 00000000-0000-0328-0000-000000000003 add tempItemBan
 
-#########################
+#=====
+
+#rival bot hackery
+execute if score #botCount value matches 2.. if entity @s[tag=ai,tag=botRival,scores={botSkill=4..}] run function phan:items/random/rival_hackery_luck_4
+
+#=====
 
 #red rocket (3x) -- 1
 #homing rocket -- 2
@@ -77,11 +82,11 @@ execute if score #givenRockets value matches 12.. run tag @e[tag=randomize,type=
 #blinding squid -- 20
 #lightning -- 21
 
-######################### GET IT
+#===== GET IT
 
 #pick random number
 scoreboard players set #randomRoll value 0
-scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=randomize,tag=!tempItemBan,type=armor_stand,scores={r=1..21}] r
+scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=!tempItemBan,type=armor_stand,scores={r=1..21}] r
 
 #fallback
 execute if score #randomRoll value matches 0 run function phan:items/give/firework_rocket {count:1}
@@ -105,4 +110,4 @@ execute if score #randomRoll value matches 19 run function phan:items/give/ender
 execute if score #randomRoll value matches 20 run function phan:items/give/blinding_squid {count:1}
 execute if score #randomRoll value matches 21 run function phan:items/give/lightning_strike {count:1}
 
-#########################
+#=====

@@ -1,0 +1,2 @@
+execute positioned ~ ~-0.6 ~ if entity @a[tag=playing,gamemode=adventure,distance=..2] run function phan:game/4/objects/ring_check_small
+execute if score #botsEnabled value matches 1.. positioned ~ ~-0.6 ~ if entity @e[tag=ai,type=zombie,distance=..2] run function phan:game/4/objects/ring_check_small_bot

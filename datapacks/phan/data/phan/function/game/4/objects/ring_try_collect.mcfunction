@@ -33,7 +33,7 @@ function phan:game/4/objects/ring_record_collected
 execute if score #ringBoost value matches ..0 run scoreboard players add @s[scores={energy=..17}] energy 1
 #scoreboard players add @s[scores={energy=..17}] energy 1
 #scoreboard players add @s[scores={energy=..17}] energy 1
-function phan:tell_spectators
+function phan:player/tell_spectators
 execute if score @s combo matches ..0 at @s run playsound minecraft:custom_sfx/nights master @a[tag=tellMe] ~ ~ ~ 2.5 1
 execute if score @s combo matches 1 at @s run playsound minecraft:custom_sfx/nights master @a[tag=tellMe] ~ ~ ~ 2.5 1.5
 execute if score @s combo matches 2 at @s run playsound minecraft:custom_sfx/nights master @a[tag=tellMe] ~ ~ ~ 2.5 1.25

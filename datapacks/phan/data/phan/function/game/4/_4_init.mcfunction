@@ -1,3 +1,6 @@
+#keep track of the last mode we played so we can show relevant tips
+scoreboard players set #lastModePlayed value 4
+
 #spectators who joined in the middle of a set of versus rounds get incorporated into the game right here
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] add playing
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] remove vsMidGameJoin
@@ -31,6 +34,12 @@ scoreboard objectives setdisplay sidebar
 team modify player color aqua
 team modify observer color aqua
 team modify player friendlyFire false
+team modify botDisplayVEasy color aqua
+team modify botDisplayEasy color aqua
+team modify botDisplayNormal color aqua
+team modify botDisplayHard color aqua
+team modify botDisplayTryhard color aqua
+team modify botDisplayTryharder color aqua
 
 #no crown?
 execute unless score #allowCrown value matches 1 run tag @a[tag=vsCrown] remove vsCrown
@@ -50,11 +59,6 @@ scoreboard players set #1stPlaceLeadTime value 0
 scoreboard players set #eyeShowAssign value 2147483647
 scoreboard players set #versusPointsShowing value 0
 execute as @a run function phan:game/4/reset_player_scores
-
-#show tutorial to everyone if nobody has seen it yet
-scoreboard players add @a tutorialProgress 0
-execute unless entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 0
-execute if entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 1000
 
 #reset timestamps on checkpoints
 function phan:game/4/race/checkpoint/timestamp/reset_all
@@ -94,9 +98,8 @@ scoreboard players set #nightVision value 0
 scoreboard players set #brightMines value 0
 
 #load area info!
+function phan:bots/controller/reset_checkpoint_info
 function phan:game/1/spawning/reset_all
-scoreboard players set #countdownType value 0
-scoreboard players set #checkLoadHeight value -64
 function phan:game/4/load_area_info
 execute if score #vGameType value matches 2 run scoreboard players set #hudMode value 4
 execute if score #vGameType value matches 2 run scoreboard players reset * enderEyesShow
@@ -112,6 +115,9 @@ execute if score #vAct value matches 1 run scoreboard players set #area0SpawnA v
 execute if score #vAct value matches 2 run scoreboard players set #area0SpawnB value 0
 execute if score #vAct value matches 3 run scoreboard players set #area0SpawnC value 0
 
+#bot setup
+function phan:bots/_pre_round_bot_setup
+
 #position calculator stuff
 scoreboard players set #positionAssignMin value 1
 scoreboard players reset * racePosDisplay2
@@ -124,6 +130,15 @@ scoreboard players operation #lastLevelPlayed value = #chosenLevel value
 
 #set state
 scoreboard players set #gameState value 4
+
+#mark if the game is spectator only
+scoreboard players set #botsOnly value 0
+execute if score #botCount value matches 1.. unless entity @a[tag=doneWithIntro,tag=playing] run scoreboard players set #botsOnly value 1
+
+#show tutorial to everyone if nobody has seen it yet
+scoreboard players add @a tutorialProgress 0
+execute unless entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] if score #botsOnly value matches 0 run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 0
+execute if entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000..}] run scoreboard players set @a[tag=doneWithIntro] tutorialProgress 1000
 
 
 #reset player gameplay scores (need to do this AFTER setting gameState due to a conditional)

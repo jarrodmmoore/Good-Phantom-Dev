@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.eyes_on_the_prize"
+        },
+        "description": {
+            "translate": "gp.advancement.description.eyes_on_the_prize"
+        },
+        "icon": {
+            "id": "minecraft:end_portal_frame"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "eyesontheprize": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:score_attack/root"
+}

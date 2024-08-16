@@ -1,6 +1,6 @@
 #john madden part 2
 
-##############################
+#=====
 #CAMERA + SOUL STUFF
 
 #remember our ID
@@ -46,11 +46,11 @@ execute if score #pTransitionProgress value matches 100040.. if score #followStr
 execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches 1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_final
 execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches -1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_final_stationary
 
-##############################
+#=====
 
 
 
-##############################
+#=====
 #FEEDBACK STUFF
 
 #show rank
@@ -64,7 +64,7 @@ execute if score @s pGameTime matches 100060..100499 at @s if score #gameState v
 execute if score @s pGameTime matches 100060.. if score @s pTimerGoal matches 1.. if score @s pTimeRemaining < @s pTimerGoal run scoreboard players add @s pTimeRemaining 40
 execute if score @s pGameTime matches 100060.. if score @s pTimerGoal matches 1.. if score @s pTimeRemaining > @s pTimerGoal run scoreboard players operation @s pTimeRemaining = @s pTimerGoal
 
-##############################
+#=====
 
 
 #at gameTime 100 we load nodes for the next area. mostly to make the next level's portal un-fill itself

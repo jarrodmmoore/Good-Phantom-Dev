@@ -3,7 +3,7 @@ tag @s[tag=!goUp] add goUp
 tag @s[tag=goDown] remove goUp
 
 #bob at slightly different speeds so these aren't all in sync
-scoreboard players operation #random value = @e[limit=1,tag=randomize,sort=random,type=armor_stand,scores={r=1..10}] r
+execute store result score #random value run random value 1..10
 
 #bobTime is 45 + (random 1..10)
 scoreboard players operation @s bobTime = #random value

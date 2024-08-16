@@ -1,4 +1,4 @@
-#run by a checkpoint at its position
+#executed by a checkpoint at its position
 
 #make sure values exist!
 scoreboard players add @s visualXoffset 0
@@ -25,7 +25,7 @@ execute as @e[tag=setme_v1] at @s store result score #temp visualYaw run data ge
 execute as @e[tag=setme_v1] at @s store result score #temp visualPitch run data get entity @s Rotation[1] 1
 
 scoreboard players set #temp visualLength 0
-execute at @e[tag=setme_v1,limit=1] run function phan:editor/checkpoint/find_line_length_recursion
+execute as @a[tag=self_f,limit=1,sort=nearest] at @e[tag=setme_v1,limit=1] facing entity @s feet run function phan:editor/checkpoint/find_line_length_recursion
 
 scoreboard players operation @s visualYaw = #temp visualYaw
 scoreboard players operation @s visualPitch = #temp visualPitch

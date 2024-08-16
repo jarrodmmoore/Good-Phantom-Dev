@@ -6,7 +6,8 @@ scoreboard players add @s age 1
 execute if score @s age matches 10.. if entity @s[tag=!declawed] run function phan:game/1/objects/enemy/turret_check_los
 
 #targeting a player? run aggro code
-execute if score @s editArg1 matches 1 run function phan:game/1/objects/enemy/turret_aggro
+execute if score @s editArg1 matches 1 if score #botsEnabled value matches ..0 run function phan:game/1/objects/enemy/turret_aggro
+execute if score @s editArg1 matches 1 if score #botsEnabled value matches 1.. run function phan:game/1/objects/enemy/turret_aggro_bot_inclusive
 
 #otherwise be normal
 execute unless score @s editArg1 matches 1 run function phan:game/1/objects/enemy/turret_neutral

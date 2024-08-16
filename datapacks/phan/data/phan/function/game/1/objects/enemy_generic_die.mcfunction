@@ -20,7 +20,7 @@ scoreboard players operation @a[tag=playerGotLoot] pLootCycle = #lootCycle value
 tag @a[tag=playerGotLoot] remove playerGotLoot
 
 #behavior spefic to certain enemy types
-##############################################
+#=====
 #tnt golem drops tnt if holding one
 #(note: enemy behavior is processed before this runs)
 #execute if entity @s[tag=enemyTNTGolem,scores={editArg3=..1}] run function phan:game/1/objects/enemy/tnt_golem_drop_tnt
@@ -28,7 +28,7 @@ tag @a[tag=playerGotLoot] remove playerGotLoot
 
 #mine explodes
 execute if entity @s[tag=enemyMine] run function phan:game/1/objects/enemy/mine_explode
-##############################################
+#=====
 
 #cleanup
 tag @s remove baddy

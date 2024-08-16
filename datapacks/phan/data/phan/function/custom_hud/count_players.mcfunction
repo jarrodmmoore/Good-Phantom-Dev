@@ -1,6 +1,7 @@
 scoreboard players set #hudPlayerCount value 0
 execute as @a[tag=playing] run scoreboard players add #hudPlayerCount value 1
 execute as @a[tag=playerReservation,tag=!playing] run scoreboard players add #hudPlayerCount value 1
+scoreboard players operation #hudPlayerCount value += #botCount value
 #to avoid any issues due to player disconnects, we're going to use the peak player count, not the current player count
 execute if score #hudPlayerCount value > #hudPeakPlayers value run scoreboard players operation #hudPeakPlayers value = #hudPlayerCount value
 scoreboard players set #posDisplayDigits value 1

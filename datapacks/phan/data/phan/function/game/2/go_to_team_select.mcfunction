@@ -1,6 +1,9 @@
 #set subGameState so we know what to do with the game loop and mid-game player joins
 scoreboard players set #subGameState value 1
 
+#get ready to show a possible trophy
+scoreboard players set #offerTrophy value 0
+
 #sound
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.activate master @s ~ 100000 ~ 100000 1.9
 
@@ -31,7 +34,7 @@ execute if score #showActNumber value matches 1.. positioned 209 -18 118 positio
 #summon gamemode text
 execute if score #desiredGamemode value matches 1 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.score_attack","bold":true,"color":"yellow"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_3_players","bold":false,"color":"gray"}]'}
 execute if score #desiredGamemode value matches 2 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.time_attack","bold":true,"color":"red"},{"text":"\\n"},{"translate":"gp.mode_select.1_player","bold":false,"color":"gray"}]'}
-execute if score #desiredGamemode value matches 3 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.2_to_24_players","bold":false,"color":"gray"}]'}
+execute if score #desiredGamemode value matches 3 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_24_players","bold":false,"color":"gray"}]'}
 #rotate it
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~50.4 ~ 90 ~
 tag @e[tag=rotateText,type=text_display] remove rotateText

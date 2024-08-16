@@ -3,7 +3,7 @@ execute if score @s pGameTime matches 100060 run scoreboard players operation @s
 execute if score @s pGameTime matches 100060 run scoreboard players set @s scoreCurrent 0
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #subtitle
 #display "scoreShow" on subtitle using the nicer looking custom font characters

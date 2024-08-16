@@ -45,6 +45,7 @@ execute if score #test value matches 0 run fill 215 -3 118 215 -3 118 melon repl
 
 
 #while we're here: let's give players their keys
+execute unless score #gameState value matches 0 run return 0
 execute if score #dream1Completed value matches 1 as @a[gamemode=adventure,scores={location_z=-500..}] run function phan:game/0/give_key/purple
 execute if score #dream2Completed value matches 1 as @a[gamemode=adventure,scores={location_z=-500..}] run function phan:game/0/give_key/green
 execute if score #dream4Completed value matches 1 as @a[gamemode=adventure,scores={location_z=-500..}] run function phan:game/0/give_key/yellow

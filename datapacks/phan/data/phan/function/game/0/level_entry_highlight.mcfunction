@@ -4,4 +4,4 @@ scoreboard players operation @a[distance=..4,gamemode=adventure] nearPlayer = @s
 
 #if a player joined the server after someone else unlocked other levels, suggest they play Pastel Palace before anything else
 #(reasoning: pastel is an easier level designed to teach players some important things)
-execute unless score @s nearPlayer matches 1 as @a[distance=..4,gamemode=adventure,scores={dream1Completed=0}] run function phan:game/0/level_entry_suggest_pastel_palace
+execute unless score @s nearPlayer matches 1 as @a[distance=..4,gamemode=adventure,scores={anyDreamCompleted=0}] run function phan:game/0/level_entry_suggest_pastel_palace

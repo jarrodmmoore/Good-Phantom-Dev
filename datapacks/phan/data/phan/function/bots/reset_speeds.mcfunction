@@ -1,0 +1,1 @@
+execute as @e[tag=ai,type=zombie] run function phan:bots/reset_speed_self

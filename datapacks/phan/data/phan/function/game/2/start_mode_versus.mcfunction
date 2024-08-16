@@ -1,3 +1,8 @@
+#all bot controllers that are still active need to spawn their entities to indicate they're active
+scoreboard players set #beQuiet value 1
+execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] positioned 203 -30 112 rotated 45 0 run function phan:game/2/bots/spawn_bot_in_team_select
+scoreboard players set #beQuiet value 0
+
 #remember that we want to play versus mode after team select
 scoreboard players set #desiredGamemode value 3
 

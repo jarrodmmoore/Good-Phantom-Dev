@@ -1,7 +1,7 @@
 #another hilariously over-engineered display function. love to see it
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #count enemies alive in our area
 scoreboard players set #enemiesAlive value 0

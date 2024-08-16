@@ -3,7 +3,7 @@
 execute if score #multiplayer value matches 1 run scoreboard players add @s pCurrentArea 1
 
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #:(
 playsound minecraft:block.note_block.didgeridoo master @a[tag=tellMe] ~ 100000 ~ 100000 0.65

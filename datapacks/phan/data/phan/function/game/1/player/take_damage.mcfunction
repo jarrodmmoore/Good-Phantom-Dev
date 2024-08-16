@@ -1,8 +1,12 @@
 execute if entity @e[tag=hurtful,distance=..5] run scoreboard players set @s hurtfulTime 1
 scoreboard players set #getGot value 0
 execute on attacker if entity @s[type=player,tag=playing] run scoreboard players set #getGot value 1
+execute on attacker if entity @s[tag=ai] run scoreboard players set #getGot value 1
 execute on attacker if entity @s[tag=hurtful] run scoreboard players set #getGot value 1
 execute if score #getGot value matches 1.. run scoreboard players set @s hurtfulTime 1
+
+#shield blocks damage!
+execute if entity @s[scores={shieldTime=1..,hurtfulTime=1..}] run function phan:items/shield_block_damage
 
 #lose 3sec for getting hit in score attack mode
 execute if score #gameState value matches 0..1 run scoreboard players remove @s[scores={hurtfulTime=1..,hitstun=..0}] timerAdd 3
@@ -11,6 +15,7 @@ execute if score #gameState value matches 0..1 run scoreboard players set @s[sco
 #check if we got hurt by a player
 scoreboard players set #findAttacker value -1
 execute on attacker if entity @s[type=player,tag=playing] run scoreboard players operation #findAttacker value = @s playerID
+execute on attacker if entity @s[tag=ai] run scoreboard players operation #findAttacker value = @s playerID
 execute if score #findAttacker value matches 1.. run scoreboard players operation @s attackerID = #findAttacker value
 
 #play hitsound for player that hit us
@@ -19,9 +24,12 @@ execute if entity @s[scores={hurtfulTime=1..,attackTime=1..}] unless score @s pl
 
 #portal race mode: lose velocity if we're gliding and got hit with something hurtful
 execute if score #gameState value matches 4 if entity @s[scores={hurtfulTime=1..,fallFlying=1..}] at @s run tp @s @s
+execute if score #gameState value matches 4 if entity @s[scores={hurtfulTime=1..,fallFlying=1..}] run tag @s add playerCancelMomentum
+execute if score #gameState value matches 4 if entity @s[tag=ai,scores={hurtfulTime=1..,fallFlying=1..}] on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run function phan:bots/movement/2_gliding/lose_momentum
+execute if score #gameState value matches 4 if entity @s[tag=ai,scores={hurtfulTime=1..,fallFlying=1..}] run function phan:bots/movement/2_gliding/enter_flight_panic_mode
 
 #battle mode: got hit by a player? die.
-execute if score #gameState value matches 4 if score #vGameType value matches 2 run function phan:game/4/battle/die_from_attack
+execute if score #gameState value matches 4 if score #vGameType value matches 2 if score @s hurtfulTime matches 1.. run function phan:game/4/battle/die_from_attack
 
 #count how many times we've taken damage
 scoreboard players add @s[scores={hurtfulTime=1..}] timesBeenHit 1

@@ -1,4 +1,4 @@
-#run by an aec
+#executed by an aec
 
 #summon our Y and Z buddies
 summon area_effect_cloud ~ ~ ~ {Duration:420,Tags:["checkpointBound","boundY","setRot","setLife"]}

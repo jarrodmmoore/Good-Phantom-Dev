@@ -1,0 +1,1 @@
+$tp @a[tag=doneWithIntro] $(location_x) $(location_y) $(location_z) 0 0

@@ -1,5 +1,5 @@
 #we show the title display to anyone spectating us
-function phan:tell_spectators
+function phan:player/tell_spectators
 
 #subtitle
 title @a[tag=tellMe] subtitle [""]

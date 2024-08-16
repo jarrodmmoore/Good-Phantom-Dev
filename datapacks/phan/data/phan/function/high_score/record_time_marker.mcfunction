@@ -1,7 +1,7 @@
-#run by a armor_stand entity that stores scores for some given level
+#executed by a armor_stand entity that stores scores for some given level
 #run at the location of an array of signs that store the strings for the leaderboard of some given level
 
-############################
+#=====
 # OVERALL TOP 5
 # (don't care about duplicate playerID, just record the time if it's worthy)
 
@@ -42,9 +42,9 @@ execute if score #scorePlacement value matches 5 run scoreboard players operatio
 #update placement field on signs
 execute positioned ~ ~ ~ run function phan:high_score/sign_set_placement_texts
 
-############################
+#=====
 
-############################
+#=====
 # UNIQUE TOP 5
 # (if a duplicate playerID gets entered, remove the lower of the two)
 
@@ -123,4 +123,4 @@ execute if score #scorePlacement value matches 5 run scoreboard players operatio
 #update placement field on signs
 execute positioned ~ ~ ~6 run function phan:high_score/sign_set_placement_texts
 
-############################
+#=====

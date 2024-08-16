@@ -15,5 +15,6 @@ execute as @a[tag=!playerReservation,scores={enderEyes=1..}] run scoreboard play
 #finished players should have a flag by their name...
 
 #show sidebar, but ONLY if there's at least one qualifying player
-execute if score #2sec value matches 1 if entity @a[scores={enderEyesShow=1..}] if score #subGameState value matches 0 run scoreboard objectives setdisplay sidebar enderEyesShow
-execute if score #2sec value matches 1 unless entity @a[scores={enderEyesShow=1..}] if score #subGameState value matches 0 run scoreboard objectives setdisplay sidebar
+execute as @a[scores={enderEyesShow=1..}] run scoreboard players add #battleQualifiedForDisplay value 1
+execute if score #2sec value matches 1 if score #battleQualifiedForDisplay value matches 1.. if score #subGameState value matches 0 run scoreboard objectives setdisplay sidebar enderEyesShow
+execute if score #2sec value matches 1 if score #battleQualifiedForDisplay value matches ..0 if score #subGameState value matches 0 run scoreboard objectives setdisplay sidebar

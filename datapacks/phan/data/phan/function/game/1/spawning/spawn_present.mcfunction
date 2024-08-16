@@ -3,7 +3,7 @@ summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","present","groupB"],bill
 function phan:game/1/spawning/spawn__give_generic_data
 
 #inherit values from node
-scoreboard players operation @e[tag=setMe,type=item_display] editArg1 = @s editArg1
-scoreboard players operation @e[tag=setMe,type=item_display] editArg2 = @s editArg2
-scoreboard players operation @e[tag=setMe,type=item_display] editArg3 = @s editArg3
-tag @e[tag=setMe] remove setMe
+scoreboard players operation @e[tag=setMe,type=item_display,distance=..2] editArg1 = @s editArg1
+scoreboard players operation @e[tag=setMe,type=item_display,distance=..2] editArg2 = @s editArg2
+scoreboard players operation @e[tag=setMe,type=item_display,distance=..2] editArg3 = @s editArg3
+tag @e[tag=setMe,type=item_display,distance=..2] remove setMe

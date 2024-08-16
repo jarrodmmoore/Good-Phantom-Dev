@@ -1,7 +1,7 @@
 scoreboard players remove @s eyesToDeposit 1
 
 #play sound effect
-function phan:tell_spectators
+function phan:player/tell_spectators
 scoreboard players set #test value 0
 execute if entity @e[type=marker,tag=portalCore,scores={versusSpawn=1}] run scoreboard players set #test value 1
 execute if score #test value matches 1 as @e[type=marker,tag=portalCore,scores={versusSpawn=1},limit=1,sort=nearest] at @s run playsound minecraft:block.end_portal_frame.fill master @a[tag=tellMe] ~ ~ ~ 100000 1 1

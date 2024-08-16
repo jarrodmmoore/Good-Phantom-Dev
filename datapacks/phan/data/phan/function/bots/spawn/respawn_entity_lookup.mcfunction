@@ -1,0 +1,1 @@
+$function phan:bots/spawn/respawn_entity with storage phan:bot_data_$(id)

@@ -24,7 +24,7 @@ scoreboard players remove @s[scores={eyeAddDelay=1..}] eyeAddDelay 1
 execute if score @s eyesToAdd matches 1.. if score @s eyeAddDelay matches ..0 run function phan:game/4/race/player_add_eye
 execute if score @s eyesToDeposit matches 1.. if score @s eyeAddDelay matches ..0 run function phan:game/4/race/player_deposit_eye
 
-#figure out what directon the next checkpoint is in (10Hz, staggered per player)
+#figure out what direction the next checkpoint is in (10Hz, staggered per player)
 scoreboard players remove @s compassClock 1
 execute if score @s compassClock matches ..-1 if entity @s[tag=vsHomeStretch] run function phan:game/4/race/checkpoint/point_at_next/_start
 
@@ -33,7 +33,7 @@ tag @s[tag=vsHomeStretch] remove vsHomeStretch
 execute if score @s enderEyes >= #vEyesNeeded value run tag @s[tag=!vsHomeStretch] add vsHomeStretch
 scoreboard players set @s[tag=vsHomeStretch] lap -1
 execute if score #vsHomeStretch value matches 0 if entity @s[tag=vsHomeStretch] run scoreboard players set #vsHomeStretch value 1
-#can lose the homes tretch tag!
+#can lose the homestretch tag!
 execute if entity @s[tag=vsHomeStretch] if score @s enderEyes < #vEyesNeeded value run tag @s remove vsHomeStretch
 
 #finish if we touch the portal!

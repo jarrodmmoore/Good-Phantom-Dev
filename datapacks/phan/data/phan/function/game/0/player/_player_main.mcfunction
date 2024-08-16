@@ -12,6 +12,9 @@ execute if score #test value matches 1.. run function phan:game/1/player/get_tim
 #get rid of tag
 tag @s[tag=vsMidGameJoin] remove vsMidGameJoin
 
+#don't bully other players!
+effect give @s weakness 5 15 true
+
 #do different things if we're in the cabin or not
 scoreboard players set #playerInLobby value 0
 execute if entity @s[x=180,y=-13,z=87,dx=75,dy=100,dz=75] run scoreboard players set #playerInLobby value 1

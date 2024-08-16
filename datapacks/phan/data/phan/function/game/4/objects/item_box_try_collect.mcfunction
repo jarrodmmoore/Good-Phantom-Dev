@@ -1,5 +1,10 @@
+#hard+ bot might try to set a trapped chest here!
+execute if entity @s[tag=ai] at @s if entity @s[scores={botSkill=4..,inputCooldown=..0,botHasItem18=1..}] unless score @s racePosDisplay < #botRivalPosition value run function phan:bots/items/18_trapped_chest/use
+#=====
+
 #did a player already already open the box before we got our turn to run this? exit right away!
 execute if score #test value matches 1 run return 0
+#=====
 
 #count how many ticks we've tried this (note: player_tick loop decrements this variable by 4 each tick so it decays really fast)
 scoreboard players add @s[scores={timeSinceOpenBox=..50}] timeSinceOpenBox 5
@@ -51,7 +56,10 @@ execute if entity @s[scores={boxID=1..,hitBoxB_head=4}] run scoreboard players o
 execute if entity @s[scores={boxID=1..,hitBoxB_head=5}] run scoreboard players operation @s hitBox5b = #thisGroupID value
 
 #get item
-function phan:items/random/pick_index
+execute in overworld run function phan:items/random/pick_index
+
+#bot shouldn't go for chests it doesn't want anymore
+execute if entity @s[tag=ai] unless score @s botPreparedToBoostTrap matches 1.. run scoreboard players set @s botTargetID 0
 
 #player successfully got the box
 scoreboard players set @s timeSinceOpenBox 0
