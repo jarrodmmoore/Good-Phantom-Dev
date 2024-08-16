@@ -9,6 +9,9 @@ scoreboard players set @s fallFlying 0
 scoreboard players set @s botExplosionBoostTime 0
 tag @s[tag=botFlightPanic] remove botFlightPanic
 
+#need to re-target waypoints if we gave up on mid-air flight
+execute if entity @s[tag=botFollowingMidAir] run tag @s add botTargetNearestWP
+
 #exit out if we have no vehicle
 scoreboard players set #testReset value 0
 execute on vehicle run scoreboard players set #testReset value 1

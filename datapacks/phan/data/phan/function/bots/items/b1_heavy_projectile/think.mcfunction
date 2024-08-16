@@ -10,8 +10,14 @@ scoreboard players operation @s botProjectileThinkTime = #random value
 
 #=====
 
+#kick out if we don't have energy
+execute if score @s energy matches ..1 run return 0
+
 #kick out if on projectile input cooldown
 execute if score @s inputCooldownC matches 1.. run return 0
+
+#kick out if blinded
+execute if entity @s[scores={squidBlindTime=1..,botSkill=..5}] run return 0
 
 #=====
 

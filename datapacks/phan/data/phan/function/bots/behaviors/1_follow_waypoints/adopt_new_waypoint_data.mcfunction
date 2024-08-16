@@ -23,6 +23,10 @@ execute if score #waypointHook value matches 2 run function phan:bots/behaviors/
 execute if score #waypointHook value matches 3 store result score @s botHookBase run random value 0..50
 execute if score #waypointHook value matches 3 run scoreboard players remove @s botHookBase 25
 
+#remember if we're going after a mid-air waypoint
+tag @s[tag=botFollowingMidAir] remove botFollowingMidAir
+execute if score #waypointMidAir value matches 1 run tag @s add botFollowingMidAir
+
 #choose which direction to go if we didn't take an alt route
 execute if score #botCheckTrapsAltRoute value matches 1 unless entity @s[tag=botImprovFlight] run function phan:bots/behaviors/1_follow_waypoints/pick_direction/_index_check_all
 execute if score #botChoseAltRoute value matches 0 unless entity @s[tag=botImprovFlight] run function phan:bots/behaviors/1_follow_waypoints/pick_direction/_index

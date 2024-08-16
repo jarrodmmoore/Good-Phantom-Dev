@@ -15,4 +15,5 @@ execute if entity @s[tag=bigTarget] at @s run function phan:game/1/projectile/ge
 
 #clean up tags
 tag @a[tag=projectileOwner] remove projectileOwner
+execute if score #botsEnabled value matches 1.. run tag @e[tag=ai,type=zombie,tag=projectileOwner] remove projectileOwner
 scoreboard players set #dontConsumeItem value 0

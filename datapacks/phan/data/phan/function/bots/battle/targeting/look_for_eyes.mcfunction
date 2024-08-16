@@ -1,9 +1,9 @@
 #random chance we might just not
 execute store result score #random value run random value 1..100
-execute if score @s botSkill matches ..1 if score #random value matches ..60 run return 0
-execute if score @s botSkill matches 2 if score #random value matches ..50 run return 0
-execute if score @s botSkill matches 3 if score #random value matches ..40 run return 0
-execute if score @s botSkill matches 4 if score #random value matches ..20 run return 0
+execute if score @s botSkill matches ..1 if score #random value matches ..40 run return 0
+execute if score @s botSkill matches 2 if score #random value matches ..30 run return 0
+execute if score @s botSkill matches 3 if score #random value matches ..20 run return 0
+execute if score @s botSkill matches 4 if score #random value matches ..15 run return 0
 execute if score @s botSkill matches 5 if score #random value matches ..10 run return 0
 execute if score @s botSkill matches 6.. if score #random value matches ..5 run return 0
 #=====

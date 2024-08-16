@@ -10,6 +10,10 @@ execute if score @s enderEyes matches 1.. run scoreboard players add #battleQual
 #scoreboard players remove @s[scores={timeInFirst=1..}] timeInFirst 1
 #scoreboard players remove @s[scores={firstDingCooldown=1..}] firstDingCooldown 1
 
+#can't use bite or projectile attacks until game starts
+execute if score #gameTime value matches ..220 run scoreboard players set @s inputCooldownC 40
+execute if score #gameTime value matches ..220 run scoreboard players set @s inputCooldownD 40
+
 #add queued ever eyes and pretend to put them in the portal
 scoreboard players remove @s[scores={eyeAddDelay=1..}] eyeAddDelay 1
 execute if score @s eyesToAdd matches 1.. run scoreboard players operation @s enderEyes += @s eyesToAdd

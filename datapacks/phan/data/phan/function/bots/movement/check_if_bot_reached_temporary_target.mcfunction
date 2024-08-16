@@ -25,9 +25,9 @@ scoreboard players operation #testZ value = #compare_z value
 scoreboard players operation #testZ value -= @s location_zz
 
 #stop targeting if we're too far away (more than 10 blocks away)
-execute unless score #testX value matches -100..100 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
-execute unless score #testY value matches -100..100 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
-execute unless score #testZ value matches -100..100 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
+execute unless score #testX value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
+execute unless score #testY value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
+execute unless score #testZ value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
 
 #stop targeting if we reached it on x and z
 execute if score #testX value matches -15..15 if score #testZ value matches -15..15 run function phan:bots/movement/check_if_bot_reached_temporary_target_success

@@ -1,6 +1,6 @@
 execute as @a run attribute @s generic.movement_speed base set 0.15
 execute as @a run attribute @s minecraft:generic.water_movement_efficiency base set 1
-execute as @a run attribute @s generic.step_height base set 1.0
+execute as @a run attribute @s generic.step_height base set 1.1
 
 #catch a bug where dimensions changes screw up player effects
 effect clear @a jump_boost

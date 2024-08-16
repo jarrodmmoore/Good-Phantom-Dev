@@ -8,6 +8,7 @@ playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 1.8
 scoreboard players set @s inputCooldownC 15
 scoreboard players set @s[scores={inputCooldown=..1}] inputCooldown 2
 scoreboard players set @s[scores={inputCooldownD=..1}] inputCooldownD 2
+scoreboard players set @s botHoldingItem 0
 
 #minimum time before we're allowed to think about other items
 execute if entity @s[scores={botSkill=..2,botItemThinkTime=..14}] run scoreboard players set @s botItemThinkTime 15

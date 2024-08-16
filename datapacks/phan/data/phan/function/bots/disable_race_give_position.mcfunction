@@ -14,5 +14,6 @@ execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=11
 execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,tag=!botDisabled] if score @s botID = #checkID value run tag @s add finished
 
 #get rid of this entity
+execute if loaded ~ ~ ~ run function phan:bots/movement/cancel_flight
 tag @s remove ai
 scoreboard players set @s lifespan 0

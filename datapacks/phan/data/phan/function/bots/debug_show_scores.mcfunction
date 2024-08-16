@@ -1,5 +1,7 @@
 tellraw @a ["",{"text":" "}]
-#tellraw @a ["",{"text":"botBehavior = "},{"score":{"name":"@s","objective":"botBehavior"}}]
+tellraw @a ["",{"text":"botBehavior = "},{"score":{"name":"@s","objective":"botBehavior"}}]
+tellraw @a ["",{"text":"botTargetPriority = "},{"score":{"name":"@s","objective":"botTargetPriority"}}]
+tellraw @a ["",{"text":"botTargetID = "},{"score":{"name":"@s","objective":"botTargetID"}}]
 #tellraw @a ["",{"text":"botPreparedToBoostTrap = "},{"score":{"name":"@s","objective":"botPreparedToBoostTrap"}}]
 #tellraw @a ["",{"text":"botPreparedToDodgeTrap = "},{"score":{"name":"@s","objective":"botPreparedToDodgeTrap"}}]
 #tellraw @a ["",{"text":"botHookBase = "},{"score":{"name":"@s","objective":"botHookBase"}}]

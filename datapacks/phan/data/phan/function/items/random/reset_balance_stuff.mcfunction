@@ -13,10 +13,10 @@ scoreboard players set @a picksSinceGlobal 100
 scoreboard players set @a picksSinceUtility 100
 
 #reset cooldowns on some global items
-scoreboard players set #cooldownLightning value 500
-scoreboard players set #cooldownSquid value 500
-scoreboard players set #cooldownAnvil value 500
-scoreboard players set #cooldownEnderman value 300
+scoreboard players set #cooldownLightning value 750
+scoreboard players set #cooldownSquid value 1000
+scoreboard players set #cooldownAnvil value 750
+scoreboard players set #cooldownEnderman value 500
 
-#madated anvil
+#mandated anvil
 scoreboard players set #mandateAnvil value 0

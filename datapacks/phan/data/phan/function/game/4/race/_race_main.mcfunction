@@ -110,7 +110,7 @@ execute if score #subGameState value matches 0 run function phan:game/4/race/tim
 execute if entity @a[tag=playing] run scoreboard players set #vTimeOut value 0
 execute if score #vTimeOut value matches 10.. if score #botsOnly value matches 1 if entity @e[type=block_display,tag=botController,tag=!finished,tag=!botDisabled] run scoreboard players set #vTimeOut value 0
 scoreboard players add #vTimeOut value 1
-execute if score #subGameState value matches 0 if score #vTimeOut value matches 60.. run scoreboard players set #subGameState value 1
+execute if score #subGameState value matches 0 if score #vTimeOut value matches 20.. run scoreboard players set #subGameState value 1
 
 #show end results when subGameState=1
 execute if score #gameState value matches 4 if score #subGameState value matches 1 run function phan:game/4/race/results_sequence

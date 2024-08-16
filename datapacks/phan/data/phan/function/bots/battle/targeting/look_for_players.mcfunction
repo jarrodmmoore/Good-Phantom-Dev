@@ -25,7 +25,7 @@ execute if score #targetExists value matches 0 run return 0
 #target one of the players with LOS
 scoreboard players operation @s botTargetID = @e[limit=1,sort=random,tag=viableTarget,distance=..20] playerID
 scoreboard players set @s botTargetPriority 2
-scoreboard players set @s botBehavior 3
+function phan:bots/behaviors/3_follow_target/start_following_target
 scoreboard players set #hasTarget value 1
 
 #clean up viable targets

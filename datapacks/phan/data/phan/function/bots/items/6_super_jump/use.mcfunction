@@ -4,6 +4,9 @@ scoreboard players operation #checkID value = @s playerID
 execute in overworld as @e[type=marker,tag=endermanIsDangerous,x=198,y=-6,z=118,distance=..1] unless score @s playerID = #checkID value run return 0
 #=====
 
+#cancel flight
+function phan:bots/movement/cancel_flight
+
 #consume item
 scoreboard players remove @s botHasItem6 1
 #update held item

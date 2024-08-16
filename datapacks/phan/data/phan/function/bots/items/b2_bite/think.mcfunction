@@ -6,12 +6,15 @@ execute if score @s botSkill matches 3 store result score #random value run rand
 execute if score @s botSkill matches 4 store result score #random value run random value 16..25
 execute if score @s botSkill matches 5.. store result score #random value run random value 1..25
 execute if entity @s[tag=vsHomeStretch,tag=botRival,scores={botSkill=5..}] run scoreboard players set #random value 15
-scoreboard players operation @s botProjectileThinkTime = #random value
+scoreboard players operation @s botBiteThinkTime = #random value
 
 #=====
 
 #kick out if on projectile input cooldown
 execute if score @s inputCooldownD matches 1.. run return 0
+
+#kick out if blinded
+execute if entity @s[scores={squidBlindTime=1..,botSkill=..4}] run return 0
 
 #=====
 
@@ -35,5 +38,5 @@ data modify storage phan:coords functioncall set value "phan:bots/items/b2_bite/
 #potential targets are now marked with "viableTarget"
 
 #try to bite one of the targets at random
-execute if score #random value matches 0 facing entity @e[limit=1,sort=random,tag=viableTarget,distance=..6] eyes run function phan:bots/items/shoot_projectile_with_aim_offset with storage phan:coords
+execute facing entity @e[limit=1,sort=random,tag=viableTarget,distance=..6] eyes run function phan:bots/items/shoot_projectile_with_aim_offset with storage phan:coords
 tag @e[tag=viableTarget,distance=..6] remove viableTarget

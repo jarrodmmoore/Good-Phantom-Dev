@@ -99,9 +99,10 @@ scoreboard players remove @s[scores={inputCooldownB=1..}] inputCooldownB 1
 scoreboard players remove @s[scores={botMistakeCooldown=1..}] botMistakeCooldown 1
 
 
-
+#=====
 #DEBUG, SHOW SCORES FOR BOT W/ ID 1
 #execute if score @s botID matches 1 if score #5Hz value matches 1 run function phan:bots/debug_show_scores
+#=====
 
 
 #stay alive as long as we're running this function
@@ -125,4 +126,4 @@ scoreboard players set #botSuccess value 1
 #=====
 
 #inlined lifespan handling to prevent insane entity pile-ups
-execute if score @s lifespan matches ..0 at @s run function phan:lifespan_expire
+execute if score @s lifespan matches ..0 at @s run function phan:bots/bot_lifespan_expire

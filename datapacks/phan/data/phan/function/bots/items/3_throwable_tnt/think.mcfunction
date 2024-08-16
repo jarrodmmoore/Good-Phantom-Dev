@@ -1,6 +1,9 @@
 #kick out if on cooldown
 execute if score @s inputCooldown matches 1.. run return 0
 
+#kick out if blinded
+execute if entity @s[scores={squidBlindTime=1..,botSkill=..5}] run return 0
+
 #exit out if we don't want to get our item stolen
 execute if score @s botFearsEnderman matches 1 run return 0
 
@@ -23,8 +26,8 @@ execute if score @s botSkill matches ..1 anchored eyes positioned ^ ^ ^15 as @e[
 execute if score @s botSkill matches 2 anchored eyes positioned ^ ^ ^15 as @e[tag=playing,tag=!thinkSelf,distance=..12] positioned ^ ^ ^-15 facing entity @s feet run function phan:bots/items/los_check_start
 execute if score @s botSkill matches 3 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..15] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
 execute if score @s botSkill matches 4 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..20] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 5 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..25] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 6.. anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..30] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 5 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..25,scores={shieldTime=..0}] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 6.. anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..30,scores={shieldTime=..0}] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
 tag @s remove thinkSelf
 
 #quit if no targets found

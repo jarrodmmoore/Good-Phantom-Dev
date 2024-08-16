@@ -51,6 +51,9 @@ execute if entity @s[tag=!vsHomeStretch,scores={botSkill=4..,energy=..5}] run re
 #never use if we're ahead of the rival bot without full energy
 execute if score @s[scores={energy=..15}] racePosDisplay < #botRivalPosition value run return 0
 
+#kick out if blinded
+execute if score @s squidBlindTime matches 1.. run return 0
+
 #=====
 
 #random chance of not using boost

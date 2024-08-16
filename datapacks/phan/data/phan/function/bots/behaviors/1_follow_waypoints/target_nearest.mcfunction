@@ -1,5 +1,8 @@
 #go for the nearest waypoint
 
+#remove following mid-air tag
+tag @s[tag=botFollowingMidAir] remove botFollowingMidAir
+
 #get ready to do stuff...
 scoreboard players set #foundNode value 0
 scoreboard players set #oldWpX value -2147483648

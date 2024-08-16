@@ -5,6 +5,9 @@ scoreboard players remove @s botWanderTime 1
 #not airborne? we need to face the correct yaw
 execute unless score @s botMoveState matches 1 if score @s botWanderYaw matches -2147483648..2147483647 run function phan:bots/behaviors/2_roam/face_proper_direction
 
+#forget about following a mid-air waypoint
+tag @s[tag=botFollowingMidAir] remove botFollowingMidAir
+
 #turn randomly as we move (very similar to squid blindness)
 execute store result score #random value run random value 1..2
 execute store result score #random2 value run random value 1..50
@@ -23,6 +26,10 @@ execute if score #test value matches 1 run scoreboard players add @s botRoamLook
 execute if score @s botRoamLookBias matches 2.. run scoreboard players set @s botRoamLookBias 0
 execute if score @s botRoamLookBias matches 0 at @s rotated ~ 0 unless block ^ ^1.5 ^1 #phan:not_solid run scoreboard players remove @s botHookModifier 30
 execute if score @s botRoamLookBias matches 1 at @s rotated ~ 0 unless block ^ ^1.5 ^1 #phan:not_solid run scoreboard players add @s botHookModifier 30
+
+#stuck in a wall? we will eventually respawn (needed for battle mode...)
+execute unless block ~ ~ ~ #phan:not_solid unless block ~ ~1 ~ #phan:not_solid run scoreboard players add @s botChaseTime 1
+execute if score @s botChaseTime matches 80.. run tag @s add botRespawn
 
 #summon aec depending what direction we're going
 scoreboard players set #success value 0

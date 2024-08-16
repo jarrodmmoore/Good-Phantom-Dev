@@ -5,6 +5,7 @@ execute if entity @s[tag=hiddenMusicDisc] as @a[limit=1,tag=catcher,distance=..3
 execute unless score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a ~ ~ ~ 2.5 .8
 execute if score #gameState value matches 4 as @a[tag=catcher,distance=..3] run function phan:player/tell_spectators
 execute if score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a[tag=tellMe] ~ ~ ~ 2.5 .8
+execute if score #gameState value matches 4 at @s run playsound minecraft:custom_sfx/pickup1 master @a[tag=!tellMe] ~ ~ ~ .5 1.1
 
 #found a hidden music disc!
 execute if entity @s[tag=hiddenMusicDisc] run function phan:game/1/objects/hidden_music_disc/_index

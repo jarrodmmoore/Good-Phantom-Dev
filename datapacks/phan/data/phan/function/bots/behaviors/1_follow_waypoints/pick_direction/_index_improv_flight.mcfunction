@@ -1,6 +1,6 @@
 #13/X -- keep going last direction
-#3/X -- go adjactent direction
-#3/X -- go other adjactent direction
+#3/X -- go adjacent direction
+#3/X -- go other adjacent direction
 #1/X -- go polar opposite direction
 
 #if score #botChoseAltRoute value matches 0

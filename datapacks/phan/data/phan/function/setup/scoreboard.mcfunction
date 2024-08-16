@@ -529,6 +529,7 @@ scoreboard objectives add botBattleThinkTime dummy
 scoreboard objectives add botIgnoreEyeID dummy
 scoreboard objectives add botProjectileThinkTime dummy
 scoreboard objectives add botBiteThinkTime dummy
+scoreboard objectives add botChaseTime dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy
