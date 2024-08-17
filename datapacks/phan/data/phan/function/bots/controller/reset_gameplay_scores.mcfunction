@@ -25,6 +25,11 @@ scoreboard players set @s itemLuck 1
 scoreboard players set @s timeBehind1st 0
 scoreboard players set @s timeInFirst 0
 scoreboard players set @s botMistakeCooldown 0
+scoreboard players set @s vsAddPoints 0
+
+#reset some scores we might use to fudge our position if our entity gets lost in the sauce (aka unloaded chunks)
+scoreboard players reset @s racePosDisplay
+scoreboard players reset @s racePosCalc
 
 #fallback respawn coordinates are the log cabin in the overworld (chosen because it's in the spawn chunks)
 scoreboard players set @s vsRespawnX 198
@@ -35,9 +40,6 @@ scoreboard players set @s vsRespawnDimension 1
 scoreboard players set @s vsRespawnLaunch 0
 tag @s remove botNeedMarkerToRespawn
 tag @s remove botEntityMissing
-
-#addpoints
-scoreboard players set @s vsAddPoints 0
 
 #ring stuff
 scoreboard players set @s ringID 0
@@ -79,15 +81,15 @@ scoreboard players reset @s hitBox3b
 scoreboard players reset @s hitBox4b
 scoreboard players reset @s hitBox5b
 
-#reset info on previous items we received (on each individual player)
-scoreboard players set @a lastItemPicked 0
-scoreboard players set @a picksSinceSpeed 100
-scoreboard players set @a picksSinceBigSpeed 0
-scoreboard players set @a picksSinceWarp 0
-scoreboard players set @a picksSinceOffense 100
-scoreboard players set @a picksSinceTrap 100
-scoreboard players set @a picksSinceGlobal 100
-scoreboard players set @a picksSinceUtility 100
+#reset info on previous items we received
+scoreboard players set @s lastItemPicked 0
+scoreboard players set @s picksSinceSpeed 100
+scoreboard players set @s picksSinceBigSpeed 0
+scoreboard players set @s picksSinceWarp 0
+scoreboard players set @s picksSinceOffense 100
+scoreboard players set @s picksSinceTrap 100
+scoreboard players set @s picksSinceGlobal 100
+scoreboard players set @s picksSinceUtility 100
 
 #items
 function phan:bots/clear_inventory

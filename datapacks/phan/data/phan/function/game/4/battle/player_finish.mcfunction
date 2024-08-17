@@ -33,7 +33,7 @@ scoreboard players add #positionAssignMin value 1
 scoreboard players operation @s racePosDisplay = @s finishPos
 
 #advancement if we won with 0 KOs (there must be at least one other player in the game)
-execute if score #assist_enabled_portalrace value matches 0 if entity @s[scores={finishPos=1,KOs=..0}] if entity @a[tag=playing] run advancement grant @s only phan:portal_race/pacifist_run
+execute if score #assist_enabled_portalrace value matches 0 if entity @s[scores={finishPos=1,KOs=..0}] if score #hudPeakPlayers value matches 5.. run advancement grant @s only phan:portal_race/pacifist_run
 
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me
@@ -55,6 +55,7 @@ title @a[tag=tellMe] title ["",{"translate":"gp.versus.finished","color":"yellow
 #announce to everyone else that we finished
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.firework_rocket.blast master @s ~ 100000 ~ 100000 1
 scoreboard players set @a[tag=doneWithIntro] actionbarDelay 40
+scoreboard players set @a[tag=doneWithIntro,tag=navCompass] actionbarDelay 15
 execute if score @s finishPos matches ..1 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"yellow","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"yellow","bold":true},{"translate":"gp.versus.pos.1st","color":"yellow","bold":true},{"text":"]","color":"yellow","bold":true}]
 execute if score @s finishPos matches 2 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"white","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"white","bold":true},{"translate":"gp.versus.pos.2nd","color":"white","bold":true},{"text":"]","color":"white","bold":true}]
 execute if score @s finishPos matches 3 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"white","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"white","bold":true},{"translate":"gp.versus.pos.3rd","color":"white","bold":true},{"text":"]","color":"white","bold":true}]

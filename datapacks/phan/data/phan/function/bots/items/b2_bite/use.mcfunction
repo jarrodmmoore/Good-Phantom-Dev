@@ -1,7 +1,7 @@
 #cooldown / input management
 scoreboard players set @s inputCooldownD 15
 scoreboard players set @s[scores={inputCooldown=..3}] inputCooldown 4
-scoreboard players set @s[scores={inputCooldownC=..3}] inputCooldownD 4
+scoreboard players set @s[scores={inputCooldownC=..3}] inputCooldownC 4
 
 #minimum time before we're allowed to think about other items
 execute if entity @s[scores={botSkill=..2,botItemThinkTime=..14}] run scoreboard players set @s botItemThinkTime 15

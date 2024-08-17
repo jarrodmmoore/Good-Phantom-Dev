@@ -4,7 +4,7 @@
             "translate": "gp.advancement.title.pacifist_run"
         },
         "description": {
-            "translate": "gp.advancement.description.pacifist_run"
+            "translate": "gp.advancement.description.pacifist_run_5plus"
         },
         "icon": {
             "id": "minecraft:beef"

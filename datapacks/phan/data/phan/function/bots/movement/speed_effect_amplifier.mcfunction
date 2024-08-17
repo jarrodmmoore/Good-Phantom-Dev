@@ -1,5 +1,8 @@
 scoreboard players set #multiplier value 100
 
+#show speedy particles if we have swiftness
+execute if score @s botEffectSpeedPotion matches 20.. run effect give @s speed 1 2 false
+
 #set multiplier depending on the effect we have (strongest one takes priority)
 execute if score @s botEffectSpeedPotion matches 1.. run scoreboard players set #multiplier value 158
 #equivalent of speed 2

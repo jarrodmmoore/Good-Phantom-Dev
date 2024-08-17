@@ -16,5 +16,12 @@ execute if score @s picksSinceSpeed matches 2.. run tag @e[tag=randomize,x=-1,y=
 execute if score @s picksSinceSpeed matches 2.. unless entity @e[limit=1,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12..15},tag=!tempItemBan] run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=6..7}] remove tempItemBan
 
 #override 3
+#somewhat more likely to get a swiftness potion if possible
+scoreboard players set #random value 0
+execute if score @s picksSinceSpeed matches 2.. if score #hasSwiftness value matches ..0 store result score #random value run random value 0..2
+execute if score #random value matches 2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..16}] add tempItemBan
+execute if score #random value matches 2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=12..13}] remove tempItemBan
+
+#override 4
 #can always get enderman thief when it's off cooldown
 execute if score @s picksSinceGlobal matches 3.. if score #cooldownEnderman value matches ..0 if score #hasEndermanThief value matches ..0 run tag 00000000-0000-0328-0000-000000000010 remove tempItemBan

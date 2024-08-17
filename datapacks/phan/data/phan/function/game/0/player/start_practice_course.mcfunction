@@ -15,7 +15,7 @@ scoreboard players set @s scoreCurrent2 0
 scoreboard players set @s addPointsLater 0
 scoreboard players set @s enderEyes 0
 function phan:game/1/set_score_digits
-scoreboard players set @s pTimeRemaining 8019
+scoreboard players set @s pTimeRemaining 6019
 scoreboard players set @s addScore 0
 scoreboard players set @s combo 0
 scoreboard players set @s comboTime 0

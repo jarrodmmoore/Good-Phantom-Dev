@@ -1,0 +1,5 @@
+execute if score @s check matches 20 facing entity @e[limit=1,type=marker,sort=nearest,tag=checkpoint,scores={versusSpawn=1,editArg1=21}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s check matches 21 facing entity @e[limit=1,type=marker,sort=nearest,tag=checkpoint,scores={versusSpawn=1,editArg1=22}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s check matches 22 facing entity @e[limit=1,type=marker,sort=nearest,tag=checkpoint,scores={versusSpawn=1,editArg1=23}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s check matches 23 facing entity @e[limit=1,type=marker,sort=nearest,tag=checkpoint,scores={versusSpawn=1,editArg1=24}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s check matches 24 facing entity @e[limit=1,type=marker,sort=nearest,tag=checkpoint,scores={versusSpawn=1,editArg1=25}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference

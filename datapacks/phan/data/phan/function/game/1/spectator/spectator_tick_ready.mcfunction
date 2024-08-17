@@ -3,6 +3,7 @@ gamemode spectator @s[gamemode=adventure]
 scoreboard players set #foundSpec value 0
 #if using player POV mode: we first attempt to find the player we spectated last tick. if they aren't nearby, find nearest instead
 #(this avoids random POV swaps when players get really close to one another in Versus mode)
+execute if score @s prevSpectateID matches -2147483648..2147483647 run scoreboard players operation #prevSpecID value = @s prevSpectateID
 execute unless score @s spectateMode matches 1.. if score @s prevSpectateID matches -2147483648..2147483647 as @a[tag=playing,distance=..8] if score @s playerID = #prevSpecID value run function phan:game/1/spectator/spectator_target_player
 execute if score #foundSpec value matches 0 as @a[limit=1,sort=nearest,tag=playing] run function phan:game/1/spectator/spectator_target_player
 

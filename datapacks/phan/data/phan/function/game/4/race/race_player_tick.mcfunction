@@ -41,9 +41,10 @@ function phan:game/4/race/find_relevant_checkpoints
 scoreboard players operation #arg value = @s checkFake
 execute unless score @s check = @s checkFake run function phan:game/4/race/find_relevant_checkpoints
 
-#figure out what directon the next checkpoint is in (10Hz, staggered per player)
+#figure out what direction the next checkpoint is in (10Hz, staggered per player)
 scoreboard players remove @s compassClock 1
-execute if score @s compassClock matches ..-1 run function phan:game/4/race/checkpoint/point_at_next/_start
+execute if score @s[tag=!navCompass] compassClock matches ..-1 run function phan:game/4/race/checkpoint/point_at_next/_start
+execute if entity @s[tag=navCompass] run function phan:game/4/race/checkpoint/point_at_next/_start_mandatory
 
 #keep track of the min and max lap between all players
 execute if score @s lap matches 0.. if score @s lap < #relevantLapMin value run scoreboard players operation #relevantLapMin value = @s lap

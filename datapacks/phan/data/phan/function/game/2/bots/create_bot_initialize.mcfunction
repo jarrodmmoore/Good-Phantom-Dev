@@ -26,8 +26,8 @@ scoreboard players set #getID value 0
 scoreboard players set #getID2 value 0
 
 #try to get a tryhard name if we're a tryhard bot
-execute store result score #test value run execute if entity @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..14},tag=!nameTakenTryhard]
-execute if score @s botSkill matches 5..6 if score #test value matches 1.. run scoreboard players operation #getID value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..14},tag=!nameTakenTryhard] r
+execute store result score #test value run execute if entity @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..15},tag=!nameTakenTryhard]
+execute if score @s botSkill matches 5..6 if score #test value matches 1.. run scoreboard players operation #getID value = @e[limit=1,sort=random,type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..15},tag=!nameTakenTryhard] r
 execute if score #getID value matches 1.. as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #getID value run tag @s add nameTakenTryhard
 execute if score #getID value matches 1.. run scoreboard players operation @s botName = #getID value
 execute if score #getID value matches 1.. run tag @s add tryhardName

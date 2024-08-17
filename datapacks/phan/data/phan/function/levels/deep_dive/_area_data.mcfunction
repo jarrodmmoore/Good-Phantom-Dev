@@ -20,8 +20,8 @@ scoreboard players set #targetTimeAct1 value 90
 #act 2
 scoreboard players set @s[tag=playing,scores={pCurrentArea=2}] pPearlsNeeded 20
 scoreboard players set @s[tag=playing,scores={pCurrentArea=2}] pTimeRemaining 3019
-scoreboard players set #scoreRankS2 value 75000
-scoreboard players set #scoreRankA2 value 60000
+scoreboard players set #scoreRankS2 value 80000
+scoreboard players set #scoreRankA2 value 65000
 scoreboard players set #scoreRankB2 value 42500
 scoreboard players set #scoreRankC2 value 27500
 scoreboard players set #targetTimeAct2 value 120

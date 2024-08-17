@@ -7,6 +7,7 @@ execute if score #gameTime value matches 100000 run scoreboard players set @a[ta
 
 #any bots that aren't finished or disabled should immediately save their position as their finish position
 execute if score #gameTime value matches 100000 as @e[tag=ai,type=zombie,scores={racePosDisplay=1..}] run function phan:bots/disable_race_give_position
+execute if score #gameTime value matches 100000 in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,tag=!finished,scores={racePosDisplay=1..}] run function phan:bots/controller/silent_finish
 execute if score #gameTime value matches 100000 run tag @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] add botDisabled
 
 #show points

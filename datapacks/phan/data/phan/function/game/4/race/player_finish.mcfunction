@@ -50,6 +50,7 @@ title @a[tag=tellMe] title ["",{"translate":"gp.versus.finished","color":"yellow
 #announce to everyone else that we finished
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.firework_rocket.blast master @s ~ 100000 ~ 100000 1
 scoreboard players set @a[tag=doneWithIntro] actionbarDelay 40
+scoreboard players set @a[tag=doneWithIntro,tag=navCompass] actionbarDelay 15
 execute if score @s finishPos matches ..1 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"yellow","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"yellow","bold":true},{"translate":"gp.versus.pos.1st","color":"yellow","bold":true},{"text":"]","color":"yellow","bold":true}]
 execute if score @s finishPos matches 2 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"white","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"white","bold":true},{"translate":"gp.versus.pos.2nd","color":"white","bold":true},{"text":"]","color":"white","bold":true}]
 execute if score @s finishPos matches 3 run title @a[tag=doneWithIntro] actionbar ["",{"translate":"gp.versus.player_finished","color":"white","bold":true,"with":[{"selector":"@s","color":"aqua","italic":false,"bold":false}]},{"text":" "},{"text":"[","color":"white","bold":true},{"translate":"gp.versus.pos.3rd","color":"white","bold":true},{"text":"]","color":"white","bold":true}]

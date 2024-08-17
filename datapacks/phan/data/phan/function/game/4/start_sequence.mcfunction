@@ -7,6 +7,9 @@ execute as @a[tag=doneWithIntro] run scoreboard players operation @s pCurrentAre
 #title
 execute if score #gameTime value matches 80..299 run title @s actionbar ["",{"translate":"gp.game.get_ready","italic":true}]
 
+#battle mode: don't let players bite each other during the start countdown!
+execute if score #gameTime value matches ..220 if score #vGameType value matches 2 run effect give @a weakness 2 16 true
+
 #hold players in place for a second
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run effect give @a[tag=doneWithIntro] blindness 5 4 true
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run function phan:levels/_index_teleport_versus

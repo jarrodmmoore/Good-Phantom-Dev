@@ -23,6 +23,7 @@ execute if score #playerCount value matches ..1 run scoreboard players set #mand
 #announce to everyone else that we finished (this time with macros! whoa)
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.firework_rocket.blast master @s ~ 100000 ~ 100000 1
 scoreboard players set @a[tag=doneWithIntro] actionbarDelay 40
+scoreboard players set @a[tag=doneWithIntro,tag=navCompass] actionbarDelay 15
 execute if score @s finishPos matches ..1 run return run function phan:bots/controller/controller_player_finish_1st_macro with storage phan:bot_data
 execute if score @s finishPos matches 33.. run return run function phan:bots/controller/controller_player_finish_32plus_macro with storage phan:bot_data
 execute if score @s finishPos matches 2 run data modify storage phan:bot_data finishpos set value "2nd"

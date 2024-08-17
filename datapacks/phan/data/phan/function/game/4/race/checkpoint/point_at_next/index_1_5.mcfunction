@@ -1,5 +1,5 @@
-execute if score @s checkFake matches -1..0 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=1}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
-execute if score @s checkFake matches 1 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=2}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
-execute if score @s checkFake matches 2 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=3}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
-execute if score @s checkFake matches 3 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=4}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
-execute if score @s checkFake matches 4 facing entity @e[limit=1,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=5}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches -1..0 facing entity @e[limit=1,type=marker,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=1}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 1 facing entity @e[limit=1,type=marker,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=2}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 2 facing entity @e[limit=1,type=marker,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=3}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 3 facing entity @e[limit=1,type=marker,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=4}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
+execute if score @s checkFake matches 4 facing entity @e[limit=1,type=marker,tag=posCalc,tag=checkpoint,scores={versusSpawn=1,editArg1=5}] feet run function phan:game/4/race/checkpoint/point_at_next/_find_angle_difference
