@@ -1,11 +1,12 @@
 #set think cooldown
 scoreboard players set #random value 0
-execute if score @s botSkill matches ..1 store result score #random value run random value 80..190
-execute if score @s botSkill matches 2 store result score #random value run random value 40..120
-execute if score @s botSkill matches 3 store result score #random value run random value 20..70
-execute if score @s botSkill matches 4 store result score #random value run random value 16..25
-execute if score @s botSkill matches 5.. store result score #random value run random value 1..25
-execute if entity @s[tag=vsHomeStretch,tag=botRival,scores={botSkill=5..}] run scoreboard players set #random value 15
+execute if score @s botSkill matches ..1 store result score #random value run random value 22..45
+execute if score @s botSkill matches 2 store result score #random value run random value 16..30
+execute if score @s botSkill matches 3 store result score #random value run random value 12..25
+execute if score @s botSkill matches 4 store result score #random value run random value 8..20
+execute if score @s botSkill matches 5 store result score #random value run random value 4..15
+execute if score @s botSkill matches 6.. store result score #random value run random value 1..10
+execute if entity @s[tag=vsHomeStretch,tag=botRival,scores={botSkill=5..}] if score #random value matches 16.. run scoreboard players set #random value 15
 scoreboard players operation @s botBiteThinkTime = #random value
 
 #=====
@@ -18,13 +19,12 @@ execute if entity @s[scores={squidBlindTime=1..,botSkill=..4}] run return 0
 
 #=====
 
-#check for hittable players
+#check for hittable players and eye pickups
 scoreboard players set #targetExists value 0
 tag @s add thinkSelf
-execute if score @s botSkill matches ..1 anchored eyes positioned ^ ^ ^2 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..1] run function phan:bots/items/los_check_success
-execute if score @s botSkill matches 2 anchored eyes positioned ^ ^ ^2 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..2] run function phan:bots/items/los_check_success
-execute if score @s botSkill matches 3 anchored eyes positioned ^ ^ ^2 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..3] run function phan:bots/items/los_check_success
-execute if score @s botSkill matches 4.. anchored eyes positioned ^ ^ ^1 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..3] run function phan:bots/items/los_check_success
+execute if score @s botSkill matches ..2 positioned ~ ~1.8 ~ positioned ^ ^ ^1 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..2] run function phan:bots/items/los_check_success
+execute if score @s botSkill matches 3.. positioned ~ ~1.8 ~ positioned ^ ^ ^1 as @e[tag=playing,tag=!thinkSelf,tag=!botRival,distance=..3] run function phan:bots/items/los_check_success
+execute if score @s botChaseTime matches 40.. positioned ~ ~1.8 ~ positioned ^ ^ ^2 as @e[type=item_display,tag=enderEye,distance=..2] run function phan:bots/items/los_check_success
 tag @s remove thinkSelf
 
 #quit if no targets found

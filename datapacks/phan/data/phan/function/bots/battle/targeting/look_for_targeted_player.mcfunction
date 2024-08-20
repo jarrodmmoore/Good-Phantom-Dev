@@ -1,5 +1,5 @@
 #get ready
-scoreboard players operation #checkID value = @s targetID
+scoreboard players operation #checkID value = @s botTargetID
 
 #check if we can still gaze into the eyes of our one and only
 scoreboard players set #targetExists value 0

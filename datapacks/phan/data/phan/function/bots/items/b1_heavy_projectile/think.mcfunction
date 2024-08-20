@@ -13,6 +13,9 @@ scoreboard players operation @s botProjectileThinkTime = #random value
 #kick out if we don't have energy
 execute if score @s energy matches ..1 run return 0
 
+#high level bots will try to hold on to at least 1 shot's worth of energy for grabbing eyes
+execute if entity @s[tag=!vsHomeStretch,scores={botSkill=4..,energy=..3}] unless score @s botTargetPriority matches 2 run return 0
+
 #kick out if on projectile input cooldown
 execute if score @s inputCooldownC matches 1.. run return 0
 
@@ -31,12 +34,12 @@ execute if score @s botSkill matches 5.. store result score #random value run ra
 #find hittable players (do a LOS check)
 scoreboard players set #targetExists value 0
 tag @s add thinkSelf
-execute if score @s botSkill matches ..1 anchored eyes positioned ^ ^ ^15 as @e[tag=playing,tag=!thinkSelf,distance=..10] positioned ^ ^ ^-15 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 2 anchored eyes positioned ^ ^ ^15 as @e[tag=playing,tag=!thinkSelf,distance=..12] positioned ^ ^ ^-15 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 3 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..15] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 4 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..20] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 5 anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..25] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
-execute if score @s botSkill matches 6.. anchored eyes positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..30] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches ..1 positioned ~ ~1.8 ~ positioned ^ ^ ^15 as @e[tag=playing,tag=!thinkSelf,distance=..10] positioned ^ ^ ^-15 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 2 positioned ~ ~1.8 ~ positioned ^ ^ ^15 as @e[tag=playing,tag=!thinkSelf,distance=..12] positioned ^ ^ ^-15 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 3 positioned ~ ~1.8 ~ positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..15] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 4 positioned ~ ~1.8 ~ positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..20] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 5 positioned ~ ~1.8 ~ positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..25] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
+execute if score @s botSkill matches 6.. positioned ~ ~1.8 ~ positioned ^ ^ ^20 as @e[tag=playing,tag=!thinkSelf,distance=..30] positioned ^ ^ ^-20 facing entity @s feet run function phan:bots/items/los_check_start
 tag @s remove thinkSelf
 
 #quit if no targets found

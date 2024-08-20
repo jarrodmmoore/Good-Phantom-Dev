@@ -106,6 +106,7 @@ scoreboard players reset @a spectatorView
 scoreboard players reset @a enderChestMenu
 scoreboard players reset @a hurryUp
 scoreboard players reset @a joinGame
+schedule function phan:game/0/delayed_trigger_removal 2t
 scoreboard players set @a spectateDelay 0
 tag @a[tag=noSpecDataAdopt] remove noSpecDataAdopt
 scoreboard players set @a addScore 0

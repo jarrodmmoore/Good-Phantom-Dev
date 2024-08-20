@@ -12,5 +12,8 @@ execute if score #endermanAge value matches 16 as @a[tag=doneWithIntro] at @s ru
 #why?
 #because i think this will lead to some interesting mind games >:)
 
+#we exist!
+scoreboard players set #success value 1
+
 #enderman teleports away
 execute if score #endermanAge value matches 30 as @e[type=enderman,tag=endermanProp] if score @s originalID = #thisEndermanOG value run function phan:items/enderman_teleports_away

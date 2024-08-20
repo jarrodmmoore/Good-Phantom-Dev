@@ -1,5 +1,8 @@
-#only 1 in 4 chance of running this. roll 2 or higher and you're kicked out.
-execute store result score #random value run random value 1..4
+#only a small chance of running this. roll 2 or higher and you're kicked out.
+execute if score #activeBattlePlayers value matches ..1 store result score #random value run random value 1..9
+execute if score #activeBattlePlayers value matches 2 store result score #random value run random value 1..5
+execute if score #activeBattlePlayers value matches 3..5 store result score #random value run random value 1..6
+execute if score #activeBattlePlayers value matches 6.. store result score #random value run random value 1..7
 execute if score #random value matches 2.. run return 0
 #=====
 

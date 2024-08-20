@@ -11,13 +11,13 @@ scoreboard players operation @s vsRespawnDimension = #activeDimension value
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botID
 
 #spawn entity at a valid versusStartPoint
-scoreboard players set #success value 0
+scoreboard players set #botSpawnSuccess value 0
 execute as @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1}] if score @s editArg1 = #startGrid value run tag @s add pickMe
 execute at @e[type=marker,limit=1,tag=pickMe] run function phan:bots/spawn/respawn_entity_lookup with storage phan:bot_args
 tag @e[type=marker,tag=pickMe] remove pickMe
 
 #no versusStartPoint exists? just spawn on a player then, i guess
-execute if score #success value matches 0 at @a[limit=1,sort=random,tag=doneWithIntro] run function phan:bots/spawn/respawn_entity_lookup with storage phan:bot_args
+execute if score #botSpawnSuccess value matches 0 at @a[limit=1,sort=random,tag=doneWithIntro] run function phan:bots/spawn/respawn_entity_lookup with storage phan:bot_args
 
 #if that didn't work either, then we'll keep trying until we find a spawn point
 

@@ -1,5 +1,5 @@
 #get ready
-scoreboard players operation #checkID value = @s targetID
+scoreboard players operation #checkID value = @s botTargetID
 
 #check if we are still in range of the eye
 scoreboard players set #targetExists value 0

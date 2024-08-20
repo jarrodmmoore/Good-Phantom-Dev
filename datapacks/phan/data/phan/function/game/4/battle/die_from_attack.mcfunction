@@ -19,6 +19,12 @@ execute if score #enderEyes value matches 11.. run scoreboard players remove @s 
 execute if score #enderEyes value matches 19.. positioned ~-.25 ~ ~-.4 if block ~ ~ ~ #phan:not_solid run function phan:game/4/spawning/drop_eye_on_death
 execute if score #enderEyes value matches 19.. run scoreboard players remove @s enderEyes 1
 
+#give unique ID to the set of eyes we spawned
+scoreboard players remove #uniqueEyeID value 1
+execute if score #uniqueEyeID value matches 0.. run scoreboard players set #uniqueEyeID value -1
+scoreboard players operation @e[type=item_display,tag=dropEyeGiveID,distance=..3] eyeSpawnerID = #uniqueEyeID value
+tag @e[type=item_display,tag=dropEyeGiveID,distance=..3] remove dropEyeGiveID
+
 #die!
 scoreboard players set #playerDied value 1
 execute if entity @s[type=player] run function phan:game/4/battle/respawn

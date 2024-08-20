@@ -9,6 +9,7 @@ tag @s[tag=botFollowingMidAir] remove botFollowingMidAir
 
 #we will eventually time out and stop trying to follow
 scoreboard players add @s botChaseTime 1
+execute if score @s botChaseTime matches 20.. rotated ~ 0 positioned ~ ~1.4 ~ unless block ^ ^ ^1 #phan:not_solid run scoreboard players add @s botChaseTime 3
 execute if score @s botChaseTime matches 80.. run function phan:bots/behaviors/3_follow_target/consider_giving_up
 
 #not prioritizing (chasing) anything anymore? switch to roam mode

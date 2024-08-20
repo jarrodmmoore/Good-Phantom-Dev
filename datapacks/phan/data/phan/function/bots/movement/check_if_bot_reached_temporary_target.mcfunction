@@ -24,11 +24,11 @@ scoreboard players operation #testY value -= @s location_yy
 scoreboard players operation #testZ value = #compare_z value
 scoreboard players operation #testZ value -= @s location_zz
 
-#stop targeting if we're too far away (more than 10 blocks away)
-execute unless score #testX value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
-execute unless score #testY value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
-execute unless score #testZ value matches -100..100 unless score @s botTargetPriority matches 1..99 run return run function phan:bots/movement/check_if_bot_reached_temporary_target_success
 
-#stop targeting if we reached it on x and z
-execute if score #testX value matches -15..15 if score #testZ value matches -15..15 run function phan:bots/movement/check_if_bot_reached_temporary_target_success
-execute if score @s moveVelocity matches 300.. if score #testX value matches -21..21 if score #testZ value matches -21..21 run function phan:bots/movement/check_if_bot_reached_temporary_target_success
+#now check if we meet the criteria for reaching the temp target
+
+#regular (priority 0) temp target
+execute unless score @s botTargetPriority matches 1..99 run function phan:bots/movement/check_if_bot_reached_temporary_target_0
+
+#priority target (battle mode)
+execute if score @s botTargetPriority matches 1..99 run function phan:bots/movement/check_if_bot_reached_temporary_target_priority

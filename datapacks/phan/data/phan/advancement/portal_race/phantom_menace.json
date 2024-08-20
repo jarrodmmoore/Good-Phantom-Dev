@@ -15,12 +15,12 @@
         "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": false,
-        "hidden": false
+        "hidden": true
     },
     "criteria": {
         "dreamsdreams": {
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "phan:portal_race/try_harder"
+    "parent": "phan:portal_race/go_for_gold"
 }

@@ -4,3 +4,6 @@ execute if score #waypointEventSkill value matches 1..2 if function phan:bots/be
 
 #take alt route if portal open
 execute if entity @s[tag=vsHomeStretch] run scoreboard players set #botChoseAltRoute value 2
+
+#forget our previous direction bias
+scoreboard players set @s botLastDirection 0

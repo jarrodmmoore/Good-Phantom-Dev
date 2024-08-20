@@ -9,8 +9,10 @@ scoreboard players operation #thisEndermanOG value = @s originalID
 #i'm gonna make this process quicker and simpler than it was in Sprint Racer
 
 #phase 1, spawned by player. say hello
+scoreboard players set #success value 0
 execute if score @s age matches ..99 as @a[tag=doneWithIntro,gamemode=!spectator] if score @s playerID = #thisEndermanID value at @s run function phan:items/enderman_phase_1
 execute if score @s age matches ..99 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] if score @s playerID = #thisEndermanID value at @s run function phan:items/enderman_phase_1
+execute if score @s age matches ..99 if score #success value matches 0 run scoreboard players set @s age 1000
 execute if score @s age matches 50 run scoreboard players set @s age 100
 
 #phase 2, wait for someone to hold an item in their hand

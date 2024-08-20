@@ -1,10 +1,10 @@
 #run this function again in a random amount of time depending on skill level
-execute if score @s botSkill matches ..1 store result score @s botBattleThinkTime run random value 30..60
-execute if score @s botSkill matches 2 store result score @s botBattleThinkTime run random value 20..50
-execute if score @s botSkill matches 3 store result score @s botBattleThinkTime run random value 14..40
-execute if score @s botSkill matches 4 store result score @s botBattleThinkTime run random value 10..30
-execute if score @s botSkill matches 5 store result score @s botBattleThinkTime run random value 8..20
-execute if score @s botSkill matches 6.. store result score @s botBattleThinkTime run random value 6..12
+execute if score @s botSkill matches ..1 store result score @s botBattleThinkTime run random value 16..35
+execute if score @s botSkill matches 2 store result score @s botBattleThinkTime run random value 14..30
+execute if score @s botSkill matches 3 store result score @s botBattleThinkTime run random value 12..25
+execute if score @s botSkill matches 4 store result score @s botBattleThinkTime run random value 10..20
+execute if score @s botSkill matches 5 store result score @s botBattleThinkTime run random value 8..15
+execute if score @s botSkill matches 6.. store result score @s botBattleThinkTime run random value 6..10
 
 #botTargetPriority
 #0 = none, can go after stuff like chests or speed pads like usual
@@ -29,8 +29,8 @@ execute if entity @s[tag=!vsHomeStretch,scores={botTargetPriority=100}] run scor
 #recall previous player target if we have one
 execute if score @s botTargetPriority matches 2 run function phan:bots/battle/targeting/look_for_targeted_player
 
-#bots above skill level 2 will try to target players
-execute if entity @s[scores={botSkill=2..,botTargetPriority=..1}] run function phan:bots/battle/targeting/look_for_players
+#try to target players
+execute if entity @s[scores={botTargetPriority=..1}] run function phan:bots/battle/targeting/look_for_players
 
 #=====
 #1

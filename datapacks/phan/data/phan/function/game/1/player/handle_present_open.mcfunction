@@ -27,7 +27,7 @@ tag @s add self
 playsound minecraft:entity.player.levelup master @s ~ 100000 ~ 100000 1.2
 execute as @a[tag=tellMe,tag=!self] at @s run playsound minecraft:entity.player.levelup master @s ~ 100000 ~ 100000 1.2
 playsound minecraft:entity.player.levelup master @a[tag=!self] ~ ~ ~ 2 1.2
-execute at @s anchored eyes positioned ^ ^ ^2 run particle instant_effect ~ ~.5 ~ 0.2 0.2 0.2 1 10 force @s
+execute at @s positioned ~ ~1.8 ~ positioned ^ ^ ^2 run particle instant_effect ~ ~.5 ~ 0.2 0.2 0.2 1 10 force @s
 tag @s remove self
 
 #done
