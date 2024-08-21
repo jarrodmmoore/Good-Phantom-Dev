@@ -96,6 +96,9 @@ scoreboard players remove @s[scores={bufferInput4=1..}] bufferInput4 1
 effect give @s[gamemode=!creative] invisibility infinite 1 true
 effect clear @s[gamemode=creative] invisibility
 
+#respawn invulnerability
+scoreboard players remove @s[scores={spawnInvulnerability=1..}] spawnInvulnerability 1
+
 #instant health to anyone below max hp
 execute if entity @s[scores={hp=..20}] run function phan:player/player_health_set
 execute if entity @s[scores={hp=21..423}] run function phan:player/player_health

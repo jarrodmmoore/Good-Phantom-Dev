@@ -29,9 +29,6 @@ execute unless score @s presentGoal matches -1.. if score @s showEnemyCount matc
 execute if score @s addScore matches 1.. run function phan:game/1/player/add_to_score
 
 
-#respawn invulnerability
-scoreboard players remove @s[scores={spawnInvulnerability=1..}] spawnInvulnerability 1
-
 #take damage?
 execute if entity @s[scores={damage=1..,hitstun=..0}] run function phan:game/1/player/take_damage
 
