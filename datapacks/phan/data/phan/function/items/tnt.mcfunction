@@ -19,7 +19,7 @@ execute if entity @s[scores={age=2}] run data merge entity @s {Glowing:1b}
 
 #explode faster if there are players nearby
 #also try to explode on direct impact
-execute if entity @s[scores={age=3..9}] at @s if entity @e[tag=tntCanHit,distance=..5] run function phan:items/tnt_point_blank
+execute if entity @s[scores={age=2..9}] at @s if entity @e[tag=tntCanHit,distance=..5] run function phan:items/tnt_point_blank
 execute if entity @s[scores={age=10..}] at @s if entity @e[tag=tntCanHit,distance=..5] run scoreboard players add @s age 5
 execute if entity @s[scores={age=10..}] at @s if entity @e[tag=tntCanHit,distance=..4] run scoreboard players add @s age 12
 execute if entity @s[scores={age=10..}] at @s if entity @e[tag=tntCanHit,distance=..3] run scoreboard players add @s age 100

@@ -38,7 +38,7 @@ scoreboard players set @s hitRing8b -1
 scoreboard players set @s hitRing9b -1
 scoreboard players set @s hitRing10b -1
 
-#count how many times we've dies without getting a KO
+#count how many times we've died without getting a KO
 execute if score #playerDied value matches 1 run scoreboard players add @s deathsSinceKO 1
 
 #clear inventory and stuff

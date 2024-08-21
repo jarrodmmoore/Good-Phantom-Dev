@@ -87,6 +87,10 @@ scoreboard players set @s botProjectileThinkTime 40
 scoreboard players set @s botBiteThinkTime 40
 scoreboard players set @s botChaseTime 0
 
+#get spawn invulnerability in battle mode
+scoreboard players set @s spawnInvulnerability 0
+execute if score #vGameType value matches 2 run scoreboard players set @s spawnInvulnerability 40
+
 #should we be a rival?
 execute if score #setBotAsRival value matches 1 run tag @s add botRival
 scoreboard players set #setBotAsRival value 0

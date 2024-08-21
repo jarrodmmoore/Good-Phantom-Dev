@@ -7,6 +7,7 @@ execute if score #getGot value matches 1.. run scoreboard players set @s hurtful
 
 #shield blocks damage!
 execute if entity @s[scores={shieldTime=1..,hurtfulTime=1..}] run function phan:items/shield_block_damage
+execute if entity @s[scores={spawnInvulnerability=1..,hurtfulTime=1..}] run function phan:items/shield_block_damage
 
 #lose 3sec for getting hit in score attack mode
 execute if score #gameState value matches 0..1 run scoreboard players remove @s[scores={hurtfulTime=1..,hitstun=..0}] timerAdd 3

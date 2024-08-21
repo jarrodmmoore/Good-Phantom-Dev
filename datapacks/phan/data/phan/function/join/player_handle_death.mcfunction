@@ -26,6 +26,9 @@ scoreboard players set @s musicTime 20
 
 execute if score @s death matches 10.. run scoreboard players reset @s death
 
+#get 2 seconds of respawn invulnerability
+scoreboard players set @s spawnInvulnerability 40
+
 
 #give credit to someone if they ko'd us
 function phan:items/ko_credit

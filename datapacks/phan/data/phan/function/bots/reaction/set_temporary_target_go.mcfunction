@@ -18,3 +18,6 @@ scoreboard players operation @s botTempTargetZ10 = #editArg3 value
 scoreboard players operation @s botTempTargetZ10 %= #10 value
 
 scoreboard players operation @s botTargetID = #botTargetID value
+
+tag @s remove reachedTempX
+tag @s remove reachedTempZ

@@ -13,6 +13,10 @@ scoreboard players set @a timeSinceOpenBox 0
 execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/bot_set_self_scores_at_start
 scoreboard players set @a[tag=debugCheckpointTimes] debug 0
 
+#players get spawn invulnerability!
+scoreboard players set @a[tag=playing] spawnInvulnerability 40
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie] spawnInvulnerability 40
+
 #reset speeds and energy
 function phan:movement/reset_speeds
 scoreboard players set @a energy 0

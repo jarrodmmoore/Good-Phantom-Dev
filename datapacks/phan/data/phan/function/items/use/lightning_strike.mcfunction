@@ -8,6 +8,7 @@ scoreboard players operation #attackerID value = @s playerID
 execute if score #gameState value matches 4 as @a[tag=playing,tag=!dontgethit] if score @s itemPosition matches ..5 if score @s itemLuck matches ..4 at @s run function phan:items/lightning_strike_hit_player
 execute if score #gameState value matches 4 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=!dontgethit] if score @s itemPosition matches ..5 if score @s itemLuck matches ..4 at @s run function phan:items/lightning_strike_hit_player
 execute unless score #gameState value matches 4 as @a[gamemode=adventure,tag=doneWithIntro,tag=!dontgethit,limit=5,sort=random] at @s run function phan:items/lightning_strike_hit_player
+schedule function phan:items/lightning_strike_remove_resist_tag 50t
 
 #play sound
 playsound minecraft:entity.evoker.cast_spell master @s ~ 100000 ~ 100000 1.3

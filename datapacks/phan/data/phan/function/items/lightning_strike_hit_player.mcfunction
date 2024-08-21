@@ -3,6 +3,9 @@ scoreboard players operation @s attackerID = #attackerID value
 scoreboard players set @s attackTime 100
 scoreboard players set @s hurtfulTime 3
 
+#give gliding human player resistance after the first hit of lightning damage so they don't take damage again and make the client freak out
+tag @s[type=player] add resistAfterNextDmgTick
+
 #get got
 summon minecraft:lightning_bolt ~ ~ ~
 execute unless score @s shieldTime matches 1.. run effect give @s[type=player] slowness 4 2 true

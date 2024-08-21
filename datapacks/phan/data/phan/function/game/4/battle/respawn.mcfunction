@@ -30,7 +30,7 @@ execute if score #playerDied value matches 1 run title @s subtitle [""]
 execute if score #playerDied value matches 1 run title @s title ["",{"translate":"gp.versus.you_died","color":"red","bold":true}]
 execute if score #playerDied value matches 1 at @s run playsound minecraft:entity.phantom.death master @s ~ 100000 ~ 100000
 
-#count how many times we've dies without getting a KO
+#count how many times we've died without getting a KO
 execute if score #playerDied value matches 1 run scoreboard players add @s deathsSinceKO 1
 
 #clear inventory and stuff
@@ -69,6 +69,9 @@ scoreboard players set @s inputCooldownC 7
 #if we died 3x in a row without getting a KO, start with a shield item
 execute if score #playerDied value matches 1 if score @s deathsSinceKO matches 3.. run function phan:game/4/battle/player_inventory
 execute if score #playerDied value matches 1 if score @s deathsSinceKO matches 3.. run function phan:items/give/shield {count:1}
+
+#respawn invulnerability time
+scoreboard players set @s spawnInvulnerability 40
 
 #reset parameter
 scoreboard players set #playerDied value 0

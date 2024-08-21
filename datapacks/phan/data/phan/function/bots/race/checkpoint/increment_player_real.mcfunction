@@ -18,14 +18,12 @@ execute if score @s boxID matches 0 run function phan:game/4/objects/box_clear_l
 execute if score @s boxID matches 1 run function phan:game/4/objects/box_clear_list_b
 
 
-#players further behind get free energy
-execute if score @s itemLuck matches 3 run scoreboard players add @s energy 1
-execute if score @s itemLuck matches 4 run scoreboard players add @s energy 2
-execute if score @s itemLuck matches 5 run scoreboard players add @s energy 3
-execute if score @s energy matches 19..99 run scoreboard players set @s energy 18
-
 #check or record timestamp on this checkpoint to figure out item balancing
 function phan:game/4/race/checkpoint/timestamp/_index
+
+#players further behind get free energy
+function phan:game/4/race/checkpoint/energy_bonus_from_checkpoint
+
 
 #refresh the number of reroutes we can do
 scoreboard players operation @s botAllowedReroutes = #BOT_ALLOWED_REROUTES value

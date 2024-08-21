@@ -1,7 +1,7 @@
 scoreboard players set #hit value 0
 
-#don't hit anything for the first 2 ticks of life
-execute if score @s age matches ..2 run return 0
+#don't hit anything for the first tick of life
+execute if score @s age matches ..1 run return 0
 
 #explode anything other than our owner
 scoreboard players operation #checkID value = @s playerID

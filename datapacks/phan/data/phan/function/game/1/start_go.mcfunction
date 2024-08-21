@@ -65,6 +65,10 @@ scoreboard players set @s teleportersUsed 0
 scoreboard players set @s targetsShot 0
 scoreboard players set @s lap 0
 
+#players get spawn invulnerability!
+scoreboard players set @a[tag=playing] spawnInvulnerability 40
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie] spawnInvulnerability 40
+
 #refresh skybox (sometimes it gets messed up...)
 scoreboard players operation @s skyboxSet = @s skybox
 

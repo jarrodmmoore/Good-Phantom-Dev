@@ -11,6 +11,9 @@ execute unless items entity @s armor.chest elytra run item replace entity @s arm
 #coordinates
 function phan:bots/movement/get_coordinates
 
+#respawn invulnerability
+scoreboard players remove @s[scores={spawnInvulnerability=1..}] spawnInvulnerability 1
+
 #health calculations
 scoreboard players reset @s[scores={damage=1..}] damage
 execute store result score @s botHp run data get entity @s Health

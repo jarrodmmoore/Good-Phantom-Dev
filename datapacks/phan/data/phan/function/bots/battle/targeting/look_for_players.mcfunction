@@ -9,6 +9,9 @@ execute if score @s botSkill matches 3 if score #random value matches ..25 run r
 execute if score @s botSkill matches 4 if score #random value matches ..21 run return 0
 execute if score @s botSkill matches 5 if score #random value matches ..18 run return 0
 execute if score @s botSkill matches 6.. if score #random value matches ..15 run return 0
+
+#no shot if we're blinded
+execute if score @s squidBlindTime matches 1.. run return 0
 #=====
 
 #check for line of sight to players

@@ -58,6 +58,7 @@ scoreboard objectives add hp health
 scoreboard objectives add walkDistance minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add sprintDistance minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add death minecraft.custom:minecraft.deaths
+scoreboard objectives add spawnInvulnerability dummy
 #editor
 scoreboard objectives add editorTick dummy
 scoreboard objectives add editNode dummy

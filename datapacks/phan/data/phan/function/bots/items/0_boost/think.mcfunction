@@ -48,8 +48,9 @@ execute if entity @s[tag=!vsHomeStretch,scores={botSkill=5..,botEffectSpeedPotio
 #hard+ bot will save at least 1 boost for shortcuts or the home stretch
 execute if entity @s[tag=!vsHomeStretch,scores={botSkill=4..,energy=..5}] run return 0
 
-#never use if we're ahead of the rival bot without full energy
-execute if score @s[scores={energy=..15}] racePosDisplay < #botRivalPosition value run return 0
+#wait a bit before using boost if we're ahead of the rival bot
+execute if score @s[tag=!botOnFinalLap,scores={botSkill=5..,energy=..9}] racePosDisplay < #botRivalPosition value run return 0
+execute if score @s[scores={botSkill=..4,energy=..15}] racePosDisplay < #botRivalPosition value run return 0
 
 #kick out if blinded
 execute if score @s squidBlindTime matches 1.. run return 0
@@ -68,8 +69,11 @@ execute if entity @s[scores={botSkill=4..,energy=10..}] run scoreboard players r
 #hard+ bots on home stretch: unload boost
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] run scoreboard players set #random value 1
 
-#rival bot more likely to use, especially when behind
+#rival bot is more likely to use, especially when behind
 execute if entity @s[tag=botRival] run scoreboard players operation #random value -= @s itemPosition
+
+#hard+ non-rival slightly more likely to use on the final lap
+execute if entity @s[tag=!botRival,tag=botOnFinalLap,scores={botSkill=4..}] run function phan:bots/items/0_boost/think_if_near_end
 
 #need to roll a 2 or lower to boost
 execute if score #random value matches 3.. run return 0
