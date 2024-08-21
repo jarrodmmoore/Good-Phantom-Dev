@@ -20,8 +20,8 @@ execute if score #botsEnabled value matches 1.. if entity @e[type=zombie,tag=squ
 execute if score @s age matches 20 at @s run playsound minecraft:entity.squid.hurt master @a ~ ~ ~ 3 1
 execute if score @s age matches 36 at @s run playsound minecraft:entity.squid.squirt master @a ~ ~ ~ 3 1
 execute if score @s age matches 36 at @s run particle squid_ink ~ ~ ~ 0.2 0.2 0.2 0.1 20 force @a[tag=squidTarget]
-execute if score @s age matches 36 at @s run scoreboard players set @a[tag=squidTarget] squidBlindTime 64
-execute if score @s age matches 36 if score #botsEnabled value matches 1.. at @s run scoreboard players set @e[tag=squidTarget,type=zombie] squidBlindTime 64
+execute if score @s age matches 36 at @s run scoreboard players set @a[tag=squidTarget] squidBlindTime 56
+execute if score @s age matches 36 if score #botsEnabled value matches 1.. at @s run scoreboard players set @e[tag=squidTarget,type=zombie] squidBlindTime 56
 #die after 3sec
 execute if score @s age matches 60.. run scoreboard players set @s lifespan 2
 execute if score @s age matches 60.. run tag @s remove tickObject

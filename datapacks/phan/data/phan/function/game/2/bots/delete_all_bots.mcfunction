@@ -7,3 +7,4 @@ scoreboard players set #beQuiet value 0
 #make sure all bot usernames are free
 execute in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=nameTaken] remove nameTaken
 execute in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=nameTakenTryhard] remove nameTakenTryhard
+execute in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=nameTakenGlobal] remove nameTakenGlobal

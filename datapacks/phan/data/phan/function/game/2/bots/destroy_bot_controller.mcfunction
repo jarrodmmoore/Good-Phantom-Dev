@@ -6,8 +6,9 @@ execute if score #botCount value matches ..-1 run scoreboard players set #botCou
 
 #free up the name we were using
 scoreboard players operation #test value = @s botName
-execute if entity @s[tag=!tryhardName] as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #test value run tag @s remove nameTaken
+execute if entity @s[tag=englishName] as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #test value run tag @s remove nameTaken
 execute if entity @s[tag=tryhardName] as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #test value run tag @s remove nameTakenTryhard
+execute if entity @s[tag=globalName] as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s r = #test value run tag @s remove nameTakenGlobal
 
 #clear from any scoreboard we might be on
 execute store result storage phan:bot_args id int 1 run scoreboard players get @s botID
