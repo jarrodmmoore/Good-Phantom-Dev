@@ -12,7 +12,7 @@ scoreboard players operation @s editArg3 = #editArg3 value
 #execute store result entity @s Rotation[0] double 1.0 run scoreboard players get #editYaw value
 #execute store result entity @s Rotation[1] double 1.0 run scoreboard players get #editPitch value
 
-#ok fine, we'll use the rotation part of my parameterized teleporty thing
+#ok fine, we'll use the rotation part of my parameterized teleport thing
 scoreboard players operation @s dummy_yaw = #editYaw value
 scoreboard players operation @s dummy_pitch = #editPitch value
 scoreboard players operation @s goto_yaw = #editYaw value
@@ -26,8 +26,8 @@ scoreboard players reset @s goto_pitch
 
 #get specific tags (for @e efficiency)
 function phan:editor/panel/repair_tags_go
-#^ this used to be inlined right here, but i feel like keeping the list of tags updated in two different places will eventually cause me to bum something
-#honestly surpised i've never made that mistake thus far
+#^ this used to be inlined right here, but i feel like keeping the list of tags updated in two different places will eventually cause me to bum something up
+#honestly surprised i've never made that mistake thus far
 
 #tag cleanup
 tag @s remove setMe

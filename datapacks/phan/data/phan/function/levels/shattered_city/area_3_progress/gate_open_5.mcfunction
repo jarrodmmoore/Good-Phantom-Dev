@@ -1,3 +1,6 @@
+#jordan is now allowed to use the magic pad
+execute if score #d3arenaProgress value matches 54 run fill 1392 103 2174 1394 103 2176 blue_glazed_terracotta
+
 execute if score #d3arenaProgress value matches 54 run fill 1378 102 2128 1382 102 2133 structure_void replace iron_bars
 execute if score #d3arenaProgress value matches 56 run fill 1378 103 2128 1382 103 2133 structure_void replace iron_bars
 execute if score #d3arenaProgress value matches 58 run fill 1378 104 2128 1382 104 2133 structure_void replace iron_bars

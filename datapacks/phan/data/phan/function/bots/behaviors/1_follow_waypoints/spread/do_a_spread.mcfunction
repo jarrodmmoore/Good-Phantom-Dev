@@ -12,7 +12,7 @@
 
 
 #is the old waypoint's origin within 1m of the new waypoint? set the coordinates to our exact location, then
-#(this lets us do some compond waypoint events without the bots doing a weird double-take)
+#(this lets us do some compound waypoint events without the bots doing a weird double-take)
 scoreboard players operation #oldWpX value -= #coord_xx value
 scoreboard players operation #oldWpY value -= #coord_yy value
 scoreboard players operation #oldWpZ value -= #coord_zz value

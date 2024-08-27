@@ -1,7 +1,7 @@
 #vex
 summon vex ~ ~1 ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:510},{id:"generic.movement_speed",base:0.5d},{id:"generic.follow_range",base:50}]}
 scoreboard players set @e[tag=setMe,type=vex,distance=..2] enemyMaxHP 510
-#yeah... this enemy turned out lamer than i was expecing. bascially just an unpredictable slow moving target
+#yeah... this enemy turned out lamer than i was expecting. basically just an unpredictable slow moving target
 
 #if we were spawned by a spawner, do some fancy stuff
 execute if entity @s[tag=spawner] run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1.8 1.5

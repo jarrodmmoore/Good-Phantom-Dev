@@ -8,7 +8,7 @@
 #	2 = transition between areas
 #	3 = final results
 #   4 = multiplayer, waiting for other players to finish their act
-#   -2 = faiure
+#   -2 = failure
 #pCurrentArea
 #pPearlsNeeded
 #(player) enderEyes

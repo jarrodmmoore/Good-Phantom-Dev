@@ -6,7 +6,7 @@
 #what problems are we trying to catch?
 # 1) spectate breaks if the target moves more than 40ish blocks in a single tick
 # 2) spectate breaks if the target moves into an unloaded chunk
-#   (minecraft's chunk loading algorithm still thinks we're at the location where we intially spectated the target, so this happens a LOT)
+#   (minecraft's chunk loading algorithm still thinks we're at the location where we initially spectated the target, so this happens a LOT)
 # 3) initiating a /spectate when too far away from the target often causes an issue i like to call "schrödinger's spectator"
 
 #we fix these problems by "bucking" the spectator, which involves
@@ -30,7 +30,7 @@ execute unless score #compare_x value matches -30..30 run scoreboard players set
 execute unless score #compare_y value matches -30..30 run scoreboard players set #spectator_buck value 1
 execute unless score #compare_z value matches -30..30 run scoreboard players set #spectator_buck value 1
 
-#AND... if the player moves more than 100 blocks away from the intial spec location, re-spec them
+#AND... if the player moves more than 100 blocks away from the initial spec location, re-spec them
 scoreboard players add @s spectator_xinit 0
 scoreboard players add @s spectator_yinit 0
 scoreboard players add @s spectator_zinit 0

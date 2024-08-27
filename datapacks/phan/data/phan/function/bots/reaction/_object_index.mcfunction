@@ -19,7 +19,7 @@ execute if score #botSkill value matches 3.. if score #botBoostTime value matche
 
 
 #=====
-#always relevent (no priority)
+#always relevant (no priority)
 
 #forced redirect event
 execute if entity @s[type=marker,tag=AIBC,scores={AIBC_event=3}] run function phan:bots/reaction/forced_redirect

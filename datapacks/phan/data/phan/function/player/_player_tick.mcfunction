@@ -68,7 +68,7 @@ scoreboard players reset @s[scores={attackTime=..0,attackerID=1..}] attackerID
 # INPUT HANDLING
 #carrot on a stick for inputs
 function phan:control/carrot_on_stick
-#(NOTE: a players "carrotInput" score is > 1 if they made an input on this tick)
+#(NOTE: a players "carrotInput" score is >= 1 if they made an input on this tick)
 
 #drop key bind trigger
 scoreboard players enable @s bindDropKey

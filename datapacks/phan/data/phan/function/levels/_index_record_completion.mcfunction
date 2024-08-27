@@ -23,3 +23,6 @@ execute if score #chosenLevel value matches 5 run scoreboard players set @s drea
 
 #we finished a dream! wow
 scoreboard players add @s anyDreamCompleted 1
+
+#recalculate lighting in the lobby
+schedule function phan:game/0/lighting/update 1t

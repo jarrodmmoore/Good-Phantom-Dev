@@ -6,7 +6,7 @@
 #       > score attack
 #       > time attack
 #       > versus
-#       > reset free play scores
+#           > reset free play scores
 #-erase save data
 #   > erases level progress and high scores
 

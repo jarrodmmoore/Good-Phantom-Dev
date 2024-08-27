@@ -24,4 +24,4 @@ scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=rand
 execute if score #randomRoll value matches 9..10 run function phan:items/give/mine {count:2}
 execute if score #randomRoll value matches 11 run function phan:items/give/trapped_chest {count:1}
 
-execute if score #randomRoll value matches 9..11 run tag @s add pickedBonusMine
+execute if score #randomRoll value matches 9..11 run tag @s add pickedBonusItem

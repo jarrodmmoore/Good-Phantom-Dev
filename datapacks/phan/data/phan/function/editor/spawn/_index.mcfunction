@@ -12,8 +12,9 @@ scoreboard players set #editArg3 value 0
 execute as @a[limit=1,sort=nearest,tag=phan_edit] run function phan:editor/spawn/get_values_from_player
 
 #summon the node and give it the proper data
-execute if score #editNode value matches 1.. unless score #editNode value matches 16 run summon marker ~ ~ ~ {Tags:["node","setMe"]}
+execute if score #editNode value matches 1.. unless score #editNode value matches 16 unless score #editNode value matches 27 run summon marker ~ ~ ~ {Tags:["node","setMe"]}
 execute if score #editNode value matches 16 run function phan:editor/spawn/arrow_sign
+execute if score #editNode value matches 27 run function phan:editor/spawn/effect_sign
 execute if score #editNode value matches 18 as @e[type=marker,tag=setMe] run function phan:editor/spawn/checkpoint
 execute if score #editNode value matches 20..21 as @e[type=marker,tag=setMe] run function phan:editor/spawn/reset_zone
 execute if score #editNode value matches 22 as @e[type=marker,tag=setMe] run function phan:editor/spawn/loading_zone

@@ -11,6 +11,6 @@ execute rotated as @s run tp @s ~ ~ ~ ~ ~
 execute at @s run playsound minecraft:block.bamboo.place master @a ~ ~ ~ 2 .5
 
 #count how many times we've bounced
-execute unless score @s trans_x matches 0 run scoreboard players add @s editArg1 1
-execute unless score @s trans_y matches 0 run scoreboard players add @s editArg1 1
-execute unless score @s trans_z matches 0 run scoreboard players add @s editArg1 1
+execute unless score @s trans_x matches -1..1 run scoreboard players add @s editArg1 1
+execute unless score @s trans_y matches -1..1 run scoreboard players add @s editArg1 1
+execute unless score @s trans_z matches -1..1 run scoreboard players add @s editArg1 1

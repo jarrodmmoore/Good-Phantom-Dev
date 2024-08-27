@@ -1,4 +1,4 @@
-#use the rotation part of my parameterized teleporty thing
+#use the rotation part of my parameterized teleport thing
 scoreboard players operation @s dummy_yaw = #editYaw value
 scoreboard players operation @s dummy_pitch = #editPitch value
 scoreboard players operation @s goto_yaw = #editYaw value

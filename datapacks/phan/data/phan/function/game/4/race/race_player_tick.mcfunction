@@ -6,6 +6,9 @@ scoreboard players add @s rawTime 1
 #don't bully other players!
 effect give @s weakness 5 15 true
 
+#record if we're near 1st and have a lot of energy
+execute if score #5Hz value matches 1 if score @s timeBehind1st matches ..50 if score @s energy > #highestMagicUpFront value run scoreboard players operation #highestMagicUpFront value = @s energy
+
 #count down time since we tried opening a box
 scoreboard players remove @s[scores={timeSinceOpenBox=1..}] timeSinceOpenBox 4
 

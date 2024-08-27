@@ -97,6 +97,11 @@ execute if score #5Hz value matches 2 as @e[type=marker,tag=itemBoxSpawner,score
 execute if score #2sec value matches 5 if score #cooldownAnvil value matches ..200 run function phan:items/random/consider_mandating_anvil
 execute if score #2sec value matches 25 if score #cooldownAnvil value matches ..500 run function phan:items/random/consider_mandating_anvil
 
+#might mandate a lightning strike if players near 1st are bagging energy
+execute if score #2sec value matches 7 if score #cooldownLightning value matches ..300 run function phan:items/random/consider_mandating_lightning
+execute if score #2sec value matches 27 if score #cooldownLightning value matches ..600 run function phan:items/random/consider_mandating_lightning
+
+
 #=====
 #GAME FUNCTION
 

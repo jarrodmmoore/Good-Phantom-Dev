@@ -10,6 +10,7 @@ execute if score #botCount value matches ..1 run return 0
 
 #no rival if rivals are disabled
 execute if score #assist_rival_bot value matches 1.. run return 0
+#=====
 
 #find highest skill bot
 scoreboard players set #botHighestSkill value 0

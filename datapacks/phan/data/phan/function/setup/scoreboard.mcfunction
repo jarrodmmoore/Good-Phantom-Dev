@@ -576,8 +576,3 @@ scoreboard players set #9000 value 9000
 scoreboard players set #360 value 360
 scoreboard players set #36 value 36
 scoreboard players set #16 value 16
-
-#storage stuff
-data modify storage phan:coords value set value {"y":100}
-data modify storage phan:coords value set value {"ydec":".0"}
-#example: execute store result storage phan:coords value.y int 1 run scoreboard players get #coord_y value

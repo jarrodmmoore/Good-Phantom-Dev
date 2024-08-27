@@ -42,12 +42,21 @@ execute if score @s itemLuck matches 0 run function phan:items/random/pick_battl
 #solo race practice items
 execute if score @s itemLuck matches ..-1 run function phan:items/random/pick_solo
 
+#=====
+#might get a bonus item to help the flow and balance of the game
+
 #if we have the lastPlace tag, we might get some bonus trap items to mess with 1st place
 execute if entity @s[tag=lastPlace] run function phan:items/random/pick_bonus_mine
 
 #one-off: any player who is not in 1st will get a bonus anvil of justice if the game deemed one necessary
-execute if entity @s[tag=!pickedBonusMine] if score #cooldownAnvil value matches ..0 if score #gameState value matches 4 if score #vGameType value matches 1 if score @s racePosDisplay matches 2.. if score #mandateAnvil value matches 1 run function phan:items/give/anvil_of_justice {count:1}
-tag @s[tag=pickedBonusMine] remove pickedBonusMine
+execute if entity @s[tag=!pickedBonusItem] if score #mandateAnvil value matches 1 if score #cooldownAnvil value matches ..0 if score #gameState value matches 4 if score #vGameType value matches 1 if score @s racePosDisplay matches 2.. run function phan:items/give/anvil_of_justice {count:1}
+
+#one-off: any player who is somewhat far back will get a lightning strike if the game deemed one necessary
+execute if entity @s[tag=!pickedBonusItem] if score #mandateLightning value matches 1 if score #cooldownLightning value matches ..500 if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 80.. run function phan:items/give/lightning_strike {count:1}
+
+#clean up bonus item received tag
+tag @s[tag=pickedBonusItem] remove pickedBonusItem
+
 #=====
 
 #count up time since we've gotten certain stuff
