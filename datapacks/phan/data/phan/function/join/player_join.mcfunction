@@ -145,6 +145,7 @@ execute if entity @a[tag=!jself] run function phan:join/subsequent_join
 tag @s remove jself
 
 #announce any debug tags this player has
+execute if entity @s[tag=nocombo] run say @s has tag "nocombo"
 execute if entity @s[tag=debugMultiplayer] run say @s has tag "debugMultiplayer"
 execute if entity @s[tag=debugScores] run say @s has tag "debugScores"
 execute if entity @s[tag=debugCheckpointTimes] run say @s has tag "debugCheckpointTimes"

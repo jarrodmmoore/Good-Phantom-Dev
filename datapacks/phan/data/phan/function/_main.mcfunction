@@ -41,6 +41,9 @@ function phan:items/_tick
 #=====
 #DEBUG
 
+#no combo
+scoreboard players set @a[tag=nocombo] combo 0
+
 #show a scoreboard value, always
 #title @a actionbar ["",{"text":"#givenRockets = "},{"score":{"name":"#givenRockets","objective":"value"}}]
 

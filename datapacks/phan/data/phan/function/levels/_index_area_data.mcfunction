@@ -31,8 +31,8 @@ scoreboard players operation #scoreRankCT value += #scoreRankC2 value
 scoreboard players operation #scoreRankCT value += #scoreRankC3 value
 
 #account for rank bonuses at the end
-scoreboard players add #scoreRankST value 45000
-scoreboard players add #scoreRankAT value 24000
+scoreboard players add #scoreRankST value 30000
+scoreboard players add #scoreRankAT value 15000
 scoreboard players add #scoreRankBT value 7500
 scoreboard players add #scoreRankCT value 3000
 

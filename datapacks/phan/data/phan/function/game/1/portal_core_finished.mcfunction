@@ -23,23 +23,23 @@ tellraw @a[tag=tellMe] ["",{"text":" "},{"text":" "},{"text":"\uE001 ","color":"
 
 #get bonus depending on how fast you completed the portal
 #
-# | 24,000 points is the base (you'd get this if you hit the target time on the dot)
-# | -20 points for every tick behind the target time
-# | +20 points for every tick ahead of the target time (up to a max of 40,000 total)
+# | 12,000 points is the base (you'd get this if you hit the target time on the dot)
+# | -10 points for every tick behind the target time
+# | +10 points for every tick ahead of the target time (up to a max of 40,000 total)
 # | 0 points if you're a minute behind the target time
 #
 tag @a[tag=lastDonor] remove lastDonor
 scoreboard players operation #findDonorID value = @s playerID
 execute as @a[tag=playing] if score @s playerID = #findDonorID value run tag @s add lastDonor
-scoreboard players set #bonus value 24000
+scoreboard players set #bonus value 12000
 scoreboard players operation #math value = #targetTimeTicks value
 scoreboard players operation #math value -= #time2portalTicks value
 #store this for later...
 scoreboard players operation #timeCompare value = #math value
-scoreboard players operation #math value *= #20 value
+scoreboard players operation #math value *= #10 value
 scoreboard players operation #bonus value += #math value
-#bonus has upper limit of 40,000 points
-execute if score #bonus value matches 40001.. run scoreboard players set #bonus value 40000
+#bonus has upper limit of 24,000 points
+execute if score #bonus value matches 24001.. run scoreboard players set #bonus value 24000
 #never any bonus if we're in penalty time
 execute if entity @a[tag=lastDonor,scores={pPenaltyTime=1..}] run scoreboard players set #bonus value 0
 #if bonus is positive, add it to our score!
