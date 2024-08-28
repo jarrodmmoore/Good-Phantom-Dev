@@ -4,10 +4,10 @@ clear @s[type=player] amethyst_shard[custom_data~{energyPotion:1b}] 1
 #default refill is 9 energy
 scoreboard players set #math value 9
 #less magic refill the closer we are to the front of the pack in race mode
-execute if score #gameState value matches 4 if score #gameType value matches 1 if score @s timeBehind1st matches ..10 run scoreboard players set #math value 5
-execute if score #gameState value matches 4 if score #gameType value matches 1 if score @s timeBehind1st matches 11..40 run scoreboard players set #math value 6
-execute if score #gameState value matches 4 if score #gameType value matches 1 if score @s timeBehind1st matches 41..70 run scoreboard players set #math value 7
-execute if score #gameState value matches 4 if score #gameType value matches 1 if score @s timeBehind1st matches 71..100 run scoreboard players set #math value 8
+execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches ..10 run scoreboard players set #math value 5
+execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 11..40 run scoreboard players set #math value 6
+execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 41..70 run scoreboard players set #math value 7
+execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 71..100 run scoreboard players set #math value 8
 
 #refill 9 energy (9 is half of max)
 scoreboard players operation @s energy += #math value

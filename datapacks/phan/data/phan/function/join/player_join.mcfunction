@@ -125,7 +125,6 @@ scoreboard players set @s pPenaltyTime 0
 scoreboard players set @s pPenaltyPoints 0
 scoreboard players set @s shootAware 0
 scoreboard players set @s spawnInvulnerability 0
-tag @s remove resistAfterNextDmgTick
 
 #set spawnpoint
 spawnpoint @s 198 -6 118

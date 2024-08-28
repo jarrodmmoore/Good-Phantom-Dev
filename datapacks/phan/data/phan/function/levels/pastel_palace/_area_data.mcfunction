@@ -20,7 +20,7 @@ scoreboard players set #targetTimeAct1 value 45
 #act 2
 scoreboard players set @s[tag=playing,scores={pCurrentArea=2}] pPearlsNeeded 16
 scoreboard players set @s[tag=playing,scores={pCurrentArea=2}] pTimeRemaining 1819
-scoreboard players set #scoreRankS2 value 70000
+scoreboard players set #scoreRankS2 value 75000
 scoreboard players set #scoreRankA2 value 52500
 scoreboard players set #scoreRankB2 value 25000
 scoreboard players set #scoreRankC2 value 15000
@@ -29,7 +29,7 @@ scoreboard players set #targetTimeAct2 value 70
 #act 3
 scoreboard players set @s[tag=playing,scores={pCurrentArea=3}] pPearlsNeeded 12
 scoreboard players set @s[tag=playing,scores={pCurrentArea=3}] pTimeRemaining 2009
-scoreboard players set #scoreRankS3 value 60000
+scoreboard players set #scoreRankS3 value 62500
 scoreboard players set #scoreRankA3 value 42500
 scoreboard players set #scoreRankB3 value 25000
 scoreboard players set #scoreRankC3 value 15000

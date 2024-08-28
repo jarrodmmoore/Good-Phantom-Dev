@@ -25,7 +25,7 @@ tellraw @a[tag=tellMe] ["",{"text":" "},{"text":" "},{"text":"\uE001 ","color":"
 #
 # | 12,000 points is the base (you'd get this if you hit the target time on the dot)
 # | -10 points for every tick behind the target time
-# | +10 points for every tick ahead of the target time (up to a max of 40,000 total)
+# | +10 points for every tick ahead of the target time (up to a max of 24,000 total)
 # | 0 points if you're a minute behind the target time
 #
 tag @a[tag=lastDonor] remove lastDonor

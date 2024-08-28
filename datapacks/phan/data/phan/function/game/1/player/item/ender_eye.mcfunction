@@ -1,5 +1,5 @@
 scoreboard players set #valid value 0
-execute anchored eyes if block ^ ^ ^4 #phan:not_solid unless block ^ ^ ^4 barrier if block ^ ^1 ^4 #phan:not_solid unless block ^ ^1 ^4 barrier run scoreboard players set #valid value 1
+execute anchored eyes if block ^ ^ ^4 #phan:not_solid unless block ^ ^ ^4 barrier unless block ^ ^ ^4 #phan:ender_pearl_problematic if block ^ ^1 ^4 #phan:not_solid unless block ^ ^1 ^4 #phan:ender_pearl_problematic unless block ^ ^1 ^4 barrier run scoreboard players set #valid value 1
 
 scoreboard players set @s inputCooldownC 4
 

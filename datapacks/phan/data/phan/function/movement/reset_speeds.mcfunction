@@ -15,7 +15,5 @@ scoreboard players set @a swiftnessTime 0
 scoreboard players set @a walkDistance 0
 scoreboard players set @a sprintDistance 0
 
-tag @a remove resistAfterNextDmgTick
-
 #bots, too
 execute if score #botsEnabled value matches 1.. run function phan:bots/reset_speeds
