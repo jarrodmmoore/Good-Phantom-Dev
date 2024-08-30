@@ -8,7 +8,7 @@ execute if entity @s[scores={botSkill=4..,racePosDisplay=2}] if score @s botFear
 
 #don't anvil 1st place if they're a high difficulty rival bot
 tag @s add thinkSelf
-execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botSkill=5..,racePosDisplay=1}] run return 0
+execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botSkill=5..,racePosDisplay=1}] run return run tag @s remove thinkSelf
 tag @s remove thinkSelf
 
 #normal+ difficulty: don't anvil ourselves

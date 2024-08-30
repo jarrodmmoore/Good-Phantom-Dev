@@ -8,7 +8,7 @@ execute if score @s botFearsEnderman matches 1 run return 0
 
 #don't screw over the rival bot while they're gliding. we secretly want them to do well ;)
 tag @s add thinkSelf
-execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botMoveState=2,botSkill=3..}] run return 0
+execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botMoveState=2,botSkill=3..}] run return run tag @s remove thinkSelf
 tag @s remove thinkSelf
 
 #low difficulty bots might just... not
