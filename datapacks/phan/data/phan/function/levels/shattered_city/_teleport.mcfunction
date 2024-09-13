@@ -1,4 +1,4 @@
-#intitial load teleport
+#initial load teleport
 execute unless score #teleportStart value matches 1 if score @s pCurrentArea matches ..1 in minecraft:the_end run tp @s 1721 94 2227 0 0
 execute unless score #teleportStart value matches 1 if score @s pCurrentArea matches ..1 run scoreboard players set @s soulAngle 1
 

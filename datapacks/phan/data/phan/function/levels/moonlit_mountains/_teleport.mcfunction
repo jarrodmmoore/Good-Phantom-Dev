@@ -1,4 +1,4 @@
-#intitial load teleport
+#initial load teleport
 execute unless score #teleportStart value matches 1 if score @s pCurrentArea matches ..1 run tp @s 1980 56 14 0 0
 execute unless score #teleportStart value matches 1 if score @s pCurrentArea matches ..1 run scoreboard players set @s soulAngle 0
 

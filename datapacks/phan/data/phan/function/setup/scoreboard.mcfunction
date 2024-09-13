@@ -554,7 +554,7 @@ scoreboard objectives add botHasItem18 dummy
 scoreboard objectives add botHasItem19 dummy
 #initialize some random stuff?
 scoreboard players add #beQuiet value 0
-#constants
+#generic math constants
 scoreboard players set #-1 value -1
 scoreboard players set #5 value 5
 scoreboard players set #10 value 10

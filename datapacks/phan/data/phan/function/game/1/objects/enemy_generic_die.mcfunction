@@ -19,7 +19,7 @@ execute unless entity @s[tag=declawed] unless entity @s[tag=enemyMine] run funct
 scoreboard players operation @a[tag=playerGotLoot] pLootCycle = #lootCycle value
 tag @a[tag=playerGotLoot] remove playerGotLoot
 
-#behavior spefic to certain enemy types
+#behavior specific to certain enemy types
 #=====
 #tnt golem drops tnt if holding one
 #(note: enemy behavior is processed before this runs)

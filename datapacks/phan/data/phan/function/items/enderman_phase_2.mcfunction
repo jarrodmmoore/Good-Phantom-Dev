@@ -1,6 +1,6 @@
 #executed by the enderman controller
 
-#active enderman theif exists! let the record show.
+#active enderman thief exists! let the record show.
 scoreboard players set #activeEnderman value 2
 tag @s[tag=!endermanIsDangerous] add endermanIsDangerous
 

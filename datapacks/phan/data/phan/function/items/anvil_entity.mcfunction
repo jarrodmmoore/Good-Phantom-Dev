@@ -12,15 +12,15 @@ execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget]
 execute if score #botsEnabled value matches ..0 unless entity @s[tag=lostTarget] unless entity @a[tag=anvilTarget,distance=..10] run tag @s add lostTarget
 execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget] unless entity @e[tag=anvilTarget,distance=..10] run tag @s add lostTarget
 
-#follow target's positon
+#follow target's position (initially above target, gets lowered when the anvil is about to impact)
 scoreboard players operation #anvilAge value = @s age
 execute unless entity @s[tag=lostTarget] as @a[tag=anvilTarget,limit=1,distance=..10] run function phan:items/anvil_entity_follow_player
 execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget] as @e[tag=anvilTarget,limit=1,distance=..10] run function phan:items/anvil_entity_follow_player
 
-#impact if we're on the ground at we lost the target
+#impact if we're on the ground and we lost the target
 execute if entity @s[tag=lostTarget] if entity @s[nbt={OnGround:1b}] run tag @s add anvilImpact
 
-#do stuff over time
+#impact at age 67
 execute unless entity @s[tag=lostTarget] if score @s age matches 67.. run tag @s add anvilImpact
 
 

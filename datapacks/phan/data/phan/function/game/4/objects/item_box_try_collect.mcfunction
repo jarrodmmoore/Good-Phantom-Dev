@@ -9,7 +9,7 @@ execute if score #test value matches 1 run return 0
 #count how many ticks we've tried this (note: player_tick loop decrements this variable by 4 each tick so it decays really fast)
 scoreboard players add @s[scores={timeSinceOpenBox=..50}] timeSinceOpenBox 5
 
-#player remembers the last 5 box groups they went through in 2 seperate areas. (so that's up to 10 total)
+#player remembers the last 5 box groups they went through in 2 separate areas. (so that's up to 10 total)
 #if they try to go through a box who's group ID already exists in their lists, they can't collect it
 #note: one of these lists (A or B) gets reset when the player hits a checkpoint
 

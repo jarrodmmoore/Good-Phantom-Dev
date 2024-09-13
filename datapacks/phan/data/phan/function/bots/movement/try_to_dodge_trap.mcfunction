@@ -1,4 +1,4 @@
-#count down the time we want to stay vigiliant
+#count down the time we want to stay vigilant
 scoreboard players remove @s[scores={botPreparedToDodgeTrap=1..}] botPreparedToDodgeTrap 1
 scoreboard players add @s[scores={botPreparedToDodgeTrap=..-1}] botPreparedToDodgeTrap 1
 
