@@ -77,7 +77,7 @@ execute if score @s KOs matches 10.. run scoreboard players add #hudRightDebt va
 execute if score @s KOs matches 100.. run scoreboard players add #hudRightDebt value 14
 
 #=====
-#only update slots if they changed since from the previous run
+#only update slots if they changed since the previous run
 
 #SLOT 1-4 (handled in different ways depending if the objective is complete or not)
 execute if score #pearlsNeeded value matches ..0 run function phan:custom_hud/gameplay/left_complete/_left_complete

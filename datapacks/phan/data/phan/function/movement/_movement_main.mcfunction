@@ -100,7 +100,7 @@ execute if score @s stoppedTime matches 3.. if score @s moveVelocity matches 0..
 scoreboard players operation @s moveVelocity -= @s trans_yaw
 execute if score @s moveVelocity matches ..-1 run scoreboard players set @s moveVelocity 0
 
-#gamestate=0, cap player speed
+#in the lobby, cap player speed at lower value. not much room to run around in there.
 execute if score #inLobby value matches 1 if block ~ -64 ~ structure_void run scoreboard players set @s[scores={moveVelocity=101..}] moveVelocity 100
 
 #cap player speed at 550
@@ -132,12 +132,22 @@ execute if score @s moveVelocity matches 520.. run attribute @s generic.movement
 execute if score @s speedDecayDelay matches 0 run function phan:movement/speed_decay
 scoreboard players add @s[scores={speedDecayDelay=..-1}] speedDecayDelay 1
 scoreboard players remove @s[scores={speedDecayDelay=1..}] speedDecayDelay 1
-#reason: i think we need to lower the skill ceiling a bit to make the game between novice and expert players less extreme
+#reason: i think we need to lower the skill ceiling a bit to make the gap between novice and expert players less extreme
 
 #buffered speed boost takes effect when we're on the ground
 execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buffer
 
+
 #check for effect pads!
+
+#we're gonna check a few blocks ahead of the player in many cases
+#because we need to compensate for effects being given on server-side while player movement happens on client.
+
+#this is especially important for jump boost pads.
+#without the extra compensation, most players would end up jumping before the server grants them jump boost. which feels AWFUL and would result in many failed jumps.
+
+#sadly there's only so much we can do to circumvent this. players on the other side of the pond of the server might still get boned by jump pads ;(
+
 #speed
 scoreboard players operation @s speedBoost2 = @s speedBoost
 scoreboard players set @s speedBoost 0

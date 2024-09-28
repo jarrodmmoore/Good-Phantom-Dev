@@ -1,4 +1,4 @@
-#player remembers the last 10 rings they went through in 2 seperate areas. (so that's up to 20 total)
+#player remembers the last 10 rings they went through in 2 separate areas. (so that's up to 20 total)
 #if they try to go through a ring who's ID already exists in their lists, they can't collect it
 #note: one of these lists (A or B) gets reset when the player hits a checkpoint
 

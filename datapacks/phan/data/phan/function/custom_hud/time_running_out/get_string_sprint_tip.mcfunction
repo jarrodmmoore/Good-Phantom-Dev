@@ -1,5 +1,5 @@
 #hold button to sprint!
-#(make it flash so it's more noticable..)
+#(make it flash so it's more noticeable..)
 execute if score @s walkDistance matches ..19999 if score #2sec value matches ..9 run data modify storage phan:data display.timer_add set value '["",{"translate":"gp.tutorial.hold_button_to_run","with":[{"keybind":"key.sprint","color":"#00BBBB","bold":true}],"color":"white","bold":false}]'
 execute if score @s walkDistance matches ..19999 if score #2sec value matches 10..19 run data modify storage phan:data display.timer_add set value '["",{"translate":"gp.tutorial.hold_button_to_run","with":[{"keybind":"key.sprint","color":"#00FFFF","bold":true}],"color":"white","bold":false}]'
 execute if score @s walkDistance matches ..19999 if score #2sec value matches 20..29 run data modify storage phan:data display.timer_add set value '["",{"translate":"gp.tutorial.hold_button_to_run","with":[{"keybind":"key.sprint","color":"#00BBBB","bold":true}],"color":"white","bold":false}]'

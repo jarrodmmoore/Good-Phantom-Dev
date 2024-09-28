@@ -2,7 +2,7 @@ execute unless loaded ~ ~ ~ run return 0
 
 #need to supply argument "#setTime value" for base temporary rotation time
 
-#summon marker and use it to record the rotation part of the exectution context we're using
+#summon marker and use it to record the rotation part of the execution context we're using
 summon marker ~ ~ ~ {UUID:[I;123987,0,0,5]}
 execute positioned ^ ^ ^1 if loaded ~ ~ ~ run summon marker ~ ~ ~ {UUID:[I;123987,0,0,6]}
 execute as 0001e453-0000-0000-0000-000000000005 run tp @s ~ ~ ~ facing entity 0001e453-0000-0000-0000-000000000006 feet

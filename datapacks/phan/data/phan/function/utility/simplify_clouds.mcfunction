@@ -5,6 +5,7 @@
 #Q: how does getting rid of air pockets improve performance?
 #A: less exposed blocks means less vertices/triangles need to be used in the meshes that visually make up minecraft chunks
 #   and with less going on in the meshes, the game renders faster.
+#   yeah, i know minecraft tries really hard to cull things. but minecraft's culling can't really stop overdraw within individual chunks
 
 
 

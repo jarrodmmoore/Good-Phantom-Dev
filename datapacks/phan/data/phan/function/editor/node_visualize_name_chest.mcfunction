@@ -4,7 +4,7 @@ execute if score @s editArg3 matches 1.. run summon area_effect_cloud ~ ~ ~ {Dur
 
 #macros! oh no!
 
-#store desired coodinate
+#store desired coordinate
 execute store result storage phan:node_name cluster_group int 1 run scoreboard players get @s editArg1
 execute store result storage phan:node_name player_count int 1 run scoreboard players get @s editArg2
 

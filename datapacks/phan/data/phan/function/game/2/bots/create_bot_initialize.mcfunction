@@ -8,7 +8,7 @@ scoreboard players add #botCount value 1
 scoreboard players operation @s botID = #botCount value
 
 #get a playerID (use bot ID + 2000000000)
-#playerIDs over 2000000000 are reserved for bots and are easily re-used, wheras human player IDs are assigned once and then never again
+#playerIDs over 2000000000 are reserved for bots and are easily re-used, whereas human player IDs are assigned once and then never again
 scoreboard players set @s playerID 2000000000
 scoreboard players operation @s playerID += @s botID
 

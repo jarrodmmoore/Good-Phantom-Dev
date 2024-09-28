@@ -63,7 +63,7 @@ scoreboard players set #multiplayer value 0
 execute if score #freePlay value matches 1.. run scoreboard players set #multiplayer value 1
 #gameCycle is a special variable used in multiplayer
 scoreboard players set #gameCycle value 1
-#assign each player to a seperate act of the level
+#assign each player to a separate act of the level
 scoreboard players set #actAssign value 0
 execute if score #multiplayer value matches 1 as @a[tag=playing,sort=random] run function phan:game/1/multiplayer_act_assign
 execute if score #multiplayer value matches 1 unless score #freePlay value matches 1 run scoreboard objectives setdisplay sidebar scoreSidebar
