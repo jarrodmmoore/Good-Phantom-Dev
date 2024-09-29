@@ -6,10 +6,13 @@ This repository is the world file containing everything needed to play the map. 
 
 ## Links
 - Curseforge page: https://www.curseforge.com/minecraft/worlds/good-phantom
+- Planet Minecraft page: https://www.planetminecraft.com/project/good-phantom-action-adventure-game/
+- StickyPiston trial page: https://trial.stickypiston.co/map/goodphantom
 
 ## Media
 - Official trailer: https://youtu.be/0c8SP6h9me8?si=108gNMYCuD6QtGGf
 - Process of art-passing the levels: https://youtu.be/J9wui_me8Kc?si=6bcZs1Ya24zvStlU
+- Realms blog post: https://www.minecraft.net/en-us/article/new-on-realms-being-nice-to-people
 
 ---
 # About
