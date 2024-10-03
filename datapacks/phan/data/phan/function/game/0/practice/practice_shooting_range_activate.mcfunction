@@ -1,6 +1,6 @@
 scoreboard players add #practiceTarget2 value 1
 
-#spawn the ghasts! (repawn all stuff in area 2 section 5)
+#spawn the ghasts! (respawn all stuff in area 2 section 5)
 execute if score #practiceTarget2 value matches 5 run scoreboard players set #area5SpawnB value 0
 
 #after the target's been on for a few ticks, reset state

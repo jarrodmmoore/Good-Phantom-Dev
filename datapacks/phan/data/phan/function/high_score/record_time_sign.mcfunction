@@ -2,7 +2,7 @@
 #executed at the location of a sign we want to modify
 
 #front_text.messages[0] = player name
-#front_text.messages[1] = time (using special characters)
+#front_text.messages[1] = time
 #front_text.messages[2] = medal
 #front_text.messages[3] = placement (HANDLED LATER, NOT IN THIS FUNCTION)
 

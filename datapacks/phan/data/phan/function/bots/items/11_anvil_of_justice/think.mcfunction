@@ -11,8 +11,9 @@ tag @s add thinkSelf
 execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botSkill=5..,racePosDisplay=1}] run return run tag @s remove thinkSelf
 tag @s remove thinkSelf
 
-#normal+ difficulty: don't anvil ourselves
-execute if entity @s[scores={botSkill=3..,racePosDisplay=1}] run return 0
+#hard difficulty and below: don't use while in 1st
+execute if entity @s[scores={botSkill=..4,racePosDisplay=1}] run return 0
+#note: anvil was changed in v1.1.3 to never target its user. tryhard+ bots are aware of this and are fully prepared to be a punk about it
 
 #low difficulty bots might just... not
 execute store result score #random value run random value 1..100

@@ -81,7 +81,7 @@ execute if score #assist_movement value matches 1.. run scoreboard players set @
 execute if score @s speedDecayDelay matches 0 run function phan:movement/speed_decay
 scoreboard players add @s[scores={speedDecayDelay=..-1}] speedDecayDelay 1
 scoreboard players remove @s[scores={speedDecayDelay=1..}] speedDecayDelay 1
-#reason: i think we need to lower the skill ceiling a bit to make the game between novice and expert players less extreme
+#reason: i think we need to lower the skill ceiling a bit to make the gap between novice and expert players less extreme
 
 #buffered speed boost takes effect when we're on the ground
 execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buffer
@@ -91,24 +91,28 @@ execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buf
 scoreboard players operation @s speedBoost2 = @s speedBoost
 scoreboard players set @s speedBoost 0
 execute at @s if block ~ ~-.2 ~ #phan:speed_normal run function phan:bots/movement/speed_pad
-execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:speed_normal run function phan:bots/movement/speed_pad
-execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.2 ~ #phan:speed_normal run function phan:bots/movement/speed_pad
+#execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:speed_normal run function phan:bots/movement/speed_pad
+#execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.2 ~ #phan:speed_normal run function phan:bots/movement/speed_pad
 execute at @s if block ~ ~-.2 ~ #phan:speed_high run function phan:bots/movement/speed_pad_super
-execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:speed_high run function phan:bots/movement/speed_pad_super
-execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.2 ~ #phan:speed_high run function phan:bots/movement/speed_pad_super
+#execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:speed_high run function phan:bots/movement/speed_pad_super
+#execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.2 ~ #phan:speed_high run function phan:bots/movement/speed_pad_super
 #jump
 execute at @s if block ~ ~-1 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
 execute at @s if block ~ ~-.2 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
-execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
-execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
+#execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
+#execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_short run function phan:bots/movement/jump_pad_short
 execute at @s if block ~ ~1 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
 execute at @s if block ~ ~-.2 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
-execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
-execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
+#execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
+#execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_high run function phan:bots/movement/jump_pad_high
 #regain energy
 execute if score #10Hz value matches 0 at @s if block ~ ~-.2 ~ #phan:energy_restore run function phan:movement/regain_energy
-execute if score #10Hz value matches 0 at @s unless block ~ ~-.2 ~ #phan:energy_restore at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:energy_restore run function phan:movement/regain_energy
+#execute if score #10Hz value matches 0 at @s unless block ~ ~-.2 ~ #phan:energy_restore at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:energy_restore run function phan:movement/regain_energy
 #strength
 #scoreboard players set @s strengthBoost 0
 #execute at @s if block ~ ~-1 ~ #phan:strength_powerup run function phan:movement/strength_pad
 #scoreboard players operation @s strengthBoost2 = @s strengthBoost
+
+#^ a lot has been commented out here.
+#bots, unlike players, don't need latency compensation for effect pads.
+#they see the world exactly as it is. profound.

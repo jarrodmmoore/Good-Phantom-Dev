@@ -16,7 +16,7 @@ team modify botDisplayTryharder color white
 scoreboard players set #botsEnabled value 0
 
 #if a player was just playing in a game, move them back in the player queue
-#we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing.
+#we do this in case someone joined the server and had to spectate while we were playing. these players should be queued ahead of the players that just finished playing. we should let them have a turn!
 tag @a[tag=playerReservation] add playing
 tag @a[tag=playerReservation] remove playerReservation
 tag @a[tag=vsMidGameJoin] remove vsMidGameJoin
@@ -55,6 +55,9 @@ time set 18000
 #execute if score #dreamsCompleted value matches 1..2 run weather rain
 #execute if score #dreamsCompleted value matches 3.. run weather clear
 weather clear
+#thunder/rain was removed after the yeggs map jam release because it's annoying, causes lag, and ruins the opening cutscene.
+#we instead decided to convey progress by having the lobby brighten up as you clear more dreams.
+#unfortunately this means the the [Story] section of the intro book is a liar. it is NOT, in fact, a stormy night in the overworld.
 
 #set bgm
 execute store result score #random value run random value 1..5

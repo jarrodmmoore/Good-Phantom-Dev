@@ -1,4 +1,4 @@
-#hard or higher skill bots will never hesistate
+#hard or higher skill bots will never hesitate
 execute if score @s botSkill matches 4.. run return 0
 
 #chance of pausing

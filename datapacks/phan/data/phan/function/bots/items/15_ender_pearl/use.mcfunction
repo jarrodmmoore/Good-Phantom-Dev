@@ -37,7 +37,7 @@ scoreboard players operation #coord_dz value -= #coord_z value
 
 #summon an ender pearl and give it the right velocity
 execute rotated ~ 0 positioned ^ ^ ^0.8 facing entity 00000309-0000-0000-0000-000000000001 feet if loaded ~ ~1.8 ~ run summon ender_pearl ~ ~1.8 ~ {Tags:["giveVel","giveID","botEnderPearl"]}
-execute at @e[limit=1,tag=giveID] run playsound minecraft:entity.snowball.throw master @a ~ ~ ~ .75 .5
+execute at @e[limit=1,tag=giveID] run playsound minecraft:entity.ender_pearl.throw master @a ~ ~ ~ .75 .5
 execute store result entity @e[limit=1,tag=giveVel,type=ender_pearl,distance=..4] Motion[0] double 0.0156 run scoreboard players get #coord_dx value
 execute store result entity @e[limit=1,tag=giveVel,type=ender_pearl,distance=..4] Motion[1] double 0.0156 run scoreboard players get #coord_dy value
 execute store result entity @e[limit=1,tag=giveVel,type=ender_pearl,distance=..4] Motion[2] double 0.0156 run scoreboard players get #coord_dz value
@@ -45,6 +45,9 @@ tag @e[tag=giveVel,limit=1,type=ender_pearl,distance=..4] remove giveVel
 
 #get rid of that marker we used to grab second position
 kill 00000309-0000-0000-0000-000000000001
+
+#entity can only exist in this current game session
+scoreboard players set @e[limit=1,tag=giveID,type=ender_pearl,distance=..4] itemValidSpawn 1
 
 #we did this. it was us.
 scoreboard players operation @e[limit=1,tag=giveID,type=ender_pearl,distance=..4] playerID = @s playerID

@@ -28,7 +28,7 @@ execute if score @s botSkill matches 6 run item replace entity @s armor.head wit
 execute store result score @s botBiasX run random value 0..10
 execute store result score @s botBiasZ run random value 0..10
 
-#get the right name color (thankfully, this doesn't seem to muck up the difficulty tag)
+#get the right name color (thankfully this doesn't seem to muck up the difficulty tag)
 team join player @s
 
 #bot should only stay alive as long as we're running code on it

@@ -8,17 +8,6 @@
 #   yeah, i know minecraft tries really hard to cull things. but minecraft's culling can't really stop overdraw within individual chunks
 
 
-
-#fun experiment:
-#(don't try this at home)
-
-#make a minecraft world that is made up of solid blocks alternated with air blocks in a 3D checkerboard pattern from 0 to height limit
-#your GPU will explode!
-
-#double trouble if you make a world entirely out of fences connected to each other
-
-
-
 scoreboard players add #simplifyTimer value 1
 execute if score #simplifyTimer value matches 10.. run scoreboard players set #simplifyTimer value 1
 
