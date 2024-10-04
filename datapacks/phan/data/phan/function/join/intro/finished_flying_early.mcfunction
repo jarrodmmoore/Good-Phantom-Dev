@@ -5,6 +5,7 @@ effect give @s blindness 1 0 true
 tag @s add doneWithIntro
 tag @s remove noInventory
 stopsound @s
+title @s actionbar [""]
 execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ 100000 ~ 100000
 scoreboard players set @s musicTime 20
 scoreboard players operation @s musicTrack = #bgm value

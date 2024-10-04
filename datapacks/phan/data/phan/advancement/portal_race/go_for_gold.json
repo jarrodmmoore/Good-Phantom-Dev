@@ -18,9 +18,14 @@
         "hidden": false
     },
     "criteria": {
-        "dreamsdreams": {
-            "trigger": "minecraft:impossible"
-        }
+        "gfg_dream1": {"trigger": "minecraft:impossible"},
+        "gfg_dream2": {"trigger": "minecraft:impossible"},
+        "gfg_dream3": {"trigger": "minecraft:impossible"},
+        "gfg_dream4": {"trigger": "minecraft:impossible"},
+        "gfg_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["gfg_dream1"], ["gfg_dream2"], ["gfg_dream3"], ["gfg_dream4"], ["gfg_dream5"]
+    ],
     "parent": "phan:portal_race/root"
 }

@@ -136,7 +136,11 @@ execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWit
 execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:varied_teleport
 
 #all players check for Dreams Dreams advancement
-execute as @a if entity @s[scores={dream1Completed=1..,dream2Completed=1..,dream3Completed=1..,dream4Completed=1..,dream5Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams
+execute as @a[scores={dream1Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream1
+execute as @a[scores={dream2Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream2
+execute as @a[scores={dream3Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream3
+execute as @a[scores={dream4Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream4
+execute as @a[scores={dream5Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream5
 
 #game state is now 0
 scoreboard players set #gameState value 0

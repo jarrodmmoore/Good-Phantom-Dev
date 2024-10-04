@@ -18,9 +18,14 @@
         "hidden": false
     },
     "criteria": {
-        "dreamsdreams": {
-            "trigger": "minecraft:impossible"
-        }
+        "cw_dream1": {"trigger": "minecraft:impossible"},
+        "cw_dream2": {"trigger": "minecraft:impossible"},
+        "cw_dream3": {"trigger": "minecraft:impossible"},
+        "cw_dream4": {"trigger": "minecraft:impossible"},
+        "cw_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["cw_dream1"], ["cw_dream2"], ["cw_dream3"], ["cw_dream4"], ["cw_dream5"]
+    ],
     "parent": "phan:time_attack/root"
 }

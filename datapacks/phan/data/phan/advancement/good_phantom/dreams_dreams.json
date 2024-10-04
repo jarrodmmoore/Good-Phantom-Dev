@@ -15,9 +15,14 @@
         "hidden": false
     },
     "criteria": {
-        "dreamsdreams": {
-            "trigger": "minecraft:impossible"
-        }
+        "dd_dream1": {"trigger": "minecraft:impossible"},
+        "dd_dream2": {"trigger": "minecraft:impossible"},
+        "dd_dream3": {"trigger": "minecraft:impossible"},
+        "dd_dream4": {"trigger": "minecraft:impossible"},
+        "dd_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["dd_dream1"], ["dd_dream2"], ["dd_dream3"], ["dd_dream4"], ["dd_dream5"]
+    ],
     "parent": "phan:good_phantom/root"
 }

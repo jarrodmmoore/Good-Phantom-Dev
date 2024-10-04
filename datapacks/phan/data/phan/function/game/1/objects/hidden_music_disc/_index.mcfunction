@@ -42,5 +42,6 @@ execute if entity @s[tag=discShine] run scoreboard players set @a[tag=catcher] d
 execute if entity @s[tag=discWhimsy] run scoreboard players set @a[tag=catcher] discFound12 1
 execute as @a[limit=1,tag=catcher] run function phan:game/1/objects/hidden_music_disc/player_disc_advancement
 
-#announce new disc if we didn't alread have it
-execute if score #test2 value matches 0 run function phan:game/1/objects/hidden_music_disc/announce_new_find
+#announce new disc if we didn't already have it
+execute as @a[tag=catcher] run function phan:player/tell_spectators
+function phan:game/1/objects/hidden_music_disc/announce_new_find

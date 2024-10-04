@@ -9,10 +9,10 @@ execute store result score #botCountHard value run execute if entity @e[type=blo
 execute store result score #botCountTryhard value run execute if entity @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={botSkill=5..}]
 
 #need 5 bots of a minimum skill level to offer a trophy
-execute if score #botCountVEasy value matches 3.. run scoreboard players set #math value 1
-execute if score #botCountEasy value matches 3.. run scoreboard players set #math value 2
-execute if score #botCountNormal value matches 3.. run scoreboard players set #math value 3
-execute if score #botCountHard value matches 3.. run scoreboard players set #math value 4
+execute if score #botCountVEasy value matches 5.. run scoreboard players set #math value 1
+execute if score #botCountEasy value matches 5.. run scoreboard players set #math value 2
+execute if score #botCountNormal value matches 5.. run scoreboard players set #math value 3
+execute if score #botCountHard value matches 5.. run scoreboard players set #math value 4
 execute if score #botCountTryhard value matches 5.. run scoreboard players set #math value 5
 
 #inform players if trophy got blocked by assist mode

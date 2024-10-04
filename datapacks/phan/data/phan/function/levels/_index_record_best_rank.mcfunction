@@ -8,5 +8,14 @@ execute if score #chosenLevel value matches 4 if score @s rankFinal < @s dream4R
 execute if score #chosenLevel value matches 5 if score @s rankFinal < @s dream5Rank run scoreboard players operation @s dream5Rank = @s rankFinal
 
 #check for advancements
-execute if score @s dream1Rank matches ..1 if score @s dream2Rank matches ..1 if score @s dream3Rank matches ..1 if score @s dream4Rank matches ..1 if score @s dream5Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student
-execute if score @s dream1Rank matches ..0 if score @s dream2Rank matches ..0 if score @s dream3Rank matches ..0 if score @s dream4Rank matches ..0 if score @s dream5Rank matches ..0 run advancement grant @s only phan:score_attack/all_star
+execute if score @s dream1Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student sas_dream1
+execute if score @s dream2Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student sas_dream2
+execute if score @s dream3Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student sas_dream3
+execute if score @s dream4Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student sas_dream4
+execute if score @s dream5Rank matches ..1 run advancement grant @s only phan:score_attack/straight_a_student sas_dream5
+
+execute if score @s dream1Rank matches ..0 run advancement grant @s only phan:score_attack/all_star as_dream1
+execute if score @s dream2Rank matches ..0 run advancement grant @s only phan:score_attack/all_star as_dream2
+execute if score @s dream3Rank matches ..0 run advancement grant @s only phan:score_attack/all_star as_dream3
+execute if score @s dream4Rank matches ..0 run advancement grant @s only phan:score_attack/all_star as_dream4
+execute if score @s dream5Rank matches ..0 run advancement grant @s only phan:score_attack/all_star as_dream5

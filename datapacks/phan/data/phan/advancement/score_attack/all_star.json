@@ -15,9 +15,14 @@
         "hidden": true
     },
     "criteria": {
-        "allstar": {
-            "trigger": "minecraft:impossible"
-        }
+        "as_dream1": {"trigger": "minecraft:impossible"},
+        "as_dream2": {"trigger": "minecraft:impossible"},
+        "as_dream3": {"trigger": "minecraft:impossible"},
+        "as_dream4": {"trigger": "minecraft:impossible"},
+        "as_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["as_dream1"], ["as_dream2"], ["as_dream3"], ["as_dream4"], ["as_dream5"]
+    ],
     "parent": "phan:score_attack/straight_a_student"
 }

@@ -15,9 +15,14 @@
         "hidden": true
     },
     "criteria": {
-        "dreamsdreams": {
-            "trigger": "minecraft:impossible"
-        }
+        "sr_dream1": {"trigger": "minecraft:impossible"},
+        "sr_dream2": {"trigger": "minecraft:impossible"},
+        "sr_dream3": {"trigger": "minecraft:impossible"},
+        "sr_dream4": {"trigger": "minecraft:impossible"},
+        "sr_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["sr_dream1"], ["sr_dream2"], ["sr_dream3"], ["sr_dream4"], ["sr_dream5"]
+    ],
     "parent": "phan:time_attack/power_nap"
 }

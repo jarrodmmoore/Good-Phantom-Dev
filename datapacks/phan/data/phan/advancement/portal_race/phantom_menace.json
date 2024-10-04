@@ -18,9 +18,14 @@
         "hidden": true
     },
     "criteria": {
-        "dreamsdreams": {
-            "trigger": "minecraft:impossible"
-        }
+        "pm_dream1": {"trigger": "minecraft:impossible"},
+        "pm_dream2": {"trigger": "minecraft:impossible"},
+        "pm_dream3": {"trigger": "minecraft:impossible"},
+        "pm_dream4": {"trigger": "minecraft:impossible"},
+        "pm_dream5": {"trigger": "minecraft:impossible"}
     },
+    "requirements": [
+        ["pm_dream1"], ["pm_dream2"], ["pm_dream3"], ["pm_dream4"], ["pm_dream5"]
+    ],
     "parent": "phan:portal_race/go_for_gold"
 }
