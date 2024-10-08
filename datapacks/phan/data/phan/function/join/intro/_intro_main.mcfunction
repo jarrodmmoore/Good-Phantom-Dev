@@ -12,7 +12,7 @@ execute if score @s introProgress matches 60.. run title @s subtitle ["",{"trans
 scoreboard players add @s[scores={introProgress=..59}] introProgress 1
 execute if score @s introProgress matches ..60 run title @s title ["",{"text":"\uE002"}]
 execute if score @s introProgress matches 59 run title @s times 0 50 10
-execute if score @s introProgress matches 60 run title @s actionbar ["",{"keybind":"key.use","color":"white"}]
+execute if score @s introProgress matches 60 run title @s actionbar ["",{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]}]
 scoreboard players set @s[scores={introProgress=20..59,joinCount=2..}] introProgress 60
 execute if score @s introProgress matches 60 if score @s carrotInput matches 1.. run function phan:join/intro/advance
 
@@ -20,7 +20,7 @@ execute if score @s introProgress matches 60 if score @s carrotInput matches 1..
 scoreboard players add @s[scores={introProgress=61..99}] introProgress 1
 execute if score @s introProgress matches 62 run title @s actionbar [""]
 execute if score @s introProgress matches 62..100 run title @s title ["",{"text":"\uE003"}]
-execute if score @s introProgress matches 100 run title @s actionbar ["",{"keybind":"key.use","color":"white"}]
+execute if score @s introProgress matches 100 run title @s actionbar ["",{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]}]
 scoreboard players set @s[scores={introProgress=76..99,joinCount=2..}] introProgress 100
 execute if score @s introProgress matches 100 if score @s carrotInput matches 1.. run function phan:join/intro/advance
 
@@ -28,7 +28,7 @@ execute if score @s introProgress matches 100 if score @s carrotInput matches 1.
 scoreboard players add @s[scores={introProgress=101..139}] introProgress 1
 execute if score @s introProgress matches 102 run title @s actionbar [""]
 execute if score @s introProgress matches 102..140 run title @s title ["",{"text":"\uE004"}]
-execute if score @s introProgress matches 140 run title @s actionbar ["",{"keybind":"key.use","color":"white"}]
+execute if score @s introProgress matches 140 run title @s actionbar ["",{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]}]
 scoreboard players set @s[scores={introProgress=116..139,joinCount=2..}] introProgress 140
 execute if score @s introProgress matches 140 if score @s carrotInput matches 1.. run function phan:join/intro/advance
 
