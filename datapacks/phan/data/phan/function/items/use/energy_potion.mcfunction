@@ -8,6 +8,8 @@ execute if score #gameState value matches 4 if score #vGameType value matches 1 
 execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 11..40 run scoreboard players set #math value 6
 execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 41..70 run scoreboard players set #math value 7
 execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s timeBehind1st matches 71..100 run scoreboard players set #math value 8
+#always 9 if we're the only player in the game
+execute if score #hudPeakPlayers value matches ..1 run scoreboard players set #math value 9
 
 #refill 9 energy (9 is half of max)
 scoreboard players operation @s energy += #math value

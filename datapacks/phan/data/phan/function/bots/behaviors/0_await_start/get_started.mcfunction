@@ -8,6 +8,7 @@ execute if score @s botSkill matches 4 store result score #random value run rand
 execute if score #gameTime value matches 400.. run scoreboard players remove #random value 3
 #need to roll a 1 to get started
 execute if score #random value matches 2.. run return 0
+#=====
 
 #follow waypoints if there's one nearby
 execute at @s if entity @e[type=marker,tag=AIBC,distance=..60] run return run scoreboard players set @s botBehavior 1

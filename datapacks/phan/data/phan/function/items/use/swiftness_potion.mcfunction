@@ -8,6 +8,8 @@ execute if score #gameState value matches 4 if score #vGameType value matches 1 
 execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players operation #math value += @s timeBehind1st
 #max out at duration of 10 seconds
 execute if score #math value matches 201.. run scoreboard players set #math value 200
+#always 10 seconds if we're the only player in the game
+execute if score #hudPeakPlayers value matches ..1 run scoreboard players set #math value 200
 
 #now apply it
 scoreboard players operation @s[type=player] swiftnessTime = #math value

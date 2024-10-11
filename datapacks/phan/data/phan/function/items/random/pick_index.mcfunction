@@ -31,19 +31,26 @@ execute if score #assist_catch_up value matches 1.. run scoreboard players set @
 
 #=====
 #index based on item luck
-#(lower itemLuck means you're closer to 1st place)
-execute if score @s itemLuck matches 1 run function phan:items/random/pick_luck_1
-execute if score @s itemLuck matches 2 run function phan:items/random/pick_luck_2
-execute if score @s itemLuck matches 3 run function phan:items/random/pick_luck_3
-execute if score @s itemLuck matches 4 run function phan:items/random/pick_luck_4
-execute if score @s itemLuck matches 5.. run function phan:items/random/pick_luck_5
+
+#store itemLuck in a temp variable
+scoreboard players operation #itemLuck value = @s itemLuck
+
+#race mode: reduced itemLuck if player has a lot of energy stockpiled
+execute if score #vGameType value matches 1 if score #itemLuck value matches 1..5 if score @s energy matches 9.. run function phan:items/random/reduce_luck_at_high_energy
+
+#lower itemLuck means you're closer to 1st place
+execute if score #itemLuck value matches 1 run function phan:items/random/pick_luck_1
+execute if score #itemLuck value matches 2 run function phan:items/random/pick_luck_2
+execute if score #itemLuck value matches 3 run function phan:items/random/pick_luck_3
+execute if score #itemLuck value matches 4 run function phan:items/random/pick_luck_4
+execute if score #itemLuck value matches 5.. run function phan:items/random/pick_luck_5
 #battle mode items
-execute if score @s itemLuck matches 0 run function phan:items/random/pick_battle
+execute if score #itemLuck value matches 0 run function phan:items/random/pick_battle
 #solo race practice items
-execute if score @s itemLuck matches ..-1 run function phan:items/random/pick_solo
+execute if score #itemLuck value matches ..-1 run function phan:items/random/pick_solo
 
 #=====
-#might get a bonus item to help the flow and balance of the game
+#race mode: might get a bonus item to help the flow and balance of the game
 
 #if we have the lastPlace tag, we might get some bonus trap items to mess with 1st place
 execute if entity @s[tag=lastPlace] run function phan:items/random/pick_bonus_mine
