@@ -13,5 +13,6 @@ gamerule spectatorsGenerateChunks true
 gamerule fallDamage false
 gamerule drowningDamage false
 gamerule disableElytraMovementCheck true
+gamerule disablePlayerMovementCheck true
 gamerule maxCommandForkCount 2147483647
 gamerule maxCommandChainLength 2147483647
