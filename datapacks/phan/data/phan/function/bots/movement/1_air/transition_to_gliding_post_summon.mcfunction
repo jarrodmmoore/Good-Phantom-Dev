@@ -1,3 +1,5 @@
+#executed by the flight armor_stand some bot is riding
+
 #we are temporary
 scoreboard players set @s lifespan 5
 execute on passengers if entity @s[tag=botElytraHeightFix] run scoreboard players set @s lifespan 5

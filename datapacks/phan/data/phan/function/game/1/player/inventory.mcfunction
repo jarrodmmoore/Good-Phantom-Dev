@@ -2,7 +2,7 @@
 tag @s[tag=hasSlot0] remove hasSlot0
 execute if items entity @s hotbar.0 diamond_sword[custom_data~{slot0:1b}] run tag @s add hasSlot0
 clear @s[gamemode=!creative,tag=!hasSlot0] diamond_sword[custom_data~{slot0:1b}]
-execute if entity @s[tag=!hasSlot0,tag=!noInventory] run item replace entity @s hotbar.0 with minecraft:diamond_sword[unbreakable={show_in_tooltip:0b},custom_model_data=1111111,enchantments={levels:{"minecraft:sharpness":20,"minecraft:knockback":3},show_in_tooltip:0b},custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.bite","color":"aqua","italic":false}]',attribute_modifiers={modifiers:[{id:"fastbite",operation:"add_value",type:"generic.attack_speed",amount:0,slot:"mainhand"}],show_in_tooltip:0b},hide_additional_tooltip={},custom_data={slot0:1b,rmb:1b}] 1
+execute if entity @s[tag=!hasSlot0,tag=!noInventory] run item replace entity @s hotbar.0 with minecraft:diamond_sword[unbreakable={show_in_tooltip:0b},custom_model_data=1111111,enchantments={levels:{"minecraft:sharpness":20,"minecraft:knockback":3},show_in_tooltip:0b},custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.bite","color":"aqua","italic":false}]',attribute_modifiers={modifiers:[{id:"fastbite",operation:"add_value",type:"attack_speed",amount:0,slot:"mainhand"}],show_in_tooltip:0b},hide_additional_tooltip={},custom_data={slot0:1b,rmb:1b}] 1
 
 #SLOT 1 - boost item
 tag @s[tag=hasSlot1a] remove hasSlot1a

@@ -1,8 +1,8 @@
 #stay alive
 scoreboard players set @s lifespan 3
 
-#match rotation of body
-tp @s ~ ~ ~ ~ ~
+#match rotation of body via /rotate
+rotate @s ~ ~
 
 #animation (using "editArg1" for variable)
 scoreboard players remove @s editArg1 1

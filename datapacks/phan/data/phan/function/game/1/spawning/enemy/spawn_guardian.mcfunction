@@ -1,6 +1,6 @@
 #guardian
-execute if score #assist_enemies value matches 0 run summon guardian ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:530.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:530},{id:"generic.movement_speed",base:0.3d},{id:"generic.follow_range",base:80}]}
-execute if score #assist_enemies value matches 1 run summon guardian ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:520.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:530},{id:"generic.movement_speed",base:0.3d},{id:"generic.follow_range",base:40}]}
+execute if score #assist_enemies value matches 0 run summon guardian ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:530.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:530},{id:"movement_speed",base:0.3d},{id:"follow_range",base:80}]}
+execute if score #assist_enemies value matches 1 run summon guardian ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:520.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:530},{id:"movement_speed",base:0.3d},{id:"follow_range",base:40}]}
 scoreboard players set @e[tag=setMe,type=guardian,distance=..2] enemyMaxHP 530
 
 #if we were spawned by a spawner, do some fancy stuff

@@ -1,6 +1,6 @@
 #harngh
-execute if score #assist_enemies value matches 0 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:520.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:520},{id:"generic.movement_speed",base:0.1d}]}
-execute if score #assist_enemies value matches 1 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:520},{id:"generic.movement_speed",base:0.1d}]}
+execute if score #assist_enemies value matches 0 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:520.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:520},{id:"movement_speed",base:0.1d}]}
+execute if score #assist_enemies value matches 1 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:520},{id:"movement_speed",base:0.1d}]}
 scoreboard players set @e[tag=setMe,type=vindicator,distance=..2] enemyMaxHP 520
 
 #if we were spawned by a spawner, do some fancy stuff

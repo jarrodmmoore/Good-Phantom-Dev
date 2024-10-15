@@ -3,8 +3,8 @@
 scoreboard players set #OnGround value 0
 execute if entity @s[nbt={OnGround:1b}] run scoreboard players set #OnGround value 1
 
-#face the target point (unless we're mid-air, in which case don't tp since it cancels y velocity)
-execute if score #OnGround value matches 1 facing entity 0000007b-0000-00a0-0000-000a0000003c feet rotated ~ 0 run tp @s ~ ~ ~ ~ ~
+#face the target point (unless we're mid-air, in which case don't tp since it cancels y velocity) via /rotate
+execute if score #OnGround value matches 1 facing entity 0000007b-0000-00a0-0000-000a0000003c feet rotated ~ 0 run rotate @s ~ ~
 
 #record our position
 execute store result score #coord_x value run data get entity @s Pos[0] 100000

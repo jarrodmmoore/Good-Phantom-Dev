@@ -2,8 +2,8 @@
 scoreboard players operation #findTarget value = @s targetID
 execute as @a[tag=playing,distance=..60] if score @s playerID = #findTarget value run tag @s add ghastTarget
 
-#face target
-execute facing entity @a[limit=1,tag=ghastTarget,distance=..60] feet rotated ~ 0 run tp @s ~ ~ ~ ~ ~
+#face target via /rotate
+execute facing entity @a[limit=1,tag=ghastTarget,distance=..60] feet rotated ~ 0 run rotate @s ~ ~
 
 #make noise when we first notice player
 execute if score @s editArg2 matches 0 run playsound minecraft:entity.ghast.warn master @a ~ ~ ~ 4 1.3

@@ -1,5 +1,5 @@
 #vex
-summon vex ~ ~1 ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"generic.max_health",base:510},{id:"generic.movement_speed",base:0.5d},{id:"generic.follow_range",base:50}]}
+summon vex ~ ~1 ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:510},{id:"movement_speed",base:0.5d},{id:"follow_range",base:50}]}
 scoreboard players set @e[tag=setMe,type=vex,distance=..2] enemyMaxHP 510
 #yeah... this enemy turned out lamer than i was expecting. basically just an unpredictable slow moving target
 

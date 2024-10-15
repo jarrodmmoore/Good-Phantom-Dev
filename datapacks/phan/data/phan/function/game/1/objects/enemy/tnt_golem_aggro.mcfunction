@@ -2,8 +2,8 @@
 scoreboard players operation #findTarget value = @s targetID
 execute as @a[tag=playing,distance=..50] if score @s playerID = #findTarget value run tag @s add tntGolemTarget
 
-#face target
-execute facing entity @a[limit=1,tag=tntGolemTarget,distance=..50] feet rotated ~ 0 run tp @s ~ ~ ~ ~ ~
+#face target via /rotate
+execute facing entity @a[limit=1,tag=tntGolemTarget,distance=..50] feet rotated ~ 0 run rotate @s ~ ~
 
 #make noise when we first notice player
 execute if score @s editArg2 matches 0 run playsound minecraft:entity.skeleton.hurt master @a ~ ~ ~ 3.5 0.66

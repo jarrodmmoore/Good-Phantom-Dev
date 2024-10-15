@@ -15,14 +15,15 @@ execute unless score @s botTargetID matches 0 run function phan:bots/movement/ov
 #project the target
 function phan:bots/movement/0_on_ground/project_target with storage phan:coords
 
-#face the target (jk, don't do that while airborne. super broken.)
-#function phan:bots/movement/0_on_ground/face_target
-
 #find difference between our coordinates and projected target
 execute store result score #coord_x value run data get entity @s Pos[0] 100000
 execute store result score #coord_z value run data get entity @s Pos[2] 100000
 scoreboard players operation #coord_x2 value -= #coord_x value
 scoreboard players operation #coord_z2 value -= #coord_z value
+
+#face the target (jk, don't do that while airborne. super broken.) (double jk, we CAN do this now with /rotate. saints be praised)
+#...but ONLY if we're a decent distance away on x and z. otherwise we become a fidget spinner
+execute unless function phan:bots/movement/1_air/check_if_near_target_xz run function phan:bots/movement/0_on_ground/face_target
 
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001

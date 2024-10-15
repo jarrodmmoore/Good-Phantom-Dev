@@ -2,8 +2,8 @@
 
 #face the target
 function phan:bots/movement/2_gliding/face_target with storage phan:coords
-#passengers also face target (yes, the order matters here!)
-execute rotated as @s on passengers if entity @s[tag=botElytraHeightFix] run tp @s ~ ~ ~ ~ ~
+#passengers also face target (yes, the order matters here!) via /rotate
+execute rotated as @s on passengers if entity @s[tag=botElytraHeightFix] run rotate @s ~ ~
 
 #perish if we're somewhere we shouldn't be
 scoreboard players add @s age 1
