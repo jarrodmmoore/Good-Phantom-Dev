@@ -21,9 +21,10 @@ execute store result score #coord_z value run data get entity @s Pos[2] 100000
 scoreboard players operation #coord_x2 value -= #coord_x value
 scoreboard players operation #coord_z2 value -= #coord_z value
 
-#face the target (jk, don't do that while airborne. super broken.) (double jk, we CAN do this now with /rotate. saints be praised)
+#face the target (jk, don't do that while airborne. super broken.)
 #...but ONLY if we're a decent distance away on x and z. otherwise we become a fidget spinner
-execute unless function phan:bots/movement/1_air/check_if_near_target_xz run function phan:bots/movement/0_on_ground/face_target
+execute unless score @s botTempRotTime matches 1.. run function phan:bots/movement/0_on_ground/face_target
+execute if score @s botTempRotTime matches 1.. run function phan:bots/movement/face_saved_direction
 
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001

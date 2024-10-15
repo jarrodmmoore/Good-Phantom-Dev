@@ -15,6 +15,9 @@ scoreboard players set @s pShowHUD 0
 scoreboard players set @s pSubGameState 0
 tag @s[tag=practiceCourse] remove practiceCourse
 
+#if all players are in the practice area, hide sidebar if something's on there
+execute if score #gameState value matches 0 unless entity @a[tag=!playing] run scoreboard objectives setdisplay sidebar
+
 #start running logic for the HUD if it's no already running
 scoreboard players set #showHUD value 1
 

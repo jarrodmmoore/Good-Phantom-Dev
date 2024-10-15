@@ -2,6 +2,9 @@
 execute if score #assist_enemies value matches 0 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:520.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:520},{id:"movement_speed",base:0.1d}]}
 execute if score #assist_enemies value matches 1 run summon vindicator ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","hurtful","enemySpecialCode","enemyVindicator","tntCanHit","representBaddy"],Health:510.0f,PersistenceRequired:1b,attributes:[{id:"max_health",base:520},{id:"movement_speed",base:0.1d}]}
 scoreboard players set @e[tag=setMe,type=vindicator,distance=..2] enemyMaxHP 520
+#vindicator moves fast and predicts where the player is going to move.
+#the purpose of this enemy is to punish players who try to avoid combat.
+#the hope is to encourage players to fight enemies more, since killing this mob is always more desirable that tanking a hit from it, even if the player doesn't care about score or time
 
 #if we were spawned by a spawner, do some fancy stuff
 execute if entity @s[tag=spawner] run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1.8 1.3
