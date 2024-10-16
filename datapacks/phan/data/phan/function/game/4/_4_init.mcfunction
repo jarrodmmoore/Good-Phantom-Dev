@@ -48,7 +48,7 @@ scoreboard players set #allowCrown value 0
 #quick clean-up on all players
 execute if score #gameState value matches 4 run tag @a[tag=playerReservation] add playing
 tag @a[tag=playerReservation] remove playerReservation
-function phan:join/player_displays_cleanup
+function phan:player/player_displays_cleanup
 
 #reset versus scores
 scoreboard players set #startGrid value 1
@@ -142,4 +142,4 @@ execute if entity @a[tag=doneWithIntro,tag=playing,scores={tutorialProgress=1000
 
 
 #reset player gameplay scores (need to do this AFTER setting gameState due to a conditional)
-function phan:join/reset_gameplay_scores
+function phan:player/reset_gameplay_scores

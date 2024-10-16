@@ -36,10 +36,10 @@ scoreboard objectives setdisplay sidebar
 
 #quick clean-up on all players
 tag @a remove playerReservation
-function phan:join/player_displays_cleanup
+function phan:player/player_displays_cleanup
 
 #reset player gameplay scores
-function phan:join/reset_gameplay_scores
+function phan:player/reset_gameplay_scores
 
 #no equipment for a bit while we load
 tag @a[tag=doneWithIntro] add noInventory

@@ -34,7 +34,7 @@ team modify botDisplayTryhard color aqua
 team modify botDisplayTryharder color aqua
 
 #quick clean-up on all players
-function phan:join/player_displays_cleanup
+function phan:player/player_displays_cleanup
 
 #no equipment during podium sequence
 tag @a[tag=doneWithIntro] add noInventory

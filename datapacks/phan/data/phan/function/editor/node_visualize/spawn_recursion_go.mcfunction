@@ -8,4 +8,4 @@ execute if score #spawnRecursions value matches ..0 run scoreboard players set #
 
 #keep going if we still have more recursions left
 execute if score #spawnRecursions value matches 1.. run scoreboard players operation #tempRecursions value = #spaceRecursions value
-execute if score #spawnRecursions value matches 1.. positioned ^ ^ ^1 run function phan:editor/node_visualize_spawn_recursion_prep
+execute if score #spawnRecursions value matches 1.. positioned ^ ^ ^1 run function phan:editor/node_visualize/spawn_recursion_prep

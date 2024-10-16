@@ -1,7 +1,7 @@
 #executed by a player
 
 #handle death
-execute if score @s death matches 1.. run function phan:join/player_handle_death
+execute if score @s death matches 1.. run function phan:player/player_handle_death
 
 #we can be hit by tnt while in adventure mode
 tag @s[tag=tntCanHit,gamemode=!adventure] remove tntCanHit
@@ -27,8 +27,8 @@ execute if entity @s[tag=doneWithIntro,gamemode=!spectator] at @s run function p
 execute if score @s actionbarDelay matches 1.. run scoreboard players remove @s actionbarDelay 1
 
 #handle strength powerup
-execute if score @s strengthTime matches 1.. run function phan:join/player_strength_power
-execute if score @s bodyHitbox matches 1.. run function phan:join/player_body_hitbox
+execute if score @s strengthTime matches 1.. run function phan:player/player_strength_power
+execute if score @s bodyHitbox matches 1.. run function phan:player/player_body_hitbox
 
 #music toggle trigger
 scoreboard players enable @s musicToggle

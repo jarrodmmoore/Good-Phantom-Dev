@@ -10,4 +10,4 @@ execute unless score @s editArg2 matches 1 run data modify storage phan:node_nam
 execute if score @s editArg2 matches 1 run data modify storage phan:node_name podium_size set value "5x5"
 
 #spawn thing with proper name
-function phan:editor/node_visualize_name_podium_spawner_macro with storage phan:node_name
+function phan:editor/node_visualize/name/podium_spawner_macro with storage phan:node_name

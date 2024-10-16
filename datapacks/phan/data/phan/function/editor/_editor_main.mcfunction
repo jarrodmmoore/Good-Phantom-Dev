@@ -29,7 +29,7 @@ execute if score @s AIBC_mode matches 1.. run function phan:editor/special_edito
 scoreboard players add @s editVisualTimer 1
 scoreboard players set @s[scores={editVisualTimer=40..}] editVisualTimer 1
 scoreboard players operation #editVisualTimer value = @s editVisualTimer
-execute if score #playersInEditMode value matches ..1 as @e[tag=node,type=marker] at @s positioned ~ ~.2 ~ run function phan:editor/node_visualize_tick
+execute if score #playersInEditMode value matches ..1 as @e[tag=node,type=marker] at @s positioned ~ ~.2 ~ run function phan:editor/node_visualize/_tick
 #draw checkpoint boundaries
 execute if score #playersInEditMode value matches ..1 as @e[type=area_effect_cloud,tag=checkpointBound] at @s run function phan:editor/checkpoint/draw_line
 #visualize AI waypoints

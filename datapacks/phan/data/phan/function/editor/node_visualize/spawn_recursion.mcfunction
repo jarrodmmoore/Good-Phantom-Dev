@@ -5,4 +5,4 @@ execute if score #spaceRecursions value matches ..0 run scoreboard players set #
 
 #go to prep school (ew)
 scoreboard players operation #tempRecursions value = #spaceRecursions value
-execute positioned ^ ^ ^1 run function phan:editor/node_visualize_spawn_recursion_prep
+execute positioned ^ ^ ^1 run function phan:editor/node_visualize/spawn_recursion_prep
