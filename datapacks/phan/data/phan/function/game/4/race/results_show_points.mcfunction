@@ -17,6 +17,11 @@ execute if score #hudPeakPlayers value matches ..1 run scoreboard players set @a
 #points operations for bots
 execute if score #botsEnabled value matches 1.. run function phan:bots/race/assign_bot_points
 
+#less global points if we have DNF'd players
+execute as @a[tag=playerReservation,scores={vsAddPoints=..0}] run function phan:game/4/battle/results_reduce_global_points_for_dnfs
+execute if score #botsEnabled value matches 1.. as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={vsAddPoints=..0}] run function phan:game/4/battle/results_reduce_global_points_for_dnfs
+#this prevents huge dropoffs in points, like if most of the players dnf'd on a really hard map (Shattered City III, for instance)
+
 
 #print level title
 tellraw @a[tag=doneWithIntro] ["",{"text":" "}]

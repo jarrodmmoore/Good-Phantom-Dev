@@ -1,3 +1,4 @@
+#test=1 if we're gliding
 scoreboard players set #test value 0
 execute if entity @s[scores={fallFlying=1,airTime=2..}] run scoreboard players set #test value 1
 
@@ -10,8 +11,8 @@ execute if score #test value matches 1 if entity @s[tag=ai] run function phan:bo
 #don't mess up the velocity of other nearby flying players. teleport them to us so they also get the boost
 tag @s add boostSelf
 #note that the proper value for "#thisRingID" is still in memory so we can use it to tell nearby players not to re-collect this ring and cause ANOTHER boost
-execute if score #gameState value matches 4 at @s as @a[gamemode=adventure,tag=!boostSelf,scores={fallFlying=1},distance=..5] run function phan:game/4/objects/ring_record_collected
-execute if score #test value matches 1 at @s as @a[gamemode=adventure,tag=!boostSelf,scores={fallFlying=1},distance=..5] run tp @s ~ ~ ~ ~ ~
+execute if score #test value matches 1 if entity @s[tag=!ai] if score #gameState value matches 4 at @s as @a[gamemode=adventure,tag=!boostSelf,scores={fallFlying=1},distance=..5] run function phan:game/4/objects/ring_record_collected
+execute if score #test value matches 1 if entity @s[tag=!ai] at @s as @a[gamemode=adventure,tag=!boostSelf,scores={fallFlying=1},distance=..5] run tp @s ~ ~ ~ ~ ~
 tag @s remove boostSelf
 
 #get normal boost on ground or in water
