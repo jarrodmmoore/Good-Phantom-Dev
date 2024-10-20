@@ -157,3 +157,6 @@ function phan:movement/reset_speed_self
 
 #add into player queue
 function phan:player_queue/enqueue_player
+
+#give admin tag to pre-defined players
+function phan:admin_player_whitelist

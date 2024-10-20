@@ -44,7 +44,7 @@ execute if score #forceSpecAdmin value matches 1 positioned 198 -30 118 run func
 
 #teleport players into the place
 effect give @a[tag=doneWithIntro] blindness 1 50 true
-execute as @a[tag=doneWithIntro] positioned 198 -30 118 rotated -90 0 run function phan:varied_teleport
+execute as @a[tag=doneWithIntro] positioned 198 -30 118 rotated -90 0 run function phan:common/varied_teleport
 
 #play text
 execute positioned 205 -28 113 positioned ~ ~.8 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp"],see_through:1b,line_width:1000,billboard:"center",brightness:{sky:0,block:15},text:'[{"translate":"gp.mode_select.play","bold":true,"color":"dark_aqua"}]',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]}}

@@ -7,7 +7,7 @@ bossbar set general_bossbar name ["",{"translate":"gp.mode_select.select_a_mode"
 
 #teleport players into the place
 effect give @a[tag=doneWithIntro] blindness 1 50 true
-execute as @a[tag=doneWithIntro] positioned 198 -22 118 rotated -90 0 run function phan:varied_teleport
+execute as @a[tag=doneWithIntro] positioned 198 -22 118 rotated -90 0 run function phan:common/varied_teleport
 
 #summon level text
 execute positioned 209 -18 118 run function phan:levels/_index_title_entity
