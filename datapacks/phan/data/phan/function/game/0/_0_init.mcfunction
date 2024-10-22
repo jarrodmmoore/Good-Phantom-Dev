@@ -81,6 +81,9 @@ scoreboard players add @a playerTipTime 200
 execute if score #freePlay value matches 1 run scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #freePlay value 0
 
+#we are no longer using random level select!
+scoreboard players set #usingRandomLevelSelect value 0
+
 #jukebox particles don't happen until we pick a song to play from it
 scoreboard players set #lobbyJukebox value 0
 

@@ -4,6 +4,9 @@ execute if score #chosenLevel value matches 3 run function phan:levels/shattered
 execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_versus_data
 execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_versus_data
 
+#set randomization cooldown on the act we're currently on
+function phan:levels/_index_randomization_cooldown
+
 #adding 1 tick to max time limit so it stops on an even number if a player DNF's ;)
 scoreboard players add #vTimeLimit value 1
 #whoever finishes a race on the last possible tick thanks to this change: you're welcome

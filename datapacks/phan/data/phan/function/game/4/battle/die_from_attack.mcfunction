@@ -11,8 +11,8 @@ execute at @s positioned ~ ~1 ~ run particle large_smoke ~ ~ ~ 0.2 0.2 0.2 0.2 7
 #summon eyes
 scoreboard players operation #enderEyes value = @s enderEyes
 #guaranteed one eye dropped
-execute if score #enderEyes value matches 1.. positioned ~ ~ ~ if block ~ ~ ~ #phan:not_solid run function phan:game/4/spawning/drop_eye_on_death
-execute if score #enderEyes value matches 1.. run scoreboard players remove @s enderEyes 1
+execute positioned ~ ~ ~ if block ~ ~ ~ #phan:not_solid run function phan:game/4/spawning/drop_eye_on_death
+execute if score #enderEyes value matches 5.. run scoreboard players remove @s enderEyes 1
 #drop more eyes if we have a lot (and lose them from inventory)
 execute if score #enderEyes value matches 11.. positioned ~-.25 ~ ~.4 if block ~ ~ ~ #phan:not_solid run function phan:game/4/spawning/drop_eye_on_death
 execute if score #enderEyes value matches 11.. run scoreboard players remove @s enderEyes 1

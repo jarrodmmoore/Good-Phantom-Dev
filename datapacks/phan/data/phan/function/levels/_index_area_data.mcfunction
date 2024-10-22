@@ -4,6 +4,9 @@ execute if score #chosenLevel value matches 3 run function phan:levels/shattered
 execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_area_data
 execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_area_data
 
+#set randomization cooldown on the act we're currently on
+function phan:levels/_index_randomization_cooldown
+
 #assist mode: get extra time
 execute if score #assist_time_limit value matches 1 run scoreboard players operation @s pTimeRemaining *= #CONST_ASSIST_TIME value
 execute if score #assist_time_limit value matches 1 run scoreboard players operation @s pTimeRemaining /= #100 value

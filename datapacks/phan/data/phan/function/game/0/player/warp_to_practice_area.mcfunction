@@ -13,6 +13,7 @@ xp set @s 0 points
 clear @s
 scoreboard players set @s pShowHUD 0
 scoreboard players set @s pSubGameState 0
+scoreboard players set @s addPointsLater 0
 tag @s[tag=practiceCourse] remove practiceCourse
 
 #if all players are in the practice area, hide sidebar if something's on there
