@@ -23,9 +23,9 @@ function phan:items/use/speed_pad_part2 with storage phan:coords
 execute if entity @s[tag=ai] unless score @s botMoveState matches 3 run function phan:bots/items/7_speed_pad/cancel_y_velocity
 
 #spawn speed pad
-execute at @s run summon armor_stand ~ ~ ~ {Tags:["tickObject","speedPadEntity","giveID","hurtful","dontResetNearMe","speedPadCount"],attributes:[{id:"minecraft:scale",base:0.0625}],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["setLife","botObjectOfInterest","speedPadDisplay"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111113}}}]}
+execute at @s run summon armor_stand ~ ~ ~ {Tags:["tickObject","speedPadEntity","giveID","hurtful","dontResetNearMe","speedPadCount"],attributes:[{id:"minecraft:scale",base:0.0625}],Invisible:1b,Invulnerable:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:0,block:15},Tags:["setLife","botObjectOfInterest","speedPadDisplay"],item_display:"head",item:{id:"minecraft:cyan_dye",count:1b,components:{"custom_model_data":1111113}}}]}
 execute at @s as @e[type=armor_stand,tag=giveID,distance=..4] run tp @s ~ ~ ~ ~ ~
-execute as @e[type=armor_stand,tag=giveID,distance=..4] at @s on passengers run tp @s ~ ~ ~ ~ 0
+execute as @e[type=armor_stand,tag=giveID,distance=..4] at @s on passengers run rotate @s ~ 0
 
 #get a unique ID (for bot temporary target system)
 scoreboard players add #uniqieBoxID value 1

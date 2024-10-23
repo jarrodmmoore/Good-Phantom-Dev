@@ -13,3 +13,10 @@ execute if score #percent value matches 17..23 run data merge entity @s {brightn
 execute if score #percent value matches 10..16 run data merge entity @s {brightness:{sky:0,block:3}}
 execute if score #percent value matches 3..9 run data merge entity @s {brightness:{sky:0,block:2}}
 execute if score #percent value matches ..2 run data merge entity @s {brightness:{sky:0,block:1}}
+
+#this got broken somehow.
+#i'm not even going to question why anymore.
+#let's just do some particles as an alternative
+execute if score #percent value matches ..80 run particle enchanted_hit ~ ~.35 ~ 0.3 0.15 0.3 0 1 force
+execute if score #percent value matches ..40 run particle enchanted_hit ~ ~.35 ~ 0.3 0.15 0.3 0 1 force
+execute if score #percent value matches ..2 run particle large_smoke ~ ~.35 ~ 0.3 0.15 0.3 0 10 force @a[distance=..50]

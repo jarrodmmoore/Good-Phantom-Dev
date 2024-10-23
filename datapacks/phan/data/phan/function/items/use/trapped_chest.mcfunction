@@ -31,7 +31,7 @@ execute if score #uniqieBoxID value matches 0 run scoreboard players add #uniqie
 scoreboard players operation @e[tag=setMe,type=item_display,distance=..4] ringID = #uniqieBoxID value
 
 #armor_stand gets same rotation as whatever spawned it. also gets data for stuff
-execute as @e[tag=setLife,type=armor_stand,distance=..4] positioned ~ ~.5 ~ run tp @s ~ ~ ~ ~ ~
+execute as @e[tag=setLife,type=armor_stand,distance=..4] positioned ~ ~.5 ~ run tp @s ~ ~ ~ ~ 0
 
 #join team for glowing color
 team join colorRed @e[tag=setMe,type=item_display,distance=..4]

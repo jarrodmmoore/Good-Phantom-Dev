@@ -37,7 +37,7 @@ execute if score @s squidBlindTime matches -30.. at @s run function phan:bots/it
 execute if score @s botFireworkTime matches 1.. at @s run function phan:bots/items/firework_boost_effect
 
 #shield on players
-execute if score @s shieldTime matches 1.. at @s run function phan:items/shield_active
+execute if score @s shieldTime matches 1.. at @s run function phan:items/shield_active_bot
 
 #attackerID expires after 5sec
 scoreboard players remove @s[scores={attackTime=1..}] attackTime 1
