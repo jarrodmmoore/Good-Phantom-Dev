@@ -3,7 +3,7 @@
 particle instant_effect ~ ~.5 ~ 0.2 0.2 0.2 0.1 4 force
 
 #spawn the eye (which is an item display)
-summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","dropEyeGiveID","enderEye","shootable","groupB"],billboard:"center",brightness:{sky:15,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:flint",count:1b}}
+summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","dropEyeGiveID","enderEye","shootable","groupB"],teleport_duration:2,billboard:"center",brightness:{sky:15,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:flint",count:1b}}
 
 #purple color
 team join colorPurple @e[tag=setMe,type=item_display,distance=..2]

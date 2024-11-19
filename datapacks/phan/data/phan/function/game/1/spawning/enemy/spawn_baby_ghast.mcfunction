@@ -2,7 +2,7 @@
 #(drumroll)
 
 #summon baby ghast (item_display) which rides an armor stand and has an extra item display glued to it for the legs
-summon armor_stand ~ ~.5 ~ {Tags:["setLife"],Invulnerable:1b,Marker:1b,NoGravity:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["checkValid","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","needsDisplayHP","enemyHasVehicle","enemySpecialCode","enemyGhast","representBaddy"],item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111136}},Passengers:[{id:"item_display",brightness:{sky:10,block:15},Tags:["setLife2","babyGhastLegs"],item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111138}}}]}]}
+summon armor_stand ~ ~.5 ~ {Tags:["setLife"],Invulnerable:1b,Marker:1b,NoGravity:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["checkValid","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","needsDisplayHP","enemyHasVehicle","enemySpecialCode","enemyGhast","representBaddy"],teleport_duration:1,item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111136}},Passengers:[{id:"item_display",brightness:{sky:10,block:15},Tags:["setLife2","babyGhastLegs"],item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111138}}}]}]}
 scoreboard players set @e[tag=setMe,type=item_display,distance=..2] enemyMaxHP 510
 scoreboard players set @e[tag=setMe,type=item_display,distance=..2] enemyHP 510
 #note: you can add tag "startHideHP" to make HP not show until damage is taken
