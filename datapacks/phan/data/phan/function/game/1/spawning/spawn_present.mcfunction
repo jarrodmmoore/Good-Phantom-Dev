@@ -1,4 +1,4 @@
-summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","present","groupB"],teleport_duration:1,billboard:"vertical",brightness:{sky:0,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111111}}}
+summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","present","groupB"],teleport_duration:1,billboard:"vertical",brightness:{sky:0,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/xmas_chest"}}}
 
 function phan:game/1/spawning/spawn__give_generic_data
 

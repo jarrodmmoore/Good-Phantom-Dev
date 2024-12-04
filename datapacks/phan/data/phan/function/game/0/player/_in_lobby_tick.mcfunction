@@ -6,7 +6,7 @@ execute if score @s moving matches 1.. run function phan:game/0/tip_timer
 tag @s[tag=hasEnderEye] remove hasEnderEye
 execute if entity @s[gamemode=!creative,scores={nearPlayer=1..}] if items entity @s hotbar.4 flint[custom_data~{levelEntry:1b}] run tag @s add hasEnderEye
 clear @s[gamemode=!creative,tag=!hasEnderEye] flint[custom_data~{levelEntry:1b}]
-item replace entity @s[gamemode=adventure,tag=!hasEnderEye,tag=!noInventory,scores={inputCooldown=..0,nearPlayer=1..}] hotbar.4 with flint[custom_model_data=1111113,custom_name='[{"keybind":"key.use","italic":false},{"text":" "},{"translate":"gp.lobby.enter_level","color":"#C808CF","bold":true,"italic":false}]',custom_data={levelEntry:1b}] 1
+item replace entity @s[gamemode=adventure,tag=!hasEnderEye,tag=!noInventory,scores={inputCooldown=..0,nearPlayer=1..}] hotbar.4 with flint[item_model="gp/item/ever_eye_glowing",custom_name='[{"keybind":"key.use","italic":false},{"text":" "},{"translate":"gp.lobby.enter_level","color":"#C808CF","bold":true,"italic":false}]',custom_data={levelEntry:1b}] 1
 execute if entity @s[gamemode=adventure,scores={inputCooldown=..0,carrotInput=1..}] if items entity @s weapon.mainhand flint[custom_data~{levelEntry:1b}] run function phan:game/0/player_starts_level
 
 #warn players that their resource pack is missing

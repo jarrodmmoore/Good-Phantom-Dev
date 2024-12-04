@@ -9,7 +9,7 @@
         "icon": {
             "id": "minecraft:red_wool",
             "components": {
-                "minecraft:custom_model_data":1111112
+                "item_model":"gp/object/alarm_clock"
             }
         },
         "frame": "task",

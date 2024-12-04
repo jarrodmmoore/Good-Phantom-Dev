@@ -11,7 +11,7 @@
         "icon": {
             "id": "minecraft:yellow_wool",
             "components": {
-                "minecraft:custom_model_data":1111111
+                "item_model":"gp/object/stardust"
             }
         },
         "frame": "task",

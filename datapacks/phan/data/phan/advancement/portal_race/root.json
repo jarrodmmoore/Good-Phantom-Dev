@@ -11,7 +11,7 @@
         "icon": {
             "id": "minecraft:red_wool",
             "components": {
-                "minecraft:custom_model_data":1111131
+                "item_model":"gp/object/phantom_chest"
             }
         },
         "frame": "task",

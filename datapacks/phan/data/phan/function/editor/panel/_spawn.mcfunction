@@ -1,4 +1,4 @@
-execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]},custom_data={nodeTool:1b},custom_name='{"text":"Node"}',custom_model_data=1111111] 1
+execute unless items entity @s hotbar.* vex_spawn_egg unless items entity @s inventory.* vex_spawn_egg run give @s vex_spawn_egg[entity_data={id:"minecraft:vex",NoGravity:0b,NoAI:1b,Tags:["nodeSpawn"]},custom_data={nodeTool:1b},custom_name='{"text":"Node"}',item_model="gp/editor/node"] 1
 
 #need values!
 execute unless score @s editNode matches 1.. run scoreboard players set @s editNode 1

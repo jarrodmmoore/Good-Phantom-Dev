@@ -1,6 +1,6 @@
 #summon item_display (which is a tnt golem)
 #(a custom mob without a ton of separate parts riding each other--thank you jesus)
-summon item_display ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","needsDisplayHP","tallDisplayHP","enemySpecialCode","enemyTNTGolem","bigLootDrop","representBaddy"],brightness:{block:10,sky:15},teleport_duration:1,item_display:"head",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,1.65f,0.0f],scale:[0.58f,0.58f,0.58f]},item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111134}}}
+summon item_display ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","needsDisplayHP","tallDisplayHP","enemySpecialCode","enemyTNTGolem","bigLootDrop","representBaddy"],brightness:{block:10,sky:15},teleport_duration:1,item_display:"head",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,1.65f,0.0f],scale:[0.58f,0.58f,0.58f]},item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/enemy/tnt_yeeter_hold"}}}
 #Q: wouldn't it be easier to make this an armor stand? it has the perfect proportions and would interpolate its own rotation
 #A: yes, but changes to the armor stand head slot don't always render when we need it to. so item_display wins out, here.
 #update: i later discovered that teleport_duration is a thing. looks like i get to have my cake and eat it, too!

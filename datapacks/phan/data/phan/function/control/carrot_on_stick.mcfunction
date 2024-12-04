@@ -11,4 +11,4 @@ execute if entity @s[tag=invalidCarrot] run function phan:control/handle_player_
 
 #give carrot on stick if missing
 execute if entity @s[tag=!hasCarrot] run clear @s minecraft:carrot_on_a_stick
-execute if entity @s[tag=!hasCarrot] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[hide_tooltip={},custom_model_data=1234567,lore=['{"translate":"gp.misc.this_detects_right_clicks","color":"#FA66FF","italic":true}'],custom_name='{"translate":"gp.misc.input_detector","bold":true,"italic":false,"color":"light_purple"}',custom_data={input_carrot:1b}] 1
+execute if entity @s[tag=!hasCarrot] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[hide_tooltip={},lore=['{"translate":"gp.misc.this_detects_right_clicks","color":"#FA66FF","italic":true}'],custom_name='{"translate":"gp.misc.input_detector","bold":true,"italic":false,"color":"light_purple"}',custom_data={input_carrot:1b}] 1

@@ -15,12 +15,12 @@ execute if score #beQuiet value matches 1.. run scoreboard players add #beQuiet 
 scoreboard players operation @s age = #setID value
 
 #put the proper head on our head
-execute unless score #test value matches 2..6 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111115]
-execute if score #test value matches 2 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111116]
-execute if score #test value matches 3 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111117]
-execute if score #test value matches 4 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111118]
-execute if score #test value matches 5 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111119]
-execute if score #test value matches 6 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111120]
+execute unless score #test value matches 2..6 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_1"]
+execute if score #test value matches 2 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_2"]
+execute if score #test value matches 3 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_3"]
+execute if score #test value matches 4 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_4"]
+execute if score #test value matches 5 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_5"]
+execute if score #test value matches 6 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_6"]
 
 #scores/tags
 team join player @s

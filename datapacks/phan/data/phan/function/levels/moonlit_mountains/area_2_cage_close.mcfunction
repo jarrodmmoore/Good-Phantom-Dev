@@ -3,7 +3,7 @@ fill 1868 81 -28 1873 84 -23 barrier replace structure_void
 
 #summon the visual bars
 kill @e[tag=moonlitCageVisual]
-execute positioned 1870 82 -26 positioned ~.5 ~.75 ~.5 run summon item_display ~ ~ ~ {Tags:["moonlitCageVisual"],item_display:"head",billboard:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.66f,0.66f,0.66f]},item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111143}}}
+execute positioned 1870 82 -26 positioned ~.5 ~.75 ~.5 run summon item_display ~ ~ ~ {Tags:["moonlitCageVisual"],item_display:"head",billboard:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.66f,0.66f,0.66f]},item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/moonlit_act_2_cage"}}}
 
 #lamp indicators for each target
 execute if score #act2target1 value matches 0 run setblock 1868 85 -28 redstone_lamp[lit=false]

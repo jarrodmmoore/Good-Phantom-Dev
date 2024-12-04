@@ -9,7 +9,7 @@
         "icon": {
             "id": "minecraft:light_blue_wool",
             "components": {
-                "minecraft:custom_model_data":1111114
+                "item_model":"gp/player_model/phantom_head_crowned_strong"
             }
         },
         "frame": "challenge",

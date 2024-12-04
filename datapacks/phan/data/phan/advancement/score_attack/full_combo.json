@@ -9,7 +9,7 @@
         "icon": {
             "id": "minecraft:yellow_wool",
             "components": {
-                "minecraft:custom_model_data":1111112
+                "item_model":"gp/object/stardust_big"
             }
         },
         "frame": "task",

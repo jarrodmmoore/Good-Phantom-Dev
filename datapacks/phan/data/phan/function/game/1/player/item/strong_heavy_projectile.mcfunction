@@ -8,8 +8,8 @@ playsound minecraft:entity.evoker.cast_spell master @s ~ ~ ~ 1 1.8
 function phan:game/1/player/item/determine_projectile_spawn_location
 
 #summon based on the position we picked
-execute if score #test value matches 0 run summon armor_stand ~ ~ ~ {Tags:["setLife","projectile","projectileHeavy","strongerProjectile"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"minecraft:custom_model_data":1111114}}]}
-execute if score #test value matches 1 run summon armor_stand ~ ~-1.1 ~ {Tags:["setLife","projectile","projectileHeavy","strongerProjectile"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"minecraft:custom_model_data":1111114}}]}
+execute if score #test value matches 0 run summon armor_stand ~ ~ ~ {Tags:["setLife","projectile","projectileHeavy","strongerProjectile"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"item_model":"gp/item_entity/projectile_heavy_evil"}}]}
+execute if score #test value matches 1 run summon armor_stand ~ ~-1.1 ~ {Tags:["setLife","projectile","projectileHeavy","strongerProjectile"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"item_model":"gp/item_entity/projectile_heavy_evil"}}]}
 execute if score #test value matches 0 positioned ~ ~1.8 ~ run particle dust{color:[1,0,0],scale:1} ^ ^ ^2 0.25 0.25 0.25 0 5 force
 execute if score #test value matches 1 positioned ~ ~0.7 ~ run particle dust{color:[1,0,0],scale:1} ^ ^ ^2 0.25 0.25 0.25 0 5 force
 scoreboard players operation @e[tag=setLife,type=armor_stand,distance=..4] playerID = @s playerID

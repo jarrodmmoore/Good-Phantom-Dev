@@ -2,7 +2,7 @@
 execute as @e[tag=claimedPresent,type=item_display] if score @s playerID = #findID value at @s run function phan:game/1/player/handle_present_entity_open
 
 #get item depending on what the chest had inside it
-execute if score #returnItem value matches 1 run give @s minecraft:yellow_wool[custom_name='{"translate":"gp.game.stardust","color":"yellow","italic":false}',custom_model_data=1111111,hide_additional_tooltip={}] 15
+execute if score #returnItem value matches 1 run give @s minecraft:yellow_wool[custom_name='{"translate":"gp.game.stardust","color":"yellow","italic":false}',item_model="gp/object/stardust",hide_additional_tooltip={}] 15
 execute if score #returnItem value matches 2 run function phan:items/give/firework_rocket {count:1}
 execute if score #returnItem value matches 3 run function phan:items/give/ender_pearl {count:1}
 execute if score #returnItem value matches 4 run function phan:items/give/super_jump {count:1}

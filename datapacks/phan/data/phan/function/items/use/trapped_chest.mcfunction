@@ -4,7 +4,7 @@ scoreboard players operation #attackerID value = @s playerID
 #trapped chest is exactly the same as a mine. just has a different model
 
 #summon mine (item_display) which rides an armor stand
-summon armor_stand ~ ~.5 ~ {Tags:["setLife"],Invulnerable:1b,Marker:1b,NoGravity:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["tickObject","mineItemEntity","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","enemyHasVehicle","enemySpecialCode","enemyMine","sonicBlastDestroys","mineCount","trappedChest","botObjectOfInterest","botRecognizesTrap"],item_display:"head",item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111150}}}]}
+summon armor_stand ~ ~.5 ~ {Tags:["setLife"],Invulnerable:1b,Marker:1b,NoGravity:1b,Passengers:[{id:"minecraft:item_display",brightness:{sky:10,block:15},Tags:["tickObject","mineItemEntity","setMe","baddy","groupB","shootable","tntCanHit","artificialHP","enemyHasVehicle","enemySpecialCode","enemyMine","sonicBlastDestroys","mineCount","trappedChest","botObjectOfInterest","botRecognizesTrap"],item_display:"head",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/phantom_chest"}}}]}
 scoreboard players set @e[tag=setMe,type=item_display,distance=..4] enemyMaxHP 510
 scoreboard players set @e[tag=setMe,type=item_display,distance=..4] enemyHP 510
 

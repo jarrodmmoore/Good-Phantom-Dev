@@ -2,8 +2,8 @@
 kill @e[tag=leaderboardDisplay,type=text_display]
 
 #show obsolete scores?
-execute if score #scoresRecorded value matches 1.. if score #showUniqueScores value matches 0 run summon text_display 194 -10 125 {Tags:["lobbyProp","leaderboardDisplay","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.leaderboard.obsolete_scores","fallback":"Obsolete scores: shown","with":[{"translate":"gp.leaderboard.shown","color":"yellow"}],"color":"white"}'}
-execute if score #scoresRecorded value matches 1.. if score #showUniqueScores value matches 1 run summon text_display 194 -10 125 {Tags:["lobbyProp","leaderboardDisplay","rotateText"],line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.leaderboard.obsolete_scores","fallback":"Obsolete scores: hidden","with":[{"translate":"gp.leaderboard.hidden","color":"yellow"}],"color":"white"}'}
+execute if score #scoresRecorded value matches 1.. if score #showUniqueScores value matches 0 run summon text_display 194 -10 125 {Tags:["lobbyProp","leaderboardDisplay","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.leaderboard.obsolete_scores","fallback":"Obsolete scores: shown","with":[{"translate":"gp.leaderboard.shown","color":"yellow"}],"color":"white"}'}
+execute if score #scoresRecorded value matches 1.. if score #showUniqueScores value matches 1 run summon text_display 194 -10 125 {Tags:["lobbyProp","leaderboardDisplay","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.leaderboard.obsolete_scores","fallback":"Obsolete scores: hidden","with":[{"translate":"gp.leaderboard.hidden","color":"yellow"}],"color":"white"}'}
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~5 ~ 180 ~
 tag @e[tag=rotateText,type=text_display] remove rotateText
 

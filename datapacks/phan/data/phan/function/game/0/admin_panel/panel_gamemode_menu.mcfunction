@@ -49,10 +49,10 @@ item replace entity @s enderchest.8 with air
 item replace entity @s enderchest.9 with air
 item replace entity @s enderchest.10 with air
 item replace entity @s enderchest.11 with air
-item replace entity @s enderchest.12 with minecraft:yellow_wool[custom_model_data=1111111,custom_name='{"translate":"gp.mode_select.score_attack","bold":true,"italic":false,"color":"yellow"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_player","bold":false,"italic":true,"color":"white"}'],custom_data={setModeScoreAttack:1b,adminMenu:1b}]
+item replace entity @s enderchest.12 with minecraft:yellow_wool[item_model="gp/object/stardust",custom_name='{"translate":"gp.mode_select.score_attack","bold":true,"italic":false,"color":"yellow"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_player","bold":false,"italic":true,"color":"white"}'],custom_data={setModeScoreAttack:1b,adminMenu:1b}]
 execute unless score #timeAttackUnlocked value matches 1 run item replace entity @s enderchest.13 with air
-execute if score #timeAttackUnlocked value matches 1 run item replace entity @s enderchest.13 with minecraft:red_wool[custom_model_data=1111112,custom_name='{"translate":"gp.mode_select.time_attack","bold":true,"italic":false,"color":"red"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_player","bold":false,"italic":true,"color":"white"}'],custom_data={setModeTimeAttack:1b,adminMenu:1b}]
-item replace entity @s enderchest.14 with minecraft:red_wool[custom_model_data=1111131,custom_name='{"translate":"gp.mode_select.versus","bold":true,"italic":false,"color":"light_purple"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_to_24_players_bots","bold":false,"italic":true,"color":"white"}'],custom_data={setModeVersus:1b,adminMenu:1b}]
+execute if score #timeAttackUnlocked value matches 1 run item replace entity @s enderchest.13 with minecraft:red_wool[item_model="gp/object/alarm_clock",custom_name='{"translate":"gp.mode_select.time_attack","bold":true,"italic":false,"color":"red"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_player","bold":false,"italic":true,"color":"white"}'],custom_data={setModeTimeAttack:1b,adminMenu:1b}]
+item replace entity @s enderchest.14 with minecraft:red_wool[item_model="gp/object/phantom_chest",custom_name='{"translate":"gp.mode_select.versus","bold":true,"italic":false,"color":"light_purple"}',lore=['{"text":" "}','{"translate":"gp.mode_select.1_to_24_players_bots","bold":false,"italic":true,"color":"white"}'],custom_data={setModeVersus:1b,adminMenu:1b}]
 item replace entity @s enderchest.15 with air
 item replace entity @s enderchest.16 with air
 item replace entity @s enderchest.17 with air

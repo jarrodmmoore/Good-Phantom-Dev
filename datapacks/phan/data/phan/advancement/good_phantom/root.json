@@ -10,7 +10,7 @@
         "icon": {
             "id": "minecraft:light_blue_wool",
             "components": {
-                "minecraft:custom_model_data":1111111
+                "item_model":"gp/player_model/phantom_head"
             }
         },
         "frame": "task",

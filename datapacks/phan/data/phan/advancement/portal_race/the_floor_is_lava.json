@@ -9,7 +9,7 @@
         "icon": {
             "id": "minecraft:elytra",
             "components": {
-                "minecraft:custom_model_data":1111111
+                "item_model":"gp/item/phantom_wings"
             }
         },
         "frame": "task",

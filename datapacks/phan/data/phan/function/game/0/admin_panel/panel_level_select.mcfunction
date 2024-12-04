@@ -141,7 +141,7 @@ item replace entity @s enderchest.0 with minecraft:purple_dye[custom_name='{"tra
 
 #reset points
 execute if score #offerPointReset value matches ..0 run item replace entity @s enderchest.9 with air
-execute if score #offerPointReset value matches 1.. run item replace entity @s enderchest.9 with red_dye[custom_model_data=1111202,custom_name='{"translate":"gp.misc.reset_points","italic":false,"color":"#FF2255"}',custom_data={resetVersusPoints:1b,adminMenu:1b}]
+execute if score #offerPointReset value matches 1.. run item replace entity @s enderchest.9 with red_dye[item_model="gp/inventory/erase_points",custom_name='{"translate":"gp.misc.reset_points","italic":false,"color":"#FF2255"}',custom_data={resetVersusPoints:1b,adminMenu:1b}]
 
 #random level select
 execute if score #dreamsCompleted value matches ..4 run item replace entity @s enderchest.18 with air
@@ -153,43 +153,43 @@ item replace entity @s enderchest.10 with air
 item replace entity @s enderchest.19 with air
 
 #dream 1
-execute if score #d1a1Unlocked value matches 1 run item replace entity @s enderchest.2 with minecraft:magenta_dye[custom_model_data=1000011,custom_name='{"text":"\\uE511","italic":false}',custom_data={setAct1a:1b,adminMenu:1b}]
+execute if score #d1a1Unlocked value matches 1 run item replace entity @s enderchest.2 with minecraft:magenta_dye[item_model="gp/map_preview/pastel_palace_1",custom_name='{"text":"\\uE511","italic":false}',custom_data={setAct1a:1b,adminMenu:1b}]
 execute unless score #d1a1Unlocked value matches 1 run item replace entity @s enderchest.2 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct1a:1b,adminMenu:1b}]
-execute if score #d1a2Unlocked value matches 1 run item replace entity @s enderchest.11 with minecraft:magenta_dye[custom_model_data=1000012,custom_name='{"text":"\\uE512","italic":false}',custom_data={setAct1b:1b,adminMenu:1b}]
+execute if score #d1a2Unlocked value matches 1 run item replace entity @s enderchest.11 with minecraft:magenta_dye[item_model="gp/map_preview/pastel_palace_2",custom_name='{"text":"\\uE512","italic":false}',custom_data={setAct1b:1b,adminMenu:1b}]
 execute unless score #d1a2Unlocked value matches 1 run item replace entity @s enderchest.11 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct1b:1b,adminMenu:1b}]
-execute if score #d1a3Unlocked value matches 1 run item replace entity @s enderchest.20 with minecraft:magenta_dye[custom_model_data=1000013,custom_name='{"text":"\\uE513","italic":false}',custom_data={setAct1c:1b,adminMenu:1b}]
+execute if score #d1a3Unlocked value matches 1 run item replace entity @s enderchest.20 with minecraft:magenta_dye[item_model="gp/map_preview/pastel_palace_3",custom_name='{"text":"\\uE513","italic":false}',custom_data={setAct1c:1b,adminMenu:1b}]
 execute unless score #d1a3Unlocked value matches 1 run item replace entity @s enderchest.20 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct1c:1b,adminMenu:1b}]
 
 #dream 2
-execute if score #d2a1Unlocked value matches 1 run item replace entity @s enderchest.3 with minecraft:magenta_dye[custom_model_data=1000021,custom_name='{"text":"\\uE521","italic":false}',custom_data={setAct2a:1b,adminMenu:1b}]
+execute if score #d2a1Unlocked value matches 1 run item replace entity @s enderchest.3 with minecraft:magenta_dye[item_model="gp/map_preview/moonlit_mountains_1",custom_name='{"text":"\\uE521","italic":false}',custom_data={setAct2a:1b,adminMenu:1b}]
 execute unless score #d2a1Unlocked value matches 1 run item replace entity @s enderchest.3 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct2a:1b,adminMenu:1b}]
-execute if score #d2a2Unlocked value matches 1 run item replace entity @s enderchest.12 with minecraft:magenta_dye[custom_model_data=1000022,custom_name='{"text":"\\uE522","italic":false}',custom_data={setAct2b:1b,adminMenu:1b}]
+execute if score #d2a2Unlocked value matches 1 run item replace entity @s enderchest.12 with minecraft:magenta_dye[item_model="gp/map_preview/moonlit_mountains_2",custom_name='{"text":"\\uE522","italic":false}',custom_data={setAct2b:1b,adminMenu:1b}]
 execute unless score #d2a2Unlocked value matches 1 run item replace entity @s enderchest.12 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct2b:1b,adminMenu:1b}]
-execute if score #d2a3Unlocked value matches 1 run item replace entity @s enderchest.21 with minecraft:magenta_dye[custom_model_data=1000023,custom_name='{"text":"\\uE523","italic":false}',custom_data={setAct2c:1b,adminMenu:1b}]
+execute if score #d2a3Unlocked value matches 1 run item replace entity @s enderchest.21 with minecraft:magenta_dye[item_model="gp/map_preview/moonlit_mountains_3",custom_name='{"text":"\\uE523","italic":false}',custom_data={setAct2c:1b,adminMenu:1b}]
 execute unless score #d2a3Unlocked value matches 1 run item replace entity @s enderchest.21 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct2c:1b,adminMenu:1b}]
 
 #dream 4
-execute if score #d4a1Unlocked value matches 1 run item replace entity @s enderchest.4 with minecraft:magenta_dye[custom_model_data=1000041,custom_name='{"text":"\\uE541","italic":false}',custom_data={setAct4a:1b,adminMenu:1b}]
+execute if score #d4a1Unlocked value matches 1 run item replace entity @s enderchest.4 with minecraft:magenta_dye[item_model="gp/map_preview/neon_nightway_1",custom_name='{"text":"\\uE541","italic":false}',custom_data={setAct4a:1b,adminMenu:1b}]
 execute unless score #d4a1Unlocked value matches 1 run item replace entity @s enderchest.4 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct4a:1b,adminMenu:1b}]
-execute if score #d4a2Unlocked value matches 1 run item replace entity @s enderchest.13 with minecraft:magenta_dye[custom_model_data=1000042,custom_name='{"text":"\\uE542","italic":false}',custom_data={setAct4b:1b,adminMenu:1b}]
+execute if score #d4a2Unlocked value matches 1 run item replace entity @s enderchest.13 with minecraft:magenta_dye[item_model="gp/map_preview/neon_nightway_2",custom_name='{"text":"\\uE542","italic":false}',custom_data={setAct4b:1b,adminMenu:1b}]
 execute unless score #d4a2Unlocked value matches 1 run item replace entity @s enderchest.13 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct4b:1b,adminMenu:1b}]
-execute if score #d4a3Unlocked value matches 1 run item replace entity @s enderchest.22 with minecraft:magenta_dye[custom_model_data=1000043,custom_name='{"text":"\\uE543","italic":false}',custom_data={setAct4c:1b,adminMenu:1b}]
+execute if score #d4a3Unlocked value matches 1 run item replace entity @s enderchest.22 with minecraft:magenta_dye[item_model="gp/map_preview/neon_nightway_3",custom_name='{"text":"\\uE543","italic":false}',custom_data={setAct4c:1b,adminMenu:1b}]
 execute unless score #d4a3Unlocked value matches 1 run item replace entity @s enderchest.22 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct4c:1b,adminMenu:1b}]
 
 #dream 5
-execute if score #d5a1Unlocked value matches 1 run item replace entity @s enderchest.5 with minecraft:magenta_dye[custom_model_data=1000051,custom_name='{"text":"\\uE551","italic":false}',custom_data={setAct5a:1b,adminMenu:1b}]
+execute if score #d5a1Unlocked value matches 1 run item replace entity @s enderchest.5 with minecraft:magenta_dye[item_model="gp/map_preview/deep_dive_1",custom_name='{"text":"\\uE551","italic":false}',custom_data={setAct5a:1b,adminMenu:1b}]
 execute unless score #d5a1Unlocked value matches 1 run item replace entity @s enderchest.5 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct5a:1b,adminMenu:1b}]
-execute if score #d5a2Unlocked value matches 1 run item replace entity @s enderchest.14 with minecraft:magenta_dye[custom_model_data=1000052,custom_name='{"text":"\\uE552","italic":false}',custom_data={setAct5b:1b,adminMenu:1b}]
+execute if score #d5a2Unlocked value matches 1 run item replace entity @s enderchest.14 with minecraft:magenta_dye[item_model="gp/map_preview/deep_dive_2",custom_name='{"text":"\\uE552","italic":false}',custom_data={setAct5b:1b,adminMenu:1b}]
 execute unless score #d5a2Unlocked value matches 1 run item replace entity @s enderchest.14 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct5b:1b,adminMenu:1b}]
-execute if score #d5a3Unlocked value matches 1 run item replace entity @s enderchest.23 with minecraft:magenta_dye[custom_model_data=1000053,custom_name='{"text":"\\uE553","italic":false}',custom_data={setAct5c:1b,adminMenu:1b}]
+execute if score #d5a3Unlocked value matches 1 run item replace entity @s enderchest.23 with minecraft:magenta_dye[item_model="gp/map_preview/deep_dive_3",custom_name='{"text":"\\uE553","italic":false}',custom_data={setAct5c:1b,adminMenu:1b}]
 execute unless score #d5a3Unlocked value matches 1 run item replace entity @s enderchest.23 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct5c:1b,adminMenu:1b}]
 
 #dream 3
-execute if score #d3a1Unlocked value matches 1 run item replace entity @s enderchest.6 with minecraft:magenta_dye[custom_model_data=1000031,custom_name='{"text":"\\uE531","italic":false}',custom_data={setAct3a:1b,adminMenu:1b}]
+execute if score #d3a1Unlocked value matches 1 run item replace entity @s enderchest.6 with minecraft:magenta_dye[item_model="gp/map_preview/shattered_city_1",custom_name='{"text":"\\uE531","italic":false}',custom_data={setAct3a:1b,adminMenu:1b}]
 execute unless score #d3a1Unlocked value matches 1 run item replace entity @s enderchest.6 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct3a:1b,adminMenu:1b}]
-execute if score #d3a2Unlocked value matches 1 run item replace entity @s enderchest.15 with minecraft:magenta_dye[custom_model_data=1000032,custom_name='{"text":"\\uE532","italic":false}',custom_data={setAct3b:1b,adminMenu:1b}]
+execute if score #d3a2Unlocked value matches 1 run item replace entity @s enderchest.15 with minecraft:magenta_dye[item_model="gp/map_preview/shattered_city_2",custom_name='{"text":"\\uE532","italic":false}',custom_data={setAct3b:1b,adminMenu:1b}]
 execute unless score #d3a2Unlocked value matches 1 run item replace entity @s enderchest.15 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct3b:1b,adminMenu:1b}]
-execute if score #d3a3Unlocked value matches 1 run item replace entity @s enderchest.24 with minecraft:magenta_dye[custom_model_data=1000033,custom_name='{"text":"\\uE533","italic":false}',custom_data={setAct3c:1b,adminMenu:1b}]
+execute if score #d3a3Unlocked value matches 1 run item replace entity @s enderchest.24 with minecraft:magenta_dye[item_model="gp/map_preview/shattered_city_3",custom_name='{"text":"\\uE533","italic":false}',custom_data={setAct3c:1b,adminMenu:1b}]
 execute unless score #d3a3Unlocked value matches 1 run item replace entity @s enderchest.24 with minecraft:magenta_dye[custom_name='{"translate":"gp.admin.locked","color":"gray","bold":true,"italic":false}',custom_data={setAct3c:1b,adminMenu:1b}]
 
 #empty column

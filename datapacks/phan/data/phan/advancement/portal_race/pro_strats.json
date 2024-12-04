@@ -9,7 +9,7 @@
         "icon": {
             "id": "minecraft:cyan_dye",
             "components": {
-                "minecraft:custom_model_data":1111111
+                "item_model":"gp/item_entity/red_rocket"
             }
         },
         "frame": "task",

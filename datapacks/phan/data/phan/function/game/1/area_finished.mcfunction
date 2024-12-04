@@ -36,7 +36,7 @@ spectate @e[limit=1,type=armor_stand,tag=camera,tag=setup] @s
 scoreboard players set @s spectatingObject 2
 
 #summon soul
-execute at @e[limit=1,sort=nearest,tag=portalCore,type=marker] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"custom_model_data":1111127}}}]}
+execute at @e[limit=1,sort=nearest,tag=portalCore,type=marker] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/soul"}}}]}
 scoreboard players operation @e[tag=setup2] playerID = @s playerID
 
 #camera and soul are temporary

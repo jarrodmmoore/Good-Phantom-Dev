@@ -17,12 +17,12 @@ scoreboard players operation @s startGrid = #editPitch value
 #apply skill level
 scoreboard players operation @s botSkill = #editArg3 value
 #put the proper head on our head depending on skill
-execute unless score @s botSkill matches 2..6 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111115]
-execute if score @s botSkill matches 2 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111116]
-execute if score @s botSkill matches 3 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111117]
-execute if score @s botSkill matches 4 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111118]
-execute if score @s botSkill matches 5 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111119]
-execute if score @s botSkill matches 6 run item replace entity @s armor.head with light_blue_wool[custom_model_data=1111120]
+execute unless score @s botSkill matches 2..6 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_1"]
+execute if score @s botSkill matches 2 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_2"]
+execute if score @s botSkill matches 3 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_3"]
+execute if score @s botSkill matches 4 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_4"]
+execute if score @s botSkill matches 5 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_5"]
+execute if score @s botSkill matches 6 run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_ai_6"]
 
 #give us a random spread bias
 execute store result score @s botBiasX run random value 0..10
