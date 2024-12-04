@@ -129,8 +129,8 @@ execute if score @s spectatingObject matches 1.. run scoreboard players remove @
 execute if score @s spectateDelay matches 1.. run scoreboard players remove @s spectateDelay 1
 
 #join proper team (so spectator nametags don't show up when we don't want them to)
-execute if entity @s[gamemode=!spectator,team=!player] run team join player @s
-execute if entity @s[gamemode=spectator,team=!observer] run team join observer @s
+execute if entity @s[tag=doneWithIntro,gamemode=!spectator,team=!player] run team join player @s
+execute if entity @s[tag=doneWithIntro,gamemode=spectator,team=!observer] run team join observer @s
 #(i'm just gonna handle all this right here so we don't have to worry about managing it in 100 different functions)
 
 #node editor

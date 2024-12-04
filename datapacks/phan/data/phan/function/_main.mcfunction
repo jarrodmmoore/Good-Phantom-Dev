@@ -55,7 +55,7 @@ function phan:items/_tick
 #execute as @a[tag=debugScores,limit=1] run function phan:utility/debug_scores
 
 #v1.21.4 -- fix item models
-execute if score #5Hz value matches 1 as @a[limit=1,gamemode=creative] at @s as @e[type=item_display,tag=node,tag=arrowSign,tag=!newModelFormat,distance=..4] run function phan:utility/repair_old_arrow_sign_models
+#execute if score #5Hz value matches 1 as @a[limit=1] at @s as @e[type=item_display,tag=node,tag=arrowSign,tag=!newModelFormat] run function phan:utility/repair_old_arrow_sign_models
 
 #=====
 #CLEAN-UP

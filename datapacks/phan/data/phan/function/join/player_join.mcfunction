@@ -31,7 +31,7 @@ stopsound @s
 tag @s remove practiceCourse
 tag @s remove playing
 tag @s add noInventory
-team join player @s
+team join observer @s
 xp set @s 0 levels
 xp set @s 0 points
 effect clear @s
