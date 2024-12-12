@@ -4,4 +4,4 @@ execute if score #gameState value matches 4 run scoreboard players add #test val
 execute if score #test value matches 0 run return 0
 #=====
 
-execute as @e[type=marker,tag=waypoint] unless score @s AIBC_id matches -2147483648..2147483647 run function phan:editor/restore_using_nbt/waypoint_standard
+execute as @e[type=marker,tag=AIBC] unless score @s AIBC_id matches -2147483648..2147483647 run function phan:editor/restore_using_nbt/waypoint_standard

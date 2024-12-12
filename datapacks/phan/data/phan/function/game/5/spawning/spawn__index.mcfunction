@@ -4,6 +4,10 @@
 #clean up tag from previous failure
 tag @s[tag=spawn_failed] remove spawn_failed
 
+#don't have an editNode score? load it from our NBT backup
+execute unless score @s editNode matches -2147483648..2147483647 run function phan:editor/restore_using_nbt/node_standard
+#=====
+
 
 #spawn a game object or set something up based on what we represent
 

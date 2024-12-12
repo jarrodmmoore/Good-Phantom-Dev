@@ -20,8 +20,8 @@ function phan:common/server_host_function_error_check
 scoreboard players set #requireAdmin value 0
 execute if score #adminMode value matches 1.. if entity @a[tag=admin,scores={idleTime=..3600}] run scoreboard players set #requireAdmin value 1
 
-#restore nbt saved on nodes
-function phan:editor/restore_using_nbt/_tick
+#clear scoreboard cache when requested
+execute if score #clearCacheProgress value matches 1.. run function phan:editor/clear_scoreboard_cache
 
 #get ready to count players in editor mode
 scoreboard players set #playersInEditMode value 0
