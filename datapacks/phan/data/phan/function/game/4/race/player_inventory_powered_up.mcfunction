@@ -4,8 +4,8 @@ tag @s[tag=hasSlot0b] remove hasSlot0b
 execute if items entity @s hotbar.0 light_blue_dye[custom_data~{slot0r:1b,nocooldown:1b}] run tag @s add hasSlot0a
 execute if items entity @s hotbar.0 light_blue_dye[custom_data~{slot0r:1b,cooldown:1b}] run tag @s add hasSlot0b
 clear @s[gamemode=!creative,tag=!hasSlot0a,tag=!hasSlot0b] light_blue_dye[custom_data~{slot0r:1b}]
-execute if entity @s[tag=!hasSlot0a,tag=!noInventory] if entity @s[scores={energy=3..,fallFlying=..0,inputCooldownD=..0}] run item replace entity @s hotbar.0 with minecraft:light_blue_dye[item_model="gp/item/boost_item_red",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"red","italic":false}]',custom_data={slot0r:1b,rmb:1b,nocooldown:1b}] 1
-execute if entity @s[tag=!hasSlot0b,tag=!noInventory] unless entity @s[scores={energy=3..,fallFlying=..0,inputCooldownD=..0}] run item replace entity @s hotbar.0 with minecraft:light_blue_dye[item_model="gp/item/boost_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"gray","italic":false}]',custom_data={slot0r:1b,rmb:1b,cooldown:1b}] 1
+execute if entity @s[tag=!hasSlot0a,tag=!noInventory] if entity @s[scores={energy=3..,inputCooldownD=..0}] run item replace entity @s hotbar.0 with minecraft:light_blue_dye[item_model="gp/item/boost_item_red",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"red","italic":false}]',custom_data={slot0r:1b,rmb:1b,nocooldown:1b}] 1
+execute if entity @s[tag=!hasSlot0b,tag=!noInventory] unless entity @s[scores={energy=3..,inputCooldownD=..0}] run item replace entity @s hotbar.0 with minecraft:light_blue_dye[item_model="gp/item/boost_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"gray","italic":false}]',custom_data={slot0r:1b,rmb:1b,cooldown:1b}] 1
 
 #SLOT 8 - respawn
 tag @s[tag=hasSlot8a] remove hasSlot8a

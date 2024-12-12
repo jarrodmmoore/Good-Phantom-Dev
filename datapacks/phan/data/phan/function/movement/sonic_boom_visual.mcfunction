@@ -27,8 +27,9 @@ execute if score @s moveDirectionSaved matches 6 if score #rot_yaw value matches
 execute if score @s moveDirectionSaved matches 7 if score #rot_yaw value matches 25..155 run scoreboard players set #test value 1
 execute if score @s moveDirectionSaved matches 8 if score #rot_yaw value matches 92..242 run scoreboard players set #test value 1
 
-#in water: show visual at different location
+#in water or gliding: show visual at different location
 execute if score #test value matches 1 if block ~ ~1.5 ~ water run scoreboard players set #test value 2
+execute if score #test value matches 0..1 if score @s fallFlying matches 1.. run scoreboard players set #test value 2
 execute if score #test value matches 2 positioned ^ ^.35 ^4 run particle sonic_boom ~ ~ ~ 0 0 0 1 1 force @s
 
 #test passed: play the sonic boom in the exact direction we're facing

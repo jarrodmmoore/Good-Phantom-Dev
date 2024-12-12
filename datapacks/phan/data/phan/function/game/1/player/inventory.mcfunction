@@ -10,8 +10,8 @@ tag @s[tag=hasSlot1b] remove hasSlot1b
 execute if items entity @s hotbar.1 light_blue_dye[custom_data~{slot1:1b,nocooldown:1b}] run tag @s add hasSlot1a
 execute if items entity @s hotbar.1 light_blue_dye[custom_data~{slot1:1b,cooldown:1b}] run tag @s add hasSlot1b
 clear @s[gamemode=!creative,tag=!hasSlot1a,tag=!hasSlot1b] light_blue_dye[custom_data~{slot1:1b}]
-execute if entity @s[tag=!hasSlot1a,tag=!noInventory] if entity @s[scores={energy=3..,fallFlying=..0,inputCooldownD=..0}] run item replace entity @s hotbar.1 with minecraft:light_blue_dye[item_model="gp/item/boost_item",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"aqua","italic":false}]',custom_data={slot1:1b,rmb:1b,nocooldown:1b}] 1
-execute if entity @s[tag=!hasSlot1b,tag=!noInventory] unless entity @s[scores={energy=3..,fallFlying=..0,inputCooldownD=..0}] run item replace entity @s hotbar.1 with minecraft:light_blue_dye[item_model="gp/item/boost_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"gray","italic":false}]',custom_data={slot1:1b,rmb:1b,cooldown:1b}] 1
+execute if entity @s[tag=!hasSlot1a,tag=!noInventory] if entity @s[scores={energy=3..,inputCooldownD=..0}] run item replace entity @s hotbar.1 with minecraft:light_blue_dye[item_model="gp/item/boost_item",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"aqua","italic":false}]',custom_data={slot1:1b,rmb:1b,nocooldown:1b}] 1
+execute if entity @s[tag=!hasSlot1b,tag=!noInventory] unless entity @s[scores={energy=3..,inputCooldownD=..0}] run item replace entity @s hotbar.1 with minecraft:light_blue_dye[item_model="gp/item/boost_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.boost","color":"gray","italic":false}]',custom_data={slot1:1b,rmb:1b,cooldown:1b}] 1
 
 #SLOT 2 - projectile
 tag @s[tag=hasSlot2a] remove hasSlot2a

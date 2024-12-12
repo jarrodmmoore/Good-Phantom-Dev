@@ -5,8 +5,8 @@ execute if entity @s[scores={fallFlying=1,airTime=2..}] run scoreboard players s
 #get explosion boost if flying with elytra
 #execute if score #test value matches 1 run effect give @s resistance 1 100 true
 #execute if score #test value matches 1 if entity @s[tag=!ai] at @s rotated ~ 0 run summon creeper ^ ^0.35 ^-0.2 {Fuse:0}
-execute if score #test value matches 1 run scoreboard players set #strength player_motion.api.launch 10000
-execute if score #test value matches 1 run function player_motion:api/launch_looking
+execute if score #test value matches 1 if entity @s[type=player] run scoreboard players set $strength player_motion.api.launch 7500
+execute if score #test value matches 1 if entity @s[type=player] run function player_motion:api/launch_looking
 execute if score #test value matches 1 if entity @s[tag=ai] run function phan:bots/movement/2_gliding/react_to_explosion_boost
 #only human players will summon creeper to get explosion boost. bots will just give themselves velocity directly (y'know, the way it SHOULD work for players. @Mojang)
 
