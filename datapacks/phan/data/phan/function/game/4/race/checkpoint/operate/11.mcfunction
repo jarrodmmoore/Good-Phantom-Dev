@@ -2,7 +2,7 @@
 function phan:game/4/race/checkpoint/store_checkpoint_data
 
 #hand out positions if we're a posCalc point
-execute if score #check11relevant value matches 1 if entity @s[tag=posCalc] as @e[tag=playing,scores={checkFake=10},sort=nearest] if score @s lap = #lapRecursion value run function phan:game/4/race/checkpoint/player_get_position
+execute if score #check11relevant value matches 1 if entity @s[tag=posCalc] as @e[type=interaction,tag=playerPosMarker,scores={checkFake=10},sort=nearest] if score @s lap = #lapRecursion value run function phan:game/4/race/checkpoint/player_marker_get_position
 
 #if we're an optional checkpoint, give check value to players for free regardless if they're in our trigger area
 execute unless score #optionalCheckpoint value matches 0 as @a[tag=playing,scores={check=10}] run function phan:game/4/race/checkpoint/operate/checkpoint_add_1

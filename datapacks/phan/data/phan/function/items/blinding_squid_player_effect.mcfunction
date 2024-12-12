@@ -14,7 +14,7 @@ tag @s remove squidEffect
 #execute if score @s squidBlindTime matches ..-30 run effect clear @s blindness
 
 #darkness effect
-execute if score @s squidBlindTime matches 0.. unless score @s shieldTime matches 1.. run effect give @s darkness 2 10 false
+execute if score @s squidBlindTime matches 20.. unless score @s shieldTime matches 1.. run effect give @s darkness 2 10 false
 execute if score @s squidBlindTime matches 20.. if score @s shieldTime matches 1.. run effect give @s darkness 2 14 false
 execute if score @s squidBlindTime matches ..-30 run effect clear @s darkness
 

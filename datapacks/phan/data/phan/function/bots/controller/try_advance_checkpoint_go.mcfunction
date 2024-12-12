@@ -1,3 +1,7 @@
+#don't warp ahead right now if a human player is watching the checkpoint we want to go to
+execute if function phan:bots/controller/check_if_player_watching_checkpoint run return 0
+#=====
+
 #reset since checkpoint
 scoreboard players set @s botTimeSinceCP 0
 
