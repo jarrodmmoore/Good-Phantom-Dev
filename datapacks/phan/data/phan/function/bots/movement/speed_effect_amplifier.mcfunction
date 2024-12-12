@@ -12,7 +12,7 @@ execute if score @s botEffectSpeedPad matches 1.. run scoreboard players set #mu
 execute if score @s botEffectBoost matches 1.. run scoreboard players set #multiplier value 175
 #equivalent of speed 5
 #execute if score @s botEffectSpeedPad2 matches 1.. run scoreboard players set #multiplier value 199
-execute if score @s botEffectSpeedPad2 matches 1.. run scoreboard players set #multiplier value 205
+execute if score @s botEffectSpeedPad2 matches 1.. run scoreboard players set #multiplier value 210
 
 #don't do math for no reason
 execute if score #multiplier value matches 100 run return 0
