@@ -12,7 +12,7 @@ particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
 #clear squid blindness and invalidate any squids that were assigned to us
 execute as @e[type=squid,tag=blindingSquidEntity] if score @s playerID = #checkID value run tag @s remove tickObject
 scoreboard players set @s squidBlindTime 0
-effect clear @s blindness
+effect clear @s darkness
 
 #figure out how long everyone else has to finish
 function phan:game/4/race/player_finish_set_race_end_time

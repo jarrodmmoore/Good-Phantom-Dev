@@ -40,9 +40,9 @@ execute if score #area0SpawnB value matches 0 run function phan:game/1/spawning/
 execute if score #area0SpawnC value matches 0 run function phan:game/1/spawning/reset/reset0c
 
 #nodes respawn their stuff when told to
-execute if score #5Hz value matches 0 if score #vAct value matches 1 as @e[type=marker,tag=nodeArea1] at @s run function phan:game/4/spawning/check_area_generic_a
-execute if score #5Hz value matches 1 if score #vAct value matches 2 as @e[type=marker,tag=nodeArea2] at @s run function phan:game/4/spawning/check_area_generic_b
-execute if score #5Hz value matches 2 if score #vAct value matches 3 as @e[type=marker,tag=nodeArea3] at @s run function phan:game/4/spawning/check_area_generic_c
+execute if score #5Hz value matches 0 if score #vAct value matches 1 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/4/spawning/check_area_generic_a
+execute if score #5Hz value matches 1 if score #vAct value matches 2 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea2] at @s run function phan:game/4/spawning/check_area_generic_b
+execute if score #5Hz value matches 2 if score #vAct value matches 3 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea3] at @s run function phan:game/4/spawning/check_area_generic_c
 
 #interpolation effect on player soul after images
 execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp

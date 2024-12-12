@@ -250,6 +250,7 @@ scoreboard objectives add tip trigger
 scoreboard objectives add hurryUp trigger
 scoreboard objectives add joinGame trigger
 scoreboard objectives add navCompass trigger
+scoreboard objectives add toggleAutoReset trigger
 #inputs
 scoreboard objectives add dropSword minecraft.dropped:minecraft.diamond_sword
 scoreboard objectives add dropLightBlue minecraft.dropped:minecraft.light_blue_dye

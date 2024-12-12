@@ -48,7 +48,7 @@ scoreboard players reset @s[scores={attackTime=..0,attackerID=1..}] attackerID
 #BEHAVIOR
 
 #rubber-banding with low level bots
-execute if score #5Hz value matches 0 if score @s botSkill matches ..3 run function phan:bots/rubber_band/_index
+execute if score #5Hz value matches 0 run function phan:bots/rubber_band/_index
 
 #battle mode: look for important targets
 execute if score #vGameType value matches 2 run function phan:bots/battle/_battle_logic

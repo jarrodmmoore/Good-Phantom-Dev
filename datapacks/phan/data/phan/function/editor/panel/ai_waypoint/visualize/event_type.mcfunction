@@ -76,6 +76,14 @@ execute if score @s AIBC_event matches 27 run summon area_effect_cloud ~ ~ ~ {Du
 execute if score @s AIBC_event matches 28 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"have mine? take alt route","color":"yellow","underlined":true}]'}
 #29 = take alt route if not occupied by baddie
 execute if score @s AIBC_event matches 29 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if not occupied by baddie","color":"yellow","underlined":true}]'}
+#30 = take alt route if before halfway done lap
+execute if score @s AIBC_event matches 30 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if before halfway done lap","color":"yellow","underlined":true}]'}
+#31 = take alt route if after halfway done lap
+execute if score @s AIBC_event matches 31 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if after halfway done lap","color":"yellow","underlined":true}]'}
+#32 = take alt route if before halfway done race
+execute if score @s AIBC_event matches 32 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if before halfway done race","color":"yellow","underlined":true}]'}
+#33 = take alt route if after halfway done race
+execute if score @s AIBC_event matches 33 run summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"take alt route if after halfway done race","color":"yellow","underlined":true}]'}
 
 #=====
 #-1 = enter/cancel improv flight

@@ -49,6 +49,9 @@ scoreboard players set #hudMode value 1
 #manage item entities
 function phan:items/reset_valid_objective
 
+#clear stuff from scoreboard
+function phan:editor/clear_scoreboard_cache_start
+
 #time and weather
 time set 18000
 #execute if score #dreamsCompleted value matches ..0 run weather thunder

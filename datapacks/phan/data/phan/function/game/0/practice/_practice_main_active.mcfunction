@@ -14,9 +14,9 @@ execute if score #area5SpawnB value matches 0 run function phan:game/1/spawning/
 execute if score #area0SpawnC value matches 0 run function phan:game/1/spawning/reset/reset0c
 
 #nodes respawn their stuff when told to
-execute if score #5Hz value matches 0 as @e[type=marker,tag=nodeArea1] at @s run function phan:game/1/spawning/check_area_generic_a
-execute if score #5Hz value matches 1 as @e[type=marker,tag=nodeArea2] at @s run function phan:game/1/spawning/check_area_generic_b
-execute if score #5Hz value matches 2 as @e[type=marker,tag=nodeArea3] at @s run function phan:game/1/spawning/check_area_generic_c
+execute if score #5Hz value matches 0 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/1/spawning/check_area_generic_a
+execute if score #5Hz value matches 1 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea2] at @s run function phan:game/1/spawning/check_area_generic_b
+execute if score #5Hz value matches 2 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea3] at @s run function phan:game/1/spawning/check_area_generic_c
 
 #count how long it takes to open the portal
 function phan:game/0/practice/time_to_portal

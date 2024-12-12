@@ -13,6 +13,9 @@ scoreboard players set #botsEnabled value 0
 #manage item entities
 function phan:items/reset_valid_objective
 
+#clear stuff from scoreboard
+function phan:editor/clear_scoreboard_cache_start
+
 #stop music for a second
 scoreboard players set #bgm value 0
 scoreboard players set @a musicTrack 0

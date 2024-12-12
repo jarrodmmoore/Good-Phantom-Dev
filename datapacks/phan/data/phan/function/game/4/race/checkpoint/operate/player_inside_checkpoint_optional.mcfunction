@@ -21,6 +21,11 @@ execute if score #checkWarn value matches 1.. if score @s check < #desiredValue 
 #respawn the player if they went backwards AND we are a "checkWrongWay" checkpoint
 execute if score #checkWrongWay value matches 1.. if score @s checkFake > #checkpointNum value run scoreboard players set #doRespawn value 1
 
+
+#players with noAutoReset enabled will see warning instead of getting instantly reset
+execute if score #doRespawn value matches 1.. if entity @s[tag=noAutoReset] run return run function phan:game/4/race/checkpoint/warn_player_missed_checkpoint
+#=====
+
 #do a respawn if we requested one
 execute if score #doRespawn value matches 1.. if score @s[type=player] inputCooldownB matches ..0 unless entity @s[tag=vsHomeStretch] run function phan:game/4/race/respawn
 execute if score #doRespawn value matches 1.. if entity @s[tag=ai,tag=!vsHomeStretch] run tag @s add botFindMarker

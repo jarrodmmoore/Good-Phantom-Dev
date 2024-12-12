@@ -1,0 +1,1 @@
+execute if score #allowClearCache value matches 1 run scoreboard players set #clearCacheProgress value 1

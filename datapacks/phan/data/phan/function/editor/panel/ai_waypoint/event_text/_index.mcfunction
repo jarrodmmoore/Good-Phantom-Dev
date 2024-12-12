@@ -59,6 +59,14 @@ execute if score @s AIBC_event matches 27 run return run function phan:editor/pa
 execute if score @s AIBC_event matches 28 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"have mine? take alt route"}
 #29 = take alt route if not occupied by baddie
 execute if score @s AIBC_event matches 29 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if not occupied by baddie"}
+#30 = take alt route if before halfway done lap
+execute if score @s AIBC_event matches 30 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if before halfway done lap"}
+#31 = take alt route if after halfway done lap
+execute if score @s AIBC_event matches 31 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if after halfway done lap"}
+#32 = take alt route if before halfway done race
+execute if score @s AIBC_event matches 32 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if before halfway done race"}
+#33 = take alt route if after halfway done race
+execute if score @s AIBC_event matches 33 run return run function phan:editor/panel/ai_waypoint/event_text/generic_alt_route {text:"take alt route if after halfway done race"}
 
 #tags:
 

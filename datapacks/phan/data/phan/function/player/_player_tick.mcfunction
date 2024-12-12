@@ -30,20 +30,14 @@ execute if score @s actionbarDelay matches 1.. run scoreboard players remove @s 
 execute if score @s strengthTime matches 1.. run function phan:player/player_strength_power
 execute if score @s bodyHitbox matches 1.. run function phan:player/player_body_hitbox
 
-#music toggle trigger
-scoreboard players enable @s musicToggle
-execute if score @s musicToggle matches 1.. run function phan:bgm/music_toggle
-
-#nav compass trigger
-scoreboard players enable @s navCompass
-execute if score @s navCompass matches 1.. run function phan:player/toggle_nav_compass
-
-#show tip trigger
-scoreboard players enable @s tip
-execute if score @s tip matches 1.. run function phan:game/0/tip_show
-
 #count down hudFlashTime
 execute if score @s hudFlashTime matches 1.. run scoreboard players remove @s hudFlashTime 1
+
+#=====
+# TRIGGER COMMANDS
+
+#no need to do this more than 5 times per second in my view, so let's take it easy
+execute if score #5Hz value matches 2 run function phan:player/listen_for_triggers
 
 #=====
 # ITEM STUFF

@@ -45,9 +45,9 @@ execute if score #area4SpawnC value matches 0 run function phan:game/1/spawning/
 execute if score #area5SpawnC value matches 0 run function phan:game/1/spawning/reset/reset5c
 
 #nodes respawn their stuff when told to
-execute if score #5Hz value matches 0 if entity @a[tag=playing,scores={pCurrentArea=1}] as @e[type=marker,tag=nodeArea1] at @s run function phan:game/1/spawning/check_area_generic_a
-execute if score #5Hz value matches 1 if entity @a[tag=playing,scores={pCurrentArea=2}] as @e[type=marker,tag=nodeArea2] at @s run function phan:game/1/spawning/check_area_generic_b
-execute if score #5Hz value matches 2 if entity @a[tag=playing,scores={pCurrentArea=3}] as @e[type=marker,tag=nodeArea3] at @s run function phan:game/1/spawning/check_area_generic_c
+execute if score #5Hz value matches 0 if entity @a[tag=playing,scores={pCurrentArea=1}] unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/1/spawning/check_area_generic_a
+execute if score #5Hz value matches 1 if entity @a[tag=playing,scores={pCurrentArea=2}] unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea2] at @s run function phan:game/1/spawning/check_area_generic_b
+execute if score #5Hz value matches 2 if entity @a[tag=playing,scores={pCurrentArea=3}] unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea3] at @s run function phan:game/1/spawning/check_area_generic_c
 
 #load areas and reset zones
 execute if entity @a[tag=playing,scores={pCurrentArea=1}] as @e[type=marker,tag=volumeTrigger,tag=nodeArea1] at @s run function phan:game/1/objects/volume_trigger_a
