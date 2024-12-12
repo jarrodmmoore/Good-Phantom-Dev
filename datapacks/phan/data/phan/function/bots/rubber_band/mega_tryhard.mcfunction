@@ -5,10 +5,8 @@ scoreboard players set @s botRubberbanding 0
 execute if score #vGameType value matches 2 run return 0
 #=====
 
-#don't speed up in 1st, ever
-execute if score @s racePosDisplay matches ..1 run return 0
-#or within 1.5 sec of 1st
-execute if score @s timeBehind1st matches ..30 run return 0
+#don't speed up in 1st if we're really far ahead
+execute if score @s racePosDisplay matches ..1 if score #1stPlaceLeadTime value matches 60.. run return 0
 #=====
 
 #we need to know what position the best ranked player is
