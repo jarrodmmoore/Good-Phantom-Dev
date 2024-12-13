@@ -125,6 +125,7 @@ scoreboard players set @s pPenaltyTime 0
 scoreboard players set @s pPenaltyPoints 0
 scoreboard players set @s shootAware 0
 scoreboard players set @s spawnInvulnerability 0
+scoreboard players set @s autoJumpPadCooldown 0
 
 #set spawnpoint
 spawnpoint @s 198 -6 118

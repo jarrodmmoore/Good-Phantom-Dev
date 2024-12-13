@@ -148,7 +148,7 @@ execute if score @s boostBuffer matches 1.. run function phan:movement/boost_buf
 
 #sadly there's only so much we can do to circumvent this. players on the other side of the pond of the server might still get boned by jump pads ;(
 
-#speed
+#speed pads
 scoreboard players operation @s speedBoost2 = @s speedBoost
 scoreboard players set @s speedBoost 0
 execute at @s if block ~ ~-.2 ~ #phan:speed_normal run function phan:movement/speed_pad
@@ -157,21 +157,15 @@ execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1
 execute at @s if block ~ ~-.2 ~ #phan:speed_high run function phan:movement/speed_pad_super
 execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:speed_high run function phan:movement/speed_pad_super
 execute at @s if score @s stoppedTime matches 0..2 rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.2 ~ #phan:speed_high run function phan:movement/speed_pad_super
-#jump
-execute at @s if block ~ ~-1 ~ #phan:jump_short run function phan:movement/jump_pad_short
-execute at @s if block ~ ~-.2 ~ #phan:jump_short run function phan:movement/jump_pad_short
-execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_short run function phan:movement/jump_pad_short
-execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_short run function phan:movement/jump_pad_short
-execute at @s if block ~ ~1 ~ #phan:jump_high run function phan:movement/jump_pad_high
-execute at @s if block ~ ~-.2 ~ #phan:jump_high run function phan:movement/jump_pad_high
-execute at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.9 ~ #phan:jump_high run function phan:movement/jump_pad_high
-execute at @s rotated ~ 0 positioned ^ ^ ^1.5 if block ~ ~-.9 ~ #phan:jump_high run function phan:movement/jump_pad_high
-#slightly higher jump boost
+#jump pads
+execute if entity @s[tag=!noAutoJumpPads] run function phan:movement/detect_auto_jump_pad
+execute if entity @s[tag=noAutoJumpPads] run function phan:movement/detect_manual_jump_pad
+#slightly higher jump boost as a base
 effect give @s jump_boost infinite 0 true
-#regain energy
+#energy refill pad
 execute if score #10Hz value matches 0 at @s if block ~ ~-.2 ~ #phan:energy_restore run function phan:movement/regain_energy
 execute if score #10Hz value matches 0 at @s unless block ~ ~-.2 ~ #phan:energy_restore at @s rotated ~ 0 positioned ^ ^ ^.75 if block ~ ~-.2 ~ #phan:energy_restore run function phan:movement/regain_energy
-#strength
+#strength pad
 scoreboard players set @s strengthBoost 0
 execute at @s if block ~ ~-1 ~ #phan:strength_powerup run function phan:movement/strength_pad
 scoreboard players operation @s strengthBoost2 = @s strengthBoost

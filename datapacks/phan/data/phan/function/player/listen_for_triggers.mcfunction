@@ -13,3 +13,7 @@ execute if score @s tip matches 1.. run function phan:game/0/tip_show
 #checkpoint auto reset toggle trigger
 scoreboard players enable @s toggleAutoReset
 execute if score @s toggleAutoReset matches 1.. run function phan:player/toggle_auto_reset
+
+#auto jump pad toggle
+scoreboard players enable @s toggleAutoJumpPads
+execute if score @s toggleAutoJumpPads matches 1.. run function phan:player/toggle_auto_jump_pads

@@ -228,6 +228,7 @@ scoreboard objectives add showEnemyCount dummy
 scoreboard objectives add fails dummy
 scoreboard objectives add shootAware dummy
 scoreboard objectives add enemyID dummy
+scoreboard objectives add autoJumpPadCooldown dummy
 #enemies
 scoreboard objectives add enemyHP dummy
 scoreboard objectives add enemyMaxHP dummy
@@ -251,6 +252,7 @@ scoreboard objectives add hurryUp trigger
 scoreboard objectives add joinGame trigger
 scoreboard objectives add navCompass trigger
 scoreboard objectives add toggleAutoReset trigger
+scoreboard objectives add toggleAutoJumpPads trigger
 #inputs
 scoreboard objectives add dropSword minecraft.dropped:minecraft.diamond_sword
 scoreboard objectives add dropLightBlue minecraft.dropped:minecraft.light_blue_dye
