@@ -1,6 +1,7 @@
 #> player_motion:internal/launch/main
 # Launches players in the input direction
 
+
 execute \
     store result storage player_motion:math motion[0] double 0.0001 \
     store result storage player_motion:math motion_x double 0.0001 run \

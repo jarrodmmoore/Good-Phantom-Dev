@@ -152,6 +152,9 @@ execute if entity @s[tag=draw] run say @s has tag "draw" (you're gonna cause tro
 execute if entity @s[tag=simplify_clouds] run say removed simplify_clouds tag from @s
 tag @s[tag=simplify_clouds] remove simplify_clouds
 
+#warn players if command blocks are not enabled on this server
+function phan:utility/verify_command_blocks_enabled_1
+
 #attributes and stuff!
 function phan:movement/reset_speed_self
 

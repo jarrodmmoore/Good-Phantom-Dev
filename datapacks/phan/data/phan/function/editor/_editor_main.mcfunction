@@ -13,8 +13,8 @@ execute as @e[tag=nodeSpawn,type=vex] at @s run function phan:editor/spawn/_inde
 execute as @e[tag=waypointSpawn,type=vex] at @s run function phan:editor/spawn/_index_waypoint
 
 #save data on nodes as nbt
-execute if score #playersInEditMode value matches ..1 run function phan:editor/restore_using_nbt/_tick
 execute if score #playersInEditMode value matches ..1 run function phan:editor/save_nbt/_tick
+execute if score #playersInEditMode value matches ..1 run function phan:editor/restore_using_nbt/_tick
 
 #=====
 #AI waypoint stuff

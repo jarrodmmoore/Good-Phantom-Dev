@@ -27,6 +27,8 @@ scoreboard objectives add player_motion.internal.motion.y dummy
 scoreboard objectives add player_motion.internal.motion.z dummy
 scoreboard objectives add player_motion.internal.gamemode dummy
 
+
+
 # FORCELOAD
 forceload add 0 0
 
