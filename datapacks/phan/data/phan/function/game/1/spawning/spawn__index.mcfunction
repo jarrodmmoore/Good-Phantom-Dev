@@ -3,6 +3,8 @@ tag @s[tag=spawn_failed] remove spawn_failed
 
 #don't have an editNode score? load it from our NBT backup
 execute unless score @s editNode matches -2147483648..2147483647 run function phan:editor/restore_using_nbt/node_standard
+#still no data? exit out
+execute unless score @s editNode matches -2147483648..2147483647 run return 0
 #=====
 
 

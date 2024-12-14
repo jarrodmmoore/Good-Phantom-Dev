@@ -1,5 +1,10 @@
-#generic data
+#generic data part 1
 execute store result score @s editNode run data get entity @s data.NodeData[0] 1
+
+#quit out if bad data
+execute if score @s editNode matches 0 run return run scoreboard players reset @s editNode
+
+#generic data part 2
 execute store result score @s editLoadArea run data get entity @s data.NodeData[1] 1
 execute store result score @s editArea run data get entity @s data.NodeData[2] 1
 execute store result score @s editYaw run data get entity @s data.NodeData[3] 1
