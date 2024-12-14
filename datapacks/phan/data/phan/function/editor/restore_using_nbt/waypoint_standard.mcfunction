@@ -1,5 +1,10 @@
-#generic data
+#generic data pt 1
 execute store result score @s AIBC_id run data get entity @s data.WaypointData[0] 1
+
+#quit out if bad data (minecraft does this sometimes...)
+execute if score @s AIBC_id matches 0 run return run scoreboard players reset @s AIBC_id
+
+#generic data pt 2
 execute store result score @s AIBC_dir1 run data get entity @s data.WaypointData[1] 1
 execute store result score @s AIBC_dir2 run data get entity @s data.WaypointData[2] 1
 execute store result score @s AIBC_dir3 run data get entity @s data.WaypointData[3] 1
