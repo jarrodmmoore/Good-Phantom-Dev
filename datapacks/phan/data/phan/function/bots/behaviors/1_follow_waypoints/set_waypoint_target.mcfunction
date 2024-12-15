@@ -2,6 +2,7 @@
 
 #not loaded? kick out of function
 execute at @s unless loaded ~ ~ ~ run return 0
+execute unless score @s AIBC_id matches -2147483648..2147483647 run return 0
 #=====
 
 #get id

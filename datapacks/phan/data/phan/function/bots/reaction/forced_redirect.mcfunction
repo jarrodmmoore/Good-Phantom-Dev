@@ -1,3 +1,6 @@
+#quit out if bad data
+execute if entity @s[type=marker] unless score @s AIBC_id matches -2147483648..2147483647 run return 0
+
 #quit out immediately if we're already targeting this thing
 scoreboard players operation #checkID value = @s AIBC_id
 execute as @e[tag=botSelf,type=zombie,distance=..1] if function phan:bots/reaction/forced_redirect_check_if_redundant run return 0
