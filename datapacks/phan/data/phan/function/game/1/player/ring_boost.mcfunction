@@ -3,7 +3,7 @@ scoreboard players set #test value 0
 execute if entity @s[scores={fallFlying=1,airTime=2..}] run scoreboard players set #test value 1
 
 #get explosion boost if flying with elytra
-execute if score #test value matches 1 if entity @s[tag=!ai] run effect give @s resistance 1 100 true
+execute if score #test value matches 1 run effect give @s resistance 1 100 true
 execute if score #test value matches 1 if entity @s[tag=!ai] at @s rotated ~ 0 run summon creeper ^ ^0.35 ^-0.2 {Fuse:0}
 #execute if score #test value matches 1 if entity @s[type=player] run scoreboard players set $strength player_motion.api.launch 7500
 #execute if score #test value matches 1 if entity @s[type=player] run function player_motion:api/launch_looking

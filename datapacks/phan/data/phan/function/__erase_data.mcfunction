@@ -17,7 +17,7 @@ function phan:admin_player_whitelist
 function phan:game/2/bots/delete_all_bots
 
 #clearing scoreboard cache is now allowed
-scoreboard players set #allowClearCache value 1
+scoreboard players set #allowClearCache value 0
 
 #no sidebar!
 scoreboard objectives setdisplay sidebar
