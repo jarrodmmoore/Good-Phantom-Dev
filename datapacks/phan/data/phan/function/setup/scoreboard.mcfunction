@@ -263,6 +263,10 @@ scoreboard objectives add bufferInput2 dummy
 scoreboard objectives add bufferInput3 dummy
 scoreboard objectives add bufferInput4 dummy
 scoreboard objectives add jump minecraft.custom:minecraft.jump
+#level manager
+scoreboard objectives add levelUID dummy
+scoreboard objectives add levelManagerPage dummy
+scoreboard objectives add levelManagerAct dummy
 #high score storage
 scoreboard objectives add bestScore1 dummy
 scoreboard objectives add bestScore2 dummy
