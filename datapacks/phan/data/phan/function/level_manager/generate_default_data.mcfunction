@@ -115,7 +115,7 @@ $data modify storage phan_dream_$(level_id):pr_act_1 game_type set value 1
 $data modify storage phan_dream_$(level_id):pr_act_1 checkpoints set value 3
 $data modify storage phan_dream_$(level_id):pr_act_1 laps set value 4
 $data modify storage phan_dream_$(level_id):pr_act_1 pearls_needed set value 12
-$data modify storage phan_dream_$(level_id):pr_act_1 time_limit set value 6000
+$data modify storage phan_dream_$(level_id):pr_act_1 time_limit set value 5
 $data modify storage phan_dream_$(level_id):pr_act_1 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):pr_act_1 time_between_checkpoints set value 150
 $data modify storage phan_dream_$(level_id):pr_act_1 bot_checkpoint_data set value [-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]
@@ -138,7 +138,7 @@ $data modify storage phan_dream_$(level_id):pr_act_2 game_type set value 1
 $data modify storage phan_dream_$(level_id):pr_act_2 checkpoints set value 3
 $data modify storage phan_dream_$(level_id):pr_act_2 laps set value 4
 $data modify storage phan_dream_$(level_id):pr_act_2 pearls_needed set value 12
-$data modify storage phan_dream_$(level_id):pr_act_2 time_limit set value 6000
+$data modify storage phan_dream_$(level_id):pr_act_2 time_limit set value 5
 $data modify storage phan_dream_$(level_id):pr_act_2 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):pr_act_2 time_between_checkpoints set value 150
 $data modify storage phan_dream_$(level_id):pr_act_2 bot_checkpoint_data set value [-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]
@@ -161,7 +161,7 @@ $data modify storage phan_dream_$(level_id):pr_act_3 game_type set value 1
 $data modify storage phan_dream_$(level_id):pr_act_3 checkpoints set value 3
 $data modify storage phan_dream_$(level_id):pr_act_3 laps set value 4
 $data modify storage phan_dream_$(level_id):pr_act_3 pearls_needed set value 12
-$data modify storage phan_dream_$(level_id):pr_act_3 time_limit set value 6000
+$data modify storage phan_dream_$(level_id):pr_act_3 time_limit set value 5
 $data modify storage phan_dream_$(level_id):pr_act_3 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):pr_act_3 time_between_checkpoints set value 150
 $data modify storage phan_dream_$(level_id):pr_act_3 bot_checkpoint_data set value [-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]
@@ -184,7 +184,7 @@ $data modify storage phan_dream_$(level_id):pr_act_4 game_type set value 1
 $data modify storage phan_dream_$(level_id):pr_act_4 checkpoints set value 3
 $data modify storage phan_dream_$(level_id):pr_act_4 laps set value 4
 $data modify storage phan_dream_$(level_id):pr_act_4 pearls_needed set value 12
-$data modify storage phan_dream_$(level_id):pr_act_4 time_limit set value 6000
+$data modify storage phan_dream_$(level_id):pr_act_4 time_limit set value 5
 $data modify storage phan_dream_$(level_id):pr_act_4 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):pr_act_4 time_between_checkpoints set value 150
 $data modify storage phan_dream_$(level_id):pr_act_4 bot_checkpoint_data set value [-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2,-2]

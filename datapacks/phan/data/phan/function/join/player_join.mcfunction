@@ -126,6 +126,9 @@ scoreboard players set @s pPenaltyPoints 0
 scoreboard players set @s shootAware 0
 scoreboard players set @s spawnInvulnerability 0
 scoreboard players set @s autoJumpPadCooldown 0
+scoreboard players reset @s levelUID
+scoreboard players reset @s levelManagerPage
+scoreboard players reset @s levelManagerAct
 
 #set spawnpoint
 spawnpoint @s 198 -6 118

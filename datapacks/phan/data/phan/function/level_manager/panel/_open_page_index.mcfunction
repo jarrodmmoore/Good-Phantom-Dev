@@ -1,3 +1,7 @@
+#input cooldown for player
+scoreboard players set @s[type=player] inputCooldown 8
+
+#open whatever page we were on last
 scoreboard players add @s levelManagerPage 0
 
 execute if score @s levelManagerPage matches -1 run function phan:level_manager/panel/erase/_menu_lookup

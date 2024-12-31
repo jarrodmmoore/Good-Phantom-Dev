@@ -1,0 +1,34 @@
+#executed by a levelEntry armor_stand
+#with $(level_id) = this armor stand's UID
+
+#get players on the right page
+scoreboard players set @a[tag=tellMe] levelManagerPage 2
+
+
+#armor_stand should update itself on what scores it should have
+execute store result storage phan:level_index level_id int 1 run scoreboard players get @s levelUID
+function phan:level_manager/panel/portal_race/load_data_from_storage with storage phan:level_index
+
+
+#title
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"light_purple"},{"selector":"@s"},{"text":" ===\\/===","bold":true,"color":"light_purple"}]
+
+#selectable y/n
+execute if entity @s[tag=levelSelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.level_manager.selectable","bold":true},{"text":"  "},{"translate":"gp.misc.brackets","color":"yellow","bold":false,"with":[{"translate":"gp.misc.yes"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/set_field_numeric {resource_location:'portal_race',nbt:'selectable',value:1}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.yes"}]}},{"text":" "},{"translate":"gp.misc.brackets","color":"gray","bold":false,"with":[{"translate":"gp.misc.no"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/set_field_numeric {resource_location:'portal_race',nbt:'selectable',value:0}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.no"}]}}]
+execute if entity @s[tag=!levelSelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.level_manager.selectable","bold":true},{"text":"  "},{"translate":"gp.misc.brackets","color":"gray","bold":false,"with":[{"translate":"gp.misc.yes"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/set_field_numeric {resource_location:'portal_race',nbt:'selectable',value:1}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.yes"}]}},{"text":" "},{"translate":"gp.misc.brackets","color":"yellow","bold":false,"with":[{"translate":"gp.misc.no"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/set_field_numeric {resource_location:'portal_race',nbt:'selectable',value:0}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.no"}]}}]
+#act 1
+$execute if entity @s[tag=act1SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_1","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:1}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_1","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_playable","color":"gray"}]
+$execute if entity @s[tag=!act1SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_1","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:1}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_1","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_not_playable","color":"gray"}]
+#act 2
+$execute if entity @s[tag=act2SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_2","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:2}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_2","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_playable","color":"gray"}]
+$execute if entity @s[tag=!act2SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_2","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:2}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_2","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_not_playable","color":"gray"}]
+#act 3
+$execute if entity @s[tag=act3SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_3","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:3}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_3","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_playable","color":"gray"}]
+$execute if entity @s[tag=!act3SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_3","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:3}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_3","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_not_playable","color":"gray"}]
+
+#back button
+tellraw @a[tag=tellMe] ["",{"text":" "}]
+tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"red","bold":false,"with":[{"translate":"gp.misc.back"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.back"}]}}]
+
+tellraw @a[tag=tellMe] ["",{"text":"===/\\=== ","bold":true,"color":"light_purple"},{"selector":"@s"},{"text":" ===/\\===","bold":true,"color":"light_purple"}]
