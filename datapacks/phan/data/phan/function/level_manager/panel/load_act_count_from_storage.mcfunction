@@ -8,6 +8,12 @@ $execute store result score #test2 value run data get storage phan_dream_$(level
 $execute store result score #test3 value run data get storage phan_dream_$(level_id):portal_race selectable 1
 
 
+#selectable
+tag @s add levelSelectable
+$execute store result score #test4 value run data get storage phan_dream_$(level_id):dream_data selectable 1
+execute if score #test4 value matches 0 run tag @s remove levelSelectable
+
+
 #score attack
 scoreboard players set #actCountSA value 0
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_1 playable 1

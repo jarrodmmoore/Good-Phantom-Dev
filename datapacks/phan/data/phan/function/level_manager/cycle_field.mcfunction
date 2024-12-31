@@ -7,6 +7,7 @@ execute if score @s levelUID matches 0 run return 0
 $data modify storage phan:level_index resource_location set value "$(resource_location)"
 $data modify storage phan:level_index nbt set value "$(nbt)"
 $data modify storage phan:level_index mod set value $(mod)
+$data modify storage phan:level_index offset set value $(offset)
 
 #do it
 execute store result storage phan:level_index level_id int 1 run scoreboard players get @s levelUID

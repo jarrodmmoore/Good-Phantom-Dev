@@ -1,14 +1,14 @@
 #executed by levelEntry armor_stand
 
 #selectable
-tag @s add levelSelectable
+tag @s add levelSelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):score_attack selectable 1
-execute if score #test value matches 0 run tag @s remove levelSelectable
+execute if score #test value matches 0 run tag @s remove levelSelectableSA
 
 #figure out which acts are playable
 tag @s add act1SelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_1 playable 1
-execute if score #test value matches 0 run tag @s add act1SelectableSA
+execute if score #test value matches 0 run tag @s remove act1SelectableSA
 
 tag @s add act2SelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_2 playable 1

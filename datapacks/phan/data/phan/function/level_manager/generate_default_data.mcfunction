@@ -25,19 +25,13 @@ $data modify storage phan_dream_$(level_id):score_attack time_diamond set value 
 #$data modify storage phan_dream_$(level_id):score_attack high_skill_music_function set value "bgm/play_0"
 #^ note: will display to user as "levels/custom_dream_x/bgm/play_0"
 
-#note about music_track:
-#-2 = custom path
-#-1 = random
-#0 = none
-#1.. = specific vanilla track
-
 #score attack act 1
 $data modify storage phan_dream_$(level_id):sa_act_1 playable set value 0
 $data modify storage phan_dream_$(level_id):sa_act_1 act_name set value "Act 1"
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_model set value "gp/map_preview/generic"
 $data modify storage phan_dream_$(level_id):sa_act_1 pearls_needed set value 16
-$data modify storage phan_dream_$(level_id):sa_act_1 time_limit set value 100
+$data modify storage phan_dream_$(level_id):sa_act_1 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_1 target_time set value [1,0,0]
 $data modify storage phan_dream_$(level_id):sa_act_1 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):sa_act_1 score_requirement_c set value 10000
@@ -52,7 +46,7 @@ $data modify storage phan_dream_$(level_id):sa_act_1 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_1 music_function set value "bgm/play_0"
 $data modify storage phan_dream_$(level_id):sa_act_1 teleport_dimension set value 0
 $data modify storage phan_dream_$(level_id):sa_act_1 teleport_location set value [0,100,0]
-$data modify storage phan_dream_$(level_id):sa_act_1 soul_approach set value 1
+$data modify storage phan_dream_$(level_id):sa_act_1 soul_approach set value 0
 
 #score attack act 2
 $data modify storage phan_dream_$(level_id):sa_act_2 playable set value 0
@@ -60,7 +54,7 @@ $data modify storage phan_dream_$(level_id):sa_act_2 act_name set value "Act 2"
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_model set value "gp/map_preview/generic"
 $data modify storage phan_dream_$(level_id):sa_act_2 pearls_needed set value 16
-$data modify storage phan_dream_$(level_id):sa_act_2 time_limit set value 100
+$data modify storage phan_dream_$(level_id):sa_act_2 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_2 target_time set value [1,0,0]
 $data modify storage phan_dream_$(level_id):sa_act_2 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):sa_act_2 score_requirement_c set value 10000
@@ -75,7 +69,7 @@ $data modify storage phan_dream_$(level_id):sa_act_2 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_2 music_function set value "bgm/play_0"
 $data modify storage phan_dream_$(level_id):sa_act_2 teleport_dimension set value 0
 $data modify storage phan_dream_$(level_id):sa_act_2 teleport_location set value [0,100,0]
-$data modify storage phan_dream_$(level_id):sa_act_2 soul_approach set value 1
+$data modify storage phan_dream_$(level_id):sa_act_2 soul_approach set value 0
 
 #score attack act 3
 $data modify storage phan_dream_$(level_id):sa_act_3 playable set value 0
@@ -83,7 +77,7 @@ $data modify storage phan_dream_$(level_id):sa_act_3 act_name set value "Act 3"
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_model set value "gp/map_preview/generic"
 $data modify storage phan_dream_$(level_id):sa_act_3 pearls_needed set value 16
-$data modify storage phan_dream_$(level_id):sa_act_3 time_limit set value 100
+$data modify storage phan_dream_$(level_id):sa_act_3 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_3 target_time set value [1,0,0]
 $data modify storage phan_dream_$(level_id):sa_act_3 reset_plane set value "..-100"
 $data modify storage phan_dream_$(level_id):sa_act_3 score_requirement_c set value 10000
@@ -98,7 +92,7 @@ $data modify storage phan_dream_$(level_id):sa_act_3 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_3 music_function set value "bgm/play_0"
 $data modify storage phan_dream_$(level_id):sa_act_3 teleport_dimension set value 0
 $data modify storage phan_dream_$(level_id):sa_act_3 teleport_location set value [0,100,0]
-$data modify storage phan_dream_$(level_id):sa_act_3 soul_approach set value 1
+$data modify storage phan_dream_$(level_id):sa_act_3 soul_approach set value 0
 
 
 

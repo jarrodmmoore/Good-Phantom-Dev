@@ -4,7 +4,7 @@
 #figure out which acts are playable
 tag @s add act1SelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_1 playable 1
-execute if score #test value matches 0 run tag @s add act1SelectableSA
+execute if score #test value matches 0 run tag @s remove act1SelectableSA
 
 tag @s add act2SelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_2 playable 1
@@ -22,3 +22,11 @@ $execute store result score #dimensionSA value run data get storage phan_dream_$
 $execute store result score #coord_x value run data get storage phan_dream_$(level_id):sa_act_$(act) teleport_location[0] 1
 $execute store result score #coord_y value run data get storage phan_dream_$(level_id):sa_act_$(act) teleport_location[1] 1
 $execute store result score #coord_z value run data get storage phan_dream_$(level_id):sa_act_$(act) teleport_location[2] 1
+
+#use area transition?
+$tag @s add act$(act)AreaTransition
+$execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_$(act) use_area_transition 1
+$execute if score #test value matches 0 run tag @s remove act$(act)AreaTransition
+
+#figure out music track
+$execute store result score #musicTrackSA value run data get storage phan_dream_$(level_id):sa_act_$(act) music_track 1
