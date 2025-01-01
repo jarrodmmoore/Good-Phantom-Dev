@@ -92,9 +92,13 @@ execute if score #freePlay value matches 1 run scoreboard players operation #vAc
 scoreboard players set #vsRestart value 0
 
 #set versus mode session if we're entering in at act 1
+scoreboard players set #success value 0
 execute unless score #gameState value matches 4 if score #freePlay value matches 0 run function phan:game/4/new_versus_session
 #versus mode points persist between acts of the same dream if played normally and then reset afterward
 #BUT-- if we're playing a single act in "free play" mode, we never change the session and let points accumulate between games
+
+#show tip to players who haven't seen them all yet (unless this is the start of a new session)
+execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR] run function phan:game/0/tip_show_portal_race
 
 #default settings for a level, overwritten upon loading area info
 scoreboard players set #nightVision value 0

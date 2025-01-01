@@ -202,3 +202,17 @@ $data modify storage phan_dream_$(level_id):pr_podium weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_podium skybox set value 1
 $data modify storage phan_dream_$(level_id):pr_podium teleport_dimension set value 0
 $data modify storage phan_dream_$(level_id):pr_podium teleport_location set value [0,100,0]
+
+
+#if not #gameState=0, exit out now
+execute unless score #gameState value matches 0 run return 0
+#=====
+
+#modify level props if they currently exist
+
+#change model of sleeping player
+$data modify storage phan:data spawn_player_model set from storage phan_dream_$(level_id):dream_data sleeping_player_model
+$execute as @e[limit=1,type=armor_stand,tag=lobbyPlayer$(level_id)] run function phan:level_manager/load/replace_sleeping_player_model with storage phan:data
+
+#change display text above level
+$execute as @e[limit=1,type=text_display,tag=lobbyNameDisplay$(level_id)] run data merge entity @s {text:'["",{"nbt":"name_display","storage":"phan_dream_$(level_id):dream_data","interpret":true}]'}

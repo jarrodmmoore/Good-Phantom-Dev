@@ -2,6 +2,10 @@
 scoreboard players set @s playerTipTime -200
 scoreboard players reset @s tip
 
+#stop showing tips during load screens once we've seen them all
+execute if score @s playerTip matches 15.. run tag @s add stopShowingTipsPR
+
+#count up
 scoreboard players add @s playerTip 1
 execute if score @s playerTip matches 15.. run scoreboard players set @s playerTip 1
 

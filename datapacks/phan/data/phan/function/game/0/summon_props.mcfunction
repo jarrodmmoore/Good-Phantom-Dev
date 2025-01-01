@@ -62,9 +62,7 @@ execute positioned 208 -1 139 positioned ~ ~-.3 ~ run summon armor_stand ~ ~ ~ {
 #painting on easel
 execute positioned 201 -1 136 positioned ~ ~ ~ run summon armor_stand ~ ~ ~ {Tags:["lobbyProp"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,80.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:red_wool",count:1,components:{"item_model":"gp/object/painting"}}]}
 #title
-execute if score #dream1Completed value matches 1.. positioned 204 4 139 positioned ~ ~100 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE401"}'}
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~-100 ~.4 180 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute if score #dream1Completed value matches 1.. positioned 204 4 139 run function phan:level_manager/load/spawn_name_display {level_uid:1,rotation:180,offset_x:'.5',offset_y:'.0',offset_z:'.4'}
 
 #ROOM 2
 #alarm clock
@@ -78,9 +76,7 @@ execute positioned 199 0 100 positioned ~.3 ~-.7 ~-.15 run summon armor_stand ~ 
 execute positioned 199 0 100 positioned ~.32 ~-.7 ~.3 run summon armor_stand ~ ~ ~ {Tags:["lobbyProp"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,180.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:chain_command_block",count:1}]}
 execute positioned 199 0 100 positioned ~.3 ~-.25 ~.1 run summon armor_stand ~ ~ ~ {Tags:["lobbyProp"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,45.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:repeating_command_block",count:1}]}
 #title
-execute if score #dream2Completed value matches 1.. positioned 204 4 97 positioned ~ ~100 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE402"}'}
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~-100 ~-.4 0 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute if score #dream2Completed value matches 1.. positioned 204 4 97 run function phan:level_manager/load/spawn_name_display {level_uid:2,rotation:0,offset_x:'.5',offset_y:'.0',offset_z:'-.4'}
 
 #ROOM 3
 #alarm clock
@@ -90,9 +86,7 @@ execute positioned 222 -2 118 positioned ~.75 ~-.2 ~ run function phan:level_man
 #blueprint
 execute positioned 216 -1 114 positioned ~ ~-.3 ~.5 run summon armor_stand ~ ~ ~ {Tags:["lobbyProp"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,90.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:red_wool",count:1,components:{"item_model":"gp/object/blueprint"}}]}
 #title
-execute if score #dream3Completed value matches 1.. positioned 223 4 118 positioned ~ ~100 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE403"}'}
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.4 ~-100 ~ 90 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute if score #dream3Completed value matches 1.. positioned 223 4 118 run function phan:level_manager/load/spawn_name_display {level_uid:3,rotation:90,offset_x:'.4',offset_y:'.0',offset_z:'0'}
 
 #ROOM 4
 #alarm clock
@@ -102,9 +96,7 @@ execute positioned 204 -8 138 positioned ~.5 ~-.2 ~.75 run function phan:level_m
 #kick drum
 execute positioned 207 -7 137 run summon block_display ~ ~ ~-.5 {Tags:["lobbyProp"],block_state:{Name:"minecraft:netherite_block"}}
 #title
-execute if score #dream4Completed value matches 1.. positioned 204 -3 139 positioned ~ ~100 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE404"}'}
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~-100.25 ~.4 180 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute if score #dream4Completed value matches 1.. positioned 204 -3 139 run function phan:level_manager/load/spawn_name_display {level_uid:4,rotation:180,offset_x:'.5',offset_y:'.25',offset_z:'.4'}
 
 #ROOM 5
 #alarm clock
@@ -112,6 +104,4 @@ execute positioned 206 -7 97 positioned ~ ~-.3 ~ run summon armor_stand ~ ~ ~ {T
 #player
 execute positioned 204 -8 97 positioned ~.5 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:5,head_rotation:'[0.0f,180.0f,0.0f]'}
 #title
-execute if score #dream5Completed value matches 1.. positioned 204 -3 97 positioned ~ ~100 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE405"}'}
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~-100.25 ~-.4 0 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute if score #dream5Completed value matches 1.. positioned 204 -3 97 run function phan:level_manager/load/spawn_name_display {level_uid:5,rotation:0,offset_x:'.5',offset_y:'.25',offset_z:'-.4'}

@@ -18,11 +18,10 @@ function phan:game/0/admin_afk_logic
 
 #check if phantom players are near a sleeping player
 scoreboard players set @a nearPlayer 0
-execute as @e[type=armor_stand,tag=levelEntry] at @s if entity @a[distance=..4,gamemode=adventure] run function phan:game/0/level_entry_highlight
+execute as @e[type=armor_stand,tag=levelEntry] at @s if entity @a[distance=..4] run function phan:game/0/level_entry_highlight
 
 #creative mode players can edit a dream
-scoreboard players set @a levelUID 0
-execute as @a[gamemode=creative] run function phan:level_manager/link/creative_player_check_for_dream
+execute as @a[gamemode=creative] at @s run function phan:level_manager/link/creative_player_check_for_dream
 execute if score #5Hz value matches 3 as @a[gamemode=!creative] if items entity @s hotbar.5 *[custom_data~{dream_edit:1b}] run clear @s *[custom_data~{dream_edit:1b}]
 
 #zzz... players are asleep

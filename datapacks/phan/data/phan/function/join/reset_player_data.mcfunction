@@ -42,3 +42,5 @@ scoreboard players set @s discFound12 0
 advancement revoke @s everything
 
 scoreboard players reset @s playerID
+
+tag @s remove stopShowingTipsPR

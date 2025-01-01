@@ -2,7 +2,7 @@
 #with $(level_id) = this armor stand's UID
 
 #get players on the right page
-scoreboard players set @a[tag=tellMe] levelManagerPage 2
+scoreboard players set @a[tag=tellMe] levelManagerPage 5
 
 
 #armor_stand should update itself on what scores it should have

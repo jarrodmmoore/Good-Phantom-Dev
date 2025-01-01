@@ -1,2 +1,2 @@
 clear @s stick[custom_data={dream_edit:1b}]
-item replace entity @s hotbar.5 with stick[custom_data={dream_edit:1b},item_model="gp/editor/dream_edit"]
+item replace entity @s hotbar.5 with stick[custom_data={dream_edit:1b},item_model="gp/editor/dream_edit",custom_name='["",{"translate":"gp.level_manager.edit_dream","color":"dark_purple","italic":false,"with":[{"keybind":"key.use","color":"white"}]}]']
