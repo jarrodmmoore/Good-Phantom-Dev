@@ -12,7 +12,7 @@ function phan:level_manager/panel/portal_race/act/load_data_from_storage with st
 
 
 #title (+ act name)
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 $tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"light_purple"},{"selector":"@s"},{"text":" | "},{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_$(act)","interpret":false},{"text":" ===\\/===","bold":true,"color":"light_purple"}]
 
 #playable y/n

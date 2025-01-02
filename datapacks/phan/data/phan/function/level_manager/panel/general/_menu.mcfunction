@@ -11,7 +11,7 @@ function phan:level_manager/panel/general/load_data_from_storage with storage ph
 
 
 #title
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"green"},{"selector":"@s"},{"text":" ===\\/===","bold":true,"color":"green"}]
 
 #selectable y/n

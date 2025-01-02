@@ -10,11 +10,11 @@ function phan:level_manager/panel/load_act_count_from_storage with storage phan:
 
 
 #title
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true},{"selector":"@s"},{"text":" ===\\/===","bold":true}]
 
 # [General]
-tellraw @a[tag=tellMe] ["",{"text":"\n"}]
+tellraw @a[tag=tellMe] ["",{"text":" "}]
 tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"green","bold":false,"with":[{"translate":"gp.level_manager.general"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/general/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.general"}]}},{"text":"  "},{"translate":"gp.level_manager.selectable_status","color":"gray","with":[{"score":{"name":"#test4","objective":"value"}}]}]
 # [Score Attack]
 execute if score #actCountSA value matches 1 run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"yellow","bold":false,"with":[{"translate":"gp.mode_select.score_attack"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/score_attack/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.mode_select.score_attack"}]}},{"text":"  "},{"translate":"gp.level_manager.act_count","color":"gray","with":[{"score":{"name":"#actCountSA","objective":"value"}},{"score":{"name":"#test2","objective":"value"}}]}]
@@ -22,8 +22,11 @@ execute unless score #actCountSA value matches 1 run tellraw @a[tag=tellMe] ["",
 # [Portal Race]
 execute if score #actCountPR value matches 1 run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"translate":"gp.mode_select.versus"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.mode_select.versus"}]}},{"text":"  "},{"translate":"gp.level_manager.act_count","color":"gray","with":[{"score":{"name":"#actCountPR","objective":"value"}},{"score":{"name":"#test3","objective":"value"}}]}]
 execute unless score #actCountPR value matches 1 run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"translate":"gp.mode_select.versus"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.mode_select.versus"}]}},{"text":"  "},{"translate":"gp.level_manager.act_count_plural","color":"gray","with":[{"score":{"name":"#actCountPR","objective":"value"}},{"score":{"name":"#test3","objective":"value"}}]}]
-# [Erase]
-tellraw @a[tag=tellMe] ["",{"text":"\n"}]
-tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"red","bold":false,"with":[{"translate":"gp.level_manager.erase"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/erase/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.erase"}]}}]
+# [Import] [Export]
+tellraw @a[tag=tellMe] ["",{"text":" "}]
+tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"green","bold":false,"with":[{"translate":"gp.level_manager.import_dream_data"}],"clickEvent":{"action":"suggest_command","value":"/function phan:level_manager/import_dream {filename:'filename'}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.erase_data"}]}},{"text":"  "},{"translate":"gp.misc.brackets","color":"green","bold":false,"with":[{"translate":"gp.level_manager.erase_player_scores"}],"clickEvent":{"action":"suggest_command","value":"/function phan:level_manager/export_dream {filename:'filename'}"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.export_dream_data"}]}}]
+# [Erase data] [Erase scores] 
+tellraw @a[tag=tellMe] ["",{"text":" "}]
+tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"red","bold":false,"with":[{"translate":"gp.level_manager.erase_data"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/erase/_menu_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.erase_data"}]}},{"text":"  "},{"translate":"gp.misc.brackets","color":"red","bold":false,"with":[{"translate":"gp.level_manager.erase_player_scores"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/erase/_menu_scores_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.erase_player_scores"}]}}]
 
 tellraw @a[tag=tellMe] ["",{"text":"===/\\=== ","bold":true},{"selector":"@s"},{"text":" ===/\\===","bold":true}]

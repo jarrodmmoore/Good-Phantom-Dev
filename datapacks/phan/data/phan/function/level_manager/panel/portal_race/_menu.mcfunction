@@ -11,7 +11,7 @@ function phan:level_manager/panel/portal_race/load_data_from_storage with storag
 
 
 #title
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"light_purple"},{"selector":"@s"},{"text":" ===\\/===","bold":true,"color":"light_purple"}]
 
 #selectable y/n

@@ -11,7 +11,7 @@ function phan:level_manager/panel/score_attack/load_data_from_storage with stora
 
 
 #title
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"yellow"},{"selector":"@s"},{"text":" ===\\/===","bold":true,"color":"yellow"}]
 
 #selectable y/n

@@ -12,7 +12,7 @@ function phan:level_manager/panel/score_attack/act/load_data_from_storage with s
 
 
 #title (+ act name)
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 $tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"yellow"},{"selector":"@s"},{"text":" | "},{"nbt":"act_name","storage":"phan_dream_$(level_id):sa_act_$(act)","interpret":false},{"text":" ===\\/===","bold":true,"color":"yellow"}]
 
 #notes:

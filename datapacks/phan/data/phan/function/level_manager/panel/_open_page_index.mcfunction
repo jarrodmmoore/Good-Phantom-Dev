@@ -7,7 +7,9 @@ execute at @s run playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 1
 #open whatever page we were on last
 scoreboard players add @s levelManagerPage 0
 
+execute if score @s levelManagerPage matches -2 run function phan:level_manager/panel/erase/_menu_scores_lookup
 execute if score @s levelManagerPage matches -1 run function phan:level_manager/panel/erase/_menu_lookup
+
 execute if score @s levelManagerPage matches 0 run function phan:level_manager/panel/_menu_lookup
 execute if score @s levelManagerPage matches 1 run function phan:level_manager/panel/general/_menu_lookup
 
