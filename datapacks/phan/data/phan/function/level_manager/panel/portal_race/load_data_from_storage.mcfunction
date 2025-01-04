@@ -17,3 +17,7 @@ execute if score #test value matches 0 run tag @s remove act2SelectablePR
 tag @s add act3SelectablePR
 $execute store result score #test value run data get storage phan_dream_$(level_id):pr_act_3 playable 1
 execute if score #test value matches 0 run tag @s remove act3SelectablePR
+
+tag @s add act4SelectablePR
+$execute store result score #test value run data get storage phan_dream_$(level_id):pr_act_4 playable 1
+execute if score #test value matches 0 run tag @s remove act4SelectablePR

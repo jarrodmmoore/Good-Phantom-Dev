@@ -11,3 +11,7 @@ function phan:setup/bossbars
 function phan:setup/scoreboard
 function phan:setup/gamerules
 function phan:setup/teams
+
+#version for imported/exported maps
+scoreboard players set #mapDataVersion value 102000
+scoreboard players set #mapDataWarn value -1

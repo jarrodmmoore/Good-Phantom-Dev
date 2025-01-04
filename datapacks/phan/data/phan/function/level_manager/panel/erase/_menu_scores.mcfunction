@@ -9,7 +9,7 @@ tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"text":"===\\/=== ","bold":true,"color":"red"},{"selector":"@s"},{"text":" ===\\/===","bold":true,"color":"red"}]
 
 #are you sure about that?
-tellraw @a[tag=tellMe] ["",{"text":"\n\n\n\n\n\n\n"}]
+tellraw @a[tag=tellMe] ["",{"text":"\n\n\n"}]
 tellraw @a[tag=tellMe] ["",{"translate":"gp.level_manager.are_you_sure_about_erase_scores","italic":true}]
 # [No]    [Yes]
 tellraw @a[tag=tellMe] ["",{"text":"\n"}]
