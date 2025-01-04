@@ -10,10 +10,8 @@ effect give @a[tag=doneWithIntro] blindness 1 50 true
 execute as @a[tag=doneWithIntro] positioned 198 -22 118 rotated -90 0 run function phan:common/varied_teleport
 
 #summon level text
-execute positioned 209 -18 118 run function phan:levels/_index_title_entity
-
-execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~50.4 ~ 90 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
+execute positioned 209 -18 118 run function phan:levels/_index_title_entity with storage phan:level_index
 
 #quick: count how many players are online!
 execute store result score #math value run execute if entity @a

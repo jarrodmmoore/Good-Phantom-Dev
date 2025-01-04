@@ -1,16 +1,8 @@
-execute unless score #chosenLevel value matches 1..5 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE499"}'}
+#check if this is an unlockable level that hasn't been discovered yet
+scoreboard players set #success value 1
+$execute if score #dream$(level_id)Discovered value matches 0 run scoreboard players set #success value 0
 
-execute if score #chosenLevel value matches 1 if score #dream1Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE401"}'}
-execute if score #chosenLevel value matches 1 unless score #dream1Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE400"}'}
-
-execute if score #chosenLevel value matches 2 if score #dream2Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE402"}'}
-execute if score #chosenLevel value matches 2 unless score #dream2Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE400"}'}
-
-execute if score #chosenLevel value matches 3 if score #dream3Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE403"}'}
-execute if score #chosenLevel value matches 3 unless score #dream3Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE400"}'}
-
-execute if score #chosenLevel value matches 4 if score #dream4Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE404"}'}
-execute if score #chosenLevel value matches 4 unless score #dream4Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE400"}'}
-
-execute if score #chosenLevel value matches 5 if score #dream5Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE405"}'}
-execute if score #chosenLevel value matches 5 unless score #dream5Discovered value matches 1 positioned ~ ~-50 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"text":"\\uE400"}'}
+#summon level text
+$execute positioned ~ ~1 ~ run function phan:level_manager/load/spawn_name_display {level_uid:$(level_id),rotation:90,offset_x:'.0',offset_y:'.6',offset_z:'.0'}
+#level not unlocked? show '???' instead of level text
+$execute if score #success value matches 0 as @e[type=text_display,tag=lobbyNameDisplay$(level_id)] run data merge entity @s {text:'{"text":"\\uE499"}'}

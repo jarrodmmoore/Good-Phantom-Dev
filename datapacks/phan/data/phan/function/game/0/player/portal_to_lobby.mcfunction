@@ -1,7 +1,7 @@
 #play sound if we used reset item
 tag @s add soundSelf
 execute if items entity @s weapon.mainhand *[custom_data~{slot8:1b}] at @s run particle falling_dust{block_state:"red_concrete"} ~ ~1 ~ 0.3 0.3 0.3 0 10
-execute if items entity @s weapon.mainhand *[custom_data~{slot8:1b}] at @s run playsound minecraft:entity.ender_dragon.hurt master @a[tag=!soundSelf] ~ 100000 ~ 100000 0.5
+execute if items entity @s weapon.mainhand *[custom_data~{slot8:1b}] at @s run playsound minecraft:entity.ender_dragon.hurt master @a[tag=!soundSelf] ~ ~ ~ 1.5 0.5
 tag @s remove soundSelf
 
 #go back to cabin

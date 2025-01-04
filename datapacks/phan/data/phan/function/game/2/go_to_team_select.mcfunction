@@ -26,10 +26,12 @@ bossbar set general_bossbar value 200
 bossbar set general_bossbar name ["",{"translate":"gp.mode_select.play_or_spectate","color":"white","bold":false}]
 
 #summon level text
-execute positioned 209 -26 118 run function phan:levels/_index_title_entity
+execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
+execute positioned 209 -26 118 run function phan:levels/_index_title_entity with storage phan:level_index
 
 #summon act text (if applicable)
-execute if score #showActNumber value matches 1.. positioned 209 -18 118 positioned ~ ~-58.8 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.game.act_number","bold":false,"color":"white","with":[{"score":{"name":"#showActNumber","objective":"value"}}]}]'}
+execute store result storage phan:level_index act int 1 run scoreboard players get #showActNumber value
+execute if score #showActNumber value matches 1.. positioned 209 -27 118 run function phan:levels/_index_act_title_entity with storage phan:level_index
 
 #summon gamemode text
 execute if score #desiredGamemode value matches 1 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.score_attack","bold":true,"color":"yellow"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_3_players","bold":false,"color":"gray"}]'}

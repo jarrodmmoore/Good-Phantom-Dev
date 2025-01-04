@@ -29,6 +29,9 @@ $execute if entity @s[tag=!act3SelectablePR] run tellraw @a[tag=tellMe] ["",{"tr
 #act 4
 $execute if entity @s[tag=act4SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_4","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:4}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_4","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_playable","color":"gray"}]
 $execute if entity @s[tag=!act4SelectablePR] run tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_4","interpret":false}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/act/_menu_lookup_act_set {act:4}"},"hoverEvent":{"action":"show_text","value":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_4","interpret":false}]}},{"text":"  "},{"translate":"gp.level_manager.act_not_playable","color":"gray"}]
+#podium sequence
+tellraw @a[tag=tellMe] ["",{"text":" "}]
+tellraw @a[tag=tellMe] ["",{"translate":"gp.misc.brackets","color":"light_purple","bold":false,"with":[{"translate":"gp.level_manager.podium_sequence"}],"clickEvent":{"action":"run_command","value":"/function phan:level_manager/panel/portal_race/_menu_podium_lookup"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.level_manager.podium_sequence"}]}}]
 
 #back button
 tellraw @a[tag=tellMe] ["",{"text":" "}]
