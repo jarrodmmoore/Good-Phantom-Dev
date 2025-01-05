@@ -23,6 +23,7 @@ tag @s remove vsEyeSpawner
 tag @s remove podiumSpawner
 tag @s remove podiumCamera
 tag @s remove podiumRelevant
+tag @s remove saRespawnPoint
 
 #get specific tags?
 execute if score @s editNode matches 7 run tag @s add startPoint
@@ -40,6 +41,7 @@ execute if score @s editNode matches 23 run tag @s add vsEyeSpawner
 execute if score @s editNode matches 25 run tag @s add podiumSpawner
 execute if score @s editNode matches 26 run tag @s add podiumCamera
 execute if score @s editNode matches 25..26 run tag @s add podiumRelevant
+execute if score @s editNode matches 28 run tag @s add saRespawnPoint
 
 #area tags
 execute if score @s editArea matches 1 run tag @s add nodeArea1

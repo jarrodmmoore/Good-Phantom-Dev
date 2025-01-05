@@ -27,6 +27,7 @@ scoreboard players set @s hudFlashTime 0
 scoreboard players set @s shootAware 0
 scoreboard players set @s pPenaltyTime 0
 scoreboard players set @s pPenaltyPoints 0
+scoreboard players set @s seekSpawnpoint 0
 
 #update music
 function phan:bgm/play_level_music
@@ -72,6 +73,9 @@ scoreboard players set @s time2portalMin 0
 
 #time attack: get the timer started if it hasn't started already
 tag @s add trackPlayerTime
+
+#set spawnpoint
+function phan:game/1/player/set_spawnpoint
 
 #this is not necessary
 scoreboard players set @s pGameTime 500

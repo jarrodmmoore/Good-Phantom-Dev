@@ -129,6 +129,7 @@ scoreboard players set @s autoJumpPadCooldown 0
 scoreboard players reset @s levelUID
 scoreboard players reset @s levelManagerPage
 scoreboard players reset @s levelManagerAct
+scoreboard players reset @s seekSpawnpoint
 
 #set spawnpoint
 spawnpoint @s 198 -6 118

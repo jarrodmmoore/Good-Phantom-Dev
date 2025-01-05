@@ -12,10 +12,6 @@ $data modify storage phan_dream_$(level_id):dream_data function_namespace set va
 $data modify storage phan_dream_$(level_id):dream_data function_path set value "levels/custom_dream_1"
 $data modify storage phan_dream_$(level_id):dream_data sleeping_player_model set value "gp/object/sleeping_player_1"
 
-#set level name of associated armor_stand, if any
-$execute as @e[tag=levelEntry,type=armor_stand,scores={levelUID=$(level_id)}] run data modify entity @s CustomName set from storage phan_dream_$(level_id):dream_data name_text
-
-
 
 
 #SCORE ATTACK
@@ -218,6 +214,9 @@ execute unless score #gameState value matches 0 run return 0
 #=====
 
 #modify level props if they currently exist
+
+#set level name of associated armor_stand
+$execute as @e[tag=levelEntry,type=armor_stand,scores={levelUID=$(level_id)}] run data modify entity @s CustomName set from storage phan_dream_$(level_id):dream_data name_text
 
 #change model of sleeping player
 $data modify storage phan:data spawn_player_model set from storage phan_dream_$(level_id):dream_data sleeping_player_model

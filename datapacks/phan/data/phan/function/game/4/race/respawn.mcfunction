@@ -1,13 +1,17 @@
 #must have valid coordinates!
 execute if score @s vsRespawnX matches -2147483648 run return 0
 
+#go to saved location and dimension
 scoreboard players operation @s goto_x = @s vsRespawnX
 scoreboard players operation @s goto_y = @s vsRespawnY
 scoreboard players operation @s goto_z = @s vsRespawnZ
 scoreboard players operation @s goto_yaw = @s vsRespawnYaw
 scoreboard players operation @s goto_pitch = @s vsRespawnPitch
-function phan:warp_to_saved_coords/_go
+execute unless score @s vsRespawnDimension matches 2..3 in overworld run function phan:warp_to_saved_coords/_go
+execute if score @s vsRespawnDimension matches 2 in the_nether run function phan:warp_to_saved_coords/_go
+execute if score @s vsRespawnDimension matches 3 in the_end run function phan:warp_to_saved_coords/_go
 
+#feedback
 execute at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
 execute at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 

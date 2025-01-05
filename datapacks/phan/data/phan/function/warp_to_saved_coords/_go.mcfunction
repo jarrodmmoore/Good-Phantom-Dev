@@ -1,9 +1,10 @@
-#dummy values for tp
-scoreboard players operation @s dummy_x = @s goto_x
-scoreboard players operation @s dummy_y = @s goto_y
-scoreboard players operation @s dummy_z = @s goto_z
-scoreboard players operation @s dummy_yaw = @s goto_yaw
-scoreboard players operation @s dummy_pitch = @s goto_pitch
+#macro arguments
+execute store result storage phan:coords coord_x int 1 run scoreboard players get @s goto_x
+execute store result storage phan:coords coord_y int 1 run scoreboard players get @s goto_y
+execute store result storage phan:coords coord_z int 1 run scoreboard players get @s goto_z
+execute store result storage phan:coords coord_yaw int 1 run scoreboard players get @s goto_yaw
+execute store result storage phan:coords coord_pitch int 1 run scoreboard players get @s goto_pitch
 
-#ok HERE WE GO
-execute positioned 0 0 0 rotated 0 0 run function phan:warp_to_saved_coords/x/_pos_or_neg
+#do the teleport (may or may not respect the angle)
+execute if entity @s[tag=keepRotation] positioned 0 0 0 run return run function phan:warp_to_saved_coords/teleport_without_rotation with storage phan:coords
+execute positioned 0 0 0 rotated 0 0 run function phan:warp_to_saved_coords/teleport_with_rotation with storage phan:coords

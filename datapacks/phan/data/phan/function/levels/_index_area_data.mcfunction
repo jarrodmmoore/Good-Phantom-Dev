@@ -1,8 +1,12 @@
-execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_area_data
-execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_area_data
-execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_area_data
-execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_area_data
-execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_area_data
+#load from storage
+function phan:level_manager/load/load_score_attack_data
+
+#old index
+#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_area_data
+#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_area_data
+#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_area_data
+#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_area_data
+#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_area_data
 
 #set randomization cooldown on the act we're currently on
 function phan:levels/_index_randomization_cooldown

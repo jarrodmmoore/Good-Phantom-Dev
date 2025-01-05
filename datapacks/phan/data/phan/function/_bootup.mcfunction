@@ -15,3 +15,6 @@ function phan:setup/teams
 #version for imported/exported maps
 scoreboard players set #mapDataVersion value 102000
 scoreboard players set #mapDataWarn value -1
+
+#forget which dream is cached. write it again next time we boot a level (for development convenience)
+scoreboard players set #cachedLevel value 0

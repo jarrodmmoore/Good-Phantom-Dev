@@ -95,6 +95,7 @@ scoreboard players set @a addScore 0
 scoreboard players set @a targetTimesHit 0
 scoreboard players set @a timesBeenHit 0
 scoreboard players set @a currentGrade 4
+scoreboard players reset @a seekSpawnpoint
 
 #fallback variables, intended to be overridden by the level we're going to
 scoreboard players set #pearlsNeeded value 12

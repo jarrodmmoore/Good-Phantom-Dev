@@ -41,6 +41,7 @@ scoreboard players set @s hudFlashTime 0
 scoreboard players set @s shootAware 0
 scoreboard players set @s pPenaltyTime 0
 scoreboard players set @s pPenaltyPoints 0
+scoreboard players set @s seekSpawnpoint 0
 
 #reset speeds and energy
 function phan:movement/reset_speed_self
@@ -85,6 +86,7 @@ scoreboard players set @s previousLoad -1
 
 #set spawnpoint
 spawnpoint @s ~ ~1 ~
+function phan:game/1/player/set_spawnpoint
 
 #load area info!
 function phan:game/1/load_area_info

@@ -2,6 +2,9 @@
 execute if score #checkLoadHeight value matches -64 if block ~ -64 ~ #phan:area_check run function phan:game/1/player_area_check
 execute if score #checkLoadHeight value matches 0 if block ~ 0 ~ #phan:area_check run function phan:game/1/player_area_check_y0
 
+#seek spawnpoint node if we requested that
+execute if score @s seekSpawnpoint matches 0..5 run function phan:game/1/player/seek_spawnpoint_node
+
 
 #combo
 scoreboard players remove @s[scores={comboTime=1..}] comboTime 1

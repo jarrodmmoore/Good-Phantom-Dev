@@ -52,3 +52,5 @@ execute if score @s editNode matches 25 run function phan:editor/panel/editarg_i
 execute if score @s editNode matches 26 run data modify storage phan:data display.node_name set value '["",{"translate":"gp.editor.node_type.podium_camera"}]'
 #effect sign
 execute if score @s editNode matches 27 run function phan:editor/panel/editarg_info/27_effect_sign
+#score attack respawn point
+execute if score @s editNode matches 28 run function phan:editor/panel/editarg_info/28_sa_respawn_point

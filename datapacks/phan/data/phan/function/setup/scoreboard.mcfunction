@@ -229,6 +229,7 @@ scoreboard objectives add fails dummy
 scoreboard objectives add shootAware dummy
 scoreboard objectives add enemyID dummy
 scoreboard objectives add autoJumpPadCooldown dummy
+scoreboard objectives add seekSpawnpoint dummy
 #enemies
 scoreboard objectives add enemyHP dummy
 scoreboard objectives add enemyMaxHP dummy

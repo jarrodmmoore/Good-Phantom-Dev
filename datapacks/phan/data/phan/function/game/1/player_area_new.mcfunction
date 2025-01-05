@@ -16,5 +16,8 @@ execute if score @s pCurrentArea matches 3 if score @s currentLoad matches 3 run
 execute if score @s pCurrentArea matches 3 if score @s currentLoad matches 4 run scoreboard players set #area4SpawnC value 0
 execute if score @s pCurrentArea matches 3 if score @s currentLoad matches 5 run scoreboard players set #area5SpawnC value 0
 
+#request a new spawnpoint, hope the mapper obliged with a score attack respawn point node
+scoreboard players operation @s seekSpawnpoint = @s currentLoad
+
 #keep track of how many laps we've run on Moonlit Act 3
 execute if score #chosenLevel value matches 2 if entity @s[scores={currentLoad=1,previousLoad=3}] run scoreboard players add @s lap 1
