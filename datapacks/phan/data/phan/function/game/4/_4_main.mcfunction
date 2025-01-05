@@ -38,6 +38,7 @@ execute if score #versusSpawn value matches 0 run function phan:game/1/spawning/
 execute if score #area0SpawnA value matches 0 run function phan:game/1/spawning/reset/reset0a
 execute if score #area0SpawnB value matches 0 run function phan:game/1/spawning/reset/reset0b
 execute if score #area0SpawnC value matches 0 run function phan:game/1/spawning/reset/reset0c
+execute if score #area0SpawnD value matches 0 run function phan:game/1/spawning/reset/reset0d
 
 #need to restore score data on bot waypoints if bots are enabled
 execute if score #allowClearCache value matches 1 if score #botsEnabled value matches 1 unless entity @a[tag=phan_edit] run function phan:editor/restore_using_nbt/_tick_waypoint
@@ -46,6 +47,7 @@ execute if score #allowClearCache value matches 1 if score #botsEnabled value ma
 execute if score #5Hz value matches 0 if score #vAct value matches 1 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/4/spawning/check_area_generic_a
 execute if score #5Hz value matches 1 if score #vAct value matches 2 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea2] at @s run function phan:game/4/spawning/check_area_generic_b
 execute if score #5Hz value matches 2 if score #vAct value matches 3 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea3] at @s run function phan:game/4/spawning/check_area_generic_c
+execute if score #5Hz value matches 0 if score #vAct value matches 4 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea4] at @s run function phan:game/4/spawning/check_area_generic_d
 
 #interpolation effect on player soul after images
 execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp

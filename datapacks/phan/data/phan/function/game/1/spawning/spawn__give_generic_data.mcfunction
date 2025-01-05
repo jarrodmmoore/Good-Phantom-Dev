@@ -4,6 +4,7 @@
 execute if entity @s[tag=nodeArea1] run function phan:game/1/spawning/spawn__give_generic_data_a
 execute if entity @s[tag=nodeArea2] run function phan:game/1/spawning/spawn__give_generic_data_b
 execute if entity @s[tag=nodeArea3] run function phan:game/1/spawning/spawn__give_generic_data_c
+execute if entity @s[tag=nodeArea4] run function phan:game/1/spawning/spawn__give_generic_data_d
 
 #act tag
 execute if entity @s[tag=nodeLoadArea0] run tag @e[tag=setMe,distance=..4] add area0Spawn

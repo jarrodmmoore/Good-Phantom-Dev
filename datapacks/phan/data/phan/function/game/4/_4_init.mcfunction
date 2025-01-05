@@ -1,6 +1,9 @@
 #keep track of the last mode we played so we can show relevant tips
 scoreboard players set #lastModePlayed value 4
 
+#load level data
+function phan:level_manager/load/cache_active_level_data
+
 #spectators who joined in the middle of a set of versus rounds get incorporated into the game right here
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] add playing
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] remove vsMidGameJoin
@@ -87,9 +90,19 @@ function phan:custom_hud/count_players
 execute unless score #gameState value matches 4 run scoreboard players set #vAct value 1
 execute if score #gameState value matches 4 run scoreboard players add #vAct value 1
 execute if score #vsRestart value matches 1 if score #vAct value matches 2.. run scoreboard players remove #vAct value 1
-execute if score #vAct value matches 4.. run scoreboard players set #vAct value 1
+execute if score #vAct value matches 5.. run scoreboard players set #vAct value 1
+#skip over any acts that aren't selectable
+execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_exists run scoreboard players add #vAct value 1
+execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_exists run scoreboard players add #vAct value 1
+execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_exists run scoreboard players add #vAct value 1
+execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_exists run scoreboard players add #vAct value 1
+#override act number with #freePlayAct argument if relevant
 execute if score #freePlay value matches 1 run scoreboard players operation #vAct value = #freePlayAct value
 scoreboard players set #vsRestart value 0
+
+#if we're attempting to boot into act 5, let's instead switch to the podium sequence
+execute if score #vAct value matches 5.. run return run function phan:game/5/_5_init
+#=====
 
 #set versus mode session if we're entering in at act 1
 scoreboard players set #success value 0
@@ -121,6 +134,7 @@ scoreboard players set #versusSpawn value 0
 execute if score #vAct value matches 1 run scoreboard players set #area0SpawnA value 0
 execute if score #vAct value matches 2 run scoreboard players set #area0SpawnB value 0
 execute if score #vAct value matches 3 run scoreboard players set #area0SpawnC value 0
+execute if score #vAct value matches 4 run scoreboard players set #area0SpawnD value 0
 
 #bot setup
 function phan:bots/_pre_round_bot_setup

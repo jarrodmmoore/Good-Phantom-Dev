@@ -8,6 +8,7 @@ tag @s add nodeLoadArea0
 execute if entity @s[tag=act1Spawn] run tag @s add nodeArea1
 execute if entity @s[tag=act2Spawn] run tag @s add nodeArea2
 execute if entity @s[tag=act3Spawn] run tag @s add nodeArea3
+execute if entity @s[tag=act4Spawn] run tag @s add nodeArea4
 scoreboard players set @s editArg1 0
 #big enemies drop better loot
 execute if score #lootCycle value matches ..9 if entity @s[tag=bigLootDrop] run scoreboard players set @s editArg1 5

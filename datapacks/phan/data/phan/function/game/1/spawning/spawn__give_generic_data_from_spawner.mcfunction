@@ -10,6 +10,7 @@ execute if entity @s[tag=area5Spawn] run tag @e[tag=setMe,distance=..2] add area
 execute if entity @s[tag=act1Spawn] run tag @e[tag=setMe,distance=..2] add act1Spawn
 execute if entity @s[tag=act2Spawn] run tag @e[tag=setMe,distance=..2] add act2Spawn
 execute if entity @s[tag=act3Spawn] run tag @e[tag=setMe,distance=..2] add act3Spawn
+execute if entity @s[tag=act4Spawn] run tag @e[tag=setMe,distance=..2] add act4Spawn
 
 execute if entity @s[tag=area0Spawn,tag=act1Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area0SpawnA 1
 execute if entity @s[tag=area1Spawn,tag=act1Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area1SpawnA 1
@@ -31,6 +32,13 @@ execute if entity @s[tag=area2Spawn,tag=act3Spawn] run scoreboard players set @e
 execute if entity @s[tag=area3Spawn,tag=act3Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area3SpawnC 1
 execute if entity @s[tag=area4Spawn,tag=act3Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area4SpawnC 1
 execute if entity @s[tag=area5Spawn,tag=act3Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area5SpawnC 1
+
+execute if entity @s[tag=area0Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area0SpawnD 1
+execute if entity @s[tag=area1Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area1SpawnD 1
+execute if entity @s[tag=area2Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area2SpawnD 1
+execute if entity @s[tag=area3Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area3SpawnD 1
+execute if entity @s[tag=area4Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area4SpawnD 1
+execute if entity @s[tag=area5Spawn,tag=act4Spawn] run scoreboard players set @e[tag=setMe,distance=..2] area5SpawnD 1
 
 #inherit movement pattern if we have one
 execute if score @s movementPattern matches 1.. run scoreboard players operation @e[tag=setMe,distance=..2] movementPattern = @s movementPattern

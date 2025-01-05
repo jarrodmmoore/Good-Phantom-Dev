@@ -1,7 +1,7 @@
 #return to lobby or boot the next act?
 scoreboard players set #vsReturnToLobby value 1
-execute if score #freePlay value matches 0 if score #vAct value matches ..2 run scoreboard players set #vsReturnToLobby value 0
-execute if score #freePlay value matches 0 if score #vAct value matches 3.. run scoreboard players set #vsReturnToLobby value 2
+execute if score #freePlay value matches 0 if score #vAct value matches ..3 run scoreboard players set #vsReturnToLobby value 0
+execute if score #freePlay value matches 0 if score #vAct value matches 4.. run scoreboard players set #vsReturnToLobby value 2
 
 
 #watch end podium sequence

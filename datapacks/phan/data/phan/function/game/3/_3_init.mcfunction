@@ -1,6 +1,9 @@
 #keep track of the last mode we played so we can show relevant tips
 scoreboard players set #lastModePlayed value 3
 
+#load level data
+function phan:level_manager/load/cache_active_level_data
+
 #get HUD ready, but don't show it yet
 scoreboard players set #showHUD value 1
 scoreboard players set @a pShowHUD 0

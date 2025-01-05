@@ -29,6 +29,10 @@ execute if score #vAct value matches 3 run tag @e[tag=setMe,type=item_display,di
 execute if score #vAct value matches 3 run scoreboard players set @e[tag=setMe,type=item_display,distance=..2] area0SpawnC 1
 execute if score #vAct value matches 3 run tag @e[tag=setMe,type=item_display,distance=..2] add act3Spawn
 
+execute if score #vAct value matches 4 run tag @e[tag=setMe,type=item_display,distance=..2] add area0Spawn
+execute if score #vAct value matches 4 run scoreboard players set @e[tag=setMe,type=item_display,distance=..2] area0SpawnD 1
+execute if score #vAct value matches 4 run tag @e[tag=setMe,type=item_display,distance=..2] add act4Spawn
+
 #50% chance we start the bobbing animation going down instead of up
 execute store result score #random value run random value 1..2
 execute if score #random value matches 1 run tag @e[tag=setMe,type=item_display,distance=..2] add goUp

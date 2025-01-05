@@ -37,6 +37,7 @@ execute if score @s editNode matches 26 run summon area_effect_cloud ~ ~ ~ {Dura
 execute if score @s editArea matches 1 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a1","color":"white"}]'}
 execute if score @s editArea matches 2 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a2","color":"white"}]'}
 execute if score @s editArea matches 3 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a3","color":"white"}]'}
+execute if score @s editArea matches 4 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a4","color":"white"}]'}
 
 #show loading section
 execute if score @s editLoadArea matches 0 positioned ~ ~.22 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"l0","color":"white"}]'}

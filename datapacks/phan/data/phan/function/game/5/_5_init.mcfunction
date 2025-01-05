@@ -1,3 +1,6 @@
+#load level data
+function phan:level_manager/load/cache_active_level_data
+
 #spectators who joined in the middle of a set of versus rounds get incorporated into the game right here
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] add playing
 tag @a[tag=doneWithIntro,tag=vsMidGameJoin] remove vsMidGameJoin

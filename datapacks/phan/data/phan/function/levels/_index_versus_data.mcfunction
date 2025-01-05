@@ -1,8 +1,17 @@
-execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_versus_data
-execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_versus_data
-execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_versus_data
-execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_versus_data
-execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_versus_data
+#load from storage
+scoreboard players set #success value 0
+execute if score #vAct value matches 1 run function phan:level_manager/load/load_versus_data_act_1 with storage phan_dream_active:pr_act_1
+execute if score #vAct value matches 2 run function phan:level_manager/load/load_versus_data_act_2 with storage phan_dream_active:pr_act_2
+execute if score #vAct value matches 3 run function phan:level_manager/load/load_versus_data_act_3 with storage phan_dream_active:pr_act_3
+execute if score #vAct value matches 4 run function phan:level_manager/load/load_versus_data_act_4 with storage phan_dream_active:pr_act_4
+execute if score #success value matches 0 run tellraw @a ["",{"text":"[ ! ] Something went wrong while loading the data for this act! Please make sure your dream's data is formatted correctly.","color":"red"}]
+
+#old index
+#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_versus_data
+#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_versus_data
+#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_versus_data
+#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_versus_data
+#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_versus_data
 
 #set randomization cooldown on the act we're currently on
 function phan:levels/_index_randomization_cooldown

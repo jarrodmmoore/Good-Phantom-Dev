@@ -1,3 +1,7 @@
+#don't bother if it's a stock level and is already cached
+execute if score #cachedLevel value = #chosenLevel value if score #chosenLevel value matches ..999 run return 0
+#=====
+
 #copy data of chosenLevel into the active dream storage
 execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
 data modify storage phan:level_index filename set value 'phan_dream_active'

@@ -92,6 +92,7 @@ $data modify storage $(filename):pr_act_1 checkpoints set from storage phan_drea
 $data modify storage $(filename):pr_act_1 laps set from storage phan_dream_$(level_id):pr_act_1 laps
 $data modify storage $(filename):pr_act_1 pearls_needed set from storage phan_dream_$(level_id):pr_act_1 pearls_needed
 $data modify storage $(filename):pr_act_1 time_limit set from storage phan_dream_$(level_id):pr_act_1 time_limit
+$data modify storage $(filename):pr_act_1 time_limit_minimum set from storage phan_dream_$(level_id):pr_act_1 time_limit_minimum
 $data modify storage $(filename):pr_act_1 reset_plane set from storage phan_dream_$(level_id):pr_act_1 reset_plane
 $data modify storage $(filename):pr_act_1 time_between_checkpoints set from storage phan_dream_$(level_id):pr_act_1 time_between_checkpoints
 $data modify storage $(filename):pr_act_1 bot_checkpoint_data set from storage phan_dream_$(level_id):pr_act_1 bot_checkpoint_data
@@ -113,6 +114,7 @@ $data modify storage $(filename):pr_act_2 checkpoints set from storage phan_drea
 $data modify storage $(filename):pr_act_2 laps set from storage phan_dream_$(level_id):pr_act_2 laps
 $data modify storage $(filename):pr_act_2 pearls_needed set from storage phan_dream_$(level_id):pr_act_2 pearls_needed
 $data modify storage $(filename):pr_act_2 time_limit set from storage phan_dream_$(level_id):pr_act_2 time_limit
+$data modify storage $(filename):pr_act_2 time_limit_minimum set from storage phan_dream_$(level_id):pr_act_2 time_limit_minimum
 $data modify storage $(filename):pr_act_2 reset_plane set from storage phan_dream_$(level_id):pr_act_2 reset_plane
 $data modify storage $(filename):pr_act_2 time_between_checkpoints set from storage phan_dream_$(level_id):pr_act_2 time_between_checkpoints
 $data modify storage $(filename):pr_act_2 bot_checkpoint_data set from storage phan_dream_$(level_id):pr_act_2 bot_checkpoint_data
@@ -134,6 +136,7 @@ $data modify storage $(filename):pr_act_3 checkpoints set from storage phan_drea
 $data modify storage $(filename):pr_act_3 laps set from storage phan_dream_$(level_id):pr_act_3 laps
 $data modify storage $(filename):pr_act_3 pearls_needed set from storage phan_dream_$(level_id):pr_act_3 pearls_needed
 $data modify storage $(filename):pr_act_3 time_limit set from storage phan_dream_$(level_id):pr_act_3 time_limit
+$data modify storage $(filename):pr_act_3 time_limit_minimum set from storage phan_dream_$(level_id):pr_act_3 time_limit_minimum
 $data modify storage $(filename):pr_act_3 reset_plane set from storage phan_dream_$(level_id):pr_act_3 reset_plane
 $data modify storage $(filename):pr_act_3 time_between_checkpoints set from storage phan_dream_$(level_id):pr_act_3 time_between_checkpoints
 $data modify storage $(filename):pr_act_3 bot_checkpoint_data set from storage phan_dream_$(level_id):pr_act_3 bot_checkpoint_data
@@ -155,6 +158,7 @@ $data modify storage $(filename):pr_act_4 checkpoints set from storage phan_drea
 $data modify storage $(filename):pr_act_4 laps set from storage phan_dream_$(level_id):pr_act_4 laps
 $data modify storage $(filename):pr_act_4 pearls_needed set from storage phan_dream_$(level_id):pr_act_4 pearls_needed
 $data modify storage $(filename):pr_act_4 time_limit set from storage phan_dream_$(level_id):pr_act_4 time_limit
+$data modify storage $(filename):pr_act_4 time_limit_minimum set from storage phan_dream_$(level_id):pr_act_4 time_limit_minimum
 $data modify storage $(filename):pr_act_4 reset_plane set from storage phan_dream_$(level_id):pr_act_4 reset_plane
 $data modify storage $(filename):pr_act_4 time_between_checkpoints set from storage phan_dream_$(level_id):pr_act_4 time_between_checkpoints
 $data modify storage $(filename):pr_act_4 bot_checkpoint_data set from storage phan_dream_$(level_id):pr_act_4 bot_checkpoint_data

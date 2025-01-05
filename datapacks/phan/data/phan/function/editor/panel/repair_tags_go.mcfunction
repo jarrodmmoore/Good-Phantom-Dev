@@ -45,6 +45,7 @@ execute if score @s editNode matches 25..26 run tag @s add podiumRelevant
 execute if score @s editArea matches 1 run tag @s add nodeArea1
 execute if score @s editArea matches 2 run tag @s add nodeArea2
 execute if score @s editArea matches 3 run tag @s add nodeArea3
+execute if score @s editArea matches 4 run tag @s add nodeArea4
 #load area tags
 execute if score @s editLoadArea matches 0 run tag @s add nodeLoadArea0
 execute if score @s editLoadArea matches 1 run tag @s add nodeLoadArea1
