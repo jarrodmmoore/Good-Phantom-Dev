@@ -7,6 +7,14 @@ function phan:game/0/assist_mode/_disable_assist_mode
 
 #reset random track cooldowns
 scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown2 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown3 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown4 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldownS1 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldownS2 0
+scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldownS3 0
+execute as @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] run function phan:game/0/admin_panel/try_act/determine_selectable_acts
+execute as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={levelUID=1..}] run function phan:join/solo_join
 
 #clear out any previous versus mode points
 function phan:game/4/new_versus_session

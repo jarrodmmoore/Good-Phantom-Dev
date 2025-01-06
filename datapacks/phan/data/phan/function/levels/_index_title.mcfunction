@@ -4,16 +4,16 @@ execute if score @s pGameTime matches 120 at @s run playsound minecraft:block.no
 
 #act subtitle
 execute if score @s pGameTime matches ..119 run title @s subtitle [""]
-execute if score @s pGameTime matches 120 run title @s subtitle ["",{"translate":"gp.game.act_number","with":[{"score":{"name":"@s","objective":"pCurrentArea"}}]}]
+execute unless score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=1}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:sa_act_1","interpret":false}]
+execute unless score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=2}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:sa_act_2","interpret":false}]
+execute unless score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=3}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:sa_act_3","interpret":false}]
+execute if score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=1}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:pr_act_1","interpret":false}]
+execute if score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=2}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:pr_act_2","interpret":false}]
+execute if score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=3}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:pr_act_3","interpret":false}]
+execute if score #gameState value matches 4 if entity @s[scores={pGameTime=120,pCurrentArea=4}] run title @s subtitle ["",{"nbt":"act_name","storage":"phan_dream_active:pr_act_4","interpret":false}]
 
 #level title
-execute unless score #chosenLevel value matches 1..5 run title @s title ["",{"text":"\uE399","color":"white"}]
-execute if score #chosenLevel value matches 1 run title @s title ["",{"text":"\uE301","color":"white"}]
-execute if score #chosenLevel value matches 2 run title @s title ["",{"text":"\uE302","color":"white"}]
-execute if score #chosenLevel value matches 3 run title @s title ["",{"text":"\uE303","color":"white"}]
-execute if score #chosenLevel value matches 4 run title @s title ["",{"text":"\uE304","color":"white"}]
-execute if score #chosenLevel value matches 5 run title @s title ["",{"text":"\uE305","color":"white"}]
-#...
+title @s title ["",{"nbt":"name_display","storage":"phan_dream_active:dream_data","interpret":true}]
 
 #"discover" the associated dream (so the name no longer shows up as ???)
 execute if score #chosenLevel value matches 1 run scoreboard players set #dream1Discovered value 1

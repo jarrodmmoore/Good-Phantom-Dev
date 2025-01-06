@@ -310,6 +310,12 @@ scoreboard objectives add playQueue dummy
 scoreboard objectives add teamRequest dummy
 #level picking
 scoreboard objectives add randomCooldown dummy
+scoreboard objectives add randomCooldown2 dummy
+scoreboard objectives add randomCooldown3 dummy
+scoreboard objectives add randomCooldown4 dummy
+scoreboard objectives add randomCooldownS1 dummy
+scoreboard objectives add randomCooldownS2 dummy
+scoreboard objectives add randomCooldownS3 dummy
 #present object
 scoreboard objectives add presentTime dummy
 scoreboard objectives add presentTimeMax dummy
@@ -584,3 +590,5 @@ scoreboard players set #9000 value 9000
 scoreboard players set #360 value 360
 scoreboard players set #36 value 36
 scoreboard players set #16 value 16
+#clean-up from old code
+scoreboard players reset #teleportStart value

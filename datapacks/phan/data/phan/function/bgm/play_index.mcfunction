@@ -5,7 +5,8 @@ execute unless score @s musicTrack matches 2 run scoreboard players set @s music
 stopsound @s record
 
 #get the song
-execute if score @s musicTrack matches ..0 run function phan:bgm/play_0
+execute if score @s musicTrack matches -4..-1 run function phan:bgm/play_index_custom
+execute if score @s musicTrack matches 0 run function phan:bgm/play_0
 execute if score @s musicTrack matches 1 run function phan:bgm/play_1
 execute if score @s musicTrack matches 2 run function phan:bgm/play_2
 execute if score @s musicTrack matches 3 run function phan:bgm/play_3

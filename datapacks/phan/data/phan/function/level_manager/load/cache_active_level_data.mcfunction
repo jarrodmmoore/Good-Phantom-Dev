@@ -10,3 +10,15 @@ function phan:level_manager/export_dream_go with storage phan:level_index
 
 #Q: why do this?
 #A: so it's easier to access the dream's data during gameplay without having to index it with a macro every dang time
+
+
+#keep track of whether we should be doing custom area transitions in Score Attack mode
+execute store result score #saCustomAreaTransition1 value run data get storage phan_dream_active:sa_act_1 use_area_transition
+execute store result score #saCustomAreaTransition2 value run data get storage phan_dream_active:sa_act_2 use_area_transition
+execute store result score #saCustomAreaTransition3 value run data get storage phan_dream_active:sa_act_3 use_area_transition
+
+#generate and store indexes for "random" level music (in case any acts are using it)
+execute store result score #bgmRandomAct1 value run random value 1..12
+execute store result score #bgmRandomAct2 value run random value 1..12
+execute store result score #bgmRandomAct3 value run random value 1..12
+execute store result score #bgmRandomAct4 value run random value 1..12

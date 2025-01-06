@@ -3,8 +3,7 @@
 #player gets sent to start
 gamemode adventure @s
 scoreboard players set @s spectatingObject 0
-scoreboard players set #teleportStart value 1
-function phan:levels/_index_teleport
+execute at @s run tp @s @e[limit=1,sort=nearest,type=marker,tag=startPoint,distance=..40]
 execute at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
 execute at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 

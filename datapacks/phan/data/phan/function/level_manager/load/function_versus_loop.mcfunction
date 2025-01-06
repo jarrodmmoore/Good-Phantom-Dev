@@ -1,0 +1,1 @@
+$function $(function_namespace):$(function_path)/_index_versus_loop

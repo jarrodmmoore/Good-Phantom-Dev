@@ -3,7 +3,15 @@ scoreboard players set #usingRandomLevelSelect value 1
 
 #count down randomization cooldown on all levels
 #(re-rolling tracks over and over will eventually deplete all the cooldowns. this is intentional)
+#portal race
 scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldown=1..}] randomCooldown 1
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldown2=1..}] randomCooldown2 1
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldown3=1..}] randomCooldown3 1
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldown4=1..}] randomCooldown4 1
+#score attack
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldownS1=1..}] randomCooldownS1 1
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldownS2=1..}] randomCooldownS2 1
+scoreboard players remove @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldownS3=1..}] randomCooldownS3 1
 
 #fail-safe: make sure all armor stands have a randomCooldown score of 0
 execute unless entity @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={randomCooldown=..0}] run scoreboard players set @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] randomCooldown 0
