@@ -1,8 +1,41 @@
 #time attack times
-execute store result score #timeBronze value run data get storage phan_dream_active:score_attack time_bronze
-execute store result score #timeSilver value run data get storage phan_dream_active:score_attack time_silver
-execute store result score #timeGold value run data get storage phan_dream_active:score_attack time_gold
-execute store result score #timeDiamond value run data get storage phan_dream_active:score_attack time_diamond
+#format is [minute, decasecond, second], need to convert to ticks
+#bronze
+execute store result score #math value run data get storage phan_dream_active:score_attack time_bronze[0]
+scoreboard players operation #math value *= #60 value
+execute store result score #math2 value run data get storage phan_dream_active:score_attack time_bronze[1]
+scoreboard players operation #math2 value *= #10 value
+execute store result score #timeBronze value run data get storage phan_dream_active:score_attack time_bronze[2]
+scoreboard players operation #timeBronze value += #math value
+scoreboard players operation #timeBronze value += #math2 value
+scoreboard players operation #timeBronze value *= #20 value
+#silver
+execute store result score #math value run data get storage phan_dream_active:score_attack time_silver[0]
+scoreboard players operation #math value *= #60 value
+execute store result score #math2 value run data get storage phan_dream_active:score_attack time_silver[1]
+scoreboard players operation #math2 value *= #10 value
+execute store result score #timeSilver value run data get storage phan_dream_active:score_attack time_silver[2]
+scoreboard players operation #timeSilver value += #math value
+scoreboard players operation #timeSilver value += #math2 value
+scoreboard players operation #timeSilver value *= #20 value
+#gold
+execute store result score #math value run data get storage phan_dream_active:score_attack time_gold[0]
+scoreboard players operation #math value *= #60 value
+execute store result score #math2 value run data get storage phan_dream_active:score_attack time_gold[1]
+scoreboard players operation #math2 value *= #10 value
+execute store result score #timeGold value run data get storage phan_dream_active:score_attack time_gold[2]
+scoreboard players operation #timeGold value += #math value
+scoreboard players operation #timeGold value += #math2 value
+scoreboard players operation #timeGold value *= #20 value
+#diamond
+execute store result score #math value run data get storage phan_dream_active:score_attack time_diamond[0]
+scoreboard players operation #math value *= #60 value
+execute store result score #math2 value run data get storage phan_dream_active:score_attack time_diamond[1]
+scoreboard players operation #math2 value *= #10 value
+execute store result score #timeDiamond value run data get storage phan_dream_active:score_attack time_diamond[2]
+scoreboard players operation #timeDiamond value += #math value
+scoreboard players operation #timeDiamond value += #math2 value
+scoreboard players operation #timeDiamond value *= #20 value
 
 #load data for all 3 acts at once
 #sort of an odd approach, but it worked back then and it still works now
@@ -46,7 +79,7 @@ execute store result score #scoreRankB3 value run data get storage phan_dream_ac
 execute store result score #scoreRankC3 value run data get storage phan_dream_active:sa_act_3 score_requirement_c
 
 #target times
-#(format is [minute, decasecond, second], need to convert to seconds)
+#format is [minute, decasecond, second], need to convert to seconds
 execute store result score #targetTimeAct1 value run data get storage phan_dream_active:sa_act_1 target_time[2]
 execute store result score #math value run data get storage phan_dream_active:sa_act_1 target_time[1]
 scoreboard players operation #math value *= #10 value

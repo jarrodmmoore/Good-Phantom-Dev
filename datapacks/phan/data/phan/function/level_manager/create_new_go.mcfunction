@@ -12,6 +12,8 @@ execute unless score @s nearPlayer matches -2147483648..2147483647 run return ru
 scoreboard players operation @s levelUID = @s nearPlayer
 
 #get storage arg ready
+data modify storage phan:level_index sleeping_player set value 'steve'
+data modify storage phan:level_index function_index set value 1
 execute store result storage phan:level_index level_id int 1 run scoreboard players get @s levelUID
 #phan:level_index act_id
 

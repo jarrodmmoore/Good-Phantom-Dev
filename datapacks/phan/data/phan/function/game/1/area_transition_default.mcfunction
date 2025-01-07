@@ -7,4 +7,4 @@ scoreboard players set #followStraightUp value 1
 tp @s ~ ~1 ~
 
 #stop bgm during load screen unless this was the final portal
-execute if score #pCurrentArea value matches ..3 as @a[tag=playing] if score @s playerID = #findID value run function phan:bgm/stop_bgm_self
+execute if score #pTransitionProgress value matches 100200.. if score #pCurrentArea value matches ..3 as @a[tag=playing] if score @s playerID = #findID value run function phan:bgm/stop_bgm_self

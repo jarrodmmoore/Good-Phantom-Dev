@@ -6,3 +6,7 @@ execute unless score @s musicTrack = #spectatorMusic value if entity @s[tag=!noS
 scoreboard players operation @s[tag=!noSpecDataAdopt] enderEyes = #spectatorEyes value
 scoreboard players operation @s prevSpectateID = #spectatingID value
 scoreboard players operation @s check = #spectatorCheck value
+
+#score attack, adopt night vision (or lack thereof) from target
+execute if score #gameState value matches 1 if score #spectatorNightVision value matches 1.. run effect give @s night_vision 15 1 true
+execute if score #gameState value matches 1 if score #spectatorNightVision value matches ..0 unless score #nightVision value matches 1 run effect clear @s night_vision

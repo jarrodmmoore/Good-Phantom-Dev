@@ -73,6 +73,10 @@ scoreboard players set @s time2portalMin 0
 #time attack: get the timer started if it hasn't started already
 tag @s add trackPlayerTime
 
+#record whether we've unlocked certain built-in levels
+scoreboard players operation #math value = @s pCurrentArea
+function phan:levels/_index_unlock_act
+
 #set spawnpoint
 function phan:game/1/player/set_spawnpoint
 

@@ -14,9 +14,17 @@ execute if entity @s[tag=dream4lock] run scoreboard players set #dream4Opened va
 
 execute if entity @s[tag=dream5lock] run scoreboard players set #dream5Opened value 1
 
+execute if entity @s[tag=dreamP_lock] run scoreboard players set #dreamPOpened value 1
+execute if entity @s[tag=dreamP_lock] run fill 236 -9 102 237 -7 102 air
+
+execute if entity @s[tag=dreamC_lock] run scoreboard players set #dreamCOpened value 1
+execute if entity @s[tag=dreamC_lock] run fill 236 -9 134 237 -7 134 air
+
 #don't run again please
 tag @s remove dream2lock
 tag @s remove dream3lockA
 tag @s remove dream3lockB
 tag @s remove dream4lock
 tag @s remove dream5lock
+tag @s remove dreamP_lock
+tag @s remove dreamC_lock

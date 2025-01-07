@@ -43,6 +43,7 @@ title @s subtitle [""]
 title @s title [""]
 effect give @s invisibility 20 0 true
 tag @s remove trackPlayerTime
+tag @s remove getNightVisionInSA
 
 #initialize data
 scoreboard players add @s anyDreamCompleted 0

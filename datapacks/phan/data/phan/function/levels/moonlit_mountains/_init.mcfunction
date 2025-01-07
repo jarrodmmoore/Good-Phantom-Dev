@@ -1,9 +1,11 @@
+#old, obsolete
+
 #conditions
-time set 18000
-weather clear
+#time set 18000
+#weather clear
 
 #skybox
-scoreboard players set @a skyboxSet 3
+#scoreboard players set @a skyboxSet 3
 
 #clear tags
 tag @a[tag=climbMoonlitTower] remove climbMoonlitTower

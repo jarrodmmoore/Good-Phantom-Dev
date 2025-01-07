@@ -13,14 +13,24 @@ execute store result score #vCheckPoints value run data get storage phan_dream_a
 execute store result score #vLaps value run data get storage phan_dream_active:pr_act_4 laps
 execute store result score #vEyesNeeded value run data get storage phan_dream_active:pr_act_4 pearls_needed
 
-#time limit
-execute store result score #vMinTimeLimit value run data get storage phan_dream_active:pr_act_4 time_limit
-execute store result score #vTimeLimit value run data get storage phan_dream_active:pr_act_4 time_limit_minimum
+#time limit (need to convert minutes to ticks)
+execute store result score #vMinTimeLimit value run data get storage phan_dream_active:pr_act_4 time_limit_minimum
+scoreboard players operation #vMinTimeLimit value *= #20 value
+scoreboard players operation #vMinTimeLimit value *= #60 value
+execute store result score #vTimeLimit value run data get storage phan_dream_active:pr_act_4 time_limit
+scoreboard players operation #vTimeLimit value *= #20 value
+scoreboard players operation #vTimeLimit value *= #60 value
 
 #record what dimension we're supposed to be in
 execute store result score #activeDimension value run data get storage phan_dream_active:pr_act_4 teleport_dimension
 #non-overworld dimensions must check boundaries at y=0 instead of y=-64
 execute unless score #activeDimension value matches 1 run scoreboard players set #checkLoadHeight value 0
+
+#night vision
+execute store result score #nightVision value run data get storage phan_dream_active:pr_act_4 night_vision
+
+#bright mines
+execute store result score #brightMines value run data get storage phan_dream_active:pr_act_4 bright_mines
 
 #bot checkpoint data
 execute store result score #botTimeBetweenCPs value run data get storage phan_dream_active:pr_act_4 time_between_checkpoints

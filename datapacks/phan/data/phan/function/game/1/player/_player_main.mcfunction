@@ -41,6 +41,9 @@ execute unless score @s timerAdd matches 0 run function phan:game/1/player/time_
 #handle respawn trigger
 execute if score @s respawn matches 1.. run function phan:game/1/player_respawn
 
+#night vision if we're tagged for that
+execute if entity @s[tag=getNightVisionInSA] run effect give @s night_vision 15 1 true
+
 
 #xp bar (energy display)
 function phan:game/1/player/xp_bar/xp_main

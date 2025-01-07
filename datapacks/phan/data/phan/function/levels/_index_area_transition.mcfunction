@@ -1,13 +1,13 @@
 #executed by "@e[tag=playerSoul]"
 
 execute if score #pCurrentArea value matches ..2 if score #saCustomAreaTransition1 value matches ..0 run function phan:game/1/area_transition_default
-execute if score #pCurrentArea value matches ..2 if score #saCustomAreaTransition1 value matches 1.. run function phan:level_manager/load/area_transition_custom_1 with storage phan_dream_active:sa_act_1
+execute if score #pCurrentArea value matches ..2 if score #saCustomAreaTransition1 value matches 1.. run function phan:level_manager/load/area_transition_custom_1 with storage phan_dream_active:dream_data
 
 execute if score #pCurrentArea value matches 3 if score #saCustomAreaTransition2 value matches ..0 run function phan:game/1/area_transition_default
-execute if score #pCurrentArea value matches 3 if score #saCustomAreaTransition2 value matches 1.. run function phan:level_manager/load/area_transition_custom_2 with storage phan_dream_active:sa_act_2
+execute if score #pCurrentArea value matches 3 if score #saCustomAreaTransition2 value matches 1.. run function phan:level_manager/load/area_transition_custom_2 with storage phan_dream_active:dream_data
 
 execute if score #pCurrentArea value matches 4.. if score #saCustomAreaTransition3 value matches ..0 run function phan:game/1/area_transition_default
-execute if score #pCurrentArea value matches 4.. if score #saCustomAreaTransition3 value matches 1.. run function phan:level_manager/load/area_transition_custom_3 with storage phan_dream_active:sa_act_3
+execute if score #pCurrentArea value matches 4.. if score #saCustomAreaTransition3 value matches 1.. run function phan:level_manager/load/area_transition_custom_3 with storage phan_dream_active:dream_data
 
 #old, hardcoded
 #execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_area_transitions

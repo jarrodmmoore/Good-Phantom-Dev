@@ -83,6 +83,10 @@ function phan:game/1/start_loading_area
 scoreboard players set @s currentLoad 0
 scoreboard players set @s previousLoad -1
 
+#record whether we've unlocked certain built-in levels
+scoreboard players operation #math value = @s pCurrentArea
+function phan:levels/_index_unlock_act
+
 #set spawnpoint
 spawnpoint @s ~ ~1 ~
 function phan:game/1/player/set_spawnpoint

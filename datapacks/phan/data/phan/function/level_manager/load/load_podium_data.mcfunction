@@ -2,6 +2,7 @@
 $weather $(weather)
 $time set $(time)
 $scoreboard players set @a skyboxSet $(skybox)
+$scoreboard players set #nightVision value $(night_vision)
 
 #location
 execute store result score #podiumSequenceX value run data get storage phan_dream_active:pr_podium teleport_location[0]

@@ -13,16 +13,11 @@ scoreboard players operation @s editArg3 = #editArg3 value
 #execute store result entity @s Rotation[1] double 1.0 run scoreboard players get #editPitch value
 
 #ok fine, we'll use the rotation part of my parameterized teleport thing
-scoreboard players operation @s dummy_yaw = #editYaw value
-scoreboard players operation @s dummy_pitch = #editPitch value
 scoreboard players operation @s goto_yaw = #editYaw value
 scoreboard players operation @s goto_pitch = #editPitch value
-execute positioned ~ ~ ~ rotated 0 0 run function phan:warp_to_saved_coords/yaw/_pos_or_neg
-scoreboard players reset @s dummy_yaw
-scoreboard players reset @s dummy_pitch
+function phan:warp_to_saved_coords/_go_rotate_only
 scoreboard players reset @s goto_yaw
 scoreboard players reset @s goto_pitch
-#I guess in 1.21 we can use macros for this kind of thing now? Ah whatever, too late now.
 
 #get specific tags (for @e efficiency)
 function phan:editor/panel/repair_tags_go

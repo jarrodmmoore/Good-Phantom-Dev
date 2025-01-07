@@ -4,7 +4,7 @@
 #...which would result in the randomization armor stands duplicating and causing erratic behavior!
 
 #world spawn
-setworldspawn 106 15 73
+setworldspawn 162 -6 132
 
 #variables
 scoreboard players set #hudMode value 1

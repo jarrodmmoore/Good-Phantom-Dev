@@ -6,6 +6,9 @@ execute if score #vAct value matches 3 run function phan:level_manager/load/load
 execute if score #vAct value matches 4 run function phan:level_manager/load/load_versus_data_act_4 with storage phan_dream_active:pr_act_4
 execute if score #success value matches 0 run tellraw @a ["",{"text":"[ ! ] Something went wrong while loading the data for this act! Please make sure your dream's data is formatted correctly.","color":"red"}]
 
+#do versus init
+function phan:level_manager/load/function_init_versus with storage phan_dream_active:dream_data
+
 #old hard-coded index
 #execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_versus_data
 #execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_versus_data

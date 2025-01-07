@@ -105,3 +105,69 @@ execute positioned 206 -7 97 positioned ~ ~-.3 ~ run summon armor_stand ~ ~ ~ {T
 execute positioned 204 -8 97 positioned ~.5 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:5,head_rotation:'[0.0f,180.0f,0.0f]'}
 #title
 execute if score #dream5Completed value matches 1.. positioned 204 -3 97 run function phan:level_manager/load/spawn_name_display {level_uid:5,rotation:0,offset_x:'.5',offset_y:'.25',offset_z:'-.4'}
+
+#DEN
+#bonus dreams text
+execute if score #dream3Completed value matches 1.. run summon text_display 236 -7 104 {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.lobby.bonus_dreams","fallback":"Bonus Dreams","color":"white"}'}
+execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~.8 ~-.4 ~ ~
+tag @e[tag=rotateText,type=text_display] remove rotateText
+#custom dreams text
+execute if score #dream3Completed value matches 1.. run summon text_display 236 -7 132 {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'{"translate":"gp.lobby.custom_dreams","fallback":"Custom Dreams","color":"white"}'}
+execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~.8 ~.4 ~180 ~
+tag @e[tag=rotateText,type=text_display] remove rotateText
+
+#CUSTOM ROOM 1
+#player
+execute positioned 248 -10 140 positioned ~.75 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1001,head_rotation:'[0.0f,270.0f,0.0f]'}
+#title
+execute positioned 249 -4 140 run function phan:level_manager/load/spawn_name_display {level_uid:1001,rotation:90,offset_x:'.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 2
+#player
+execute positioned 248 -10 153 positioned ~.75 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1002,head_rotation:'[0.0f,270.0f,0.0f]'}
+#title
+execute positioned 249 -4 153 run function phan:level_manager/load/spawn_name_display {level_uid:1002,rotation:90,offset_x:'.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 3
+#player
+execute positioned 248 -10 166 positioned ~.75 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1003,head_rotation:'[0.0f,270.0f,0.0f]'}
+#title
+execute positioned 249 -4 166 run function phan:level_manager/load/spawn_name_display {level_uid:1003,rotation:90,offset_x:'.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 4
+#player
+execute positioned 248 -10 179 positioned ~.75 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1004,head_rotation:'[0.0f,270.0f,0.0f]'}
+#title
+execute positioned 249 -4 179 run function phan:level_manager/load/spawn_name_display {level_uid:1004,rotation:90,offset_x:'.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 5
+#player
+execute positioned 224 -10 140 positioned ~.25 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1005,head_rotation:'[0.0f,90.0f,0.0f]'}
+#title
+execute positioned 224 -4 140 run function phan:level_manager/load/spawn_name_display {level_uid:1005,rotation:270,offset_x:'-.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 6
+#player
+execute positioned 224 -10 153 positioned ~.25 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1006,head_rotation:'[0.0f,90.0f,0.0f]'}
+#title
+execute positioned 224 -4 153 run function phan:level_manager/load/spawn_name_display {level_uid:1006,rotation:270,offset_x:'-.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 7
+#player
+execute positioned 224 -10 166 positioned ~.25 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1007,head_rotation:'[0.0f,90.0f,0.0f]'}
+#title
+execute positioned 224 -4 166 run function phan:level_manager/load/spawn_name_display {level_uid:1007,rotation:270,offset_x:'-.4',offset_y:'.25',offset_z:'.5'}
+
+#CUSTOM ROOM 8
+#player
+execute positioned 224 -10 179 positioned ~.25 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:1008,head_rotation:'[0.0f,90.0f,0.0f]'}
+#title
+execute positioned 224 -4 179 run function phan:level_manager/load/spawn_name_display {level_uid:1008,rotation:270,offset_x:'-.4',offset_y:'.25',offset_z:'.5'}
+
+#BONUS ROOM 1
+#alarm clock
+execute positioned 224 -9 94 positioned ~ ~-.3 ~ run summon armor_stand ~ ~ ~ {Tags:["lobbyProp"],Marker:1b,Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[-10.0f,-20.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:red_wool",count:1,components:{"item_model":"gp/object/alarm_clock"}}]}
+#player
+execute positioned 224 -10 95 positioned ~.25 ~-.2 ~.5 run function phan:level_manager/load/spawn_sleeping_player {level_uid:6,head_rotation:'[0.0f,90.0f,0.0f]'}
+#title
+execute positioned 224 -4 95 run function phan:level_manager/load/spawn_name_display {level_uid:6,rotation:270,offset_x:'-.4',offset_y:'.25',offset_z:'.5'}

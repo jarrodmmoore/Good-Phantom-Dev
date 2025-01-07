@@ -58,3 +58,14 @@ execute as @e[type=item_display,tag=dream3lockA] at @s run tp @s ~ ~ ~ 90 0
 execute if score #dream3Unlocked value matches 1 run fill 211 -1 116 213 -1 120 red_carpet replace structure_void
 execute if score #dream3Unlocked value matches 1 run fill 214 -2 117 214 -2 119 red_wool replace dark_oak_planks
 execute if score #dream3Unlocked value matches 1 run fill 214 -1 117 214 2 119 air replace barrier
+
+#door blocking bonus dreams
+execute if score #dreamPOpened value matches 0 run fill 236 -9 102 237 -7 102 spruce_wood
+execute if score #dreamPOpened value matches 0 positioned 236 -9 103 positioned ~.5 ~1.1 ~-.4 run summon item_display ~ ~ ~ {Tags:["lobbyProp","dreamP_lock"],item_display:"head",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/lock_rainbow"}}}
+execute if score #dreamPOpened value matches 1 run fill 236 -9 102 237 -7 102 air
+
+#door blocking custom dreams
+execute if score #dreamCOpened value matches 0 run fill 236 -9 134 237 -7 134 spruce_wood
+execute if score #dreamCOpened value matches 0 positioned 236 -9 133 positioned ~.5 ~1.1 ~.4 run summon item_display ~ ~ ~ {Tags:["lobbyProp","dreamC_lock"],item_display:"head",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/lock_rainbow"}}}
+execute as @e[type=item_display,tag=dreamC_lock] at @s run tp @s ~ ~ ~ 180 0
+execute if score #dreamCOpened value matches 1 run fill 236 -9 134 237 -7 134 air

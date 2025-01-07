@@ -38,6 +38,8 @@ $data modify storage $(filename):sa_act_1 music_function set from storage phan_d
 $data modify storage $(filename):sa_act_1 teleport_dimension set from storage phan_dream_$(level_id):sa_act_1 teleport_dimension
 $data modify storage $(filename):sa_act_1 teleport_location set from storage phan_dream_$(level_id):sa_act_1 teleport_location
 $data modify storage $(filename):sa_act_1 soul_approach set from storage phan_dream_$(level_id):sa_act_1 soul_approach
+$data modify storage $(filename):sa_act_1 night_vision set from storage phan_dream_$(level_id):sa_act_1 night_vision
+$data modify storage $(filename):sa_act_1 bright_mines set from storage phan_dream_$(level_id):sa_act_1 bright_mines
 $data modify storage $(filename):sa_act_2 playable set from storage phan_dream_$(level_id):sa_act_2 playable
 $data modify storage $(filename):sa_act_2 act_name set from storage phan_dream_$(level_id):sa_act_2 act_name
 $data modify storage $(filename):sa_act_2 thumbnail_item set from storage phan_dream_$(level_id):sa_act_2 thumbnail_item
@@ -59,6 +61,8 @@ $data modify storage $(filename):sa_act_2 music_function set from storage phan_d
 $data modify storage $(filename):sa_act_2 teleport_dimension set from storage phan_dream_$(level_id):sa_act_2 teleport_dimension
 $data modify storage $(filename):sa_act_2 teleport_location set from storage phan_dream_$(level_id):sa_act_2 teleport_location
 $data modify storage $(filename):sa_act_2 soul_approach set from storage phan_dream_$(level_id):sa_act_2 soul_approach
+$data modify storage $(filename):sa_act_2 night_vision set from storage phan_dream_$(level_id):sa_act_2 night_vision
+$data modify storage $(filename):sa_act_2 bright_mines set from storage phan_dream_$(level_id):sa_act_2 bright_mines
 $data modify storage $(filename):sa_act_3 playable set from storage phan_dream_$(level_id):sa_act_3 playable
 $data modify storage $(filename):sa_act_3 act_name set from storage phan_dream_$(level_id):sa_act_3 act_name
 $data modify storage $(filename):sa_act_3 thumbnail_item set from storage phan_dream_$(level_id):sa_act_3 thumbnail_item
@@ -80,6 +84,8 @@ $data modify storage $(filename):sa_act_3 music_function set from storage phan_d
 $data modify storage $(filename):sa_act_3 teleport_dimension set from storage phan_dream_$(level_id):sa_act_3 teleport_dimension
 $data modify storage $(filename):sa_act_3 teleport_location set from storage phan_dream_$(level_id):sa_act_3 teleport_location
 $data modify storage $(filename):sa_act_3 soul_approach set from storage phan_dream_$(level_id):sa_act_3 soul_approach
+$data modify storage $(filename):sa_act_3 night_vision set from storage phan_dream_$(level_id):sa_act_3 night_vision
+$data modify storage $(filename):sa_act_3 bright_mines set from storage phan_dream_$(level_id):sa_act_3 bright_mines
 $data modify storage $(filename):portal_race selectable set from storage phan_dream_$(level_id):portal_race selectable
 $data modify storage $(filename):pr_act_1 playable set from storage phan_dream_$(level_id):pr_act_1 playable
 $data modify storage $(filename):pr_act_1 act_name set from storage phan_dream_$(level_id):pr_act_1 act_name
@@ -103,6 +109,8 @@ $data modify storage $(filename):pr_act_1 music_track set from storage phan_drea
 $data modify storage $(filename):pr_act_1 music_function set from storage phan_dream_$(level_id):pr_act_1 music_function
 $data modify storage $(filename):pr_act_1 teleport_dimension set from storage phan_dream_$(level_id):pr_act_1 teleport_dimension
 $data modify storage $(filename):pr_act_1 teleport_location set from storage phan_dream_$(level_id):pr_act_1 teleport_location
+$data modify storage $(filename):pr_act_1 night_vision set from storage phan_dream_$(level_id):pr_act_1 night_vision
+$data modify storage $(filename):pr_act_1 bright_mines set from storage phan_dream_$(level_id):pr_act_1 bright_mines
 $data modify storage $(filename):pr_act_2 playable set from storage phan_dream_$(level_id):pr_act_2 playable
 $data modify storage $(filename):pr_act_2 act_name set from storage phan_dream_$(level_id):pr_act_2 act_name
 $data modify storage $(filename):pr_act_2 thumbnail_item set from storage phan_dream_$(level_id):pr_act_2 thumbnail_item
@@ -125,6 +133,8 @@ $data modify storage $(filename):pr_act_2 music_track set from storage phan_drea
 $data modify storage $(filename):pr_act_2 music_function set from storage phan_dream_$(level_id):pr_act_2 music_function
 $data modify storage $(filename):pr_act_2 teleport_dimension set from storage phan_dream_$(level_id):pr_act_2 teleport_dimension
 $data modify storage $(filename):pr_act_2 teleport_location set from storage phan_dream_$(level_id):pr_act_2 teleport_location
+$data modify storage $(filename):pr_act_2 night_vision set from storage phan_dream_$(level_id):pr_act_2 night_vision
+$data modify storage $(filename):pr_act_2 bright_mines set from storage phan_dream_$(level_id):pr_act_2 bright_mines
 $data modify storage $(filename):pr_act_3 playable set from storage phan_dream_$(level_id):pr_act_3 playable
 $data modify storage $(filename):pr_act_3 act_name set from storage phan_dream_$(level_id):pr_act_3 act_name
 $data modify storage $(filename):pr_act_3 thumbnail_item set from storage phan_dream_$(level_id):pr_act_3 thumbnail_item
@@ -147,6 +157,8 @@ $data modify storage $(filename):pr_act_3 music_track set from storage phan_drea
 $data modify storage $(filename):pr_act_3 music_function set from storage phan_dream_$(level_id):pr_act_3 music_function
 $data modify storage $(filename):pr_act_3 teleport_dimension set from storage phan_dream_$(level_id):pr_act_3 teleport_dimension
 $data modify storage $(filename):pr_act_3 teleport_location set from storage phan_dream_$(level_id):pr_act_3 teleport_location
+$data modify storage $(filename):pr_act_3 night_vision set from storage phan_dream_$(level_id):pr_act_3 night_vision
+$data modify storage $(filename):pr_act_3 bright_mines set from storage phan_dream_$(level_id):pr_act_3 bright_mines
 $data modify storage $(filename):pr_act_4 playable set from storage phan_dream_$(level_id):pr_act_4 playable
 $data modify storage $(filename):pr_act_4 act_name set from storage phan_dream_$(level_id):pr_act_4 act_name
 $data modify storage $(filename):pr_act_4 thumbnail_item set from storage phan_dream_$(level_id):pr_act_4 thumbnail_item
@@ -169,11 +181,14 @@ $data modify storage $(filename):pr_act_4 music_track set from storage phan_drea
 $data modify storage $(filename):pr_act_4 music_function set from storage phan_dream_$(level_id):pr_act_4 music_function
 $data modify storage $(filename):pr_act_4 teleport_dimension set from storage phan_dream_$(level_id):pr_act_4 teleport_dimension
 $data modify storage $(filename):pr_act_4 teleport_location set from storage phan_dream_$(level_id):pr_act_4 teleport_location
+$data modify storage $(filename):pr_act_4 night_vision set from storage phan_dream_$(level_id):pr_act_4 night_vision
+$data modify storage $(filename):pr_act_4 bright_mines set from storage phan_dream_$(level_id):pr_act_4 bright_mines
 $data modify storage $(filename):pr_podium time set from storage phan_dream_$(level_id):pr_podium time
 $data modify storage $(filename):pr_podium weather set from storage phan_dream_$(level_id):pr_podium weather
 $data modify storage $(filename):pr_podium skybox set from storage phan_dream_$(level_id):pr_podium skybox
 $data modify storage $(filename):pr_podium teleport_dimension set from storage phan_dream_$(level_id):pr_podium teleport_dimension
 $data modify storage $(filename):pr_podium teleport_location set from storage phan_dream_$(level_id):pr_podium teleport_location
+$data modify storage $(filename):pr_podium night_vision set from storage phan_dream_$(level_id):pr_podium night_vision
 
 #we did it!
 scoreboard players set #success value 1

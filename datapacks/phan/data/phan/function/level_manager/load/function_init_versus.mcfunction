@@ -1,0 +1,1 @@
+$function $(function_namespace):$(function_path)/_init_versus

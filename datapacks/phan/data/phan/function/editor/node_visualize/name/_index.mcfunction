@@ -34,6 +34,7 @@ execute if score @s editNode matches 25 run function phan:editor/node_visualize/
 execute if score @s editNode matches 26 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.podium_camera","color":"white"}]'}
 #...
 execute if score @s editNode matches 28 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.sa_respawn_point","color":"white"}]'}
+execute if score @s editNode matches 29 run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.teleport_handler","color":"light_purple"}]'}
 
 #show area
 execute if score @s editArea matches 1 positioned ~ ~.44 ~ run summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"a1","color":"white"}]'}

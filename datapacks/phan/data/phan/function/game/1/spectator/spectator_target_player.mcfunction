@@ -16,3 +16,4 @@ scoreboard players operation #spectatingObject value = @s spectatingObject
 scoreboard players operation #spectatorMusic value = @s musicTrack
 scoreboard players operation #spectatorEyes value = @s enderEyes
 scoreboard players operation #spectatorCheck value = @s check
+execute store result score #spectatorNightVision value run execute if entity @s[tag=getNightVisionInSA]

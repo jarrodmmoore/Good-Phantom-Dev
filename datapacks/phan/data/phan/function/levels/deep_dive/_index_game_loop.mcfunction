@@ -1,5 +1,6 @@
+#old
 #kill plane beneath level
-execute as @a[tag=playing,gamemode=adventure,scores={location_y=..-35}] run function phan:game/1/player/respawn
+#execute as @a[tag=playing,gamemode=adventure,scores={location_y=..-35}] run function phan:game/1/player/respawn
 
 #area 1
 execute if entity @a[tag=playing,scores={pCurrentArea=1}] run function phan:levels/deep_dive/area_1_loop

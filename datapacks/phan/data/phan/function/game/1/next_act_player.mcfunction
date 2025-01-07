@@ -6,6 +6,9 @@ scoreboard players add @s pCurrentArea 1
 execute if score @s pCurrentArea matches 4.. run scoreboard players set @s pCurrentArea 1
 execute if score #freePlay value matches 0 run gamemode adventure @s
 
+#update level conditions! including on self
+execute if score #freePlay value matches 0 run function phan:level_manager/load/load_score_attack_act_specific
+
 #clear points so they don't get doubled on the sidebar during load screen :)
 scoreboard players set @s scoreCurrent 0
 scoreboard players set @s scoreCurrent2 0

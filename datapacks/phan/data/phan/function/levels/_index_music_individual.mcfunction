@@ -1,15 +1,15 @@
 #fetch song from storage
 
 #portal race song data
-execute if score #gameState value matches 4 unless score @s pCurrentArea matches 2..4 store result score @s musicTrack run data get storage phan_dream_active:pr_act_1
-execute if score #gameState value matches 4 if score @s pCurrentArea matches 2 store result score @s musicTrack run data get storage phan_dream_active:pr_act_2
-execute if score #gameState value matches 4 if score @s pCurrentArea matches 3 store result score @s musicTrack run data get storage phan_dream_active:pr_act_3
-execute if score #gameState value matches 4 if score @s pCurrentArea matches 4 store result score @s musicTrack run data get storage phan_dream_active:pr_act_4
+execute if score #gameState value matches 4 unless score @s pCurrentArea matches 2..4 store result score @s musicTrack run data get storage phan_dream_active:pr_act_1 music_track
+execute if score #gameState value matches 4 if score @s pCurrentArea matches 2 store result score @s musicTrack run data get storage phan_dream_active:pr_act_2 music_track
+execute if score #gameState value matches 4 if score @s pCurrentArea matches 3 store result score @s musicTrack run data get storage phan_dream_active:pr_act_3 music_track
+execute if score #gameState value matches 4 if score @s pCurrentArea matches 4 store result score @s musicTrack run data get storage phan_dream_active:pr_act_4 music_track
 
 #score attack song data
-execute unless score #gameState value matches 4 unless score @s pCurrentArea matches 2..3 store result score @s musicTrack run data get storage phan_dream_active:sa_act_1
-execute unless score #gameState value matches 4 if score @s pCurrentArea matches 2 store result score @s musicTrack run data get storage phan_dream_active:sa_act_2
-execute unless score #gameState value matches 4 if score @s pCurrentArea matches 3 store result score @s musicTrack run data get storage phan_dream_active:sa_act_3
+execute unless score #gameState value matches 4 unless score @s pCurrentArea matches 2..3 store result score @s musicTrack run data get storage phan_dream_active:sa_act_1 music_track
+execute unless score #gameState value matches 4 if score @s pCurrentArea matches 2 store result score @s musicTrack run data get storage phan_dream_active:sa_act_2 music_track
+execute unless score #gameState value matches 4 if score @s pCurrentArea matches 3 store result score @s musicTrack run data get storage phan_dream_active:sa_act_3 music_track
 
 
 #song -1 is random, pick the pre-assigned random music track

@@ -1,3 +1,4 @@
-execute if score #test value matches 1 as 00000000-0000-0328-0000-000000000001 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value
-execute if score #test value matches 2 as 00000000-0000-0328-0000-000000000002 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value
-execute if score #test value matches 3 as 00000000-0000-0328-0000-000000000003 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value
+#old, de-referenced
+#execute if score #test value matches 1 as 00000000-0000-0328-0000-000000000001 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value
+#execute if score #test value matches 2 as 00000000-0000-0328-0000-000000000002 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value
+#execute if score #test value matches 3 as 00000000-0000-0328-0000-000000000003 if score @s randomCooldown < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown = #TRACK_PICK_COOLDOWN value

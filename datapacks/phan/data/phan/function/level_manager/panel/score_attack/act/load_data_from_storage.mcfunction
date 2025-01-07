@@ -28,5 +28,15 @@ $tag @s add act$(act)AreaTransition
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_$(act) use_area_transition 1
 $execute if score #test value matches 0 run tag @s remove act$(act)AreaTransition
 
+#night vision?
+$tag @s add act$(act)NightVision
+$execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_$(act) night_vision 1
+$execute if score #test value matches 0 run tag @s remove act$(act)NightVision
+
+#bright mines?
+$tag @s add act$(act)BrightMines
+$execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_$(act) bright_mines 1
+$execute if score #test value matches 0 run tag @s remove act$(act)BrightMines
+
 #figure out music track
 $execute store result score #musicTrackSA value run data get storage phan_dream_$(level_id):sa_act_$(act) music_track 1

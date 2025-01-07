@@ -80,10 +80,13 @@ scoreboard players operation @s skyboxSet = @s skybox
 #stop music if the level said so
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 1 if score #portal1StopsMusic value matches 1 run stopsound @s record
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 1 if score #portal1StopsMusic value matches 1 run scoreboard players set @s musicTime 100
+execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 1 if score #portal1StopsMusic value matches 1 run scoreboard players set @s musicTrack 0
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 2 if score #portal2StopsMusic value matches 1 run stopsound @s record
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 2 if score #portal2StopsMusic value matches 1 run scoreboard players set @s musicTime 100
+execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 2 if score #portal2StopsMusic value matches 1 run scoreboard players set @s musicTrack 0
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 3 if score #portal3StopsMusic value matches 1 run stopsound @s record
 execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 3 if score #portal3StopsMusic value matches 1 run scoreboard players set @s musicTime 100
+execute if score #multiplayer value matches 0 if score @s pCurrentArea matches 3 if score #portal3StopsMusic value matches 1 run scoreboard players set @s musicTrack 0
 
 #flash split time in time attack mode
 scoreboard players operation @s splitTime = @s rawTime
@@ -92,6 +95,7 @@ execute if score #gameState value matches 3 run scoreboard players set @s hudFla
 
 #next area...
 execute if score #multiplayer value matches 0 run scoreboard players add @s pCurrentArea 1
+execute if score #multiplayer value matches 0 run function phan:level_manager/load/load_score_attack_act_specific
 scoreboard players set @s pTimerGoal 0
 execute if score #multiplayer value matches 0 run function phan:levels/_index_upcoming_timer
 scoreboard players set @s scoreShow 0

@@ -1,0 +1,2 @@
+$execute store result score #spawnScoreAttack value run data get storage phan_dream_$(level_id):score_attack selectable
+$execute store result score #spawnPortalRace value run data get storage phan_dream_$(level_id):portal_race selectable

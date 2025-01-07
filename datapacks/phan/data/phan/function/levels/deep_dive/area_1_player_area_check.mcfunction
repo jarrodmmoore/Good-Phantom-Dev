@@ -35,5 +35,6 @@ execute if score @s location_x matches 4084.. run function phan:game/1/player_re
 #teleport
 execute at @s if block ~ ~-.1 ~ red_glazed_terracotta run function phan:levels/deep_dive/a1_teleport
 
+#old, shouldn't be needed anymore
 #and give night vision, too. shadows look ugly in this act
-effect give @s night_vision infinite 1 true
+#effect give @s night_vision infinite 1 true

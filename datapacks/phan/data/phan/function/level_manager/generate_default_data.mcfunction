@@ -9,8 +9,8 @@ $data modify storage phan_dream_$(level_id):dream_data selectable set value 0
 $data modify storage phan_dream_$(level_id):dream_data name_text set value '{"text":"Custom Dream"}'
 $data modify storage phan_dream_$(level_id):dream_data name_display set value '["",{"text":"\\uE399","color":"white"}]'
 $data modify storage phan_dream_$(level_id):dream_data function_namespace set value "phan"
-$data modify storage phan_dream_$(level_id):dream_data function_path set value "levels/custom_dream_1"
-$data modify storage phan_dream_$(level_id):dream_data sleeping_player_model set value "gp/object/sleeping_player_1"
+$data modify storage phan_dream_$(level_id):dream_data function_path set value "levels/custom_dream_$(function_index)"
+$data modify storage phan_dream_$(level_id):dream_data sleeping_player_model set value "gp/object/sleeping_player_$(sleeping_player)"
 
 
 
@@ -27,7 +27,7 @@ $data modify storage phan_dream_$(level_id):score_attack time_diamond set value 
 #^ note: will display to user as "levels/custom_dream_x/bgm/play_0"
 
 #score attack act 1
-$data modify storage phan_dream_$(level_id):sa_act_1 playable set value 0
+$data modify storage phan_dream_$(level_id):sa_act_1 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_1 act_name set value "Act 1"
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_model set value "gp/map_preview/generic"
@@ -45,12 +45,14 @@ $data modify storage phan_dream_$(level_id):sa_act_1 skybox set value 1
 $data modify storage phan_dream_$(level_id):sa_act_1 use_area_transition set value 0
 $data modify storage phan_dream_$(level_id):sa_act_1 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_1 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):sa_act_1 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):sa_act_1 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):sa_act_1 teleport_location set value [0,100,0]
 $data modify storage phan_dream_$(level_id):sa_act_1 soul_approach set value 0
+$data modify storage phan_dream_$(level_id):sa_act_1 night_vision set value 0
+$data modify storage phan_dream_$(level_id):sa_act_1 bright_mines set value 0
 
 #score attack act 2
-$data modify storage phan_dream_$(level_id):sa_act_2 playable set value 0
+$data modify storage phan_dream_$(level_id):sa_act_2 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_2 act_name set value "Act 2"
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_model set value "gp/map_preview/generic"
@@ -68,12 +70,14 @@ $data modify storage phan_dream_$(level_id):sa_act_2 skybox set value 1
 $data modify storage phan_dream_$(level_id):sa_act_2 use_area_transition set value 0
 $data modify storage phan_dream_$(level_id):sa_act_2 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_2 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):sa_act_2 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):sa_act_2 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):sa_act_2 teleport_location set value [0,100,0]
 $data modify storage phan_dream_$(level_id):sa_act_2 soul_approach set value 0
+$data modify storage phan_dream_$(level_id):sa_act_2 night_vision set value 0
+$data modify storage phan_dream_$(level_id):sa_act_2 bright_mines set value 0
 
 #score attack act 3
-$data modify storage phan_dream_$(level_id):sa_act_3 playable set value 0
+$data modify storage phan_dream_$(level_id):sa_act_3 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_3 act_name set value "Act 3"
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_model set value "gp/map_preview/generic"
@@ -91,9 +95,11 @@ $data modify storage phan_dream_$(level_id):sa_act_3 skybox set value 1
 $data modify storage phan_dream_$(level_id):sa_act_3 use_area_transition set value 0
 $data modify storage phan_dream_$(level_id):sa_act_3 music_track set value -1
 $data modify storage phan_dream_$(level_id):sa_act_3 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):sa_act_3 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):sa_act_3 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):sa_act_3 teleport_location set value [0,100,0]
 $data modify storage phan_dream_$(level_id):sa_act_3 soul_approach set value 0
+$data modify storage phan_dream_$(level_id):sa_act_3 night_vision set value 0
+$data modify storage phan_dream_$(level_id):sa_act_3 bright_mines set value 0
 
 
 
@@ -126,8 +132,10 @@ $data modify storage phan_dream_$(level_id):pr_act_1 weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_act_1 skybox set value 1
 $data modify storage phan_dream_$(level_id):pr_act_1 music_track set value -1
 $data modify storage phan_dream_$(level_id):pr_act_1 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):pr_act_1 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):pr_act_1 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):pr_act_1 teleport_location set value [0,100,0]
+$data modify storage phan_dream_$(level_id):pr_act_1 night_vision set value 0
+$data modify storage phan_dream_$(level_id):pr_act_1 bright_mines set value 0
 
 #portal race act 2
 $data modify storage phan_dream_$(level_id):pr_act_2 playable set value 0
@@ -150,8 +158,10 @@ $data modify storage phan_dream_$(level_id):pr_act_2 weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_act_2 skybox set value 1
 $data modify storage phan_dream_$(level_id):pr_act_2 music_track set value -1
 $data modify storage phan_dream_$(level_id):pr_act_2 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):pr_act_2 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):pr_act_2 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):pr_act_2 teleport_location set value [0,100,0]
+$data modify storage phan_dream_$(level_id):pr_act_2 night_vision set value 0
+$data modify storage phan_dream_$(level_id):pr_act_2 bright_mines set value 0
 
 #portal race act 3
 $data modify storage phan_dream_$(level_id):pr_act_3 playable set value 0
@@ -174,8 +184,10 @@ $data modify storage phan_dream_$(level_id):pr_act_3 weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_act_3 skybox set value 1
 $data modify storage phan_dream_$(level_id):pr_act_3 music_track set value -1
 $data modify storage phan_dream_$(level_id):pr_act_3 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):pr_act_3 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):pr_act_3 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):pr_act_3 teleport_location set value [0,100,0]
+$data modify storage phan_dream_$(level_id):pr_act_3 night_vision set value 0
+$data modify storage phan_dream_$(level_id):pr_act_3 bright_mines set value 0
 
 #portal race act 4
 $data modify storage phan_dream_$(level_id):pr_act_4 playable set value 0
@@ -198,15 +210,18 @@ $data modify storage phan_dream_$(level_id):pr_act_4 weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_act_4 skybox set value 1
 $data modify storage phan_dream_$(level_id):pr_act_4 music_track set value -1
 $data modify storage phan_dream_$(level_id):pr_act_4 music_function set value "bgm/play_0"
-$data modify storage phan_dream_$(level_id):pr_act_4 teleport_dimension set value 0
+$data modify storage phan_dream_$(level_id):pr_act_4 teleport_dimension set value 1
 $data modify storage phan_dream_$(level_id):pr_act_4 teleport_location set value [0,100,0]
+$data modify storage phan_dream_$(level_id):pr_act_4 night_vision set value 0
+$data modify storage phan_dream_$(level_id):pr_act_4 bright_mines set value 0
 
 #portal race podium sequence
 $data modify storage phan_dream_$(level_id):pr_podium time set value 6000
 $data modify storage phan_dream_$(level_id):pr_podium weather set value "clear"
 $data modify storage phan_dream_$(level_id):pr_podium skybox set value 1
-$data modify storage phan_dream_$(level_id):pr_podium teleport_dimension set value 0
-$data modify storage phan_dream_$(level_id):pr_podium teleport_location set value [0,100,0]
+$data modify storage phan_dream_$(level_id):pr_podium teleport_dimension set value 1
+$data modify storage phan_dream_$(level_id):pr_podium teleport_location set value [847,50,-1054]
+$data modify storage phan_dream_$(level_id):pr_podium night_vision set value 0
 
 
 #if not #gameState=0, exit out now

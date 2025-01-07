@@ -37,6 +37,8 @@ scoreboard players set #dream3OpenedA value 0
 scoreboard players set #dream3OpenedB value 0
 scoreboard players set #dream4Opened value 0
 scoreboard players set #dream5Opened value 0
+scoreboard players set #dreamCOpened value 0
+scoreboard players set #dreamPOpened value 0
 #spawn point in cabin...
 scoreboard players set #lastLevelPlayed value 0
 #unlocks

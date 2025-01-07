@@ -1,0 +1,6 @@
+data modify storage phan:data display.node_name set value '["",{"translate":"gp.editor.node_type.teleport_handler"}]'
+
+tellraw @s ["",{"text":"rotation and pitch affect the teleport result","italic":true}]
+tellraw @s ["",{"text":"(editArg1) x destination","italic":true},{"text":" "},{"translate":"gp.misc.brackets","color":"light_purple","with":[{"translate":"gp.misc.set"}],"clickEvent":{"action":"suggest_command","value":"/scoreboard players set @s editArg1 0"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.set"}]}}]
+tellraw @s ["",{"text":"(editArg2) y destination","italic":true},{"text":" "},{"translate":"gp.misc.brackets","color":"light_purple","with":[{"translate":"gp.misc.set"}],"clickEvent":{"action":"suggest_command","value":"/scoreboard players set @s editArg2 0"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.set"}]}}]
+tellraw @s ["",{"text":"(editArg3) z destination","italic":true},{"text":" "},{"translate":"gp.misc.brackets","color":"light_purple","with":[{"translate":"gp.misc.set"}],"clickEvent":{"action":"suggest_command","value":"/scoreboard players set @s editArg3 0"},"hoverEvent":{"action":"show_text","value":[{"translate":"gp.misc.set"}]}}]

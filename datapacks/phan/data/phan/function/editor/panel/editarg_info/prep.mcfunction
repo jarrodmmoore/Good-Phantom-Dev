@@ -54,3 +54,5 @@ execute if score @s editNode matches 26 run data modify storage phan:data displa
 execute if score @s editNode matches 27 run function phan:editor/panel/editarg_info/27_effect_sign
 #score attack respawn point
 execute if score @s editNode matches 28 run function phan:editor/panel/editarg_info/28_sa_respawn_point
+#teleport handler
+execute if score @s editNode matches 29 run function phan:editor/panel/editarg_info/29_teleport_handler

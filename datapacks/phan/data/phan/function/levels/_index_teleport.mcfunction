@@ -21,10 +21,9 @@ execute if score #math value matches 3 run data modify storage phan:coords coord
 execute if score #math value matches 3 run data modify storage phan:coords coord_z set from storage phan_dream_active:sa_act_3 teleport_location[2]
 
 #figure out what dimension we're going to
-execute unless score #vAct value matches 2..4 store result score #test3 value run data get storage phan_dream_active:sa_act_1 teleport_dimension
-execute if score #vAct value matches 2 store result score #test3 value run data get storage phan_dream_active:sa_act_2 teleport_dimension
-execute if score #vAct value matches 3 store result score #test3 value run data get storage phan_dream_active:sa_act_3 teleport_dimension
-execute if score #vAct value matches 4 store result score #test3 value run data get storage phan_dream_active:sa_act_4 teleport_dimension
+execute unless score #math value matches 2..3 store result score #test3 value run data get storage phan_dream_active:sa_act_1 teleport_dimension
+execute if score #math value matches 2 store result score #test3 value run data get storage phan_dream_active:sa_act_2 teleport_dimension
+execute if score #math value matches 3 store result score #test3 value run data get storage phan_dream_active:sa_act_3 teleport_dimension
 
 #do it
 execute unless score #test3 value matches 2..3 in overworld run return run function phan:level_manager/load/perform_teleport_self with storage phan:coords
