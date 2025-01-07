@@ -1,0 +1,1 @@
+$function $(function_namespace):$(function_path)/_respawn_score_attack

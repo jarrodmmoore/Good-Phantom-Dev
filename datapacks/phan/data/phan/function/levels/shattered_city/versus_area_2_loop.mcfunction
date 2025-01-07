@@ -1,6 +1,6 @@
-#kill plane beneath level
-execute as @a[tag=playing,gamemode=adventure,scores={location_y=..50}] in the_end run function phan:game/4/race/respawn
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,scores={location_y=..50}] run tag @s add botRespawn
+#old, kill plane beneath level
+#execute as @a[tag=playing,gamemode=adventure,scores={location_y=..50}] in the_end run function phan:game/4/race/respawn
+#execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,scores={location_y=..50}] run tag @s add botRespawn
 
 #teleporters
 execute as @a[gamemode=adventure,tag=playing] at @s at @s if block ~ ~-.2 ~ red_glazed_terracotta run function phan:levels/shattered_city/versus_a2_teleport_1

@@ -11,9 +11,9 @@ execute unless score @s vsRespawnDimension matches 2..3 in overworld run functio
 execute if score @s vsRespawnDimension matches 2 in the_nether run function phan:warp_to_saved_coords/_go
 execute if score @s vsRespawnDimension matches 3 in the_end run function phan:warp_to_saved_coords/_go
 
-#feedback
-execute at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
-execute at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
+#feedback (handled in another function if used in Score Attack or Time Attack)
+execute unless score #gameState value matches 1..3 at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
+execute unless score #gameState value matches 1..3 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 
 #cancel momentum
 execute at @s run tp @s @s

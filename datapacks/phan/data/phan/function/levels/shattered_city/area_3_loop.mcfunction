@@ -1,5 +1,5 @@
-#kill plane beneath level
-execute as @a[tag=playing,gamemode=adventure,scores={pCurrentArea=3,location_y=..67}] run function phan:game/1/player/respawn
+#old, kill plane beneath level
+#execute as @a[tag=playing,gamemode=adventure,scores={pCurrentArea=3,location_y=..67}] run function phan:game/1/player/respawn
 
 #teleporters
 execute as @a[gamemode=adventure,tag=playing,scores={pCurrentArea=3}] at @s at @s if block ~ ~-.2 ~ red_glazed_terracotta run function phan:levels/shattered_city/a3_teleport_index
