@@ -111,6 +111,7 @@ execute unless score #gameState value matches 4 if score #freePlay value matches
 #BUT-- if we're playing a single act in "free play" mode, we never change the session and let points accumulate between games
 
 #show tip to players who haven't seen them all yet (unless this is the start of a new session)
+execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR] if score #freePlay value matches ..0 run tellraw @s ["",{"text":" "}]
 execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR] run function phan:game/0/tip_show_portal_race
 
 #default settings for a level, overwritten upon loading area info

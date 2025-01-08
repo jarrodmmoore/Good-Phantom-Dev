@@ -38,6 +38,9 @@ execute if score #playerCount value matches ..1 run scoreboard players set #mand
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me
 
+#did we finish with full energy? politely remind us to boost next time we get shown a [TIP]
+execute if score @s energy matches 18.. run tag @s add finishedWithFullBoost
+
 #make sure HUD doesn't get stuck on a blank timer thing
 scoreboard players set @s hudFlashTime 0
 function phan:custom_hud/versus_race/_update

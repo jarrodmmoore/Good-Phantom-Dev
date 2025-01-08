@@ -8,6 +8,9 @@
 #y=-64 doesn't exist here so we need to check at y=0 instead
 #scoreboard players set #checkLoadHeight value 0
 
+#make sure players don't have biteAware value
+scoreboard players reset @a biteAware
+
 #states
 scoreboard players set #d3targetDoor value 0
 scoreboard players set #d3targetDoor2 value 0

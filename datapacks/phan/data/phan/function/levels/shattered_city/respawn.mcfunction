@@ -1,5 +1,5 @@
 #old, de-referenced
-#act 1 repsawns
+#act 1 respawns
 #execute if score @s pCurrentArea matches ..1 if score @s currentLoad matches ..0 in minecraft:the_end run tp @s 1721 85 2227 180 0
 #execute if score @s pCurrentArea matches ..1 if score @s currentLoad matches 1 in minecraft:the_end run tp @s 1802 118 2126 290 0
 #execute if score @s pCurrentArea matches ..1 if score @s currentLoad matches 2 in minecraft:the_end run tp @s 1859 102 2261 35 0
@@ -7,7 +7,7 @@
 #execute if score @s pCurrentArea matches ..1 if score @s currentLoad matches 4 in minecraft:the_end run tp @s 1671 105 2263 70 0
 #execute if score @s pCurrentArea matches ..1 if score @s currentLoad matches 5.. in minecraft:the_end run tp @s 1676 110 2169 260 0
 
-#act 2 repsawns
+#act 2 respawns
 #execute if score @s pCurrentArea matches 2.. if score @s currentLoad matches ..0 in minecraft:the_end run tp @s 1880 93 2388 90 0
 #execute if score @s pCurrentArea matches 2.. if score @s currentLoad matches 1 in minecraft:the_end run tp @s 1813 84 2394 80 0
 #execute if score @s pCurrentArea matches 2.. if score @s currentLoad matches 2 in minecraft:the_end run tp @s 1703 96 2394 90 0
@@ -25,6 +25,6 @@
 #execute if score @s pCurrentArea matches 2.. if score @s currentLoad matches 5 if score #altRespawn value matches 1 in minecraft:the_end run tp @s 1384 151 2401 270 0
 #execute if score @s pCurrentArea matches 2.. if score @s currentLoad matches 5 if score #altRespawn value matches 2 in minecraft:the_end run tp @s 1636 106 2394 270 0
 
-#act 3 repsawns
+#act 3 respawns
 #execute if score @s pCurrentArea matches 3.. if score @s currentLoad matches ..0 in minecraft:the_end run tp @s 1472 121 2264 135 -15
 #execute if score @s pCurrentArea matches 3.. if score @s currentLoad matches 1.. in minecraft:the_end run tp @s 1430 121 2222 135 0

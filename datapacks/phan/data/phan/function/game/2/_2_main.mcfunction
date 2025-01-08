@@ -11,3 +11,4 @@ bossbar set general_bossbar players @a[tag=doneWithIntro]
 #do stuff based on sub-state
 execute if score #subGameState value matches 0 run function phan:game/2/tick_select
 execute if score #subGameState value matches 1 run function phan:game/2/tick_team_select
+execute if score #subGameState value matches 2 run function phan:game/2/tick_act_select

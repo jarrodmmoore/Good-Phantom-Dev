@@ -13,6 +13,9 @@ execute if score #d3lightningCheck value matches ..10 if loaded 1441 124 2244 if
 execute if block 1441 124 2244 melon if score #d3lightning1 value matches 0 if score #d3lightningCheck value matches 11.. run function phan:levels/shattered_city/area_3_lightning_1
 execute if block 1452 124 2233 melon if score #d3lightning2 value matches 0 if score #d3lightningCheck value matches 11.. run function phan:levels/shattered_city/area_3_lightning_2
 
+#remember to bite, captain
+execute as @a[gamemode=adventure,tag=playing,scores={pCurrentArea=3}] unless score @s biteAware matches 1 run function phan:levels/shattered_city/area_3_bite_tip
+
 #player checks enemy progress
 execute if score #d3arenaCheckDelay value matches 1.. run scoreboard players remove #d3arenaCheckDelay value 1
 execute if score #d3arenaProgress value matches 0..999 run function phan:levels/shattered_city/area_3_progress/listen_loop_1

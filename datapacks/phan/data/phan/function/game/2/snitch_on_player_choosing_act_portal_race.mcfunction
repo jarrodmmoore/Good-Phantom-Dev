@@ -1,0 +1,1 @@
+$tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_act","color":"white","with":[{"nbt":"act_name","storage":"phan_dream_$(level_id):pr_act_$(act)","interpret":false}]}]

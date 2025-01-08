@@ -11,6 +11,7 @@ execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.acti
 kill @e[tag=lobbyProp]
 clear @a red_wool
 clear @a yellow_wool
+clear @a *[custom_data~{needsCleared:1b}]
 
 #reset previous team requests
 scoreboard players set @a teamRequest 0
@@ -31,7 +32,8 @@ execute positioned 209 -26 118 run function phan:levels/_index_title_entity with
 
 #summon act text (if applicable)
 execute store result storage phan:level_index act int 1 run scoreboard players get #showActNumber value
-execute if score #showActNumber value matches 1.. positioned 209 -27 118 run function phan:levels/_index_act_title_entity with storage phan:level_index
+execute if score #showActNumber value matches 1.. if score #desiredGamemode value matches 1..2 positioned 209 -27 118 run function phan:levels/_index_act_title_entity_score_attack with storage phan:level_index
+execute if score #showActNumber value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -27 118 run function phan:levels/_index_act_title_entity with storage phan:level_index
 
 #summon gamemode text
 execute if score #desiredGamemode value matches 1 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.score_attack","bold":true,"color":"yellow"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_3_players","bold":false,"color":"gray"}]'}

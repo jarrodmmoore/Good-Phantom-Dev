@@ -131,6 +131,8 @@ scoreboard players reset @s levelUID
 scoreboard players reset @s levelManagerPage
 scoreboard players reset @s levelManagerAct
 scoreboard players reset @s seekSpawnpoint
+tag @s remove finishedWithFullBoost
+scoreboard players reset @s biteAware
 
 #set spawnpoint
 spawnpoint @s 198 -6 118
