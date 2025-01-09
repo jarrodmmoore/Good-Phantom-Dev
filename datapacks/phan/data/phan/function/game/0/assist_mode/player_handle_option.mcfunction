@@ -1,5 +1,10 @@
 #check for each individual option
 
+#fail if admin required and we're not admin
+execute if score #assistMenuAdminOnly value matches 1 unless entity @s[tag=admin] run return run function phan:game/0/assist_mode/admin_required_force
+#=====
+
+
 #assist mode (generally)
 execute store result score #test value run clear @s red_dye[custom_data~{assistEnabled:1b}] 0
 execute if score #test value matches 1.. run function phan:game/0/assist_mode/change_assist_broad

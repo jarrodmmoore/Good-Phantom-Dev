@@ -24,4 +24,6 @@ execute store result score @s fallFlying run execute if entity @s[nbt={FallFlyin
 execute if entity @s[tag=sneaking,scores={fallFlying=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]
 execute if entity @s[scores={fallFlying=1,inWater=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]
 #Q: why do we care if a player is underwater and fallflying at the same time?
-#A: because fallfying while underwater makes you swim slower!
+#A: because fallflying while underwater makes you swim slower!
+
+#^ hi, i'm from the future. this got fixed! i'm still keeping this system as-is, though. players wouldn't expect to be flying again after exiting water.

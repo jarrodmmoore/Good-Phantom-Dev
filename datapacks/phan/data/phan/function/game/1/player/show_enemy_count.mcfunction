@@ -17,9 +17,6 @@ scoreboard players operation #presentGoalB value %= #10 value
 execute if score #enemiesAlive value matches ..-1 run scoreboard players set #presentGoalA value 0
 execute if score #enemiesAlive value matches ..-1 run scoreboard players set #presentGoalB value 0
 
-#shift digits if below 10 (CUT, this just looks worse)
-#execute if score #presentGoalA value matches ..0 run function phan:game/1/player/handle_present_shift_digits
-
 #store enemy head display
 #normal
 data modify storage phan:data display.present.chest set value '[{"text":"\\uE824"}]'

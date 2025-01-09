@@ -27,7 +27,7 @@ item replace entity @s enderchest.9 with air
 item replace entity @s enderchest.10 with air
 item replace entity @s enderchest.11 with air
 item replace entity @s enderchest.12 with air
-item replace entity @s enderchest.13 with minecraft:magenta_dye[custom_name='{"translate":"gp.misc.need_admin_tag","bold":false,"italic":false,"color":"gray"}',lore=['{"text":" "}','{"text":"/tag <PLAYERNAME> add admin","color":"aqua","italic":false}'],custom_data={adminMenu:1b}]
+item replace entity @s enderchest.13 with minecraft:magenta_dye[custom_name='{"translate":"gp.misc.need_admin_tag","bold":false,"italic":false,"color":"gray"}',lore=['{"text":" "}','{"text":"/tag <PLAYERNAME> add admin","color":"aqua","italic":false}','{"text":" "}','{"translate":"gp.misc.admins_can_do_things_1","color":"gray","italic":false}','{"translate":"gp.misc.admins_can_do_things_2","color":"gray","italic":false}'],custom_data={adminMenu:1b}]
 item replace entity @s enderchest.14 with air
 item replace entity @s enderchest.15 with air
 item replace entity @s enderchest.16 with air

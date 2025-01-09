@@ -169,3 +169,5 @@ execute if score #10Hz value matches 0 at @s unless block ~ ~-.2 ~ #phan:energy_
 scoreboard players set @s strengthBoost 0
 execute at @s if block ~ ~-1 ~ #phan:strength_powerup run function phan:movement/strength_pad
 scoreboard players operation @s strengthBoost2 = @s strengthBoost
+#teleport pad
+execute at @s if block ~ ~-1 ~ #phan:teleporter run function phan:movement/teleport_pad_generic

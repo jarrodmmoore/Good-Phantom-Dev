@@ -29,12 +29,3 @@ execute if score #math value matches 3 store result score #test3 value run data 
 execute unless score #test3 value matches 2..3 in overworld run return run function phan:level_manager/load/perform_teleport_self with storage phan:coords
 execute if score #test3 value matches 2 in the_nether run return run function phan:level_manager/load/perform_teleport_self with storage phan:coords
 execute if score #test3 value matches 3 in the_end run return run function phan:level_manager/load/perform_teleport_self with storage phan:coords
-
-#old, hard-coded
-#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_teleport
-#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_teleport
-#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_teleport
-#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_teleport
-#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_teleport
-#reset call parameter!
-#scoreboard players set #teleportStart value 0

@@ -1,8 +1,3 @@
-#old, obsolete
-#respawn if fallen into the void
-#execute as @a[tag=playing,gamemode=adventure,scores={location_y=..35}] run function phan:game/4/race/respawn
-#execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,scores={location_y=..35}] run tag @s add botRespawn
-
 #make sure gate is closed on lap 1-2
 execute if score #mmAct3State value matches 0 if loaded -1842 78 -80 if block -1842 78 -80 structure_void as @e[type=item_display,tag=mmAct3DynamicArrow,x=-1841,y=76,z=-79,distance=..10] positioned -1841 80 -79 positioned ~ ~.5 ~ run tp @s ~ ~ ~
 execute if score #mmAct3State value matches 0 if loaded -1842 78 -80 if block -1842 78 -80 structure_void run fill -1842 78 -80 -1842 82 -77 orange_stained_glass replace structure_void

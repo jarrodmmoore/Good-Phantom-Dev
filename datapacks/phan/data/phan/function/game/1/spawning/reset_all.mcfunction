@@ -1,20 +1,3 @@
-#old spawn code, could only have 1 act active at once
-#was phased out when we decided to support players playing the 3 acts of a dream in parallel + at the same time
-#function phan:game/1/spawning/reset0
-#function phan:game/1/spawning/reset1
-#function phan:game/1/spawning/reset2
-#function phan:game/1/spawning/reset3
-#function phan:game/1/spawning/reset4
-#function phan:game/1/spawning/reset5
-
-#scoreboard players set #area0Spawn value -1
-#scoreboard players set #area1Spawn value -1
-#scoreboard players set #area2Spawn value -1
-#scoreboard players set #area3Spawn value -1
-#scoreboard players set #area4Spawn value -1
-#scoreboard players set #area5Spawn value -1
-
-
 #reset objectives
 function phan:game/1/spawning/reset/reset0a
 function phan:game/1/spawning/reset/reset0b

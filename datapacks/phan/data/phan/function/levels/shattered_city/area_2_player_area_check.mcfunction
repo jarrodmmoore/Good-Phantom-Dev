@@ -17,8 +17,6 @@ scoreboard players operation @s previousLoad = @s currentLoad
 
 
 #respawn if fallen down (done to be convenient while still allowing player to run backwards)
-#old
-#execute if entity @s[scores={location_y=..70}] run function phan:game/1/player/respawn
 execute if entity @s[scores={currentLoad=2,location_y=..80,location_x=..1703}] run function phan:game/1/player/respawn
 execute if entity @s[scores={currentLoad=3,location_y=..90,location_x=1569..1618}] run function phan:game/1/player/respawn
 execute if entity @s[scores={currentLoad=3,location_y=..104,location_x=1533..1568}] run function phan:game/1/player/respawn

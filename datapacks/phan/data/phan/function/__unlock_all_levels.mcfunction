@@ -1,3 +1,6 @@
+#fun sound for player
+execute if entity @s[type=player] at @s run playsound minecraft:entity.player.levelup master @s ~ 100000 ~ 100000
+
 #set clear flag for all levels
 scoreboard players set #dreamsCompleted value 5
 scoreboard players set #dream1Completed value 1

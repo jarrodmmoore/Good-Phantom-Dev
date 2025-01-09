@@ -1,13 +1,3 @@
-#old, conditions
-#time set 18000
-#weather clear
-
-#music stops upon entering portal 2 in singleplayer
-#scoreboard players set #portal2StopsMusic value 1
-
-#y=-64 doesn't exist here so we need to check at y=0 instead
-#scoreboard players set #checkLoadHeight value 0
-
 #make sure players don't have biteAware value
 scoreboard players reset @a biteAware
 

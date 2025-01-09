@@ -9,13 +9,6 @@ execute if score #success value matches 0 run tellraw @a ["",{"text":"[ ! ] Some
 #do versus init
 function phan:level_manager/load/function_init_versus with storage phan_dream_active:dream_data
 
-#old hard-coded index
-#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_versus_data
-#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_versus_data
-#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_versus_data
-#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_versus_data
-#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_versus_data
-
 #set randomization cooldown on the act we're currently on
 function phan:levels/_index_randomization_cooldown
 

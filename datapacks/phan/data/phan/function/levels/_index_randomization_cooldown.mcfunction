@@ -18,10 +18,3 @@ execute if score #test value matches 1 as @e[type=armor_stand,tag=randomViable,x
 execute if score #test value matches 2 as @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s levelUID = #chosenLevel value if score @s randomCooldown2 < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown2 = #TRACK_PICK_COOLDOWN value
 execute if score #test value matches 3 as @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s levelUID = #chosenLevel value if score @s randomCooldown3 < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown3 = #TRACK_PICK_COOLDOWN value
 execute if score #test value matches 4 as @e[type=armor_stand,tag=randomViable,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] if score @s levelUID = #chosenLevel value if score @s randomCooldown4 < #TRACK_PICK_COOLDOWN value run scoreboard players operation @s randomCooldown4 = #TRACK_PICK_COOLDOWN value
-
-#old, now do index
-#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_randomization_cooldown
-#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_randomization_cooldown
-#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_randomization_cooldown
-#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_randomization_cooldown
-#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_randomization_cooldown

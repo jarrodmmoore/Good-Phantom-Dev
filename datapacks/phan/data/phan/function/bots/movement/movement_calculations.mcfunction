@@ -112,6 +112,8 @@ execute if score #10Hz value matches 0 at @s if block ~ ~-.2 ~ #phan:energy_rest
 #scoreboard players set @s strengthBoost 0
 #execute at @s if block ~ ~-1 ~ #phan:strength_powerup run function phan:movement/strength_pad
 #scoreboard players operation @s strengthBoost2 = @s strengthBoost
+#teleport pad
+execute at @s if block ~ ~-1 ~ #phan:teleporter run function phan:movement/teleport_pad_generic
 
 #^ a lot has been commented out here.
 #bots, unlike players, don't need latency compensation for effect pads.

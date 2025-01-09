@@ -20,10 +20,3 @@ execute store result score #test3 value run data get storage phan_dream_active:s
 execute unless score #test1 value = #test2 value run scoreboard players set #portal1StopsMusic value 1
 execute unless score #test2 value = #test3 value run scoreboard players set #portal2StopsMusic value 1
 execute unless score #test3 value = #test1 value run scoreboard players set #portal3StopsMusic value 1
-
-#old, run level init function
-#execute if score #chosenLevel value matches 1 run function phan:levels/pastel_palace/_init
-#execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_mountains/_init
-#execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/_init
-#execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/_init
-#execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/_init

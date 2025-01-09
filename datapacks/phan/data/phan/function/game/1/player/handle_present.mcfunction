@@ -19,9 +19,6 @@ scoreboard players operation #presentGoalB value %= #10 value
 execute if score @s presentGoal matches ..-1 run scoreboard players set #presentGoalA value 0
 execute if score @s presentGoal matches ..-1 run scoreboard players set #presentGoalB value 0
 
-#shift digits if below 10 (CUT, this just looks worse)
-#execute if score #presentGoalA value matches ..0 run function phan:game/1/player/handle_present_shift_digits
-
 #store chest display
 #normal
 execute if entity @s[scores={presentTime=1..,presentGoal=1..}] run data modify storage phan:data display.present.chest set value '[{"text":"\\uE821"}]'
