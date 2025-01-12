@@ -23,4 +23,4 @@ execute positioned 204 -22 117 run function phan:game/2/summon_act_score_attack 
 execute positioned 204 -22 122 run function phan:game/2/summon_act_score_attack with storage phan:level_index
 
 #let us animate the previews smoothly?
-execute as @e[type=item_display,tag=actPreviewImage] run data merge entity @s {teleport_duration:5,billboard:"center",interpolation_duration:10,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}
+execute as @e[type=item_display,tag=actPreviewImage] run data merge entity @s {teleport_duration:5,billboard:"vertical",interpolation_duration:10,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]}}

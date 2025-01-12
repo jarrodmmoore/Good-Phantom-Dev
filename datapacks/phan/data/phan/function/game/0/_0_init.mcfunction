@@ -126,6 +126,11 @@ scoreboard players set @a[scores={strengthTime=3..}] strengthTime 2
 #item stuff
 scoreboard players reset @a elytraTimer
 
+#set menu page for the tv in lobby
+scoreboard players set #tvMenuPage value 0
+scoreboard players add #tvRememberPage value 0
+execute unless score #tvRememberPage value matches 0 run scoreboard players operation #tvMenuPage value = #tvRememberPage value
+
 #summon temporary props
 function phan:game/0/summon_props
 

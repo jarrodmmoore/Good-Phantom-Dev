@@ -13,6 +13,9 @@ execute as @a[x=199,y=-8,z=131,dx=11,dy=4,dz=9] run function phan:game/0/stereo/
 #admin panel
 execute if score #5Hz value matches 2 positioned 209 -7 118 as @a[gamemode=!spectator,distance=..7] run function phan:game/0/admin_panel/player_check
 
+#tv in lobby playing "Phantom Racer"
+execute positioned 215 -11 103 if entity @a[dx=40,dy=9,dz=31] positioned 246 -7 118 positioned ~-.4 ~ ~ run function phan:phantom_racer/_tv_tick
+
 #announce when admins go afk or return to the game
 function phan:game/0/admin_afk_logic
 

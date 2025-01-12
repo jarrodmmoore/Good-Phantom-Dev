@@ -28,6 +28,26 @@ scoreboard players set #d4a3Unlocked value 1
 scoreboard players set #d5a1Unlocked value 1
 scoreboard players set #d5a2Unlocked value 1
 scoreboard players set #d5a3Unlocked value 1
+
+scoreboard players set #d6a1Unlocked value 1
+scoreboard players set #d6a2Unlocked value 1
+scoreboard players set #d6a3Unlocked value 1
+
+scoreboard players set #d7a1Unlocked value 1
+scoreboard players set #d7a2Unlocked value 1
+scoreboard players set #d7a3Unlocked value 1
+
+scoreboard players set #d8a1Unlocked value 1
+scoreboard players set #d8a2Unlocked value 1
+scoreboard players set #d8a3Unlocked value 1
+
+scoreboard players set #d9a1Unlocked value 1
+scoreboard players set #d9a2Unlocked value 1
+scoreboard players set #d9a3Unlocked value 1
+
+scoreboard players set #d10a1Unlocked value 1
+scoreboard players set #d10a2Unlocked value 1
+scoreboard players set #d10a3Unlocked value 1
 #discover all dreams
 scoreboard players set #dream1Discovered value 1
 scoreboard players set #dream2Discovered value 1
@@ -38,6 +58,10 @@ scoreboard players set #dream5Discovered value 1
 scoreboard players set #lastLevelPlayed value 0
 #unlocks
 scoreboard players set #timeAttackUnlocked value 1
+scoreboard players set #unlockedNightmare value 1
+scoreboard players set #unlockedUltranightmare value 1
+scoreboard players set #unlockedCupDiamond value 1
+scoreboard players set #unlockedCupRandom value 1
 
 #unlock all music discs
 scoreboard players set #disc_found_1 value 1

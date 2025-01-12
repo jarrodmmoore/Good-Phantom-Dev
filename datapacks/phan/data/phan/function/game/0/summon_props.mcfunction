@@ -117,6 +117,8 @@ execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~.8 ~.4 ~180
 tag @e[tag=rotateText,type=text_display] remove rotateText
 #tv
 execute positioned 246 -6 118 run summon item_display ~ ~ ~ {Tags:["lobbyProp"],Rotation:[90.0f,0.0f],item:{id:"stone",components:{"item_model":"gp/object/big_tv"}},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[4.0f,4.0f,4.0f]}}
+#console, controller, tv screen
+function phan:phantom_racer/summon_console_and_controller
 
 #CUSTOM ROOM 1
 #player

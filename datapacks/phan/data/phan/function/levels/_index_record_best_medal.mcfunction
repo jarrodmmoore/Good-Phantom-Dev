@@ -8,7 +8,7 @@ execute if score #chosenLevel value matches 4 if score @s rankFinal < @s dream4M
 execute if score #chosenLevel value matches 5 if score @s rankFinal < @s dream5Medal run scoreboard players operation @s dream5Medal = @s rankFinal
 
 #check for advancements
-execute if score @s rankFinal matches ..1 run advancement grant @s only phan:time_attack/power_nap
+execute if score #chosenLevel value matches ..999 if score @s rankFinal matches ..1 run advancement grant @s only phan:time_attack/power_nap
 
 execute if score @s dream1Medal matches ..2 run advancement grant @s only phan:time_attack/clockwork cw_dream1
 execute if score @s dream2Medal matches ..2 run advancement grant @s only phan:time_attack/clockwork cw_dream2
