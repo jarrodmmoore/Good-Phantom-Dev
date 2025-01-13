@@ -15,3 +15,6 @@ $scoreboard players set #tvCooldown value $(cooldown)
 #sound effect (played from the tv)
 execute if score #test value matches 1.. run playsound minecraft:custom_sfx/bit_dink master @a ~ ~ ~ 1 0.88
 execute if score #test value matches ..0 run playsound minecraft:custom_sfx/bit_dink master @a ~ ~ ~ 1 0.88
+
+#make the console power blink as a fun detail
+setblock 245 -11 117 air

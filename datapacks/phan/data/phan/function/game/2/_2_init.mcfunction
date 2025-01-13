@@ -33,6 +33,10 @@ scoreboard players set #botsEnabled value 0
 time set 18000
 weather clear
 
+#clear night vision
+effect clear @a night_vision
+tag @a[tag=getNightVisionInSA] remove getNightVisionInSA
+
 #titles
 title @a[tag=doneWithIntro] actionbar [""]
 title @a[tag=doneWithIntro] subtitle [""]

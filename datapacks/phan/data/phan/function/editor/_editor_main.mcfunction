@@ -16,6 +16,9 @@ execute as @e[tag=waypointSpawn,type=vex] at @s run function phan:editor/spawn/_
 execute if score #playersInEditMode value matches ..1 run function phan:editor/save_nbt/_tick
 execute if score #playersInEditMode value matches ..1 run function phan:editor/restore_using_nbt/_tick
 
+#being near a checkpoint node secretly updates this dream's storage for bot checkpoints
+execute if score #5Hz value matches 1 if entity @s[scores={levelUID=1..}] if entity @e[limit=1,type=marker,tag=checkpoint,distance=..20] run function phan:editor/checkpoint/update_bot_checkpoints_storage
+
 #=====
 #AI waypoint stuff
 

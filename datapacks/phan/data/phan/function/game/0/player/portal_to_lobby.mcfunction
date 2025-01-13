@@ -10,6 +10,13 @@ effect give @s blindness 2 1 true
 effect give @s slow_falling 1 0 true
 scoreboard players set @s skyboxSet 1
 execute if score #gameState value matches 0 run tag @s remove playing
+tag @s remove getNightVisionInSA
+
+#if we're in creative and have been using the dream manager, send us back to the dream we were editing
+execute if entity @s[gamemode=creative,scores={levelUID=1..}] run function phan:game/0/player/return_to_edited_level
+
+#set back to night if there are no other creative mode players
+execute at @s unless entity @a[gamemode=creative,distance=1..] run time set 18000
 
 #reset scores and clear inventory
 scoreboard players set @s energy 0

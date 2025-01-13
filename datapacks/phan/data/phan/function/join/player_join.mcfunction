@@ -83,6 +83,7 @@ scoreboard players set @s stardustDelay 0
 scoreboard players reset @s restart
 scoreboard players reset @s exit
 scoreboard players reset @s editor
+scoreboard players reset @s dreamManager
 scoreboard players reset @s hurryUp
 scoreboard players set @s teamRequest 0
 scoreboard players reset @s presentTime

@@ -15,6 +15,9 @@ tag @s[tag=vsMidGameJoin] remove vsMidGameJoin
 #don't bully other players!
 effect give @s weakness 5 15 true
 
+#night vision if we got it from editor mode or something
+effect give @s[tag=getNightVisionInSA] night_vision 15 1 true
+
 #do different things if we're in the cabin or not
 scoreboard players set #playerInLobby value 0
 execute if entity @s[x=180,y=-13,z=87,dx=100,dy=100,dz=125] run scoreboard players set #playerInLobby value 1

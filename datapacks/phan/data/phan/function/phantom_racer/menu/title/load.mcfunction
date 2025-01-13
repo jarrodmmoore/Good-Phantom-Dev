@@ -13,3 +13,4 @@ summon text_display ~ ~-0.5 ~ {Tags:["lobbyProp","tvPressStart","tvProp"],alignm
 #get rid of text from mode select
 scoreboard players set @e[type=text_display,distance=..7,tag=tvText] lifespan 0
 execute as @e[type=item_display,tag=tvTextHighlight,distance=..10] run function phan:phantom_racer/menu/destroy_text_highlight
+scoreboard players set @e[type=item_display,tag=tvTrackDisplay,distance=..10] lifespan 0

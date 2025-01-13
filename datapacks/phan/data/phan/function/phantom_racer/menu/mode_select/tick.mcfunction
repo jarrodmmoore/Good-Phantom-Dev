@@ -23,4 +23,4 @@ execute if score #tvAnimation value matches 25.. if score #tvCooldown value matc
 
 #if player pushes START, select whatever we selected
 execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. if score #tvMenuState1 value matches 0 run return run function phan:phantom_racer/menu/mode_select/go_to_class_select
-execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. if score #tvMenuState1 value matches 1 run return run say free play
+execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. if score #tvMenuState1 value matches 1 run return run function phan:phantom_racer/menu/mode_select/go_to_track_select

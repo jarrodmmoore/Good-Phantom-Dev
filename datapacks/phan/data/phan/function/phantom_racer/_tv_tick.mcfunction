@@ -16,6 +16,9 @@ scoreboard players set #tvInputJump value 0
 execute if score #tvControlState value matches 0 run function phan:phantom_racer/listen_for_controlling_player
 execute if score #tvControlState value matches 1 run function phan:phantom_racer/handle_player_control
 
+#re-light the redstone line if it went out
+execute if score #10Hz value matches 0 if block 245 -11 117 air run setblock 245 -11 117 redstone_torch
+
 #load a menu page when requested
 execute if score #tvLoadImpulse value matches 1.. run function phan:phantom_racer/menu/_load_index
 

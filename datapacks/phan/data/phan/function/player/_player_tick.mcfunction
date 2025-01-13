@@ -131,3 +131,7 @@ execute if entity @s[tag=doneWithIntro,gamemode=spectator,team=!observer] run te
 scoreboard players enable @s[gamemode=creative] editor
 tag @s[tag=!phan_edit,scores={editor=1}] add phan_edit
 execute if entity @s[tag=phan_edit] run function phan:editor/_editor_main
+
+#dream manager
+scoreboard players enable @s[gamemode=creative,scores={levelUID=1..}] dreamManager
+execute if score @s dreamManager matches 1 run function phan:level_manager/panel/_open_page_index

@@ -1,6 +1,6 @@
 data modify storage phan_grand_prix_5:metadata uid set value 5
 data modify storage phan_grand_prix_5:metadata rounds set value 5
-data modify storage phan_grand_prix_5:metadata show_medals set value 1
+data modify storage phan_grand_prix_5:metadata show_medals set value 0
 data modify storage phan_grand_prix_5:metadata name set value 'Netherite Cup'
 data modify storage phan_grand_prix_5:metadata icon_model set value 'netherite_block'
 

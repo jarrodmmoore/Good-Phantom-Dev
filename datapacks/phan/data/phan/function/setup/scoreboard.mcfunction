@@ -49,7 +49,8 @@ scoreboard objectives add enderEyes dummy
 scoreboard objectives add enderEyesShow dummy
 scoreboard objectives modify enderEyesShow displayname ["",{"text":"\uE027","bold":false,"color":"white"},{"text":" "},{"translate":"gp.versus.ever_eyes","bold":true},{"text":" "},{"text":"\uE027","bold":false,"color":"white"}]
 scoreboard objectives add editor trigger
-scoreboard objectives add editorState trigger
+scoreboard objectives add dreamManager trigger
+scoreboard objectives add editorState dummy
 scoreboard objectives add musicTime dummy
 scoreboard objectives add musicTrack dummy
 scoreboard objectives add musicProgress dummy

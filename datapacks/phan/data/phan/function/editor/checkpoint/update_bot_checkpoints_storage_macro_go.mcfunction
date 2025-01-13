@@ -1,0 +1,1 @@
+$data modify storage phan_dream_$(level_id):pr_act_$(act) bot_checkpoint_data[$(index)] set value $(value)

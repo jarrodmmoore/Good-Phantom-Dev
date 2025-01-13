@@ -99,8 +99,10 @@ execute if score #dreamsCompleted value matches 5.. if score #timeAttackUnlocked
 #completed dreams are always considered "discovered"
 function phan:levels/_dream_discovery
 
-#set skybox
+#set skybox and conditions
 scoreboard players set @a skyboxSet 1
+scoreboard players set #nightVision value 0
+tag @a remove getNightVisionInSA
 
 #titles
 title @a[tag=doneWithIntro] actionbar [""]
@@ -134,35 +136,17 @@ execute unless score #tvRememberPage value matches 0 run scoreboard players oper
 #summon temporary props
 function phan:game/0/summon_props
 
-#should probably send players to lobby? iunno.
+#get players ready
 function phan:movement/reset_speeds
 effect clear @a[tag=doneWithIntro] blindness
 effect give @a[tag=doneWithIntro] blindness 2 50 true
 gamemode adventure @a[tag=doneWithIntro]
-#fallback
-execute unless score #lastLevelPlayed value matches 1..10 unless score #lastLevelPlayed value matches 1001..1008 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:common/varied_teleport
-#stock dreams
-execute if score #lastLevelPlayed value matches 1 in overworld as @a[tag=doneWithIntro] positioned 206 -1 134 rotated 0 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 2 in overworld as @a[tag=doneWithIntro] positioned 206 -1 102 rotated 180 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 3 in overworld as @a[tag=doneWithIntro] positioned 218 -1 119 rotated 270 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 4 in overworld as @a[tag=doneWithIntro] positioned 203 -7 134 rotated 0 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 5 in overworld as @a[tag=doneWithIntro] positioned 203 -7 101 rotated 180 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 6..10 in overworld as @a[tag=doneWithIntro] positioned 228 -9 97 rotated 90 0 run function phan:common/varied_teleport
-#...
-#...
-#...
-#...
-#fallback
-execute if score #lastLevelPlayed value matches 11..1000 in overworld as @a[tag=doneWithIntro] positioned 198 -7 118 rotated -90 0 run function phan:common/varied_teleport
-#custom dreams
-execute if score #lastLevelPlayed value matches 1001 in overworld as @a[tag=doneWithIntro] positioned 245 -8 140 rotated 270 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1002 in overworld as @a[tag=doneWithIntro] positioned 245 -8 153 rotated 270 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1003 in overworld as @a[tag=doneWithIntro] positioned 245 -8 166 rotated 270 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1004 in overworld as @a[tag=doneWithIntro] positioned 245 -8 179 rotated 270 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1005 in overworld as @a[tag=doneWithIntro] positioned 228 -8 141 rotated 90 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1006 in overworld as @a[tag=doneWithIntro] positioned 228 -8 154 rotated 90 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1007 in overworld as @a[tag=doneWithIntro] positioned 228 -8 167 rotated 90 0 run function phan:common/varied_teleport
-execute if score #lastLevelPlayed value matches 1008 in overworld as @a[tag=doneWithIntro] positioned 228 -8 180 rotated 90 0 run function phan:common/varied_teleport
+
+#send players to the lobby
+#the location we send to is based on the last level that was played
+scoreboard players operation #math value = #lastLevelPlayed value
+tag @a[tag=doneWithIntro] add sendMe
+function phan:levels/_warp_to_bedside_index
 
 #all players check for Dreams Dreams advancement
 execute as @a[scores={dream1Completed=1..}] run advancement grant @s only phan:good_phantom/dreams_dreams dd_dream1

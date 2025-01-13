@@ -14,6 +14,8 @@ execute as @e[type=item_display,tag=tvDifficultyDisplay,distance=..7] run scoreb
 #get rid of text from other menus
 scoreboard players set @e[type=text_display,distance=..7,tag=tvText] lifespan 0
 execute as @e[type=item_display,tag=tvTextHighlight,distance=..10] run function phan:phantom_racer/menu/destroy_text_highlight
+scoreboard players set @e[type=marker,distance=..10,tag=tvTrackPreviewStop] lifespan 0
+scoreboard players set @e[type=item_display,tag=tvTrackDisplay,distance=..10] lifespan 0
 
 
 #unlock the first cup's levels for free, so players have at least a few levels open in Free Play

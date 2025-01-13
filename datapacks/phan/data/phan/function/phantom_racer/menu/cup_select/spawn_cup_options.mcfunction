@@ -1,5 +1,5 @@
 #summon them all, with storages for dynamic icons
-execute if score #tvAnimation value matches 10 positioned ~ ~.5 ~-3 run function phan:phantom_racer/menu/cup_select/spawn_cup_using_data {uid:0,icon_model:'purple_dye'}
+execute if score #tvAnimation value matches 10 positioned ~ ~.5 ~-3 run function phan:phantom_racer/menu/cup_select/spawn_cup_using_data {uid:0,icon_model:'barrier'}
 
 execute if score #tvAnimation value matches 11 positioned ~ ~.5 ~-2 run function phan:phantom_racer/menu/cup_select/spawn_cup_using_data with storage phan_grand_prix_1:metadata
 execute if score #tvAnimation value matches 12 positioned ~ ~.5 ~-1 run function phan:phantom_racer/menu/cup_select/spawn_cup_using_data with storage phan_grand_prix_2:metadata

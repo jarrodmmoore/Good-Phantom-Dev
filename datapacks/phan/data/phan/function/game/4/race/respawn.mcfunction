@@ -21,6 +21,9 @@ execute at @s run tp @s @s
 #get vertical launch if that's a thing we have
 execute if score @s vsRespawnLaunch matches 1.. run function phan:items/launch_effect
 
+#race mode: show compass for a second that tells players where to go in case they're jerking their view around
+execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players set @s compassShowTime 50
+
 #cooldown on respawn
 scoreboard players set @s inputCooldownB 40
 scoreboard players set @s inputCooldownC 7
