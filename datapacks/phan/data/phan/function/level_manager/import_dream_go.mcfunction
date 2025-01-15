@@ -21,7 +21,7 @@ $data modify storage phan_dream_$(level_id):score_attack time_gold set from stor
 $data modify storage phan_dream_$(level_id):score_attack time_diamond set from storage $(filename):score_attack time_diamond
 $data modify storage phan_dream_$(level_id):sa_act_1 playable set from storage $(filename):sa_act_1 playable
 $data modify storage phan_dream_$(level_id):sa_act_1 act_name set from storage $(filename):sa_act_1 act_name
-$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_item set from storage $(filename):sa_act_1 thumbnail_item
+$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_text set from storage $(filename):sa_act_1 thumbnail
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_model set from storage $(filename):sa_act_1 thumbnail_model
 $data modify storage phan_dream_$(level_id):sa_act_1 pearls_needed set from storage $(filename):sa_act_1 pearls_needed
 $data modify storage phan_dream_$(level_id):sa_act_1 time_limit set from storage $(filename):sa_act_1 time_limit
@@ -44,7 +44,7 @@ $data modify storage phan_dream_$(level_id):sa_act_1 night_vision set from stora
 $data modify storage phan_dream_$(level_id):sa_act_1 bright_mines set from storage $(filename):sa_act_1 bright_mines
 $data modify storage phan_dream_$(level_id):sa_act_2 playable set from storage $(filename):sa_act_2 playable
 $data modify storage phan_dream_$(level_id):sa_act_2 act_name set from storage $(filename):sa_act_2 act_name
-$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_item set from storage $(filename):sa_act_2 thumbnail_item
+$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_text set from storage $(filename):sa_act_2 thumbnail
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_model set from storage $(filename):sa_act_2 thumbnail_model
 $data modify storage phan_dream_$(level_id):sa_act_2 pearls_needed set from storage $(filename):sa_act_2 pearls_needed
 $data modify storage phan_dream_$(level_id):sa_act_2 time_limit set from storage $(filename):sa_act_2 time_limit
@@ -67,7 +67,7 @@ $data modify storage phan_dream_$(level_id):sa_act_2 night_vision set from stora
 $data modify storage phan_dream_$(level_id):sa_act_2 bright_mines set from storage $(filename):sa_act_2 bright_mines
 $data modify storage phan_dream_$(level_id):sa_act_3 playable set from storage $(filename):sa_act_3 playable
 $data modify storage phan_dream_$(level_id):sa_act_3 act_name set from storage $(filename):sa_act_3 act_name
-$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_item set from storage $(filename):sa_act_3 thumbnail_item
+$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_text set from storage $(filename):sa_act_3 thumbnail
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_model set from storage $(filename):sa_act_3 thumbnail_model
 $data modify storage phan_dream_$(level_id):sa_act_3 pearls_needed set from storage $(filename):sa_act_3 pearls_needed
 $data modify storage phan_dream_$(level_id):sa_act_3 time_limit set from storage $(filename):sa_act_3 time_limit
@@ -91,7 +91,7 @@ $data modify storage phan_dream_$(level_id):sa_act_3 bright_mines set from stora
 $data modify storage phan_dream_$(level_id):portal_race selectable set from storage $(filename):portal_race selectable
 $data modify storage phan_dream_$(level_id):pr_act_1 playable set from storage $(filename):pr_act_1 playable
 $data modify storage phan_dream_$(level_id):pr_act_1 act_name set from storage $(filename):pr_act_1 act_name
-$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_item set from storage $(filename):pr_act_1 thumbnail_item
+$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_text set from storage $(filename):pr_act_1 thumbnail
 $data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_model set from storage $(filename):pr_act_1 thumbnail_model
 $data modify storage phan_dream_$(level_id):pr_act_1 supports_bots set from storage $(filename):pr_act_1 supports_bots
 $data modify storage phan_dream_$(level_id):pr_act_1 countdown_type set from storage $(filename):pr_act_1 countdown_type
@@ -115,7 +115,7 @@ $data modify storage phan_dream_$(level_id):pr_act_1 night_vision set from stora
 $data modify storage phan_dream_$(level_id):pr_act_1 bright_mines set from storage $(filename):pr_act_1 bright_mines
 $data modify storage phan_dream_$(level_id):pr_act_2 playable set from storage $(filename):pr_act_2 playable
 $data modify storage phan_dream_$(level_id):pr_act_2 act_name set from storage $(filename):pr_act_2 act_name
-$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_item set from storage $(filename):pr_act_2 thumbnail_item
+$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_text set from storage $(filename):pr_act_2 thumbnail
 $data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_model set from storage $(filename):pr_act_2 thumbnail_model
 $data modify storage phan_dream_$(level_id):pr_act_2 supports_bots set from storage $(filename):pr_act_2 supports_bots
 $data modify storage phan_dream_$(level_id):pr_act_2 countdown_type set from storage $(filename):pr_act_2 countdown_type
@@ -139,7 +139,7 @@ $data modify storage phan_dream_$(level_id):pr_act_2 night_vision set from stora
 $data modify storage phan_dream_$(level_id):pr_act_2 bright_mines set from storage $(filename):pr_act_2 bright_mines
 $data modify storage phan_dream_$(level_id):pr_act_3 playable set from storage $(filename):pr_act_3 playable
 $data modify storage phan_dream_$(level_id):pr_act_3 act_name set from storage $(filename):pr_act_3 act_name
-$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_item set from storage $(filename):pr_act_3 thumbnail_item
+$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_text set from storage $(filename):pr_act_3 thumbnail
 $data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_model set from storage $(filename):pr_act_3 thumbnail_model
 $data modify storage phan_dream_$(level_id):pr_act_3 supports_bots set from storage $(filename):pr_act_3 supports_bots
 $data modify storage phan_dream_$(level_id):pr_act_3 countdown_type set from storage $(filename):pr_act_3 countdown_type
@@ -163,7 +163,7 @@ $data modify storage phan_dream_$(level_id):pr_act_3 night_vision set from stora
 $data modify storage phan_dream_$(level_id):pr_act_3 bright_mines set from storage $(filename):pr_act_3 bright_mines
 $data modify storage phan_dream_$(level_id):pr_act_4 playable set from storage $(filename):pr_act_4 playable
 $data modify storage phan_dream_$(level_id):pr_act_4 act_name set from storage $(filename):pr_act_4 act_name
-$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_item set from storage $(filename):pr_act_4 thumbnail_item
+$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_text set from storage $(filename):pr_act_4 thumbnail
 $data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_model set from storage $(filename):pr_act_4 thumbnail_model
 $data modify storage phan_dream_$(level_id):pr_act_4 supports_bots set from storage $(filename):pr_act_4 supports_bots
 $data modify storage phan_dream_$(level_id):pr_act_4 countdown_type set from storage $(filename):pr_act_4 countdown_type

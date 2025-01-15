@@ -24,7 +24,7 @@ execute as @a[tag=playing,sort=random] run function phan:player_queue/enqueue_pl
 #nobody is a player until they start a level
 tag @a[tag=playing] remove playing
 tag @a[tag=doneWithIntro] remove noInventory
-xp set @a 0 levels
+xp set @a 100 levels
 xp set @a 0 points
 clear @a
 effect clear @a night_vision

@@ -14,6 +14,10 @@ execute if score #tvCooldown value matches ..0 if score #tvInputLR value matches
 execute if score #tvCooldown value matches ..0 if score #tvInputLR value matches ..-1 run function phan:phantom_racer/menu/generic_select_change_minmax {menu_state:1,add:-1,min:0,max:100,cooldown:4}
 execute if score #tvMenuState1 value > #tvMaxIndex value run scoreboard players operation #tvMenuState1 value = #tvMaxIndex value
 
+#update round counter if that's a thing we have
+execute if score #tvEditingGrandPrix value matches 1.. store result storage phan:gp_index gp_id int 1 run scoreboard players get #tvChosenGP value
+execute if score #tvEditingGrandPrix value matches 1.. run function phan:phantom_racer/menu/track_select/gp_round_counter with storage phan:gp_index
+
 #if player pushes START, select whatever we selected
 execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. store result storage phan:level_index index int 1 run scoreboard players get #tvMenuState1 value
 execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. run function phan:phantom_racer/menu/track_select/select_index with storage phan:level_index

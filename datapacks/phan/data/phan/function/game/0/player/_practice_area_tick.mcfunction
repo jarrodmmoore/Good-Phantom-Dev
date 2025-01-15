@@ -5,9 +5,6 @@ scoreboard players set #practiceLogic value 1
 
 
 
-#xp bar (energy display)
-function phan:game/1/player/xp_bar/xp_main
-
 #! emergency exit this function right before the inventory stuff in case gameState changed
 execute unless score #gameState value matches 0 run return 0
 

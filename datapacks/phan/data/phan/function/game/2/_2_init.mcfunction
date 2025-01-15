@@ -11,7 +11,7 @@ function phan:bgm/set_bgm
 #nobody is a player until they start a level
 tag @a[tag=playing] remove playing
 tag @a remove noInventory
-xp set @a 0 levels
+xp set @a 100 levels
 xp set @a 0 points
 clear @a
 

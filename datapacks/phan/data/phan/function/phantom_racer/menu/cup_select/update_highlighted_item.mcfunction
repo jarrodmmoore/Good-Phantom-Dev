@@ -47,7 +47,7 @@ scoreboard players set #tvShowTrackTimer value 0
 scoreboard players set #tvShowTrack value 1
 
 #clear old track previews that are trying to scroll
-scoreboard players set @e[type=item_display,tag=tvTrackImage,distance=..10] lifespan 0
+scoreboard players set @e[type=text_display,tag=tvTrackImage,distance=..10] lifespan 0
 
 #sync up
 scoreboard players operation #tvMenuState2 value = #tvMenuState1 value

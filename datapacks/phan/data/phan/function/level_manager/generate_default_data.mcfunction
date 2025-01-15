@@ -22,15 +22,12 @@ $data modify storage phan_dream_$(level_id):score_attack time_bronze set value [
 $data modify storage phan_dream_$(level_id):score_attack time_silver set value [5,0,0]
 $data modify storage phan_dream_$(level_id):score_attack time_gold set value [4,0,0]
 $data modify storage phan_dream_$(level_id):score_attack time_diamond set value [3,0,0]
-#$data modify storage phan_dream_$(level_id):score_attack high_skill_music_track set value 0
-#$data modify storage phan_dream_$(level_id):score_attack high_skill_music_function set value "bgm/play_0"
-#^ note: will display to user as "levels/custom_dream_x/bgm/play_0"
 
 #score attack act 1
 $data modify storage phan_dream_$(level_id):sa_act_1 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_1 act_name set value "Act 1"
-$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):sa_act_1 pearls_needed set value 16
 $data modify storage phan_dream_$(level_id):sa_act_1 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_1 target_time set value [1,0,0]
@@ -54,8 +51,8 @@ $data modify storage phan_dream_$(level_id):sa_act_1 bright_mines set value 0
 #score attack act 2
 $data modify storage phan_dream_$(level_id):sa_act_2 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_2 act_name set value "Act 2"
-$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):sa_act_2 pearls_needed set value 16
 $data modify storage phan_dream_$(level_id):sa_act_2 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_2 target_time set value [1,0,0]
@@ -79,8 +76,8 @@ $data modify storage phan_dream_$(level_id):sa_act_2 bright_mines set value 0
 #score attack act 3
 $data modify storage phan_dream_$(level_id):sa_act_3 playable set value 1
 $data modify storage phan_dream_$(level_id):sa_act_3 act_name set value "Act 3"
-$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):sa_act_3 pearls_needed set value 16
 $data modify storage phan_dream_$(level_id):sa_act_3 time_limit set value 120
 $data modify storage phan_dream_$(level_id):sa_act_3 target_time set value [1,0,0]
@@ -108,14 +105,12 @@ $data modify storage phan_dream_$(level_id):sa_act_3 bright_mines set value 0
 
 #generic portal race data
 $data modify storage phan_dream_$(level_id):portal_race selectable set value 0
-#$data modify storage phan_dream_$(level_id):portal_race high_skill_music_track set value 0
-#$data modify storage phan_dream_$(level_id):portal_race high_skill_music_function set value "bgm/play_0"
 
 #portal race act 1
 $data modify storage phan_dream_$(level_id):pr_act_1 playable set value 0
 $data modify storage phan_dream_$(level_id):pr_act_1 act_name set value "Act 1"
-$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):pr_act_1 supports_bots set value 0
 $data modify storage phan_dream_$(level_id):pr_act_1 countdown_type set value 0
 $data modify storage phan_dream_$(level_id):pr_act_1 game_type set value 1
@@ -140,8 +135,8 @@ $data modify storage phan_dream_$(level_id):pr_act_1 bright_mines set value 0
 #portal race act 2
 $data modify storage phan_dream_$(level_id):pr_act_2 playable set value 0
 $data modify storage phan_dream_$(level_id):pr_act_2 act_name set value "Act 2"
-$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):pr_act_2 supports_bots set value 0
 $data modify storage phan_dream_$(level_id):pr_act_2 countdown_type set value 0
 $data modify storage phan_dream_$(level_id):pr_act_2 game_type set value 1
@@ -166,8 +161,8 @@ $data modify storage phan_dream_$(level_id):pr_act_2 bright_mines set value 0
 #portal race act 3
 $data modify storage phan_dream_$(level_id):pr_act_3 playable set value 0
 $data modify storage phan_dream_$(level_id):pr_act_3 act_name set value "Act 3"
-$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):pr_act_3 supports_bots set value 0
 $data modify storage phan_dream_$(level_id):pr_act_3 countdown_type set value 0
 $data modify storage phan_dream_$(level_id):pr_act_3 game_type set value 1
@@ -192,8 +187,8 @@ $data modify storage phan_dream_$(level_id):pr_act_3 bright_mines set value 0
 #portal race act 4
 $data modify storage phan_dream_$(level_id):pr_act_4 playable set value 0
 $data modify storage phan_dream_$(level_id):pr_act_4 act_name set value "Act 4"
-$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_item set value "magenta_dye"
 $data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_model set value "gp/map_preview/generic"
+$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_text set value '["",{"text":"\\uE500","color":"white"}]'
 $data modify storage phan_dream_$(level_id):pr_act_4 supports_bots set value 0
 $data modify storage phan_dream_$(level_id):pr_act_4 countdown_type set value 0
 $data modify storage phan_dream_$(level_id):pr_act_4 game_type set value 1

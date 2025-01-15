@@ -1,0 +1,1 @@
+$data modify storage phan:level_index model set from storage phan_dream_$(level_id):pr_act_$(act) thumbnail_text

@@ -61,4 +61,4 @@ execute if score #lapDisplay2B value matches 9.. run data modify storage phan:da
 
 #show on actionbar
 scoreboard players set @s actionbarDelay 35
-title @s actionbar ["",{"text":"\uA914\uF001\uA912\uF001\uA913\uF001"},{"nbt":"display.lap.digit1a","storage":"phan:data","interpret":true},{"nbt":"display.lap.digit1b","storage":"phan:data","interpret":true},{"text":"\uA926\uF001"},{"nbt":"display.lap.digit2a","storage":"phan:data","interpret":true},{"nbt":"display.lap.digit2b","storage":"phan:data","interpret":true},{"text":"\uA915\uF001"}]
+title @s actionbar ["",{"text":"\uA914\uF001\uA912\uF001\uA913\uF001","shadow_color":[0,0,0,0]},{"nbt":"display.lap.digit1a","storage":"phan:data","interpret":true,"shadow_color":[0,0,0,0]},{"nbt":"display.lap.digit1b","storage":"phan:data","interpret":true,"shadow_color":[0,0,0,0]},{"text":"\uA926\uF001","shadow_color":[0,0,0,0]},{"nbt":"display.lap.digit2a","storage":"phan:data","interpret":true,"shadow_color":[0,0,0,0]},{"nbt":"display.lap.digit2b","storage":"phan:data","interpret":true,"shadow_color":[0,0,0,0]},{"text":"\uA915\uF001","shadow_color":[0,0,0,0]}]

@@ -14,26 +14,31 @@ $execute store result score #test value run data get storage phan:level_index le
 execute if score #test value matches -3 run return 0
 #=====
 
-#fallback model is tv static
-data modify storage phan:level_index model set value 'gp/map_preview/unknown_dream'
+#fallback model is generic
+data modify storage phan:level_index model set value '["",{"text":"\\uE500","color":"white"}]'
+
+#-4 means show erase button
+execute if score #test value matches -4 run data modify storage phan:level_index model set value '["",{"text":"\\uE507","color":"white"}]'
 
 #-2 means show lock
-execute if score #test value matches -2 run data modify storage phan:level_index model set value 'magenta_dye'
+execute if score #test value matches -2 run data modify storage phan:level_index model set value '["",{"text":"\\uE506","color":"white"}]'
 
 #-1 means go back
-execute if score #test value matches -1 run data modify storage phan:level_index model set value 'barrier'
+execute if score #test value matches -1 unless score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value '["",{"text":"\\uE504","color":"white"}]'
+#-1 re-skin to be a "done" icon when editing a grand prix
+execute if score #test value matches -1 if score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value '["",{"text":"\\uE505","color":"white"}]'
 
 #0 means random
-execute if score #test value matches 0 run data modify storage phan:level_index model set value 'gp/map_preview/random'
+execute if score #test value matches 0 run data modify storage phan:level_index model set value '["",{"text":"\\uE501","color":"white"}]'
 
 #1.. means look up the model from the associated dream (always uses act 1)
 execute if score #test value matches 1.. store result storage phan:level_index level_id int 1 run scoreboard players get #test value
 execute if score #test value matches 1.. run function phan:phantom_racer/menu/track_select/spawn_option_from_index_get_model with storage phan:level_index
 
 #alright, now we can summon the thing!
-function phan:phantom_racer/menu/track_select/spawn_option_from_index_go with storage phan:level_index
+function phan:phantom_racer/menu/track_select/spawn_option_from_index_go
 
 #assign index score to the thing we summoned
-$scoreboard players set @e[type=item_display,tag=setData,distance=..10] boxID $(index)
+$scoreboard players set @e[type=text_display,tag=setData,distance=..10] boxID $(index)
 
 ## remember to clean up the setData tag after running this!

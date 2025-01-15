@@ -14,8 +14,8 @@ scoreboard players operation #math value = #tvMenuState1 value
 scoreboard players add #math value 2
 execute store result storage phan:level_index index int 1 run scoreboard players get #math value
 execute at @e[limit=1,type=marker,tag=tvTrackPreviewStop6,distance=..10] run function phan:phantom_racer/menu/track_select/spawn_option_from_index with storage phan:level_index
-scoreboard players set @e[type=item_display,tag=setData,distance=..10] botID 6
-tag @e[type=item_display,tag=setData,distance=..10] remove setData
+scoreboard players set @e[type=text_display,tag=setData,distance=..10] botID 6
+tag @e[type=text_display,tag=setData,distance=..10] remove setData
 
 #get ready to move everything over!
-scoreboard players remove @e[type=item_display,tag=tvTrackDisplay,tag=!tvTracksBackground,distance=..10] botID 1
+scoreboard players remove @e[type=text_display,tag=tvTrackDisplay,tag=!tvTracksBackground,distance=..10] botID 1

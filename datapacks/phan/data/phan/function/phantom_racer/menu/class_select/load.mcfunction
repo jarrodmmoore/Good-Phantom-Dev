@@ -12,6 +12,7 @@ execute as @e[type=text_display,distance=..7,tag=tvLogo] run function phan:phant
 #get rid of text from mode select
 scoreboard players set @e[type=text_display,distance=..7,tag=tvText] lifespan 0
 scoreboard players set @e[type=item_display,tag=tvTrackDisplay,distance=..10] lifespan 0
+scoreboard players set @e[type=text_display,tag=tvTrackDisplay,distance=..10] lifespan 0
 execute as @e[type=item_display,tag=tvTextHighlight,distance=..10] run function phan:phantom_racer/menu/destroy_text_highlight
 
 #get rid of stuff from cup select

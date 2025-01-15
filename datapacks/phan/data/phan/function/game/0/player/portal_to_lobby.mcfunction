@@ -20,7 +20,7 @@ execute at @s unless entity @a[gamemode=creative,distance=1..] run time set 1800
 
 #reset scores and clear inventory
 scoreboard players set @s energy 0
-xp set @s 0 levels
+xp set @s 100 levels
 xp set @s 0 points
 clear @s
 scoreboard players set @s pShowHUD 0

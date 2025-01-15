@@ -3,10 +3,6 @@ execute unless entity @e[type=item,tag=modeSelect] run function phan:game/2/retu
 
 
 #make the level previews look nice and inviting
-#execute as @e[type=item_display,tag=actPreviewImage1] at @s run rotate @s ~3 ~
-#execute as @e[type=item_display,tag=actPreviewImage2] at @s run rotate @s ~-3 ~
-#execute as @e[type=item_display,tag=actPreviewImage3] at @s run rotate @s ~3 ~
-#execute as @e[type=item_display,tag=actPreviewImage4] at @s run rotate @s ~-3 ~
 execute if score #10Hz value matches 0 as @e[type=item,tag=actSelect] at @s run particle end_rod ~ ~.25 ~ 0.2 0.2 0.2 0.025 1 force @a[tag=doneWithIntro,distance=..75]
 
 

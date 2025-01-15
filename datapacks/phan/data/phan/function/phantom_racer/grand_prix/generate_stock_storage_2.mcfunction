@@ -17,4 +17,4 @@ data modify storage phan_grand_prix_2:round_4 dream set value 5
 data modify storage phan_grand_prix_2:round_4 act set value 1
 
 data modify storage phan_grand_prix_2:round_5 dream set value 3
-data modify storage phan_grand_prix_2:round_5 act set value 2
+data modify storage phan_grand_prix_2:round_5 act set value 1

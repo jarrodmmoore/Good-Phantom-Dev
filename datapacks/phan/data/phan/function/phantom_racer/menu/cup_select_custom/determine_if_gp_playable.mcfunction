@@ -1,0 +1,1 @@
+$execute store result score #tvMenuState8 value run data get storage phan_grand_prix_$(gp_id):metadata rounds

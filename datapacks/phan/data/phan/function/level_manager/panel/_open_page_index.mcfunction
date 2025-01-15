@@ -19,6 +19,10 @@ execute if score @s levelManagerPage matches 5 run function phan:level_manager/p
 execute if score @s levelManagerPage matches 6 run function phan:level_manager/panel/portal_race/act/_menu_lookup
 execute if score @s levelManagerPage matches 7 run function phan:level_manager/panel/portal_race/act/_menu_2_lookup
 execute if score @s levelManagerPage matches 8 run function phan:level_manager/panel/portal_race/_menu_podium_lookup
+
+execute if score @s levelManagerPage matches 9 run function phan:level_manager/panel/score_attack/act/_menu_3_lookup
+execute if score @s levelManagerPage matches 10 run function phan:level_manager/panel/portal_race/act/_menu_3_lookup
+
 #...
 
 #notify player if nothing is selected

@@ -9,9 +9,18 @@ execute if score #area4SpawnA value matches 0 run function phan:game/1/spawning/
 execute if score #area5SpawnA value matches 0 run function phan:game/1/spawning/reset/reset5a
 
 execute if score #area0SpawnB value matches 0 run function phan:game/1/spawning/reset/reset0b
+execute if score #playersInEditMode value matches 1.. if score #area1SpawnB value matches 0 run function phan:game/1/spawning/reset/reset1b
+execute if score #playersInEditMode value matches 1.. if score #area2SpawnB value matches 0 run function phan:game/1/spawning/reset/reset2b
+execute if score #playersInEditMode value matches 1.. if score #area3SpawnB value matches 0 run function phan:game/1/spawning/reset/reset3b
+execute if score #playersInEditMode value matches 1.. if score #area4SpawnB value matches 0 run function phan:game/1/spawning/reset/reset4b
 execute if score #area5SpawnB value matches 0 run function phan:game/1/spawning/reset/reset5b
 
 execute if score #area0SpawnC value matches 0 run function phan:game/1/spawning/reset/reset0c
+execute if score #playersInEditMode value matches 1.. if score #area1SpawnC value matches 0 run function phan:game/1/spawning/reset/reset1c
+execute if score #playersInEditMode value matches 1.. if score #area2SpawnC value matches 0 run function phan:game/1/spawning/reset/reset2c
+execute if score #playersInEditMode value matches 1.. if score #area3SpawnC value matches 0 run function phan:game/1/spawning/reset/reset3c
+execute if score #playersInEditMode value matches 1.. if score #area4SpawnC value matches 0 run function phan:game/1/spawning/reset/reset4c
+execute if score #playersInEditMode value matches 1.. if score #area5SpawnC value matches 0 run function phan:game/1/spawning/reset/reset5c
 
 #nodes respawn their stuff when told to
 execute if score #5Hz value matches 0 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/1/spawning/check_area_generic_a
