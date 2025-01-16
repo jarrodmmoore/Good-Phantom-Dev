@@ -83,9 +83,11 @@ scoreboard players add @a playerTipTime 200
 #we are no longer in free play mode!
 execute if score #freePlay value matches 1 run scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #freePlay value 0
-
-#we are no longer using random level select!
-scoreboard players set #usingRandomLevelSelect value 0
+#not in a grand prix anymore, either
+execute if score #grandPrixActive value matches -1 run scoreboard players set #lastLevelPlayed value -1
+execute if score #grandPrixActive value matches 1.. run scoreboard players set #lastLevelPlayed value -1
+execute if score #grandPrixActive value matches 1.. run schedule function phan:game/2/bots/delete_all_bots 1t
+scoreboard players set #grandPrixActive value 0
 
 #jukebox particles don't happen until we pick a song to play from it
 scoreboard players set #lobbyJukebox value 0
@@ -124,6 +126,7 @@ scoreboard players set @a addScore 0
 scoreboard players set @a spectatingID -1
 scoreboard players set @a shieldTime 0
 scoreboard players set @a[scores={strengthTime=3..}] strengthTime 2
+scoreboard players set @a energy 0
 
 #item stuff
 scoreboard players reset @a elytraTimer

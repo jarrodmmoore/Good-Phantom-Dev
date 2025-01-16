@@ -4,6 +4,13 @@ execute if score #freePlay value matches 0 if score #vAct value matches ..3 run 
 execute if score #freePlay value matches 0 if score #vAct value matches 4.. run scoreboard players set #vsReturnToLobby value 2
 
 
+#grand prix: always keep going! unless we're at the end and ready to watch the podium
+#(podium sequence will play at whatever the last dream played was)
+execute if score #grandPrixActive value matches 1.. run scoreboard players set #vsReturnToLobby value 0
+execute if score #grandPrixActive value matches 1.. run scoreboard players add #grandPrixRound value 1
+execute if score #grandPrixActive value matches 1.. run execute if score #grandPrixRound value > #grandPrixMaxRounds value run scoreboard players set #vsReturnToLobby value 2
+
+
 #watch end podium sequence
 execute if score #vsReturnToLobby value matches 2 run return run function phan:game/5/_5_init
 

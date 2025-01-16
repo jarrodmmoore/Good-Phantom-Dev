@@ -16,3 +16,6 @@ scoreboard players set @e[type=item_display,tag=tvTempHighlight] lifespan 0
 
 #re-select whatever dream we were looking at
 function phan:phantom_racer/menu/cup_select/update_highlighted_item
+
+#sound
+function phan:phantom_racer/menu/click_sound_effect_low

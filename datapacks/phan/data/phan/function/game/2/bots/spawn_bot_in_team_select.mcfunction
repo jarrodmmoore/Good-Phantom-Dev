@@ -2,7 +2,7 @@
 #(set the execution position carefully before running this!)
 
 #any lvl 6 bots in non-free play mode should return to lvl 5 now
-execute if score #freePlay value matches ..0 run scoreboard players set @s[scores={botOriginalSkill=6..}] botOriginalSkill 5
+execute if score #freePlay value matches ..0 if score #grandPrixActive value matches ..0 run scoreboard players set @s[scores={botOriginalSkill=6..}] botOriginalSkill 5
 
 #make sure bot difficulty is up to date
 function phan:game/2/bots/update_bot_difficulty

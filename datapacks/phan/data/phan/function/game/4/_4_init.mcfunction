@@ -1,6 +1,9 @@
 #keep track of the last mode we played so we can show relevant tips
 scoreboard players set #lastModePlayed value 4
 
+#grand prix mode: quick-- look up what level we're supposed to be playing and overwrite whatever's in memory!
+execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/game_io/gp_get_round_data
+
 #load level data
 function phan:level_manager/load/cache_active_level_data
 function phan:level_manager/load/trim_excess_bot_checkpoint_data
@@ -19,6 +22,9 @@ scoreboard players set @a pShowHUD 0
 scoreboard players set #hudMode value 3
 function phan:custom_hud/setup
 
+#grand prix: show round number
+execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/game_io/gp_show_round
+
 #manage item entities
 function phan:items/reset_valid_objective
 
@@ -35,7 +41,7 @@ scoreboard players set #startMusic value 0
 kill @e[tag=lobbyProp]
 
 #no sidebar please
-scoreboard objectives setdisplay sidebar
+execute unless score #gameState value matches 4 run scoreboard objectives setdisplay sidebar
 
 #players have aqua name now
 team modify player color aqua
@@ -99,6 +105,7 @@ execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_
 execute if score #vAct value matches ..4 unless function phan:game/4/verify_act_exists run scoreboard players add #vAct value 1
 #override act number with #freePlayAct argument if relevant
 execute if score #freePlay value matches 1 run scoreboard players operation #vAct value = #freePlayAct value
+execute if score #grandPrixActive value matches 1.. run scoreboard players operation #vAct value = #freePlayAct value
 scoreboard players set #vsRestart value 0
 
 #if we're attempting to boot into act 5, let's instead switch to the podium sequence

@@ -16,8 +16,4 @@ execute if score #gameState value matches 4 if entity @s[scores={pGameTime=120,p
 title @s title ["",{"nbt":"name_display","storage":"phan_dream_active:dream_data","interpret":true}]
 
 #"discover" the associated dream (so the name no longer shows up as ???)
-execute if score #chosenLevel value matches 1 run scoreboard players set #dream1Discovered value 1
-execute if score #chosenLevel value matches 2 run scoreboard players set #dream2Discovered value 1
-execute if score #chosenLevel value matches 3 run scoreboard players set #dream3Discovered value 1
-execute if score #chosenLevel value matches 4 run scoreboard players set #dream4Discovered value 1
-execute if score #chosenLevel value matches 5 run scoreboard players set #dream5Discovered value 1
+function phan:levels/_index_discover_dream

@@ -28,17 +28,22 @@ bossbar set general_bossbar name ["",{"translate":"gp.mode_select.play_or_specta
 
 #summon level text
 execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
-execute positioned 209 -26 118 run function phan:levels/_index_title_entity with storage phan:level_index
+execute unless score #grandPrixActive value matches 1.. positioned 209 -26 118 run function phan:levels/_index_title_entity with storage phan:level_index
+execute if score #grandPrixActive value matches 1.. positioned 209 -26 118 positioned ~ ~1 ~ run function phan:level_manager/load/spawn_name_display {level_uid:1,rotation:90,offset_x:'.0',offset_y:'.6',offset_z:'.0'}
+execute if score #grandPrixActive value matches 1.. as @e[type=text_display,tag=lobbyNameDisplay1] run data merge entity @s {text:'{"text":"\\uE398"}'}
 
 #summon act text (if applicable)
 execute store result storage phan:level_index act int 1 run scoreboard players get #showActNumber value
 execute if score #showActNumber value matches 1.. if score #desiredGamemode value matches 1..2 positioned 209 -27 118 run function phan:levels/_index_act_title_entity_score_attack with storage phan:level_index
-execute if score #showActNumber value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -27 118 run function phan:levels/_index_act_title_entity with storage phan:level_index
+execute unless score #grandPrixActive value matches 1.. if score #showActNumber value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -27 118 run function phan:levels/_index_act_title_entity with storage phan:level_index
+execute if score #grandPrixActive value matches 1.. store result storage phan:level_index level_id int 1 run scoreboard players get #grandPrixActive value
+#in grand prix, show the name of the cup
+execute if score #grandPrixActive value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -27 118 positioned ~ ~-.5 ~ run function phan:game/2/summon_grand_prix_name with storage phan:level_index
 
 #summon gamemode text
 execute if score #desiredGamemode value matches 1 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.score_attack","bold":true,"color":"yellow"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_3_players","bold":false,"color":"gray"}]'}
 execute if score #desiredGamemode value matches 2 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.time_attack","bold":true,"color":"red"},{"text":"\\n"},{"translate":"gp.mode_select.1_player","bold":false,"color":"gray"}]'}
-execute if score #desiredGamemode value matches 3 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_24_players","bold":false,"color":"gray"}]'}
+execute unless score #grandPrixActive value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:'[{"translate":"gp.mode_select.versus","bold":true,"color":"light_purple"},{"text":"\\n"},{"translate":"gp.mode_select.1_to_24_players","bold":false,"color":"gray"}]'}
 #rotate it
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~50.4 ~ 90 ~
 tag @e[tag=rotateText,type=text_display] remove rotateText

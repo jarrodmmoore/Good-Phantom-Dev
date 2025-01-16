@@ -1,0 +1,2 @@
+$execute store result score #chosenLevel value run data get storage phan_grand_prix_$(gp_id):round_$(round) dream
+$execute store result score #vAct value run data get storage phan_grand_prix_$(gp_id):round_$(round) act

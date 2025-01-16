@@ -5,8 +5,8 @@ scoreboard players operation #offerTrophy value = #math value
 $scoreboard players add #offerTrophy value $(placement_score)
 
 #now record it!
-function phan:levels/_index_record_trophy
-
+execute unless score #grandPrixActive value matches 1.. run function phan:levels/_index_record_trophy
+execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/grand_prix/record_trophy
 
 
 #player gets advancement for getting gold trophy at max difficulty

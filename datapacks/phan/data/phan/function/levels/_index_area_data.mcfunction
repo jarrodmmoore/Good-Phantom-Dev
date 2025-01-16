@@ -1,9 +1,6 @@
 #load from storage
 function phan:level_manager/load/load_score_attack_data
 
-#set randomization cooldown on the act we're currently on
-function phan:levels/_index_randomization_cooldown
-
 #assist mode: get extra time
 execute if score #assist_time_limit value matches 1 run scoreboard players operation @s pTimeRemaining *= #CONST_ASSIST_TIME value
 execute if score #assist_time_limit value matches 1 run scoreboard players operation @s pTimeRemaining /= #100 value

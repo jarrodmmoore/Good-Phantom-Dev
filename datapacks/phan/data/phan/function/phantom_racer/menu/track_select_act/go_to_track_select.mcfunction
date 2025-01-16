@@ -17,3 +17,6 @@ execute as @e[type=item_display,tag=tvActsBackground,distance=..10] run scoreboa
 
 #re-select whatever dream we were looking at
 function phan:phantom_racer/menu/track_select/update_highlighted_item
+
+#sound
+execute unless score #tvEditingGrandPrix value matches 1.. run function phan:phantom_racer/menu/click_sound_effect_low

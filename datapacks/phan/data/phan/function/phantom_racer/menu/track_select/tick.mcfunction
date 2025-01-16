@@ -21,3 +21,9 @@ execute if score #tvEditingGrandPrix value matches 1.. run function phan:phantom
 #if player pushes START, select whatever we selected
 execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. store result storage phan:level_index index int 1 run scoreboard players get #tvMenuState1 value
 execute if score #tvAnimation value matches 25.. if score #tvInputJumpImpulse value matches 1.. run function phan:phantom_racer/menu/track_select/select_index with storage phan:level_index
+
+#exit out if admin required and we're not admin
+scoreboard players set #success value 1
+execute if score #tvEditingGrandPrix value matches 1.. if score #grandPrixEditAdminOnly value matches 1 run scoreboard players set #success value 0
+execute if score #tvEditingGrandPrix value matches 1.. if score #grandPrixEditAdminOnly value matches 1 as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers if entity @s[tag=admin] run scoreboard players set #success value 1
+execute if score #success value matches 0 if score #tvMenuPage value matches 4 run function phan:phantom_racer/menu/track_select/go_to_cup_select

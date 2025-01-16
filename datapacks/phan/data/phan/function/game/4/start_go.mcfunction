@@ -28,6 +28,8 @@ scoreboard players operation #givenRockets value = #hudPeakPlayers value
 execute if score #givenRockets value matches 16.. run scoreboard players set #givenRockets value 15
 
 #start showing the HUD
+bossbar set general_bossbar players
+bossbar set general_buffer players
 scoreboard players set @a pShowHUD 1
 
 #show player names

@@ -18,3 +18,6 @@ execute if score #test value matches ..0 run playsound minecraft:custom_sfx/bit_
 
 #make the console power blink as a fun detail
 setblock 245 -11 117 air
+
+#controlling player is not afk
+execute as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run scoreboard players set @s[type=player] idleTime 0

@@ -59,7 +59,7 @@ scoreboard players set #lastLevelPlayed value 0
 #unlocks
 scoreboard players set #timeAttackUnlocked value 1
 scoreboard players set #unlockedNightmare value 1
-scoreboard players set #unlockedUltranightmare value 1
+#scoreboard players set #unlockedUltranightmare value 1
 scoreboard players set #unlockedCupDiamond value 1
 scoreboard players set #unlockedCupRandom value 1
 

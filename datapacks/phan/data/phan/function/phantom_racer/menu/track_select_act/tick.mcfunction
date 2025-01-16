@@ -21,6 +21,16 @@ execute if score #tvCooldown value matches ..0 if score #tvInputLR value matches
 execute if score #tvCooldown value matches ..0 if score #tvInputLR value matches ..-1 run function phan:phantom_racer/menu/generic_select_change_minmax {menu_state:3,add:-1,min:0,max:100,cooldown:4}
 execute if score #tvMenuState3 value > #tvMaxIndexAct value run scoreboard players operation #tvMenuState3 value = #tvMaxIndexAct value
 
+#update round counter if that's a thing we have
+execute if score #tvEditingGrandPrix value matches 1.. store result storage phan:gp_index gp_id int 1 run scoreboard players get #tvChosenGP value
+execute if score #tvEditingGrandPrix value matches 1.. run function phan:phantom_racer/menu/track_select/gp_round_counter with storage phan:gp_index
+
 #if player pushes START, select whatever we selected
 execute if score #tvAnimation value matches 11.. if score #tvInputJumpImpulse value matches 1.. store result storage phan:level_index index int 1 run scoreboard players get #tvMenuState3 value
-execute if score #tvAnimation value matches 11.. if score #tvInputJumpImpulse value matches 1.. run function phan:phantom_racer/menu/track_select_act/select_index with storage phan:level_index
+execute if score #tvAnimation value matches 11.. if score #tvInputJumpImpulse value matches 1.. unless score #tvEditingGrandPrix value matches 1.. run function phan:phantom_racer/menu/track_select_act/select_index with storage phan:level_index
+execute if score #tvAnimation value matches 11.. if score #tvInputJumpImpulse value matches 1.. if score #tvEditingGrandPrix value matches 1.. run function phan:phantom_racer/menu/track_select_act/select_index_gp_edit with storage phan:level_index
+
+#exit out if admin required and we're not admin
+scoreboard players set #success value 0
+execute as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run scoreboard players set #success value 1
+execute if score #success value matches 0 if score #tvMenuPage value matches 5 run function phan:phantom_racer/menu/track_select_act/go_to_track_select

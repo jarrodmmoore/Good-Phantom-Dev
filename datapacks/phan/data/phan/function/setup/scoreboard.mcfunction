@@ -173,6 +173,10 @@ scoreboard objectives add dream2Trophy dummy
 scoreboard objectives add dream3Trophy dummy
 scoreboard objectives add dream4Trophy dummy
 scoreboard objectives add dream5Trophy dummy
+scoreboard objectives add grandPrix1Trophy dummy
+scoreboard objectives add grandPrix2Trophy dummy
+scoreboard objectives add grandPrix3Trophy dummy
+scoreboard objectives add grandPrix4Trophy dummy
 #advancement related
 scoreboard objectives add targetTimesHit dummy
 scoreboard objectives add timesBeenHit dummy
@@ -315,9 +319,6 @@ scoreboard objectives add randomCooldown dummy
 scoreboard objectives add randomCooldown2 dummy
 scoreboard objectives add randomCooldown3 dummy
 scoreboard objectives add randomCooldown4 dummy
-scoreboard objectives add randomCooldownS1 dummy
-scoreboard objectives add randomCooldownS2 dummy
-scoreboard objectives add randomCooldownS3 dummy
 #present object
 scoreboard objectives add presentTime dummy
 scoreboard objectives add presentTimeMax dummy

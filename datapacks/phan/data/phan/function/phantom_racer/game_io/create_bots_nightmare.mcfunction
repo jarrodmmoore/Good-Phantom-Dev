@@ -1,0 +1,15 @@
+function phan:game/2/bots/create_bot {difficulty:3}
+function phan:game/2/bots/create_bot {difficulty:3}
+function phan:game/2/bots/create_bot {difficulty:3}
+function phan:game/2/bots/create_bot {difficulty:4}
+function phan:game/2/bots/create_bot {difficulty:4}
+function phan:game/2/bots/create_bot {difficulty:4}
+function phan:game/2/bots/create_bot {difficulty:4}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}
+function phan:game/2/bots/create_bot {difficulty:5}

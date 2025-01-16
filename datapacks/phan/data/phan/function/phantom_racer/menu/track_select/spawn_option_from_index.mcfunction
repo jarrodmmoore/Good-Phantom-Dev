@@ -34,6 +34,10 @@ execute if score #test value matches 0 run data modify storage phan:level_index 
 #1.. means look up the model from the associated dream (always uses act 1)
 execute if score #test value matches 1.. store result storage phan:level_index level_id int 1 run scoreboard players get #test value
 execute if score #test value matches 1.. run function phan:phantom_racer/menu/track_select/spawn_option_from_index_get_model with storage phan:level_index
+#special cases for some of the stock dreams. i want to use the best looking / most representative icon for each.
+execute if score #test value matches 2 run data modify storage phan:level_index model set from storage phan_dream_2:pr_act_2 thumbnail_text
+execute if score #test value matches 3 run data modify storage phan:level_index model set from storage phan_dream_3:pr_act_3 thumbnail_text
+execute if score #test value matches 4 run data modify storage phan:level_index model set from storage phan_dream_4:pr_act_3 thumbnail_text
 
 #alright, now we can summon the thing!
 function phan:phantom_racer/menu/track_select/spawn_option_from_index_go

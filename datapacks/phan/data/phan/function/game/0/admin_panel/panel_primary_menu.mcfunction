@@ -29,6 +29,11 @@ scoreboard players set #testSlotF value 0
 execute if items entity @s enderchest.* chest[custom_data~{assistMenuAdmin:1b}] run scoreboard players set #testSlotF value 1
 execute if score #testSlotF value matches 0 run scoreboard players add #testReset value 1
 
+#assist mode admin only
+scoreboard players set #testSlotG value 0
+execute if items entity @s enderchest.* command_block[custom_data~{customGrandPrixAdmin:1b}] run scoreboard players set #testSlotG value 1
+execute if score #testSlotG value matches 0 run scoreboard players add #testReset value 1
+
 #unlock everything
 scoreboard players set #testSlotE value 0
 execute if items entity @s enderchest.* pink_candle[custom_data~{unlockEverything:1b}] run scoreboard players set #testSlotE value 1
@@ -51,6 +56,7 @@ execute if score #testReset value matches 1 if score #testSlotE value matches 0 
 execute if score #testReset value matches 1 if score #offerPointReset value matches 1 if score #testSlotB value matches 0 run function phan:game/0/admin_panel/reset_versus_points
 execute if score #testReset value matches 1 if score #testSlotC value matches 0 run function phan:game/0/admin_panel/click_erase_data
 execute if score #testReset value matches 1 if score #testSlotF value matches 0 run function phan:game/0/admin_panel/click_assist_menu
+execute if score #testReset value matches 1 if score #testSlotG value matches 0 run function phan:game/0/admin_panel/click_custom_grand_prix
 
 
 #clear items if we have something we shouldn't
@@ -62,14 +68,14 @@ execute if score #testReset value matches 1.. run function phan:game/0/admin_pan
 item replace entity @s enderchest.0 with air
 item replace entity @s enderchest.1 with air
 #assist mode admin only?
-execute if score #assistMenuAdminOnly value matches 1 run item replace entity @s enderchest.2 with chest[custom_name='{"translate":"gp.assist.assist_mode_menu","bold":true,"italic":false}',lore=['{"translate":"gp.assist.open_to_all","color":"gray","bold":false,"italic":false}','{"translate":"gp.assist.admin_only","color":"yellow","bold":false,"italic":false}'],custom_data={adminMenu:1b,assistMenuAdmin:1b}]
-execute unless score #assistMenuAdminOnly value matches 1 run item replace entity @s enderchest.2 with chest[custom_name='{"translate":"gp.assist.assist_mode_menu","bold":true,"italic":false}',lore=['{"translate":"gp.assist.open_to_all","color":"yellow","bold":false,"italic":false}','{"translate":"gp.assist.admin_only","color":"gray","bold":false,"italic":false}'],custom_data={adminMenu:1b,assistMenuAdmin:1b}]
+execute if score #assistMenuAdminOnly value matches 1 run item replace entity @s enderchest.2 with chest[custom_name='{"translate":"gp.admin.assist_mode_menu","bold":true,"italic":false}',lore=['{"translate":"gp.admin.open_to_all","color":"gray","bold":false,"italic":false}','{"translate":"gp.admin.admin_only","color":"yellow","bold":false,"italic":false}'],custom_data={adminMenu:1b,assistMenuAdmin:1b}]
+execute unless score #assistMenuAdminOnly value matches 1 run item replace entity @s enderchest.2 with chest[custom_name='{"translate":"gp.admin.assist_mode_menu","bold":true,"italic":false}',lore=['{"translate":"gp.admin.open_to_all","color":"yellow","bold":false,"italic":false}','{"translate":"gp.admin.admin_only","color":"gray","bold":false,"italic":false}'],custom_data={adminMenu:1b,assistMenuAdmin:1b}]
 
 item replace entity @s enderchest.3 with air
 item replace entity @s enderchest.4 with air
 #i am considering adding an "arcade mode" and putting the button for it here...
 item replace entity @s enderchest.5 with air
-item replace entity @s enderchest.6 with pink_candle[custom_name='{"translate":"gp.assist.unlock_everything","bold":true,"italic":false,"color":"yellow"}',custom_data={adminMenu:1b,unlockEverything:1b}]
+item replace entity @s enderchest.6 with pink_candle[custom_name='{"translate":"gp.admin.unlock_everything","bold":true,"italic":false,"color":"yellow"}',custom_data={adminMenu:1b,unlockEverything:1b}]
 item replace entity @s enderchest.7 with air
 item replace entity @s enderchest.8 with air
 
@@ -94,7 +100,10 @@ item replace entity @s enderchest.17 with air
 #ROW 3
 item replace entity @s enderchest.18 with air
 item replace entity @s enderchest.19 with air
-item replace entity @s enderchest.20 with air
+#gp edit admin only?
+execute if score #grandPrixEditAdminOnly value matches 1 run item replace entity @s enderchest.20 with command_block[custom_name='{"translate":"gp.admin.gp_edit_admin","bold":true,"italic":false,"color":"white"}',lore=['{"translate":"gp.admin.open_to_all","color":"gray","bold":false,"italic":false}','{"translate":"gp.admin.admin_only","color":"yellow","bold":false,"italic":false}'],custom_data={adminMenu:1b,customGrandPrixAdmin:1b}]
+execute unless score #grandPrixEditAdminOnly value matches 1 run item replace entity @s enderchest.20 with command_block[custom_name='{"translate":"gp.admin.gp_edit_admin","bold":true,"italic":false,"color":"white"}',lore=['{"translate":"gp.admin.open_to_all","color":"yellow","bold":false,"italic":false}','{"translate":"gp.admin.admin_only","color":"gray","bold":false,"italic":false}'],custom_data={adminMenu:1b,customGrandPrixAdmin:1b}]
+
 item replace entity @s enderchest.21 with air
 #reset points button
 execute if score #offerPointReset value matches ..0 run item replace entity @s enderchest.22 with air

@@ -8,3 +8,6 @@ scoreboard players set #tvMenuPage value 7
 
 #clean up inputs, quick!
 scoreboard players set #tvInputJumpImpulse value 0
+
+#sound
+function phan:phantom_racer/menu/click_sound_effect

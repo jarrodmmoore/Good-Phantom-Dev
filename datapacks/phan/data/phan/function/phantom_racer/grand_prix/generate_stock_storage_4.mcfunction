@@ -7,7 +7,7 @@ data modify storage phan_grand_prix_4:metadata icon_model set value 'diamond_blo
 data modify storage phan_grand_prix_4:round_1 dream set value 6
 data modify storage phan_grand_prix_4:round_1 act set value 3
 
-data modify storage phan_grand_prix_4:round_2 dream set value 2
+data modify storage phan_grand_prix_4:round_2 dream set value 4
 data modify storage phan_grand_prix_4:round_2 act set value 2
 
 data modify storage phan_grand_prix_4:round_3 dream set value 3

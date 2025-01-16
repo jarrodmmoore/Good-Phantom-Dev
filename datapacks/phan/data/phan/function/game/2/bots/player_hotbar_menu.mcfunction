@@ -5,6 +5,9 @@ execute if score #editArg1 value matches 1.. run clear @s[gamemode=!creative,tag
 execute if score #editArg1 value matches ..0 run clear @s[gamemode=!creative,tag=hasSlot0] light_blue_dye[custom_data~{slot0:1b}]
 execute if score #editArg1 value matches 1.. if entity @s[tag=!hasSlot0,tag=!noInventory] run item replace entity @s hotbar.0 with light_blue_dye[item_model="gp/item/ready_item",custom_name='["",{"translate":"gp.mode_select.start_game","color":"green","italic":false}]',custom_data={slot0:1b,botmenu:1b}] 1
 
+#no bot options in grand prix mode! handle input right away
+execute if score #grandPrixActive value matches 1.. if score #grandPrixClass value matches 1.. run return run execute if entity @s[scores={carrotInput=1..,inputCooldown=..0}] if items entity @s weapon.mainhand *[custom_data~{botmenu:1b}] run function phan:game/2/bots/player_hotbar_menu_input
+#=====
 
 #add bots?
 

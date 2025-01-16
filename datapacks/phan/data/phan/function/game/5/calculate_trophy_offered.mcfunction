@@ -26,6 +26,9 @@ execute if score #botCountTryhard value matches 5.. run scoreboard players set #
 execute if score #total value matches 5.. if score #average value > #math value run scoreboard players operation #math value = #average value
 execute if score #math value matches 6.. run scoreboard players set #math value 5
 
+#grand prix active: override offered trophy
+execute if score #grandPrixActive value matches 1.. run scoreboard players operation #math value = #grandPrixClass value
+
 #inform players if trophy got blocked by assist mode
 execute if score #gameState value matches 5 if score #math value matches 1.. if score #assist_enabled_portalrace value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.trophies_will_not_be_awarded","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
 

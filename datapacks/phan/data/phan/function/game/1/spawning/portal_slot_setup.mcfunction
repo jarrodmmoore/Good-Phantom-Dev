@@ -1,6 +1,11 @@
 #no need to check if chunks are loaded here.
 #if an entity ran this, the vertical column it's sitting in is definitely loaded
 
+#...or is it?
+#(Moon Men starts playing)
+execute unless loaded ~ ~ ~ run return run tag @s add spawn_failed
+#=====
+
 #remove all eyes from the portal frames
 execute if block ~ ~-1 ~ end_portal_frame[facing=north,eye=true] run setblock ~ ~-1 ~ end_portal_frame[facing=north,eye=false]
 execute if block ~ ~-1 ~ end_portal_frame[facing=east,eye=true] run setblock ~ ~-1 ~ end_portal_frame[facing=east,eye=false]

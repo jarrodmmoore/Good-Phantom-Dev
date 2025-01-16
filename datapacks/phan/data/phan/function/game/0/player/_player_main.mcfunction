@@ -19,7 +19,7 @@ effect give @s weakness 5 15 true
 effect give @s[tag=getNightVisionInSA] night_vision 15 1 true
 
 #xp bar (energy display)
-function phan:game/1/player/xp_bar/xp_main
+execute unless score #gameState value matches 1.. run function phan:game/1/player/xp_bar/xp_main
 
 #do different things if we're in the cabin or not
 scoreboard players set #playerInLobby value 0

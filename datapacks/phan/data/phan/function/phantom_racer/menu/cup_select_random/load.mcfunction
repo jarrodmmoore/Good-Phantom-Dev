@@ -1,5 +1,4 @@
 #tvMenuState1,2,3,4 retain their previous value.
-#grandPrixRandomRounds
 scoreboard players set #tvMenuState5 value 0
 scoreboard players set #tvMenuState6 value -99
 scoreboard players set #tvAnimation value 0

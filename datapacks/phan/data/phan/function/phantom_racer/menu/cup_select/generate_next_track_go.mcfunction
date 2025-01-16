@@ -3,14 +3,14 @@
 
 #read what level we're trying to load
 $scoreboard players set #test2 value $(level_id)
-
+$scoreboard players set #test3 value $(act)
 
 #might override models in special cases:
 
 #random track
-execute if score #test2 value matches 0 run data modify storage phan:level_index model set value '["",{"text":"\\uE501","color":"white"}]'
-execute if score #test2 value matches -1 run data modify storage phan:level_index model set value '["",{"text":"\\uE502","color":"white"}]'
-execute if score #test2 value matches -2 run data modify storage phan:level_index model set value '["",{"text":"\\uE503","color":"white"}]'
+execute if score #test2 value matches 0 if score #test3 value matches ..1 run data modify storage phan:level_index model set value '["",{"text":"\\uE501","color":"white"}]'
+execute if score #test2 value matches 0 if score #test3 value matches 2 run data modify storage phan:level_index model set value '["",{"text":"\\uE502","color":"white"}]'
+execute if score #test2 value matches 0 if score #test3 value matches 3.. run data modify storage phan:level_index model set value '["",{"text":"\\uE503","color":"white"}]'
 #exit out and render it right now! don't try to look up data on a level that doesn't exist.
 execute if score #test2 value matches ..0 run return run function phan:phantom_racer/menu/cup_select/generate_next_track_go_2 with storage phan:level_index
 #=====

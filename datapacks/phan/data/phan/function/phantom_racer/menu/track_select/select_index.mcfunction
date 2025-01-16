@@ -2,7 +2,8 @@
 $execute store result score #test value run data get storage phan:level_index level_select[$(index)]
 
 #-4 = delete latest track from sequence
-execute if score #test value matches -4 run return run say delete last track
+execute if score #test value matches -4 store result storage phan:gp_index gp_id int 1 run scoreboard players get #tvEditingTarget value
+execute if score #test value matches -4 run return run function phan:phantom_racer/grand_prix/remove_last_track_from_storage with storage phan:gp_index
 
 #-2 = error noise
 execute if score #test value matches -2 run return run playsound block.note_block.bass master @a ~ ~ ~ 1 1.8

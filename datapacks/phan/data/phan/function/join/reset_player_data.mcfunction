@@ -22,6 +22,11 @@ scoreboard players set @s dream3Trophy 0
 scoreboard players set @s dream4Trophy 0
 scoreboard players set @s dream5Trophy 0
 
+scoreboard players set @s grandPrix1Trophy 0
+scoreboard players set @s grandPrix2Trophy 0
+scoreboard players set @s grandPrix3Trophy 0
+scoreboard players set @s grandPrix4Trophy 0
+
 scoreboard players set @s anyDreamCompleted 0
 
 scoreboard players reset @s tutorialProgress

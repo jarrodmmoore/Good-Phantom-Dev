@@ -4,9 +4,6 @@
 execute as @a[tag=doneWithIntro] run scoreboard players operation @s pGameTime = #gameTime value
 execute as @a[tag=doneWithIntro] run scoreboard players operation @s pCurrentArea = #vAct value
 
-#title
-execute if score #gameTime value matches 80..299 run title @s actionbar ["",{"translate":"gp.game.get_ready","italic":true}]
-
 #battle mode: don't let players bite each other during the start countdown!
 execute if score #gameTime value matches ..220 if score #vGameType value matches 2 run effect give @a weakness 2 16 true
 
@@ -28,6 +25,7 @@ execute if score #gameTime value matches ..39 run scoreboard players set #loadTi
 execute if score #gameTime value matches 40..50 run scoreboard players add #loadTime value 1
 
 #show level title
+execute if score #gameTime value matches 100 run scoreboard objectives setdisplay sidebar
 execute if score #gameTime value matches 100..120 as @a[tag=doneWithIntro] run function phan:levels/_index_title
 
 #show "practice mode" if we're solo
