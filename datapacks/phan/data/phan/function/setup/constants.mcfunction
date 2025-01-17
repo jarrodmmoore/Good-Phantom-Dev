@@ -1,6 +1,5 @@
 #track randomization
-scoreboard players set #RANDOM_TRACK_COOLDOWN value 8
-scoreboard players set #TRACK_PICK_COOLDOWN value 6
+scoreboard players set #RANDOM_TRACK_COOLDOWN value 7
 
 #bot related
 scoreboard players set #MAX_BOT_COUNT value 24

@@ -1,4 +1,3 @@
-#gamerules
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
 gamerule doDaylightCycle false

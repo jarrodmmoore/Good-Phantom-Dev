@@ -7,8 +7,6 @@ execute unless score #assistMenuAdminOnly value matches 1 run function phan:game
 
 #reset random track cooldowns
 function phan:phantom_racer/game_io/clear_randomization_cooldowns
-#also generate grand prix cup data
-function phan:phantom_racer/grand_prix/generate_storages
 
 #clear out any previous versus mode points
 function phan:game/4/new_versus_session

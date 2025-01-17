@@ -1,4 +1,4 @@
-#dream, mode and act must both be playable
+#dream, mode and act must all be playable/selectable
 $execute store result score #test value run data get storage phan_dream_$(level_id):dream_data selectable
 execute if score #test value matches 0 run return 0
 $execute store result score #test value run data get storage phan_dream_$(level_id):portal_race selectable

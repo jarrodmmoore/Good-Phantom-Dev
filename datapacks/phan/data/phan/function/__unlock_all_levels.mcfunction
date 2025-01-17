@@ -60,6 +60,7 @@ scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #timeAttackUnlocked value 1
 scoreboard players set #unlockedNightmare value 1
 #scoreboard players set #unlockedUltranightmare value 1
+#^ i've decided that the admin menu shouldn't unlock this. this is only for the most insane and dedicated players who beat all cups on nightmare >:)
 scoreboard players set #unlockedCupDiamond value 1
 scoreboard players set #unlockedCupRandom value 1
 
@@ -76,11 +77,6 @@ scoreboard players set #disc_found_9 value 1
 scoreboard players set #disc_found_10 value 1
 scoreboard players set #disc_found_11 value 1
 scoreboard players set #disc_found_12 value 1
-
-#avoid a bug...
-scoreboard players set @a[scores={enderChestMenu=10}] enderChestMenu 2
-scoreboard players set @a[scores={enderChestMenu=20}] enderChestMenu 2
-scoreboard players set @a[scores={enderChestMenu=30}] enderChestMenu 2
 
 #update visuals (texts) if we're in the lobby
 execute if score #gameState value matches 0 run function phan:game/0/summon_props
