@@ -24,6 +24,6 @@ execute unless score #gameState value matches 1.. run function phan:game/1/playe
 #do different things if we're in the cabin or not
 scoreboard players set #playerInLobby value 0
 execute if entity @s[x=180,y=-13,z=87,dx=100,dy=100,dz=125] run scoreboard players set #playerInLobby value 1
-execute if entity @s[scores={location_x=500..1500,location_z=-1500..-500}] run scoreboard players set #playerInLobby value 2
+execute if entity @s[scores={location_x=500..1500,location_z=-1500..-750}] run scoreboard players set #playerInLobby value 2
 execute if score #playerInLobby value matches 1 run function phan:game/0/player/_in_lobby_tick
 execute unless score #playerInLobby value matches 1 run function phan:game/0/player/_practice_area_tick

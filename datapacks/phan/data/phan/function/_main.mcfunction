@@ -49,7 +49,7 @@ function phan:items/_tick
 #title @a actionbar ["",{"text":"#tvAnimation = "},{"score":{"name":"#tvAnimation","objective":"value"}}]
 
 #draw boundaries for out of bounds
-#execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -64 ~3 red_wool replace air
+#execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -63 ~3 red_wool
 
 #very dangerous function. don't run it unless you 100% know what it does and where to use it
 #execute as @a[tag=simplify_clouds] at @s run function phan:utility/simplify_clouds
@@ -57,7 +57,7 @@ function phan:items/_tick
 #show variables for a player
 #execute as @a[tag=debugScores,limit=1] run function phan:utility/debug_scores
 
-#v1.21.4 -- fix item models
+#1.21.4 -- fix item models
 #execute if score #5Hz value matches 1 as @a[limit=1] at @s as @e[type=item_display,tag=node,tag=arrowSign,tag=!newModelFormat] run function phan:utility/repair_old_arrow_sign_models
 
 #=====

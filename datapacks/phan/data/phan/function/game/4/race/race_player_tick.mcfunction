@@ -80,6 +80,9 @@ execute if score #test value matches 1.. if score @s stardustDelay matches ..0 r
 execute if score @s presentGoal matches -1.. run function phan:game/1/player/handle_present
 execute unless score @s presentGoal matches -1.. if score @s showEnemyCount matches 1 run function phan:game/1/player/show_enemy_count
 
+#add to score
+execute if score @s addScore matches 1.. run function phan:game/1/player/add_to_score
+
 
 #take damage?
 execute if entity @s[scores={damage=1..}] run function phan:game/1/player/take_damage

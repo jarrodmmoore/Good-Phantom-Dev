@@ -2,6 +2,7 @@
 tag @s remove nodeArea1
 tag @s remove nodeArea2
 tag @s remove nodeArea3
+tag @s remove nodeArea4
 tag @s remove nodeLoadArea0
 tag @s remove nodeLoadArea1
 tag @s remove nodeLoadArea2

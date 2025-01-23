@@ -25,14 +25,12 @@ scoreboard players set #d4a3Unlocked value 0
 scoreboard players set #d5a1Unlocked value 0
 scoreboard players set #d5a2Unlocked value 0
 scoreboard players set #d5a3Unlocked value 0
+scoreboard players set #d5a4Unlocked value 0
 
 scoreboard players set #d6a1Unlocked value 0
 scoreboard players set #d6a2Unlocked value 0
 scoreboard players set #d6a3Unlocked value 0
-
-scoreboard players set #d6a1Unlocked value 0
-scoreboard players set #d6a2Unlocked value 0
-scoreboard players set #d6a3Unlocked value 0
+scoreboard players set #d6a4Unlocked value 0
 
 scoreboard players set #d7a1Unlocked value 0
 scoreboard players set #d7a2Unlocked value 0
@@ -81,6 +79,7 @@ scoreboard players set #lobbyTrailGuide value 1
 
 #phantom racer: unlock the first cup's levels for free so players have at least a few levels open in Free Play
 scoreboard players set #d6a1Unlocked value 1
+scoreboard players set #d6a4Unlocked value 1
 scoreboard players set #d1a1Unlocked value 1
 scoreboard players set #d4a1Unlocked value 1
 scoreboard players set #d2a1Unlocked value 1

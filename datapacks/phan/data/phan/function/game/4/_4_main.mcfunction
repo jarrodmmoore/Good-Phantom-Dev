@@ -74,7 +74,7 @@ execute if entity @a[tag=nonSpectator,scores={restart=1..}] run function phan:ga
 execute as @a[tag=nonSpectator,scores={exit=1..}] run function phan:game/4/player_exit
 #triggers work differently if game is bots-only
 execute if score #botsOnly value matches 1 run function phan:game/4/bots_only_triggers
-scoreboard players enable @a[tag=playing,gamemode=adventure] respawn
+execute unless score #vGameType value matches 2 run scoreboard players enable @a[tag=playing,gamemode=adventure] respawn
 #player respawn trigger handled in _player_main...
 scoreboard players enable @a[tag=!playing] spectatorView
 execute as @a[tag=!playing,scores={spectatorView=1..}] at @s run function phan:game/1/spectator/switch_view

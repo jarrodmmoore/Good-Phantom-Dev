@@ -7,5 +7,6 @@ execute if score #test value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.ender_dragon.hurt master @s ~ 100000 ~ 100000 0.5
 
 #go back to lobby
-scoreboard players set #lastLevelPlayed value 0
+execute store result score #test2 value run execute if entity @a[tag=doneWithIntro]
+execute if score #test2 value matches 5.. run scoreboard players set #lastLevelPlayed value 0
 function phan:game/0/_0_init

@@ -6,6 +6,9 @@ scoreboard players set @s skyboxSet 1
 #is anyone in the practice course? if not, set a few extra things up
 execute unless entity @a[tag=practiceCourse] run function phan:game/0/player/start_practice_course_first_player
 
+#practice course is now unlocked!
+scoreboard players set #d6a3Unlocked value 1
+
 #get tags and proper data
 execute if score #gameState value matches 0 run tag @s add playing
 tag @s add practiceCourse

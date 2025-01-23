@@ -23,7 +23,7 @@ scoreboard players set #hudMode value 3
 function phan:custom_hud/setup
 
 #grand prix: show round number
-execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/game_io/gp_show_round
+execute if score #grandPrixActive value matches 1.. run scoreboard players set #grandPrixRoundAnimation value 0
 
 #manage item entities
 function phan:items/reset_valid_objective

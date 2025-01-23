@@ -28,10 +28,12 @@ scoreboard players set #d4a3Unlocked value 1
 scoreboard players set #d5a1Unlocked value 1
 scoreboard players set #d5a2Unlocked value 1
 scoreboard players set #d5a3Unlocked value 1
+scoreboard players set #d5a4Unlocked value 1
 
 scoreboard players set #d6a1Unlocked value 1
 scoreboard players set #d6a2Unlocked value 1
 scoreboard players set #d6a3Unlocked value 1
+scoreboard players set #d6a4Unlocked value 1
 
 scoreboard players set #d7a1Unlocked value 1
 scoreboard players set #d7a2Unlocked value 1

@@ -10,3 +10,4 @@ function phan:phantom_racer/menu/click_sound_effect_low
 
 #clear any lingering points
 function phan:game/4/new_versus_session
+scoreboard objectives setdisplay sidebar

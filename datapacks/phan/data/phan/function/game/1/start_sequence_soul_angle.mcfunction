@@ -11,8 +11,8 @@ execute if score @s soulAngle matches 6 as @e[type=armor_stand,tag=currentCamera
 execute if score @s soulAngle matches 7 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~ 275 0
 
 #straight up or down
-execute if score @s soulAngle matches 8 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~ 0 -90
-execute if score @s soulAngle matches 9 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~ 0 90
+execute if score @s soulAngle matches 8 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~2 0 -90
+execute if score @s soulAngle matches 9 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~2 0 90
 
 #sideways and kinda upwards
 execute if score @s soulAngle matches 10 as @e[type=armor_stand,tag=currentCamera] at @s run tp @s ~ ~ ~ 5 -15

@@ -24,10 +24,10 @@ execute if entity @s[tag=!hasSlot8a,tag=!noInventory] if entity @s[scores={input
 execute if entity @s[tag=!hasSlot8b,tag=!noInventory] unless entity @s[scores={inputCooldown=..0}] run item replace entity @s hotbar.8 with minecraft:light_blue_dye[item_model="gp/item/respawn_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.practice.return_to_cabin","color":"gray","italic":false}]',custom_data={slot8:1b,rmb:1b,cooldown:1b}] 1
 
 #enter practice course?
-execute at @s if block ~ ~-.1 ~ red_glazed_terracotta run function phan:game/0/player/teleport_pad
+execute at @s[x=829,y=31,z=-1007,distance=..10] if block ~ ~-.1 ~ red_glazed_terracotta run function phan:game/0/player/teleport_pad
 
 #respawn if we're in placed we shouldn't be
-execute if score #playerInLobby value matches 2 run function phan:game/0/player/practice_respawn_logic
+execute if score #playerInLobby value matches 2 if entity @s[scores={location_x=500..1500,location_z=-1500..-750}] run function phan:game/0/player/practice_respawn_logic
 
 #handle respawn trigger
 execute if score @s respawn matches 1.. run function phan:game/0/player/handle_respawn_trigger

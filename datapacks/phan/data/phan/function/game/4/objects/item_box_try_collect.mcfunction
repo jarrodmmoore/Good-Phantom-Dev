@@ -57,6 +57,7 @@ execute if entity @s[scores={boxID=1..,hitBoxB_head=5}] run scoreboard players o
 
 #get item
 execute in overworld run function phan:items/random/pick_index
+scoreboard players add @s[type=player] addScore 1
 
 #bot shouldn't go for chests it doesn't want anymore
 execute if entity @s[tag=ai] unless score @s botPreparedToBoostTrap matches 1.. run scoreboard players set @s botTargetID 0

@@ -81,7 +81,6 @@ scoreboard players set #practicePearlsNeeded value 16
 scoreboard players add @a playerTipTime 200
 
 #we are no longer in free play mode!
-execute if score #freePlay value matches 1 run scoreboard players set #lastLevelPlayed value 0
 scoreboard players set #freePlay value 0
 #not in a grand prix anymore, either
 execute if score #grandPrixActive value matches -1 run scoreboard players set #lastLevelPlayed value -1
@@ -100,6 +99,11 @@ execute if score #dreamsCompleted value matches 5.. if score #timeAttackUnlocked
 
 #completed dreams are always considered "discovered"
 function phan:levels/_dream_discovery
+
+#special unlock condition for Deep Dive 4: unlocked when the dream is completed through normal means
+execute if score #dream5Completed value matches 1 run scoreboard players set #d5a4Unlocked value 1
+#can also unlock by completing the diamond cup
+execute if score #cup4Completed value matches 1.. run scoreboard players set #d5a4Unlocked value 1
 
 #set skybox and conditions
 scoreboard players set @a skyboxSet 1

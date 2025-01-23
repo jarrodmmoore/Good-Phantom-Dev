@@ -5,3 +5,4 @@ execute if score #chosenLevel value matches 2 run function phan:levels/moonlit_m
 execute if score #chosenLevel value matches 3 run function phan:levels/shattered_city/unlock_act
 execute if score #chosenLevel value matches 4 run function phan:levels/neon_nightway/unlock_act
 execute if score #chosenLevel value matches 5 run function phan:levels/deep_dive/unlock_act
+execute if score #chosenLevel value matches 6 run function phan:levels/phantom_forest/unlock_act

@@ -40,6 +40,7 @@ execute if score @s combo matches 2 at @s run playsound minecraft:custom_sfx/nig
 execute if score @s combo matches 3 at @s run playsound minecraft:custom_sfx/nights master @a[tag=tellMe] ~ ~ ~ 2.5 1.8
 execute if score @s combo matches 4.. at @s run playsound minecraft:custom_sfx/nights master @a[tag=tellMe] ~ ~ ~ 2.5 2
 function phan:game/1/player/count_combo
+scoreboard players add @s[type=player] addScore 1
 
 #ring boost
 execute if score #ringBoost value matches 1.. at @s run function phan:game/1/player/ring_boost

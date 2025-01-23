@@ -24,6 +24,9 @@ execute if score #gameTime value matches 40..50 if score #chunksAreLoaded value 
 execute if score #gameTime value matches ..39 run scoreboard players set #loadTime value 0
 execute if score #gameTime value matches 40..50 run scoreboard players add #loadTime value 1
 
+#round number animation in Grand Prix mode
+execute if score #grandPrixActive value matches 1.. if score #grandPrixRoundAnimation value matches ..99 run function phan:phantom_racer/game_io/gp_show_round
+
 #show level title
 execute if score #gameTime value matches 100 run scoreboard objectives setdisplay sidebar
 execute if score #gameTime value matches 100..120 as @a[tag=doneWithIntro] run function phan:levels/_index_title

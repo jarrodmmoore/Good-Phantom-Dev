@@ -11,6 +11,7 @@ execute if entity @s[tag=groupB] run function phan:game/1/objects/_index_group_b
 execute if entity @s[tag=act1Spawn] run function phan:game/1/objects/check_valid_act1
 execute if entity @s[tag=act2Spawn] run function phan:game/1/objects/check_valid_act2
 execute if entity @s[tag=act3Spawn] run function phan:game/1/objects/check_valid_act3
+execute if entity @s[tag=act4Spawn] run function phan:game/1/objects/check_valid_act4
 #yeah, we could use function macros to do this kind of stuff now
 #but
 #1: it is 2023 and i'm not doing this in minecraft snapshots
