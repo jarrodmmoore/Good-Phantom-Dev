@@ -22,18 +22,15 @@ This repository is the world file containing everything needed to play the map. 
  - **Time Attack** *(1 player)* -- Play with the same rules as Score Attack, except you're graded solely based on how quickly you enter all 3 portals.
 
 ## Dreams
-Good Phantom hosts 5 dreams that players can play in.
+Good Phantom hosts 6 dreams that players can play in.
 - *Pastel Palace* -- A pink paradise in the sky, centered around a castle.
 - *Moonlit Mountains* -- A gloomy, mountainous level with glowing flowers and hints of oriental architecture.
 - *Neon Nightway* -- A city with a vaporwave aesthetic and lots of alternate routes.
 - *Deep Dive* -- A gigantic vertical waterfall level that gives way to a ruined underwater society mixed with caverns.
 - *Shattered City* -- A floating gothic city ravaged by tornadoes.
+- *Phantom Forest* -- A cluster of flying islands with tall trees, ruins, and giant animal sculptures.
 
-Each dream has 3 sub-levels, or "acts".
-
-There is also a small practice area outside of the 5 dreams where players can get acclimated with the controls and game mechanics. If we find time, we would like to expand this into a full 3-act dream called "Phantom Forest".
-
-It is possible to add custom dreams into the map, but it currently requires a lot of meddling in the map's datapack. See folder `functions/levels`.
+Each dream has 3 sub-levels, or "acts". A few dreams also have a 4th act which is exclusive to Portal Race mode.
 
 ## Music
 Features music by Back in August. https://backinaugust.bandcamp.com/
@@ -47,12 +44,13 @@ Good Phantom was initially created for a Yeggs map jam. This early version featu
 
 ---
 # Development
-## Level Editing
-Enter Creative Mode and run the command `/trigger editor` to gain access to the editor. You can use this to place objects, pickups, and bot waypoints onto your levels.
+## Custom Dreams
+Inspect a sleeping player while in Creative Mode and you can edit a dream's metadata. The stock dreams are read-only, but there are also 8 blank dreams in the lobby that can be freely edited.
 
 ## Useful commands
-- `/function phan:__unlock_all_levels` -- Unlocks all dreams.
+- `/trigger dreamManager` to remotely edit a dream's data.
+- `/trigger editor` to place objects, pickups, and bot waypoints onto your levels.
 - `/function phan:game/0/summon_props` -- Re-summon entities and leaderboard displays in the lobby.
 
-## Note: Resource Pack
-Development branches might be missing resources.zip. It's easier to develop a resource pack that is uncompressed. Holler at me if this is a problem.
+## Transferability
+Nodes and bot waypoints placed with the editor can be transferred to other saves without breaking. There's also functionality to import dream metadata from externally saved command_storage.dat files.

@@ -9,6 +9,7 @@ title @s title [""]
 title @s actionbar [""]
 
 #run world setup if world data is corrupted
+execute unless entity @e[tag=randomize,type=armor_stand,scores={r=1..}] run tellraw @a ["",{"text":"[ ! ] scoreboard.dat was corrupted! This means high score data has been lost. Aside from that, damage to your world will be fully repaired.\n","color":"red"}]
 execute unless entity @e[tag=randomize,type=armor_stand,scores={r=1..}] run function phan:world_setup
 
 #gameState is zero, adopt skybox but don't do anything else
