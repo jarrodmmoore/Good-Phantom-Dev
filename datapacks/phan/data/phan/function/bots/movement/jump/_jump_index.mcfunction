@@ -8,6 +8,8 @@ scoreboard players reset @s botJumpTimer
 
 #no longer grounded
 scoreboard players set @s onGround 0
+#this should hopefully stop bots from doing an invalid double jump
+scoreboard players set @s[scores={airTime=..10}] airTime 11
 
 #super jump pad
 execute if entity @s[tag=!botSpamJumpKey,scores={botJumpPadTimeHigh=1..}] run return run function phan:bots/movement/jump/high_pad_no_spam

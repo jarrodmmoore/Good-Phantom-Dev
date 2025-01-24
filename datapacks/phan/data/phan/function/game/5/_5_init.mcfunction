@@ -15,7 +15,7 @@ tag @a[tag=vsMidGameJoin] remove vsMidGameJoin
 
 #record level completion if we're running this
 execute unless score #grandPrixActive value matches 1.. as @a[tag=playing] run function phan:levels/_index_record_completion
-execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/grand_prix/record_completion
+execute if score #grandPrixActive value matches 1.. as @a[tag=playing] run function phan:phantom_racer/grand_prix/record_completion
 
 #manage item entities
 function phan:items/reset_valid_objective

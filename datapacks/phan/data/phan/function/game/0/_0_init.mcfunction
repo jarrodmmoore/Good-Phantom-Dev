@@ -94,16 +94,31 @@ scoreboard players set #lobbyJukebox value 0
 #spawnpoint for all players
 spawnpoint @a 198 -6 118
 
-#unlock time attack mode
-execute if score #dreamsCompleted value matches 5.. if score #timeAttackUnlocked value matches 0 run function phan:game/0/unlock_time_attack
+#=====
+#UNLOCKS
+#unlock time attack mode after Shattered City is completed
+execute if score #dream3Completed value matches 1.. if score #timeAttackUnlocked value matches 0 run function phan:game/0/unlock_time_attack
+#unlock diamond cup if the 3 base cups were completed
+execute if score #cup1Completed value matches 1.. if score #cup2Completed value matches 1.. if score #cup3Completed value matches 1.. if score #unlockedCupDiamond value matches 0 run function phan:game/0/unlock_diamond_cup
+#unlock random cup if the 4 top row cups were all completed
+execute if score #cup1Completed value matches 1.. if score #cup2Completed value matches 1.. if score #cup3Completed value matches 1.. if score #cup4Completed value matches 1.. if score #unlockedCupRandom value matches 0 run function phan:game/0/unlock_random_cup
+#unlock nightmare difficulty if we win any cup on Expert or higher
+execute if score #grandPrix1Trophy value matches 34.. if score #unlockedNightmare value matches 0 run function phan:game/0/unlock_nightmare_difficulty
+execute if score #grandPrix2Trophy value matches 34.. if score #unlockedNightmare value matches 0 run function phan:game/0/unlock_nightmare_difficulty
+execute if score #grandPrix3Trophy value matches 34.. if score #unlockedNightmare value matches 0 run function phan:game/0/unlock_nightmare_difficulty
+execute if score #grandPrix4Trophy value matches 34.. if score #unlockedNightmare value matches 0 run function phan:game/0/unlock_nightmare_difficulty
+#unlock ultra-nightmare difficulty if we win every cup on nightmare
+execute if score #grandPrix1Trophy value matches 35.. if score #grandPrix2Trophy value matches 35.. if score #grandPrix3Trophy value matches 35.. if score #grandPrix4Trophy value matches 35.. if score #unlockedUltranightmare value matches 0 run function phan:game/0/unlock_ultranightmare_difficulty
+#special unlock condition for Deep Dive 4: unlocked when the dream is completed through normal means
+execute if score #dream5Completed value matches 1 run scoreboard players set #d5a4Unlocked value 1
+execute if score #cup4Completed value matches 1.. run scoreboard players set #d5a4Unlocked value 1
+#rainbow keys are given after completing the Diamond cup or completing Shattered City
+execute if score #cup4Completed value matches 1.. run scoreboard players set #unlockedBonusRooms value 1
+execute if score #dream3Completed value matches 1.. run scoreboard players set #unlockedBonusRooms value 1
 
 #completed dreams are always considered "discovered"
 function phan:levels/_dream_discovery
-
-#special unlock condition for Deep Dive 4: unlocked when the dream is completed through normal means
-execute if score #dream5Completed value matches 1 run scoreboard players set #d5a4Unlocked value 1
-#can also unlock by completing the diamond cup
-execute if score #cup4Completed value matches 1.. run scoreboard players set #d5a4Unlocked value 1
+#=====
 
 #set skybox and conditions
 scoreboard players set @a skyboxSet 1

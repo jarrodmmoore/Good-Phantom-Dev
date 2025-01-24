@@ -47,6 +47,8 @@ execute if entity @s[tag=vsHomeStretch] if block ~ ~-1 ~ end_portal run function
 execute if score #checkLoadHeight value matches -64 if block ~ -63 ~ #phan:area_check run tag @s add botRespawn
 execute if score #checkLoadHeight value matches 0 if block ~ 1 ~ #phan:area_check run tag @s add botRespawn
 
+#summon interaction entity that will act as a more efficient intermediate for position calculation on this sub-tick
+execute if loaded ~ ~ ~ run function phan:bots/race/summon_pos_marker
 
 
 #item pickup

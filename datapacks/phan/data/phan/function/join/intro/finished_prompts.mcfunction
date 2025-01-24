@@ -8,6 +8,9 @@ effect give @s absorption 1 1 true
 title @s title [""]
 title @s actionbar [""]
 
+#run world setup if world data is corrupted
+execute unless entity @e[tag=randomize,type=armor_stand,scores={r=1..}] run function phan:world_setup
+
 #gameState is zero, adopt skybox but don't do anything else
 execute if score #gameState value matches 0 run scoreboard players set @s skyboxSet 1
 

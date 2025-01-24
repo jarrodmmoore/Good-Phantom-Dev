@@ -1,8 +1,16 @@
+#executed by waypoint
+
 #not loaded? exit out now
 execute unless loaded ~ ~ ~ run return 0
+#=====
 
 #we require ground and the player is airborne? kick out of the function
 execute if entity @s[tag=AIBC_requireGround] if score #OnGround value matches 0 unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run return 0
+#=====
+
+#player is ready to enter the portal and we're above an end portal? kick out of the function
+execute if score #portalFinished value matches 1.. if block ~ ~-1 ~ end_portal run return 0
+#=====
 
 #write down our stuff
 execute store result score #oldWpX value run data get entity @s Pos[0] 10

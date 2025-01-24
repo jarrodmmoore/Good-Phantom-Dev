@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.make_it_good"
+        },
+        "description": {
+            "translate": "gp.advancement.description.make_it_good"
+        },
+        "icon": {
+            "id": "minecraft:purple_dye",
+            "components": {
+                "item_model":"gp/editor/dream_edit"
+            }
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "makeitgood": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:good_phantom/dreams_dreams"
+}

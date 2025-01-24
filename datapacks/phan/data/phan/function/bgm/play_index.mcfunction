@@ -19,4 +19,5 @@ execute if score @s musicTrack matches 9 run function phan:bgm/play_9
 execute if score @s musicTrack matches 10 run function phan:bgm/play_10
 execute if score @s musicTrack matches 11 run function phan:bgm/play_11
 execute if score @s musicTrack matches 12 run function phan:bgm/play_12
-execute if score @s musicTrack matches 13.. run function phan:bgm/play_0
+execute if score @s musicTrack matches 13 run function phan:bgm/play_13
+execute if score @s musicTrack matches 14.. run function phan:bgm/play_0

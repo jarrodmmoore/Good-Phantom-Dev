@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.is_this_a_racing_game"
+        },
+        "description": {
+            "translate": "gp.advancement.description.is_this_a_racing_game"
+        },
+        "icon": {
+            "id": "minecraft:gold_block",
+            "components": {
+                "item_model":"gp/object/console_controller"
+            }
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "istarg_cup1": {"trigger": "minecraft:impossible"},
+        "istarg_cup2": {"trigger": "minecraft:impossible"},
+        "istarg_cup3": {"trigger": "minecraft:impossible"},
+        "istarg_cup4": {"trigger": "minecraft:impossible"}
+    },
+    "requirements": [
+        ["istarg_cup1"], ["istarg_cup2"], ["istarg_cup3"], ["istarg_cup4"]
+    ],
+    "parent": "phan:portal_race/root"
+}

@@ -65,6 +65,7 @@ scoreboard players set #unlockedNightmare value 1
 #^ i've decided that the admin menu shouldn't unlock this. this is only for the most insane and dedicated players who beat all cups on nightmare >:)
 scoreboard players set #unlockedCupDiamond value 1
 scoreboard players set #unlockedCupRandom value 1
+scoreboard players set #unlockedBonusRooms value 1
 
 #unlock all music discs
 scoreboard players set #disc_found_1 value 1
@@ -79,6 +80,7 @@ scoreboard players set #disc_found_9 value 1
 scoreboard players set #disc_found_10 value 1
 scoreboard players set #disc_found_11 value 1
 scoreboard players set #disc_found_12 value 1
+scoreboard players set #disc_found_13 value 1
 
 #update visuals (texts) if we're in the lobby
 execute if score #gameState value matches 0 run function phan:game/0/summon_props

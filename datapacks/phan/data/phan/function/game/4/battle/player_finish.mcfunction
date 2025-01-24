@@ -32,8 +32,11 @@ scoreboard players operation @s finishPos = #positionAssignMin value
 scoreboard players add #positionAssignMin value 1
 scoreboard players operation @s racePosDisplay = @s finishPos
 
-#advancement if we won with 0 KOs (there must be at least one other player in the game)
+#advancement if we won with 0 KOs (there must be at least 5 players in the game)
 execute if score #assist_enabled_portalrace value matches 0 if entity @s[scores={finishPos=1,KOs=..0}] if score #hudPeakPlayers value matches 5.. run advancement grant @s only phan:portal_race/pacifist_run
+
+#advancement if we won with items off (there must be at least 5 players in the game)
+execute if score #assist_items value matches 1 if entity @s[scores={finishPos=1}] if score #hudPeakPlayers value matches 5.. run advancement grant @s only phan:portal_race/instagib_for_days
 
 #advancement if we popped into 1st at the last second and won
 execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement grant @s only phan:portal_race/youve_swindled_me

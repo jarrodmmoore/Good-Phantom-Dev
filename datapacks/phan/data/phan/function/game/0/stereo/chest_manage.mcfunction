@@ -16,7 +16,7 @@ item replace block ~ ~ ~ container.18 with air
 item replace block ~ ~ ~ container.19 with air
 item replace block ~ ~ ~ container.20 with air
 item replace block ~ ~ ~ container.21 with air
-item replace block ~ ~ ~ container.22 with air
+#
 item replace block ~ ~ ~ container.23 with air
 item replace block ~ ~ ~ container.24 with air
 item replace block ~ ~ ~ container.25 with air
@@ -77,3 +77,7 @@ execute if score #disc_found_11 value matches ..0 run item replace block ~ ~ ~ c
 #12=whimsy forest (ward)
 execute if score #disc_found_12 value matches 1.. run item replace block ~ ~ ~ container.15 with minecraft:red_dye[item_model="gp/inventory/disc/12",custom_name='{"text":"12 - Whimsy Forest (Instrumental)","color":"gold","italic":true}',lore=['{"text":"Blue","color":"gray","bold":false,"italic":false}','{"text":"Back in August","color":"dark_purple","bold":false,"italic":false}'],custom_data={musicDiscSelect:1b,musicDisc12:1b}]
 execute if score #disc_found_12 value matches ..0 run item replace block ~ ~ ~ container.15 with air
+
+#13=fluidity (relic)
+execute if score #disc_found_13 value matches 1.. run item replace block ~ ~ ~ container.22 with minecraft:red_dye[item_model="gp/inventory/disc/13",custom_name='{"text":"13 - Fluidity","color":"gold","italic":true}',lore=['{"text":"Reach","color":"gray","bold":false,"italic":false}','{"text":"Back in August","color":"dark_purple","bold":false,"italic":false}'],custom_data={musicDiscSelect:1b,musicDisc13:1b}]
+execute if score #disc_found_13 value matches ..0 run item replace block ~ ~ ~ container.22 with air

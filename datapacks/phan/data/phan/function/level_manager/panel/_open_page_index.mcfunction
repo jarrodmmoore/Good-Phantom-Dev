@@ -32,5 +32,8 @@ execute as @e[tag=levelEntry,type=armor_stand] if score @s levelUID = #checkID v
 execute if score #success value matches 0 run tellraw @s ["",{"translate":"gp.level_manager.error.no_dream_selected","color":"red"}]
 execute if score #success value matches 0 run function phan:level_manager/error_noise
 
+#advancement for editing a custom dream
+execute if score #success value matches 1 if score @s levelUID matches 1001.. run advancement grant @s only phan:good_phantom/make_it_good
+
 #feedback noise
 execute if score #success value matches 1 at @s run playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000 0.75

@@ -25,6 +25,8 @@ execute if score @s editArg1 matches 10 run summon item_display ~ ~.5 ~ {Tags:["
 execute if score @s editArg1 matches 11 run summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","enderEye","hiddenMusicDisc","discShine","groupB"],teleport_duration:2,billboard:"center",brightness:{sky:15,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:music_disc_cat",count:1b}}
 #12=whimsy forest (ward)
 execute if score @s editArg1 matches 12 run summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","enderEye","hiddenMusicDisc","discWhimsy","groupB"],teleport_duration:2,billboard:"center",brightness:{sky:15,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:music_disc_ward",count:1b}}
+#13=fluidity (relic)
+execute if score @s editArg1 matches 13 run summon item_display ~ ~.5 ~ {Tags:["checkValid","setMe","enderEye","hiddenMusicDisc","discFluidity","groupB"],teleport_duration:2,billboard:"center",brightness:{sky:15,block:15},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]},item:{id:"minecraft:music_disc_relic",count:1b}}
 
 function phan:game/1/spawning/spawn__give_generic_data
 

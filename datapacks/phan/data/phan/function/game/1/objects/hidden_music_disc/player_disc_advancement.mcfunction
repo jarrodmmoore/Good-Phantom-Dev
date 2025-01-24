@@ -14,3 +14,4 @@ execute if score @s discFound9 matches 1.. run advancement grant @s only phan:go
 execute if score @s discFound10 matches 1.. run advancement grant @s only phan:good_phantom/complete_collection get_disc_10
 execute if score @s discFound11 matches 1.. run advancement grant @s only phan:good_phantom/complete_collection get_disc_11
 execute if score @s discFound12 matches 1.. run advancement grant @s only phan:good_phantom/complete_collection get_disc_12
+execute if score @s discFound13 matches 1.. run advancement grant @s only phan:good_phantom/complete_collection get_disc_13

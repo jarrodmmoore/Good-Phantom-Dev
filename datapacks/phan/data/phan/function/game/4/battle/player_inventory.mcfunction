@@ -4,6 +4,10 @@ execute if items entity @s hotbar.0 diamond_sword[custom_data~{slot0:1b}] run ta
 clear @s[gamemode=!creative,tag=!hasSlot0] diamond_sword[custom_data~{slot0:1b}]
 execute if entity @s[tag=!hasSlot0,tag=!noInventory] run item replace entity @s hotbar.0 with minecraft:diamond_sword[unbreakable={show_in_tooltip:0b},item_model="gp/item/bite_item",enchantments={levels:{"minecraft:sharpness":20,"minecraft:knockback":3},show_in_tooltip:0b},custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.game.bite","color":"aqua","italic":false}]',attribute_modifiers={modifiers:[{id:"battlefastbite",operation:"add_value",type:"attack_speed",amount:0,slot:"mainhand"}],show_in_tooltip:0b},hide_additional_tooltip={},custom_data={slot0:1b,rmb:1b}] 1
 
+#give light projectiles instead if items are disabled
+execute if score #assist_items value matches 1.. run return run function phan:game/4/battle/player_inventory_no_items
+#=====
+
 #SLOT 2 - heavy projectile
 tag @s[tag=hasSlot1a] remove hasSlot1a
 tag @s[tag=hasSlot1b] remove hasSlot1b

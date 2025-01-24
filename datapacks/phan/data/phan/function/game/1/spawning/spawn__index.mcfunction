@@ -49,6 +49,7 @@ execute if score @s editNode matches 25 run function phan:game/1/spawning/podium
 
 #failed to spawn? abort and try again soon
 execute if entity @s[tag=spawn_failed] run return 0
+#=====
 
 #we are spawned. let the record show.
 execute if entity @s[tag=nodeLoadArea0,tag=nodeArea1] run scoreboard players set @s area0SpawnA 1

@@ -43,6 +43,8 @@ execute if entity @s[tag=vsHomeStretch] if block ~ ~-1 ~ end_portal run function
 execute if score #checkLoadHeight value matches -64 if block ~ -63 ~ #phan:area_check if entity @s[gamemode=adventure] run function phan:game/4/battle/respawn
 execute if score #checkLoadHeight value matches 0 if block ~ 1 ~ #phan:area_check if entity @s[gamemode=adventure] run function phan:game/4/battle/respawn
 
+#summon interaction entity that will act as a more efficient intermediate for position calculation on this sub-tick
+execute if entity @s[tag=vsHomeStretch] if loaded ~ ~ ~ run function phan:game/4/race/summon_pos_marker
 
 
 #item pickup

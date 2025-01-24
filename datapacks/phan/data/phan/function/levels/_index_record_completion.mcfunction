@@ -14,6 +14,21 @@ execute if score #chosenLevel value matches 4 if score #dream4Completed value ma
 execute if score #chosenLevel value matches 5 if score #dream5Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
 execute if score #chosenLevel value matches 5 if score #dream5Completed value matches 0 run scoreboard players set #dream5Completed value 1
 
+execute if score #chosenLevel value matches 6 if score #dream6Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
+execute if score #chosenLevel value matches 6 if score #dream6Completed value matches 0 run scoreboard players set #dream6Completed value 1
+
+execute if score #chosenLevel value matches 7 if score #dream7Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
+execute if score #chosenLevel value matches 7 if score #dream7Completed value matches 0 run scoreboard players set #dream7Completed value 1
+
+execute if score #chosenLevel value matches 8 if score #dream8Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
+execute if score #chosenLevel value matches 8 if score #dream8Completed value matches 0 run scoreboard players set #dream8Completed value 1
+
+execute if score #chosenLevel value matches 9 if score #dream9Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
+execute if score #chosenLevel value matches 9 if score #dream9Completed value matches 0 run scoreboard players set #dream9Completed value 1
+
+execute if score #chosenLevel value matches 10 if score #dream10Completed value matches 0 run scoreboard players add #dreamsCompleted value 1
+execute if score #chosenLevel value matches 10 if score #dream10Completed value matches 0 run scoreboard players set #dream10Completed value 1
+
 #individual player that ran this function also gets the score
 execute if score #chosenLevel value matches 1 run scoreboard players set @s dream1Completed 1
 execute if score #chosenLevel value matches 2 run scoreboard players set @s dream2Completed 1

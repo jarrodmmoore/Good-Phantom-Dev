@@ -11,3 +11,4 @@ scoreboard players set #disc_found_9 value 0
 scoreboard players set #disc_found_10 value 0
 scoreboard players set #disc_found_11 value 0
 scoreboard players set #disc_found_12 value 0
+scoreboard players set #disc_found_13 value 0

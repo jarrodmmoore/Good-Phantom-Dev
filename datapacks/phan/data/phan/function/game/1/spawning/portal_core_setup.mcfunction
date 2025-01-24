@@ -12,3 +12,6 @@ fill ~-5 ~1 ~-5 ~5 ~1 ~5 orange_carpet replace structure_void
 scoreboard players set @s editArg1 0
 scoreboard players set @s editArg2 0
 scoreboard players set @s enderEyes 0
+
+#for portal race mode: keep track of what frame slots have been assigned
+scoreboard players set @s eyeSlotAssignment 0

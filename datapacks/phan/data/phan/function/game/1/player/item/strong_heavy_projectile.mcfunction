@@ -1,3 +1,7 @@
+#battle mode with items off: shoot a light projectile instead
+execute if score #gameState value matches 4 if score #vGameType value matches 2 if score #assist_items value matches 1 run return run function phan:game/1/player/item/strong_light_projectile
+#=====
+
 scoreboard players remove @s energy 2
 
 #feedback

@@ -36,6 +36,9 @@ execute if score #test value matches 1.. run function phan:game/0/stereo/set_son
 #12
 execute store result score #test value run clear @s red_dye[custom_data~{musicDisc12:1b}] 0
 execute if score #test value matches 1.. run function phan:game/0/stereo/set_song {"song":"12"}
+#13
+execute store result score #test value run clear @s red_dye[custom_data~{musicDisc13:1b}] 0
+execute if score #test value matches 1.. run function phan:game/0/stereo/set_song {"song":"13"}
 
 #clear inv, just in case we picked up one that doesn't have a handler
 clear @s red_dye[custom_data~{musicDiscSelect:1b}]

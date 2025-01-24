@@ -7,6 +7,7 @@ scoreboard players set @s botVaultUpwardTime 15
 
 #already in flight? don't re-enter flight
 execute if function phan:bots/movement/check_for_vehicle run return 0
+#=====
 
 #mid air? just enter flight
 execute if entity @s[scores={botMoveState=1..,airTime=11..}] unless function phan:bots/movement/check_for_vehicle run tag @s add botFlyWhenInAir

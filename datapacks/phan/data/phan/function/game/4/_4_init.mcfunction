@@ -66,7 +66,6 @@ function phan:player/player_displays_cleanup
 #reset versus scores
 scoreboard players set #startGrid value 1
 scoreboard players set #321go value 99
-scoreboard players set #vsPortalSlot value 1
 scoreboard players set #vsPortalOpen value 0
 scoreboard players set #1stPlaceLeadTime value 0
 scoreboard players set #eyeShowAssign value 2147483647
@@ -132,6 +131,7 @@ function phan:game/1/spawning/reset_all
 function phan:game/4/load_area_info
 execute if score #vGameType value matches 2 run scoreboard players set #hudMode value 4
 execute if score #vGameType value matches 2 run scoreboard players reset * enderEyesShow
+scoreboard players reset * eyeSlotAssignment
 
 #item stuff
 scoreboard players set #eyeSpawnerID value 1

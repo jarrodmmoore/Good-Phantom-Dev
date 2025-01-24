@@ -12,6 +12,7 @@ execute if score #disc_found_9 value matches 1 if entity @s[tag=discMitosis] run
 execute if score #disc_found_10 value matches 1 if entity @s[tag=discStranded] run scoreboard players set #test2 value 1
 execute if score #disc_found_11 value matches 1 if entity @s[tag=discShine] run scoreboard players set #test2 value 1
 execute if score #disc_found_12 value matches 1 if entity @s[tag=discWhimsy] run scoreboard players set #test2 value 1
+execute if score #disc_found_13 value matches 1 if entity @s[tag=discFluidity] run scoreboard players set #test2 value 1
 
 #mark disc as found
 execute if entity @s[tag=discShimmer] run scoreboard players set #disc_found_1 value 1
@@ -26,6 +27,7 @@ execute if entity @s[tag=discMitosis] run scoreboard players set #disc_found_9 v
 execute if entity @s[tag=discStranded] run scoreboard players set #disc_found_10 value 1
 execute if entity @s[tag=discShine] run scoreboard players set #disc_found_11 value 1
 execute if entity @s[tag=discWhimsy] run scoreboard players set #disc_found_12 value 1
+execute if entity @s[tag=discFluidity] run scoreboard players set #disc_found_13 value 1
 
 #get advancements for finding discs
 execute if entity @s[tag=discShimmer] run scoreboard players set @a[tag=catcher] discFound1 1
@@ -40,6 +42,7 @@ execute if entity @s[tag=discMitosis] run scoreboard players set @a[tag=catcher]
 execute if entity @s[tag=discStranded] run scoreboard players set @a[tag=catcher] discFound10 1
 execute if entity @s[tag=discShine] run scoreboard players set @a[tag=catcher] discFound11 1
 execute if entity @s[tag=discWhimsy] run scoreboard players set @a[tag=catcher] discFound12 1
+execute if entity @s[tag=discFluidity] run scoreboard players set @a[tag=catcher] discFound13 1
 execute as @a[limit=1,tag=catcher] run function phan:game/1/objects/hidden_music_disc/player_disc_advancement
 
 #announce new disc if we didn't already have it

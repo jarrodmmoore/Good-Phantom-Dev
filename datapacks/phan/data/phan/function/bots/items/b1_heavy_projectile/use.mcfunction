@@ -1,8 +1,10 @@
 #consume energy
-scoreboard players remove @s energy 2
+execute unless score #assist_items value matches 1 run scoreboard players remove @s energy 2
+execute if score #assist_items value matches 1 run scoreboard players remove @s energy 1
 
 #feedback
-playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 1.8
+execute unless score #assist_items value matches 1 run playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 1.8
+execute if score #assist_items value matches 1 run playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 2
 
 #cooldown / input management
 scoreboard players set @s inputCooldownC 15
@@ -23,8 +25,10 @@ function phan:bots/movement/face_direction_temporarily
 #=====
 
 #summon the projectile and send it on its way
-summon armor_stand ~ ~ ~ {Tags:["setLife","projectile","projectileHeavy"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"item_model":"gp/item_entity/projectile_heavy"}}]}
+execute unless score #assist_items value matches 1 run summon armor_stand ~ ~ ~ {Tags:["setLife","projectile","projectileHeavy"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"item_model":"gp/item_entity/projectile_heavy"}}]}
+execute if score #assist_items value matches 1 run summon armor_stand ~ ~ ~ {Tags:["setLife","projectile","projectileLight"],Silent:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Pose:{Head:[0.0f,0.0f,0.0f]},ArmorItems:[{},{},{},{id:"minecraft:light_blue_dye",count:1,components:{"item_model":"gp/item_entity/projectile_light"}}]}
 scoreboard players operation @e[tag=setLife,type=armor_stand,distance=..2] playerID = @s playerID
 tp @e[tag=setLife,type=armor_stand,distance=..2] ~ ~ ~ ~ ~
-scoreboard players set @e[tag=setLife] lifespan 200
+execute unless score #assist_items value matches 1 run scoreboard players set @e[tag=setLife] lifespan 200
+execute if score #assist_items value matches 1 run scoreboard players set @e[tag=setLife] lifespan 120
 tag @e[tag=setLife,type=armor_stand,distance=..2] remove setLife

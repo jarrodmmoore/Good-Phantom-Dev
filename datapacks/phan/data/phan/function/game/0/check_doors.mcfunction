@@ -51,7 +51,7 @@ execute if score #test value matches 0 run fill 215 -9 118 215 -9 118 melon repl
 
 #post v1.0 levels
 #hallway door
-execute if score #dreamPOpened value matches 0 if score #dream3Completed value matches 1.. if entity @a[gamemode=!spectator,x=235,y=-9,z=103,dx=3,dy=3,dz=2] as @e[type=item_display,tag=dreamP_lock] at @s run function phan:game/0/open_lock
+execute if score #dreamPOpened value matches 0 if score #unlockedBonusRooms value matches 1.. if entity @a[gamemode=!spectator,x=235,y=-9,z=103,dx=3,dy=3,dz=2] as @e[type=item_display,tag=dreamP_lock] at @s run function phan:game/0/open_lock
 #phantom forest
 execute store result score #test value run execute if entity @a[gamemode=!spectator,x=230,y=-10,z=94,dx=5,dy=3,dz=3]
 execute if score #test value matches 1.. run fill 232 -11 95 232 -11 96 redstone_torch replace melon
@@ -63,7 +63,7 @@ execute if score #test value matches ..0 run fill 241 -11 95 241 -11 96 melon re
 
 #custom rooms
 #hallway door
-execute if score #dreamCOpened value matches 0 if score #dream3Completed value matches 1.. if entity @a[gamemode=!spectator,x=235,y=-9,z=131,dx=3,dy=3,dz=2] as @e[type=item_display,tag=dreamC_lock] at @s run function phan:game/0/open_lock
+execute if score #dreamCOpened value matches 0 if score #unlockedBonusRooms value matches 1.. if entity @a[gamemode=!spectator,x=235,y=-9,z=131,dx=3,dy=3,dz=2] as @e[type=item_display,tag=dreamC_lock] at @s run function phan:game/0/open_lock
 #rhs
 #1
 execute store result score #test value run execute if entity @a[gamemode=!spectator,x=230,y=-10,z=139,dx=5,dy=3,dz=3]
@@ -106,4 +106,4 @@ execute if score #dream2Completed value matches 1 as @a[gamemode=adventure,tag=d
 execute if score #dream4Completed value matches 1 as @a[gamemode=adventure,tag=doneWithIntro,x=180,y=-13,z=87,dx=75,dy=100,dz=75] run function phan:game/0/give_key/yellow
 execute if score #dream5Completed value matches 1 as @a[gamemode=adventure,tag=doneWithIntro,x=180,y=-13,z=87,dx=75,dy=100,dz=75] run function phan:game/0/give_key/cyan
 #dlc (these nuts)
-execute if score #dream3Completed value matches 1 as @a[gamemode=adventure,tag=doneWithIntro,x=180,y=-13,z=87,dx=75,dy=100,dz=75] run function phan:game/0/give_key/rainbow
+execute if score #unlockedBonusRooms value matches 1 as @a[gamemode=adventure,tag=doneWithIntro,x=180,y=-13,z=87,dx=75,dy=100,dz=75] run function phan:game/0/give_key/rainbow

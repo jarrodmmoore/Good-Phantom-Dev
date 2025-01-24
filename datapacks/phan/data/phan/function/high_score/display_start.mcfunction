@@ -113,6 +113,21 @@ execute if score #showUniqueScores value matches 1 as 00000000-0000-0328-0000-00
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~ ~ 180 ~
 tag @e[tag=rotateText,type=text_display] remove rotateText
 
+#afterlife
+#score
+execute if score #showUniqueScores value matches 0 positioned 208 -16 106 run function phan:high_score/fetch_sign_strings
+execute if score #showUniqueScores value matches 0 as 00000000-0000-0328-0000-000000000010 positioned 245 -6 99 positioned ~0.5 ~0.5 ~0.45 unless score @s bestScore1 matches -1 run function phan:high_score/display_summon_leaderboard_score
+execute if score #showUniqueScores value matches 1 positioned 208 -16 112 run function phan:high_score/fetch_sign_strings
+execute if score #showUniqueScores value matches 1 as 00000000-0000-0328-0000-000000000010 positioned 245 -6 99 positioned ~0.5 ~0.5 ~0.45 unless score @s uniqueScore1 matches -1 run function phan:high_score/display_summon_leaderboard_score_unique
+execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~ ~ 180 ~
+tag @e[tag=rotateText,type=text_display] remove rotateText
+#time
+execute if score #showUniqueScores value matches 0 positioned 208 -16 118 run function phan:high_score/fetch_sign_strings
+execute if score #showUniqueScores value matches 0 as 00000000-0000-0328-0000-000000000010 positioned 245 -6 92 positioned ~0.5 ~0.5 ~-0.45 unless score @s bestTime1 matches 2147483647 run function phan:high_score/display_summon_leaderboard_time
+execute if score #showUniqueScores value matches 1 positioned 208 -16 124 run function phan:high_score/fetch_sign_strings
+execute if score #showUniqueScores value matches 1 as 00000000-0000-0328-0000-000000000010 positioned 245 -6 92 positioned ~0.5 ~0.5 ~-0.45 unless score @s uniqueTime1 matches 2147483647 run function phan:high_score/display_summon_leaderboard_time_unique
+execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~ ~ 0 ~
+tag @e[tag=rotateText,type=text_display] remove rotateText
 
 
 

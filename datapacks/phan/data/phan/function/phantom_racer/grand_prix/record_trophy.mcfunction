@@ -16,8 +16,8 @@ execute if score #grandPrixActive value matches 2 if score #offerTrophy value > 
 execute if score #grandPrixActive value matches 3 if score #offerTrophy value > @s grandPrix3Trophy run scoreboard players operation @s grandPrix3Trophy = #offerTrophy value
 execute if score #grandPrixActive value matches 4 if score #offerTrophy value > @s grandPrix4Trophy run scoreboard players operation @s grandPrix4Trophy = #offerTrophy value
 
-#unlock nightmare difficulty if we win on Expert or higher
-execute if score #offerTrophy value matches 34.. run scoreboard players set #unlockedNightmare value 1
-
-#unlock ultra-nightmare difficulty if we win every cup on nightmare
-execute if score #grandPrix1Trophy value matches 35.. if score #grandPrix2Trophy value matches 35.. if score #grandPrix3Trophy value matches 35.. if score #grandPrix4Trophy value matches 35.. run scoreboard players set #unlockedUltranightmare value 1
+#Is this a racing game? advancement
+execute if score @s grandPrix1Trophy matches 31.. run advancement grant @s only phan:portal_race/is_this_a_racing_game istarg_cup1
+execute if score @s grandPrix2Trophy matches 31.. run advancement grant @s only phan:portal_race/is_this_a_racing_game istarg_cup2
+execute if score @s grandPrix3Trophy matches 31.. run advancement grant @s only phan:portal_race/is_this_a_racing_game istarg_cup3
+execute if score @s grandPrix4Trophy matches 31.. run advancement grant @s only phan:portal_race/is_this_a_racing_game istarg_cup4

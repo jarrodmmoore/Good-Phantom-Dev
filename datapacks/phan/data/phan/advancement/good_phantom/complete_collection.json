@@ -26,11 +26,12 @@
         "get_disc_9": {"trigger": "minecraft:impossible"},
         "get_disc_10": {"trigger": "minecraft:impossible"},
         "get_disc_11": {"trigger": "minecraft:impossible"},
-        "get_disc_12": {"trigger": "minecraft:impossible"}
+        "get_disc_12": {"trigger": "minecraft:impossible"},
+        "get_disc_13": {"trigger": "minecraft:impossible"}
     },
     "requirements": [
         ["get_disc_1"], ["get_disc_2"], ["get_disc_3"], ["get_disc_4"], ["get_disc_5"], ["get_disc_6"],
-        ["get_disc_7"], ["get_disc_8"], ["get_disc_9"], ["get_disc_10"], ["get_disc_11"], ["get_disc_12"]
+        ["get_disc_7"], ["get_disc_8"], ["get_disc_9"], ["get_disc_10"], ["get_disc_11"], ["get_disc_12"], ["get_disc_13"]
     ],
     "parent": "phan:good_phantom/this_is_my_jam"
 }

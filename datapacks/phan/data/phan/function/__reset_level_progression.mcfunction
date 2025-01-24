@@ -5,6 +5,11 @@ scoreboard players set #dream2Completed value 0
 scoreboard players set #dream3Completed value 0
 scoreboard players set #dream4Completed value 0
 scoreboard players set #dream5Completed value 0
+scoreboard players set #dream6Completed value 0
+scoreboard players set #dream7Completed value 0
+scoreboard players set #dream8Completed value 0
+scoreboard players set #dream9Completed value 0
+scoreboard players set #dream10Completed value 0
 #acts unlocked
 scoreboard players set #d1a1Unlocked value 0
 scoreboard players set #d1a2Unlocked value 0
@@ -69,6 +74,7 @@ scoreboard players set #unlockedNightmare value 0
 scoreboard players set #unlockedUltranightmare value 0
 scoreboard players set #unlockedCupDiamond value 0
 scoreboard players set #unlockedCupRandom value 0
+scoreboard players set #unlockedBonusRooms value 0
 #completed cups
 scoreboard players set #cup1Completed value 0
 scoreboard players set #cup2Completed value 0

@@ -53,7 +53,7 @@ execute if score #5Hz value matches 1 run function phan:game/4/battle/manage_eye
 #GAME FUNCTION
 
 #allow mid-game joins if player have the trigger
-execute if score #subGameState value matches ..0 as @a[scores={joinGame=1..}] run function phan:game/4/race/join_trigger
+execute if score #subGameState value matches ..0 as @a[scores={joinGame=1..}] at @s run function phan:game/4/race/join_trigger
 
 #count down time remaining
 execute if score #subGameState value matches 0 run function phan:game/4/battle/time_limit

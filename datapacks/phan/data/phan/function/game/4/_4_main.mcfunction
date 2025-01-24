@@ -41,7 +41,7 @@ execute if score #area0SpawnC value matches 0 run function phan:game/1/spawning/
 execute if score #area0SpawnD value matches 0 run function phan:game/1/spawning/reset/reset0d
 
 #need to restore score data on bot waypoints if bots are enabled
-execute if score #allowClearCache value matches 1 if score #botsEnabled value matches 1 unless entity @a[tag=phan_edit] run function phan:editor/restore_using_nbt/_tick_waypoint
+execute if score #botsEnabled value matches 1.. unless entity @a[tag=phan_edit] run function phan:editor/restore_using_nbt/_tick_waypoint
 
 #nodes respawn their stuff when told to
 execute if score #5Hz value matches 0 if score #vAct value matches 1 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea1] at @s run function phan:game/4/spawning/check_area_generic_a

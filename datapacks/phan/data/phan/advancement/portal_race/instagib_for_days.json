@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "translate": "gp.advancement.title.instagib_for_days"
+        },
+        "description": {
+            "translate": "gp.advancement.description.instagib_for_days"
+        },
+        "icon": {
+            "id": "minecraft:light_blue_wool",
+            "components": {
+                "item_model": "gp/item_entity/projectile_light"
+            }
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "dreamsdreams": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "phan:portal_race/root"
+}

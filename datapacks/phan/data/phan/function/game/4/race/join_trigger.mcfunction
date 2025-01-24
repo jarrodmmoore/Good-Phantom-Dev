@@ -27,6 +27,10 @@ scoreboard players operation @s vsRespawnYaw = #fallbackRespawnYaw value
 scoreboard players operation @s vsRespawnPitch = #fallbackRespawnPitch value
 scoreboard players set @s vsRespawnLaunch 0
 
+#battle mode: use specialized respawn function
+execute if score #vGameType value matches 2 run return run function phan:game/4/battle/respawn
+#=====
+
 #get to a player start node by whatever means needed
 execute if entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1}] run function phan:game/4/race/join_trigger_found_start_node
 execute unless entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1}] run function phan:game/4/race/respawn

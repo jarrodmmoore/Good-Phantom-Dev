@@ -4,6 +4,7 @@ scoreboard players set #success value 0
 #record if our state
 scoreboard players operation #OnGround value = @s onGround
 scoreboard players operation #inWater value = @s inWater
+execute store result score #portalFinished value run execute if entity @s[tag=vsHomeStretch]
 
 #first try with small radius
 $execute as @e[type=marker,tag=AIBC,scores={AIBC_id=$(id)},distance=..5,limit=1,sort=nearest] at @s run function phan:bots/behaviors/1_follow_waypoints/collect_waypoint

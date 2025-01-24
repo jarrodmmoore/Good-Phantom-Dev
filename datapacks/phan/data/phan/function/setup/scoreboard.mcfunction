@@ -449,6 +449,7 @@ scoreboard objectives add compassDirection dummy
 scoreboard objectives add compassClock dummy
 scoreboard objectives add KOs dummy
 scoreboard objectives add deathsSinceKO dummy
+scoreboard objectives add eyeSlotAssignment dummy
 #found music discs
 scoreboard objectives add discFound1 dummy
 scoreboard objectives add discFound2 dummy
@@ -462,6 +463,7 @@ scoreboard objectives add discFound9 dummy
 scoreboard objectives add discFound10 dummy
 scoreboard objectives add discFound11 dummy
 scoreboard objectives add discFound12 dummy
+scoreboard objectives add discFound13 dummy
 #AI players
 scoreboard objectives add botName dummy
 scoreboard objectives add botID dummy

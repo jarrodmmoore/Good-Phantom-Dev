@@ -9,6 +9,8 @@ setworldspawn 162 -6 132
 #variables
 scoreboard players set #hudMode value 1
 scoreboard players add #gameState value 0
+scoreboard players set #showUniqueScores value 1
+#...
 
 #summon stands
 kill @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1]
@@ -100,3 +102,12 @@ tag @e[tag=setup] remove setup
 
 #later i learned that you can use storage to store strings for stuff, so the extra UUID nonsense wasn't really needed.
 #oh well! it's still pretty performant so i see no reason to overhaul it
+
+#erase data
+function phan:__erase_data
+
+#setup math
+function math:sqrt/setup
+
+#say it
+tellraw @a ["",{"text":"World setup function was run successfully.","color":"green"}]

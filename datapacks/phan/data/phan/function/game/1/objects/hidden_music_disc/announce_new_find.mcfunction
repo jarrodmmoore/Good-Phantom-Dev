@@ -13,6 +13,7 @@ execute if entity @s[tag=discMitosis] run tellraw @a[tag=tellMe] ["",{"text":"09
 execute if entity @s[tag=discStranded] run tellraw @a[tag=tellMe] ["",{"text":"10 - Stranded (Instrumental)","color":"gold","italic":true}]
 execute if entity @s[tag=discShine] run tellraw @a[tag=tellMe] ["",{"text":"11 - Shine","color":"gold","italic":true}]
 execute if entity @s[tag=discWhimsy] run tellraw @a[tag=tellMe] ["",{"text":"12 - Whimsy Forest (Instrumental)","color":"gold","italic":true}]
+execute if entity @s[tag=discFluidity] run tellraw @a[tag=tellMe] ["",{"text":"13 - Fluidity","color":"gold","italic":true}]
 tellraw @a[tag=tellMe] ["",{"text":" "}]
 
 #noise

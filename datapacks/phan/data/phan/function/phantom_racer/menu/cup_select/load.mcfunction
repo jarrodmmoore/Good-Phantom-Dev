@@ -26,9 +26,3 @@ summon text_display ~ ~1.4 ~-.5 {Tags:["lobbyProp","tvText","tvSubtitle3","tvPro
 
 #special text to show cup name
 summon text_display ~-.1 ~1.4 ~2.5 {Tags:["lobbyProp","tvText","tvSubtitle4","tvProp"],alignment:"center",text:'["",{"text":" "}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.0f,1.0f,1.0f]},background:16777215}
-
-#check if we should unlock stuff
-#unlock diamond cup if the 3 base cups were completed
-execute if score #cup1Completed value matches 1.. if score #cup2Completed value matches 1.. if score #cup3Completed value matches 1.. run scoreboard players set #unlockedCupDiamond value 1
-#unlock random cup if the 4 top row cups were all completed
-execute if score #cup1Completed value matches 1.. if score #cup2Completed value matches 1.. if score #cup3Completed value matches 1.. if score #cup4Completed value matches 1.. run scoreboard players set #unlockedCupRandom value 1
