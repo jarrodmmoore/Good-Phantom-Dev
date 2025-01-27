@@ -2,12 +2,12 @@
 scoreboard players add @s botTimeInRange 1
 
 #instant check if we've crossed both in x and z coordinates
-execute if score @s botApproachX matches 11.. if score #testX value matches ..14 run scoreboard players set @s botApproachX 0
-execute if score @s botApproachX matches ..-11 if score #testX value matches -14.. run scoreboard players set @s botApproachX 0
+execute if score @s botApproachX matches 11.. if score #testX value matches ..5 run scoreboard players set @s botApproachX 0
+execute if score @s botApproachX matches ..-11 if score #testX value matches -5.. run scoreboard players set @s botApproachX 0
 execute if score @s botApproachX matches -10..10 run scoreboard players add #test value 1
 
-execute if score @s botApproachZ matches 11.. if score #testZ value matches ..14 run scoreboard players set @s botApproachZ 0
-execute if score @s botApproachZ matches ..-11 if score #testZ value matches -14.. run scoreboard players set @s botApproachZ 0
+execute if score @s botApproachZ matches 11.. if score #testZ value matches ..5 run scoreboard players set @s botApproachZ 0
+execute if score @s botApproachZ matches ..-11 if score #testZ value matches -5.. run scoreboard players set @s botApproachZ 0
 execute if score @s botApproachZ matches -10..10 run scoreboard players add #test value 1
 
 #faster check if we're right on the coordinates

@@ -22,6 +22,6 @@ execute if score #randomLength value matches 1.. run function phan:phantom_racer
 #non-battle = Pastel Palace 1
 execute if score #randomLength value matches ..0 run scoreboard players set #chosenLevel value 1
 execute if score #randomLength value matches ..0 run scoreboard players set #vAct value 1
-#battle = Shattered City 3
-execute if score #randomSetting value matches 2 if score #randomLength value matches ..0 run scoreboard players set #chosenLevel value 3
-execute if score #randomSetting value matches 2 if score #randomLength value matches ..0 run scoreboard players set #vAct value 3
+#battle = Phantom Forest 4
+execute if score #randomSetting value matches 2 if score #randomLength value matches ..0 run scoreboard players set #chosenLevel value 6
+execute if score #randomSetting value matches 2 if score #randomLength value matches ..0 run scoreboard players set #vAct value 4

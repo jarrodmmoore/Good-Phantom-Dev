@@ -13,8 +13,8 @@ execute if score @s age matches 10.. unless block ~ ~-.2 ~ #phan:not_solid run s
 
 #check if we're not moving for some reason
 execute store result score #testY value run data get entity @s Motion[1] 100
-execute if score #testY value matches 0 run function phan:bots/movement/2_gliding/check_if_vehicle_stuck
-execute unless score #testY value matches 0 run scoreboard players set @s botTimeSinceFlightProgress 0
+execute if score #testY value matches -8..0 run function phan:bots/movement/2_gliding/check_if_vehicle_stuck
+execute unless score #testY value matches -8..0 run scoreboard players set @s botTimeSinceFlightProgress 0
 
 #stay alive
 scoreboard players set @s lifespan 5

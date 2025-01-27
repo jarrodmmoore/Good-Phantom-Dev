@@ -51,11 +51,15 @@ execute if entity @s[tag=sneaking] run scoreboard players set @s moving 0
 scoreboard players remove @s[scores={hitstun=1..}] hitstun 1
 
 #don't lose speed while airborne
-execute if score @s onGround matches 0 unless block ~ ~ ~ water run function phan:movement/airborne
+execute if entity @s[scores={onGround=0,inWater=0}] run function phan:movement/airborne
 
 #elytra: landing speed of 8000 is full speed
 execute if entity @s[scores={landCooldown=..0,airTime=20..,onGround=1..}] run function phan:movement/get_velocity
+execute if entity @s[scores={landCooldown=..0,airTime=20..,inWater=1..}] run function phan:movement/get_velocity
 scoreboard players remove @s[scores={landCooldown=1..}] landCooldown 1
+
+#not airborne while in water
+execute if score @s inWater matches 1.. run scoreboard players set @s airTime 0
 
 #jump?
 execute if score @s jump matches -2147483648..2147483647 at @s run function phan:movement/player_jumped
@@ -91,7 +95,7 @@ execute unless score @s roughVelocity matches -10..10 run scoreboard players ope
 #how long we been stopped for?
 execute if score @s moving matches 0 run scoreboard players add @s[scores={stoppedTime=..9999999}] stoppedTime 1
 execute if score @s moving matches 1 run scoreboard players set @s stoppedTime 0
-execute if score @s moving matches 0..1 run scoreboard players set @s airTime 0
+execute if score @s moving matches 0..1 unless score @s fallFlying matches 1.. run scoreboard players set @s airTime 0
 
 #build or lose velocity depending on what we're doing
 execute if score @s stoppedTime matches 0..2 if score @s moveVelocity matches ..280 run scoreboard players add @s moveVelocity 3

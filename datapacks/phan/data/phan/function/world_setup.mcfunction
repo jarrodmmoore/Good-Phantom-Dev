@@ -10,6 +10,7 @@ setworldspawn 162 -6 132
 scoreboard players set #hudMode value 1
 scoreboard players add #gameState value 0
 scoreboard players set #showUniqueScores value 1
+scoreboard players set #grandPrixActive value 0
 #...
 
 #summon stands

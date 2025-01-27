@@ -5,7 +5,8 @@ execute if entity @s[tag=!naturalBotRespawn] if score #vGameType value matches 1
 tag @s[tag=naturalBotRespawn] remove naturalBotRespawn
 
 #don't have a saved spawn point? respawn at a random versus start point
-execute if entity @s[tag=!botHasSpawnpoint] run return run execute at @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},limit=1,sort=random] if loaded ~ ~ ~ run function phan:bots/spawn/respawn_entity with storage phan:bot_data
+execute if entity @s[tag=!botHasSpawnpoint] if score #vGameType value matches 1 run return run execute at @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},limit=1,sort=random] if loaded ~ ~ ~ run function phan:bots/spawn/respawn_entity with storage phan:bot_data
+execute if entity @s[tag=!botHasSpawnpoint] if score #vGameType value matches 2 run return run function phan:bots/controller/respawn_at_some_location_battle
 
 #are our saved coordinates out of date? try to respawn directly at a checkpoint, then
 execute if entity @s[tag=botNeedMarkerToRespawn] if score #vGameType value matches 1 run return run function phan:bots/spawn/respawn_entity_need_marker

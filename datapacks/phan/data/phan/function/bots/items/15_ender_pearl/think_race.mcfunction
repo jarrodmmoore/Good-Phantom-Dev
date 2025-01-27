@@ -18,6 +18,9 @@ execute if entity @s[tag=vsHomeStretch,tag=!botRival] if score #botRivalFinished
 #hard+: if in home stretch: keep holding ender pearl regardless if we can use it. keep checking los!
 execute if entity @s[tag=vsHomeStretch,scores={botSkill=4..}] if score @s botFearsEnderman matches 0 run scoreboard players set @s botHoldingItem 15
 
+#don't use while in improv flight mode
+execute if entity @s[tag=botImprovFlight,tag=!botFlightPanic] run return 0
+
 #if in flight panic mode, constantly check if we can ender pearl somewhere
 execute if entity @s[tag=botFlightPanic,scores={botFearsEnderman=0}] run scoreboard players set @s botHoldingItem 15
 

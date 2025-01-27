@@ -15,6 +15,11 @@ execute if score #success value matches 0 run scoreboard players set #vAct value
 execute unless score #vAct value matches 1..4 run scoreboard players set #chosenLevel value 0
 execute unless score #vAct value matches 1..4 run scoreboard players set #vAct value 1
 
+#get ready to show round
+bossbar set general_bossbar name [""]
+bossbar set general_buffer players @a[tag=doneWithIntro]
+bossbar set general_bossbar players @a[tag=doneWithIntro]
+
 #if chosenLevel is 0, pick a random track.
 #random any
 execute if score #chosenLevel value matches ..0 if score #vAct value matches ..1 run return run function phan:phantom_racer/game_io/pick_random_track {mode:0}
@@ -22,11 +27,3 @@ execute if score #chosenLevel value matches ..0 if score #vAct value matches ..1
 execute if score #chosenLevel value matches ..0 if score #vAct value matches 2 run return run function phan:phantom_racer/game_io/pick_random_track {mode:1}
 #random battle
 execute if score #chosenLevel value matches ..0 if score #vAct value matches 3.. run return run function phan:phantom_racer/game_io/pick_random_track {mode:2}
-
-#set it in stone
-scoreboard players operation #freePlayAct value = #vAct value
-
-#show round
-bossbar set general_bossbar name ["",{"text":"\uE036"},{"translate":"gp.phantom_racer.round_display","with":[{"score":{"name":"#grandPrixRound","objective":"value"}},{"score":{"name":"#grandPrixMaxRounds","objective":"value"}}],"bold":true}]
-bossbar set general_buffer players @a[tag=doneWithIntro]
-bossbar set general_bossbar players @a[tag=doneWithIntro]

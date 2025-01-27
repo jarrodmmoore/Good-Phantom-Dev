@@ -2,7 +2,7 @@
 execute store result score #random value run random value 1..100
 #lower chance if we're ahead of the rival bot
 execute if score @s racePosDisplay < #botRivalPosition value run scoreboard players remove #random value 40
-execute if score #skillCheck value matches ..1 if score #random value matches ..75 run return 0
+execute if score #skillCheck value matches ..1 if score #random value matches ..35 run return 0
 execute if score #skillCheck value matches 2 if score #random value matches ..25 run return 0
 execute if score #skillCheck value matches 3 if score #random value matches ..20 run return 0
 execute if score #skillCheck value matches 4 if score #random value matches ..15 run return 0

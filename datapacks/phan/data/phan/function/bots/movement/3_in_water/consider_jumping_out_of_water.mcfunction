@@ -5,3 +5,6 @@
 
 #still here? do it
 function phan:bots/movement/jump/normal_no_spam
+
+#don't jump again when we're in the air
+scoreboard players set @s[scores={airTime=..10}] airTime 11

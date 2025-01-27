@@ -12,8 +12,11 @@ execute if score #foundBestHuman value matches 2147483647 as @a[tag=doneWithIntr
 #foundBestHuman value matches 2147483647
 #means no human was found
 
-#are we ahead of the best ranked player? slow down slightly
-execute if score @s racePosDisplay < #foundBestHuman value unless score #foundBestHuman value matches 2147483647 run scoreboard players set @s botRubberbanding -1
+#are we behind the best ranked player and 5sec behind 1st? speed up slightly
+execute if score @s racePosDisplay > #foundBestHuman value if score @s timeBehind1st matches 100.. run scoreboard players set @s botRubberbanding 1
+
+#is there a human near us? no speeding up allowed
+execute if score @s botRubberbanding matches 1.. positioned ~-9 ~-9 ~-9 if entity @a[tag=playing,gamemode=adventure,dx=18,dy=18,dz=18] if score @s timeBehind1st matches ..159 run scoreboard players set @s botRubberbanding 0
 
 #are we ahead of the rival? slow down slightly
 execute if score @s racePosDisplay < #botRivalPosition value run scoreboard players set @s botRubberbanding -1

@@ -1,5 +1,8 @@
 #set #grandPrixActive before running!
 
+#clear all randomization cooldowns before starting
+function phan:phantom_racer/game_io/clear_randomization_cooldowns
+
 #start on round 1. this will be used to index this cup's track data
 scoreboard players set #grandPrixRound value 1
 #also find the max rounds count

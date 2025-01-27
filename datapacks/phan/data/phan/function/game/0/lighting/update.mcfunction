@@ -24,39 +24,42 @@ execute if score #dream1Completed value matches 1.. run setblock 199 2 107 lante
 execute if score #dream2Completed value matches ..0 run function phan:game/0/lighting/rim_lantern_off
 execute if score #dream2Completed value matches 1.. run function phan:game/0/lighting/rim_lantern_on
 
-scoreboard players set #test value 0
-execute if score #dream4Completed value matches 1.. if score #dream5Completed value matches 1.. run scoreboard players set #test value 1
-execute if score #test value matches 0 run setblock 213 2 115 gray_candle
-execute if score #test value matches 0 run setblock 213 2 121 gray_candle
-execute if score #test value matches 1 run setblock 213 2 115 lantern[hanging=false]
-execute if score #test value matches 1 run setblock 213 2 121 lantern[hanging=false]
-
 #stop doors from emitting light when they're not open
 #room 2
-execute if score #dream1Completed value matches ..0 run setblock 203 -1 105 smooth_quartz
-execute if score #dream1Completed value matches ..0 run setblock 206 -1 105 smooth_quartz
-execute if score #dream1Completed value matches ..0 run fill 204 -1 104 205 1 104 smooth_quartz
-execute if score #dream1Completed value matches 1.. run setblock 203 -1 105 smooth_quartz_stairs[facing=south]
-execute if score #dream1Completed value matches 1.. run setblock 206 -1 105 smooth_quartz_stairs[facing=south]
-execute if score #dream1Completed value matches 1.. run fill 204 -1 104 205 1 104 air
+scoreboard players operation #test value = #dream1Completed value
+execute if score #test value matches ..0 run setblock 203 -1 105 smooth_quartz
+execute if score #test value matches ..0 run setblock 206 -1 105 smooth_quartz
+execute if score #test value matches ..0 run fill 204 -1 104 205 1 104 smooth_quartz
+execute if score #test value matches 1.. run setblock 203 -1 105 smooth_quartz_stairs[facing=south]
+execute if score #test value matches 1.. run setblock 206 -1 105 smooth_quartz_stairs[facing=south]
+execute if score #test value matches 1.. run fill 204 -1 104 205 1 104 air
 #room 4
-execute if score #dream2Completed value matches ..0 run setblock 200 -7 131 blackstone
-execute if score #dream2Completed value matches ..0 run setblock 203 -7 131 blackstone
-execute if score #dream2Completed value matches ..0 run fill 201 -7 132 202 -6 132 blackstone
-execute if score #dream2Completed value matches 1.. run setblock 200 -7 131 blackstone_stairs[facing=north]
-execute if score #dream2Completed value matches 1.. run setblock 203 -7 131 blackstone_stairs[facing=north]
-execute if score #dream2Completed value matches 1.. run fill 201 -7 132 202 -6 132 air
+scoreboard players operation #test value = #dream2Completed value
+execute if score #test value matches ..0 run setblock 200 -7 131 blackstone
+execute if score #test value matches ..0 run setblock 203 -7 131 blackstone
+execute if score #test value matches ..0 run fill 201 -7 132 202 -6 132 blackstone
+execute if score #test value matches 1.. run setblock 200 -7 131 blackstone_stairs[facing=north]
+execute if score #test value matches 1.. run setblock 203 -7 131 blackstone_stairs[facing=north]
+execute if score #test value matches 1.. run fill 201 -7 132 202 -6 132 air
 #room 5
-execute if score #dream2Completed value matches ..0 run setblock 200 -7 105 blackstone
-execute if score #dream2Completed value matches ..0 run setblock 203 -7 105 blackstone
-execute if score #dream2Completed value matches ..0 run fill 201 -7 104 202 -6 104 blackstone
-execute if score #dream2Completed value matches 1.. run setblock 200 -7 105 blackstone_stairs[facing=south]
-execute if score #dream2Completed value matches 1.. run setblock 203 -7 105 blackstone_stairs[facing=south]
-execute if score #dream2Completed value matches 1.. run fill 201 -7 104 202 -6 104 air
+scoreboard players operation #test value = #dream2Completed value
+execute if score #test value matches ..0 run setblock 200 -7 105 blackstone
+execute if score #test value matches ..0 run setblock 203 -7 105 blackstone
+execute if score #test value matches ..0 run fill 201 -7 104 202 -6 104 blackstone
+execute if score #test value matches 1.. run setblock 200 -7 105 blackstone_stairs[facing=south]
+execute if score #test value matches 1.. run setblock 203 -7 105 blackstone_stairs[facing=south]
+execute if score #test value matches 1.. run fill 201 -7 104 202 -6 104 air
 #room 3
-execute if score #test value matches 0 run setblock 215 -1 116 smooth_quartz
-execute if score #test value matches 0 run setblock 215 -1 120 smooth_quartz
+scoreboard players set #test value 0
+execute if score #dream4Completed value matches 1.. if score #dream5Completed value matches 1.. run scoreboard players set #test value 1
 execute if score #test value matches 0 run fill 216 -1 117 216 2 119 smooth_quartz
 execute if score #test value matches 1 run setblock 215 -1 116 smooth_quartz_stairs[facing=west]
 execute if score #test value matches 1 run setblock 215 -1 120 smooth_quartz_stairs[facing=west]
 execute if score #test value matches 1 run fill 216 -1 117 216 2 119 air
+#extra decorations if room 3 unlocked
+execute if score #test value matches 0 run setblock 213 2 115 gray_candle
+execute if score #test value matches 0 run setblock 213 2 121 gray_candle
+execute if score #test value matches 1 run setblock 213 2 115 lantern[hanging=false]
+execute if score #test value matches 1 run setblock 213 2 121 lantern[hanging=false]
+execute if score #test value matches 0 run setblock 215 -1 116 smooth_quartz
+execute if score #test value matches 0 run setblock 215 -1 120 smooth_quartz

@@ -4,7 +4,8 @@
 execute if score @s carrotInput matches 1.. if score @s inputCooldownA matches ..0 if items entity @s weapon.mainhand *[custom_data~{slot0:1b}] anchored eyes run function phan:game/1/player/item/bite
 
 #heavy proj
-execute if score @s carrotInput matches 1.. if score @s inputCooldownB matches ..0 if entity @s[scores={energy=2..}] if items entity @s weapon.mainhand *[custom_data~{slot1:1b}] run function phan:game/1/player/item/heavy_projectile
+execute unless score #assist_items value matches 1 if score @s carrotInput matches 1.. if score @s inputCooldownB matches ..0 if entity @s[scores={energy=2..}] if items entity @s weapon.mainhand *[custom_data~{slot1:1b}] run function phan:game/1/player/item/heavy_projectile
+execute if score #assist_items value matches 1 if score @s carrotInput matches 1.. if score @s inputCooldownB matches ..0 if entity @s[scores={energy=1..}] if items entity @s weapon.mainhand *[custom_data~{slot1:1b}] run function phan:game/1/player/item/heavy_projectile
 execute if score @s carrotInput matches 1.. if score @s inputCooldownB matches ..0 if items entity @s weapon.mainhand *[custom_data~{slot1:1b}] run function phan:game/1/player/item/fail_projectile
 
 #respawn

@@ -24,11 +24,17 @@ execute if score @s energy matches ..2 run return 0
 #don't use during hitstun
 execute if score @s hitstun matches 1.. run return 0
 
-#don't use if we're airborne or gliding
-execute if score @s botMoveState matches 1..2 run return 0
+#don't use if we're airborne and not gliding
+execute if score @s botMoveState matches 1 run return 0
+
+#gliding is ok? might attach some string to that, later...
 
 #don't use if we're about to jump
 execute if score @s botJumpTimer matches -2147483648..2147483647 run return 0
+
+#use with no further questions asked if mandated
+execute if entity @s[tag=botUseBoostSoon] run return run function phan:bots/items/0_boost/use
+#=====
 
 #don't use if we're looking at something
 execute if score @s botTempRotTime matches 1.. run return 0

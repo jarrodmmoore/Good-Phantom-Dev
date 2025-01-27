@@ -23,6 +23,10 @@ scoreboard players set #wpOptimalX value -2147483648
 execute if score @s AIBC_spread_x matches -2147483648..2147483647 run scoreboard players operation #wpOptimalX value = @s AIBC_spread_x
 scoreboard players set #wpOptimalZ value -2147483648
 execute if score @s AIBC_spread_z matches -2147483648..2147483647 run scoreboard players operation #wpOptimalZ value = @s AIBC_spread_z
+#if either x or y is nonzero, replace the other with 0 if it's null
+execute if score #wpOptimalX value matches -2147483648 if score #wpOptimalZ value matches -2147483648..2147483647 run scoreboard players set #wpOptimalX value 0
+execute if score #wpOptimalZ value matches -2147483648 if score #wpOptimalX value matches -2147483648..2147483647 run scoreboard players set #wpOptimalZ value 0
+
 
 #find min and max possible coordinates we can hit at
 scoreboard players operation #wpMaxX value = #wpX value

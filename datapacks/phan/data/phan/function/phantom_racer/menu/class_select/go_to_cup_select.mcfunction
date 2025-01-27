@@ -3,6 +3,9 @@ scoreboard players set #tvMenuPage value 3
 scoreboard players set #tvAnimation value 0
 $scoreboard players set #grandPrixClass value $(class)
 
+#by default, random cup uses "any" gamemode setting
+function phan:phantom_racer/menu/cup_select_random/set_mode_any
+
 #sound
 function phan:phantom_racer/menu/click_sound_effect
 execute if score #grandPrixClass value matches 5 run playsound minecraft:entity.vex.charge master @a ~ ~ ~ 1 0.75

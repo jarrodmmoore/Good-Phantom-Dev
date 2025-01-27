@@ -1,7 +1,7 @@
 #set think cooldown
 scoreboard players set #random value 0
-execute if score @s botSkill matches ..1 store result score #random value run random value 80..190
-execute if score @s botSkill matches 2 store result score #random value run random value 40..120
+execute if score @s botSkill matches ..1 store result score #random value run random value 60..110
+execute if score @s botSkill matches 2 store result score #random value run random value 35..90
 execute if score @s botSkill matches 3 store result score #random value run random value 20..70
 execute if score @s botSkill matches 4 store result score #random value run random value 16..25
 execute if score @s botSkill matches 5.. store result score #random value run random value 1..25

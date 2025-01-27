@@ -76,9 +76,10 @@ execute positioned 246 -9 109 positioned ~2 ~ ~ run summon interaction ~ ~ ~ {Ta
 #lights
 execute positioned 236 -5 98 positioned ~.5 ~.3 ~.5 run summon interaction ~ ~ ~ {Tags:["lobbyProp"],width:6.2f,height:1.0f}
 execute positioned 236 -5 92 positioned ~.5 ~.3 ~.5 run summon interaction ~ ~ ~ {Tags:["lobbyProp"],width:6.2f,height:1.0f}
-#rhs
+#phantom forest
 execute positioned 241 -9 95 positioned ~ ~ ~.5 run summon interaction ~ ~ ~ {Tags:["lobbyProp"],width:2.2f,height:3.1f}
-#lhs
+execute positioned 230 -9 99 positioned ~-.1 ~-.3 ~ run summon interaction ~ ~ ~ {Tags:["lobbyProp"],width:3.6f,height:2.0f}
+#???
 execute positioned 232 -9 95 positioned ~ ~ ~.5 run summon interaction ~ ~ ~ {Tags:["lobbyProp"],width:2.2f,height:3.1f}
 
 #custom levels hallway

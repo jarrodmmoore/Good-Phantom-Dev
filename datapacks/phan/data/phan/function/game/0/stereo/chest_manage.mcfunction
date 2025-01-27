@@ -20,7 +20,8 @@ item replace block ~ ~ ~ container.21 with air
 item replace block ~ ~ ~ container.23 with air
 item replace block ~ ~ ~ container.24 with air
 item replace block ~ ~ ~ container.25 with air
-item replace block ~ ~ ~ container.26 with air
+#hint sheet in slot 26
+item replace block ~ ~ ~ container.26 with red_dye[item_model="paper",custom_name='{"translate":"gp.lobby.disc_hint","italic":false,"color":"white"}',lore=['{"translate":"gp.lobby.disc_hint_1","color":"white","italic":true}','{"translate":"gp.lobby.disc_hint_2","color":"white","italic":true}'],custom_data={musicDiscSelect:1b}]
 
 #music note particles while we're in this function...
 execute if score #lobbyJukebox value matches 1 if score #2sec value matches 0 positioned 200 -5 135 run particle note ~ ~ ~ 0 0 0 1 1 force

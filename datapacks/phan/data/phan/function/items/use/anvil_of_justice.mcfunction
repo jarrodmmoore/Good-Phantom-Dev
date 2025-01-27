@@ -26,6 +26,11 @@ tag @s remove dontgethit
 tag @a[tag=anvilWillHit] remove anvilWillHit
 execute if score #botsEnabled value matches 1.. run tag @e[type=zombie,tag=anvilWillHit] remove anvilWillHit
 
+#secretly clear item from bot inventories to curb spam
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={botSkill=..5}] botHasItem11 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botSkill=..5}] botHasItem11 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botHoldingItem=11}] botHoldingItem 0
+
 #cooldown
 scoreboard players reset @s carrotInput
 scoreboard players set @s inputCooldown 10

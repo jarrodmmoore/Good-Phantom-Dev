@@ -4,10 +4,19 @@
 #send players to the lobby
 #the location we send to is based on the last level that was played
 
+#don't send players into a locked room, please
+execute if score #math value matches 2 if score #dream2Opened value matches 0 run scoreboard players set #math value 0
+execute if score #math value matches 3 if score #dream3OpenedA value matches 0 run scoreboard players set #math value 0
+execute if score #math value matches 3 if score #dream3OpenedB value matches 0 run scoreboard players set #math value 0
+execute if score #math value matches 4 if score #dream4Opened value matches 0 run scoreboard players set #math value 0
+execute if score #math value matches 5 if score #dream5Opened value matches 0 run scoreboard players set #math value 0
+execute if score #math value matches 6..10 if score #dreamPOpened value matches 0 run scoreboard players set #math value -1
+execute if score #math value matches 1001..1008 if score #dreamCOpened value matches 0 run scoreboard players set #math value -1
+
 #fallback, center of cabin
 execute unless score #math value matches -1 unless score #math value matches 1..10 unless score #math value matches 1001..1008 in overworld as @a[tag=sendMe] positioned 198 -7 118 rotated -90 0 run function phan:common/varied_teleport
 #den (used in grand prix or free play)
-execute if score #math value matches -1 in overworld as @a[tag=sendMe] positioned 232 -9 108 rotated 290 0 run function phan:common/varied_teleport
+execute if score #math value matches -1 in overworld as @a[tag=sendMe] positioned 232 -9 129 rotated 250 0 run function phan:common/varied_teleport
 #stock dreams
 execute if score #math value matches 1 in overworld as @a[tag=sendMe] positioned 206 -1 134 rotated 0 0 run function phan:common/varied_teleport
 execute if score #math value matches 2 in overworld as @a[tag=sendMe] positioned 206 -1 102 rotated 180 0 run function phan:common/varied_teleport

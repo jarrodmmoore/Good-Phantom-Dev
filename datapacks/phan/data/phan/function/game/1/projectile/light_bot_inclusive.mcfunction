@@ -13,8 +13,8 @@ execute anchored eyes unless block ^ ^ ^0.4 #phan:not_solid run scoreboard playe
 execute anchored eyes unless block ^ ^ ^0.8 #phan:not_solid run scoreboard players set #hit value 1
 execute anchored eyes unless block ^ ^ ^1.2 #phan:not_solid run scoreboard players set #hit value 1
 execute anchored eyes unless block ^ ^ ^1.6 #phan:not_solid run scoreboard players set #hit value 1
-execute if block ~ -63 ~ #phan:area_check unless score #gameState value matches 0 run scoreboard players set #hit value 1
-execute if block ~ 1 ~ #phan:area_check unless score #gameState value matches 0 run scoreboard players set #hit value 1
+execute if score #checkLoadHeight value matches -64 if block ~ -63 ~ #phan:area_check unless score #gameState value matches 0 run scoreboard players set #hit value 1
+execute if score #checkLoadHeight value matches 0 if block ~ 1 ~ #phan:area_check unless score #gameState value matches 0 run scoreboard players set #hit value 1
 #certain spots where we don't want projectiles to pass through
 execute anchored eyes if block ~ -64 ~ structure_void if block ^ ^ ^ barrier run scoreboard players set #hit value 1
 execute anchored eyes unless loaded ^ ^ ^3 run scoreboard players set #hit value 1

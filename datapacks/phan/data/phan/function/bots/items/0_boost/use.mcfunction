@@ -18,3 +18,6 @@ execute if entity @s[scores={botSkill=..2,botItemThinkTime=..14}] run scoreboard
 execute if entity @s[scores={botSkill=3,botItemThinkTime=..10}] run scoreboard players set @s botItemThinkTime 11
 execute if entity @s[scores={botSkill=4,botItemThinkTime=..6}] run scoreboard players set @s botItemThinkTime 7
 execute if entity @s[scores={botSkill=5..,botItemThinkTime=..1}] run scoreboard players set @s botItemThinkTime 2
+
+#clean-up if tag was mandated
+tag @s[tag=botUseBoostSoon] remove botUseBoostSoon

@@ -1,1 +1,1 @@
-$tp @s ~ ~ ~ $(target_yaw) ~
+$rotate @s $(target_yaw) ~

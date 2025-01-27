@@ -34,6 +34,8 @@ execute if score #clearCacheProgress value matches 18 run scoreboard players res
 execute if score #clearCacheProgress value matches 19 run scoreboard players reset * AIBC_dir4
 execute if score #clearCacheProgress value matches 20 run scoreboard players reset * AIBC_event
 execute if score #clearCacheProgress value matches 21 run scoreboard players reset * AIBC_modifier
+execute if score #clearCacheProgress value matches 22 run scoreboard players reset * AIBC_spread_x
+execute if score #clearCacheProgress value matches 23 run scoreboard players reset * AIBC_spread_z
 
 #done once everything is cleared
-execute if score #clearCacheProgress value matches 22.. run scoreboard players set #clearCacheProgress value 0
+execute if score #clearCacheProgress value matches 24.. run scoreboard players set #clearCacheProgress value 0

@@ -8,8 +8,8 @@ execute if score #vGameType value matches 2 run return 0
 #don't speed up in 1st, ever
 execute if score @s racePosDisplay matches ..1 run return 0
 
-#also don't speed up if within 3.5sec of 1st
-execute if score @s timeBehind1st matches ..70 run return 0
+#also don't speed up if within 2sec of 1st
+execute if score @s timeBehind1st matches ..40 run return 0
 #=====
 
 #we need to know what position the best ranked player is

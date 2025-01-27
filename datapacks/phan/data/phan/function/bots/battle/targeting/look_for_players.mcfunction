@@ -3,9 +3,9 @@ execute store result score #random value run random value 1..100
 execute if entity @s[scores={botSkill=4..,shieldTime=20..}] run scoreboard players add #random value 30
 execute if entity @s[scores={botSkill=4..,energy=..1}] run scoreboard players remove #random value 25
 execute if entity @s[scores={botSkill=4..,botHasItem12=1..}] run scoreboard players add #random value 35
-execute if score @s botSkill matches ..1 if score #random value matches ..45 run return 0
-execute if score @s botSkill matches 2 if score #random value matches ..30 run return 0
-execute if score @s botSkill matches 3 if score #random value matches ..25 run return 0
+execute if score @s botSkill matches ..1 if score #random value matches ..30 run return 0
+execute if score @s botSkill matches 2 if score #random value matches ..27 run return 0
+execute if score @s botSkill matches 3 if score #random value matches ..24 run return 0
 execute if score @s botSkill matches 4 if score #random value matches ..21 run return 0
 execute if score @s botSkill matches 5 if score #random value matches ..18 run return 0
 execute if score @s botSkill matches 6.. if score #random value matches ..15 run return 0
@@ -19,8 +19,8 @@ scoreboard players set #targetExists value 0
 
 #check on players who are roughly in front of us
 tag @s add self_l
-execute if score @s botSkill matches ..2 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..8] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
-execute if score @s botSkill matches 3 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..10] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
+execute if score @s botSkill matches ..2 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..10] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
+execute if score @s botSkill matches 3 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..11] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
 execute if score @s botSkill matches 4 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..12,scores={shieldTime=..0}] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
 execute if score @s botSkill matches 5 positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..14,scores={shieldTime=..0}] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start
 execute if score @s botSkill matches 6.. positioned ~ ~1.8 ~ positioned ^ ^ ^5 as @e[tag=playing,tag=!self_l,distance=..15,scores={shieldTime=..0}] positioned ^ ^ ^-5 facing entity @s feet run function phan:bots/battle/targeting/los_check_generic_start

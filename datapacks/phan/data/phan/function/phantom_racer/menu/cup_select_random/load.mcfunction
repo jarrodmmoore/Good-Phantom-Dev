@@ -8,3 +8,7 @@ scoreboard players set #tvLastOperation value 0
 #tvMenuState7 will store our round count
 scoreboard players set #tvMenuState7 value 5
 scoreboard players set #tvMenuState8 value -99
+
+#tvMenuState9 will store our mode
+scoreboard players set #tvMenuState9 value 0
+scoreboard players set #tvMenuState10 value 0

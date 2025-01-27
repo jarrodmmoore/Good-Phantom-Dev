@@ -18,6 +18,11 @@ execute anchored eyes run particle instant_effect ^ ^ ^4 0.2 0.2 0.2 0.07 10 for
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.lightning_bolt.thunder master @s ~ 100000 ~ 100000 0.75 1
 effect give @a[tag=doneWithIntro] minecraft:night_vision 1 201 true
 
+#secretly clear item from bot inventories to curb spam
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={botSkill=..5}] botHasItem9 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botSkill=..5}] botHasItem9 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botHoldingItem=9}] botHoldingItem 0
+
 #tag cleanup
 tag @s remove dontgethit
 

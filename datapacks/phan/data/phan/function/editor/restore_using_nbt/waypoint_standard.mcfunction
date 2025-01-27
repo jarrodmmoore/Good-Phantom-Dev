@@ -11,6 +11,8 @@ execute store result score @s AIBC_dir3 run data get entity @s data.WaypointData
 execute store result score @s AIBC_dir4 run data get entity @s data.WaypointData[4] 1
 execute store result score @s AIBC_event run data get entity @s data.WaypointData[5] 1
 execute store result score @s AIBC_modifier run data get entity @s data.WaypointData[6] 1
+execute store result score @s AIBC_spread_x run data get entity @s data.WaypointData[7] 1
+execute store result score @s AIBC_spread_z run data get entity @s data.WaypointData[8] 1
 
 #null any 0s
 execute if score @s AIBC_dir1 matches 0 run scoreboard players reset @s AIBC_dir1
@@ -19,3 +21,5 @@ execute if score @s AIBC_dir3 matches 0 run scoreboard players reset @s AIBC_dir
 execute if score @s AIBC_dir4 matches 0 run scoreboard players reset @s AIBC_dir4
 execute if score @s AIBC_event matches 0 run scoreboard players reset @s AIBC_event
 execute if score @s AIBC_modifier matches 0 run scoreboard players reset @s AIBC_modifier
+execute if score @s AIBC_spread_x matches 0 run scoreboard players reset @s AIBC_spread_x
+execute if score @s AIBC_spread_z matches 0 run scoreboard players reset @s AIBC_spread_z

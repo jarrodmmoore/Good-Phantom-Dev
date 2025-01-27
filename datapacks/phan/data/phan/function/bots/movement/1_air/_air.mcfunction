@@ -1,12 +1,6 @@
 #exit out if we're not moving
 execute if score #botWantsToMove value matches 0 run return 0
 
-#exit out if we want to transition to flight
-execute if function phan:bots/movement/check_for_vehicle run return run tag @s remove botFlyWhenInAir
-execute if entity @s[tag=botFlyWhenInAir,scores={airTime=2..,botVaultUpwardTime=1..}] run return run function phan:bots/movement/1_air/transition_to_gliding_wait_upward
-execute if entity @s[tag=botFlyWhenInAir,scores={airTime=12..}] run return run function phan:bots/movement/1_air/transition_to_gliding_wait
-execute if score @s fallFlying matches 1 run return 0
-
 #=====
 
 #override coordinates if we have a temporary target
@@ -28,6 +22,13 @@ execute if score @s botTempRotTime matches 1.. run function phan:bots/movement/f
 
 #kill projected target
 kill 0001e453-0000-0000-0000-000000000001
+
+#exit out if we want to transition to flight
+execute if function phan:bots/movement/check_for_vehicle run return run tag @s remove botFlyWhenInAir
+execute if entity @s[tag=botFlyWhenInAir,scores={airTime=2..,botVaultUpwardTime=1..}] at @s run return run function phan:bots/movement/1_air/transition_to_gliding_wait_upward
+execute if entity @s[tag=botFlyWhenInAir,scores={airTime=12..}] at @s run return run function phan:bots/movement/1_air/transition_to_gliding_wait
+execute if score @s fallFlying matches 1 run return 0
+#=====
 
 #perform pad jump?
 execute if entity @s[tag=botPadJumpWhenMidAir,scores={airTime=12..}] run function phan:bots/movement/1_air/perform_pad_jump

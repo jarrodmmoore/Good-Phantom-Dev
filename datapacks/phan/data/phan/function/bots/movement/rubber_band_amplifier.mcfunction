@@ -4,9 +4,9 @@ execute if score @s botRubberbanding matches -3 run scoreboard players set #mult
 execute if score @s botRubberbanding matches -2 run scoreboard players set #multiplier value 84
 execute if score @s botRubberbanding matches -1 run scoreboard players set #multiplier value 92
 
-execute if score @s botRubberbanding matches 1 run scoreboard players set #multiplier value 105
-execute if score @s botRubberbanding matches 2 run scoreboard players set #multiplier value 110
-execute if score @s botRubberbanding matches 3 run scoreboard players set #multiplier value 115
+execute if score @s botRubberbanding matches 1 run scoreboard players set #multiplier value 108
+execute if score @s botRubberbanding matches 2 run scoreboard players set #multiplier value 116
+execute if score @s botRubberbanding matches 3 run scoreboard players set #multiplier value 124
 
 #apply multiplier
 scoreboard players operation #coord_x2 value *= #multiplier value

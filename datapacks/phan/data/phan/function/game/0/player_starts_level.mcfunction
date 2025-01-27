@@ -16,3 +16,4 @@ execute if entity @s[type=player] if score #teamSelectTest value matches 2.. run
 
 #either start the game or choose mode, depending if there are options available
 function phan:game/2/_2_init
+scoreboard players set #tvRememberPage value 0

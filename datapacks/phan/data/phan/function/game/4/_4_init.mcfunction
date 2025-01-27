@@ -3,6 +3,7 @@ scoreboard players set #lastModePlayed value 4
 
 #grand prix mode: quick-- look up what level we're supposed to be playing and overwrite whatever's in memory!
 execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/game_io/gp_get_round_data
+execute if score #grandPrixActive value matches 1.. run scoreboard players operation #freePlayAct value = #vAct value
 
 #load level data
 function phan:level_manager/load/cache_active_level_data

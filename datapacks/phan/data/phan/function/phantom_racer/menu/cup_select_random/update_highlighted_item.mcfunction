@@ -5,8 +5,9 @@ execute as @e[type=item_display,tag=tvTextHighlight,distance=..10] run function 
 
 #highlight the new thing
 execute if score #tvMenuState5 value matches 0 as @e[type=text_display,tag=tvRandomPanel1,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight
-execute if score #tvMenuState5 value matches 1 as @e[type=text_display,tag=tvRandomPanel2,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight
-execute if score #tvMenuState5 value matches 2 as @e[type=text_display,tag=tvRandomPanel3,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight_red
+execute if score #tvMenuState5 value matches 1 as @e[type=text_display,tag=tvRandomPanel4,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight
+execute if score #tvMenuState5 value matches 2 as @e[type=text_display,tag=tvRandomPanel2,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight
+execute if score #tvMenuState5 value matches 3 as @e[type=text_display,tag=tvRandomPanel3,distance=..10] on passengers run function phan:phantom_racer/menu/maximize_text_highlight_red
 
 #sync up
 scoreboard players operation #tvMenuState6 value = #tvMenuState5 value

@@ -28,6 +28,7 @@ execute if entity @s[tag=!AIBC_hookLeft,tag=AIBC_hookRight] run scoreboard playe
 execute if entity @s[tag=AIBC_hookLeft,tag=AIBC_hookRight] run scoreboard players set #waypointHook value 3
 execute store result score #waypointEventSkill value run execute if entity @s[tag=eventBadSkill]
 execute if entity @s[tag=eventHighSkill] run scoreboard players set #waypointEventSkill value 2
+execute store result score #waypointMidAir value run execute if entity @s[tag=AIBC_midAir]
 
 #also check if we're sitting on a jump boost block
 execute at @s store result score #waypointJumpBoost value run execute if block ~ ~-1 ~ #phan:jump_short
