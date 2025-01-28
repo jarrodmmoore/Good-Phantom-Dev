@@ -10,5 +10,9 @@ $execute if entity @s[tag=ai] run function phan:bots/bot_generic_teleport {x:$(c
 #but some custom track creator could maybe use this statistic for something? if they have a phd in Good Phantom, the minecraft java map
 scoreboard players add @s[type=player] teleportersUsed 1
 
+#feedback
 execute at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1.4 1
 execute at @s run particle falling_dust{block_state:"magenta_concrete"} ~ ~1 ~ 0.3 0.5 0.3 0 20
+
+#battle mode: get invulnerability for a brief moment
+execute if score #vGameType value matches 2 run scoreboard players set @s spawnInvulnerability 15

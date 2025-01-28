@@ -31,5 +31,5 @@ execute if score @s timeBehind1st matches 160.. if score @s racePosDisplay < #bo
 execute if score @s botRubberbanding matches 1.. positioned ~-9 ~-9 ~-9 if entity @a[tag=playing,gamemode=adventure,dx=18,dy=18,dz=18] if score @s timeBehind1st matches ..60 run scoreboard players set @s botRubberbanding 0
 execute if score @s botRubberbanding matches 2.. positioned ~-9 ~-9 ~-9 if entity @a[tag=playing,gamemode=adventure,dx=18,dy=18,dz=18] if score @s timeBehind1st matches 61.. run scoreboard players set @s botRubberbanding 1
 
-#if there are multiple mega-tryhard bots, the rival one goes even faster
-execute if score #botHighestSkill value matches 6 if score #botsWithMaxSkill value matches 2.. if entity @s[tag=botRival,scores={botRubberbanding=..2}] run scoreboard players add @s botRubberbanding 1
+#if we're in an ultranightmare grand prix, the rival one goes even faster
+execute if score #grandPrixClass value matches 6.. if entity @s[tag=botRival,scores={botRubberbanding=..2}] run scoreboard players add @s botRubberbanding 1
