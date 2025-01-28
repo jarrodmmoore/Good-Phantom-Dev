@@ -19,12 +19,12 @@ execute if score #clearCacheProgress value matches 11 run scoreboard players res
 execute if score #clearCacheProgress value matches 11 run scoreboard players reset * checkMaxZ
 
 #checkpoint visual lines
-execute if score #clearCacheProgress value matches 12 run scoreboard players reset * editNode
-execute if score #clearCacheProgress value matches 12 run scoreboard players reset * editNode
-execute if score #clearCacheProgress value matches 13 run scoreboard players reset * editNode
-execute if score #clearCacheProgress value matches 13 run scoreboard players reset * editNode
-execute if score #clearCacheProgress value matches 14 run scoreboard players reset * editNode
-execute if score #clearCacheProgress value matches 14 run scoreboard players reset * editNode
+execute if score #clearCacheProgress value matches 12 run scoreboard players reset * visualXoffset
+execute if score #clearCacheProgress value matches 12 run scoreboard players reset * visualYoffset
+execute if score #clearCacheProgress value matches 13 run scoreboard players reset * visualZoffset
+execute if score #clearCacheProgress value matches 13 run scoreboard players reset * visualYaw
+execute if score #clearCacheProgress value matches 14 run scoreboard players reset * visualPitch
+execute if score #clearCacheProgress value matches 14 run scoreboard players reset * visualLength
 
 #bot waypoints
 execute if score #clearCacheProgress value matches 15 run scoreboard players reset * AIBC_id
@@ -38,4 +38,4 @@ execute if score #clearCacheProgress value matches 22 run scoreboard players res
 execute if score #clearCacheProgress value matches 23 run scoreboard players reset * AIBC_spread_z
 
 #done once everything is cleared
-execute if score #clearCacheProgress value matches 24.. run scoreboard players set #clearCacheProgress value 0
+execute if score #clearCacheProgress value matches 30.. run scoreboard players set #clearCacheProgress value 0

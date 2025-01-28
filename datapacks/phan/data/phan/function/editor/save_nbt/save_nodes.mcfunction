@@ -1,2 +1,2 @@
 scoreboard players set #save_nbt_tick value 0
-execute as @e[type=marker,tag=node] if score @s editNode matches -2147483648..2147483647 unless score @s editNode matches 0 run function phan:editor/save_nbt/node_standard
+execute as @e[type=marker,tag=node] if score @s editNode matches -2147483648..2147483647 unless score @s editNode matches 0 at @s if loaded ~ ~ ~ run function phan:editor/save_nbt/node_standard
