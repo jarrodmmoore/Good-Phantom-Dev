@@ -1,6 +1,9 @@
 #don't advance until we're done watching
 scoreboard players set #gameTime value 35
 
+#hold the grand prix round timer in place while we're waiting
+execute if score #grandPrixRoundAnimation value matches 30..35 run scoreboard players set #grandPrixRoundAnimation value 30
+
 #slide sequence
 scoreboard players add @s tutorialProgress 1
 

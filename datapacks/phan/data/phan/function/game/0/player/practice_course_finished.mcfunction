@@ -5,6 +5,9 @@ execute if score @s addPointsLater matches 1.. run scoreboard players set @s add
 #advancement for finishing practice course with 100k points
 execute if score #assist_enabled_scoreattack value matches 0 run advancement grant @s[scores={scoreCurrent=100000..}] only phan:score_attack/practice_makes_perfect
 
+#we won't need to show this player the tutorial slideshow when they enter a dream. they know what's up.
+scoreboard players set @s tutorialProgress 1000
+
 #clear inv
 clear @s
 scoreboard players set @s energy 0

@@ -23,3 +23,4 @@ execute if score @s AIBC_event matches 0 run scoreboard players reset @s AIBC_ev
 execute if score @s AIBC_modifier matches 0 run scoreboard players reset @s AIBC_modifier
 execute if score @s AIBC_spread_x matches 0 run scoreboard players reset @s AIBC_spread_x
 execute if score @s AIBC_spread_z matches 0 run scoreboard players reset @s AIBC_spread_z
+

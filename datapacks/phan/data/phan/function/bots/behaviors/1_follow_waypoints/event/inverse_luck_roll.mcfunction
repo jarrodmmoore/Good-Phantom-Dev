@@ -1,5 +1,5 @@
 #roll a random number. luck boosts the number
-execute store result score #random value run random value 0..6
+execute store result score #random value run random value 0..8
 scoreboard players operation #random value += @s itemLuck
 
 #roll a second number. bot skill boosts the number

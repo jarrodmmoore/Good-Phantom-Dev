@@ -1,3 +1,7 @@
+#kick out if not loaded
+execute unless loaded ~ ~ ~ run return 0
+#=====
+
 execute at @s run particle heart ~ ~.5 ~ 0 0 0 1 1
 
 #this will also update rotation

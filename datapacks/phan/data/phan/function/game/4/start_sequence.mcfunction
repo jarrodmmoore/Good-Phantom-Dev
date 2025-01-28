@@ -12,6 +12,10 @@ execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run 
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run function phan:levels/_index_teleport_versus
 execute if score #gameTime value matches ..80 if score #5Hz value matches 1 run effect give @a[tag=doneWithIntro] slow_falling 4 1 true
 
+#halt sequence on subsequent rounds to wait for input
+execute if score #gameTime value matches 30..34 if score #grandPrixActive value matches 1.. if score #grandPrixRound value matches 2.. run function phan:game/4/start_sequence_wait_for_continue
+execute if score #gameTime value matches 30..34 if score #grandPrixActive value matches 0 if score #freePlay value matches 0 if score #vAct value matches 2.. run function phan:game/4/start_sequence_wait_for_continue
+
 #halt the sequence if we're watching the tutorial
 execute if score #gameTime value matches 35..39 unless score #botsOnly value matches 1 as @a[tag=doneWithIntro,scores={tutorialProgress=..999}] run function phan:game/4/tutorial_slideshow
 

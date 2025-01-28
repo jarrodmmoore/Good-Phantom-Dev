@@ -11,10 +11,12 @@ execute store result score #yVelocity value run data get entity @s Motion[1] 100
 execute store result score #zVelocity value run data get entity @s Motion[2] 100000
 
 #add onto initial velocity somewhat
-data modify storage phan:coords strength set value "0.0015"
+data modify storage phan:coords strength set value "0.0005"
+execute if score @s botSkill matches 2 run data modify storage phan:coords strength set value "0.001"
+execute if score @s botSkill matches 3 run data modify storage phan:coords strength set value "0.0015"
 execute if score @s botSkill matches 4 run data modify storage phan:coords strength set value "0.0020"
 execute if score @s botSkill matches 5 run data modify storage phan:coords strength set value "0.0025"
-execute if score @s botSkill matches 6 run data modify storage phan:coords strength set value "0.0030"
+execute if score @s botSkill matches 6.. run data modify storage phan:coords strength set value "0.0030"
 
 #summon armor stand and ride it
 summon armor_stand ~ ~ ~ {Tags:["botElytra","setMe"],FallFlying:1b,Silent:1b,Invulnerable:1b,Small:0b,Invisible:1b,NoBasePlate:1b,attributes:[{id:"minecraft:scale",base:0.0625}],DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,NoBasePlate:1b,Tags:["setMe2","botElytraHeightFix"]}],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:glider":{}}}]}

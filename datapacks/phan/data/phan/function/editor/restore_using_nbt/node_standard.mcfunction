@@ -18,3 +18,7 @@ execute if data entity @s data.TriggerVolume run function phan:editor/restore_us
 
 #checkpoint visualization
 execute if data entity @s data.VisualLine run function phan:editor/restore_using_nbt/node_visual_line
+
+#repair tags on self
+function phan:editor/panel/repair_tags_go
+#this adds some unfortunate overhead, but this turned out to be necessary to avoid a bug

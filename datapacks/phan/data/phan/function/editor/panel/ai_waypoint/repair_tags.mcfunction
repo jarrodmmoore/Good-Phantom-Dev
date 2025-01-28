@@ -4,6 +4,10 @@
 #tag @s remove AIBC_midAir
 #execute at @s if block ~ ~-1 ~ #phan:not_solid_not_water if block ~ ~-2 ~ #phan:not_solid_not_water run tag @s add AIBC_midAir
 
+#kick out if not loaded
+execute unless loaded ~ ~ ~ run return 0
+#=====
+
 #fixed messed up spread
 execute if score @s AIBC_spread_x matches 100.. run scoreboard players set @s AIBC_spread_x 0
 execute if score @s AIBC_spread_x matches ..-100 run scoreboard players set @s AIBC_spread_x 0
