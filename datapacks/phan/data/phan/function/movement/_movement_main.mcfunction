@@ -16,7 +16,7 @@ scoreboard players operation @s trans_yaw = @s rot_yaw
 scoreboard players operation @s trans_yaw -= @s rot_yaw2
 #not idle if our coords changed
 scoreboard players set #test value 0
-execute if score @s trans_x matches 0 if score @s trans_y matches 0 if score @s trans_z matches 0 if score @s trans_yaw matches 0 unless score @s carrotInput matches 1 run scoreboard players set #test value 1
+execute if score @s trans_x matches 0 if score @s trans_y matches 0 if score @s trans_z matches 0 if score @s trans_yaw matches 0 if score @s inputCooldown matches ..0 unless score @s carrotInput matches 1 run scoreboard players set #test value 1
 execute if score #test value matches 0 run scoreboard players set @s idleTime 0
 execute if score #test value matches 1 run scoreboard players add @s idleTime 1
 #slow down proportionally to how fast we move our view

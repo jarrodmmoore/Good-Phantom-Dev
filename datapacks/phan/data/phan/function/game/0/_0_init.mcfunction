@@ -147,6 +147,9 @@ scoreboard players set @a shieldTime 0
 scoreboard players set @a[scores={strengthTime=3..}] strengthTime 2
 scoreboard players set @a energy 0
 
+#all players are very close to being considered idle after lobby boots up
+scoreboard players set @a idleTime 3400
+
 #item stuff
 scoreboard players reset @a elytraTimer
 
@@ -162,6 +165,7 @@ function phan:game/0/summon_props
 function phan:movement/reset_speeds
 effect clear @a[tag=doneWithIntro] blindness
 effect give @a[tag=doneWithIntro] blindness 2 50 true
+scoreboard players set #forceSpecAdmin value 0
 gamemode adventure @a[tag=doneWithIntro]
 
 #send players to the lobby

@@ -1,5 +1,5 @@
-#fail-safe: we will eventually exit this mode and be a normal spectator
-scoreboard players add @s specDoneLoading 1
+#fail-safe in non-portal race mode: we will eventually exit this mode and be a normal spectator
+execute unless score #gameState value matches 4 run scoreboard players add @s specDoneLoading 1
 
 #blindness
 effect give @s blindness 5 1 true

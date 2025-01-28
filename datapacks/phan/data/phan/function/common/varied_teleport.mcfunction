@@ -1,6 +1,9 @@
 scoreboard players add #varyTeleport value 1
 execute if score #varyTeleport value matches 50.. run scoreboard players set #varyTeleport value 1
 
+#give us input cooldown so the idle detection system doesn't think we moved because of a simple teleport
+scoreboard players set @s[type=player,scores={inputCooldown=..9}] inputCooldown 10
+
 #nobody else online? always tp to center
 tag @s add i_am_i
 execute unless entity @a[tag=!i_am_i] run scoreboard players set #varyTeleport value 1
