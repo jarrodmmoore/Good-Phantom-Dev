@@ -54,7 +54,7 @@ execute if score #botHighestSkill value matches 1 run scoreboard players set #te
 execute if score #botHighestSkill value matches 2 if score #humanPointsAhead value matches ..-1 run scoreboard players set #test value 0
 execute if score #botHighestSkill value matches 3 if score #humanPointsAhead value matches ..-3 run scoreboard players set #test value 0
 execute if score #botHighestSkill value matches 4 if score #humanPointsAhead value matches ..-5 run scoreboard players set #test value 0
-execute if score #botHighestSkill value matches 5 if score #humanPointsAhead value matches ..-9 run scoreboard players set #test value 0
+execute if score #botHighestSkill value matches 5 if score #humanPointsAhead value matches ..-7 run scoreboard players set #test value 0
 
 #low bot count: don't go beyond max level if we're too far behind
 execute if score #botCount value matches ..5 if score #botHighestSkill value matches ..4 if score #humanPointsAhead value matches ..-3 run scoreboard players set #test value 0

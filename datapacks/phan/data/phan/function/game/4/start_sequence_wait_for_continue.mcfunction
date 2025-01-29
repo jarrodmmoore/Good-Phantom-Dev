@@ -13,6 +13,7 @@ execute if score #grandPrixRoundAnimation value matches 60..65 run scoreboard pl
 #tell players to input after 2sec delay
 execute if score #321go value matches 110.. if score #2sec value matches ..19 run title @a[tag=doneWithIntro] actionbar ["",{"text":">  "},{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]},{"text":"  <"}]
 execute if score #321go value matches 110.. if score #2sec value matches 20.. run title @a[tag=doneWithIntro] actionbar ["",{"text":"> ","color":"aqua"},{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]},{"text":" <","color":"aqua"}]
+execute if score #321go value matches 110.. run scoreboard players set @a[tag=doneWithIntro] actionbarDelay 5
 
 #players try to make input to continue
 execute if score #321go value matches 110.. as @a[tag=doneWithIntro,scores={carrotInput=1..,inputCooldown=..0}] run function phan:game/4/start_sequence_try_continue
