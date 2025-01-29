@@ -1,3 +1,19 @@
+#kick out if not loaded, or relevant scores aren't loaded
+scoreboard players set #test5 value 0
+execute at @s if loaded ~ ~ ~ run scoreboard players add #test5 value 1
+execute if score @s AIBC_id matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_dir1 matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_dir2 matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_dir3 matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_dir4 matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_event matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_modifier matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_spread_x matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute if score @s AIBC_spread_z matches -2147483648..2147483647 run scoreboard players add #test5 value 1
+execute unless score #clearCacheProgress value matches 1.. run scoreboard players add #test5 value 1
+execute unless score #test5 value matches 11 run return 0
+#=====
+
 #execute at @s run particle heart ~ ~.5 ~ 0 0 0 1 1
 
 #re-calculate if we're mid-air
