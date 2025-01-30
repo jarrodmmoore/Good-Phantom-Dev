@@ -6,9 +6,9 @@ execute if entity @s[scores={botSkill=4..,racePosDisplay=2}] if score @s botFear
 
 #=====
 
-#don't anvil 1st place if they're a high difficulty rival bot
+#don't anvil 1st place if they're a high difficulty rival bot (unless they're leading by more than 5 seconds)
 tag @s add thinkSelf
-execute if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botSkill=5..,racePosDisplay=1}] run return run tag @s remove thinkSelf
+execute if score #vGameType value matches 1 if entity @e[tag=botRival,type=zombie,tag=!thinkSelf,scores={botSkill=5..,racePosDisplay=1}] unless score #1stPlaceLeadTime value matches 100.. run return run tag @s remove thinkSelf
 tag @s remove thinkSelf
 
 #hard difficulty and below: don't use while in 1st

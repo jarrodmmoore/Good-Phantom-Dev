@@ -12,8 +12,9 @@ execute if score @s racePosDisplay matches ..1 if score #1stPlaceLeadTime value 
 #we need to know what position the best ranked player is
 execute if score #foundBestHuman value matches 2147483647 as @a[tag=doneWithIntro,gamemode=adventure,scores={racePosDisplay=1..}] run function phan:bots/rubber_band/find_human_best_position
 
-#go fast
+#go fast until we're in 1st with a solid lead
 scoreboard players set @s botRubberbanding 1
+execute if score @s racePosDisplay matches 1 if score #1stPlaceLeadTime value matches 80.. run scoreboard players set @s botRubberbanding 0
 
 #speed up depending how far we are behind 1st
 execute if score @s timeBehind1st matches 100.. run scoreboard players set @s botRubberbanding 2

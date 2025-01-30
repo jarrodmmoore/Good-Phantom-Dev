@@ -134,6 +134,7 @@ scoreboard players reset @s levelManagerAct
 scoreboard players reset @s seekSpawnpoint
 tag @s remove finishedWithFullBoost
 scoreboard players reset @s biteAware
+scoreboard players set @s actionbarDelay 0
 
 #set spawnpoint
 spawnpoint @s 198 -6 118
