@@ -25,6 +25,7 @@ scoreboard players operation @s vsRespawnY = #fallbackRespawnY value
 scoreboard players operation @s vsRespawnZ = #fallbackRespawnZ value
 scoreboard players operation @s vsRespawnYaw = #fallbackRespawnYaw value
 scoreboard players operation @s vsRespawnPitch = #fallbackRespawnPitch value
+scoreboard players operation @s vsRespawnDimension = #activeDimension value
 scoreboard players set @s vsRespawnLaunch 0
 
 #battle mode: use specialized respawn function

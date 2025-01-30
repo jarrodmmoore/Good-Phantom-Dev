@@ -41,6 +41,7 @@ team modify botDisplayTryharder color aqua
 function phan:player/player_displays_cleanup
 
 #no equipment during podium sequence
+execute as @a[tag=doneWithIntro] run function phan:game/1/keep_player_out_of_portal
 tag @a[tag=doneWithIntro] add noInventory
 gamemode adventure @a[tag=doneWithIntro]
 

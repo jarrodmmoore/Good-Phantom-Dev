@@ -18,6 +18,11 @@ execute if score #offerTrophy value matches 1.. positioned 206 -6 134 positioned
 scoreboard players operation #offerTrophy value = #dream5Trophy value
 execute if score #offerTrophy value matches 1.. positioned 205 -6 104 positioned ~ ~.3 ~ rotated -20 0 run function phan:game/0/summon_trophy_prop
 
+#phantom forest
+scoreboard players operation #offerTrophy value = #dream6Trophy value
+execute if score #offerTrophy value matches 1.. positioned 231 -8 100 positioned ~ ~.3 ~ rotated 135 0 run function phan:game/0/summon_trophy_prop
+
+#...
 
 
 

@@ -14,6 +14,9 @@ execute as @e[type=item_display,tag=tvRandomPanelBackground,distance=..10] run d
 execute as @e[type=item_display,tag=tvRandomPanelBackground,distance=..10] run scoreboard players set @s lifespan 6
 scoreboard players set @e[type=item_display,tag=tvTempHighlight] lifespan 0
 
+#random cup uses "any" gamemode setting again after we cancel exit
+function phan:phantom_racer/menu/cup_select_random/set_mode_any
+
 #re-select whatever dream we were looking at
 function phan:phantom_racer/menu/cup_select/update_highlighted_item
 

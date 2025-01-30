@@ -77,6 +77,7 @@ execute as @a run function phan:game/4/reset_player_scores
 function phan:game/4/race/checkpoint/timestamp/reset_all
 
 #no equipment for a bit while we load
+execute as @a[tag=doneWithIntro] run function phan:game/1/keep_player_out_of_portal
 tag @a[tag=doneWithIntro] add noInventory
 gamemode adventure @a[tag=doneWithIntro]
 

@@ -1,0 +1,1 @@
+$execute if data storage $(filename):lock no_overwrite run scoreboard players set #success value 0

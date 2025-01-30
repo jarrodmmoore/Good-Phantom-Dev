@@ -166,6 +166,7 @@ function phan:movement/reset_speeds
 effect clear @a[tag=doneWithIntro] blindness
 effect give @a[tag=doneWithIntro] blindness 2 50 true
 scoreboard players set #forceSpecAdmin value 0
+execute as @a[tag=doneWithIntro] run function phan:game/1/keep_player_out_of_portal
 gamemode adventure @a[tag=doneWithIntro]
 
 #send players to the lobby

@@ -45,6 +45,7 @@ scoreboard objectives setdisplay sidebar
 function phan:player/reset_gameplay_scores
 
 #no equipment for a bit while we load
+execute as @a[tag=doneWithIntro] run function phan:game/1/keep_player_out_of_portal
 tag @a[tag=doneWithIntro] add noInventory
 
 #areas loaded?

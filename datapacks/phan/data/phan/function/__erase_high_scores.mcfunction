@@ -8,6 +8,11 @@ scoreboard players set #dream2Trophy value 0
 scoreboard players set #dream3Trophy value 0
 scoreboard players set #dream4Trophy value 0
 scoreboard players set #dream5Trophy value 0
+scoreboard players set #dream6Trophy value 0
+scoreboard players set #dream7Trophy value 0
+scoreboard players set #dream8Trophy value 0
+scoreboard players set #dream9Trophy value 0
+scoreboard players set #dream10Trophy value 0
 
 #and grand prix trophies
 scoreboard players set #grandPrix1Trophy value 0
