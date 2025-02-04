@@ -91,6 +91,7 @@ scoreboard players set #showNametags value 0
 team modify player nametagVisibility never
 scoreboard players set #vTimeRemaining value 4819
 scoreboard players set #vTimeElapsed value 0
+scoreboard players set #fallbackRespawnExists value 0
 scoreboard players set #hudPeakPlayers value 0
 function phan:custom_hud/count_players
 

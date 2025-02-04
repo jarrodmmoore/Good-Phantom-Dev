@@ -33,5 +33,7 @@ execute if score #vGameType value matches 2 run return run function phan:game/4/
 #=====
 
 #get to a player start node by whatever means needed
-execute if entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1}] run function phan:game/4/race/join_trigger_found_start_node
-execute unless entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1}] run function phan:game/4/race/respawn
+execute if entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},distance=..100] run function phan:game/4/race/join_trigger_found_start_node
+execute if score #fallbackRespawnExists value matches 1 unless entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},distance=..100] run function phan:game/4/race/respawn
+
+#if fallback respawn doesn't exist, player will just... be wherever they are

@@ -22,6 +22,7 @@ execute if score @s startGrid matches 21 run tp @s @e[limit=1,type=marker,tag=ve
 execute if score @s startGrid matches 22 run tp @s @e[limit=1,type=marker,tag=versusStartPoint,distance=..100,tag=node,scores={versusSpawn=1,editArg1=22}]
 execute if score @s startGrid matches 23 run tp @s @e[limit=1,type=marker,tag=versusStartPoint,distance=..100,tag=node,scores={versusSpawn=1,editArg1=23}]
 execute if score @s startGrid matches 24 run tp @s @e[limit=1,type=marker,tag=versusStartPoint,distance=..100,tag=node,scores={versusSpawn=1,editArg1=24}]
+execute if score @s startGrid matches 25 run tp @s @e[limit=1,type=marker,tag=versusStartPoint,distance=..100,tag=node,scores={versusSpawn=1,editArg1=25}]
 
 #we did it
 scoreboard players set #test value 1

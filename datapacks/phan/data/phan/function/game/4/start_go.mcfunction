@@ -53,3 +53,4 @@ execute as @a at @s run spawnpoint @s ~ ~1 ~
 #respawn point is right here
 execute as @a[tag=playing] at @s run function phan:game/4/race/player_set_respawn_location
 execute as @a[limit=1,tag=playing,sort=random] at @s run function phan:game/4/race/player_set_fallback_respawn_location
+execute unless score #fallbackRespawnExists value matches 1 as @e[type=zombie,tag=ai,limit=1] at @s run function phan:game/4/race/player_set_fallback_respawn_location_bot
