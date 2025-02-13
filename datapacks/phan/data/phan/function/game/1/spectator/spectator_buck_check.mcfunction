@@ -14,6 +14,11 @@
 # 2) teleporting the spec to the target again so the /spectate command will pick them up without issue on the next few ticks
 
 
+#edit: i'm from the future (2025) and it seems like mojang has fixed most of these issues. cool! <3
+#i'm leaving this code active just in case something goes wrong, though.
+#i could easily see some fussy modified server or client having problems with /spectate. better safe than sorry...
+
+
 scoreboard players set #spectator_buck value 0
 
 #if the player moves more than 30 blocks in x, y, or z axis in the span of a few ticks, re-spec them

@@ -17,8 +17,8 @@ execute if score #success value matches 0 run return run tellraw @a ["",{"transl
 #do it!
 scoreboard players set #success value 0
 #may use different import functions depending on what version the map was made in
-execute if score #mapVersionRead value matches ..102000 run function phan:level_manager/import_dream_go with storage phan:level_index
-execute if score #mapVersionRead value matches 102001.. run function phan:level_manager/import_dream_go with storage phan:level_index
+execute if score #mapVersionRead value matches ..102002 run function phan:level_manager/import_dream_go with storage phan:level_index
+execute if score #mapVersionRead value matches 102003.. run function phan:level_manager/import_dream_go with storage phan:level_index
 
 #tell player if it worked or not
 execute if score #success value matches 0 run tellraw @s ["",{"translate":"gp.level_manager.error.unexpected_import_error","color":"red"}]

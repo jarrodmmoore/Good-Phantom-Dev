@@ -17,3 +17,6 @@ execute if score @s bobTime matches 21 run data merge entity @s {start_interpola
 execute if score @s bobTime matches 41 run data merge entity @s {start_interpolation:0,interpolation_duration:0,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,-1.0f,0.0f,0.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]}}
 execute if score @s bobTime matches 41 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,-0.707f,0.0f,0.707f],translation:[0.0f,-0.07f,0.0f],scale:[1.0f,1.0f,1.0f]}}
 execute if score @s bobTime matches 61 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[1.0f,1.0f,1.0f]}}
+
+#if human-owned, show particle to owner indicating that this mine is theirs
+execute if score #2sec value matches 5 if entity @s[tag=humanOwned] at @s run function phan:game/1/objects/enemy/mine_owner_particle

@@ -1,6 +1,6 @@
 #pastel palace
 scoreboard players operation #offerTrophy value = #dream1Trophy value
-execute if score #offerTrophy value matches 1.. positioned 207 0 139 positioned ~ ~.3 ~ rotated 0 0 run function phan:game/0/summon_trophy_prop
+execute if score #offerTrophy value matches 1.. positioned 207 1 139 positioned ~ ~.3 ~ rotated 0 0 run function phan:game/0/summon_trophy_prop
 
 #moonlit mountains
 scoreboard players operation #offerTrophy value = #dream2Trophy value

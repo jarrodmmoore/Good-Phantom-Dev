@@ -21,6 +21,9 @@ particle flame ~ ~1 ~ 0.2 0.5 0.2 0.01 10
 #passengers are temporary and the item_display keeps them alive as long as they're being used
 scoreboard players set @e[tag=setLife,type=armor_stand,distance=..4] lifespan 10
 
+#mark mine as human-owned
+execute if entity @s[type=player] run tag @e[tag=setMe,type=item_display,distance=..4] add humanOwned
+
 #get ID and validity stuff
 scoreboard players operation @e[tag=setMe,type=item_display,distance=..4] playerID = @s playerID
 scoreboard players set @e[tag=setMe,type=item_display,distance=..4] itemValidSpawn 1
