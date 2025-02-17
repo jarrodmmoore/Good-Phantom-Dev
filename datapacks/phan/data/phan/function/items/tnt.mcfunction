@@ -25,7 +25,6 @@ execute if entity @s[scores={age=10..}] at @s if entity @e[tag=tntCanHit,distanc
 execute if entity @s[scores={age=10..}] at @s if entity @e[tag=tntCanHit,distance=..3] run scoreboard players add @s age 100
 
 #explode when age reaches 100
-#execute if entity @s[scores={age=100..}] at @s if entity @a[gamemode=adventure,scores={fallFlying=1},distance=..3] at @a[limit=1,sort=nearest,gamemode=adventure,scores={fallFlying=1},distance=..3] positioned ^ ^ ^-.2 run tp @s ~ ~ ~
 execute if entity @s[tag=!enemyTNT,scores={age=100..}] at @s run function phan:items/generic_explode_friendly
 execute if entity @s[tag=enemyTNT,scores={age=100..}] at @s run function phan:items/generic_explode
 kill @s[scores={age=100..}]

@@ -10,8 +10,8 @@ execute if score #botsEnabled value matches 1.. unless score @s editArg1 matches
 
 
 #act like a speed pad (because we ARE one!)
-execute positioned ~-1 ~-1 ~-1 as @a[gamemode=adventure,dx=2,dy=2,dz=2] at @s run function phan:movement/speed_pad
-execute if score #botsEnabled value matches 1.. positioned ~-1 ~-1 ~-1 as @e[tag=ai,type=zombie,dx=2,dy=2,dz=2] at @s run function phan:bots/movement/speed_pad
+execute positioned ~-1 ~-1 ~-1 as @a[gamemode=adventure,dx=2,dy=2,dz=2] at @s unless score @s speedBoost2 matches 2 run function phan:movement/speed_pad
+execute if score #botsEnabled value matches 1.. positioned ~-1 ~-1 ~-1 as @e[tag=ai,type=zombie,dx=2,dy=2,dz=2] unless score @s speedBoost2 matches 2 at @s run function phan:bots/movement/speed_pad
 
 #keep visual child alive
 execute on passengers run scoreboard players set @s lifespan 3

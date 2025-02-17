@@ -8,5 +8,5 @@ scoreboard players set $y player_motion.api.launch 12000
 scoreboard players set $z player_motion.api.launch 0
 function player_motion:api/launch_xyz
 
-#don't do again for 1 second
-scoreboard players set @s autoJumpPadCooldown 20
+#don't do again for 0.5 seconds
+scoreboard players set @s autoJumpPadCooldown 10

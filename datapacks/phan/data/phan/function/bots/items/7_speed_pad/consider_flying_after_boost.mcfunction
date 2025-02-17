@@ -22,3 +22,6 @@ execute if score #random value matches ..3 run tag @s add botDelayPadJump
 execute if score #random value matches ..2 run tag @s add botFlyWhenInAir
 execute if score #random value matches ..2 run tag @s add botImprovFlight
 execute if score #random value matches ..2 run scoreboard players set @s botVaultUpwardTime 5
+#if we're following a mid-air waypoint, no we're not
+execute if score #random value matches ..2 run tag @s remove botFollowingMidAir
+#^ this prevents the bot from assuming it can no longer reach the mid-air waypoint because it briefly touched the ground

@@ -1,7 +1,7 @@
 #track if we did it or not
 scoreboard players set #success value 0
 
-#record if our state
+#record our state
 scoreboard players operation #OnGround value = @s onGround
 scoreboard players operation #inWater value = @s inWater
 execute store result score #portalFinished value run execute if entity @s[tag=vsHomeStretch]

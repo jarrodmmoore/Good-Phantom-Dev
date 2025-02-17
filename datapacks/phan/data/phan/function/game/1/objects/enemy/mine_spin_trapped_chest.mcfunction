@@ -1,0 +1,7 @@
+execute if score @s bobTime matches 1 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.707f,0.0f,0.707f],translation:[0.0f,0.07f,0.0f],scale:[0.85f,0.85f,0.85f]}}
+execute if score @s bobTime matches 21 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,1.0f,0.0f,0.0f],translation:[0.0f,0.0f,0.0f],scale:[0.85f,0.85f,0.85f]}}
+execute if score @s bobTime matches 41 run data merge entity @s {start_interpolation:0,interpolation_duration:0,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,-1.0f,0.0f,0.0f],translation:[0.0f,0.0f,0.0f],scale:[0.85f,0.85f,0.85f]}}
+execute if score @s bobTime matches 41 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,-0.707f,0.0f,0.707f],translation:[0.0f,-0.07f,0.0f],scale:[0.85f,0.85f,0.85f]}}
+execute if score @s bobTime matches 61 run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[0.85f,0.85f,0.85f]}}
+
+#trapped chests have 0.85x model scale, unlike regular mines

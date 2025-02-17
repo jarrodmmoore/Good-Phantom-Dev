@@ -1,5 +1,6 @@
 #hit 1 = explode
 #hit 2 = despawn
+#hit 3 = bounce
 scoreboard players set #hit value 0
 
 #keep passenger alive

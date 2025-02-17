@@ -11,7 +11,7 @@ execute unless score #math value matches 1.. run return run playsound block.note
 #delete the entry at this slot
 function phan:phantom_racer/grand_prix/remove_last_track_from_storage_go with storage phan:gp_index
 
-#increment round count by 1 and store it again
+#decrement round count by 1 and store it again
 scoreboard players remove #math value 1
 $execute store result storage phan_grand_prix_$(gp_id):metadata rounds int 1 run scoreboard players get #math value
 
