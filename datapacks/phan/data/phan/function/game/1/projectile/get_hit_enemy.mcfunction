@@ -1,3 +1,6 @@
+#if we're a shulker with our shell open, we take 4x damage
+execute if entity @s[tag=enemyShulker,scores={editArg1=15..30}] run scoreboard players operation #projDamage value *= #4 value
+
 #use damage command if we have real HP
 execute if entity @s[tag=!artificialHP] if score #projDamage value matches 1 run damage @s 10 generic at ~ ~ ~
 execute if entity @s[tag=!artificialHP] if score #projDamage value matches 2 run damage @s 20 generic at ~ ~ ~
