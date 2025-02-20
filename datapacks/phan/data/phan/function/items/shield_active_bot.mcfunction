@@ -9,7 +9,7 @@ execute if score @s shieldTime matches 61 run effect give @s resistance 3 0 fals
 execute if score @s shieldTime matches 0 run effect clear @s resistance
 
 #fancy particles
-#function phan:player/tell_spectators
+tag @a[tag=tellMe] remove tellMe
 scoreboard players operation #test value = @s shieldTime
 scoreboard players operation #test value %= #36 value
 execute positioned ~ ~1 ~ run function phan:items/shield_active_particles_index
