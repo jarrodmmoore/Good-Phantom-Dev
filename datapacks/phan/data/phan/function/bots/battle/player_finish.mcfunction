@@ -12,7 +12,7 @@ execute in overworld as @e[type=block_display,tag=botController,x=197,y=-11,z=11
 
 #let other bots know when rival has finished
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished value 1
-execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value 2147483647
+execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value -1
 
 #visuals
 particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]

@@ -64,13 +64,6 @@ scoreboard players reset @s[scores={attackTime=..0,attackerID=1..}] attackerID
 function phan:control/carrot_on_stick
 #(NOTE: a players "carrotInput" score is >= 1 if they made an input on this tick)
 
-#drop key bind trigger
-scoreboard players enable @s bindDropKey
-execute if score @s bindDropKey matches 1.. run function phan:control/player_bind_drop_key
-#swap key bind trigger
-scoreboard players enable @s bindSwapKey
-execute if score @s bindSwapKey matches 1.. run function phan:control/player_bind_swap_key
-
 #handle bound keys
 execute if score @s dropSword matches 1.. run function phan:control/handle_player_input_drop
 execute if score @s dropLightBlue matches 1.. run function phan:control/handle_player_input_drop

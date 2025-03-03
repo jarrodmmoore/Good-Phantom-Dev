@@ -1,1 +1,0 @@
-execute if score @s botSkill > #botHighestSkill value run scoreboard players operation #botHighestSkill value = @s botSkill

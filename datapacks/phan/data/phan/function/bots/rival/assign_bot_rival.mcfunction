@@ -14,15 +14,15 @@ execute if score #assist_rival_bot value matches 1.. run return 0
 
 #find highest skill bot
 scoreboard players set #botHighestSkill value 0
-execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:bots/rival/find_max_skill
+scoreboard players operation #botHighestSkill value > @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] botSkill
 
 #find bot with the most points
 scoreboard players set #botHighestScore value 0
-execute as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:bots/rival/find_max_score
+scoreboard players operation #botHighestScore value > @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] versusPoints
 
 #find highest score held by a player
 scoreboard players set #highestPlayerScore value 0
-execute as @a[tag=doneWithIntro,scores={versusPoints=1..}] run function phan:bots/rival/find_max_human_score
+scoreboard players operation #highestPlayerScore value > @a[tag=doneWithIntro,scores={versusPoints=1..}] versusPoints
 
 #find difference between max player score and max bot score
 scoreboard players operation #humanPointsAhead value = #highestPlayerScore value

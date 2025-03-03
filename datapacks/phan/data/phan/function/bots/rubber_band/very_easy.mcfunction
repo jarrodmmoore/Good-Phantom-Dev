@@ -6,7 +6,7 @@ execute if score #vGameType value matches 2 run return run scoreboard players se
 #=====
 
 #we need to know what position the worst ranked player is
-execute if score #foundWorstHuman value matches 0 as @a[tag=doneWithIntro,gamemode=adventure,scores={racePosDisplay=1..}] run function phan:bots/rubber_band/find_human_worst_position
+execute if score #foundWorstHuman value matches 0 run scoreboard players operation #foundWorstHuman value > @a[tag=doneWithIntro,gamemode=adventure,scores={racePosDisplay=1..}] racePosDisplay
 
 #note:
 #foundWorstHuman value matches 0

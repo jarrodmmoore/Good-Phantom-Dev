@@ -1,1 +1,0 @@
-execute if score @s versusPoints > #botHighestScore value run scoreboard players operation #botHighestScore value = @s versusPoints

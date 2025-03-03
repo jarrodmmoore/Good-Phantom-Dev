@@ -17,3 +17,11 @@ execute if score @s toggleAutoReset matches 1.. run function phan:player/toggle_
 #auto jump pad toggle
 scoreboard players enable @s toggleAutoJumpPads
 execute if score @s toggleAutoJumpPads matches 1.. run function phan:player/toggle_auto_jump_pads
+
+#drop key bind trigger
+scoreboard players enable @s bindDropKey
+execute if score @s bindDropKey matches 1.. run function phan:control/player_bind_drop_key
+
+#swap key bind trigger
+scoreboard players enable @s bindSwapKey
+execute if score @s bindSwapKey matches 1.. run function phan:control/player_bind_swap_key

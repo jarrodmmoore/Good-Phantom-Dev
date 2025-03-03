@@ -4,7 +4,7 @@ scoreboard players set @s botTimeSinceCP -999999
 
 #let other bots know when rival has finished
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished value 1
-execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value 2147483647
+execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value -1
 
 #figure out how long everyone else has to finish
 function phan:game/4/race/player_finish_set_race_end_time
