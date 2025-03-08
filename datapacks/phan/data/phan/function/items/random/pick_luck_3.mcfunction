@@ -21,6 +21,9 @@ execute if score #hasFirework value matches 1.. run tag 00000000-0000-0328-0000-
 execute if score #hasEndermanThief value matches 1.. run tag 00000000-0000-0328-0000-000000000010 add tempItemBan
 execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000011 add tempItemBan
 
+#don't roll a speed item if we've already got one
+execute if entity @s[type=player] if score #hasSpeedItem value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=8..14}] add tempItemBan
+
 #don't get an energy potion if we're near full energy
 execute if score @s energy matches 12.. run tag 00000000-0000-0328-0000-00000000000e add tempItemBan
 #this also affects firework since they share a #randomRoll number. not fully intentional, but

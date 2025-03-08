@@ -25,6 +25,13 @@ execute if score #hasEndermanThief value matches 1.. run tag 00000000-0000-0328-
 execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000014 add tempItemBan
 execute if score #hasLightning value matches 1.. run tag 00000000-0000-0328-0000-000000000015 add tempItemBan
 
+#don't roll high speed items if we already have a very powerful one
+execute if entity @s[type=player] if score #hasHighSpeedItem value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..11}] add tempItemBan
+execute if entity @s[type=player] if score #hasHighSpeedItem value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..18}] add tempItemBan
+
+#also don't roll speed items if we've got a 2+ of them stockpiled
+execute if entity @s[type=player] if score #hasSpeedItem value matches 2.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=6..18}] add tempItemBan
+
 #don't get an energy potion if we're near full energy
 execute if score @s energy matches 12.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=13..14}] add tempItemBan
 

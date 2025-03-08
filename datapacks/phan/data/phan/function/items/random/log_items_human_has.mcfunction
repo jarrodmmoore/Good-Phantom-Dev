@@ -11,3 +11,14 @@ execute store result score #hasSuperJump value run clear @s prismarine_crystals[
 execute store result score #hasSwiftness value run clear @s prismarine_shard[custom_data~{swiftnessPotion:1b}] 0
 execute store result score #hasTnt value run clear @s tnt[custom_data~{throwableTnt:1b}] 0
 execute store result score #hasWarp value run clear @s lime_candle[custom_data~{warp:1b}] 0
+
+execute store result score #hasHighSpeedItem value run clear @s cyan_dye[custom_data~{superSpeedPad:1b}] 0
+scoreboard players operation #hasHighSpeedItem value += #hasEnergyPotion value
+scoreboard players operation #hasHighSpeedItem value += #hasSwiftness value
+scoreboard players operation #hasHighSpeedItem value += #hasFirework value
+scoreboard players operation #hasHighSpeedItem value += #hasWarp value
+
+execute store result score #hasSpeedItem value run clear @s cyan_dye[custom_data~{speedPad:1b}] 0
+scoreboard players operation #hasSpeedItem value += #hasEnderPearl value
+scoreboard players operation #hasSpeedItem value += #hasSuperJump value
+scoreboard players operation #hasSpeedItem value += #hasHighSpeedItem value

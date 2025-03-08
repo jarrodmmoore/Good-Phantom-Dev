@@ -50,14 +50,14 @@ execute if score #5Hz value matches 2 if score #vAct value matches 3 unless scor
 execute if score #5Hz value matches 0 if score #vAct value matches 4 unless score #clearCacheProgress value matches 1.. as @e[type=marker,tag=nodeArea4] at @s run function phan:game/4/spawning/check_area_generic_d
 
 #interpolation effect on player soul after images
-execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp
+#(not used in this mode)
+#execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp
 
 #objects do their thing
 execute as @e[tag=checkValid] at @s run function phan:game/1/objects/_index
 
-#all arrows we shoot should cause the timer to go down
-execute as @e[type=arrow,tag=!arrowMarked] run function phan:game/1/objects/enemy/skeleton_mark_arrow
-execute as @e[type=arrow,tag=hurtfulArrow] at @s run function phan:game/1/objects/enemy/hurtful_arrow
+#arrow entities have special logic that allows them to slow "hurt" players
+execute as @e[type=arrow] run function phan:game/1/objects/enemy/skeleton_arrow
 
 #clear damage since we've already processed it
 scoreboard players reset @a[scores={damage=1..}] damage

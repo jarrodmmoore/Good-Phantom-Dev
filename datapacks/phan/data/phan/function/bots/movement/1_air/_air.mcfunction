@@ -15,7 +15,7 @@ execute store result score #coord_z value run data get entity @s Pos[2] 100000
 scoreboard players operation #coord_x2 value -= #coord_x value
 scoreboard players operation #coord_z2 value -= #coord_z value
 
-#face the target (jk, don't do that while airborne. super broken.)
+#face the target
 #...but ONLY if we're a decent distance away on x and z. otherwise we become a fidget spinner
 execute unless score @s botTempRotTime matches 1.. run function phan:bots/movement/0_on_ground/face_target
 execute if score @s botTempRotTime matches 1.. run function phan:bots/movement/face_saved_direction

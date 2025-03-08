@@ -64,7 +64,7 @@ execute if score #botCount value matches ..3 if score #botHighestSkill value mat
 #bump skill up?
 execute if score #test value matches 1 run scoreboard players add @s[scores={botSkill=..5}] botSkill 1
 
-#====
+#=====
 
 #if we made it here, we need to update our difficulty tags!
 

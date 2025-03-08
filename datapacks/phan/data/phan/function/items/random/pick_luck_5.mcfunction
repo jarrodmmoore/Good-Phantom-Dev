@@ -16,6 +16,12 @@ execute if score #hasWarp value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,
 execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-0000-000000000012 add tempItemBan
 execute if score #hasLightning value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=19..20}] add tempItemBan
 
+#don't roll speed items if we already have a very powerful one
+execute if entity @s[type=player] if score #hasHighSpeedItem value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=5..17}] add tempItemBan
+
+#also don't roll speed items if we've got a 2+ of them stockpiled
+execute if entity @s[type=player] if score #hasSpeedItem value matches 2.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=5..17}] add tempItemBan
+
 #don't get an energy potion if we're near full energy
 execute if score @s energy matches 12.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..8}] add tempItemBan
 
@@ -86,7 +92,7 @@ scoreboard players set #randomRoll value 0
 scoreboard players operation #randomRoll value = @e[limit=1,sort=random,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=!tempItemBan,type=armor_stand,scores={r=1..20}] r
 
 #fallback
-execute if score #randomRoll value matches 0 run function phan:items/give/speed_pad_super {count:1}
+execute if score #randomRoll value matches 0 run function phan:items/give/speed_pad {count:1}
 
 #get the item
 execute if score #randomRoll value matches 1..2 run function phan:items/give/throwable_tnt {count:2}

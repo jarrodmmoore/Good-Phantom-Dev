@@ -1,20 +1,5 @@
 #gameplay
 
-#some variables I want to remember...
-#pSubGameState
-#   -1 = loading
-#	0 = transition from area to area
-#	1 = gameplay
-#	2 = transition between areas
-#	3 = final results
-#   4 = multiplayer, waiting for other players to finish their act
-#   -2 = failure
-#pCurrentArea
-#pPearlsNeeded
-#(player) enderEyes
-#(player) scoreCurrent
-#pTimeRemaining
-#pShowHUD
 
 #game time
 scoreboard players add @s pGameTime 1

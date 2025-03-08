@@ -57,9 +57,8 @@ execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function pha
 #objects do their thing
 execute as @e[tag=checkValid] at @s run function phan:game/1/objects/_index
 
-#all arrows we shoot should cause the timer to go down
-execute as @e[type=arrow,tag=!arrowMarked] run function phan:game/1/objects/enemy/skeleton_mark_arrow
-execute as @e[type=arrow,tag=hurtfulArrow] at @s run function phan:game/1/objects/enemy/hurtful_arrow
+#arrow entities have special logic that allows them to slow "hurt" players
+execute as @e[type=arrow] run function phan:game/1/objects/enemy/skeleton_arrow
 
 #clear damage since we've already processed it
 scoreboard players reset @a[scores={damage=1..}] damage

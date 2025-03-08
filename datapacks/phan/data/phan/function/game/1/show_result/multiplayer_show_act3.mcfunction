@@ -12,17 +12,17 @@ execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] run scoreboard 
 #sort players by rank
 #(we only care about top 3)
 #1
-execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] run function phan:game/1/show_result/multiplayer_find_best
+scoreboard players operation #best value > @a[tag=playerReservation,scores={multiplayerRank=-1}] multiplayerNumber
 execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] if score @s multiplayerNumber >= #best value run scoreboard players operation @s multiplayerRank = #assignRank value
 scoreboard players add #assignRank value 1
 scoreboard players set #best value -1
 #2
-execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] run function phan:game/1/show_result/multiplayer_find_best
+scoreboard players operation #best value > @a[tag=playerReservation,scores={multiplayerRank=-1}] multiplayerNumber
 execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] if score @s multiplayerNumber >= #best value run scoreboard players operation @s multiplayerRank = #assignRank value
 scoreboard players add #assignRank value 1
 scoreboard players set #best value -1
 #3
-execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] run function phan:game/1/show_result/multiplayer_find_best
+scoreboard players operation #best value > @a[tag=playerReservation,scores={multiplayerRank=-1}] multiplayerNumber
 execute as @a[tag=playerReservation,scores={multiplayerRank=-1}] if score @s multiplayerNumber >= #best value run scoreboard players operation @s multiplayerRank = #assignRank value
 scoreboard players add #assignRank value 1
 scoreboard players set #best value -1

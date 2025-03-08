@@ -6,4 +6,4 @@ execute as @a[scores={currentLoad=2,scoreCurrent=..4999,time2portalTicks=350..}]
 execute as @a[gamemode=adventure,scores={pCurrentArea=1,airTime=..1}] at @s if block ~ ~-.5 ~ #phan:practice_area_respawn unless block ~ -55 ~ #phan:area_check run scoreboard players set @s respawn 1
 
 #water bounces players in act 2 and 3
-execute as @a[tag=doneWithIntro,gamemode=adventure] at @s unless score @s pCurrentArea matches 1 if block ~ ~-0.9 ~ blue_stained_glass unless score @s autoJumpPadCooldown matches 11.. run function phan:levels/phantom_forest/water_bounce
+execute as @a[tag=doneWithIntro,gamemode=adventure] at @s unless score @s pCurrentArea matches 1 if block ~ ~-0.9 ~ blue_stained_glass unless score @s autoJumpPadCooldown matches 1.. run function phan:levels/phantom_forest/water_bounce
