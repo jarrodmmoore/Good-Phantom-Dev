@@ -7,4 +7,5 @@ execute if entity @s[tag=!stay,tag=!itemAssignSession] run function phan:items/i
 execute if entity @s[tag=itemAssignSession] unless score @s itemValidSpawn matches 1 run scoreboard players set @s lifespan 1
 
 #handle deploy on ground behavior
+execute if entity @s[tag=fizzleOnGround] at @s run function phan:items/item_wait_for_fizzle
 execute if entity @s[tag=groundDeploy] if entity @s[nbt={OnGround:1b}] at @s run function phan:items/ground_deploy/_index

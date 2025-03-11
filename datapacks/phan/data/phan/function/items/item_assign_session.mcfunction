@@ -9,3 +9,7 @@ scoreboard players operation @s playerID = #getID value
 
 #tag ourselves if we have groundDeploy behavior (we'll do this here instead of checking repeatedly...)
 execute if entity @s[nbt={Item:{components:{"minecraft:custom_data":{groundDeploy:1b}}}}] run tag @s add groundDeploy
+
+#regular items should fizzle out on the floor
+execute if entity @s[tag=!groundDeploy,tag=!neverFizzle,nbt={Item:{components:{"minecraft:custom_data":{item:1b}}}}] run tag @s add fizzleOnGround
+tag @s[tag=fizzleOnGround] add groundDeploy
