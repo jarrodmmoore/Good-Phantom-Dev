@@ -1,8 +1,11 @@
 #executed by an ai waypoint
 
-#must have both scores!
-execute unless score @s AIBC_spread_x matches -2147483648..2147483647 run return 0
-execute unless score @s AIBC_spread_z matches -2147483648..2147483647 run return 0
+#must have at least one score on x or z spread
+#note: if a waypoint has 0,0 for optimal spread, this registers as not having aany optimal spread
+execute store result score #test4 value run execute if score @s AIBC_spread_x matches -2147483648..2147483647
+execute if score @s AIBC_spread_z matches -2147483648..2147483647 run scoreboard players add #test4 value 1
+execute unless score #test4 value matches 1.. run return 0
+#=====
 
 #macro for random particle location
 scoreboard players set #recursions value 0
