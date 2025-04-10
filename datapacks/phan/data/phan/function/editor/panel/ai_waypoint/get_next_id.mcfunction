@@ -1,4 +1,4 @@
-execute if score #waypointID value matches -1 run tellraw @a ["",{"text":"[ ! ] You've run out of available IDs for AI waypoints! Things might get weird...","color":"red"}]
+execute if score #waypointID value matches -1 run tellraw @a ["",{text:"[ ! ] You've run out of available IDs for AI waypoints! Things might get weird...",color:"red"}]
 
 #increment
 scoreboard players add #waypointID value 1

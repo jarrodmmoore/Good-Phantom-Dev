@@ -2,7 +2,7 @@
 scoreboard players set #success value 1
 execute if score #grandPrixEditAdminOnly value matches 1 run scoreboard players set #success value 0
 execute if score #grandPrixEditAdminOnly value matches 1 as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers if entity @s[tag=admin] run scoreboard players set #success value 1
-execute if score #success value matches 0 as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run tellraw @s ["",{"translate":"gp.misc.need_admin_tag","color":"red"}]
+execute if score #success value matches 0 as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run tellraw @s ["",{translate:"gp.misc.need_admin_tag",color:"red"}]
 execute if score #success value matches 0 run return run playsound block.note_block.bass master @a ~ ~ ~ 1 1.8
 #=====
 

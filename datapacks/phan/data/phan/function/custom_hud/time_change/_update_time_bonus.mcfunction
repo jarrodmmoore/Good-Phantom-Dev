@@ -1,6 +1,6 @@
 #quick hack: re-using variables and storage for the timer add thingy
 scoreboard players operation #timerAddMin value = @s addPointsLater
-data modify storage phan:data display.timer_add set value '["",{"text":"\\uF005\\uF005\\uF005\\uF005\\uF005\\uE013"},{"text":" +","color":"yellow","bold":true},{"score":{"name":"#timerAddMin","objective":"value"},"color":"yellow","bold":true}]'
+data modify storage phan:data display.timer_add set value ["",{text:"\uF005\uF005\uF005\uF005\uF005\uE013"},{text:" +",color:"yellow",bold:true},{score:{name:"#timerAddMin",objective:"value"},color:"yellow",bold:true}]
 
 #update display
 execute if score @s hudNode matches 1..8 run function phan:custom_hud/time_change/_update_1_8

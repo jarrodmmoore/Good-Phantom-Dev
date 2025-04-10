@@ -121,7 +121,7 @@ execute unless score #gameState value matches 4 if score #freePlay value matches
 #BUT-- if we're playing a single act in "free play" mode, we never change the session and let points accumulate between games
 
 #show tip to players who neglected to boost last game
-execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR,tag=finishedWithFullBoost] if score #freePlay value matches ..0 run tellraw @s ["",{"text":" "}]
+execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR,tag=finishedWithFullBoost] if score #freePlay value matches ..0 run tellraw @s ["",{text:" "}]
 execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,tag=!stopShowingTipsPR,tag=finishedWithFullBoost] run function phan:game/0/tip_show_portal_race
 
 #default settings for a level, overwritten upon loading area info
@@ -154,7 +154,7 @@ function phan:bots/_pre_round_bot_setup
 #position calculator stuff
 scoreboard players set #positionAssignMin value 1
 scoreboard players reset * racePosDisplay2
-scoreboard objectives modify racePosDisplay2 displayname ["",{"translate":"gp.versus.position","bold":true}]
+scoreboard objectives modify racePosDisplay2 displayname ["",{translate:"gp.versus.position",bold:true}]
 scoreboard players set #showingRacePositions value -1
 scoreboard players set #vsHomeStretch value 0
 

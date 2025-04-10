@@ -41,7 +41,7 @@ scoreboard players set @s spectatingObject 2
 #remember ranks for previous 3 (run every tick now so other players don't mess with our stuff)
 execute if score #gameState value matches 1 run function phan:game/1/store_final_rank_names
 #and now show them
-execute if score #gameState value matches 1 run title @s actionbar ["",{"selector":"00000000-0000-0328-0000-000000000019"},{"text":" "},{"text":" "},{"text":" "},{"text":" "},{"selector":"00000000-0000-0328-0000-00000000001a"},{"text":" "},{"text":" "},{"text":" "},{"text":" "},{"selector":"00000000-0000-0328-0000-00000000001b"}]
+execute if score #gameState value matches 1 run title @s actionbar ["",{selector:"00000000-0000-0328-0000-000000000019"},{text:" "},{text:" "},{text:" "},{text:" "},{selector:"00000000-0000-0328-0000-00000000001a"},{text:" "},{text:" "},{text:" "},{text:" "},{selector:"00000000-0000-0328-0000-00000000001b"}]
 
 #show final score and rank
 scoreboard players operation #pGameTime value = @s pGameTime

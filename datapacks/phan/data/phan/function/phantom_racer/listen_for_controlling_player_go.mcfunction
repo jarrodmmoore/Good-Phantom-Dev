@@ -6,7 +6,7 @@ execute if score #requireAdmin value matches 1 if score #5Hz value matches 1 run
 
 #if admin required, tell non-admins they can't use the controller
 execute if score #requireAdmin value matches 1 run scoreboard players set @a[distance=..1,tag=!admin] actionbarDelay 5
-execute if score #requireAdmin value matches 1 run title @a[distance=..1,tag=!admin] actionbar ["",{"translate":"gp.misc.need_admin_tag","color":"red"}]
+execute if score #requireAdmin value matches 1 run title @a[distance=..1,tag=!admin] actionbar ["",{translate:"gp.misc.need_admin_tag",color:"red"}]
 
 #nearby player picks up controller and takes control
 execute if score #requireAdmin value matches 0 as @a[gamemode=!spectator,distance=..1] run function phan:phantom_racer/player_pick_up_controller

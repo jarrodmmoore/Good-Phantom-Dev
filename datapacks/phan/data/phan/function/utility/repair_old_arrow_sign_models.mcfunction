@@ -31,4 +31,4 @@ execute if items entity @s contents *[custom_model_data={floats:[2111113.0f]}] r
 execute if items entity @s contents *[custom_model_data={floats:[2111114.0f]}] run item replace entity @s contents with white_dye[item_model="gp/effect_sign/strength"]
 
 tag @s add newModelFormat
-tellraw @a ["",{"text":"[DEBUG] Repaired outdated model."}]
+tellraw @a ["",{text:"[DEBUG] Repaired outdated model."}]

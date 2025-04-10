@@ -1,4 +1,4 @@
-tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
+tellraw @s ["",{text:"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
 scoreboard players reset @s editor
 tag @s remove phan_edit
 scoreboard players reset @s AIBC_selected

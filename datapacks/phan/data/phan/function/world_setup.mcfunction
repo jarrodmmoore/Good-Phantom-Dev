@@ -111,4 +111,4 @@ function phan:__erase_data
 function math:sqrt/setup
 
 #say it
-tellraw @a ["",{"text":"World setup function was run successfully.","color":"green"}]
+tellraw @a ["",{text:"World setup function was run successfully.",color:"green"}]

@@ -20,6 +20,6 @@ clear @s
 execute if score #gameState value matches 0 run tag @s add playing
 
 #while we're in here, give the player tips on how to editor mode
-tellraw @s ["",{"text":" "}]
-tellraw @s ["",{"text":"[","color":"#BB33FF","bold":true},{"translate":"gp.tip.tip","color":"#BB33FF","bold":true},{"text":"]","color":"#BB33FF","bold":true},{"text":" "},{"translate":"gp.level_manager.editor_trigger","with":[{"translate":"/trigger editor","color":"aqua"}]}]
-tellraw @s ["",{"text":"[","color":"#BB33FF","bold":true},{"translate":"gp.tip.tip","color":"#BB33FF","bold":true},{"text":"]","color":"#BB33FF","bold":true},{"text":" "},{"translate":"gp.level_manager.dream_manager_trigger","with":[{"translate":"/trigger dreamManager","color":"aqua"}]}]
+tellraw @s ["",{text:" "}]
+tellraw @s ["",{text:"[",color:"#BB33FF",bold:true},{translate:"gp.tip.tip",color:"#BB33FF",bold:true},{text:"]",color:"#BB33FF",bold:true},{text:" "},{translate:"gp.level_manager.editor_trigger",with:[{translate:"/trigger editor",color:"aqua"}]}]
+tellraw @s ["",{text:"[",color:"#BB33FF",bold:true},{translate:"gp.tip.tip",color:"#BB33FF",bold:true},{text:"]",color:"#BB33FF",bold:true},{text:" "},{translate:"gp.level_manager.dream_manager_trigger",with:[{translate:"/trigger dreamManager",color:"aqua"}]}]

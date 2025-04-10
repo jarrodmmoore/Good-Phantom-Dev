@@ -16,6 +16,6 @@ execute store result score #checkMinY value run data get entity @s Pos[1] 1
 execute store result score #checkMinZ value run data get entity @s Pos[2] 1
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
-tellraw @s ["",{"text":" > Pos 1 set to x="},{"score":{"name":"#checkMinX","objective":"value"}},{"text":", y="},{"score":{"name":"#checkMinY","objective":"value"}},{"text":", z="},{"score":{"name":"#checkMinZ","objective":"value"}}]
+tellraw @s ["",{text:" > Pos 1 set to x="},{score:{name:"#checkMinX",objective:"value"}},{text:", y="},{score:{name:"#checkMinY",objective:"value"}},{text:", z="},{score:{name:"#checkMinZ",objective:"value"}}]
 
 scoreboard players set @s editVisualTimer 0

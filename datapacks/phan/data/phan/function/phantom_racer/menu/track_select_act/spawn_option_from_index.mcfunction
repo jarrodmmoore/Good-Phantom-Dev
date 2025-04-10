@@ -10,18 +10,18 @@ execute if score #test value matches -3 run return 0
 #=====
 
 #fallback model is generic preview
-data modify storage phan:level_index model set value '["",{"text":"\\uE500","color":"white"}]'
+data modify storage phan:level_index model set value ["",{text:"\uE500",color:"white"}]
 
 #-2 means show lock
-execute if score #test value matches -2 run data modify storage phan:level_index model set value '["",{"text":"\\uE506","color":"white"}]'
+execute if score #test value matches -2 run data modify storage phan:level_index model set value ["",{text:"\uE506",color:"white"}]
 
 #-1 means go back
-execute if score #test value matches -1 run data modify storage phan:level_index model set value '["",{"text":"\\uE504","color":"white"}]'
+execute if score #test value matches -1 run data modify storage phan:level_index model set value ["",{text:"\uE504",color:"white"}]
 
 #0 means random
-execute if score #test value matches 0 unless score #test2 value matches 2..3 run data modify storage phan:level_index model set value '["",{"text":"\\uE501","color":"white"}]'
-execute if score #test value matches 0 if score #test2 value matches 2 run data modify storage phan:level_index model set value '["",{"text":"\\uE502","color":"white"}]'
-execute if score #test value matches 0 if score #test2 value matches 3 run data modify storage phan:level_index model set value '["",{"text":"\\uE503","color":"white"}]'
+execute if score #test value matches 0 unless score #test2 value matches 2..3 run data modify storage phan:level_index model set value ["",{text:"\uE501",color:"white"}]
+execute if score #test value matches 0 if score #test2 value matches 2 run data modify storage phan:level_index model set value ["",{text:"\uE502",color:"white"}]
+execute if score #test value matches 0 if score #test2 value matches 3 run data modify storage phan:level_index model set value ["",{text:"\uE503",color:"white"}]
 
 #1.. means look up the model from the associated act of the selected dream
 execute store result storage phan:level_index level_id int 1 run scoreboard players get #tvChosenLevel value

@@ -46,7 +46,7 @@ function phan:items/_tick
 #scoreboard players set @a[tag=nocombo] combo 0
 
 #show a scoreboard value, always
-#title @a actionbar ["",{"text":"#tvAnimation = "},{"score":{"name":"#tvAnimation","objective":"value"}}]
+#title @a actionbar ["",{text:"#tvAnimation = "},{score:{name:"#tvAnimation",objective:"value"}}]
 
 #draw boundaries for out of bounds
 #execute as @a[tag=draw] at @s run fill ~-3 -64 ~-3 ~3 -63 ~3 red_wool

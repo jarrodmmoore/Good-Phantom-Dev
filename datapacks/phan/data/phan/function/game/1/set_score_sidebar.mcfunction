@@ -7,4 +7,4 @@ scoreboard players operation #showSidebarPoints value += @s scoreBonus
 
 #show what we've got no matter what
 scoreboard players operation @s scoreSidebar = #showSidebarPoints value
-scoreboard players display numberformat @s scoreSidebar styled {"color":"yellow"}
+scoreboard players display numberformat @s scoreSidebar styled {color:"yellow"}

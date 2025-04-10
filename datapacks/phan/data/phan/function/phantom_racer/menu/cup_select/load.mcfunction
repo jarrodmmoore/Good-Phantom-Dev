@@ -22,7 +22,7 @@ scoreboard players set @e[type=item_display,tag=tvTrackDisplay,distance=..10] li
 scoreboard players set @e[type=text_display,tag=tvTrackDisplay,distance=..10] lifespan 0
 
 #special text for "choose a cup"
-summon text_display ~ ~1.4 ~-.5 {Tags:["lobbyProp","tvText","tvSubtitle3","tvProp"],alignment:"center",text:'["",{"translate":"gp.phantom_racer.choose_a_cup","bold":true}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},background:16777215}
+summon text_display ~ ~1.4 ~-.5 {Tags:["lobbyProp","tvText","tvSubtitle3","tvProp"],alignment:"center",text:["",{translate:"gp.phantom_racer.choose_a_cup",bold:true}],transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},background:16777215}
 
 #special text to show cup name
-summon text_display ~-.1 ~1.4 ~2.5 {Tags:["lobbyProp","tvText","tvSubtitle4","tvProp"],alignment:"center",text:'["",{"text":" "}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.0f,1.0f,1.0f]},background:16777215}
+summon text_display ~-.1 ~1.4 ~2.5 {Tags:["lobbyProp","tvText","tvSubtitle4","tvProp"],alignment:"center",text:["",{text:" "}],transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.0f,1.0f,1.0f]},background:16777215}

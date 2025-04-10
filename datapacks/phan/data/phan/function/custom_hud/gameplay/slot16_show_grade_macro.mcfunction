@@ -1,1 +1,1 @@
-$data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:'{"text":"\\$(digit)\\uF001\\uA930\\uF001\\$(letter)\\uF001\\uA930\\uF001\\uE904\\uF001","italic":false}'}
+$data merge entity 00000000-0000-0328-0000-000000000010 {CustomName:{text:"\$(digit)\uF001\uA930\uF001\$(letter)\uF001\uA930\uF001\uE904\uF001",italic:false}}

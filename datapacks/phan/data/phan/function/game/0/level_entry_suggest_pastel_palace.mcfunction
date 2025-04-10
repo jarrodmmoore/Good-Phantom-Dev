@@ -1,2 +1,2 @@
 scoreboard players set @s[gamemode=adventure] actionbarDelay 5
-title @s[scores={actionbarDelay=5..}] actionbar ["",{"translate":"gp.lobby.pastel_palace_recommended","fallback":"It's recommended you play Pastel Palace before the other dreams.","color":"white","with":[{"text":"Pastel Palace","color":"light_purple"}]}]
+title @s[scores={actionbarDelay=5..}] actionbar ["",{translate:"gp.lobby.pastel_palace_recommended","fallback":"It's recommended you play Pastel Palace before the other dreams.",color:"white",with:[{text:"Pastel Palace",color:"light_purple"}]}]

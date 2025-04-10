@@ -14,5 +14,5 @@ function phan:bgm/set_bgm_self
 scoreboard players set @s finishPos -1
 
 #message and sound
-tellraw @s ["",{"text":"\n"},{"translate":"gp.versus.times_up","color":"red"},{"text":"\n"}]
+tellraw @s ["",{text:"\n"},{translate:"gp.versus.times_up",color:"red"},{text:"\n"}]
 execute at @s run playsound minecraft:entity.iron_golem.death master @s ~ 100000 ~ 100000 1.35

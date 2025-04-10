@@ -40,7 +40,7 @@ execute if score #botChoseAltRoute value matches 1.. run scoreboard players oper
 scoreboard players set #botCheckTrapsAltRoute value 0
 
 #waypoint had NO directions on it? enter roam mode right away
-execute if score @s botTargetWaypoint matches 0 run tellraw @a[tag=phan_edit] ["",{"text":"[EDIT WARNING] Bot reached a waypoint with no valid outgoing directions.","color":"red"},{"text":" located "},{"score":{"name":"@s","objective":"location_x"}},{"text":" "},{"score":{"name":"@s","objective":"location_y"}},{"text":" "},{"score":{"name":"@s","objective":"location_z"}}]
+execute if score @s botTargetWaypoint matches 0 run tellraw @a[tag=phan_edit] ["",{text:"[EDIT WARNING] Bot reached a waypoint with no valid outgoing directions.",color:"red"},{text:" located "},{score:{name:"@s",objective:"location_x"}},{text:" "},{score:{name:"@s",objective:"location_y"}},{text:" "},{score:{name:"@s",objective:"location_z"}}]
 execute if score @s botTargetWaypoint matches 0 run return run function phan:bots/behaviors/1_follow_waypoints/switch_to_wander_logic_temporary
 
 #battle mode: refresh the counter for number of times we're allowed to re-route

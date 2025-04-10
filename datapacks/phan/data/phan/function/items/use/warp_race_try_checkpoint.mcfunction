@@ -5,7 +5,7 @@ $execute unless entity @e[type=marker,tag=checkpoint,tag=posCalc,scores={versusS
 
 #debug
 #$say tried with targetCheckpoint=$(targetCheckpoint) and minWarpDistance=$(minWarpDistance)
-#tellraw @a ["",{"text":"\ninRange="},{"score":{"name":"#inRange","objective":"value"}}]
+#tellraw @a ["",{text:"\ninRange="},{score:{name:"#inRange",objective:"value"}}]
 
 #found checkpoint? collect checkpoint and set respawn coords to its location
 tag @s add warpingPlayer

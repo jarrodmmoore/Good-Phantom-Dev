@@ -23,7 +23,7 @@ execute if score #teamSelectTest value matches ..1 run tag @s add playing
 execute if score #teamSelectTest value matches ..1 as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.activate master @s ~ 100000 ~ 100000 1.8
 execute if score #teamSelectTest value matches ..1 run function phan:game/2/start_game
 #multiplayer: snitch on who did this
-execute if score #freePlay value matches 0 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_mode","color":"white","with":[{"translate":"gp.mode_select.time_attack","color":"red"}]}]
+execute if score #freePlay value matches 0 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.time_attack",color:"red"}]}]
 execute if score #freePlay value matches 1 store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
 execute if score #freePlay value matches 1 store result storage phan:level_index act int 1 run scoreboard players get #freePlayAct value
 execute if score #freePlay value matches 1 if entity @s[type=player] if score #teamSelectTest value matches 2.. run function phan:game/2/snitch_on_player_choosing_act_score_attack with storage phan:level_index

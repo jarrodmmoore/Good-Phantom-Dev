@@ -1,5 +1,5 @@
 execute store result score #test value run clear @s feather[custom_data~{featherAssist:1b}] 0
-execute if score #test value matches 0 run give @s minecraft:feather[custom_name='["",{"translate":"gp.game.assist_feather","color":"#DDEEFF","italic":false}]',custom_data={featherAssist:1b}]
+execute if score #test value matches 0 run give @s minecraft:feather[custom_name=["",{translate:"gp.game.assist_feather",color:"#DDEEFF",italic:false}],custom_data={featherAssist:1b}]
 
 #give effects while we're here
 scoreboard players set #test value 0

@@ -48,5 +48,5 @@ execute if score #hudNodeHighest value matches 25.. run function phan:custom_hud
 #too many HUD nodes being used?
 #panic and kick all players back to the lobby
 #(assuming i did my job correctly, this can only happen if players try to force extra players into the game via commands)
-execute if score #hudNodesAvailable value matches 0 run tellraw @a ["",{"text":"[ ! ] Sorry, 33+ player multiplayer is not supported!\n(There are only 32 player nodes.)","color":"red"}]
+execute if score #hudNodesAvailable value matches 0 run tellraw @a ["",{text:"[ ! ] Sorry, 33+ player multiplayer is not supported!\n(There are only 32 player nodes.)",color:"red"}]
 execute if score #hudNodesAvailable value matches 0 run function phan:game/0/_0_init

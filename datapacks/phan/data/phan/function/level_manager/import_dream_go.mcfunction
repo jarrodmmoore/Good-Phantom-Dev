@@ -5,7 +5,7 @@ execute unless score #test4 value matches 0 run return run function phan:level_m
 
 #soft warning if map data is outdated
 $execute store result score #test4 value run data get storage $(filename):dream_data map_data_warn_version 1
-execute if score #mapDataVersion value <= #test4 value run tellraw @s ["",{"translate":"gp.level_manager.error.map_created_in_old_version","color":"red"}]
+execute if score #mapDataVersion value <= #test4 value run tellraw @s ["",{translate:"gp.level_manager.error.map_created_in_old_version",color:"red"}]
 
 #a comical amount of data
 $data modify storage phan_dream_$(level_id):dream_data selectable set from storage $(filename):dream_data selectable

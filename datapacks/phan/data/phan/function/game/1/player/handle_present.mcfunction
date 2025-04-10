@@ -21,51 +21,51 @@ execute if score @s presentGoal matches ..-1 run scoreboard players set #present
 
 #store chest display
 #normal
-execute if entity @s[scores={presentTime=1..,presentGoal=1..}] run data modify storage phan:data display.present.chest set value '[{"text":"\\uE821"}]'
+execute if entity @s[scores={presentTime=1..,presentGoal=1..}] run data modify storage phan:data display.present.chest set value [{text:"\uE821"}]
 #chest opened successfully
-execute if entity @s[scores={presentGoal=..0}] run data modify storage phan:data display.present.chest set value '[{"text":"\\uE822"}]'
+execute if entity @s[scores={presentGoal=..0}] run data modify storage phan:data display.present.chest set value [{text:"\uE822"}]
 #time's up, failed to open
-execute if score #5Hz value matches ..1 if entity @s[scores={presentTime=..0,presentGoal=1..}] run data modify storage phan:data display.present.chest set value '[{"text":"\\uE823"}]'
-execute if score #5Hz value matches 2.. if entity @s[scores={presentTime=..0,presentGoal=1..}] run data modify storage phan:data display.present.chest set value '[{"text":"\\uF021"}]'
+execute if score #5Hz value matches ..1 if entity @s[scores={presentTime=..0,presentGoal=1..}] run data modify storage phan:data display.present.chest set value [{text:"\uE823"}]
+execute if score #5Hz value matches 2.. if entity @s[scores={presentTime=..0,presentGoal=1..}] run data modify storage phan:data display.present.chest set value [{text:"\uF021"}]
 
 #store digits A
-execute if score #presentGoalA value matches 0 if score @s presentGoal matches ..9 run data modify storage phan:data display.present.a set value '[{"text":"\\uF020"}]'
-execute if score #presentGoalA value matches 0 if score @s presentGoal matches 10.. run data modify storage phan:data display.present.a set value '[{"text":"\\uE800"}]'
-execute if score #presentGoalA value matches 1 run data modify storage phan:data display.present.a set value '[{"text":"\\uE801"}]'
-execute if score #presentGoalA value matches 2 run data modify storage phan:data display.present.a set value '[{"text":"\\uE802"}]'
-execute if score #presentGoalA value matches 3 run data modify storage phan:data display.present.a set value '[{"text":"\\uE803"}]'
-execute if score #presentGoalA value matches 4 run data modify storage phan:data display.present.a set value '[{"text":"\\uE804"}]'
-execute if score #presentGoalA value matches 5 run data modify storage phan:data display.present.a set value '[{"text":"\\uE805"}]'
-execute if score #presentGoalA value matches 6 run data modify storage phan:data display.present.a set value '[{"text":"\\uE806"}]'
-execute if score #presentGoalA value matches 7 run data modify storage phan:data display.present.a set value '[{"text":"\\uE807"}]'
-execute if score #presentGoalA value matches 8 run data modify storage phan:data display.present.a set value '[{"text":"\\uE808"}]'
-execute if score #presentGoalA value matches 9.. run data modify storage phan:data display.present.a set value '[{"text":"\\uE809"}]'
+execute if score #presentGoalA value matches 0 if score @s presentGoal matches ..9 run data modify storage phan:data display.present.a set value [{text:"\uF020"}]
+execute if score #presentGoalA value matches 0 if score @s presentGoal matches 10.. run data modify storage phan:data display.present.a set value [{text:"\uE800"}]
+execute if score #presentGoalA value matches 1 run data modify storage phan:data display.present.a set value [{text:"\uE801"}]
+execute if score #presentGoalA value matches 2 run data modify storage phan:data display.present.a set value [{text:"\uE802"}]
+execute if score #presentGoalA value matches 3 run data modify storage phan:data display.present.a set value [{text:"\uE803"}]
+execute if score #presentGoalA value matches 4 run data modify storage phan:data display.present.a set value [{text:"\uE804"}]
+execute if score #presentGoalA value matches 5 run data modify storage phan:data display.present.a set value [{text:"\uE805"}]
+execute if score #presentGoalA value matches 6 run data modify storage phan:data display.present.a set value [{text:"\uE806"}]
+execute if score #presentGoalA value matches 7 run data modify storage phan:data display.present.a set value [{text:"\uE807"}]
+execute if score #presentGoalA value matches 8 run data modify storage phan:data display.present.a set value [{text:"\uE808"}]
+execute if score #presentGoalA value matches 9.. run data modify storage phan:data display.present.a set value [{text:"\uE809"}]
 
 #store digit B
-execute if score #presentGoalB value matches -1 run data modify storage phan:data display.present.b set value '[{"text":"\\uF020"}]'
-execute if score #presentGoalB value matches 0 run data modify storage phan:data display.present.b set value '[{"text":"\\uE800"}]'
-execute if score #presentGoalB value matches 1 run data modify storage phan:data display.present.b set value '[{"text":"\\uE801"}]'
-execute if score #presentGoalB value matches 2 run data modify storage phan:data display.present.b set value '[{"text":"\\uE802"}]'
-execute if score #presentGoalB value matches 3 run data modify storage phan:data display.present.b set value '[{"text":"\\uE803"}]'
-execute if score #presentGoalB value matches 4 run data modify storage phan:data display.present.b set value '[{"text":"\\uE804"}]'
-execute if score #presentGoalB value matches 5 run data modify storage phan:data display.present.b set value '[{"text":"\\uE805"}]'
-execute if score #presentGoalB value matches 6 run data modify storage phan:data display.present.b set value '[{"text":"\\uE806"}]'
-execute if score #presentGoalB value matches 7 run data modify storage phan:data display.present.b set value '[{"text":"\\uE807"}]'
-execute if score #presentGoalB value matches 8 run data modify storage phan:data display.present.b set value '[{"text":"\\uE808"}]'
-execute if score #presentGoalB value matches 9.. run data modify storage phan:data display.present.b set value '[{"text":"\\uE809"}]'
+execute if score #presentGoalB value matches -1 run data modify storage phan:data display.present.b set value [{text:"\uF020"}]
+execute if score #presentGoalB value matches 0 run data modify storage phan:data display.present.b set value [{text:"\uE800"}]
+execute if score #presentGoalB value matches 1 run data modify storage phan:data display.present.b set value [{text:"\uE801"}]
+execute if score #presentGoalB value matches 2 run data modify storage phan:data display.present.b set value [{text:"\uE802"}]
+execute if score #presentGoalB value matches 3 run data modify storage phan:data display.present.b set value [{text:"\uE803"}]
+execute if score #presentGoalB value matches 4 run data modify storage phan:data display.present.b set value [{text:"\uE804"}]
+execute if score #presentGoalB value matches 5 run data modify storage phan:data display.present.b set value [{text:"\uE805"}]
+execute if score #presentGoalB value matches 6 run data modify storage phan:data display.present.b set value [{text:"\uE806"}]
+execute if score #presentGoalB value matches 7 run data modify storage phan:data display.present.b set value [{text:"\uE807"}]
+execute if score #presentGoalB value matches 8 run data modify storage phan:data display.present.b set value [{text:"\uE808"}]
+execute if score #presentGoalB value matches 9.. run data modify storage phan:data display.present.b set value [{text:"\uE809"}]
 
 #show on screen?
-execute if score #percent value matches 90.. run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE820 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 80..89 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE819 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 70..79 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE818 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 60..69 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE817 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 50..59 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE816 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 40..49 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE815 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 30..39 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE814 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 20..29 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE813 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 10..19 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE812 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches 0..9 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE811 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
-execute if score #percent value matches ..-1 run title @a[tag=tellMe] subtitle ["",{"text":"\uF005\uE810 "},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
+execute if score #percent value matches 90.. run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE820 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 80..89 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE819 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 70..79 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE818 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 60..69 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE817 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 50..59 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE816 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 40..49 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE815 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 30..39 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE814 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 20..29 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE813 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 10..19 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE812 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches 0..9 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE811 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
+execute if score #percent value matches ..-1 run title @a[tag=tellMe] subtitle ["",{text:"\uF005\uE810 "},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
 
 #the brightness of our present entity is controlled by #percent
 scoreboard players operation #findID value = @s playerID

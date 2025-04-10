@@ -2,8 +2,8 @@
 
 
 #don't create duplicate data!
-execute if score @s levelUID matches -2147483648..2147483647 run return run tellraw @a ["",{"text":"[ ! ] The data for this dream has already been created!","color":"red"}]
-execute unless score @s nearPlayer matches -2147483648..2147483647 run return run tellraw @a ["",{"text":"[ ! ] Armor stand is missing a level index! (score=nearPlayer)","color":"red"}]
+execute if score @s levelUID matches -2147483648..2147483647 run return run tellraw @a ["",{text:"[ ! ] The data for this dream has already been created!",color:"red"}]
+execute unless score @s nearPlayer matches -2147483648..2147483647 run return run tellraw @a ["",{text:"[ ! ] Armor stand is missing a level index! (score=nearPlayer)",color:"red"}]
 #=====
 
 #assign UID so we can reference an associated storage

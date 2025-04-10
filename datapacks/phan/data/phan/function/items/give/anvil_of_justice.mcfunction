@@ -1,4 +1,4 @@
-$give @s minecraft:anvil[custom_name='{"translate":"gp.item.anvil_of_justice","color":"gray","bold":true,"italic":false}',custom_data={item:1b,rightclick:1b,anvilOfJustice:1b,stay:1b}] $(count)
+$give @s minecraft:anvil[custom_name={translate:"gp.item.anvil_of_justice",color:"gray",bold:true,italic:false},custom_data={item:1b,rightclick:1b,anvilOfJustice:1b,stay:1b}] $(count)
 
 scoreboard players set #cooldownAnvil value 700
 execute if score #mandateAnvil value matches 1.. run tag @s add pickedBonusItem

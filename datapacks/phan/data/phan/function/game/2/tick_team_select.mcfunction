@@ -40,4 +40,4 @@ execute if score #10Hz value matches 0 as @e[type=item_display,tag=offerTrophy,l
 execute as @a if items entity @s hotbar.* *[custom_data~{modeSelectCabin:1b}] at @s run function phan:game/2/try_return_to_cabin
 
 #return to cabin thing must always exist!
-execute if score #gameState value matches 2 unless entity @e[type=item,tag=modeSelect] run summon item 191 -29 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":'{"translate":"gp.mode_select.return_to_cabin","color":"dark_green","italic":false}',"minecraft:hide_additional_tooltip":{},"minecraft:custom_data":{modeSelectCabin:1b}}}}
+execute if score #gameState value matches 2 unless entity @e[type=item,tag=modeSelect] run summon item 191 -29 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":{translate:"gp.mode_select.return_to_cabin",color:"dark_green",italic:false},"minecraft:custom_data":{modeSelectCabin:1b}}}}

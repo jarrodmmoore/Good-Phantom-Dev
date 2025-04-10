@@ -1,5 +1,5 @@
 #0001869f-0000-0000-0000-000000000001
-summon area_effect_cloud ~ ~ ~ {Duration:1,UUID:[I;99999,0,0,1]}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:1,UUID:[I;99999,0,0,1]}
 tp 0001869f-0000-0000-0000-000000000001 ~ ~ ~ ~ ~
 
 #find difference between the player's facing angle and the angle they'd need to face to match the execution context of this function

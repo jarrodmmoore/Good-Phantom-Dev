@@ -8,7 +8,7 @@
 
 #=====
 # NAME
-data modify block ~ ~ ~ front_text.messages[0] set value '{"nbt":"tag.name","storage":"phan:data","interpret":true}'
+data modify block ~ ~ ~ front_text.messages[0] set value {nbt:"tag.name",storage:"phan:data",interpret:true}
 #=====
 
 #=====
@@ -32,21 +32,21 @@ scoreboard players operation #showTimeMin value = #arg value
 scoreboard players operation #showTimeMin value /= #1200 value
 
 #now store it
-execute if score #showTimeSec value matches ..9 run data modify storage phan:data tag.score set value '["",{"score":{"name":"#showTimeMin","objective":"value"},"color":"white"},{"text":":0","color":"white"},{"score":{"name":"#showTimeSec","objective":"value"},"color":"white"},{"text":".","color":"white"},{"score":{"name":"#showTimeMsec","objective":"value"},"color":"white"},{"score":{"name":"#showTimeMsec2","objective":"value"},"color":"white"}]'
-execute if score #showTimeSec value matches 10.. run data modify storage phan:data tag.score set value '["",{"score":{"name":"#showTimeMin","objective":"value"},"color":"white"},{"text":":","color":"white"},{"score":{"name":"#showTimeSec","objective":"value"},"color":"white"},{"text":".","color":"white"},{"score":{"name":"#showTimeMsec","objective":"value"},"color":"white"},{"score":{"name":"#showTimeMsec2","objective":"value"},"color":"white"}]'
+execute if score #showTimeSec value matches ..9 run data modify storage phan:data tag.score set value ["",{score:{name:"#showTimeMin",objective:"value"},color:"white"},{text:":0",color:"white"},{score:{name:"#showTimeSec",objective:"value"},color:"white"},{text:".",color:"white"},{score:{name:"#showTimeMsec",objective:"value"},color:"white"},{score:{name:"#showTimeMsec2",objective:"value"},color:"white"}]
+execute if score #showTimeSec value matches 10.. run data modify storage phan:data tag.score set value ["",{score:{name:"#showTimeMin",objective:"value"},color:"white"},{text:":",color:"white"},{score:{name:"#showTimeSec",objective:"value"},color:"white"},{text:".",color:"white"},{score:{name:"#showTimeMsec",objective:"value"},color:"white"},{score:{name:"#showTimeMsec2",objective:"value"},color:"white"}]
 
 #now put on sign
-data modify block ~ ~ ~ front_text.messages[1] set value '{"nbt":"tag.score","storage":"phan:data","interpret":true}'
+data modify block ~ ~ ~ front_text.messages[1] set value {nbt:"tag.score",storage:"phan:data",interpret:true}
 #=====
 
 #=====
 # RANK
 
-execute if score #inputRank value matches ..1 run data modify storage phan:data tag.rank set value '{"text":"\\uE011","bold":false,"color":"white"}'
-execute if score #inputRank value matches 2 run data modify storage phan:data tag.rank set value '{"text":"\\uE010","bold":false,"color":"white"}'
-execute if score #inputRank value matches 3 run data modify storage phan:data tag.rank set value '{"text":"\\uE009","bold":false,"color":"white"}'
-execute if score #inputRank value matches 4 run data modify storage phan:data tag.rank set value '{"text":"\\uE008","bold":false,"color":"white"}'
-execute if score #inputRank value matches 5.. run data modify storage phan:data tag.rank set value '{"text":"","bold":false,"color":"white"}'
+execute if score #inputRank value matches ..1 run data modify storage phan:data tag.rank set value {text:"\uE011",bold:false,color:"white"}
+execute if score #inputRank value matches 2 run data modify storage phan:data tag.rank set value {text:"\uE010",bold:false,color:"white"}
+execute if score #inputRank value matches 3 run data modify storage phan:data tag.rank set value {text:"\uE009",bold:false,color:"white"}
+execute if score #inputRank value matches 4 run data modify storage phan:data tag.rank set value {text:"\uE008",bold:false,color:"white"}
+execute if score #inputRank value matches 5.. run data modify storage phan:data tag.rank set value {text:"",bold:false,color:"white"}
 
-data modify block ~ ~ ~ front_text.messages[2] set value '{"nbt":"tag.rank","storage":"phan:data","interpret":true}'
+data modify block ~ ~ ~ front_text.messages[2] set value {nbt:"tag.rank",storage:"phan:data",interpret:true}
 #=====

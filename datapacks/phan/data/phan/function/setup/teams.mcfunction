@@ -16,14 +16,14 @@ team modify colorRed color red
 team add colorPurple
 team modify colorPurple color dark_purple
 team add botDisplayVEasy
-team modify botDisplayVEasy prefix ["",{"text":"\uE038 ","color":"white"}]
+team modify botDisplayVEasy prefix ["",{text:"\uE038 ",color:"white"}]
 team add botDisplayEasy
-team modify botDisplayEasy prefix ["",{"text":"\uE039 ","color":"white"}]
+team modify botDisplayEasy prefix ["",{text:"\uE039 ",color:"white"}]
 team add botDisplayNormal
-team modify botDisplayNormal prefix ["",{"text":"\uE040 ","color":"white"}]
+team modify botDisplayNormal prefix ["",{text:"\uE040 ",color:"white"}]
 team add botDisplayHard
-team modify botDisplayHard prefix ["",{"text":"\uE041 ","color":"white"}]
+team modify botDisplayHard prefix ["",{text:"\uE041 ",color:"white"}]
 team add botDisplayTryhard
-team modify botDisplayTryhard prefix ["",{"text":"\uE042 ","color":"white"}]
+team modify botDisplayTryhard prefix ["",{text:"\uE042 ",color:"white"}]
 team add botDisplayTryharder
-team modify botDisplayTryharder prefix ["",{"text":"\uE043 ","color":"white"}]
+team modify botDisplayTryharder prefix ["",{text:"\uE043 ",color:"white"}]

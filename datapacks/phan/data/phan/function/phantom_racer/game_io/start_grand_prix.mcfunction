@@ -12,7 +12,7 @@ function phan:phantom_racer/game_io/gp_get_max_round_count with storage phan:gp_
 #multiplayer: snitch on who did this
 execute store result score #test value run execute if entity @a[tag=doneWithIntro]
 execute as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers if entity @s[tag=debugMultiplayer] run scoreboard players set #test value 2
-execute if score #test value matches 2.. as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.phantom_racer.started_grand_prix","color":"white"}]
+execute if score #test value matches 2.. as @e[type=armor_stand,tag=gameControllerPlayerHolder,distance=..10] on passengers run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.phantom_racer.started_grand_prix",color:"white"}]
 
 #clear bots and re-summon based on chosen class
 function phan:game/2/bots/delete_all_bots

@@ -19,5 +19,5 @@ execute as @e[sort=random,type=skeleton,tag=needSpread] at @s run function phan:
 tag @e[type=skeleton,tag=needSpread] remove needSpread
 
 #still here? announce it
-execute as @e[type=area_effect_cloud,tag=podiumData,scores={editArg1=2}] if score @s versusPoints matches 1 run tellraw @a[tag=doneWithIntro] ["",{"selector":"@s"},{"translate":"gp.versus.player_got_2nd_single","color":"#DDDDDD","bold":true,"with":[{"score":{"name":"@s","objective":"versusPoints"}}]}]
-execute as @e[type=area_effect_cloud,tag=podiumData,scores={editArg1=2}] unless score @s versusPoints matches 1 run tellraw @a[tag=doneWithIntro] ["",{"selector":"@s"},{"translate":"gp.versus.player_got_2nd","color":"#DDDDDD","bold":true,"with":[{"score":{"name":"@s","objective":"versusPoints"}}]}]
+execute as @e[type=area_effect_cloud,tag=podiumData,scores={editArg1=2}] if score @s versusPoints matches 1 run tellraw @a[tag=doneWithIntro] ["",{selector:"@s"},{translate:"gp.versus.player_got_2nd_single",color:"#DDDDDD",bold:true,with:[{score:{name:"@s",objective:"versusPoints"}}]}]
+execute as @e[type=area_effect_cloud,tag=podiumData,scores={editArg1=2}] unless score @s versusPoints matches 1 run tellraw @a[tag=doneWithIntro] ["",{selector:"@s"},{translate:"gp.versus.player_got_2nd",color:"#DDDDDD",bold:true,with:[{score:{name:"@s",objective:"versusPoints"}}]}]

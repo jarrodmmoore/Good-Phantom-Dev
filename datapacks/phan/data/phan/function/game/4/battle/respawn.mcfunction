@@ -27,7 +27,7 @@ execute at @s run particle instant_effect ~ ~1 ~ 0.8 0.8 0.8 1 60 force
 execute unless score #playerDied value matches 1 at @s run playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 3 2
 execute if score #playerDied value matches 1 run effect give @s blindness 1 1 true
 execute if score #playerDied value matches 1 run title @s subtitle [""]
-execute if score #playerDied value matches 1 run title @s title ["",{"translate":"gp.versus.you_died","color":"red","bold":true}]
+execute if score #playerDied value matches 1 run title @s title ["",{translate:"gp.versus.you_died",color:"red",bold:true}]
 execute if score #playerDied value matches 1 at @s run playsound minecraft:entity.phantom.death master @s ~ 100000 ~ 100000
 
 #count how many times we've died without getting a KO

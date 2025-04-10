@@ -8,4 +8,4 @@ execute if score #2sec value matches 0 at @s run function phan:game/1/spectator/
 function phan:game/1/spectator/spectator_inherit_from_target
 
 #title on actionbar
-title @s[scores={actionbarDelay=..0}] actionbar ["",{"translate":"gp.game.spectator_viewpoint","with":[{"selector":"@a[limit=1,tag=specTarget]","color":"aqua"}],"color":"white"}]
+title @s[scores={actionbarDelay=..0}] actionbar ["",{translate:"gp.game.spectator_viewpoint",with:[{selector:"@a[limit=1,tag=specTarget]",color:"aqua"}],color:"white"}]

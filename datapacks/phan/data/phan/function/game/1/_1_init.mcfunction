@@ -62,7 +62,7 @@ scoreboard players set @a[tag=playing] pTimerGoal 0
 
 #multiplayer score show
 scoreboard objectives remove scoreSidebar
-scoreboard objectives add scoreSidebar dummy ["",{"translate":"gp.game.score","bold":true}]
+scoreboard objectives add scoreSidebar dummy ["",{translate:"gp.game.score",bold:true}]
 
 #check if we're playing multiplayer
 execute store result score #test value run execute if entity @a[tag=playing,tag=doneWithIntro]

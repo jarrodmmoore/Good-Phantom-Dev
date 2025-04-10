@@ -29,9 +29,9 @@ scoreboard players set #best value -1
 
 #now print it
 execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.note_block.hat master @s ~ 100000 ~ 100000 2
-tellraw @a[tag=doneWithIntro] ["",{"text":" "}]
-tellraw @a[tag=doneWithIntro] ["",{"translate":"gp.game.act_number","with":[{"text":"3","bold":true,"italic":true}],"bold":true,"italic":true}]
-execute as @a[tag=playerReservation,scores={multiplayerRank=1}] run tellraw @a[tag=doneWithIntro] ["",{"text":"➀","color":"yellow","bold":false},{"text":" -- "},{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea3"},"color":"yellow"}],"color":"yellow"}]
-execute as @a[tag=playerReservation,scores={multiplayerRank=2}] run tellraw @a[tag=doneWithIntro] ["",{"text":"➁","color":"white","bold":false},{"text":" -- "},{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea3"},"color":"white"}],"color":"white"}]
-execute as @a[tag=playerReservation,scores={multiplayerRank=3}] run tellraw @a[tag=doneWithIntro] ["",{"text":"➂","color":"white","bold":false},{"text":" -- "},{"selector":"@s","color":"aqua"},{"text":" -- "},{"translate":"gp.game.points","with":[{"score":{"name":"@s","objective":"scoreArea3"},"color":"white"}],"color":"white"}]
-tellraw @a[tag=doneWithIntro] ["",{"text":" "}]
+tellraw @a[tag=doneWithIntro] ["",{text:" "}]
+tellraw @a[tag=doneWithIntro] ["",{translate:"gp.game.act_number",with:[{text:"3",bold:true,italic:true}],bold:true,italic:true}]
+execute as @a[tag=playerReservation,scores={multiplayerRank=1}] run tellraw @a[tag=doneWithIntro] ["",{text:"➀",color:"yellow",bold:false},{text:" -- "},{selector:"@s",color:"aqua"},{text:" -- "},{translate:"gp.game.points",with:[{score:{name:"@s",objective:"scoreArea3"},color:"yellow"}],color:"yellow"}]
+execute as @a[tag=playerReservation,scores={multiplayerRank=2}] run tellraw @a[tag=doneWithIntro] ["",{text:"➁",color:"white",bold:false},{text:" -- "},{selector:"@s",color:"aqua"},{text:" -- "},{translate:"gp.game.points",with:[{score:{name:"@s",objective:"scoreArea3"},color:"white"}],color:"white"}]
+execute as @a[tag=playerReservation,scores={multiplayerRank=3}] run tellraw @a[tag=doneWithIntro] ["",{text:"➂",color:"white",bold:false},{text:" -- "},{selector:"@s",color:"aqua"},{text:" -- "},{translate:"gp.game.points",with:[{score:{name:"@s",objective:"scoreArea3"},color:"white"}],color:"white"}]
+tellraw @a[tag=doneWithIntro] ["",{text:" "}]

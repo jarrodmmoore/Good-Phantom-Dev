@@ -13,7 +13,7 @@ execute if score @s pGameTime matches 1000001 if score @s pPenaltyTime matches 1
 execute if score @s pGameTime matches 1000001 unless score @s pPenaltyTime matches 1.. as @a[tag=tellMe] at @s run playsound minecraft:custom_sfx/alarm_bell master @s ~ 100000 ~ 100000
 execute if score @s pGameTime matches 1000001 run gamemode spectator @s
 execute if score @s pGameTime matches 1000001 run scoreboard players set @s scoreCurrent 0
-execute if score @s pGameTime matches 1000001 run tellraw @a[tag=tellMe] ["",{"text":"\n"},{"translate":"gp.game.time_over","italic":true},{"text":"\n"}]
+execute if score @s pGameTime matches 1000001 run tellraw @a[tag=tellMe] ["",{text:"\n"},{translate:"gp.game.time_over",italic:true},{text:"\n"}]
 
 #record score right now
 execute if score @s pGameTime matches 1000001 run function phan:game/1/dream_failed_multiplayer_record_score

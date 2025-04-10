@@ -16,7 +16,7 @@ scoreboard players set @s pShowHUD 1
 scoreboard players set #botsOnly value 0
 
 #hi
-tellraw @s ["",{"translate":"gp.misc.playing","color":"aqua","italic":true}]
+tellraw @s ["",{translate:"gp.misc.playing",color:"aqua",italic:true}]
 execute at @s run playsound minecraft:block.note_block.pling master @s ~ 100000 ~ 100000 2
 
 #respawn at one of the spawnpoints, saved when we said GO!

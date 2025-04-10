@@ -19,36 +19,36 @@ execute if score #enemiesAlive value matches ..-1 run scoreboard players set #pr
 
 #store enemy head display
 #normal
-data modify storage phan:data display.present.chest set value '[{"text":"\\uE824"}]'
+data modify storage phan:data display.present.chest set value [{text:"\uE824"}]
 
 #store digits A
-execute if score #presentGoalA value matches 0 if score @s presentGoal matches ..9 run data modify storage phan:data display.present.a set value '[{"text":"\\uF020"}]'
-execute if score #presentGoalA value matches 0 if score @s presentGoal matches 10.. run data modify storage phan:data display.present.a set value '[{"text":"\\uE800"}]'
-execute if score #presentGoalA value matches 1 run data modify storage phan:data display.present.a set value '[{"text":"\\uE801"}]'
-execute if score #presentGoalA value matches 2 run data modify storage phan:data display.present.a set value '[{"text":"\\uE802"}]'
-execute if score #presentGoalA value matches 3 run data modify storage phan:data display.present.a set value '[{"text":"\\uE803"}]'
-execute if score #presentGoalA value matches 4 run data modify storage phan:data display.present.a set value '[{"text":"\\uE804"}]'
-execute if score #presentGoalA value matches 5 run data modify storage phan:data display.present.a set value '[{"text":"\\uE805"}]'
-execute if score #presentGoalA value matches 6 run data modify storage phan:data display.present.a set value '[{"text":"\\uE806"}]'
-execute if score #presentGoalA value matches 7 run data modify storage phan:data display.present.a set value '[{"text":"\\uE807"}]'
-execute if score #presentGoalA value matches 8 run data modify storage phan:data display.present.a set value '[{"text":"\\uE808"}]'
-execute if score #presentGoalA value matches 9.. run data modify storage phan:data display.present.a set value '[{"text":"\\uE809"}]'
+execute if score #presentGoalA value matches 0 if score @s presentGoal matches ..9 run data modify storage phan:data display.present.a set value [{text:"\uF020"}]
+execute if score #presentGoalA value matches 0 if score @s presentGoal matches 10.. run data modify storage phan:data display.present.a set value [{text:"\uE800"}]
+execute if score #presentGoalA value matches 1 run data modify storage phan:data display.present.a set value [{text:"\uE801"}]
+execute if score #presentGoalA value matches 2 run data modify storage phan:data display.present.a set value [{text:"\uE802"}]
+execute if score #presentGoalA value matches 3 run data modify storage phan:data display.present.a set value [{text:"\uE803"}]
+execute if score #presentGoalA value matches 4 run data modify storage phan:data display.present.a set value [{text:"\uE804"}]
+execute if score #presentGoalA value matches 5 run data modify storage phan:data display.present.a set value [{text:"\uE805"}]
+execute if score #presentGoalA value matches 6 run data modify storage phan:data display.present.a set value [{text:"\uE806"}]
+execute if score #presentGoalA value matches 7 run data modify storage phan:data display.present.a set value [{text:"\uE807"}]
+execute if score #presentGoalA value matches 8 run data modify storage phan:data display.present.a set value [{text:"\uE808"}]
+execute if score #presentGoalA value matches 9.. run data modify storage phan:data display.present.a set value [{text:"\uE809"}]
 
 #store digit B
-execute if score #presentGoalB value matches -1 run data modify storage phan:data display.present.b set value '[{"text":"\\uF020"}]'
-execute if score #presentGoalB value matches 0 run data modify storage phan:data display.present.b set value '[{"text":"\\uE800"}]'
-execute if score #presentGoalB value matches 1 run data modify storage phan:data display.present.b set value '[{"text":"\\uE801"}]'
-execute if score #presentGoalB value matches 2 run data modify storage phan:data display.present.b set value '[{"text":"\\uE802"}]'
-execute if score #presentGoalB value matches 3 run data modify storage phan:data display.present.b set value '[{"text":"\\uE803"}]'
-execute if score #presentGoalB value matches 4 run data modify storage phan:data display.present.b set value '[{"text":"\\uE804"}]'
-execute if score #presentGoalB value matches 5 run data modify storage phan:data display.present.b set value '[{"text":"\\uE805"}]'
-execute if score #presentGoalB value matches 6 run data modify storage phan:data display.present.b set value '[{"text":"\\uE806"}]'
-execute if score #presentGoalB value matches 7 run data modify storage phan:data display.present.b set value '[{"text":"\\uE807"}]'
-execute if score #presentGoalB value matches 8 run data modify storage phan:data display.present.b set value '[{"text":"\\uE808"}]'
-execute if score #presentGoalB value matches 9.. run data modify storage phan:data display.present.b set value '[{"text":"\\uE809"}]'
+execute if score #presentGoalB value matches -1 run data modify storage phan:data display.present.b set value [{text:"\uF020"}]
+execute if score #presentGoalB value matches 0 run data modify storage phan:data display.present.b set value [{text:"\uE800"}]
+execute if score #presentGoalB value matches 1 run data modify storage phan:data display.present.b set value [{text:"\uE801"}]
+execute if score #presentGoalB value matches 2 run data modify storage phan:data display.present.b set value [{text:"\uE802"}]
+execute if score #presentGoalB value matches 3 run data modify storage phan:data display.present.b set value [{text:"\uE803"}]
+execute if score #presentGoalB value matches 4 run data modify storage phan:data display.present.b set value [{text:"\uE804"}]
+execute if score #presentGoalB value matches 5 run data modify storage phan:data display.present.b set value [{text:"\uE805"}]
+execute if score #presentGoalB value matches 6 run data modify storage phan:data display.present.b set value [{text:"\uE806"}]
+execute if score #presentGoalB value matches 7 run data modify storage phan:data display.present.b set value [{text:"\uE807"}]
+execute if score #presentGoalB value matches 8 run data modify storage phan:data display.present.b set value [{text:"\uE808"}]
+execute if score #presentGoalB value matches 9.. run data modify storage phan:data display.present.b set value [{text:"\uE809"}]
 
 #show on screen?
-title @a[tag=tellMe] subtitle ["",{"text":"\uF005"},{"nbt":"display.present.chest","storage":"phan:data","interpret":true},{"nbt":"display.present.a","storage":"phan:data","interpret":true},{"nbt":"display.present.b","storage":"phan:data","interpret":true}]
+title @a[tag=tellMe] subtitle ["",{text:"\uF005"},{nbt:"display.present.chest",storage:"phan:data",interpret:true},{nbt:"display.present.a",storage:"phan:data",interpret:true},{nbt:"display.present.b",storage:"phan:data",interpret:true}]
 
 #no enemies left? get rid of display
 execute if score #enemiesAlive value matches ..0 run title @a[tag=tellMe] subtitle [""]

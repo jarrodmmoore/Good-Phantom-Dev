@@ -31,7 +31,7 @@ execute if score #grandPrixActive value matches 1..4 run scoreboard players oper
 execute if score #grandPrixActive value matches 5.. run scoreboard players set #math value 0
 
 #inform players if trophy got blocked by assist mode
-execute if score #gameState value matches 5 if score #math value matches 1.. if score #assist_enabled_portalrace value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.trophies_will_not_be_awarded","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
+execute if score #gameState value matches 5 if score #math value matches 1.. if score #assist_enabled_portalrace value matches 1.. run tellraw @s ["",{text:"\n"},{text:"[ ! ]",color:"#DD33FF",bold:true},{text:" "},{translate:"gp.assist.info.trophies_will_not_be_awarded",with:[{translate:"gp.assist.assist_mode",color:"#DD33FF",bold:false,italic:false}],bold:false,italic:false},{text:"\n"}]
 
 #never offer trophy if assist mode enabled
 execute if score #assist_enabled_portalrace value matches 1.. run scoreboard players set #math value 0

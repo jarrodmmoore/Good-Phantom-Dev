@@ -39,7 +39,7 @@ execute if score #gameTime value matches 100 run scoreboard objectives setdispla
 execute if score #gameTime value matches 100..120 as @a[tag=doneWithIntro] run function phan:levels/_index_title
 
 #show "practice mode" if we're solo
-execute if score #gameTime value matches 160 if score #botCount value matches ..0 if score #hudPeakPlayers value matches ..1 run title @a[tag=doneWithIntro,tag=playing] actionbar ["",{"translate":"gp.game.practice_mode"}]
+execute if score #gameTime value matches 160 if score #botCount value matches ..0 if score #hudPeakPlayers value matches ..1 run title @a[tag=doneWithIntro,tag=playing] actionbar ["",{translate:"gp.game.practice_mode"}]
 
 #let spectators know when we're done loading
 execute if score #gameTime value matches 80.. run scoreboard players set @a specDoneLoading 600

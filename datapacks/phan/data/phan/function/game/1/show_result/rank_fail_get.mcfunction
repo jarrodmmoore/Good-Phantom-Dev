@@ -7,7 +7,7 @@ function phan:player/tell_spectators
 
 #:(
 playsound minecraft:block.note_block.didgeridoo master @a[tag=tellMe] ~ 100000 ~ 100000 0.65
-title @a[tag=tellMe] title ["",{"text":"| ","bold":false,"color":"white"},{"text":"F","bold":true,"color":"#404040"},{"text":" |","bold":false,"color":"white"}]
+title @a[tag=tellMe] title ["",{text:"| ",bold:false,color:"white"},{text:"F",bold:true,color:"#404040"},{text:" |",bold:false,color:"white"}]
 tag @a[tag=tellMe] remove tellMe
 
 #count number of times this has happened in a row

@@ -1,10 +1,10 @@
 #messages
 
 #success! stole item
-execute if entity @s[type=player] run tellraw @s ["",{"text":"\n"},{"translate":"gp.item.enderman_thief_steal_item_success","with":[{"selector":"@e[tag=gotRobbed]"}]},{"text":"\n"}]
+execute if entity @s[type=player] run tellraw @s ["",{text:"\n"},{translate:"gp.item.enderman_thief_steal_item_success",with:[{selector:"@e[tag=gotRobbed]"}]},{text:"\n"}]
 
 #oh no! item stolen
-tellraw @a[tag=gotRobbed] ["",{"text":"\n"},{"translate":"gp.item.enderman_thief_stolen_item","with":[{"selector":"@s"}]},{"text":"\n"}]
+tellraw @a[tag=gotRobbed] ["",{text:"\n"},{translate:"gp.item.enderman_thief_stolen_item",with:[{selector:"@s"}]},{text:"\n"}]
 
 #use quantity we just calculated
 execute store result storage phan:give_item_args count int 1 run scoreboard players get #stealQty value

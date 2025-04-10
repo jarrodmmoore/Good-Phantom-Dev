@@ -11,9 +11,9 @@ execute as 0001e453-0000-0000-0000-000000000005 store result score #rot_pitch va
 kill 0001e453-0000-0000-0000-000000000005
 kill 0001e453-0000-0000-0000-000000000006
 
-#tellraw @a ["",{"text":" "}]
-#tellraw @a ["",{"score":{"name":"#rot_yaw","objective":"value"}}]
-#tellraw @a ["",{"score":{"name":"#rot_pitch","objective":"value"}}]
+#tellraw @a ["",{text:" "}]
+#tellraw @a ["",{score:{name:"#rot_yaw",objective:"value"}}]
+#tellraw @a ["",{score:{name:"#rot_pitch",objective:"value"}}]
 
 #hold that pose!
 #adopt rotation

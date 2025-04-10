@@ -20,7 +20,7 @@ execute if score @s pGameTime matches ..-101 run scoreboard players set @s pGame
 execute if score @s pGameTime matches 60 run function phan:game/1/start_loading_area
 
 #title
-execute if score @s pGameTime matches 80..299 run title @s actionbar ["",{"translate":"gp.game.get_ready","italic":true}]
+execute if score @s pGameTime matches 80..299 run title @s actionbar ["",{translate:"gp.game.get_ready",italic:true}]
 
 #don't let game music start while this is running!
 execute if score @s musicTime matches ..19 run scoreboard players set @s musicTime 20

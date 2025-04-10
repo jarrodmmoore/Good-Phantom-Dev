@@ -11,7 +11,7 @@ spectate @e[limit=1,tag=specTargetObj,type=armor_stand] @s
 function phan:game/1/spectator/spectator_inherit_from_target
 
 #title on actionbar
-title @s[scores={actionbarDelay=..0}] actionbar ["",{"translate":"gp.game.spectator_viewpoint","with":[{"selector":"@a[limit=1,tag=specTarget]","color":"aqua"}],"color":"white"}]
+title @s[scores={actionbarDelay=..0}] actionbar ["",{translate:"gp.game.spectator_viewpoint",with:[{selector:"@a[limit=1,tag=specTarget]",color:"aqua"}],color:"white"}]
 
 #spectator buck check
 execute if score #5Hz value matches 1 run function phan:game/1/spectator/spectator_buck_check

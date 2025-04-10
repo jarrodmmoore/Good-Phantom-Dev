@@ -1,2 +1,2 @@
-$summon area_effect_cloud ~ ~ ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"translate":"gp.editor.node_type.podium_spawner_place","color":"light_purple","with":[{"translate":"$(podium_place)"}]}]'}
-$summon area_effect_cloud ~ ~.8 ~ {Duration:5,CustomNameVisible:1b,CustomName:'["",{"text":"$(podium_size)","color":"gray"}]'}
+$summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{translate:"gp.editor.node_type.podium_spawner_place",color:"light_purple",with:[{translate:"$(podium_place)"}]}]}
+$summon area_effect_cloud ~ ~.8 ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{text:"$(podium_size)",color:"gray"}]}

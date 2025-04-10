@@ -5,7 +5,7 @@
 #editArg3 -- bot skill level (if applicable)
 
 #summon skeleton who will represent a player
-summon skeleton ~ ~ ~ {Tags:["setLife","podiumPuppet","needSpread"],NoAI:true,Invulnerable:true,Silent:1b,ArmorItems:[{},{id:"minecraft:leather_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16777215}},{id:"minecraft:elytra",count:1,components:{"minecraft:unbreakable":{}}},{id:"minecraft:light_blue_wool",count:1,components:{"item_model":"gp/player_model/phantom_head"}}],ArmorDropChances:[0.085F,0.000F,0.000F,0.000F],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:9999999,show_particles:0b}]}
+summon skeleton ~ ~ ~ {Tags:["setLife","podiumPuppet","needSpread"],NoAI:true,Invulnerable:true,Silent:1b,equipment:{legs:{id:"minecraft:leather_leggings",count:1,components:{"minecraft:unbreakable":{},"minecraft:dyed_color":16777215}},chest:{id:"minecraft:elytra",count:1,components:{"minecraft:unbreakable":{}}},head:{id:"minecraft:light_blue_wool",count:1,components:{"item_model":"gp/player_model/phantom_head"}}},drop_chances:{head:0.0,chest:0.0,legs:0.0,feet:0.0,mainhand:0.0,offhand:0.0,body:0.0},active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:9999999,show_particles:0b}]}
 
 #1st place human gets a crown! yay
 execute if entity @s[scores={editArg1=1,editArg2=1}] as @e[tag=setLife,type=skeleton,distance=..10] run item replace entity @s armor.head with light_blue_wool[item_model="gp/player_model/phantom_head_crowned"]

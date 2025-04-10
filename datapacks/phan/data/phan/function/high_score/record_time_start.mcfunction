@@ -4,7 +4,7 @@
 
 #=====
 #assist mode is on? notify the player and kick out of this function
-execute if score #assist_enabled_scoreattack value matches 1.. run tellraw @s ["",{"text":"\n"},{"text":"[ ! ]","color":"#DD33FF","bold":true},{"text":" "},{"translate":"gp.assist.info.scores_will_not_be_saved","with":[{"translate":"gp.assist.assist_mode","color":"#DD33FF","bold":false,"italic":false}],"bold":false,"italic":false},{"text":"\n"}]
+execute if score #assist_enabled_scoreattack value matches 1.. run tellraw @s ["",{text:"\n"},{text:"[ ! ]",color:"#DD33FF",bold:true},{text:" "},{translate:"gp.assist.info.scores_will_not_be_saved",with:[{translate:"gp.assist.assist_mode",color:"#DD33FF",bold:false,italic:false}],bold:false,italic:false},{text:"\n"}]
 execute if score #assist_enabled_scoreattack value matches 1.. run return 0
 #=====
 
@@ -13,7 +13,7 @@ execute if score #scoresRecorded value matches ..2147483646 run scoreboard playe
 
 #get player name
 tag @s add self
-data modify storage phan:data tag.name set value '{"selector":"@a[limit=1,tag=self]","color":"white"}'
+data modify storage phan:data tag.name set value {selector:"@a[limit=1,tag=self]",color:"white"}
 
 #get score
 scoreboard players operation #inputScore value = @s rawTime

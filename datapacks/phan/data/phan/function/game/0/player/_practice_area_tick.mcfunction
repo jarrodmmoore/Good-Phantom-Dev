@@ -20,8 +20,8 @@ tag @s[tag=hasSlot8b] remove hasSlot8b
 execute if items entity @s hotbar.8 light_blue_dye[custom_data~{slot8:1b,nocooldown:1b}] run tag @s add hasSlot8a
 execute if items entity @s hotbar.8 light_blue_dye[custom_data~{slot8:1b,cooldown:1b}] run tag @s add hasSlot8b
 clear @s[gamemode=!creative,tag=!hasSlot8a,tag=!hasSlot8b] light_blue_dye[custom_data~{slot8:1b}]
-execute if entity @s[tag=!hasSlot8a,tag=!noInventory] if entity @s[scores={inputCooldown=..0}] run item replace entity @s hotbar.8 with minecraft:light_blue_dye[item_model="gp/item/respawn_item",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.practice.return_to_cabin","color":"red","italic":false}]',custom_data={slot8:1b,rmb:1b,nocooldown:1b}] 1
-execute if entity @s[tag=!hasSlot8b,tag=!noInventory] unless entity @s[scores={inputCooldown=..0}] run item replace entity @s hotbar.8 with minecraft:light_blue_dye[item_model="gp/item/respawn_item_cooldown",custom_name='["",{"keybind":"key.use","color":"white","italic":false},{"text":" "},{"translate":"gp.practice.return_to_cabin","color":"gray","italic":false}]',custom_data={slot8:1b,rmb:1b,cooldown:1b}] 1
+execute if entity @s[tag=!hasSlot8a,tag=!noInventory] if entity @s[scores={inputCooldown=..0}] run item replace entity @s hotbar.8 with minecraft:light_blue_dye[item_model="gp/item/respawn_item",custom_name=["",{keybind:"key.use",color:"white",italic:false},{text:" "},{translate:"gp.practice.return_to_cabin",color:"red",italic:false}],custom_data={slot8:1b,rmb:1b,nocooldown:1b}] 1
+execute if entity @s[tag=!hasSlot8b,tag=!noInventory] unless entity @s[scores={inputCooldown=..0}] run item replace entity @s hotbar.8 with minecraft:light_blue_dye[item_model="gp/item/respawn_item_cooldown",custom_name=["",{keybind:"key.use",color:"white",italic:false},{text:" "},{translate:"gp.practice.return_to_cabin",color:"gray",italic:false}],custom_data={slot8:1b,rmb:1b,cooldown:1b}] 1
 
 #enter practice course?
 execute at @s[x=829,y=31,z=-1007,distance=..10] if block ~ ~-.1 ~ red_glazed_terracotta run function phan:game/0/player/teleport_pad

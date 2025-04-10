@@ -1,10 +1,10 @@
 #this also gets called while the Practice Course is being played
 
 #shoot the targets!
-execute if score #2sec value matches 0 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:'[{"translate":"gp.practice.shoot","fallback":"SHOOT!","color":"blue","bold":true,"italic":false},{"text":"\\n\\\\/"}]'}
-execute if score #2sec value matches 10 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:'[{"translate":"gp.practice.shoot","fallback":"SHOOT!","color":"aqua","bold":true,"italic":false},{"text":"\\n\\\\/"}]'}
-execute if score #2sec value matches 20 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:'[{"translate":"gp.practice.shoot","fallback":"SHOOT!","color":"blue","bold":true,"italic":false},{"text":"\\n\\\\/"}]'}
-execute if score #2sec value matches 30 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:'[{"translate":"gp.practice.shoot","fallback":"SHOOT!","color":"aqua","bold":true,"italic":false},{"text":"\\n\\\\/"}]'}
+execute if score #2sec value matches 0 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:[{translate:"gp.practice.shoot","fallback":"SHOOT!",color:"blue",bold:true,italic:false},{text:"\n\\/"}]}
+execute if score #2sec value matches 10 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:[{translate:"gp.practice.shoot","fallback":"SHOOT!",color:"aqua",bold:true,italic:false},{text:"\n\\/"}]}
+execute if score #2sec value matches 20 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:[{translate:"gp.practice.shoot","fallback":"SHOOT!",color:"blue",bold:true,italic:false},{text:"\n\\/"}]}
+execute if score #2sec value matches 30 as @e[type=text_display,tag=shootTargetSign] run data merge entity @s {transformation:{scale:[1.5f,1.5f,1.5f]},background:16711680,text:[{translate:"gp.practice.shoot","fallback":"SHOOT!",color:"aqua",bold:true,italic:false},{text:"\n\\/"}]}
 
 #handle targets on the practice course
 #1

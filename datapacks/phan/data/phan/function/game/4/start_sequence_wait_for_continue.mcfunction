@@ -4,15 +4,15 @@ execute if entity @a[tag=playing] if score #gameTime value matches 30..34 run sc
 #count up how long we've been here
 scoreboard players add #321go value 1
 #if it's been longer than a minute, admin loses control over starting the round
-execute if score #321go value matches 1300 if score #requireAdmin value matches 1.. run tellraw @a[tag=doneWithIntro] ["",{"translate":"gp.misc.admin_idle","italic":true}]
+execute if score #321go value matches 1300 if score #requireAdmin value matches 1.. run tellraw @a[tag=doneWithIntro] ["",{translate:"gp.misc.admin_idle",italic:true}]
 execute if score #321go value matches 1300.. if score #requireAdmin value matches 1.. run scoreboard players set #requireAdmin value 0
 
 #hold the grand prix round timer in place while we're waiting
 execute if score #grandPrixRoundAnimation value matches 60..65 run scoreboard players set #grandPrixRoundAnimation value 60
 
 #tell players to input after 2sec delay
-execute if score #321go value matches 110.. if score #2sec value matches ..19 run title @a[tag=doneWithIntro] actionbar ["",{"text":">  "},{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]},{"text":"  <"}]
-execute if score #321go value matches 110.. if score #2sec value matches 20.. run title @a[tag=doneWithIntro] actionbar ["",{"text":"> ","color":"aqua"},{"translate":"gp.lobby.press_key_to_continue","with":[{"keybind":"key.use","color":"white"}]},{"text":" <","color":"aqua"}]
+execute if score #321go value matches 110.. if score #2sec value matches ..19 run title @a[tag=doneWithIntro] actionbar ["",{text:">  "},{translate:"gp.lobby.press_key_to_continue",with:[{keybind:"key.use",color:"white"}]},{text:"  <"}]
+execute if score #321go value matches 110.. if score #2sec value matches 20.. run title @a[tag=doneWithIntro] actionbar ["",{text:"> ",color:"aqua"},{translate:"gp.lobby.press_key_to_continue",with:[{keybind:"key.use",color:"white"}]},{text:" <",color:"aqua"}]
 execute if score #321go value matches 110.. run scoreboard players set @a[tag=doneWithIntro] actionbarDelay 5
 
 #players try to make input to continue

@@ -1,5 +1,5 @@
 #delay particles to account for tp interpolation
-summon area_effect_cloud ~ ~ ~ {Tags:["soulNeedsInterp","soulVisualsReduced","summonAfterImages"],Duration:10}
+summon area_effect_cloud ~ ~ ~ {Tags:["soulNeedsInterp","soulVisualsReduced","summonAfterImages"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:10}
 
 #particles
 execute if score #5Hz value matches 1 run particle end_rod ~ ~ ~ 0.3 0.3 0.3 0 1 force @a

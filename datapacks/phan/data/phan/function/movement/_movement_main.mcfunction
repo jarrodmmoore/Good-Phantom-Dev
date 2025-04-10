@@ -25,7 +25,7 @@ execute if score @s trans_yaw matches 181.. run scoreboard players remove @s tra
 execute if score @s trans_yaw matches ..-1 run scoreboard players operation @s trans_yaw *= #-1 value
 scoreboard players operation @s trans_yaw /= #CONST_YAW_LOSS value
 #debug
-#tellraw @a ["",{"text":"trans_yaw = "},{"score":{"name":"@s","objective":"trans_yaw"}}]
+#tellraw @a ["",{text:"trans_yaw = "},{score:{name:"@s",objective:"trans_yaw"}}]
 
 
 

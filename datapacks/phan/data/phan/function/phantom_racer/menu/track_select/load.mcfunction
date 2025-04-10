@@ -53,7 +53,7 @@ scoreboard players set @e[type=text_display,tag=tvTrackDisplay,distance=..10] li
 scoreboard players set @e[type=item_display,distance=..7,tag=tvCupDisplay] lifespan 0
 
 #special text for dream name
-summon text_display ~ ~1.25 ~ {Tags:["lobbyProp","tvText","tvSubtitle5","tvProp"],alignment:"center",text:'["",{"text":" ","bold":true}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]},background:16777215}
+summon text_display ~ ~1.25 ~ {Tags:["lobbyProp","tvText","tvSubtitle5","tvProp"],alignment:"center",text:["",{text:" ",bold:true}],transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.5f,1.5f,1.5f]},background:16777215}
 
 #summon markers that mark where track preview images should stop after scrolling
 summon marker ~ ~.15 ~-3.99 {Tags:["lobbyProp","tvProp","tvTrackPreviewStop","tvTrackPreviewStop0"]}
@@ -66,4 +66,4 @@ summon marker ~ ~.15 ~3.99 {Tags:["lobbyProp","tvProp","tvTrackPreviewStop","tvT
 
 #special text for round number if editing grand prix
 #remember: #tvChosenGP points to the GP storage we're looking at
-execute if score #tvEditingGrandPrix value matches 1.. run summon text_display ~ ~1.66 ~2.8 {Tags:["lobbyProp","tvText","tvSubtitle6","tvProp"],alignment:"right",text:'["",{"text":" ","bold":true}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.0f,1.0f,1.0f]},background:16777215}
+execute if score #tvEditingGrandPrix value matches 1.. run summon text_display ~ ~1.66 ~2.8 {Tags:["lobbyProp","tvText","tvSubtitle6","tvProp"],alignment:"right",text:["",{text:" ",bold:true}],transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.0f,1.0f,1.0f]},background:16777215}

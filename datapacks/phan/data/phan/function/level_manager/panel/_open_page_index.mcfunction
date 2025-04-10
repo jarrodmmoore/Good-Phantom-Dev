@@ -29,7 +29,7 @@ execute if score @s levelManagerPage matches 10 run function phan:level_manager/
 scoreboard players set #success value 0
 scoreboard players operation #checkID value = @s levelUID
 execute as @e[tag=levelEntry,type=armor_stand] if score @s levelUID = #checkID value run scoreboard players set #success value 1
-execute if score #success value matches 0 run tellraw @s ["",{"translate":"gp.level_manager.error.no_dream_selected","color":"red"}]
+execute if score #success value matches 0 run tellraw @s ["",{translate:"gp.level_manager.error.no_dream_selected",color:"red"}]
 execute if score #success value matches 0 run function phan:level_manager/error_noise
 
 #advancement for editing a custom dream

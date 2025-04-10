@@ -1,1 +1,1 @@
-$summon area_effect_cloud ~ ~ ~ {Duration:41,CustomNameVisible:1b,CustomName:'["",{"text":"force redirect (distance=..$(player_count))","color":"green"}]'}
+$summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:41,CustomNameVisible:1b,CustomName:["",{text:"force redirect (distance=..$(player_count))",color:"green"}]}

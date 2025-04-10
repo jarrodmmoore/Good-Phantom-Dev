@@ -11,6 +11,6 @@ execute as @e[tag=selected,tag=resetZone] run scoreboard players operation @s ch
 execute as @e[tag=selected,tag=resetZone] run scoreboard players operation @s checkMaxZ = #checkMinZ value
 
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
-tellraw @s ["",{"text":" > Maximum trigger coordinates set to x="},{"score":{"name":"#checkMinX","objective":"value"}},{"text":", y="},{"score":{"name":"#checkMinY","objective":"value"}},{"text":", z="},{"score":{"name":"#checkMinZ","objective":"value"}}]
+tellraw @s ["",{text:" > Maximum trigger coordinates set to x="},{score:{name:"#checkMinX",objective:"value"}},{text:", y="},{score:{name:"#checkMinY",objective:"value"}},{text:", z="},{score:{name:"#checkMinZ",objective:"value"}}]
 
 scoreboard players set @s editVisualTimer 0

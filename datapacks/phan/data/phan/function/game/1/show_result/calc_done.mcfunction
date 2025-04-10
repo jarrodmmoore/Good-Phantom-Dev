@@ -1,4 +1,4 @@
-#title @s subtitle ["",{"score":{"name":"@s","objective":"scoreShow"},"bold":false}]
+#title @s subtitle ["",{score:{name:"@s",objective:"scoreShow"},bold:false}]
 
 #we show the title display to anyone spectating us
 function phan:player/tell_spectators

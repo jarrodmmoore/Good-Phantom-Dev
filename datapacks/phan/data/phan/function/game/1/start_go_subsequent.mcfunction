@@ -11,7 +11,7 @@ function phan:player/tell_spectators
 #title
 title @a[tag=tellMe] subtitle [""]
 title @a[tag=tellMe] title [""]
-execute unless score #gameState value matches 3 run title @s actionbar ["",{"translate":"gp.game.go","italic":true,"color":"green"}]
+execute unless score #gameState value matches 3 run title @s actionbar ["",{translate:"gp.game.go",italic:true,color:"green"}]
 scoreboard players set @s actionbarDelay 40
 tag @a[tag=tellMe] remove tellMe
 

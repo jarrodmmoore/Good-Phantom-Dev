@@ -2,7 +2,7 @@
 execute store result score #teamSelectTest value run execute if entity @a[tag=doneWithIntro]
 execute if entity @s[tag=debugMultiplayer] run scoreboard players set #teamSelectTest value 2
 #multiplayer: snitch on who did this
-execute if score #freePlay value matches 0 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_mode","color":"white","with":[{"translate":"gp.mode_select.versus","color":"light_purple"}]}]
+execute if score #freePlay value matches 0 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.versus",color:"light_purple"}]}]
 execute if score #freePlay value matches 1 store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
 execute if score #freePlay value matches 1 store result storage phan:level_index act int 1 run scoreboard players get #freePlayAct value
 execute if score #freePlay value matches 1 if entity @s[type=player] if score #teamSelectTest value matches 2.. run function phan:game/2/snitch_on_player_choosing_act_portal_race with storage phan:level_index

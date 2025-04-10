@@ -13,7 +13,7 @@ function phan:player/tell_spectators
 #title
 title @a[tag=tellMe] subtitle [""]
 title @a[tag=tellMe] title [""]
-title @s actionbar ["",{"translate":"gp.game.go","italic":true,"color":"green"}]
+title @s actionbar ["",{translate:"gp.game.go",italic:true,color:"green"}]
 scoreboard players set @s actionbarDelay 40
 tag @a[tag=tellMe] remove tellMe
 

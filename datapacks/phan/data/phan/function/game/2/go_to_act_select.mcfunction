@@ -6,7 +6,7 @@ execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.acti
 
 #feedback
 title @a[tag=doneWithIntro] actionbar [""]
-title @s[tag=sneaking] actionbar ["",{"translate":"gp.lobby.ok","italic":true}]
+title @s[tag=sneaking] actionbar ["",{translate:"gp.lobby.ok",italic:true}]
 
 #remember which gamemode we want to play once we hit team select
 $scoreboard players set #desiredGamemode value $(desired_gamemode)
@@ -15,9 +15,9 @@ $scoreboard players set #desiredGamemode value $(desired_gamemode)
 execute store result score #teamSelectTest value run execute if entity @a[tag=doneWithIntro]
 execute if entity @s[tag=debugMultiplayer] run scoreboard players set #teamSelectTest value 2
 #multiplayer: snitch on who did this
-execute if score #desiredGamemode value matches 1 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_mode","color":"white","with":[{"translate":"gp.mode_select.score_attack","color":"yellow"}]}]
-execute if score #desiredGamemode value matches 2 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_mode","color":"white","with":[{"translate":"gp.mode_select.time_attack","color":"red"}]}]
-execute if score #desiredGamemode value matches 3 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_mode","color":"white","with":[{"translate":"gp.mode_select.versus","color":"light_purple"}]}]
+execute if score #desiredGamemode value matches 1 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.score_attack",color:"yellow"}]}]
+execute if score #desiredGamemode value matches 2 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.time_attack",color:"red"}]}]
+execute if score #desiredGamemode value matches 3 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.versus",color:"light_purple"}]}]
 
 #reset all props and inventory items
 kill @e[tag=lobbyProp]
@@ -29,7 +29,7 @@ bossbar set general_bossbar color purple
 bossbar set general_bossbar style progress
 bossbar set general_bossbar max 1
 bossbar set general_bossbar value 1
-bossbar set general_bossbar name ["",{"translate":"gp.mode_select.select_a_level","color":"white","bold":false}]
+bossbar set general_bossbar name ["",{translate:"gp.mode_select.select_a_level",color:"white",bold:false}]
 
 #teleport players into the place
 #effect give @a[tag=doneWithIntro] blindness 1 50 true
@@ -49,5 +49,5 @@ execute if score #desiredGamemode value matches 1..2 run function phan:game/2/su
 execute if score #desiredGamemode value matches 3 run function phan:game/2/summon_selectable_acts_portal_race with storage phan:level_index
 
 #return to cabin
-summon item 191 -21 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":'{"translate":"gp.mode_select.return_to_cabin","color":"dark_green","italic":false}',"minecraft:hide_additional_tooltip":{},"minecraft:custom_data":{modeSelectCabin:1b}}}}
-execute positioned 191 -20 118 positioned ~ ~.15 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp"],alignment:"center",see_through:1b,line_width:1000,billboard:"center",brightness:{sky:0,block:15},text:'[{"translate":"gp.mode_select.return_to_cabin","bold":true,"color":"#964B33"}]'}
+summon item 191 -21 118 {Tags:["stay","lobbyProp","modeSelect"],PickupDelay:40,Age:-32768,NoGravity:1b,Item:{id:"minecraft:ender_pearl",count:1,components:{"minecraft:custom_name":{translate:"gp.mode_select.return_to_cabin",color:"dark_green",italic:false},"minecraft:custom_data":{modeSelectCabin:1b}}}}
+execute positioned 191 -20 118 positioned ~ ~.15 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp"],alignment:"center",see_through:1b,line_width:1000,billboard:"center",brightness:{sky:0,block:15},text:[{translate:"gp.mode_select.return_to_cabin",bold:true,color:"#964B33"}]}

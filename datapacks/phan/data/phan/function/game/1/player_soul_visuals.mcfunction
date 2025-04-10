@@ -1,5 +1,5 @@
 #delay particles to account for tp interpolation
-summon area_effect_cloud ~ ~ ~ {Tags:["soulNeedsInterp","summonAfterImages"],Duration:10}
+summon area_effect_cloud ~ ~ ~ {Tags:["soulNeedsInterp","summonAfterImages"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:10}
 
 #particles
 #particle end_rod ~ ~ ~ 0.3 0.3 0.3 0 1 force @a

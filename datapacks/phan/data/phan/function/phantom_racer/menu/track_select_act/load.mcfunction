@@ -7,7 +7,7 @@ scoreboard players set #tvCooldown value 10
 scoreboard players set #tvLastOperation value 0
 
 #special text for act name
-summon text_display ~-.133 ~-.8 ~ {Tags:["lobbyProp","tvText","tvSubtitle7","tvProp"],alignment:"center",text:'["",{"text":" ","bold":true}]',transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.25f,1.25f,1.25f]},background:16777215}
+summon text_display ~-.133 ~-.8 ~ {Tags:["lobbyProp","tvText","tvSubtitle7","tvProp"],alignment:"center",text:["",{text:" ",bold:true}],transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.25f,1.25f,1.25f]},background:16777215}
 
 #random track select? use this pre=made storage and dash.
 execute if score #tvChosenLevel value matches 0 run scoreboard players set #tvMaxIndexAct value 3

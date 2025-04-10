@@ -1,18 +1,18 @@
 #spawn an area effect cloud that will summon an enemy and infinitely re-summon it when it dies
 
 #editArg2 is what we are
-execute unless score @s editArg2 matches 2.. run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnZombie"],Duration:69420}
-execute if score @s editArg2 matches 2 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnZombieKnight"],Duration:69420}
-execute if score @s editArg2 matches 3 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnSkeleton"],Duration:69420}
-execute if score @s editArg2 matches 4 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnVindicator"],Duration:69420}
-execute if score @s editArg2 matches 5 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnBabyGhast"],Duration:69420}
-execute if score @s editArg2 matches 6 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnGuardian"],Duration:69420}
-execute if score @s editArg2 matches 7 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnTurret"],Duration:69420}
-execute if score @s editArg2 matches 8 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnIronGolem"],Duration:69420}
-execute if score @s editArg2 matches 9 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnTNTGolem"],Duration:69420}
-execute if score @s editArg2 matches 10 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnShulker"],Duration:69420}
-execute if score @s editArg2 matches 11 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnVex"],Duration:69420}
-execute if score @s editArg2 matches 12 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnMine"],Duration:69420}
+execute unless score @s editArg2 matches 2.. run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnZombie"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 2 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnZombieKnight"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 3 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnSkeleton"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 4 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnVindicator"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 5 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnBabyGhast"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 6 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnGuardian"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 7 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnTurret"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 8 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnIronGolem"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 9 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnTNTGolem"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 10 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnShulker"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 11 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnVex"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 12 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnMine"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
 
 #setMe gets rotation of the node that spawned it
 execute as @e[tag=setMe,type=area_effect_cloud,distance=..2] run tp @s ~ ~ ~ ~ ~

@@ -1,1 +1,1 @@
-$tellraw @a[tag=doneWithIntro] ["",{"text":"(","color":"gray"},{"selector":"@s","color":"gray"},{"text":")","color":"gray"},{"text":" "},{"translate":"gp.selected_act","color":"white","with":[{"nbt":"name_text","storage":"phan_dream_$(level_id):dream_data","interpret":true}]}]
+$tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_act",color:"white",with:[{nbt:"name_text",storage:"phan_dream_$(level_id):dream_data",interpret:true}]}]

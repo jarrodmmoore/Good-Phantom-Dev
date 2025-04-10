@@ -18,10 +18,10 @@ scoreboard players operation #setLengthZ value -= @s checkMinZ
 #^ it's ok if we pop out negative values here. lifespan system will interpret that as an instant entity delete
 
 #spawn aecs in the corners of the cube and make them start drawing
-summon area_effect_cloud ~ ~ ~ {Duration:420,Tags:["checkpointBound","lowerBound","boundX","setLife"]}
-summon area_effect_cloud ~ ~ ~ {Duration:420,Tags:["checkpointBound","lowerBound2","boundX","setLife"]}
-summon area_effect_cloud ~ ~ ~ {Duration:420,Tags:["checkpointBound","upperBound","boundX","setLife"]}
-summon area_effect_cloud ~ ~ ~ {Duration:420,Tags:["checkpointBound","upperBound2","boundX","setLife"]}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:420,Tags:["checkpointBound","lowerBound","boundX","setLife"]}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:420,Tags:["checkpointBound","lowerBound2","boundX","setLife"]}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:420,Tags:["checkpointBound","upperBound","boundX","setLife"]}
+summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:420,Tags:["checkpointBound","upperBound2","boundX","setLife"]}
 execute as @e[tag=checkpointBound,tag=lowerBound,tag=setLife,type=area_effect_cloud] at @s run function phan:editor/checkpoint/setup_lower_bound
 execute as @e[tag=checkpointBound,tag=lowerBound2,tag=setLife,type=area_effect_cloud] at @s run function phan:editor/checkpoint/setup_lower_bound_2
 execute as @e[tag=checkpointBound,tag=upperBound,tag=setLife,type=area_effect_cloud] at @s run function phan:editor/checkpoint/setup_upper_bound

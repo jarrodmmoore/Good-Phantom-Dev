@@ -11,7 +11,7 @@ scoreboard players operation @s splitTime = @s rawTime
 scoreboard players set @s[scores={playerGetEyes=0..}] hudFlashTime 25
 
 #DEBUG: show time it took to hit this checkpoint
-#execute if entity @s[tag=debugCheckpointTimes] run tellraw @a ["",{"text":"[DEBUG] time to checkpoint ","color":"green"},{"score":{"name":"@s","objective":"check"},"color":"green"},{"text":": ","color":"green"},{"score":{"name":"@s","objective":"debug"},"color":"white"}]
+#execute if entity @s[tag=debugCheckpointTimes] run tellraw @a ["",{text:"[DEBUG] time to checkpoint ",color:"green"},{score:{name:"@s",objective:"check"},color:"green"},{text:": ",color:"green"},{score:{name:"@s",objective:"debug"},color:"white"}]
 #scoreboard players set @s[tag=debugCheckpointTimes] debug 0
 
 #add ender eyes

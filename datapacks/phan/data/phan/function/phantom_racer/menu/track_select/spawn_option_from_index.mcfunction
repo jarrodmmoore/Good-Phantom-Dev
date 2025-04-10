@@ -15,21 +15,21 @@ execute if score #test value matches -3 run return 0
 #=====
 
 #fallback model is generic
-data modify storage phan:level_index model set value '["",{"text":"\\uE500","color":"white"}]'
+data modify storage phan:level_index model set value ["",{text:"\uE500",color:"white"}]
 
 #-4 means show erase button
-execute if score #test value matches -4 run data modify storage phan:level_index model set value '["",{"text":"\\uE507","color":"white"}]'
+execute if score #test value matches -4 run data modify storage phan:level_index model set value ["",{text:"\uE507",color:"white"}]
 
 #-2 means show lock
-execute if score #test value matches -2 run data modify storage phan:level_index model set value '["",{"text":"\\uE506","color":"white"}]'
+execute if score #test value matches -2 run data modify storage phan:level_index model set value ["",{text:"\uE506",color:"white"}]
 
 #-1 means go back
-execute if score #test value matches -1 unless score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value '["",{"text":"\\uE504","color":"white"}]'
+execute if score #test value matches -1 unless score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value ["",{text:"\uE504",color:"white"}]
 #-1 re-skin to be a "done" icon when editing a grand prix
-execute if score #test value matches -1 if score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value '["",{"text":"\\uE505","color":"white"}]'
+execute if score #test value matches -1 if score #tvEditingGrandPrix value matches 1.. run data modify storage phan:level_index model set value ["",{text:"\uE505",color:"white"}]
 
 #0 means random
-execute if score #test value matches 0 run data modify storage phan:level_index model set value '["",{"text":"\\uE501","color":"white"}]'
+execute if score #test value matches 0 run data modify storage phan:level_index model set value ["",{text:"\uE501",color:"white"}]
 
 #1.. means look up the model from the associated dream (always uses act 1)
 execute if score #test value matches 1.. store result storage phan:level_index level_id int 1 run scoreboard players get #test value

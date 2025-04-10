@@ -1,5 +1,5 @@
 #flamin' hot flavor stardusts
-summon item ~ ~ ~ {Tags:["checkValid","stay","setMe","stardust","stardustRed","shootable","groupA","representBaddy"],Age:-32768,NoGravity:0b,Item:{id:"minecraft:yellow_wool",count:2,components:{"minecraft:custom_name":'{"translate":"gp.game.stardust","color":"red","italic":false}',"item_model":"gp/object/stardust_red","minecraft:hide_additional_tooltip":{}}}}
+summon item ~ ~ ~ {Tags:["checkValid","stay","setMe","stardust","stardustRed","shootable","groupA","representBaddy"],Age:-32768,NoGravity:0b,Item:{id:"minecraft:yellow_wool",count:2,components:{"minecraft:custom_name":{translate:"gp.game.stardust",color:"red",italic:false},"item_model":"gp/object/stardust_red"}}}
 #Q: red stardust? why?
 #A: red stardust is spawned in the place of enemies when enemies are disabled via Assist Mode.
 #behaves the same as normal stardust, but is visually distinct so players will know where to expect enemies to spawn if they take off the training wheels and re-enable enemies.

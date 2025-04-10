@@ -19,7 +19,7 @@ execute if score @s botSkill matches 5 run data modify storage phan:coords stren
 execute if score @s botSkill matches 6.. run data modify storage phan:coords strength set value "0.0030"
 
 #summon armor stand and ride it
-summon armor_stand ~ ~ ~ {Tags:["botElytra","setMe"],FallFlying:1b,Silent:1b,Invulnerable:1b,Small:0b,Invisible:1b,NoBasePlate:1b,attributes:[{id:"minecraft:scale",base:0.0625}],DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,NoBasePlate:1b,Tags:["setMe2","botElytraHeightFix"]}],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:glider":{}}}]}
+summon armor_stand ~ ~ ~ {Tags:["botElytra","setMe"],FallFlying:1b,Silent:1b,Invulnerable:1b,Small:0b,Invisible:1b,NoBasePlate:1b,attributes:[{id:"minecraft:scale",base:0.0625}],DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,NoBasePlate:1b,Tags:["setMe2","botElytraHeightFix"]}],equipment:{head:{id:"minecraft:golden_helmet",count:1,components:{"minecraft:unbreakable":{},"minecraft:glider":{}}}}}
 ride @s mount @e[limit=1,tag=setMe2,type=armor_stand,distance=..1]
 execute as @e[tag=setMe,type=armor_stand,distance=..1] run function phan:bots/movement/1_air/transition_to_gliding_post_summon
 

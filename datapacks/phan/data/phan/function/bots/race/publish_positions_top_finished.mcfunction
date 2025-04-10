@@ -1,1 +1,1 @@
-$scoreboard players display numberformat $(username) racePosDisplay2 fixed ["",["",{"text":"\uE037","color":"white"}]]
+$scoreboard players display numberformat $(username) racePosDisplay2 fixed ["",["",{text:"\uE037",color:"white"}]]

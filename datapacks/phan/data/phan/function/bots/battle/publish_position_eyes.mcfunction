@@ -3,5 +3,5 @@ $execute if score @s enderEyes matches ..0 run return run execute if score $(use
 
 #have eyes? put on sidebar
 $scoreboard players operation $(username) enderEyesShow = @s enderEyes
-$execute if entity @s[tag=!finished] run scoreboard players display numberformat $(username) enderEyesShow styled {"color":"light_purple"}
-$execute if entity @s[tag=finished] run scoreboard players display numberformat $(username) enderEyesShow fixed ["",["",{"text":"\uE037","color":"white"}]]
+$execute if entity @s[tag=!finished] run scoreboard players display numberformat $(username) enderEyesShow styled {color:"light_purple"}
+$execute if entity @s[tag=finished] run scoreboard players display numberformat $(username) enderEyesShow fixed ["",["",{text:"\uE037",color:"white"}]]

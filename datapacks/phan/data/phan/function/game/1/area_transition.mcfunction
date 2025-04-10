@@ -58,7 +58,7 @@ execute if score @s pGameTime matches 100001..100059 if entity @s[scores={scoreC
 execute if score @s pGameTime matches 100001..100059 if entity @s[scores={scoreCurrent=1..9}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_low
 execute if score @s pGameTime matches 100001..100059 if entity @s[scores={scoreCurrent=..0}] at @s if score #gameState value matches 1 run function phan:game/1/show_result/calc_done
 execute if score @s pGameTime matches 100060..100499 at @s if score #gameState value matches 1 run function phan:game/1/show_result/rank
-#tellraw @a[tag=playing] ["",{"text":"gameTime = "},{"score":{"name":"#gameTime","objective":"value"}}]
+#tellraw @a[tag=playing] ["",{text:"gameTime = "},{score:{name:"#gameTime",objective:"value"}}]
 
 #timer approaches next value
 execute if score @s pGameTime matches 100060.. if score @s pTimerGoal matches 1.. if score @s pTimeRemaining < @s pTimerGoal run scoreboard players add @s pTimeRemaining 40

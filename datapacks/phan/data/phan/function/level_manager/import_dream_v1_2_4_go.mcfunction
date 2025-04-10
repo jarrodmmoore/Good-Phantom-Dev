@@ -1,0 +1,231 @@
+#can't modify a read-only level
+$execute store result score #test4 value run data get storage phan_dream_$(level_id):dream_data read_only 1
+execute unless score #test4 value matches 0 run return run function phan:level_manager/warn_read_only
+#======
+
+#some SNBT gotchas we need to worry about from previous versions:
+
+#dream_data name_text
+#dream_data name_display
+
+#sa_act_1 thumbnail_text
+#sa_act_2 thumbnail_text
+#sa_act_3 thumbnail_text
+
+#pr_act_1 thumbnail_text
+#pr_act_2 thumbnail_text
+#pr_act_3 thumbnail_text
+#pr_act_4 thumbnail_text
+
+$data modify storage phan:interpret_snbt level_id set value $(level_id)
+$data modify storage phan:interpret_snbt name_text set from storage $(filename):dream_data name_text
+$data modify storage phan:interpret_snbt name_display set from storage $(filename):dream_data name_display
+
+$data modify storage phan:interpret_snbt thumbnail_text_s1 set from storage $(filename):sa_act_1 thumbnail_text
+$data modify storage phan:interpret_snbt thumbnail_text_s2 set from storage $(filename):sa_act_2 thumbnail_text
+$data modify storage phan:interpret_snbt thumbnail_text_s3 set from storage $(filename):sa_act_3 thumbnail_text
+
+$data modify storage phan:interpret_snbt thumbnail_text_p1 set from storage $(filename):pr_act_1 thumbnail_text
+$data modify storage phan:interpret_snbt thumbnail_text_p2 set from storage $(filename):pr_act_2 thumbnail_text
+$data modify storage phan:interpret_snbt thumbnail_text_p3 set from storage $(filename):pr_act_3 thumbnail_text
+$data modify storage phan:interpret_snbt thumbnail_text_p4 set from storage $(filename):pr_act_4 thumbnail_text
+
+#de-stringify text components so they'll work in snbt. if this doesn't work, throw an error
+scoreboard players set #success value 0
+function phan:level_manager/import_dream_v1_2_4_go_snbt_fix with storage phan:interpret_snbt
+execute if score #success value matches 0 run return 0
+#=====
+
+scoreboard players set #success value 0
+
+#soft warning if map data is outdated
+$execute store result score #test4 value run data get storage $(filename):dream_data map_data_warn_version 1
+execute if score #mapDataVersion value <= #test4 value run tellraw @s ["",{translate:"gp.level_manager.error.map_created_in_old_version",color:"red"}]
+
+#a comical amount of data
+$data modify storage phan_dream_$(level_id):dream_data selectable set from storage $(filename):dream_data selectable
+#$data modify storage phan_dream_$(level_id):dream_data name_text set from storage $(filename):dream_data name_text
+#$data modify storage phan_dream_$(level_id):dream_data name_display set from storage $(filename):dream_data name_display
+$data modify storage phan_dream_$(level_id):dream_data function_namespace set from storage $(filename):dream_data function_namespace
+$data modify storage phan_dream_$(level_id):dream_data function_path set from storage $(filename):dream_data function_path
+$data modify storage phan_dream_$(level_id):dream_data sleeping_player_model set from storage $(filename):dream_data sleeping_player_model
+$data modify storage phan_dream_$(level_id):score_attack selectable set from storage $(filename):score_attack selectable
+$data modify storage phan_dream_$(level_id):score_attack time_bronze set from storage $(filename):score_attack time_bronze
+$data modify storage phan_dream_$(level_id):score_attack time_silver set from storage $(filename):score_attack time_silver
+$data modify storage phan_dream_$(level_id):score_attack time_gold set from storage $(filename):score_attack time_gold
+$data modify storage phan_dream_$(level_id):score_attack time_diamond set from storage $(filename):score_attack time_diamond
+$data modify storage phan_dream_$(level_id):sa_act_1 playable set from storage $(filename):sa_act_1 playable
+$data modify storage phan_dream_$(level_id):sa_act_1 act_name set from storage $(filename):sa_act_1 act_name
+#$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_text set from storage $(filename):sa_act_1 thumbnail_text
+$data modify storage phan_dream_$(level_id):sa_act_1 thumbnail_model set from storage $(filename):sa_act_1 thumbnail_model
+$data modify storage phan_dream_$(level_id):sa_act_1 pearls_needed set from storage $(filename):sa_act_1 pearls_needed
+$data modify storage phan_dream_$(level_id):sa_act_1 time_limit set from storage $(filename):sa_act_1 time_limit
+$data modify storage phan_dream_$(level_id):sa_act_1 target_time set from storage $(filename):sa_act_1 target_time
+$data modify storage phan_dream_$(level_id):sa_act_1 reset_plane set from storage $(filename):sa_act_1 reset_plane
+$data modify storage phan_dream_$(level_id):sa_act_1 score_requirement_c set from storage $(filename):sa_act_1 score_requirement_c
+$data modify storage phan_dream_$(level_id):sa_act_1 score_requirement_b set from storage $(filename):sa_act_1 score_requirement_b
+$data modify storage phan_dream_$(level_id):sa_act_1 score_requirement_a set from storage $(filename):sa_act_1 score_requirement_a
+$data modify storage phan_dream_$(level_id):sa_act_1 score_requirement_s set from storage $(filename):sa_act_1 score_requirement_s
+$data modify storage phan_dream_$(level_id):sa_act_1 time set from storage $(filename):sa_act_1 time
+$data modify storage phan_dream_$(level_id):sa_act_1 weather set from storage $(filename):sa_act_1 weather
+$data modify storage phan_dream_$(level_id):sa_act_1 skybox set from storage $(filename):sa_act_1 skybox
+$data modify storage phan_dream_$(level_id):sa_act_1 use_area_transition set from storage $(filename):sa_act_1 use_area_transition
+$data modify storage phan_dream_$(level_id):sa_act_1 music_track set from storage $(filename):sa_act_1 music_track
+$data modify storage phan_dream_$(level_id):sa_act_1 music_function set from storage $(filename):sa_act_1 music_function
+$data modify storage phan_dream_$(level_id):sa_act_1 teleport_dimension set from storage $(filename):sa_act_1 teleport_dimension
+$data modify storage phan_dream_$(level_id):sa_act_1 teleport_location set from storage $(filename):sa_act_1 teleport_location
+$data modify storage phan_dream_$(level_id):sa_act_1 soul_approach set from storage $(filename):sa_act_1 soul_approach
+$data modify storage phan_dream_$(level_id):sa_act_1 night_vision set from storage $(filename):sa_act_1 night_vision
+$data modify storage phan_dream_$(level_id):sa_act_1 bright_mines set from storage $(filename):sa_act_1 bright_mines
+$data modify storage phan_dream_$(level_id):sa_act_2 playable set from storage $(filename):sa_act_2 playable
+$data modify storage phan_dream_$(level_id):sa_act_2 act_name set from storage $(filename):sa_act_2 act_name
+#$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_text set from storage $(filename):sa_act_2 thumbnail_text
+$data modify storage phan_dream_$(level_id):sa_act_2 thumbnail_model set from storage $(filename):sa_act_2 thumbnail_model
+$data modify storage phan_dream_$(level_id):sa_act_2 pearls_needed set from storage $(filename):sa_act_2 pearls_needed
+$data modify storage phan_dream_$(level_id):sa_act_2 time_limit set from storage $(filename):sa_act_2 time_limit
+$data modify storage phan_dream_$(level_id):sa_act_2 target_time set from storage $(filename):sa_act_2 target_time
+$data modify storage phan_dream_$(level_id):sa_act_2 reset_plane set from storage $(filename):sa_act_2 reset_plane
+$data modify storage phan_dream_$(level_id):sa_act_2 score_requirement_c set from storage $(filename):sa_act_2 score_requirement_c
+$data modify storage phan_dream_$(level_id):sa_act_2 score_requirement_b set from storage $(filename):sa_act_2 score_requirement_b
+$data modify storage phan_dream_$(level_id):sa_act_2 score_requirement_a set from storage $(filename):sa_act_2 score_requirement_a
+$data modify storage phan_dream_$(level_id):sa_act_2 score_requirement_s set from storage $(filename):sa_act_2 score_requirement_s
+$data modify storage phan_dream_$(level_id):sa_act_2 time set from storage $(filename):sa_act_2 time
+$data modify storage phan_dream_$(level_id):sa_act_2 weather set from storage $(filename):sa_act_2 weather
+$data modify storage phan_dream_$(level_id):sa_act_2 skybox set from storage $(filename):sa_act_2 skybox
+$data modify storage phan_dream_$(level_id):sa_act_2 use_area_transition set from storage $(filename):sa_act_2 use_area_transition
+$data modify storage phan_dream_$(level_id):sa_act_2 music_track set from storage $(filename):sa_act_2 music_track
+$data modify storage phan_dream_$(level_id):sa_act_2 music_function set from storage $(filename):sa_act_2 music_function
+$data modify storage phan_dream_$(level_id):sa_act_2 teleport_dimension set from storage $(filename):sa_act_2 teleport_dimension
+$data modify storage phan_dream_$(level_id):sa_act_2 teleport_location set from storage $(filename):sa_act_2 teleport_location
+$data modify storage phan_dream_$(level_id):sa_act_2 soul_approach set from storage $(filename):sa_act_2 soul_approach
+$data modify storage phan_dream_$(level_id):sa_act_2 night_vision set from storage $(filename):sa_act_2 night_vision
+$data modify storage phan_dream_$(level_id):sa_act_2 bright_mines set from storage $(filename):sa_act_2 bright_mines
+$data modify storage phan_dream_$(level_id):sa_act_3 playable set from storage $(filename):sa_act_3 playable
+$data modify storage phan_dream_$(level_id):sa_act_3 act_name set from storage $(filename):sa_act_3 act_name
+#$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_text set from storage $(filename):sa_act_3 thumbnail_text
+$data modify storage phan_dream_$(level_id):sa_act_3 thumbnail_model set from storage $(filename):sa_act_3 thumbnail_model
+$data modify storage phan_dream_$(level_id):sa_act_3 pearls_needed set from storage $(filename):sa_act_3 pearls_needed
+$data modify storage phan_dream_$(level_id):sa_act_3 time_limit set from storage $(filename):sa_act_3 time_limit
+$data modify storage phan_dream_$(level_id):sa_act_3 target_time set from storage $(filename):sa_act_3 target_time
+$data modify storage phan_dream_$(level_id):sa_act_3 reset_plane set from storage $(filename):sa_act_3 reset_plane
+$data modify storage phan_dream_$(level_id):sa_act_3 score_requirement_c set from storage $(filename):sa_act_3 score_requirement_c
+$data modify storage phan_dream_$(level_id):sa_act_3 score_requirement_b set from storage $(filename):sa_act_3 score_requirement_b
+$data modify storage phan_dream_$(level_id):sa_act_3 score_requirement_a set from storage $(filename):sa_act_3 score_requirement_a
+$data modify storage phan_dream_$(level_id):sa_act_3 score_requirement_s set from storage $(filename):sa_act_3 score_requirement_s
+$data modify storage phan_dream_$(level_id):sa_act_3 time set from storage $(filename):sa_act_3 time
+$data modify storage phan_dream_$(level_id):sa_act_3 weather set from storage $(filename):sa_act_3 weather
+$data modify storage phan_dream_$(level_id):sa_act_3 skybox set from storage $(filename):sa_act_3 skybox
+$data modify storage phan_dream_$(level_id):sa_act_3 use_area_transition set from storage $(filename):sa_act_3 use_area_transition
+$data modify storage phan_dream_$(level_id):sa_act_3 music_track set from storage $(filename):sa_act_3 music_track
+$data modify storage phan_dream_$(level_id):sa_act_3 music_function set from storage $(filename):sa_act_3 music_function
+$data modify storage phan_dream_$(level_id):sa_act_3 teleport_dimension set from storage $(filename):sa_act_3 teleport_dimension
+$data modify storage phan_dream_$(level_id):sa_act_3 teleport_location set from storage $(filename):sa_act_3 teleport_location
+$data modify storage phan_dream_$(level_id):sa_act_3 soul_approach set from storage $(filename):sa_act_3 soul_approach
+$data modify storage phan_dream_$(level_id):sa_act_3 night_vision set from storage $(filename):sa_act_3 night_vision
+$data modify storage phan_dream_$(level_id):sa_act_3 bright_mines set from storage $(filename):sa_act_3 bright_mines
+$data modify storage phan_dream_$(level_id):portal_race selectable set from storage $(filename):portal_race selectable
+$data modify storage phan_dream_$(level_id):pr_act_1 playable set from storage $(filename):pr_act_1 playable
+$data modify storage phan_dream_$(level_id):pr_act_1 act_name set from storage $(filename):pr_act_1 act_name
+#$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_text set from storage $(filename):pr_act_1 thumbnail_text
+$data modify storage phan_dream_$(level_id):pr_act_1 thumbnail_model set from storage $(filename):pr_act_1 thumbnail_model
+$data modify storage phan_dream_$(level_id):pr_act_1 supports_bots set from storage $(filename):pr_act_1 supports_bots
+$data modify storage phan_dream_$(level_id):pr_act_1 countdown_type set from storage $(filename):pr_act_1 countdown_type
+$data modify storage phan_dream_$(level_id):pr_act_1 game_type set from storage $(filename):pr_act_1 game_type
+$data modify storage phan_dream_$(level_id):pr_act_1 checkpoints set from storage $(filename):pr_act_1 checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_1 laps set from storage $(filename):pr_act_1 laps
+$data modify storage phan_dream_$(level_id):pr_act_1 pearls_needed set from storage $(filename):pr_act_1 pearls_needed
+$data modify storage phan_dream_$(level_id):pr_act_1 time_limit set from storage $(filename):pr_act_1 time_limit
+$data modify storage phan_dream_$(level_id):pr_act_1 time_limit_minimum set from storage $(filename):pr_act_1 time_limit_minimum
+$data modify storage phan_dream_$(level_id):pr_act_1 reset_plane set from storage $(filename):pr_act_1 reset_plane
+$data modify storage phan_dream_$(level_id):pr_act_1 time_between_checkpoints set from storage $(filename):pr_act_1 time_between_checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_1 bot_checkpoint_data set from storage $(filename):pr_act_1 bot_checkpoint_data
+$data modify storage phan_dream_$(level_id):pr_act_1 time set from storage $(filename):pr_act_1 time
+$data modify storage phan_dream_$(level_id):pr_act_1 weather set from storage $(filename):pr_act_1 weather
+$data modify storage phan_dream_$(level_id):pr_act_1 skybox set from storage $(filename):pr_act_1 skybox
+$data modify storage phan_dream_$(level_id):pr_act_1 music_track set from storage $(filename):pr_act_1 music_track
+$data modify storage phan_dream_$(level_id):pr_act_1 music_function set from storage $(filename):pr_act_1 music_function
+$data modify storage phan_dream_$(level_id):pr_act_1 teleport_dimension set from storage $(filename):pr_act_1 teleport_dimension
+$data modify storage phan_dream_$(level_id):pr_act_1 teleport_location set from storage $(filename):pr_act_1 teleport_location
+$data modify storage phan_dream_$(level_id):pr_act_1 night_vision set from storage $(filename):pr_act_1 night_vision
+$data modify storage phan_dream_$(level_id):pr_act_1 bright_mines set from storage $(filename):pr_act_1 bright_mines
+$data modify storage phan_dream_$(level_id):pr_act_2 playable set from storage $(filename):pr_act_2 playable
+$data modify storage phan_dream_$(level_id):pr_act_2 act_name set from storage $(filename):pr_act_2 act_name
+#$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_text set from storage $(filename):pr_act_2 thumbnail_text
+$data modify storage phan_dream_$(level_id):pr_act_2 thumbnail_model set from storage $(filename):pr_act_2 thumbnail_model
+$data modify storage phan_dream_$(level_id):pr_act_2 supports_bots set from storage $(filename):pr_act_2 supports_bots
+$data modify storage phan_dream_$(level_id):pr_act_2 countdown_type set from storage $(filename):pr_act_2 countdown_type
+$data modify storage phan_dream_$(level_id):pr_act_2 game_type set from storage $(filename):pr_act_2 game_type
+$data modify storage phan_dream_$(level_id):pr_act_2 checkpoints set from storage $(filename):pr_act_2 checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_2 laps set from storage $(filename):pr_act_2 laps
+$data modify storage phan_dream_$(level_id):pr_act_2 pearls_needed set from storage $(filename):pr_act_2 pearls_needed
+$data modify storage phan_dream_$(level_id):pr_act_2 time_limit set from storage $(filename):pr_act_2 time_limit
+$data modify storage phan_dream_$(level_id):pr_act_2 time_limit_minimum set from storage $(filename):pr_act_2 time_limit_minimum
+$data modify storage phan_dream_$(level_id):pr_act_2 reset_plane set from storage $(filename):pr_act_2 reset_plane
+$data modify storage phan_dream_$(level_id):pr_act_2 time_between_checkpoints set from storage $(filename):pr_act_2 time_between_checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_2 bot_checkpoint_data set from storage $(filename):pr_act_2 bot_checkpoint_data
+$data modify storage phan_dream_$(level_id):pr_act_2 time set from storage $(filename):pr_act_2 time
+$data modify storage phan_dream_$(level_id):pr_act_2 weather set from storage $(filename):pr_act_2 weather
+$data modify storage phan_dream_$(level_id):pr_act_2 skybox set from storage $(filename):pr_act_2 skybox
+$data modify storage phan_dream_$(level_id):pr_act_2 music_track set from storage $(filename):pr_act_2 music_track
+$data modify storage phan_dream_$(level_id):pr_act_2 music_function set from storage $(filename):pr_act_2 music_function
+$data modify storage phan_dream_$(level_id):pr_act_2 teleport_dimension set from storage $(filename):pr_act_2 teleport_dimension
+$data modify storage phan_dream_$(level_id):pr_act_2 teleport_location set from storage $(filename):pr_act_2 teleport_location
+$data modify storage phan_dream_$(level_id):pr_act_2 night_vision set from storage $(filename):pr_act_2 night_vision
+$data modify storage phan_dream_$(level_id):pr_act_2 bright_mines set from storage $(filename):pr_act_2 bright_mines
+$data modify storage phan_dream_$(level_id):pr_act_3 playable set from storage $(filename):pr_act_3 playable
+$data modify storage phan_dream_$(level_id):pr_act_3 act_name set from storage $(filename):pr_act_3 act_name
+#$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_text set from storage $(filename):pr_act_3 thumbnail_text
+$data modify storage phan_dream_$(level_id):pr_act_3 thumbnail_model set from storage $(filename):pr_act_3 thumbnail_model
+$data modify storage phan_dream_$(level_id):pr_act_3 supports_bots set from storage $(filename):pr_act_3 supports_bots
+$data modify storage phan_dream_$(level_id):pr_act_3 countdown_type set from storage $(filename):pr_act_3 countdown_type
+$data modify storage phan_dream_$(level_id):pr_act_3 game_type set from storage $(filename):pr_act_3 game_type
+$data modify storage phan_dream_$(level_id):pr_act_3 checkpoints set from storage $(filename):pr_act_3 checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_3 laps set from storage $(filename):pr_act_3 laps
+$data modify storage phan_dream_$(level_id):pr_act_3 pearls_needed set from storage $(filename):pr_act_3 pearls_needed
+$data modify storage phan_dream_$(level_id):pr_act_3 time_limit set from storage $(filename):pr_act_3 time_limit
+$data modify storage phan_dream_$(level_id):pr_act_3 time_limit_minimum set from storage $(filename):pr_act_3 time_limit_minimum
+$data modify storage phan_dream_$(level_id):pr_act_3 reset_plane set from storage $(filename):pr_act_3 reset_plane
+$data modify storage phan_dream_$(level_id):pr_act_3 time_between_checkpoints set from storage $(filename):pr_act_3 time_between_checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_3 bot_checkpoint_data set from storage $(filename):pr_act_3 bot_checkpoint_data
+$data modify storage phan_dream_$(level_id):pr_act_3 time set from storage $(filename):pr_act_3 time
+$data modify storage phan_dream_$(level_id):pr_act_3 weather set from storage $(filename):pr_act_3 weather
+$data modify storage phan_dream_$(level_id):pr_act_3 skybox set from storage $(filename):pr_act_3 skybox
+$data modify storage phan_dream_$(level_id):pr_act_3 music_track set from storage $(filename):pr_act_3 music_track
+$data modify storage phan_dream_$(level_id):pr_act_3 music_function set from storage $(filename):pr_act_3 music_function
+$data modify storage phan_dream_$(level_id):pr_act_3 teleport_dimension set from storage $(filename):pr_act_3 teleport_dimension
+$data modify storage phan_dream_$(level_id):pr_act_3 teleport_location set from storage $(filename):pr_act_3 teleport_location
+$data modify storage phan_dream_$(level_id):pr_act_3 night_vision set from storage $(filename):pr_act_3 night_vision
+$data modify storage phan_dream_$(level_id):pr_act_3 bright_mines set from storage $(filename):pr_act_3 bright_mines
+$data modify storage phan_dream_$(level_id):pr_act_4 playable set from storage $(filename):pr_act_4 playable
+$data modify storage phan_dream_$(level_id):pr_act_4 act_name set from storage $(filename):pr_act_4 act_name
+#$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_text set from storage $(filename):pr_act_4 thumbnail_text
+$data modify storage phan_dream_$(level_id):pr_act_4 thumbnail_model set from storage $(filename):pr_act_4 thumbnail_model
+$data modify storage phan_dream_$(level_id):pr_act_4 supports_bots set from storage $(filename):pr_act_4 supports_bots
+$data modify storage phan_dream_$(level_id):pr_act_4 countdown_type set from storage $(filename):pr_act_4 countdown_type
+$data modify storage phan_dream_$(level_id):pr_act_4 game_type set from storage $(filename):pr_act_4 game_type
+$data modify storage phan_dream_$(level_id):pr_act_4 checkpoints set from storage $(filename):pr_act_4 checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_4 laps set from storage $(filename):pr_act_4 laps
+$data modify storage phan_dream_$(level_id):pr_act_4 pearls_needed set from storage $(filename):pr_act_4 pearls_needed
+$data modify storage phan_dream_$(level_id):pr_act_4 time_limit set from storage $(filename):pr_act_4 time_limit
+$data modify storage phan_dream_$(level_id):pr_act_4 time_limit_minimum set from storage $(filename):pr_act_4 time_limit_minimum
+$data modify storage phan_dream_$(level_id):pr_act_4 reset_plane set from storage $(filename):pr_act_4 reset_plane
+$data modify storage phan_dream_$(level_id):pr_act_4 time_between_checkpoints set from storage $(filename):pr_act_4 time_between_checkpoints
+$data modify storage phan_dream_$(level_id):pr_act_4 bot_checkpoint_data set from storage $(filename):pr_act_4 bot_checkpoint_data
+$data modify storage phan_dream_$(level_id):pr_act_4 time set from storage $(filename):pr_act_4 time
+$data modify storage phan_dream_$(level_id):pr_act_4 weather set from storage $(filename):pr_act_4 weather
+$data modify storage phan_dream_$(level_id):pr_act_4 skybox set from storage $(filename):pr_act_4 skybox
+$data modify storage phan_dream_$(level_id):pr_act_4 music_track set from storage $(filename):pr_act_4 music_track
+$data modify storage phan_dream_$(level_id):pr_act_4 music_function set from storage $(filename):pr_act_4 music_function
+$data modify storage phan_dream_$(level_id):pr_act_4 teleport_dimension set from storage $(filename):pr_act_4 teleport_dimension
+$data modify storage phan_dream_$(level_id):pr_act_4 teleport_location set from storage $(filename):pr_act_4 teleport_location
+$data modify storage phan_dream_$(level_id):pr_act_4 night_vision set from storage $(filename):pr_act_4 night_vision
+$data modify storage phan_dream_$(level_id):pr_act_4 bright_mines set from storage $(filename):pr_act_4 bright_mines
+$data modify storage phan_dream_$(level_id):pr_podium time set from storage $(filename):pr_podium time
+$data modify storage phan_dream_$(level_id):pr_podium weather set from storage $(filename):pr_podium weather
+$data modify storage phan_dream_$(level_id):pr_podium skybox set from storage $(filename):pr_podium skybox
+$data modify storage phan_dream_$(level_id):pr_podium teleport_dimension set from storage $(filename):pr_podium teleport_dimension
+$data modify storage phan_dream_$(level_id):pr_podium teleport_location set from storage $(filename):pr_podium teleport_location
+$data modify storage phan_dream_$(level_id):pr_podium night_vision set from storage $(filename):pr_podium night_vision
+
+#we did it!
+scoreboard players set #success value 1

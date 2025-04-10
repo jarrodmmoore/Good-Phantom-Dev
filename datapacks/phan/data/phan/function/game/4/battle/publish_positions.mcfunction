@@ -10,7 +10,7 @@ execute as @a[tag=playing] run function phan:game/4/get_item_position
 scoreboard players set @a[tag=!playing,tag=!playerReservation] enderEyes 0
 scoreboard players reset @a[scores={enderEyesShow=1..,enderEyes=..0}] enderEyesShow
 execute as @a[tag=!playerReservation,scores={enderEyes=1..}] run scoreboard players operation @s enderEyesShow = @s enderEyes
-execute as @a[tag=!playerReservation,scores={enderEyes=1..}] run scoreboard players display numberformat @s enderEyesShow styled {"color":"light_purple"}
+execute as @a[tag=!playerReservation,scores={enderEyes=1..}] run scoreboard players display numberformat @s enderEyesShow styled {color:"light_purple"}
 
 #finished players should have a flag by their name...
 
