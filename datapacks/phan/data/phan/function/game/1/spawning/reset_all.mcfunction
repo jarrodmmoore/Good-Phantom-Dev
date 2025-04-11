@@ -41,8 +41,7 @@ function phan:game/1/spawning/reset/reset5d
 #Sprint Racer and Good Phantom both experience fatal scoreboard failures on certain Minecraft servers.
 #i have a strong suspicion that the remove/re-add objective trick is the cause of this.
 
-#it works find in singleplayer and on Realms, so i don't much care to pivot.
-#i'll just make like a conservative watching temperatures rise and stick my head in the sand
+#ah well. it works fine in singleplayer, vanilla servers, and Realms, so that's good enough for me
 
 #reset state
 scoreboard players set #area0SpawnA value -1

@@ -16,6 +16,11 @@ execute if score @s spectateMode matches 1 run function phan:game/1/spectator/sp
 #cinematic-cam
 #execute if score @s spectateMode matches 2 run function phan:game/1/spectator/spectator_cinematic_cam
 
+# ^ cinematic cam was cut.
+#it would've functioned similar to the kind of spec view seen in other racing games where it shifts between fixed camera points on the level and cameras attached to players
+#i primarily cut this due to laziness.
+#but this feature also would've added extra work for level designers who would have to place tons of camera points in their levels and make sure they don't result in a big fat view of a wall
+#and that's a lot of work for a feature that most players probably wouldn't have used anyway.
 
 #clear some variables if we lost our spec target
 execute if score #foundSpec value matches 0 run function phan:game/1/spectator/spectator_forget_target

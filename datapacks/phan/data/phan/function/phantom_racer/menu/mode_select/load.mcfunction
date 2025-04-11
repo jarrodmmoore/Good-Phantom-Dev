@@ -4,8 +4,13 @@ scoreboard players set #tvAnimation value 0
 scoreboard players set #tvInputJumpImpulse value 0
 
 #summon phantom racer text if it doesn't already exist
+scoreboard players set #tvMenuState10 value 1
+execute unless entity @e[type=text_display,tag=tvLogo,distance=..7] run scoreboard players set #tvMenuState10 value 0
 execute unless entity @e[type=text_display,tag=tvLogo,distance=..7] run summon text_display ~ ~-2 ~-2 {Tags:["lobbyProp","tvLogo","tvProp"],alignment:"center",text:["",{text:"\uE044\uF001\uE045"}],start_interpolation:-1,teleport_duration:10,interpolation_duration:10,transformation:{left_rotation:[0.0f,-0.707f,0f,0.707f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.1f,0.1f,0.1f]},background:16711680}
-execute as @e[type=text_display,distance=..7,tag=tvLogo] run data merge entity @s {teleport_duration:10}
+execute if score #tvMenuState10 value matches 0 as @e[type=text_display,distance=..7,tag=tvLogo] run data merge entity @s {teleport_duration:10}
+#mojang messed with entity interpolation in 1.21.5, but i'm not sure how exactly.
+#we can fix it here, thankfully
+#but unfortunately the Red Rocket item and the Portal Race bots had no such luck. they look a lot jankier now.
 
 #"press start" text goes away soon
 execute as @e[type=text_display,tag=tvPressStart,distance=..7] run scoreboard players set @s lifespan 10
