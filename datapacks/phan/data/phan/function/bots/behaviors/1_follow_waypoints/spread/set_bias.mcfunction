@@ -22,7 +22,7 @@ scoreboard players operation @s botBiasZ *= #100 value
 scoreboard players operation @s botBiasZ /= #rangeZ value
 scoreboard players operation @s botBiasZ /= #10 value
 
-#clamp final value in 0..9
+#clamp final value in 0..10
 scoreboard players set @s[scores={botBiasX=11..}] botBiasX 10
 scoreboard players set @s[scores={botBiasX=..-1}] botBiasX 0
 scoreboard players set @s[scores={botBiasZ=11..}] botBiasZ 10
