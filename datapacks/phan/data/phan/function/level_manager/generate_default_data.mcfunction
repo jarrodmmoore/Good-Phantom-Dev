@@ -233,4 +233,4 @@ $data modify storage phan:data spawn_player_model set from storage phan_dream_$(
 $execute as @e[limit=1,type=armor_stand,tag=lobbyPlayer$(level_id)] run function phan:level_manager/load/replace_sleeping_player_model with storage phan:data
 
 #change display text above level
-$execute as @e[limit=1,type=text_display,tag=lobbyNameDisplay$(level_id)] run data merge entity @s {text:["",{nbt:"name_display",storage:"phan_dream_$(level_id):dream_data",interpret:true}]}
+$execute as @e[limit=1,type=text_display,tag=lobbyNameDisplay$(level_id)] run data modify entity @s text set value ["",{nbt:"name_display",storage:"phan_dream_$(level_id):dream_data",interpret:true}]
