@@ -1,18 +1,18 @@
 #spawn an area effect cloud that will transform into an enemy when a player gets near it
 
 #editArg2 is what we are
-execute unless score @s editArg2 matches 2.. run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnZombie"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 2 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnZombieKnight"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 3 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnSkeleton"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 4 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnVindicator"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 5 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnBabyGhast"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 6 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnGuardian"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 7 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnTurret"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 8 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnIronGolem"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 9 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnTNTGolem"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 10 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnShulker"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 11 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnVex"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
-execute if score @s editArg2 matches 12 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnMine"],Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute unless score @s editArg2 matches 2.. run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnZombie"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 2 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnZombieKnight"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 3 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnSkeleton"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 4 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnVindicator"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 5 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnBabyGhast"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 6 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnGuardian"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 7 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnTurret"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 8 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnIronGolem"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 9 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnTNTGolem"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 10 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnShulker"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 11 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnVex"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
+execute if score @s editArg2 matches 12 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","spawnMine"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
 
 #different spawn radius depending on editArg1
 execute if score @s editArg1 matches 0.. run tag @e[tag=setMe,type=area_effect_cloud,distance=..2] add largeRadius

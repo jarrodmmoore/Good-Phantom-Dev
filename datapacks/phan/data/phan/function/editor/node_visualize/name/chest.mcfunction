@@ -1,6 +1,6 @@
 #primary title
-execute if score @s editArg3 matches ..0 run summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{translate:"gp.editor.node_type.item_box",color:"light_purple"}]}
-execute if score @s editArg3 matches 1.. run summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{translate:"gp.editor.node_type.item_box",color:"white"}]}
+execute if score @s editArg3 matches ..0 run summon area_effect_cloud ~ ~ ~ {custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{translate:"gp.editor.node_type.item_box",color:"light_purple"}]}
+execute if score @s editArg3 matches 1.. run summon area_effect_cloud ~ ~ ~ {custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:5,CustomNameVisible:1b,CustomName:["",{translate:"gp.editor.node_type.item_box",color:"white"}]}
 
 #macros! oh no!
 

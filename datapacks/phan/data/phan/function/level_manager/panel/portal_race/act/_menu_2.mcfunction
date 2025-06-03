@@ -98,3 +98,7 @@ tellraw @a[tag=tellMe] ["",{text:" "}]
 tellraw @a[tag=tellMe] ["",{translate:"gp.misc.brackets",color:"red",bold:false,with:[{translate:"gp.misc.back"}],click_event:{action:"run_command",command:"/trigger tLevelManager set 1002"},hover_event:{action:"show_text",value:[{translate:"gp.misc.back"}]}}]
 
 $tellraw @a[tag=tellMe] ["",{text:"===/\\=== ",bold:true,color:"light_purple"},{selector:"@s"},{text:" | "},{nbt:"act_name",storage:"phan_dream_$(level_id):pr_act_$(act)",interpret:false},{text:" ===/\\===",bold:true,color:"light_purple"}]
+
+
+#cleanup
+scoreboard players reset @s levelManagerAct

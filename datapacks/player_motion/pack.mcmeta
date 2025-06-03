@@ -1,6 +1,6 @@
 {
   "pack": {
-    "pack_format": 71,
+    "pack_format": 79,
     "description": "Explosion-based player motion library from https://github.com/MulverineX/player_motion"
   }
 }

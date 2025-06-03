@@ -1,6 +1,10 @@
 #executed by levelEntry armor_stand
 #argument $(act) should be set when this runs
 
+#get score for which act we're on
+scoreboard players operation @s levelManagerAct = @a[limit=1,tag=tellMe] levelManagerAct
+
+
 #figure out which acts are playable
 tag @s add act1SelectableSA
 $execute store result score #test value run data get storage phan_dream_$(level_id):sa_act_1 playable 1

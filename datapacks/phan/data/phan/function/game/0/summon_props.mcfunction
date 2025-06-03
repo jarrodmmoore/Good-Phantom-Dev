@@ -49,8 +49,8 @@ execute if score #lobbyTrailGuide value matches 1 unless score #lastLevelPlayed 
 execute if score #lobbyTrailGuide value matches 2 run function phan:game/0/summon_stardust_trail_2
 
 #credits and intro floating text
-summon area_effect_cloud 204 -6 113 {Tags:["lobbyProp"],Invulnerable:1b,NoGravity:1b,Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:2147483647,CustomNameVisible:1b,CustomName:["",{translate:"gp.lobby.intro",bold:true,italic:false,color:"white"}]}
-summon area_effect_cloud 204 -6 123 {Tags:["lobbyProp"],Invulnerable:1b,NoGravity:1b,Particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:2147483647,CustomNameVisible:1b,CustomName:["",{translate:"gp.lobby.credits",bold:true,italic:false,color:"white"}]}
+summon area_effect_cloud 204 -6 113 {Tags:["lobbyProp"],Invulnerable:1b,NoGravity:1b,custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:2147483647,CustomNameVisible:1b,CustomName:["",{translate:"gp.lobby.intro",bold:true,italic:false,color:"white"}]}
+summon area_effect_cloud 204 -6 123 {Tags:["lobbyProp"],Invulnerable:1b,NoGravity:1b,custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:2147483647,CustomNameVisible:1b,CustomName:["",{translate:"gp.lobby.credits",bold:true,italic:false,color:"white"}]}
 
 #interaction entities to prevent players from messing with stuff they shouldn't
 function phan:game/0/summon_interactions
