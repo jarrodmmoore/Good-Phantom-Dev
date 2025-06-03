@@ -25,3 +25,8 @@ execute if score @s bindDropKey matches 1.. run function phan:control/player_bin
 #swap key bind trigger
 scoreboard players enable @s bindSwapKey
 execute if score @s bindSwapKey matches 1.. run function phan:control/player_bind_swap_key
+
+
+#remove creative-only triggers when not in creative mode
+execute if entity @s[gamemode=!creative] run scoreboard players reset @s tEditor
+execute if entity @s[gamemode=!creative] run scoreboard players reset @s tLevelManager

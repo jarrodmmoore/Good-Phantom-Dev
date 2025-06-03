@@ -260,6 +260,8 @@ scoreboard objectives add joinGame trigger
 scoreboard objectives add navCompass trigger
 scoreboard objectives add toggleAutoReset trigger
 scoreboard objectives add toggleAutoJumpPads trigger
+scoreboard objectives add tEditor trigger
+scoreboard objectives add tLevelManager trigger
 #inputs
 scoreboard objectives add dropSword minecraft.dropped:minecraft.diamond_sword
 scoreboard objectives add dropLightBlue minecraft.dropped:minecraft.light_blue_dye

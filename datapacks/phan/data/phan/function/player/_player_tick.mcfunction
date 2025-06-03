@@ -36,6 +36,11 @@ execute if score @s hudFlashTime matches 1.. run scoreboard players remove @s hu
 #=====
 # TRIGGER COMMANDS
 
+#ui triggers, for admin (creative mode) players
+#run at 20Hz to keep admin menus responsive
+execute if entity @s[gamemode=creative] run function phan:player/admin_ui/listen_for_triggers
+
+#main gameplay triggers
 #no need to do this more than 5 times per second in my view, so let's take it easy
 execute if score #5Hz value matches 2 run function phan:player/listen_for_triggers
 

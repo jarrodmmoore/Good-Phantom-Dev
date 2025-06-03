@@ -11,9 +11,9 @@ function phan:editor/panel/ai_waypoint/_waypoint_menu
 
 #=====
 
-tellraw @s ["",{translate:"gp.editor.button.zero_all",color:"gold",bold:false,click_event:{action:"run_command",command:"/function phan:editor/panel/ai_waypoint/zero"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.zero_all"}]}}]
+tellraw @s ["",{translate:"gp.editor.button.zero_all",color:"gold",bold:false,click_event:{action:"run_command",command:"/trigger tEditor set 1049"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.zero_all"}]}}]
 tellraw @s ["",{text:" "}]
-tellraw @s ["",{translate:"gp.editor.button.back",color:"red",bold:false,click_event:{action:"run_command",command:"/function phan:editor/panel/ai_waypoint/_meta_menu"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.back"}]}}]
+tellraw @s ["",{translate:"gp.editor.button.back",color:"red",bold:false,click_event:{action:"run_command",command:"/trigger tEditor set 1001"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.back"}]}}]
 
 #feedback
 playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000

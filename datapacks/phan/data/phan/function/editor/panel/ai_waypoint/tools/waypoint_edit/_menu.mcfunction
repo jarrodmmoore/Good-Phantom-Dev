@@ -19,7 +19,7 @@ tellraw @s ["",{text:"\n==\\/== ",color:"#FF3333",bold:true},{translate:"gp.edit
 function phan:editor/panel/ai_waypoint/_waypoint_menu
 
 #done button
-tellraw @s ["",{text:"[done]",color:"gold",bold:false,click_event:{action:"run_command",command:"/function phan:editor/panel/ai_waypoint/tools/waypoint_edit/abort"},hover_event:{action:"show_text",value:"done"}}]
+tellraw @s ["",{text:"[done]",color:"gold",bold:false,click_event:{action:"run_command",command:"/trigger tEditor set 1066"},hover_event:{action:"show_text",value:"done"}}]
 
 #=====
 

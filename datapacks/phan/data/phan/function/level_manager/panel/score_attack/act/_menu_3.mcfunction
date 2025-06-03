@@ -20,10 +20,10 @@ tellraw @a[tag=tellMe] ["",{text:"\n\n\n\n\n\n\n"}]
 
 
 #page number
-tellraw @a[tag=tellMe] ["",{text:" "},{translate:"gp.level_manager.page_x_of_x",with:[{text:"3"},{text:"3"}],italic:true},{text:"  "},{text:"[<<]",color:"yellow",bold:false,click_event:{action:"run_command",command:"/function phan:level_manager/panel/score_attack/act/_menu_2_lookup"},hover_event:{action:"show_text",value:[{translate:"gp.misc.previous"}]}},{text:" "},{text:"[>>]",color:"dark_gray",bold:false,click_event:{action:"run_command",command:"/function phan:level_manager/error_noise"},hover_event:{action:"show_text",value:[{translate:"gp.misc.next"}]}}]
+tellraw @a[tag=tellMe] ["",{text:" "},{translate:"gp.level_manager.page_x_of_x",with:[{text:"3"},{text:"3"}],italic:true},{text:"  "},{text:"[<<]",color:"yellow",bold:false,click_event:{action:"run_command",command:"/trigger tLevelManager set 1174"},hover_event:{action:"show_text",value:[{translate:"gp.misc.previous"}]}},{text:" "},{text:"[>>]",color:"dark_gray",bold:false,click_event:{action:"run_command",command:"/trigger tLevelManager set 1079"},hover_event:{action:"show_text",value:[{translate:"gp.misc.next"}]}}]
 
 #back button
 tellraw @a[tag=tellMe] ["",{text:" "}]
-tellraw @a[tag=tellMe] ["",{translate:"gp.misc.brackets",color:"red",bold:false,with:[{translate:"gp.misc.back"}],click_event:{action:"run_command",command:"/function phan:level_manager/panel/score_attack/_menu_lookup"},hover_event:{action:"show_text",value:[{translate:"gp.misc.back"}]}}]
+tellraw @a[tag=tellMe] ["",{translate:"gp.misc.brackets",color:"red",bold:false,with:[{translate:"gp.misc.back"}],click_event:{action:"run_command",command:"/trigger tLevelManager set 1001"},hover_event:{action:"show_text",value:[{translate:"gp.misc.back"}]}}]
 
 $tellraw @a[tag=tellMe] ["",{text:"===/\\=== ",bold:true,color:"yellow"},{selector:"@s"},{text:" | "},{nbt:"act_name",storage:"phan_dream_$(level_id):sa_act_$(act)",interpret:false},{text:" ===/\\===",bold:true,color:"yellow"}]

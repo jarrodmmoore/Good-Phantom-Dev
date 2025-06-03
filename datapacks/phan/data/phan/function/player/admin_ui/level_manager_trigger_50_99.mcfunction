@@ -1,0 +1,50 @@
+execute if score @s tLevelManager matches 1050 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'night_vision',value:0}
+execute if score @s tLevelManager matches 1051 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'night_vision',value:0}
+execute if score @s tLevelManager matches 1052 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1053 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1054 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1055 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1056 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1057 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1058 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1059 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1060 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1061 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1062 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1063 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'bright_mines',value:1}
+execute if score @s tLevelManager matches 1064 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1065 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1066 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1067 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'bright_mines',value:0}
+execute if score @s tLevelManager matches 1068 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_1',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1069 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_2',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1070 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_3',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1071 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_4',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1072 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_1',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1073 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_2',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1074 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_3',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1075 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_4',nbt:'music_track',offset:-2,mod:32}
+execute if score @s tLevelManager matches 1076 run return run function phan:level_manager/panel/portal_race/act/_menu_lookup
+execute if score @s tLevelManager matches 1077 run return run function phan:level_manager/panel/portal_race/act/_menu_3_lookup
+execute if score @s tLevelManager matches 1078 run return run function phan:level_manager/panel/portal_race/act/_menu_2_lookup
+execute if score @s tLevelManager matches 1079 run return run function phan:level_manager/error_noise
+execute if score @s tLevelManager matches 1080 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'playable',value:1}
+execute if score @s tLevelManager matches 1081 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'playable',value:1}
+execute if score @s tLevelManager matches 1082 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'playable',value:1}
+execute if score @s tLevelManager matches 1083 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'playable',value:1}
+execute if score @s tLevelManager matches 1084 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'playable',value:0}
+execute if score @s tLevelManager matches 1085 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'playable',value:0}
+execute if score @s tLevelManager matches 1086 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'playable',value:0}
+execute if score @s tLevelManager matches 1087 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'playable',value:0}
+execute if score @s tLevelManager matches 1088 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_1',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1089 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_2',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1090 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_3',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1091 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_4',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1092 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_1',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1093 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_2',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1094 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_3',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1095 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_4',nbt:'game_type',offset:1,mod:2}
+execute if score @s tLevelManager matches 1096 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'supports_bots',value:1}
+execute if score @s tLevelManager matches 1097 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'supports_bots',value:1}
+execute if score @s tLevelManager matches 1098 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'supports_bots',value:1}
+execute if score @s tLevelManager matches 1099 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_4',nbt:'supports_bots',value:1}
