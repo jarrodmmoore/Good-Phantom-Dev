@@ -6,7 +6,7 @@ tag @s add doneWithIntro
 tag @s remove noInventory
 stopsound @s
 title @s actionbar [""]
-execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ 100000 ~ 100000
+execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1
 scoreboard players set @s musicTime 20
 scoreboard players operation @s musicTrack = #bgm value
 

@@ -11,5 +11,5 @@ tellraw @s ["",{translate:"gp.editor.button.subtract_from_boundary",color:"gray"
 tellraw @s ["",{text:" "}]
 tellraw @s ["",{translate:"gp.editor.button.back",color:"red",bold:false,click_event:{action:"run_command",command:"/trigger tEditor set 1000"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.back"}]}}]
 
-playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
+function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 scoreboard players set @s editor 0

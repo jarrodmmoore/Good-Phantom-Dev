@@ -7,4 +7,4 @@ scoreboard players set @s currentLoad 1
 scoreboard players set @s previousLoad -1
 
 #play sound
-execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ 100000 ~ 100000 .8
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.enderman.teleport",targets:"@s",pitch:".8",volume:"1"}

@@ -3,5 +3,5 @@ tag @e[tag=selected,tag=checkpoint] add checkWarn
 tag @e[tag=removeCalc] remove checkWarn
 tag @e[tag=removeCalc] remove removeCalc
 
-playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
+function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 tellraw @s ["",{text:" > toggled missed cp warning for selected checkpoints"}]

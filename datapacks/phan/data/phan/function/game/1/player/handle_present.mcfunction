@@ -75,7 +75,7 @@ execute if entity @s[scores={presentGoal=1..}] as @e[tag=claimedPresent,type=ite
 execute if entity @s[scores={presentGoal=0,presentTime=1..}] run function phan:game/1/player/handle_present_open
 
 #missed the goal, play sad sound effect
-execute if entity @s[scores={presentGoal=1..,presentTime=0}] as @a[tag=tellMe] at @s run playsound minecraft:block.note_block.didgeridoo master @s ~ 100000 ~ 100000 0.7
+execute if entity @s[scores={presentGoal=1..,presentTime=0}] as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.didgeridoo",targets:"@s",pitch:".7",volume:"1"}
 
 #stop animations and display after a little bit
 execute if score @s presentTime matches ..-20 run function phan:game/1/player/handle_present_end

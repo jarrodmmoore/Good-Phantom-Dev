@@ -17,7 +17,7 @@ scoreboard players set #botsOnly value 0
 
 #hi
 tellraw @s ["",{translate:"gp.misc.playing",color:"aqua",italic:true}]
-execute at @s run playsound minecraft:block.note_block.pling master @s ~ 100000 ~ 100000 2
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:"2",volume:"1"}
 
 #respawn at one of the spawnpoints, saved when we said GO!
 scoreboard players operation @s vsRespawnX = #fallbackRespawnX value

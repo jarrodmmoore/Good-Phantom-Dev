@@ -1,6 +1,6 @@
 #feedback
 effect give @s hero_of_the_village 1 1 false
-playsound minecraft:entity.phantom.flap master @a ~ ~ ~ 1.25 1.75
+playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1.25 .85
 
 #get vertical launch. this should hopefully work at any x and z coordinate
 scoreboard players set $x player_motion.api.launch 0

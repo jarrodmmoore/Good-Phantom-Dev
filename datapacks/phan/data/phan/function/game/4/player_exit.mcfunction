@@ -8,7 +8,7 @@ scoreboard players reset @s racePosDisplay2
 
 #announce forfeit
 tellraw @a ["",{translate:"gp.game.player_forfeit",with:[{selector:"@s",color:"white"}],color:"#FF5040"}]
-execute as @a at @s run playsound minecraft:entity.ender_dragon.hurt master @s ~ 100000 ~ 100000
+execute as @a at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.ender_dragon.hurt",targets:"@s",pitch:"1",volume:"1"}
 
 #reset trigger
 scoreboard players reset @s exit

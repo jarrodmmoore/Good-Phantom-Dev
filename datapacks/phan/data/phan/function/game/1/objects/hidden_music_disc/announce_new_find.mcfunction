@@ -17,4 +17,4 @@ execute if entity @s[tag=discFluidity] run tellraw @a[tag=tellMe] ["",{text:"13 
 tellraw @a[tag=tellMe] ["",{text:" "}]
 
 #noise
-execute as @a[tag=tellMe] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ 100000 ~ 100000 2
+execute as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:ui.toast.challenge_complete",targets:"@s",pitch:"2",volume:".8"}

@@ -12,5 +12,5 @@ tellraw @s ["",{translate:"gp.editor.button.back",color:"red",bold:false,click_e
 #make sure we're in the proper editor state
 scoreboard players set @s editorState 2
 
-playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
+function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 scoreboard players set @s editor 0

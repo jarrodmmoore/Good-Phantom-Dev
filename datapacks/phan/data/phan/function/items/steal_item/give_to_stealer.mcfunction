@@ -32,4 +32,4 @@ execute if score #stolenItem value matches 19 run function phan:items/give/shiel
 #feedback
 function phan:player/tell_spectators
 execute at @s anchored eyes positioned ^ ^ ^5 run particle happy_villager ~ ~ ~ 0.25 0.25 0.25 1 20 force @a[tag=tellMe]
-execute as @a[tag=tellMe] at @s run playsound entity.ender_eye.death master @s ~ 100000 ~ 100000 1.2
+execute as @a[tag=tellMe] at @s run playsound entity.ender_eye.death master @s ~ ~ ~ 1 1.2 .5

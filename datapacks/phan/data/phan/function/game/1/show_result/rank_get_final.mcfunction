@@ -8,11 +8,11 @@ execute if score @s scoreShow > #scoreRankST value run scoreboard players set @s
 execute run scoreboard players operation @s rankFinal = @s prevRandom
 
 #feedback
-execute if score @s prevRandom matches 1.. run playsound minecraft:entity.player.levelup master @a[tag=tellMe] ~ 100000 ~ 100000 0.7
-execute if score @s prevRandom matches ..0 run playsound minecraft:entity.player.levelup master @a[tag=tellMe] ~ 100000 ~ 100000 1.3
-execute if score @s prevRandom matches ..0 run playsound minecraft:entity.player.levelup master @a[tag=tellMe] ~ 100000 ~ 100000 1
-execute if score @s prevRandom matches ..0 run playsound minecraft:ui.toast.challenge_complete master @a[tag=tellMe] ~ 100000 ~ 100000 1
-playsound minecraft:block.note_block.hat master @a[tag=tellMe] ~ 100000 ~ 100000 1.3
+execute if score @s prevRandom matches 1.. run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:".7",volume:".95"}
+execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1.3",volume:".9"}
+execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1",volume:".9"}
+execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:ui.toast.challenge_complete",targets:"@a[tag=tellMe]",pitch:"1",volume:".95"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@a[tag=tellMe]",pitch:"1.3",volume:"1"}
 
 #mark level as complete (if we got at least 1 point)
 execute if score @s scoreShow matches 1.. run function phan:levels/_index_record_completion

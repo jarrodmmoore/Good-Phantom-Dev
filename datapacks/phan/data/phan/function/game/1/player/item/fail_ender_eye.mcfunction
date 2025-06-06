@@ -1,4 +1,4 @@
-playsound minecraft:block.dispenser.fail master @s ~ 100000 ~ 100000 1.2
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.dispenser.fail",targets:"@s",pitch:"1.2",volume:"1"}
 
 scoreboard players set @s inputCooldownC 12
 scoreboard players reset @s carrotInput

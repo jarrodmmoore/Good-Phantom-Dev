@@ -28,7 +28,7 @@ scoreboard players set @s pSubGameState 0
 tag @s[tag=practiceCourse] remove practiceCourse
 
 #play sound
-execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ 100000 ~ 100000 .8
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.enderman.teleport",targets:"@s",pitch:".8",volume:"1"}
 
 #music
 function phan:bgm/adopt_global_music_track

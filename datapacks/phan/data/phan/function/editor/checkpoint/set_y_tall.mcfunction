@@ -1,7 +1,7 @@
 scoreboard players set @e[tag=selected,tag=checkpoint] checkMinY -64
 scoreboard players set @e[tag=selected,tag=checkpoint] checkMaxY 360
 
-playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
+function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 tellraw @s ["",{text:" > Minimum y-trigger coordinate set to y=-70"}]
 tellraw @s ["",{text:" > Maximum y-trigger coordinate set to y=360"}]
 

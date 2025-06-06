@@ -88,7 +88,7 @@ execute if score @s finishPos matches 33.. run title @a[tag=tellMe] subtitle [""
 title @a[tag=tellMe] title ["",{translate:"gp.versus.finished",color:"yellow",bold:true}]
 
 #announce to everyone else that we finished
-execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.firework_rocket.blast master @s ~ 100000 ~ 100000 1
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.firework_rocket.blast",targets:"@a[tag=doneWithIntro]",pitch:"1",volume:"1"}
 function phan:player/tell_actionbar_available
 scoreboard players set @a[tag=tellMe] actionbarDelay 40
 scoreboard players set @a[tag=tellMe,tag=navCompass] actionbarDelay 15

@@ -36,4 +36,4 @@ execute if score #success value matches 0 run function phan:level_manager/error_
 execute if score #success value matches 1 if score @s levelUID matches 1001.. run advancement grant @s only phan:good_phantom/make_it_good
 
 #feedback noise
-execute if score #success value matches 1 at @s run playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000 0.75
+execute if score #success value matches 1 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"} 0.75

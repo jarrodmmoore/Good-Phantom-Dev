@@ -47,4 +47,4 @@ xp set @s 0 points
 #clear @s
 
 #play sound
-execute at @s run playsound minecraft:entity.enderman.teleport master @s ~ 100000 ~ 100000 .8
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.enderman.teleport",targets:"@s",pitch:".8",volume:"1"}

@@ -27,5 +27,5 @@ scoreboard players set @s editorState 2
 #clear waypoint editor items when in home panel
 clear @s *[custom_data~{waypointTool:1b}]
 
-playsound minecraft:custom_sfx/bit_dink master @s ~ 100000 ~ 100000
+function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 scoreboard players set @s editor 0

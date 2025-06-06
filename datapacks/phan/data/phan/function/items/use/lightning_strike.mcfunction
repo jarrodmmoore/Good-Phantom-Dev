@@ -10,12 +10,12 @@ execute if score #gameState value matches 4 if score #botsEnabled value matches 
 execute unless score #gameState value matches 4 as @a[gamemode=adventure,tag=doneWithIntro,tag=!dontgethit,limit=5,sort=random] at @s run function phan:items/lightning_strike_hit_player
 
 #play sound
-playsound minecraft:entity.evoker.cast_spell master @s ~ 100000 ~ 100000 1.3
+playsound minecraft:entity.evoker.cast_spell master @s ~ ~ ~ 1 1.3 .75
 execute anchored eyes run particle instant_effect ^ ^ ^4 0.2 0.2 0.2 0.07 10 force @s
 execute anchored eyes run particle instant_effect ^ ^ ^4 0.2 0.2 0.2 0.07 10 force @a[tag=!dontgethit]
 
 #everyone sees this
-execute as @a[tag=doneWithIntro] at @s run playsound minecraft:entity.lightning_bolt.thunder master @s ~ 100000 ~ 100000 0.75 1
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.lightning_bolt.thunder",targets:"@s",pitch:".75",volume:".8"}
 effect give @a[tag=doneWithIntro] minecraft:night_vision 1 201 true
 
 #secretly clear item from bot inventories to curb spam

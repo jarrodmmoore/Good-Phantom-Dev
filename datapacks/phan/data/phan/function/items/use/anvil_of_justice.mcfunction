@@ -15,7 +15,7 @@ execute if score #success value matches 0 if score #botsEnabled value matches 1.
 #execute if score #success value matches 0 at @s run function phan:items/anvil_spawn_on_player
 
 #play sound
-playsound minecraft:entity.evoker.cast_spell master @s ~ 100000 ~ 100000 1
+playsound minecraft:entity.evoker.cast_spell master @s ~ ~ ~ 1 1 .75
 
 #tell us who we hit
 execute if score #success value matches 1.. if score #botsEnabled value matches ..0 if entity @a[tag=anvilWillHit] run tellraw @s ["",{text:"\n"},{translate:"gp.item.justice_is_served",bold:true},{text:"\n"},{translate:"gp.item.justice_target",bold:false,with:[{selector:"@a[tag=anvilWillHit]",bold:false}]},{text:"\n "}]

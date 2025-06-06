@@ -5,7 +5,7 @@ scoreboard players set #subGameState value 1
 scoreboard players set #offerTrophy value 0
 
 #sound
-execute as @a[tag=doneWithIntro] at @s run playsound minecraft:block.beacon.activate master @s ~ 100000 ~ 100000 1.9
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.9",volume:"1"}
 
 #reset all props and inventory items
 kill @e[tag=lobbyProp]

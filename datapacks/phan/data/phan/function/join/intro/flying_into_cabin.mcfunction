@@ -24,15 +24,15 @@ execute if score @s introProgress matches 339..356 as @e[tag=flyBuddy,type=armor
 #wind?
 execute if score @s introProgress matches 161 run playsound minecraft:item.elytra.flying master @s ~ ~ ~ .3 .5
 #flap wings
-execute if score @s introProgress matches 170 run playsound minecraft:entity.phantom.flap master @s ~ 100000 ~ 100000 1.7
-execute if score @s introProgress matches 185 run playsound minecraft:entity.phantom.flap master @s ~ 100000 ~ 100000 1.6
-execute if score @s introProgress matches 201 run playsound minecraft:entity.phantom.flap master @s ~ 100000 ~ 100000 1.7
-execute if score @s introProgress matches 217 run playsound minecraft:entity.phantom.flap master @s ~ 100000 ~ 100000 1.5
-execute if score @s introProgress matches 230 run playsound minecraft:entity.phantom.flap master @s ~ 100000 ~ 100000 1.7
-execute if score @s introProgress matches 257 run playsound minecraft:entity.phantom.swoop master @s ~ 100000 ~ 100000 1.2
+execute if score @s introProgress matches 170 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.7
+execute if score @s introProgress matches 185 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.6
+execute if score @s introProgress matches 201 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.7
+execute if score @s introProgress matches 217 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.5
+execute if score @s introProgress matches 230 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.7
+execute if score @s introProgress matches 257 run playsound minecraft:entity.phantom.swoop master @s ~ ~ ~ 1.25 1.2
 #screech
-execute if score @s introProgress matches 190 run playsound minecraft:entity.phantom.ambient master @s ~ 100000 ~ 100000 1.2
-execute if score @s introProgress matches 240 run playsound minecraft:entity.phantom.ambient master @s ~ 100000 ~ 100000 1.2
+execute if score @s introProgress matches 190 run playsound minecraft:entity.phantom.ambient master @s ~ ~ ~ 1.25 1.2
+execute if score @s introProgress matches 240 run playsound minecraft:entity.phantom.ambient master @s ~ ~ ~ 1.25 1.2
 
 #end
 execute if score @s introProgress matches 357 run function phan:join/intro/finished_flying
