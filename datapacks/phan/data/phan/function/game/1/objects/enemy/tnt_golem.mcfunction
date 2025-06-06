@@ -14,5 +14,5 @@ execute unless score @s editArg1 matches 1 run scoreboard players set @s editArg
 
 #change model depending if we have a tnt or not
 scoreboard players remove @s[scores={editArg3=1..}] editArg3 1
-execute if score @s editArg3 matches 1 run function phan:game/1/objects/enemy/tnt_golem_model_throw
-execute if score @s editArg3 matches 13 run function phan:game/1/objects/enemy/tnt_golem_model_normal
+execute if score @s editArg3 matches 1 run function phan:game/1/objects/enemy/tnt_golem_model_normal
+execute if score @s editArg3 matches 13 run function phan:game/1/objects/enemy/tnt_golem_model_throw

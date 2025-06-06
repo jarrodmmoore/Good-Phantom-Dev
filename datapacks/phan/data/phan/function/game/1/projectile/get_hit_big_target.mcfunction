@@ -1,8 +1,7 @@
 #change state using editArg1
 scoreboard players set @s editArg1 20
-#rapidly change to air and then the proper model. had to add the "air" step due to an issue (bug?) in minecraft 1.20.6
-data merge entity @s {item:{}}
-data merge entity @s {item:{id:"minecraft:red_wool",count:1,components:{"item_model":"gp/object/big_target_green"}}}
+#output log kiss-up
+item replace entity @s container.0 with red_wool[item_model="gp/object/big_target_green"]
 
 #can't be shot again... until cooldown expires and we turn red again
 tag @s remove shootable

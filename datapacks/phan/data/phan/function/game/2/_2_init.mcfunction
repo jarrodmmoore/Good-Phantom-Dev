@@ -69,7 +69,7 @@ execute if score #chosenLevel value matches 4 if score #dream4Completed value ma
 execute if score #chosenLevel value matches 5 if score #dream5Completed value matches 1.. run scoreboard players set #goToModeSelect value 1
 #DON'T SKIP if we're in free play mode
 execute if score #freePlay value matches 1 run scoreboard players set #goToModeSelect value 1
-execute if score #goToModeSelect value matches 0 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.portal.travel",targets:"@s",pitch:"1",volume:".75"}
+execute if score #goToModeSelect value matches 0 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.portal.travel",targets:"@s",pitch:"1",volume:".3"}
 execute if score #goToModeSelect value matches 0 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.8",volume:"1"}
 execute if score #goToModeSelect value matches 0 run tag @s[type=player] add playing
 execute if score #goToModeSelect value matches 0 run function phan:game/1/_1_init

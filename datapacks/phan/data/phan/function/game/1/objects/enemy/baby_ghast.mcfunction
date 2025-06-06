@@ -15,8 +15,8 @@ execute unless score @s editArg1 matches 1 run function phan:game/1/objects/enem
 
 #facial expressions
 scoreboard players remove @s[scores={editArg3=1..}] editArg3 1
-execute if score @s editArg3 matches 1 run function phan:game/1/objects/enemy/baby_ghast_facial_angry
-execute if score @s editArg3 matches 10 run function phan:game/1/objects/enemy/baby_ghast_facial_normal
+execute if score @s editArg3 matches 1 run function phan:game/1/objects/enemy/baby_ghast_facial_normal
+execute if score @s editArg3 matches 10 run function phan:game/1/objects/enemy/baby_ghast_facial_angry
 
 #animate the legs properly
 execute at @s rotated ~ 0 on passengers if entity @s[tag=babyGhastLegs] run function phan:game/1/objects/enemy/baby_ghast_legs
