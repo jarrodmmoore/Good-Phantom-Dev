@@ -28,7 +28,7 @@ execute as @e[tag=ai,type=zombie] run scoreboard players add #playerCount value 
 execute if score #playerCount value matches ..1 run scoreboard players set #mandateAnvil value 0
 
 #announce to everyone else that we finished
-execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.firework_rocket.blast",targets:"@s",pitch:"1",volume:"1"}
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.firework_rocket.blast",targets:"@s",pitch:"1"}
 function phan:player/tell_actionbar_available
 scoreboard players set @a[tag=tellMe] actionbarDelay 40
 scoreboard players set @a[tag=tellMe,tag=navCompass] actionbarDelay 15

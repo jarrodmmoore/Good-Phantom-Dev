@@ -26,10 +26,10 @@ execute if score #321go value matches 167 run title @a[tag=doneWithIntro] subtit
 execute if score #321go value matches 168 run title @a[tag=doneWithIntro] subtitle [""]
 
 #sound effects
-execute if score #321go value matches 100 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5",volume:"1"}
-execute if score #321go value matches 120 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5",volume:"1"}
-execute if score #321go value matches 140 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5",volume:"1"}
-execute if score #321go value matches 160 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.firework_rocket.large_blast",targets:"@s",pitch:"1",volume:"1"}
+execute if score #321go value matches 100 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5"}
+execute if score #321go value matches 120 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5"}
+execute if score #321go value matches 140 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:".5"}
+execute if score #321go value matches 160 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.firework_rocket.large_blast",targets:"@s",pitch:"1"}
 
 #title animation
 execute if score #321go value matches ..99 run title @a[tag=doneWithIntro] title [""]

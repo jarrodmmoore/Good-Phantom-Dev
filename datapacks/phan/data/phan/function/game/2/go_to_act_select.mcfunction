@@ -2,7 +2,7 @@
 scoreboard players set #subGameState value 2
 
 #sound
-execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.9",volume:"1"}
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.9"}
 
 #feedback
 title @a[tag=doneWithIntro] actionbar [""]

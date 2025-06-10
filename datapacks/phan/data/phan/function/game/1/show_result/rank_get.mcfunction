@@ -28,10 +28,10 @@ execute if score @s pCurrentArea matches 4 run scoreboard players operation @s r
 execute if score #multiplayer value matches 1 run scoreboard players remove @s pCurrentArea 1
 
 #feedback noise
-execute if score @s prevRandom matches 1.. run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:".7",volume:".95"}
-execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1.3",volume:".9"}
-execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1",volume:".9"}
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@a[tag=tellMe]",pitch:"1.3",volume:"1"}
+execute if score @s prevRandom matches 1.. run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:".7"}
+execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1.3"}
+execute if score @s prevRandom matches ..0 run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@a[tag=tellMe]",pitch:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@a[tag=tellMe]",pitch:"1.3"}
 
 #decrement fail counter in multiplayer
 execute if score #multiplayer value matches 1 run scoreboard players remove @s[scores={fails=1..}] fails 1

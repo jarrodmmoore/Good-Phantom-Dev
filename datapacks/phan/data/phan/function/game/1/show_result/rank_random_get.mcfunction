@@ -1,4 +1,4 @@
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@a[tag=tellMe]",pitch:"1.1",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@a[tag=tellMe]",pitch:"1.1"}
 
 #pick a random letter different from the last random letter we drew
 execute in overworld run tag @e[type=armor_stand,tag=tempBan,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] remove tempBan

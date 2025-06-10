@@ -24,8 +24,8 @@ execute if score #returnItem value matches 8 run tellraw @s ["",{translate:"gp.g
 
 #happy sound effect
 tag @s add self
-function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1.2",volume:"1"}
-execute as @a[tag=tellMe,tag=!self] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1.2",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1.2"}
+execute as @a[tag=tellMe,tag=!self] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1.2"}
 playsound minecraft:entity.player.levelup master @a[tag=!self] ~ ~ ~ 2 1.2
 execute at @s positioned ~ ~1.8 ~ positioned ^ ^ ^2 run particle instant_effect ~ ~.5 ~ 0.2 0.2 0.2 1 10 force @s
 tag @s remove self

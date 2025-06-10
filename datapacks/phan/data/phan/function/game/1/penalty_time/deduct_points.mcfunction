@@ -25,7 +25,7 @@ scoreboard players operation @s pPenaltyPoints = #pointsToRemove value
 
 #scary point loss sound
 function phan:player/tell_spectators
-execute if score @s scoreCurrent matches 1.. as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"entity.wither.hurt",targets:"@s",pitch:"1.7",volume:".85"}
+execute if score @s scoreCurrent matches 1.. as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"entity.wither.hurt",targets:"@s",pitch:"1.7"}
 
 #fail when we run out of points
 execute if score @s scoreCurrent matches ..0 run function phan:game/1/penalty_time/out_of_points

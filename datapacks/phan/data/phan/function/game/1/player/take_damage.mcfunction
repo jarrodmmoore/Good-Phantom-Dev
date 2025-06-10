@@ -21,7 +21,7 @@ execute if score #findAttacker value matches 1.. run scoreboard players operatio
 
 #play hitsound for player that hit us
 scoreboard players operation #attackerID value = @s attackerID
-execute if entity @s[scores={hurtfulTime=1..,attackTime=1..}] unless score @s playerID = @s attackerID as @a[tag=playing] if score @s playerID = #attackerID value at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/hitsound",targets:"@s",pitch:"1.5",volume:"1"}
+execute if entity @s[scores={hurtfulTime=1..,attackTime=1..}] unless score @s playerID = @s attackerID as @a[tag=playing] if score @s playerID = #attackerID value at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/hitsound",targets:"@s",pitch:"1.5"}
 
 #portal race mode: lose velocity if we're gliding and got hit with something hurtful
 execute if score #gameState value matches 4 if entity @s[tag=!ai,scores={hurtfulTime=1..,fallFlying=1..}] at @s run tp @s @s

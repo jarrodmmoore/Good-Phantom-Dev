@@ -35,5 +35,5 @@ gamemode creative @s[gamemode=adventure]
 scoreboard players set @s editorState 3
 
 #feedback
-function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
+function phan:common/playsound_positionless_low_volume_macro {sound:"minecraft:custom_sfx/bit_dink",targets:"@s",pitch:"1",volume:"0.8"}
 scoreboard players set @s editor 0

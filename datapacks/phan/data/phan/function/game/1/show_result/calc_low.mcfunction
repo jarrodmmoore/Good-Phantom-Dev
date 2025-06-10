@@ -4,7 +4,7 @@ scoreboard players set #movePoints value 1
 function phan:player/tell_spectators
 
 #calculate sound
-execute if score #10Hz value matches 1 run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.bit",targets:"@a[tag=tellMe]",pitch:"1.65",volume:"1"}
+execute if score #10Hz value matches 1 run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.bit",targets:"@a[tag=tellMe]",pitch:"1.65"}
 
 scoreboard players operation @s scoreCurrent -= #movePoints value
 scoreboard players operation @s scoreShow += #movePoints value

@@ -15,7 +15,7 @@ execute anchored eyes run particle instant_effect ^ ^ ^4 0.2 0.2 0.2 0.07 10 for
 execute anchored eyes run particle instant_effect ^ ^ ^4 0.2 0.2 0.2 0.07 10 force @a[tag=!dontgethit]
 
 #everyone sees this
-execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.lightning_bolt.thunder",targets:"@s",pitch:".75",volume:".8"}
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.lightning_bolt.thunder",targets:"@s",pitch:".75"}
 effect give @a[tag=doneWithIntro] minecraft:night_vision 1 201 true
 
 #secretly clear item from bot inventories to curb spam

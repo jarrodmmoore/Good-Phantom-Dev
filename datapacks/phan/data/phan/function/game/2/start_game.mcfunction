@@ -1,5 +1,5 @@
 #sound
-execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.portal.travel",targets:"@s",pitch:"1",volume:".3"}
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.portal.travel",targets:"@s",pitch:"1"}
 
 #gamemode
 execute if score #desiredGamemode value matches 1 run function phan:game/1/_1_init

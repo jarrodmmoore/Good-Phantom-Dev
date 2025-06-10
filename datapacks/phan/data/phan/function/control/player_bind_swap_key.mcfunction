@@ -8,7 +8,7 @@ execute if score @s swapKeyBind matches 5.. run scoreboard players set @s swapKe
 #4 = ever eye
 
 #feedback
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2"}
 tellraw @s ["",{text:" "}]
 execute if score @s swapKeyBind matches ..0 run tellraw @s ["",{text:"[",color:"yellow"},{keybind:"key.swapOffhand",color:"yellow"},{text:"]",color:"yellow"},{text:" "},{translate:"gp.key_bound",with:[{translate:"gp.game.boost",color:"aqua"}]}]
 execute if score @s swapKeyBind matches 1 run tellraw @s ["",{text:"[",color:"yellow"},{keybind:"key.swapOffhand",color:"yellow"},{text:"]",color:"yellow"},{text:" "},{translate:"gp.key_bound",with:[{translate:"gp.game.bite",color:"aqua"}]}]

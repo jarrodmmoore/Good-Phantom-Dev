@@ -28,7 +28,7 @@ execute unless score #playerDied value matches 1 at @s run playsound minecraft:e
 execute if score #playerDied value matches 1 run effect give @s blindness 1 1 true
 execute if score #playerDied value matches 1 run title @s subtitle [""]
 execute if score #playerDied value matches 1 run title @s title ["",{translate:"gp.versus.you_died",color:"red",bold:true}]
-execute if score #playerDied value matches 1 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.phantom.death",targets:"@s",pitch:"1",volume:"1"}
+execute if score #playerDied value matches 1 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.phantom.death",targets:"@s",pitch:"1"}
 
 #count how many times we've died without getting a KO
 execute if score #playerDied value matches 1 run scoreboard players add @s deathsSinceKO 1

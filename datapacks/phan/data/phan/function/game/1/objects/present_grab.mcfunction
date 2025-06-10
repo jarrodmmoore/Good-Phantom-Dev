@@ -16,7 +16,7 @@ scoreboard players operation #findID value = @s playerID
 execute as @a[tag=!playing] if score @s spectatingID = #findID value run tag @s add tellMe
 
 #feedback
-execute as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.chime",targets:"@s",pitch:".9",volume:"1"}
+execute as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.chime",targets:"@s",pitch:".9"}
 execute at @s run playsound minecraft:entity.boat.paddle_land master @a ~ ~ ~ 2.5 2
 
 #clean up and mark self as grabbed

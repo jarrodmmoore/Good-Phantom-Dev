@@ -1,6 +1,6 @@
 #sounds
-execute if score @s pGameTime matches 100 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:"1.5",volume:"1"}
-execute if score @s pGameTime matches 120 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:"1.7",volume:"1"}
+execute if score @s pGameTime matches 100 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:"1.5"}
+execute if score @s pGameTime matches 120 at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.pling",targets:"@s",pitch:"1.7"}
 
 #act subtitle
 execute if score @s pGameTime matches ..119 run title @s subtitle [""]

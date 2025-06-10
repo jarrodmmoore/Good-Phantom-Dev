@@ -1,4 +1,4 @@
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.dispenser.fail",targets:"@s",pitch:"1.2",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.dispenser.fail",targets:"@s",pitch:"1.2"}
 
 scoreboard players set @s inputCooldown 12
 scoreboard players reset @s carrotInput

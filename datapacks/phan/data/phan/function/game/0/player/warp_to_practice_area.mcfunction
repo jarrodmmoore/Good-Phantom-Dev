@@ -23,7 +23,7 @@ execute if score #gameState value matches 0 unless entity @a[tag=!playing] run s
 scoreboard players set #showHUD value 1
 
 #play sound
-execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.enderman.teleport",targets:"@s",pitch:".8",volume:"1"}
+execute at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.enderman.teleport",targets:"@s",pitch:".8"}
 
 #practice area music
 scoreboard players set @s musicTrack 12

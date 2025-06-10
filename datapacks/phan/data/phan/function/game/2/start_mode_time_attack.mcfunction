@@ -2,7 +2,7 @@
 scoreboard players set #desiredGamemode value 2
 
 #sound
-#execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.8",volume:"1"}
+#execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.8"}
 
 #player that runs this function gets sent to the back of the queue
 #function phan:player_queue/enqueue_player
@@ -20,7 +20,7 @@ execute store result score #teamSelectTest value run execute if entity @a[tag=do
 execute if entity @s[tag=debugMultiplayer] run scoreboard players set #teamSelectTest value 2
 execute if score #teamSelectTest value matches ..1 run tag @a[tag=playing] remove playing
 execute if score #teamSelectTest value matches ..1 run tag @s add playing
-execute if score #teamSelectTest value matches ..1 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.8",volume:"1"}
+execute if score #teamSelectTest value matches ..1 as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.8"}
 execute if score #teamSelectTest value matches ..1 run function phan:game/2/start_game
 #multiplayer: snitch on who did this
 execute if score #freePlay value matches 0 if entity @s[type=player] if score #teamSelectTest value matches 2.. run tellraw @a[tag=doneWithIntro] ["",{text:"(",color:"gray"},{selector:"@s",color:"gray"},{text:")",color:"gray"},{text:" "},{translate:"gp.selected_mode",color:"white",with:[{translate:"gp.mode_select.time_attack",color:"red"}]}]

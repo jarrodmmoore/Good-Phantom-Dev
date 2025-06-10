@@ -4,7 +4,7 @@ scoreboard players operation @s checkFake = @s check
 
 #sound effect... just to be consistent with Sprint Racer ;)
 function phan:player/tell_spectators
-execute if score @s playerGetEyes matches 0.. at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.xylophone",targets:"@a[tag=tellMe]",pitch:"1",volume:"1"}
+execute if score @s playerGetEyes matches 0.. at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.xylophone",targets:"@a[tag=tellMe]",pitch:"1"}
 
 #flash split time
 scoreboard players operation @s splitTime = @s rawTime

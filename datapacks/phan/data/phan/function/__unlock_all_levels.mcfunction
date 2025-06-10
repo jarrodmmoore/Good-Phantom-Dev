@@ -1,5 +1,5 @@
 #fun sound for player
-execute if entity @s[type=player] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1",volume:"1"}
+execute if entity @s[type=player] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:entity.player.levelup",targets:"@s",pitch:"1"}
 
 #set clear flag for all levels
 scoreboard players set #dreamsCompleted value 5

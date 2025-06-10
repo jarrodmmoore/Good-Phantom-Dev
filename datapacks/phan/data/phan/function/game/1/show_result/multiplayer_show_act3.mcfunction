@@ -28,7 +28,7 @@ scoreboard players add #assignRank value 1
 scoreboard players set #best value -1
 
 #now print it
-execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@s",pitch:"2",volume:"1"}
+execute as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.hat",targets:"@s",pitch:"2"}
 tellraw @a[tag=doneWithIntro] ["",{text:" "}]
 tellraw @a[tag=doneWithIntro] ["",{translate:"gp.game.act_number",with:[{text:"3",bold:true,italic:true}],bold:true,italic:true}]
 execute as @a[tag=playerReservation,scores={multiplayerRank=1}] run tellraw @a[tag=doneWithIntro] ["",{text:"➀",color:"yellow",bold:false},{text:" -- "},{selector:"@s",color:"aqua"},{text:" -- "},{translate:"gp.game.points",with:[{score:{name:"@s",objective:"scoreArea3"},color:"yellow"}],color:"yellow"}]

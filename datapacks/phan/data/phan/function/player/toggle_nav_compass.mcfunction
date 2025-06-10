@@ -5,7 +5,7 @@ execute if score #test value matches 0 run tag @s add navCompass
 execute if score #test value matches 1 run tag @s remove navCompass
 
 #feedback
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2"}
 tellraw @s ["",{text:" "}]
 execute if entity @s[tag=navCompass] run tellraw @s ["",{translate:"gp.misc.nav_compass",italic:false,with:[{translate:"gp.misc.on",color:"yellow",italic:false}]}]
 execute if entity @s[tag=!navCompass] run tellraw @s ["",{translate:"gp.misc.nav_compass",italic:false,with:[{translate:"gp.misc.off",color:"yellow",italic:false},{text:"\n"}]}]

@@ -12,7 +12,7 @@ execute as @e[type=armor_stand,tag=camera] if score @s playerID = #findID value 
 execute as @e[type=armor_stand,tag=playerSoul] if score @s playerID = #findID value run tag @s add currentSoul
 
 #sound
-execute if score @s pGameTime matches 100001 as @a[distance=..5] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.3",volume:"1"}
+execute if score @s pGameTime matches 100001 as @a[distance=..5] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1.3"}
 
 #temporary entities
 scoreboard players set @e[type=armor_stand,tag=currentCamera] lifespan 3

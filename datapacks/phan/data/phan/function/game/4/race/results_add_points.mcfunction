@@ -17,7 +17,7 @@ scoreboard players remove @a[tag=playerReservation,scores={vsAddPoints=1..}] vsA
 execute if score #botCount value matches 1.. as @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] run function phan:bots/controller/results/add_points
 
 #sound
-execute if score #test2 value matches 1.. as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.dispenser.fail",targets:"@s",pitch:"1",volume:".9"}
+execute if score #test2 value matches 1.. as @a[tag=doneWithIntro] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.dispenser.fail",targets:"@s",pitch:"1"}
 
 #loop this until all points have been added
 execute if entity @a[tag=playerReservation,scores={vsAddPoints=1..}] run scoreboard players set #test value 2

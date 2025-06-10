@@ -5,7 +5,7 @@ execute if score #test value matches 0 run tag @s add noAutoReset
 execute if score #test value matches 1 run tag @s remove noAutoReset
 
 #feedback
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.cow_bell",targets:"@s",pitch:"2"}
 tellraw @s ["",{text:" "}]
 execute if entity @s[tag=noAutoReset] run tellraw @s ["",{translate:"gp.misc.checkpoint_auto_reset",italic:false,with:[{translate:"gp.misc.off",color:"yellow",italic:false}]}]
 execute if entity @s[tag=!noAutoReset] run tellraw @s ["",{translate:"gp.misc.checkpoint_auto_reset",italic:false,with:[{translate:"gp.misc.on",color:"yellow",italic:false},{text:"\n"}]}]

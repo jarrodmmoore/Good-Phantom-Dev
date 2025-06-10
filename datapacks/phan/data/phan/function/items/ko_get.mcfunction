@@ -15,4 +15,4 @@ execute if score #botsEnabled value matches 1.. run tellraw @s ["",{translate:"g
 
 #dopamine hit
 function phan:player/tell_spectators
-execute as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/ko",targets:"@s",pitch:"1.5",volume:"1"}
+execute as @a[tag=tellMe] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:custom_sfx/ko",targets:"@s",pitch:"1.5"}

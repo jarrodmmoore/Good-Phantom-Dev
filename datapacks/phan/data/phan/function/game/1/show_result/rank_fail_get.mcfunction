@@ -6,7 +6,7 @@ execute if score #multiplayer value matches 1 run scoreboard players add @s pCur
 function phan:player/tell_spectators
 
 #:(
-function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.didgeridoo",targets:"@a[tag=tellMe]",pitch:".65",volume:"1"}
+function phan:common/playsound_positionless_macro {sound:"minecraft:block.note_block.didgeridoo",targets:"@a[tag=tellMe]",pitch:".65"}
 title @a[tag=tellMe] title ["",{text:"| ",bold:false,color:"white"},{text:"F",bold:true,color:"#404040"},{text:" |",bold:false,color:"white"}]
 tag @a[tag=tellMe] remove tellMe
 
