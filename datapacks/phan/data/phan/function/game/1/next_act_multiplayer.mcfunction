@@ -26,7 +26,6 @@ function phan:bgm/set_bgm
 scoreboard players set #startMusic value 0
 
 #revoke trigger for players that weren't always spectator
-scoreboard players reset @a spectatorView
 scoreboard players set #hurryUp value 0
 
 #next game cycle!

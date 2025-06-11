@@ -30,9 +30,9 @@ execute if entity @s[tag=navCompass] run item replace entity @s inventory.12 wit
 
 #clear out the other slots
 
-#[o][o][o][-][-][-][X][X][X]
+#[o][o][o][o][o][o][X][X][X]
 #[X][-][-][-][-][-][-][-][o]
-#[o][o][o][o][o][o][o][o][o]
+#[o][o][o][-][-][-][o][o][o]
 
 item replace entity @s inventory.6 with air
 item replace entity @s inventory.7 with air

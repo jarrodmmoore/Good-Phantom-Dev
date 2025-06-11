@@ -6,7 +6,6 @@ scoreboard players set @s boostBuffer 20
 
 #feedback
 playsound minecraft:entity.breeze.wind_burst master @a ~ ~ ~ 1 1
-playsound minecraft:entity.allay.item_taken master @a ~ ~ ~ 1 1.3
 
 #cooldown / input management
 scoreboard players set @s inputCooldownB 16

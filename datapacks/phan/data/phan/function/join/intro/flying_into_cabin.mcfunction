@@ -29,7 +29,7 @@ execute if score @s introProgress matches 185 run playsound minecraft:entity.pha
 execute if score @s introProgress matches 201 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.7 1
 execute if score @s introProgress matches 217 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.5 1
 execute if score @s introProgress matches 230 run playsound minecraft:entity.phantom.flap master @s ~ ~ ~ 1.25 1.7 1
-execute if score @s introProgress matches 257 run playsound minecraft:entity.phantom.swoop master @s ~ ~ ~ 1.25 1.2 1
+execute if score @s introProgress matches 257 run playsound minecraft:entity.phantom.swoop master @s ~ 100000 ~ 100000 1.2
 #screech
 execute if score @s introProgress matches 190 run playsound minecraft:entity.phantom.ambient master @s ~ ~ ~ 1.25 1.2 1
 execute if score @s introProgress matches 240 run playsound minecraft:entity.phantom.ambient master @s ~ ~ ~ 1.25 1.2 1

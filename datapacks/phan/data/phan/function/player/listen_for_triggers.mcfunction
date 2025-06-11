@@ -2,6 +2,10 @@
 scoreboard players enable @s musicToggle
 execute if score @s musicToggle matches 1.. run function phan:bgm/music_toggle
 
+#spectator view
+scoreboard players enable @s spectatorView
+execute if score @s spectatorView matches 1.. at @s run function phan:game/1/spectator/switch_view
+
 #nav compass trigger
 scoreboard players enable @s navCompass
 execute if score @s navCompass matches 1.. run function phan:player/toggle_nav_compass

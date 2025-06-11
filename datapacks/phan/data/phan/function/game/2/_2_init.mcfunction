@@ -43,7 +43,6 @@ title @a[tag=doneWithIntro] subtitle [""]
 title @a[tag=doneWithIntro] title [""]
 scoreboard players reset @a restart
 scoreboard players reset @a exit
-scoreboard players reset @a spectatorView
 scoreboard players reset @a respawn
 
 #game state is now 2

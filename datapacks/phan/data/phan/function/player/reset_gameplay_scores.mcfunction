@@ -3,7 +3,6 @@ scoreboard players set @a enderEyes 0
 scoreboard players reset @a restart
 scoreboard players reset @a exit
 scoreboard players reset @a respawn
-scoreboard players reset @a spectatorView
 scoreboard players reset @a presentGoal
 scoreboard players reset @a presentTime
 scoreboard players set @a showEnemyCount 0

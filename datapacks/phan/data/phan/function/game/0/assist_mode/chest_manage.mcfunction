@@ -28,16 +28,19 @@ item replace block ~ ~ ~ container.20 with air
 
 #general
 item replace block ~ ~ ~ container.3 with light_blue_wool[item_model="gp/player_model/phantom_head",custom_name={translate:"gp.assist.all_modes",bold:true,italic:true},custom_data={assistMenu:1b,assistGeneral:1b}]
-item replace block ~ ~ ~ container.8 with red_dye[item_model="gp/inventory/assist_mode/background_connector_3",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+#item replace block ~ ~ ~ container.8 with red_dye[item_model="gp/inventory/assist_mode/background_connector_3",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+item replace block ~ ~ ~ container.8 with air
 
 #score attack / time attack
 execute if score #timeAttackUnlocked value matches ..0 run item replace block ~ ~ ~ container.12 with yellow_wool[item_model="gp/object/stardust",custom_name={translate:"gp.mode_select.score_attack",bold:true,italic:true,color:"yellow"},custom_data={assistMenu:1b,assistScoreAttack:1b}]
 execute if score #timeAttackUnlocked value matches 1.. run item replace block ~ ~ ~ container.12 with yellow_wool[item_model="gp/object/stardust",custom_name=["",{translate:"gp.mode_select.score_attack",bold:true,italic:true,color:"yellow"},{text:" / ",color:"white",italic:false,bold:true},{translate:"gp.mode_select.time_attack",bold:true,italic:true,color:"red"}],custom_data={assistMenu:1b,assistScoreAttack:1b}]
-item replace block ~ ~ ~ container.17 with red_dye[item_model="gp/inventory/assist_mode/background_connector_3",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+#item replace block ~ ~ ~ container.17 with red_dye[item_model="gp/inventory/assist_mode/background_connector_3",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+item replace block ~ ~ ~ container.17 with air
 
 #portal race
 item replace block ~ ~ ~ container.21 with red_wool[item_model="gp/object/phantom_chest",custom_name={translate:"gp.mode_select.versus",bold:true,italic:true,color:"light_purple"},custom_data={assistMenu:1b,assistPortalRace:1b}]
-item replace block ~ ~ ~ container.26 with red_dye[item_model="gp/inventory/assist_mode/background_connector_4",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+#item replace block ~ ~ ~ container.26 with red_dye[item_model="gp/inventory/assist_mode/background_connector_4",tooltip_display={hide_tooltip:true},custom_data={assistMenu:1b}]
+item replace block ~ ~ ~ container.26 with air
 
 #=====
 #CONDITIONAL STUFF

@@ -11,17 +11,17 @@ execute store result score #slot12 inventoryCheck run execute if items entity @s
 
 #if one button is missing but the others still exist, that's an input
 #music toggle
-execute if score #slot10 inventoryCheck matches 1 unless score #slot12 inventoryCheck matches 1 if score @s musicToggle matches -2147483648..2147483647 run scoreboard players set @s musicToggle 1
+execute unless score #slot10 inventoryCheck matches 1 if score #slot12 inventoryCheck matches 1 run function phan:bgm/music_toggle
 #spectator view
-execute if score #slot11 inventoryCheck matches 1 unless score #slot12 inventoryCheck matches 1 if score @s spectatorView matches -2147483648..2147483647 run scoreboard players set @s spectatorView 1
+execute unless score #slot11 inventoryCheck matches 1 if score #slot12 inventoryCheck matches 1 run function phan:game/1/spectator/switch_view
 #nav compass
-execute if score #slot12 inventoryCheck matches 1 unless score #slot10 inventoryCheck matches 1 if score @s navCompass matches -2147483648..2147483647 run scoreboard players set @s navCompass 1
+execute unless score #slot12 inventoryCheck matches 1 if score #slot10 inventoryCheck matches 1 run function phan:player/toggle_nav_compass
 
 #make sure we have the buttons (state reflects player's settings)
 #music toggle
 execute unless score #slot10 inventoryCheck matches 1 run clear @s gray_dye[custom_data~{InvUI:10}]
-execute if entity @s[tag=!musicDisable] run item replace entity @s inventory.10 with gray_dye[custom_data={InvUI:10},item_model="gp/inventory/crafting/music_on",custom_name={translate:"gp.inventory.join_game",color:white,bold:true,italic:false},lore=[{translate:"gp.misc.on",color:yellow,italic:false},{translate:"gp.misc.off",color:gray,italic:false}]]
-execute if entity @s[tag=musicDisable] run item replace entity @s inventory.10 with gray_dye[custom_data={InvUI:10},item_model="gp/inventory/crafting/music_off",custom_name={translate:"gp.inventory.join_game",color:white,bold:true,italic:false},lore=[{translate:"gp.misc.on",color:gray,italic:false},{translate:"gp.misc.off",color:yellow,italic:false}]]
+execute if entity @s[tag=!musicDisable] run item replace entity @s inventory.10 with gray_dye[custom_data={InvUI:10},item_model="gp/inventory/crafting/music_on",custom_name={translate:"gp.inventory.music",color:white,bold:true,italic:false},lore=[{translate:"gp.misc.on",color:yellow,italic:false},{translate:"gp.misc.off",color:gray,italic:false}]]
+execute if entity @s[tag=musicDisable] run item replace entity @s inventory.10 with gray_dye[custom_data={InvUI:10},item_model="gp/inventory/crafting/music_off",custom_name={translate:"gp.inventory.music",color:white,bold:true,italic:false},lore=[{translate:"gp.misc.on",color:gray,italic:false},{translate:"gp.misc.off",color:yellow,italic:false}]]
 #spectator view (spectateMode)
 # 0 = playerPOV
 # 1.. = free cam
@@ -36,9 +36,9 @@ execute if entity @s[tag=navCompass] run item replace entity @s inventory.12 wit
 
 #clear out the other slots
 
-#[o][o][o][-][-][-][X][X][X]
+#[o][o][o][o][o][o][X][X][X]
 #[X][-][-][-][-][-][-][-][o]
-#[o][o][o][o][o][o][o][o][o]
+#[o][o][o][-][-][-][o][o][o]
 
 item replace entity @s inventory.6 with air
 item replace entity @s inventory.7 with air

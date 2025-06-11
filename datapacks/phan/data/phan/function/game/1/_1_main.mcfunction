@@ -76,9 +76,6 @@ scoreboard players enable @a[tag=playing] exit
 execute if entity @a[tag=playing,scores={restart=1..}] run function phan:game/1/_1_init
 execute as @a[tag=playing,scores={exit=1..}] run function phan:game/1/player_exit
 scoreboard players enable @a[tag=playing,gamemode=adventure] respawn
-#player respawn trigger handled in _player_main...
-scoreboard players enable @a[tag=!playing] spectatorView
-execute as @a[tag=!playing,scores={spectatorView=1..}] at @s run function phan:game/1/spectator/switch_view
 
 #handle spectators
 execute unless score #gameState value matches 0 as @a[tag=!playing,tag=doneWithIntro] at @s run function phan:game/1/spectator/spectator_tick

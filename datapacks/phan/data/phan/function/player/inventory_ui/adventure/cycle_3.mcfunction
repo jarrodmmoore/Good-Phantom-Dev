@@ -10,9 +10,9 @@ execute store result score #slot14 inventoryCheck run execute if items entity @s
 
 #if one button is missing but the others still exist, that's an input
 #auto jump pads
-execute if score #slot13 inventoryCheck matches 1 unless score #slot14 inventoryCheck matches 1 if score @s toggleAutoJumpPads matches -2147483648..2147483647 run scoreboard players set @s toggleAutoJumpPads 1
+execute unless score #slot13 inventoryCheck matches 1 if score #slot14 inventoryCheck matches 1 run function phan:player/toggle_auto_jump_pads
 #auto reset
-execute if score #slot14 inventoryCheck matches 1 unless score #slot13 inventoryCheck matches 1 if score @s toggleAutoReset matches -2147483648..2147483647 run scoreboard players set @s toggleAutoReset 1
+execute unless score #slot14 inventoryCheck matches 1 if score #slot13 inventoryCheck matches 1 run function phan:player/toggle_auto_reset
 
 #make sure we have the buttons (state reflects player's settings)
 #auto jump pads
@@ -27,12 +27,11 @@ execute if entity @s[tag=noAutoReset] run item replace entity @s inventory.14 wi
 
 #clear out the other slots
 
-#[o][o][o][-][-][-][o][o][o]
+#[o][o][o][o][o][o][o][o][o]
 #[o][-][-][-][-][-][-][-][X]
-#[X][X][X][X][o][o][o][o][o]
+#[X][X][X][-][-][-][o][o][o]
 
 item replace entity @s inventory.17 with air
 item replace entity @s inventory.18 with air
 item replace entity @s inventory.19 with air
 item replace entity @s inventory.20 with air
-item replace entity @s inventory.21 with air

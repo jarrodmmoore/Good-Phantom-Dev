@@ -23,12 +23,11 @@ execute if entity @s[tag=noAutoReset] run item replace entity @s inventory.14 wi
 
 #clear out the other slots
 
-#[o][o][o][-][-][-][o][o][o]
+#[o][o][o][o][o][o][o][o][o]
 #[o][-][-][-][-][-][-][-][X]
-#[X][X][X][X][o][o][o][o][o]
+#[X][X][X][-][-][-][o][o][o]
 
 item replace entity @s inventory.17 with air
 item replace entity @s inventory.18 with air
 item replace entity @s inventory.19 with air
 item replace entity @s inventory.20 with air
-item replace entity @s inventory.21 with air
