@@ -34,6 +34,13 @@ execute if score @s bodyHitbox matches 1.. run function phan:player/player_body_
 execute if score @s hudFlashTime matches 1.. run scoreboard players remove @s hudFlashTime 1
 
 #=====
+# INVENTORY UI
+
+#slightly different if in adventure or spectator
+execute if entity @s[gamemode=adventure,tag=doneWithIntro] run function phan:player/inventory_ui/_player_tick_adventure
+execute if entity @s[gamemode=spectator,tag=doneWithIntro] run function phan:player/inventory_ui/_player_tick_spectator
+
+#=====
 # TRIGGER COMMANDS
 
 #ui triggers, for admin (creative mode) players

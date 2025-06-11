@@ -1,6 +1,7 @@
 #general
 scoreboard objectives add value dummy
 scoreboard objectives add dataTransfer dummy
+scoreboard objectives add inventoryCheck dummy
 scoreboard objectives add lifespan dummy
 scoreboard objectives add join dummy
 scoreboard objectives add resetWave dummy
