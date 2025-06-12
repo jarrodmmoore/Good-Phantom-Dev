@@ -30,7 +30,7 @@ bossbar set general_bossbar name ["",{translate:"gp.mode_select.play_or_spectate
 execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
 execute unless score #grandPrixActive value matches 1.. positioned 209 -26 118 run function phan:levels/_index_title_entity with storage phan:level_index
 execute if score #grandPrixActive value matches 1.. positioned 209 -26 118 positioned ~ ~1 ~ run function phan:level_manager/load/spawn_name_display {level_uid:1,rotation:90,offset_x:'.0',offset_y:'.6',offset_z:'.0'}
-execute if score #grandPrixActive value matches 1.. as @e[type=text_display,tag=lobbyNameDisplay1] run data merge entity @s {text:{text:"\uE398"}}
+execute if score #grandPrixActive value matches 1.. as @e[type=text_display,tag=lobbyNameDisplay1] run data modify entity @s text set value {text:"\uE398"}
 
 #summon act text (if applicable)
 execute store result storage phan:level_index act int 1 run scoreboard players get #showActNumber value
