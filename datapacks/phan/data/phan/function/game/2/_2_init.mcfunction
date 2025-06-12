@@ -59,6 +59,7 @@ scoreboard players set #playerCount value 0
 execute as @a run scoreboard players add #playerCount value 1
 
 #give the player options or start the level right away?
+#v1.1 and later: ALWAYS go to mode select no matter what
 scoreboard players set #goToModeSelect value 1
 #execute if score #timeAttackUnlocked value matches 0 if score #playerCount value matches ..1 run scoreboard players set #goToModeSelect value 0
 execute if score #chosenLevel value matches 1 if score #dream1Completed value matches 1.. run scoreboard players set #goToModeSelect value 1

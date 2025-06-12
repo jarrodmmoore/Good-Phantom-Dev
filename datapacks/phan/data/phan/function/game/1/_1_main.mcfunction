@@ -71,7 +71,7 @@ scoreboard players reset @a[scores={damage=1..}] damage
 execute as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
 
 #can use triggers
-execute if score #playersOnServer value matches ..1 run scoreboard players enable @a[tag=playing] restart
+execute if score #playersOnServer value matches ..1 if score #gameTime value matches 100.. run scoreboard players enable @a[tag=playing] restart
 scoreboard players enable @a[tag=playing] exit
 execute if entity @a[tag=playing,scores={restart=1..}] run function phan:game/1/_1_init
 execute as @a[tag=playing,scores={exit=1..}] run function phan:game/1/player_exit

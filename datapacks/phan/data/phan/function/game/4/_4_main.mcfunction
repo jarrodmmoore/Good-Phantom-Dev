@@ -67,8 +67,8 @@ execute if score #botsEnabled value matches ..0 as @e[tag=projectile,type=armor_
 execute if score #botsEnabled value matches 1.. as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index_bot_inclusive
 
 #can use triggers
-execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. run scoreboard players enable @a[tag=nonSpectator] restart
-execute if score #playersOnServer value matches ..1 if score #hudPeakPlayers value matches ..1 run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. if score #subGameState value matches 0 run scoreboard players enable @a[tag=nonSpectator] restart
+execute if score #playersOnServer value matches ..1 if score #hudPeakPlayers value matches ..1 if score #subGameState value matches 0 run scoreboard players enable @a[tag=nonSpectator] restart
 scoreboard players enable @a[tag=nonSpectator] exit
 execute if entity @a[tag=nonSpectator,scores={restart=1..}] run function phan:game/4/restart_round
 execute as @a[tag=nonSpectator,scores={exit=1..}] run function phan:game/4/player_exit

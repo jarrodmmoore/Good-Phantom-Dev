@@ -15,7 +15,7 @@ tag @a[tag=doneWithIntro,tag=vsMidGameJoin] remove vsMidGameJoin
 
 #allow spectators to join
 scoreboard players reset @a joinGame
-scoreboard players enable @a[tag=doneWithIntro,tag=!playing] joinGame
+scoreboard players enable @a[tag=doneWithIntro,tag=!playing,tag=!playerReservation] joinGame
 
 #get HUD ready, but don't show it yet
 scoreboard players set #showHUD value 1
