@@ -24,7 +24,7 @@ bossbar set general_bossbar color white
 bossbar set general_bossbar style progress
 bossbar set general_bossbar max 200
 bossbar set general_bossbar value 200
-bossbar set general_bossbar name ["",{translate:"gp.mode_select.play_or_spectate",color:"white",bold:false}]
+bossbar set general_bossbar name ["",{translate:"gp.mode_select.play_or_spectate_colored",color:"white",bold:false,with:[{translate:"gp.mode_select.play_or_spectate_colored.play",color:"dark_aqua"},{translate:"gp.mode_select.play_or_spectate_colored.spectate",color:"dark_purple"}]}]
 
 #summon level text
 execute store result storage phan:level_index level_id int 1 run scoreboard players get #chosenLevel value
