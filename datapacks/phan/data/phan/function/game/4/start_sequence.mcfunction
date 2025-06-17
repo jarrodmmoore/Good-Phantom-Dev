@@ -48,6 +48,7 @@ execute if score #gameTime value matches 80.. run scoreboard players set @a spec
 execute if score #gameTime value matches ..220 as @a[tag=doneWithIntro,tag=vsMidGameJoin] at @s if entity @e[type=marker,tag=versusStartPoint,tag=node,scores={versusSpawn=1},distance=..100] run function phan:game/4/race/join_trigger
 
 #go to starting grid
+execute if score #gameTime value matches 75 as @a[tag=doneWithIntro] run scoreboard players operation @s skyboxSet = @s skybox
 execute if score #gameTime value matches 80 run effect clear @a[tag=doneWithIntro] blindness
 execute if score #gameTime value matches 80 run effect give @a[tag=doneWithIntro,tag=playing] blindness 1 2 true
 execute if score #gameTime value matches 80 run tag @a[tag=doneWithIntro] remove noInventory

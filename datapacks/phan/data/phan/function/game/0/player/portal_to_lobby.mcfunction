@@ -8,6 +8,7 @@ tag @s remove soundSelf
 tp @s 198 -6 118 -90 0
 effect give @s blindness 2 1 true
 effect give @s slow_falling 1 0 true
+effect clear @s night_vision
 scoreboard players set @s skyboxSet 1
 execute if score #gameState value matches 0 run tag @s remove playing
 tag @s remove getNightVisionInSA

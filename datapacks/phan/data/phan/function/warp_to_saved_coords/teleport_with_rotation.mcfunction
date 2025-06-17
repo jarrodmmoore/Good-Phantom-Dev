@@ -1,1 +1,1 @@
-$tp @s ~$(coord_x) ~$(coord_y) ~$(coord_z) ~$(coord_yaw) ~$(coord_pitch)
+$tp @s ~$(coord_x) ~$(coord_y) ~$(coord_z) $(coord_yaw) $(coord_pitch)

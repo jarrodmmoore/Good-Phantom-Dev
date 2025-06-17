@@ -1,5 +1,5 @@
 #temporary platform: get rid of barrier
-execute if entity @s[tag=temporaryBarrier] at @s if block ~ ~ ~ barrier run setblock ~ ~ ~ air
+execute if entity @s[tag=temporaryBarrier] at @s if block ~ ~ ~ barrier run setblock ~ ~ ~ air strict
 
 #tp really far down
 #(unless we have passengers, in which case let's just not)

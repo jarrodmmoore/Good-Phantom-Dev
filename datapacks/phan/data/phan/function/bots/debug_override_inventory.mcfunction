@@ -14,6 +14,6 @@ scoreboard players set @s botHasItem13 0
 scoreboard players set @s botHasItem14 0
 scoreboard players set @s botHasItem15 0
 scoreboard players set @s botHasItem16 0
-scoreboard players set @s botHasItem17 0
-scoreboard players set @s botHasItem18 1
-scoreboard players set @s botHasItem19 1
+scoreboard players set @s botHasItem17 1
+scoreboard players set @s botHasItem18 0
+scoreboard players set @s botHasItem19 0

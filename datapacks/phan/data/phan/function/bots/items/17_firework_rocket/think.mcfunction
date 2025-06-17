@@ -33,8 +33,8 @@ scoreboard players operation #test2 value -= @s botTargetYY
 execute if score @s botBehavior matches 1 if score #test2 value matches ..200 run scoreboard players set #test value 0
 
 #bot WILL use if they're in a panic
-execute if entity @e[tag=botFlightPanic] run scoreboard players set #test value 1
-execute if entity @e[tag=botFlightPanic] run tag @s remove botFlightPanic
+execute if entity @e[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run scoreboard players set #test value 1
+execute if entity @e[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run tag @s remove botFlightPanic
 
 
 #exit out if we're not using this
@@ -46,7 +46,6 @@ scoreboard players set @s botHoldingItem 17
 
 #if we're grounded, jump before using
 execute if score @s onGround matches 1.. run return run function phan:bots/items/17_firework_rocket/jump_before_using
-
 #=====
 
 #use it (also we enter "improvised flight" mode)

@@ -3,6 +3,9 @@
 #=====
 #CAMERA SOUL STUFF
 
+#night vision if we're tagged for that
+execute if entity @s[tag=getNightVisionInSA] run effect give @s night_vision 15 1 true
+
 #"parameters" for some later functions that previously worked on a global system but i was too lazy to overhaul
 scoreboard players operation #pGameTime value = @s pGameTime
 scoreboard players operation #pCurrentArea value = @s pCurrentArea

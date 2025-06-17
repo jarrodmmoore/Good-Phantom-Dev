@@ -80,7 +80,7 @@ execute if score #vGameType value matches 1 if score @s botBoostThinkTime matche
 
 #do stuff with items
 scoreboard players remove @s botItemThinkTime 1
-execute if score @s botItemThinkTime matches ..0 run function phan:bots/items/_improvise
+execute if score @s botItemThinkTime matches ..0 at @s run function phan:bots/items/_improvise
 
 #update held item whenever it changes
 execute unless score @s botHoldingItem = @s botHoldingItemPrev run function phan:bots/items/_update_held_item

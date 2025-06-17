@@ -33,10 +33,10 @@ execute if score #uniqieBoxID value matches 0 run scoreboard players add #uniqie
 scoreboard players operation @e[tag=setLife,type=item_display,distance=..4] ringID = #uniqieBoxID value
 
 #spawn temporary barriers to stand on
-execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
-execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~-.5 ~-.7 ~.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
-execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~-.5 ~-.7 ~-.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
-execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~-.5 if block ~ ~ ~ air unless block ~ ~-1 ~ #phan:no_barrier_griefing run function phan:items/use/speed_pad_temporary_floor
+execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~.5 if block ~ ~ ~ air run function phan:items/use/speed_pad_temporary_floor
+execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~-.5 ~-.7 ~.5 if block ~ ~ ~ air run function phan:items/use/speed_pad_temporary_floor
+execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~-.5 ~-.7 ~-.5 if block ~ ~ ~ air run function phan:items/use/speed_pad_temporary_floor
+execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~-.5 if block ~ ~ ~ air run function phan:items/use/speed_pad_temporary_floor
 
 #cancel elytra flight
 execute if entity @s[type=player,scores={fallFlying=1}] run clear @s elytra[custom_data~{playerEquipment:1b}]

@@ -16,9 +16,6 @@ scoreboard players set @s scoreCurrent2 0
 #this is not paranoia code. this actually fixes a bug we found where getting an F allowed you to skip the /clear upon finishing an act
 clear @s
 
-#clear night vision...
-execute if score #nightVision value matches 0 run effect clear @s night_vision
-
 #let the loading sequence take us again
 scoreboard players set @s pGameTime 0
 scoreboard players set @s pSubGameState -1

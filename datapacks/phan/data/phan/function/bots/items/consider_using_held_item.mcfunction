@@ -4,7 +4,9 @@ execute if score @s botSkill matches 1 store result score #random value run rand
 execute if score @s botSkill matches 2 store result score #random value run random value 1..13
 execute if score @s botSkill matches 3 store result score #random value run random value 1..10
 execute if score @s botSkill matches 4 store result score #random value run random value 1..8
-execute if score @s botSkill matches 5.. store result score #random value run random value 1..7
+#except tryhards, they're smart and like to stagger item usage
+execute if score @s botSkill matches 5 store result score #random value run random value 1..11
+execute if score @s botSkill matches 6.. store result score #random value run random value 1..15
 
 #high level bots will put item away if enderman did global sound cue and is about to strike
 scoreboard players operation #checkID value = @s playerID

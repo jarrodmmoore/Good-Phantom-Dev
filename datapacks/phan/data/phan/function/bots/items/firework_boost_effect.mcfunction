@@ -1,7 +1,7 @@
 scoreboard players remove @s botFireworkTime 1
 
 #particle trails while we're boosting (pretending like we're a vanilla firework boost)
-particle firework ~ ~.25 ~ 0 0 0 0 1 force
+particle firework ~ ~.5 ~ 0 0 0 0 1 force
 
 #don't care about progress right now
 scoreboard players set @s botTimeSinceProgress -10

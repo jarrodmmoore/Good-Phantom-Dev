@@ -1,1 +1,1 @@
-$rotate @s ~$(coord_yaw) ~$(coord_pitch)
+$rotate @s $(coord_yaw) $(coord_pitch)

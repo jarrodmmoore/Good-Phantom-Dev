@@ -128,6 +128,9 @@ execute if score #success value matches 0 as @a[tag=doneWithIntro,tag=playing,ta
 scoreboard players set #nightVision value 0
 scoreboard players set #brightMines value 0
 
+#quickly give blindness to mask the sudden change in time/skybox that's probably about to happen
+effect give @a[tag=doneWithIntro] blindness 5 4 true
+
 #load area info!
 function phan:bots/controller/reset_checkpoint_info
 function phan:game/1/spawning/reset_all

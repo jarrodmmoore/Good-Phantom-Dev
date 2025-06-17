@@ -3,7 +3,7 @@
 #some variables I want to remember...
 #pSubGameState
 #   -1 = loading
-#	0 = transition from area to area
+#	0 = starting cutscene
 #	1 = gameplay
 #	2 = transition between areas
 #	3 = final results

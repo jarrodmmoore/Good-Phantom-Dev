@@ -3,13 +3,6 @@ execute if entity @s[scores={inputCooldown=1..,botSkill=3}] run return run execu
 execute if entity @s[scores={inputCooldown=1..,botSkill=4}] run return run execute store result score @s botItemThinkTime run random value 1..4
 execute if entity @s[scores={inputCooldown=1..,botSkill=5..}] run return run execute store result score @s[scores={botSkill=5}] botItemThinkTime run random value 1..2
 #bots with skill level 6 can spam items with tick-perfect timing. scary!
-
-#=====
-
-#DEBUG
-#force bot inventory for testing
-#function phan:bots/debug_override_inventory
-
 #=====
 
 #run this function again in a random amount of time depending on skill level
@@ -22,6 +15,13 @@ execute if score @s botSkill matches 6.. store result score @s botItemThinkTime 
 
 #low skill bots on input cooldown get kicked out w/ their think time set to the random values above
 execute if entity @s[scores={inputCooldown=1..,botSkill=..2}] run return 0
+#=====
+
+#-------------
+#DEBUG
+#force bot inventory for testing
+#function phan:bots/debug_override_inventory
+#-------------
 
 #enderman thief active? determine if it's a danger to us
 scoreboard players set #botFearsEnderman value 0

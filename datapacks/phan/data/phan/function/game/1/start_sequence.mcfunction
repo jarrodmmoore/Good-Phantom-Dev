@@ -65,6 +65,7 @@ execute if score @s pGameTime matches 80 run effect clear @a[distance=..5] blind
 execute if score @s pGameTime matches 80 run gamemode spectator @s
 execute if score @s pGameTime matches 80..180 run spectate @e[limit=1,type=armor_stand,tag=currentCamera] @s
 execute if score @s pGameTime matches 80..180 run scoreboard players set @s spectatingObject 2
+execute if score @s pGameTime matches 80.. if entity @s[tag=getNightVisionInSA] run effect give @s night_vision 15 1 true
 
 #camera spawns the soul, which flies to the start so the game can begin
 execute if score @s pGameTime matches 80 as @e[type=armor_stand,tag=currentCamera] at @s positioned ^ ^ ^70 run function phan:game/1/start_sequence_soul_spawn

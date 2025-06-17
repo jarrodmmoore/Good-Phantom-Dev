@@ -3,6 +3,9 @@
 #=====
 #CAMERA + SOUL STUFF
 
+#night vision if we're tagged for that
+execute if entity @s[tag=getNightVisionInSA] run effect give @s night_vision 15 1 true
+
 #remember our ID
 scoreboard players operation #findID value = @s playerID
 execute as @e[type=armor_stand,tag=camera] if score @s playerID = #findID value run tag @s add currentCamera
