@@ -12,6 +12,7 @@ This repository is the world file containing everything needed to play the map. 
 ## Media
 - Official trailer: https://youtu.be/0c8SP6h9me8?si=108gNMYCuD6QtGGf
 - Process of art-passing the levels: https://youtu.be/J9wui_me8Kc?si=6bcZs1Ya24zvStlU
+- Gameplay demonstation videos: https://youtube.com/playlist?list=PLfq3NwA0Zao9jBr-KzF4Ysa2zfu5myc4B&si=uBR2bgNN78CUYdwT
 - Realms blog post: https://www.minecraft.net/en-us/article/new-on-realms-being-nice-to-people
 
 ---
