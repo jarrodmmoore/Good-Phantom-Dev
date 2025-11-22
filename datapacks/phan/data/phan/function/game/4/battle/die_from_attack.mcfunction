@@ -1,6 +1,7 @@
 #need to have been attacked by something to die!
 execute unless score @s attackerID matches 1.. run return 0
 execute unless score @s hurtfulTime matches 1.. run return 0
+#=====
 
 #give KO credit to attacker
 function phan:items/ko_credit
