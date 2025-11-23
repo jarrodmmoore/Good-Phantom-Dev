@@ -3,7 +3,7 @@ scoreboard objectives add value dummy
 scoreboard objectives add dataTransfer dummy
 scoreboard objectives add inventoryCheck dummy
 scoreboard objectives add lifespan dummy
-scoreboard objectives add join dummy
+scoreboard objectives add join custom:leave_game
 scoreboard objectives add resetWave dummy
 scoreboard objectives add joinCount dummy
 scoreboard objectives add playerID dummy

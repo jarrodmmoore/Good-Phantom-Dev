@@ -1,7 +1,7 @@
 #(executed by a waypoint)
 
 #particle to indicate we copied the thing
-particle minecraft:sonic_boom ~ ~.2 ~ 0 0 0 0 1 force
+particle sonic_boom ~ ~.2 ~ 0 0 0 0 1 force
 
 #get the data
 scoreboard players operation #waypointDir1 value = @s AIBC_dir1

@@ -15,7 +15,7 @@ execute if entity @s[tag=botRival] run scoreboard players set #botRivalFinished 
 execute if entity @s[tag=botRival] run scoreboard players set #botRivalPosition value -1
 
 #visuals
-particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
+particle flash{color:[1,1,1,1]} ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
 
 #figure out how long everyone else has to finish
 function phan:game/4/battle/player_finish_set_battle_end_time

@@ -7,7 +7,7 @@ scoreboard players reset @s joinGame
 function phan:movement/reset_speed_self
 
 #visuals
-particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
+particle flash{color:[1,1,1,1]} ~ ~1 ~ 0 0 0 1 1 force @a[tag=doneWithIntro]
 
 #clear squid blindness and invalidate any squids that were assigned to us
 execute as @e[type=squid,tag=blindingSquidEntity] if score @s playerID = #checkID value run tag @s remove tickObject

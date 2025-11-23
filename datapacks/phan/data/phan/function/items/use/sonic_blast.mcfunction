@@ -5,8 +5,8 @@ scoreboard players operation #attackerID value = @s playerID
 #visuals/sound
 playsound minecraft:item.goat_horn.sound.7 master @a ~ ~ ~ 3 1.7
 playsound minecraft:entity.wither.hurt master @a ~ ~ ~ 2 1.2
-particle flash ~ ~1 ~ 0 0 0 1 1 force @a[tag=!blastSelf]
-execute anchored eyes positioned ^ ^ ^3 run particle flash ~ ~ ~ 0 0 0 1 1 force @a[tag=blastSelf]
+particle flash{color:[1,1,1,1]} ~ ~1 ~ 0 0 0 1 1 force @a[tag=!blastSelf]
+execute anchored eyes positioned ^ ^ ^3 run particle flash{color:[1,1,1,1]} ~ ~ ~ 0 0 0 1 1 force @a[tag=blastSelf]
 
 #get advancement for destroying an anvil that is targeting us
 execute if entity @s[type=player] as @e[tag=anvilEntity,type=armor_stand,distance=..9] if score @s playerID = #attackerID value run advancement grant @a[tag=blastSelf,distance=..1] only phan:portal_race/not_today_thank_you

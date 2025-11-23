@@ -35,6 +35,7 @@ function phan:setup/scoreboard
 function phan:setup/gamerules
 function phan:setup/teams
 function phan:setup/storages
+function phan:setup/forceloaded_chunks
 
 #version for imported/exported maps
 scoreboard players set #mapDataVersion value 102005

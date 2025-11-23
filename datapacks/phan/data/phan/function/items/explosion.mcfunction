@@ -14,11 +14,11 @@ execute if score #random value matches ..1 run playsound minecraft:custom_sfx/ex
 execute if score #random value matches 2 run playsound minecraft:custom_sfx/explode2 master @a[distance=..80] ~ ~ ~ 3 1 .1
 execute if score #random value matches 3 run playsound minecraft:custom_sfx/explode3 master @a[distance=..80] ~ ~ ~ 3 1 .1
 execute if score #random value matches 4.. run playsound minecraft:custom_sfx/explode4 master @a[distance=..80] ~ ~ ~ 3 1 .1
-particle flash ~ ~.5 ~ 0 0 0 1 1
+particle flash{color:[1,1,1,1]} ~ ~.5 ~ 0 0 0 1 1
 particle flame ~ ~.5 ~ 0.5 0.5 0.5 0.01 10 force
 particle flame ~ ~.5 ~ 0.5 0.5 0.5 0.01 20
-particle poof ~ ~.5 ~ 1.4 1.4 1.4 0 10 force
-particle poof ~ ~.5 ~ 1.4 1.4 1.4 0 40
+particle poof ~ ~.5 ~ 1.4 1.4 1.4 0 5 force
+#particle poof ~ ~.5 ~ 1.4 1.4 1.4 0 40
 
 #delete self
 scoreboard players set @s lifespan 1

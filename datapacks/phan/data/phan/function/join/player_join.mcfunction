@@ -163,7 +163,8 @@ execute if entity @s[tag=simplify_clouds] run say removed simplify_clouds tag fr
 tag @s[tag=simplify_clouds] remove simplify_clouds
 
 #warn players if command blocks are not enabled on this server
-function phan:utility/verify_command_blocks_enabled_1
+#(no longer needed, we have control of this now)
+#function phan:utility/verify_command_blocks_enabled_1
 
 #attributes and stuff!
 function phan:movement/reset_speed_self
