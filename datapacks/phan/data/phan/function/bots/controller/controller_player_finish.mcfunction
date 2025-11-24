@@ -17,7 +17,7 @@ scoreboard players set #1stPlaceLeadTime value 0
 
 #if only 1 player left, cancel any outstanding anvil mandate
 execute store result score #playerCount value run execute if entity @a[tag=playing]
-execute as @e[tag=ai,type=zombie] run scoreboard players add #playerCount value 1
+execute as @e[tag=ai,type=mannequin] run scoreboard players add #playerCount value 1
 execute if score #playerCount value matches ..1 run scoreboard players set #mandateAnvil value 0
 
 #announce to everyone else that we finished (this time with macros! whoa)

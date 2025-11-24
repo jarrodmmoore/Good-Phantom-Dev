@@ -11,7 +11,7 @@ execute if score #test value matches 0 run return 0
 execute if score @s ringID = #botTargetID value run return run function phan:bots/reaction/set_temporary_target
 
 #first time targeting? make the bot jump at us
-execute as @e[type=zombie,tag=botSelf,distance=..1] run function phan:bots/movement/try_to_boost_on_trap
+execute as @e[type=mannequin,tag=botSelf,distance=..1] run function phan:bots/movement/try_to_boost_on_trap
 
 #otherwise, become potential target
 scoreboard players add #test1 value 1

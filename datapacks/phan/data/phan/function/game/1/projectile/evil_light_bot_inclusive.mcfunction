@@ -20,7 +20,7 @@ tag @s add evilProj
 scoreboard players set #projDamage value 1
 scoreboard players operation #projUID value = @s projectileID
 execute positioned ~-.5 ~-1.1 ~-.5 if entity @a[tag=playing,gamemode=adventure,dx=1,dy=3,dz=1] positioned ~.5 ~1.1 ~.5 anchored eyes run function phan:game/1/projectile/hit_index_evil
-execute positioned ~-.5 ~-1.1 ~-.5 if entity @e[tag=ai,type=zombie,dx=1,dy=3,dz=1] positioned ~.5 ~1.1 ~.5 anchored eyes run function phan:game/1/projectile/hit_index_evil_bot
+execute positioned ~-.5 ~-1.1 ~-.5 if entity @e[tag=ai,type=mannequin,dx=1,dy=3,dz=1] positioned ~.5 ~1.1 ~.5 anchored eyes run function phan:game/1/projectile/hit_index_evil_bot
 tag @s remove evilProj
 
 #live

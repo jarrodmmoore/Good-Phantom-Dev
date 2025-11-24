@@ -7,7 +7,7 @@ tag @s add anvilEnt
 #identify target player
 scoreboard players operation #getID value = @s playerID
 execute unless entity @s[tag=lostTarget] as @a[tag=doneWithIntro,tag=!playerReservation,distance=..10] if score @s playerID = #getID value run tag @s add anvilTarget
-execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget] as @e[tag=ai,type=zombie,distance=..10] if score @s playerID = #getID value run tag @s add anvilTarget
+execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget] as @e[tag=ai,type=mannequin,distance=..10] if score @s playerID = #getID value run tag @s add anvilTarget
 #recognize when we've lost the plot
 execute if score #botsEnabled value matches ..0 unless entity @s[tag=lostTarget] unless entity @a[tag=anvilTarget,distance=..10] run tag @s add lostTarget
 execute if score #botsEnabled value matches 1.. unless entity @s[tag=lostTarget] unless entity @e[tag=anvilTarget,distance=..10] run tag @s add lostTarget

@@ -1,1 +1,1 @@
-execute as @e[tag=ai,type=zombie] run function phan:bots/reset_speed_self
+execute as @e[tag=ai,type=mannequin] run function phan:bots/reset_speed_self

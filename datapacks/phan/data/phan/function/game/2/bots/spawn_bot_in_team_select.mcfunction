@@ -14,4 +14,4 @@ function phan:game/2/bots/spawn_bot_in_team_select_macro with storage phan:bot_a
 #finish setting up the entity
 scoreboard players operation #test value = @s botSkill
 scoreboard players operation #setID value = @s botID
-execute as @e[type=zombie,tag=setMe] run function phan:game/2/bots/spawn_bot_in_team_select_post_summon
+execute as @e[type=mannequin,tag=setMe] run function phan:game/2/bots/spawn_bot_in_team_select_post_summon

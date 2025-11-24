@@ -54,7 +54,7 @@ execute if score @s fallFlying matches 1 run scoreboard players set @s botMoveSt
 function phan:bots/movement/movement_calculations
 
 #dismount and destroy vehicle armor stand when we're not gliding
-execute unless score @s botMoveState matches 1..2 if function phan:bots/movement/check_for_vehicle run function phan:bots/movement/cancel_flight
+execute unless score @s botMoveState matches 1..2 if score @s fallFlying matches 1 run function phan:bots/movement/cancel_flight
 
 #=====
 #execute movements based on botMoveState

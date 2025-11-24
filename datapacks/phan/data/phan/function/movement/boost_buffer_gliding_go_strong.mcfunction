@@ -8,7 +8,7 @@ execute if entity @s[type=player] run scoreboard players set $strength player_mo
 execute if entity @s[type=player] run function player_motion:api/launch_looking
 
 #alternate behavior for bots
-execute if entity @s[tag=ai] on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] at @s run function phan:bots/movement/2_gliding/apply_velocity_to_vehicle_variable {strength:"0.0105"}
+execute if entity @s[tag=ai] at @s run function phan:bots/movement/2_gliding/apply_velocity_to_vehicle_variable {strength:"0.0105"}
 
 #reduce hitstun
 #scoreboard players remove @s hitstun 15

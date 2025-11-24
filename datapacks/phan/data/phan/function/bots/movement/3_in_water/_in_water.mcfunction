@@ -1,5 +1,5 @@
 #exit out if we're not moving
-execute if score #botWantsToMove value matches 0 run return 0
+execute if score #botWantsToMove value matches 0 run return run data modify entity @s pose set value standing
 #=====
 
 #cancel flight if we're in water
@@ -38,7 +38,11 @@ scoreboard players operation #coord_z2 value -= #coord_z value
 kill 0001e453-0000-0000-0000-000000000001
 
 #reduce speed somewhat when head is above water
-execute unless score #botAtBottomOfWater value matches 1 positioned ~ ~1 ~ unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run function phan:bots/movement/3_in_water/head_above_water_penalty
+scoreboard players set #test5 value 0
+execute positioned ~ ~1 ~ unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run function phan:bots/movement/3_in_water/head_above_water_penalty
+#set swimming pose, but only if our head is submerged
+execute unless score #test5 value matches 1 run data modify entity @s pose set value swimming
+execute if score #test5 value matches 1 run data modify entity @s pose set value standing
 
 #amplify velocity while under speed and slowness effects
 function phan:bots/movement/speed_effect_amplifier

@@ -4,7 +4,7 @@ execute if score #targetExists value matches 1 run return 0
 #do nothing if the player can't collect us
 #first, check if the player can't collect anything from our cluster group
 scoreboard players operation #test value = @s editArg1
-execute as @e[type=zombie,tag=botSelf,distance=..1] if function phan:bots/reaction/item_box_check_if_unobtainable run return 0
+execute as @e[type=mannequin,tag=botSelf,distance=..1] if function phan:bots/reaction/item_box_check_if_unobtainable run return 0
 #second, check if we have a line of sight to player
 scoreboard players set #test value 1
 scoreboard players set #recursions value 12

@@ -4,8 +4,8 @@
 tellraw @s ["",{text:"\n==\\/== ",color:"#00AA33",bold:true},{translate:"gp.editor.title.utilities",color:"#00AA33",bold:true},{text:" ==\\/==",color:"#00AA33",bold:true}]
 tellraw @s ["",{text:"/scoreboard players set #vTimeLimit value 999999999",color:"dark_aqua","underlined":true,click_event:{action:"suggest_command",command:"/scoreboard players set #vTimeLimit value 999999999"}}]
 tellraw @s ["",{text:" "}]
-tellraw @s ["",{text:"/scoreboard players set @e[tag=ai,type=zombie] botHasItem",color:"dark_aqua","underlined":true,click_event:{action:"suggest_command",command:"/scoreboard players set @e[tag=ai,type=zombie] botHasItem"}}]
-tellraw @s ["",{text:"/scoreboard players set @e[tag=ai,type=zombie] energy 18",color:"dark_aqua","underlined":true,click_event:{action:"suggest_command",command:"/scoreboard players set @e[tag=ai,type=zombie] energy 18"}}]
+tellraw @s ["",{text:"/scoreboard players set @e[tag=ai,type=mannequin] botHasItem",color:"dark_aqua","underlined":true,click_event:{action:"suggest_command",command:"/scoreboard players set @e[tag=ai,type=mannequin] botHasItem"}}]
+tellraw @s ["",{text:"/scoreboard players set @e[tag=ai,type=mannequin] energy 18",color:"dark_aqua","underlined":true,click_event:{action:"suggest_command",command:"/scoreboard players set @e[tag=ai,type=mannequin] energy 18"}}]
 tellraw @s ["",{text:" "}]
 tellraw @s ["",{translate:"gp.editor.button.back",color:"red",bold:false,click_event:{action:"run_command",command:"/trigger tEditor set 1002"},hover_event:{action:"show_text",value:[{translate:"gp.editor.hover.back"}]}}]
 

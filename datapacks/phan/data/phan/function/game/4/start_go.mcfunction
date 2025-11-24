@@ -10,18 +10,18 @@ scoreboard players set @a checkFake 0
 scoreboard players set @a lap 1
 scoreboard players set @a rawTime 0
 scoreboard players set @a timeSinceOpenBox 0
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/bot_set_self_scores_at_start
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] at @s run function phan:bots/bot_set_self_scores_at_start
 scoreboard players set @a[tag=debugCheckpointTimes] debug 0
 
 #players get spawn invulnerability!
 scoreboard players set @a[tag=playing] spawnInvulnerability 40
-execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie] spawnInvulnerability 40
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=mannequin] spawnInvulnerability 40
 
 #reset speeds and energy
 function phan:movement/reset_speeds
 scoreboard players set @a energy 0
 execute if score #vGameType value matches 2 run scoreboard players set @a energy 6
-execute if score #vGameType value matches 2 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players set @s energy 6
+execute if score #vGameType value matches 2 if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] run scoreboard players set @s energy 6
 
 #curb projectile spam toward the start of the game
 scoreboard players operation #givenRockets value = #hudPeakPlayers value
@@ -53,4 +53,4 @@ execute as @a at @s run spawnpoint @s ~ ~1 ~
 #respawn point is right here
 execute as @a[tag=playing] at @s run function phan:game/4/race/player_set_respawn_location
 execute as @a[limit=1,tag=playing,sort=random] at @s run function phan:game/4/race/player_set_fallback_respawn_location
-execute unless score #fallbackRespawnExists value matches 1 as @e[type=zombie,tag=ai,limit=1] at @s run function phan:game/4/race/player_set_fallback_respawn_location_bot
+execute unless score #fallbackRespawnExists value matches 1 as @e[type=mannequin,tag=ai,limit=1] at @s run function phan:game/4/race/player_set_fallback_respawn_location_bot

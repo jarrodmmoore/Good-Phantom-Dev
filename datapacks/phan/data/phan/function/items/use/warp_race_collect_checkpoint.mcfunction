@@ -10,7 +10,7 @@ execute store result score #vsRespawnLaunch dataTransfer run execute if entity @
 
 #send data to player
 execute unless score #botWarping value matches 1 as @a[tag=warpingPlayer] run function phan:items/use/warp_race_collect_checkpoint_transfer_data
-execute if score #botWarping value matches 1 as @e[tag=warpingPlayer,tag=ai,type=zombie] run function phan:items/use/warp_race_collect_checkpoint_transfer_data
+execute if score #botWarping value matches 1 as @e[tag=warpingPlayer,tag=ai,type=mannequin] run function phan:items/use/warp_race_collect_checkpoint_transfer_data
 
 #run if we're a real checkpoint
 execute if score @s editArg2 matches 0 run function phan:items/use/warp_race_collect_checkpoint_real

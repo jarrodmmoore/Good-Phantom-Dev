@@ -2,7 +2,7 @@
 
 #teleport pad
 execute as @a[tag=playing] at @s if block ~ ~-1 ~ red_glazed_terracotta run function phan:levels/neon_nightway/versus_act_1_teleport
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,x=-3103,y=65,z=225,distance=..5] at @s if block ~ ~-1 ~ red_glazed_terracotta run function phan:levels/neon_nightway/versus_act_1_teleport_bot
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin,x=-3103,y=65,z=225,distance=..5] at @s if block ~ ~-1 ~ red_glazed_terracotta run function phan:levels/neon_nightway/versus_act_1_teleport_bot
 
 
 #make sure gates are closed on lap 1

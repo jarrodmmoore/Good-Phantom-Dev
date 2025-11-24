@@ -7,7 +7,7 @@ scoreboard players operation #attackerID value = @s playerID
 scoreboard players operation #test value = @s itemPosition
 #versus race
 execute if score #gameState value matches 4 if score #vGameType value matches 1 unless score @s itemPosition matches ..1 as @a[tag=playing,tag=!dontgethit] if score @s itemPosition < #test value at @s run function phan:items/squid_blind_player
-execute if score #gameState value matches 4 if score #vGameType value matches 1 unless score @s itemPosition matches ..1 if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=!dontgethit] if score @s itemPosition < #test value at @s run function phan:items/squid_blind_player
+execute if score #gameState value matches 4 if score #vGameType value matches 1 unless score @s itemPosition matches ..1 if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin,tag=!dontgethit] if score @s itemPosition < #test value at @s run function phan:items/squid_blind_player
 execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s itemPosition matches ..1 if score #botsEnabled value matches ..0 as @a[tag=playing,tag=!dontgethit,limit=5,sort=nearest] at @s run function phan:items/squid_blind_player
 execute if score #gameState value matches 4 if score #vGameType value matches 1 if score @s itemPosition matches ..1 if score #botsEnabled value matches 1.. as @e[tag=playing,tag=!dontgethit,limit=5,sort=nearest] at @s run function phan:items/squid_blind_player
 #versus battle
@@ -32,8 +32,8 @@ tag @s remove dontgethit
 
 #secretly clear item from bot inventories to curb spam
 execute if score #botsEnabled value matches 1.. run scoreboard players set @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1,scores={botSkill=..5}] botHasItem10 0
-execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botSkill=..5}] botHasItem10 0
-execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=zombie,scores={botHoldingItem=10}] botHoldingItem 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=mannequin,scores={botSkill=..5}] botHasItem10 0
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=mannequin,scores={botHoldingItem=10}] botHoldingItem 0
 
 #cooldown
 scoreboard players reset @s carrotInput

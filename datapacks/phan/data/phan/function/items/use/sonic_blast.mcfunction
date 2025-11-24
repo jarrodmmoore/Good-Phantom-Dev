@@ -20,7 +20,7 @@ execute as @e[tag=rocket,type=armor_stand,distance=..12] run function phan:items
 #hit nearby players
 execute if loaded ~ ~ ~ run summon marker ~ ~ ~ {UUID:[I;777,0,0,2]}
 execute as @a[gamemode=adventure,tag=!blastSelf,distance=..7] at @s run function phan:items/use/sonic_blast_hit_player
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=!blastSelf,distance=..7] at @s run function phan:items/use/sonic_blast_hit_player
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin,tag=!blastSelf,distance=..7] at @s run function phan:items/use/sonic_blast_hit_player
 kill 00000309-0000-0000-0000-000000000002
 
 #cleanup

@@ -41,7 +41,7 @@ scoreboard players set #relevantLapMin value 2147483647
 #all players tell the game what their status is so we can optimize checkpoint stuff accordingly
 #we also run a lot of player-specific logic here
 execute as @a[tag=playing] at @s run function phan:game/4/race/race_player_tick
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/race/race_player_tick
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] at @s run function phan:bots/race/race_player_tick
 
 #make sure lap range includes any missing bots
 execute if score #checkMissingPlayerLaps value matches 1 run function phan:game/4/race/checkpoint/operate_bot_missing/get_missing_bot_laps
@@ -72,8 +72,8 @@ execute as @e[type=marker,tag=resetZone,scores={versusSpawn=1}] at @s run functi
 #(this happens in the same tick the tag was given so we won't have to worry about cleaning it up, right? hope so)
 execute as @a[tag=incrementCheckReal] run function phan:game/4/race/checkpoint/increment_player_real
 execute as @a[tag=incrementCheckOptional] run function phan:game/4/race/checkpoint/increment_player_optional
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=incrementCheckReal] run function phan:bots/race/checkpoint/increment_player_real
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie,tag=incrementCheckOptional] run function phan:bots/race/checkpoint/increment_player_optional
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin,tag=incrementCheckReal] run function phan:bots/race/checkpoint/increment_player_real
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin,tag=incrementCheckOptional] run function phan:bots/race/checkpoint/increment_player_optional
 
 #player position
 function phan:game/4/race/checkpoint/publish_positions

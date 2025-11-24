@@ -13,7 +13,7 @@ scoreboard players operation #coord_dy value -= #coord_y value
 scoreboard players operation #coord_dz value -= #coord_z value
 
 #in soviet russia, projectile throws you
-execute on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run function phan:bots/items/17_firework_rocket/apply_velocity_to_vehicle
+function phan:bots/items/17_firework_rocket/apply_velocity_to_vehicle
 
 #get rid of that marker we used to grab second position
 kill 00000309-0000-0000-0000-000000000001

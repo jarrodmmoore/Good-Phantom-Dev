@@ -3,7 +3,7 @@ execute if entity @s[tag=!mineArmed] run function phan:game/1/objects/enemy/mine
 
 #explode if player touches
 execute positioned ~ ~0.4 ~ if entity @a[gamemode=adventure,distance=..2] if score #noExplode value matches 0 run scoreboard players set @s enemyHP 500
-execute if score #botsEnabled value matches 1.. positioned ~ ~0.4 ~ if entity @e[tag=ai,type=zombie,distance=..2] if score #noExplode value matches 0 run scoreboard players set @s enemyHP 500
+execute if score #botsEnabled value matches 1.. positioned ~ ~0.4 ~ if entity @e[tag=ai,type=mannequin,distance=..2] if score #noExplode value matches 0 run scoreboard players set @s enemyHP 500
 
 #if human-owned, show particle to owner indicating that this mine is theirs
 execute if score #2sec value matches 5 if entity @s[tag=humanOwned] at @s run function phan:game/1/objects/enemy/mine_owner_particle

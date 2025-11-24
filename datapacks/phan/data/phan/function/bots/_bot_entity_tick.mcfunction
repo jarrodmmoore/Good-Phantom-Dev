@@ -1,4 +1,4 @@
-#executed by the zombie that acts as one of our bots
+#executed by the mannequin that acts as one of our bots
 #this function should be called by a botController after it updated the storage "phan:bot_data" with the data corresponding to this bot
 
 

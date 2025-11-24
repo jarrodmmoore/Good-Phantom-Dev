@@ -16,7 +16,7 @@ function phan:game/2/bots/clear_bot_from_scoreboards with storage phan:bot_args
 
 #if in team select area, get rid of bot entities
 scoreboard players operation #checkID value = @s botID
-execute if score #gameState value matches 2 as @e[type=zombie,tag=botPreviewEntity] if score @s age = #checkID value at @s run function phan:game/2/bots/bot_preview_entity_perish
+execute if score #gameState value matches 2 as @e[type=mannequin,tag=botPreviewEntity] if score @s age = #checkID value at @s run function phan:game/2/bots/bot_preview_entity_perish
 
 #delete self
 tag @s remove botController

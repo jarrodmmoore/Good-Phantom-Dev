@@ -6,7 +6,7 @@ execute store result score #activeBattlePlayers value run execute if entity @a[t
 
 #run a lot of player-specific logic here
 execute as @a[tag=playing] at @s run function phan:game/4/battle/battle_player_tick
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] at @s run function phan:bots/battle/battle_player_tick
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] at @s run function phan:bots/battle/battle_player_tick
 
 #start assigning positions at the set minimum value
 #(this increments if somebody finishes and is no longer looking at checkpoints)
@@ -26,7 +26,7 @@ execute if score #botsEnabled value matches 1.. as @e[type=marker,tag=resetZone,
 
 #every 2 seconds, put a bogus entry into each player's list of recently collected rings (this acts like a sort of ring cooldown)
 execute if score #2sec value matches 11 as @a[tag=playing] run function phan:game/4/objects/ring_collect_bogus
-execute if score #2sec value matches 11 as @e[tag=ai,type=zombie] run function phan:game/4/objects/ring_collect_bogus
+execute if score #2sec value matches 11 as @e[tag=ai,type=mannequin] run function phan:game/4/objects/ring_collect_bogus
 
 #player position
 function phan:game/4/battle/publish_positions

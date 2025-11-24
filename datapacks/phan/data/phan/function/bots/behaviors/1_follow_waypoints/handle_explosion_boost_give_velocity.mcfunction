@@ -4,7 +4,6 @@
 
 #teleport facing target (via /rotate for model only)
 execute at @s facing entity 00000309-0000-0000-0000-00000000000f feet rotated ~ ~-30 run rotate @s ~ ~
-execute on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] at @s facing entity 00000309-0000-0000-0000-00000000000f feet rotated ~ ~-30 run tp @s ~ ~ ~ ~ ~
 
 #record our position
 execute store result score #coord_x value run data get entity @s Pos[0] 100000
@@ -22,8 +21,8 @@ scoreboard players operation #coord_dy value -= #coord_y value
 scoreboard players operation #coord_dz value -= #coord_z value
 
 #apply velocity to vehicle armor stand
-execute unless entity @s[tag=botIsTargetingMine] on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run function phan:bots/movement/2_gliding/apply_velocity_to_vehicle_additive
-execute if entity @s[tag=botIsTargetingMine] on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] run function phan:bots/items/17_firework_rocket/apply_velocity_to_vehicle
+execute unless entity @s[tag=botIsTargetingMine] run function phan:bots/movement/2_gliding/apply_velocity_to_vehicle_additive
+execute if entity @s[tag=botIsTargetingMine] run function phan:bots/items/17_firework_rocket/apply_velocity_to_vehicle
 
 #get rid of the markers we used to grab position and rotation
 kill 00000309-0000-0000-0000-000000000001

@@ -10,8 +10,8 @@ execute as @a[limit=4,sort=random,scores={teamRequest=2}] at @s run particle dus
 
 #portal race: can add bots!
 execute if score #desiredGamemode value matches 3 run function phan:game/2/bots/tick
-scoreboard players set @e[tag=botPreviewEntity,type=zombie] lifespan 5
-execute as @e[tag=botPreviewEntity,type=zombie,limit=4,sort=random] at @s run particle dust{color:[0.2,0.5,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
+scoreboard players set @e[tag=botPreviewEntity,type=mannequin] lifespan 5
+execute as @e[tag=botPreviewEntity,type=mannequin,limit=4,sort=random] at @s run particle dust{color:[0.2,0.5,1.0],scale:1} ~ ~1 ~ 0.2 0.4 0.2 1 1 force @a[tag=doneWithIntro]
 
 #count down to game start
 execute store result score #countPlayers value run execute if entity @a[tag=doneWithIntro,scores={teamRequest=2}]

@@ -2,7 +2,7 @@
 tag @e[type=block_display,tag=botController,x=197,y=-11,z=117,dx=1,dy=1,dz=1] add botDisabled
 
 #all lingering bots from previous rounds should have their stuff reset
-execute as @e[type=zombie,tag=formerlyAI] run function phan:bots/controller/reset_gameplay_scores
+execute as @e[type=mannequin,tag=formerlyAI] run function phan:bots/controller/reset_gameplay_scores
 
 #possibly assign one bot as the rival
 scoreboard players set #botRivalFinished value -1

@@ -13,7 +13,7 @@ execute if score #botSkill value matches 6.. if score #random value matches 96..
 #still here? check if the mine is avoidable
 tag @s add AIBC_hookLeft
 tag @s add AIBC_hookRight
-execute at @s facing entity @e[tag=botSelf,type=zombie,distance=..11] eyes rotated ~ 0 run function phan:bots/reaction/mine_check_lane
+execute at @s facing entity @e[tag=botSelf,type=mannequin,distance=..11] eyes rotated ~ 0 run function phan:bots/reaction/mine_check_lane
 
 #pick a direction to dodge in (or no direction if both are bad ideas)
 scoreboard players set #math value 0
@@ -22,8 +22,8 @@ execute if entity @s[tag=AIBC_hookRight,tag=!AIBC_hookLeft] run scoreboard playe
 execute if entity @s[tag=AIBC_hookLeft,tag=AIBC_hookRight] store result score #math value run random value 1..2
 
 #tell bot to dodge soon!
-execute if score #math value matches 1 run scoreboard players set @e[tag=botSelf,type=zombie,distance=..1] botPreparedToDodgeTrap -20
-execute if score #math value matches 2 run scoreboard players set @e[tag=botSelf,type=zombie,distance=..1] botPreparedToDodgeTrap 20
+execute if score #math value matches 1 run scoreboard players set @e[tag=botSelf,type=mannequin,distance=..1] botPreparedToDodgeTrap -20
+execute if score #math value matches 2 run scoreboard players set @e[tag=botSelf,type=mannequin,distance=..1] botPreparedToDodgeTrap 20
 
 #clean up tags
 tag @s remove AIBC_hookLeft

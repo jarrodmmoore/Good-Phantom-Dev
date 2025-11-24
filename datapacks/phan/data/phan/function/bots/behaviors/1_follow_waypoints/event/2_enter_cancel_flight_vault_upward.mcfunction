@@ -6,7 +6,7 @@
 scoreboard players set @s botVaultUpwardTime 15
 
 #already in flight? don't re-enter flight
-execute if function phan:bots/movement/check_for_vehicle run return 0
+execute if score @s fallFlying matches 1 run return 0
 #=====
 
 #mid air? just enter flight

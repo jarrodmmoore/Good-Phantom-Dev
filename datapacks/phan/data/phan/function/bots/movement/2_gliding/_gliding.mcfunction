@@ -15,9 +15,9 @@ execute store result storage phan:coords target_y_dec int 1 run scoreboard playe
 #are we in improvised flight mode? target a potentially higher y coordinate
 execute if entity @s[tag=botImprovFlight] run function phan:bots/movement/2_gliding/use_improvised_y_coordinate
 
-#vehicle must face target and also not be in an invalid place
+#must not be in an invalid place
 scoreboard players set #success value 0
-execute on vehicle if entity @s[tag=botElytraHeightFix] on vehicle if entity @s[tag=botElytra] at @s run function phan:bots/movement/2_gliding/manage_vehicle
+execute positioned ~ ~-.2 ~ unless block ~ ~ ~ lava unless block ~ ~ ~ water unless block ~ ~ ~ #phan:waterloggable[waterlogged=true] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ #minecraft:stairs[waterlogged=true] unless block ~ ~ ~ #minecraft:coral_plants[waterlogged=true] unless block ~ ~ ~ tall_seagrass run scoreboard players set #success value 1
 
 #bot: face the target
 function phan:bots/movement/2_gliding/face_target with storage phan:coords

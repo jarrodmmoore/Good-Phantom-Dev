@@ -3,10 +3,10 @@ execute if entity @s[type=marker] unless score @s AIBC_id matches -2147483648..2
 
 #quit out immediately if we're already targeting this thing
 scoreboard players operation #checkID value = @s AIBC_id
-execute as @e[tag=botSelf,type=zombie,distance=..1] if function phan:bots/reaction/forced_redirect_check_if_redundant run return 0
+execute as @e[tag=botSelf,type=mannequin,distance=..1] if function phan:bots/reaction/forced_redirect_check_if_redundant run return 0
 
 #keep checking really fast if we're kinda sorta in range
-scoreboard players set @e[tag=botSelf,type=zombie,distance=..1] botReactionTimer 2
+scoreboard players set @e[tag=botSelf,type=mannequin,distance=..1] botReactionTimer 2
 
 #do nothing if out of bounds
 execute if score @s AIBC_modifier matches ..0 run return 0
@@ -22,4 +22,4 @@ execute if entity @s[scores={AIBC_modifier=1},distance=2..] run return 0
 
 #redirect!
 function phan:bots/behaviors/1_follow_waypoints/set_waypoint_target
-execute as @e[tag=botSelf,type=zombie,distance=..1] run function phan:bots/reaction/forced_redirect_go
+execute as @e[tag=botSelf,type=mannequin,distance=..1] run function phan:bots/reaction/forced_redirect_go

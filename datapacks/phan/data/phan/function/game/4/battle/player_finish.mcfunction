@@ -43,7 +43,7 @@ execute if entity @s[scores={finishPos=1,timeInFirst=..19}] run advancement gran
 
 #if only 1 player left, cancel any outstanding anvil mandate
 execute store result score #playerCount value run execute if entity @a[tag=playing]
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=zombie] run scoreboard players add #playerCount value 1
+execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] run scoreboard players add #playerCount value 1
 execute if score #playerCount value matches ..1 run scoreboard players set #mandateAnvil value 0
 
 #make sure HUD doesn't get stuck on a blank timer thing

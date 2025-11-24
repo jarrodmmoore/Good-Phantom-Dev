@@ -3,7 +3,7 @@ execute if score #10Hz value matches 1 run particle dust{color:[1.0,1.0,1.0],sca
 
 #player collects if nearby
 execute if entity @a[tag=playing,gamemode=adventure,distance=..2] run return run function phan:game/1/objects/ender_eye_collect
-execute if score #botsEnabled value matches 1.. if entity @s[tag=!hiddenMusicDisc] if entity @e[tag=ai,type=zombie,distance=..2] run return run function phan:game/1/objects/ender_eye_collect_bot
+execute if score #botsEnabled value matches 1.. if entity @s[tag=!hiddenMusicDisc] if entity @e[tag=ai,type=mannequin,distance=..2] run return run function phan:game/1/objects/ender_eye_collect_bot
 
 #bob up and down
 scoreboard players remove @s bobTime 1

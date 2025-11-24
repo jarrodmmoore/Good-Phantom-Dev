@@ -14,7 +14,7 @@ tag @s add hasDataToSend
 #=====
 
 #cancel flight if we're gliding
-execute if function phan:bots/movement/check_for_vehicle run function phan:bots/movement/cancel_flight
+execute if score @s fallFlying matches 1 run function phan:bots/movement/cancel_flight
 
 #do the thing
 function phan:items/use/warp

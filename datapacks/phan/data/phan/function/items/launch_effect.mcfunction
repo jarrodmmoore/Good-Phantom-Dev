@@ -13,9 +13,6 @@ execute if entity @s[tag=ai] run function phan:bots/movement/cancel_flight
 #we're not stuck! don't try to re-route
 scoreboard players set @s botTimeSinceProgress -40
 
-#if we're a bot, apply levitation to elytra as well
-execute if entity @s[tag=ai] run function phan:bots/items/6_super_jump/manage_vehicle_levitation
-
 #feedback
 playsound minecraft:entity.shulker.shoot master @a ~ ~ ~ 1 .5
 particle cloud ~ ~.1 ~ 0.5 0.1 0.5 .1 25 force

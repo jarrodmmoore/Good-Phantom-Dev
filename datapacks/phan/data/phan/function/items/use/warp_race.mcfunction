@@ -29,8 +29,8 @@ execute if score #timeBehind1st value matches 245.. run scoreboard players set #
 
 #also limit the number of jumps we can make depending on time behind 1st (reason: track could make a u-turn allowing for an unusually long warp in some part of the track)
 scoreboard players set #warpLimit value 3
-execute if score #timeBehind1st value matches ..289 run scoreboard players set #warpLimit value 2
-execute if score #timeBehind1st value matches ..214 run scoreboard players set #warpLimit value 1
+execute if score #timeBehind1st value matches ..399 run scoreboard players set #warpLimit value 2
+execute if score #timeBehind1st value matches ..249 run scoreboard players set #warpLimit value 1
 
 #take off 1 warp before we start, just to make number add up...
 scoreboard players remove #warpLimit value 1

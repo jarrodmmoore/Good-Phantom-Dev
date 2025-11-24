@@ -1,3 +1,7 @@
+#change model so we have a texture that actually works with this technique
+execute unless entity @s[tag=darkening_speed_pad] run function phan:items/speed_pad_darken_change_model
+
+#darken over time
 execute if score #percent value matches 94.. run data merge entity @s {brightness:{sky:0,block:15}}
 execute if score #percent value matches 87..93 run data merge entity @s {brightness:{sky:0,block:14}}
 execute if score #percent value matches 80..86 run data merge entity @s {brightness:{sky:0,block:13}}
@@ -14,9 +18,9 @@ execute if score #percent value matches 10..16 run data merge entity @s {brightn
 execute if score #percent value matches 3..9 run data merge entity @s {brightness:{sky:0,block:2}}
 execute if score #percent value matches ..2 run data merge entity @s {brightness:{sky:0,block:1}}
 
-#this got broken somehow.
-#i'm not even going to question why anymore.
-#let's just do some particles as an alternative
+#extra particles to indicate fadeout
 execute if score #percent value matches ..80 run particle enchanted_hit ~ ~.35 ~ 0.3 0.15 0.3 0 1 force
 execute if score #percent value matches ..40 run particle enchanted_hit ~ ~.35 ~ 0.3 0.15 0.3 0 1 force
+
+#go up in smoke at the end
 execute if score #percent value matches ..2 run particle large_smoke ~ ~.35 ~ 0.3 0.15 0.3 0 10 force @a[distance=..50]
