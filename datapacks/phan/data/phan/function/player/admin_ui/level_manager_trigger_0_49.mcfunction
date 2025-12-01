@@ -7,8 +7,8 @@ execute if score @s tLevelManager matches 1005 run return run function phan:leve
 execute if score @s tLevelManager matches 1006 run return run function phan:level_manager/erase_level_scores
 execute if score @s tLevelManager matches 1007 run return run function phan:level_manager/set_field_numeric {resource_location:'dream_data',nbt:'selectable',value:1}
 execute if score @s tLevelManager matches 1008 run return run function phan:level_manager/set_field_numeric {resource_location:'dream_data',nbt:'selectable',value:0}
-execute if score @s tLevelManager matches 1009 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_podium',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1010 run return run function phan:level_manager/cycle_field {resource_location:'pr_podium',nbt:'skybox',offset:1,mod:4}
+execute if score @s tLevelManager matches 1009 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_podium',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1010 run return run function phan:level_manager/cycle_field {resource_location:'pr_podium',nbt:'skybox',offset:1,mod:10}
 execute if score @s tLevelManager matches 1011 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_podium',nbt:'night_vision',value:1}
 execute if score @s tLevelManager matches 1012 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_podium',nbt:'night_vision',value:0}
 execute if score @s tLevelManager matches 1013 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_podium',nbt:'teleport_dimension',offset:1,mod:3}
@@ -26,14 +26,14 @@ execute if score @s tLevelManager matches 1024 run return run function phan:leve
 execute if score @s tLevelManager matches 1025 run return run function phan:level_manager/warp_to_act {mode:'pr',act:'4'}
 execute if score @s tLevelManager matches 1026 run return run function phan:level_manager/panel/portal_race/_menu_podium_lookup
 execute if score @s tLevelManager matches 1027 run return run function phan:level_manager/warp_to_podium
-execute if score @s tLevelManager matches 1028 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_1',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1029 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_2',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1030 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_3',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1031 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_4',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1032 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_1',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1033 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_2',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1034 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_3',nbt:'skybox',offset:1,mod:4}
-execute if score @s tLevelManager matches 1035 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_4',nbt:'skybox',offset:1,mod:4}
+execute if score @s tLevelManager matches 1028 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_1',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1029 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_2',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1030 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_3',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1031 run return run function phan:level_manager/cycle_field_down {resource_location:'pr_act_4',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1032 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_1',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1033 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_2',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1034 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_3',nbt:'skybox',offset:1,mod:10}
+execute if score @s tLevelManager matches 1035 run return run function phan:level_manager/cycle_field {resource_location:'pr_act_4',nbt:'skybox',offset:1,mod:10}
 execute if score @s tLevelManager matches 1036 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_1',nbt:'night_vision',value:1}
 execute if score @s tLevelManager matches 1037 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_2',nbt:'night_vision',value:1}
 execute if score @s tLevelManager matches 1038 run return run function phan:level_manager/set_field_numeric {resource_location:'pr_act_3',nbt:'night_vision',value:1}

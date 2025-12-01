@@ -1,0 +1,3 @@
+#nothing... check again in 1 second?
+#...
+scoreboard players set @s musicTime 20
