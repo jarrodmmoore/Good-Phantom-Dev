@@ -23,6 +23,7 @@ scoreboard objectives add inputCooldownC dummy
 scoreboard objectives add inputCooldownD dummy
 scoreboard objectives add r dummy
 scoreboard objectives add hudNode dummy
+scoreboard objectives add hunger food
 #score attack + general gameplay
 scoreboard objectives add scoreDigit1 dummy
 scoreboard objectives add scoreDigit2 dummy

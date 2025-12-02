@@ -13,6 +13,7 @@ execute unless score @s pTimeRemaining matches 2..1219 run scoreboard players se
 execute if entity @s[scores={walkDistance=2500..,fallFlying=0}] run scoreboard players set #show value 1
 
 #set up string to display if we're showing something
+execute if score #SPRINTING_ALLOWED value matches 0 run scoreboard players set @s walkDistance 0
 execute if score #show value matches 1 unless entity @s[scores={walkDistance=2500..,fallFlying=0}] run function phan:custom_hud/time_running_out/get_string
 execute if score #show value matches 1 if entity @s[scores={walkDistance=2500..,fallFlying=0}] run function phan:custom_hud/time_running_out/get_string_sprint_tip
 

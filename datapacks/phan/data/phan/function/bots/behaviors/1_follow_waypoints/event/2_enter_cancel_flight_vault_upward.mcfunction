@@ -10,7 +10,7 @@ execute if score @s fallFlying matches 1 run return 0
 #=====
 
 #mid air? just enter flight
-execute if entity @s[scores={botMoveState=1..,airTime=11..}] unless function phan:bots/movement/check_for_vehicle run tag @s add botFlyWhenInAir
+execute if entity @s[scores={botMoveState=1..,airTime=11..}] unless score @s fallFlying matches 1 run tag @s add botFlyWhenInAir
 
 #0,1,2 while grounded? do a jump, now or later, with possible spamming, and enter flight when airborne
 tag @s add botFlyWhenInAir

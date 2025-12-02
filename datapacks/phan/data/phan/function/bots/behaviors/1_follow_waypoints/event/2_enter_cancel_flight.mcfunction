@@ -22,7 +22,7 @@ execute if score #waypointModifier value matches ..-1 run return run function ph
 execute unless score #waypointModifier value matches 3 if score @s fallFlying matches 1 run return 0
 
 #0,1,2 mid air? just enter flight
-execute unless score #waypointModifier value matches 3 if entity @s[scores={botMoveState=1..,airTime=11..}] unless function phan:bots/movement/check_for_vehicle run tag @s add botFlyWhenInAir
+execute unless score #waypointModifier value matches 3 if entity @s[scores={botMoveState=1..,airTime=11..}] unless score @s fallFlying matches 1 run tag @s add botFlyWhenInAir
 
 #0,1,2 while grounded? do a jump, now or later, with possible spamming, and enter flight when airborne
 execute unless score #waypointModifier value matches 3 run tag @s add botFlyWhenInAir

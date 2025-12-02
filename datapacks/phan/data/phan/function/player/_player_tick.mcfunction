@@ -101,9 +101,6 @@ scoreboard players remove @s[scores={spawnInvulnerability=1..}] spawnInvulnerabi
 #instant health to anyone below max hp
 execute if entity @s[scores={hp=..20}] run function phan:player/player_health_set
 execute if entity @s[scores={hp=21..423}] run function phan:player/player_health
-
-#saturation
-effect give @s saturation infinite 10 true
 #=====
 
 #play music

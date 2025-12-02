@@ -50,7 +50,7 @@ execute if score @s onGround matches 1.. run return run function phan:bots/items
 
 #use it (also we enter "improvised flight" mode)
 tag @s add botImprovFlight
-execute unless function phan:bots/movement/check_for_vehicle run function phan:bots/movement/1_air/transition_to_gliding
+execute unless score @s fallFlying matches 1 run function phan:bots/movement/1_air/transition_to_gliding
 
 #random trajectory
 execute store result score #random value run random value 1..4

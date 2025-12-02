@@ -4,12 +4,12 @@ clear @s[type=player] prismarine_shard[custom_data~{swiftnessPotion:1b}] 1
 #default duration is 10 seconds
 scoreboard players set #math value 200
 #shorter duration the closer we are to the front of the pack in race mode
-execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players set #math value 90
+execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players set #math value 60
 execute if score #gameState value matches 4 if score #vGameType value matches 1 run scoreboard players operation #math value += @s timeBehind1st
-#max out at duration of 10 seconds
-execute if score #math value matches 201.. run scoreboard players set #math value 200
-#always 10 seconds if we're the only player in the game
-execute if score #hudPeakPlayers value matches ..1 run scoreboard players set #math value 200
+#max out at duration of 7 seconds
+execute if score #math value matches 141.. run scoreboard players set #math value 140
+#always 7 seconds if we're the only player in the game
+execute if score #hudPeakPlayers value matches ..1 run scoreboard players set #math value 140
 
 #now apply it
 scoreboard players operation @s[type=player] swiftnessTime = #math value
