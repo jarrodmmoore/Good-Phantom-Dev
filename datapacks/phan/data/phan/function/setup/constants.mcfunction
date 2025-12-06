@@ -7,7 +7,8 @@ scoreboard players set #BOT_ALLOWED_REROUTES value 1
 scoreboard players set #BOT_ALLOWED_REROUTES_ROAM value 5
 
 #ban sprinting? y/n
-scoreboard players set #SPRINTING_ALLOWED value 0
+scoreboard players set #SPRINTING_ALLOWED value 1
+#i considered disabling sprinting, but unfotunately it ruins levels with underwater sections since you can't swim properly
 
 #value dictating how much turning your view quickly eats your momentum
 scoreboard players set #CONST_YAW_LOSS value 8

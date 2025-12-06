@@ -97,8 +97,8 @@ execute if score #assist_enabled_scoreattack value matches 0 if score #chosenLev
 #=====
 
 #announce our bonus
-execute if score #bonus value matches 1.. if score #gameState value matches 0..1 run tellraw @a[tag=lastDonor] ["",{text:" "},{text:" "},{translate:"gp.game.time_bonus",color:"white",italic:true},{text:": ",color:"white",italic:true},{score:{name:"#bonus",objective:"value"}}]
-execute if score #bonus value matches 1.. if score #gameState value matches 0..1 run tellraw @a[tag=tellMe,tag=!playing] ["",{text:" "},{text:" "},{translate:"gp.game.time_bonus",color:"white",italic:true},{text:": ",color:"white",italic:true},{score:{name:"#bonus",objective:"value"}}]
+execute if score #bonus value matches 1.. if score #gameState value matches 0..1 run tellraw @a[tag=lastDonor] ["",{text:" "},{text:" "},{translate:"gp.game.time_bonus",color:"white",italic:true},{text:": ",color:"white",italic:true},"\uE013 ",{text:"+",color:"yellow",bold:true},{score:{name:"#bonus",objective:"value"},color:"yellow",bold:true}]
+execute if score #bonus value matches 1.. if score #gameState value matches 0..1 run tellraw @a[tag=tellMe,tag=!playing] ["",{text:" "},{text:" "},{translate:"gp.game.time_bonus",color:"white",italic:true},{text:": ",color:"white",italic:true},"\uE013 ",{text:"+",color:"yellow",bold:true},{score:{name:"#bonus",objective:"value"},color:"yellow",bold:true}]
 tellraw @a[tag=tellMe] ["",{text:" "}]
 
 #just in case...

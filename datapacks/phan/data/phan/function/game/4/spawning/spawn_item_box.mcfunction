@@ -1,6 +1,3 @@
-#one last particle...
-execute if entity @s[tag=itemBoxSpawner] positioned ~ ~.5 ~ run particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"8"}}} ~ ~ ~ 0 0 0 1 1
-
 #https://youtu.be/BsSB96OEbZ8
 summon item_display ~ ~.5 ~ {brightness:{sky:10,block:15},Tags:["checkValid","setMe","itemBox","groupA","botObjectOfInterest"],item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/phantom_chest"}},start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[0.01f,0.01f,0.01f]}}
 

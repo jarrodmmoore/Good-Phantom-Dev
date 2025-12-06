@@ -11,7 +11,7 @@ scoreboard players remove @s[scores={age=1..}] age 1
 scoreboard players remove @s[scores={age=1..}] age 1
 
 #visuals. indicate how long until respawn
-execute if score @s age matches 1.. positioned ~ ~.5 ~ run function phan:game/4/item_box_respawn_particles
+execute if score @s age matches 1.. run function phan:game/4/item_box_respawn_particles
 
 #spawn
 execute if score @s age matches 0 run function phan:game/4/spawning/spawn_item_box
