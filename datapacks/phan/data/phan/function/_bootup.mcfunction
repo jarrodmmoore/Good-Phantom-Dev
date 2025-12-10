@@ -38,7 +38,7 @@ function phan:setup/storages
 function phan:setup/forceloaded_chunks
 
 #version for imported/exported maps
-scoreboard players set #mapDataVersion value 102005
+scoreboard players set #mapDataVersion value 102007
 scoreboard players set #mapDataWarn value 102004
 
 #forget which dream is cached. write it again next time we boot a level (for development convenience)
