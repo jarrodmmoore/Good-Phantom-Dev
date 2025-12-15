@@ -1,4 +1,10 @@
-#init
+#init game state 0, aka the lobby
+
+#clear any extra loaded chunks besides lobby
+execute in overworld run forceload remove all
+execute in the_nether run forceload remove all
+execute in the_end run forceload remove all
+function phan:setup/forceloaded_chunks
 
 #players have white name now
 team modify player color white

@@ -3,7 +3,7 @@
 #-1 = enter flight, vault upwards
 
 #vault up for a few ticks no matter what
-scoreboard players set @s botVaultUpwardTime 15
+scoreboard players set @s botVaultUpwardTime 12
 
 #already in flight? don't re-enter flight
 execute if score @s fallFlying matches 1 run return 0

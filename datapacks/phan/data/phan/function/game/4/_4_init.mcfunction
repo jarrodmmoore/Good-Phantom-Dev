@@ -1,5 +1,13 @@
+#init game state 4, portal race mode
+
 #keep track of the last mode we played so we can show relevant tips
 scoreboard players set #lastModePlayed value 4
+
+#clear any extra loaded chunks besides lobby
+execute in overworld run forceload remove all
+execute in the_nether run forceload remove all
+execute in the_end run forceload remove all
+function phan:setup/forceloaded_chunks
 
 #grand prix mode: quick-- look up what level we're supposed to be playing and overwrite whatever's in memory!
 execute if score #grandPrixActive value matches 1.. run function phan:phantom_racer/game_io/gp_get_round_data

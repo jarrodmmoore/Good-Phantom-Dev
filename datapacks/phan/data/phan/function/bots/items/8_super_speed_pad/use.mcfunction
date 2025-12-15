@@ -14,7 +14,7 @@ tag @s add hasDataToSend
 #=====
 
 #using speed pad cancels flight
-function phan:bots/movement/cancel_flight
+function phan:bots/movement/cancel_flight_no_reroute
 
 #if in mid-air, there's a chance we'll jump off the pad and maybe even enter flight
 execute if score @s botMoveState matches 1..2 run function phan:bots/items/7_speed_pad/consider_flying_after_boost

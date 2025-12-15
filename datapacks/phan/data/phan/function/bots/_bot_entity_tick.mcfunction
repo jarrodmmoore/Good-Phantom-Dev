@@ -11,6 +11,9 @@ execute unless items entity @s armor.chest elytra run item replace entity @s arm
 #coordinates
 function phan:bots/movement/get_coordinates
 
+#load nearby chunks every few ticks
+execute if score #5Hz value matches 3 run function phan:bots/load_nearby_chunks
+
 #respawn invulnerability
 scoreboard players remove @s[scores={spawnInvulnerability=1..}] spawnInvulnerability 1
 
