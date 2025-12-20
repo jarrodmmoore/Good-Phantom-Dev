@@ -22,7 +22,7 @@ execute positioned ~ ~-.2 ~ unless block ~ ~ ~ lava unless block ~ ~ ~ water unl
 #bot: face the target
 function phan:bots/movement/2_gliding/face_target with storage phan:coords
 #vault upwards with elytra? via /rotate
-execute if score @s botVaultUpwardTime matches 1.. at @s rotated ~ ~-30 run rotate @s ~ ~
+execute if score @s botVaultUpwardTime matches 1.. at @s rotated ~ ~-20 run rotate @s ~ ~
 
 #get rid of fire from lighting if we're slowed
 execute if score @s botEffectSlowness matches 1.. run function phan:bots/movement/slowness_effect_amplifier
