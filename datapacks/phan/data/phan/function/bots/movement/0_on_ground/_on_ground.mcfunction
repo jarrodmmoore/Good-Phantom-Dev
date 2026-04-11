@@ -48,6 +48,7 @@ execute if score @s botEffectSlowness matches 1.. run function phan:bots/movemen
 execute unless score @s botRubberbanding matches 0 run function phan:bots/movement/rubber_band_amplifier
 
 #perform a jump?
+scoreboard players set #botSprintJump value 0
 execute if score @s botJumpTimer matches -1 run function phan:bots/movement/jump/check_for_ledge
 execute if score @s botJumpTimer matches 0 run function phan:bots/movement/jump/_jump_index
 
@@ -67,3 +68,6 @@ execute if score @s moveVelocity matches 400..439 run function phan:bots/movemen
 execute if score @s moveVelocity matches 440..579 run function phan:bots/movement/0_on_ground/apply_velocity {arg:"0.010388"}
 execute if score @s moveVelocity matches 480..519 run function phan:bots/movement/0_on_ground/apply_velocity {arg:"0.010949"}
 execute if score @s moveVelocity matches 520.. run function phan:bots/movement/0_on_ground/apply_velocity {arg:"0.01151"}
+
+#add extra velocity for a sprint jump
+execute if score #botSprintJump value matches 1 run function phan:bots/movement/jump/sprint_jump_horizontal_velocity

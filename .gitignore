@@ -1,7 +1,5 @@
 
 session.lock
-/stats
-/advancements
-/playerdata
+/players
 level.dat_old
 uid.dat

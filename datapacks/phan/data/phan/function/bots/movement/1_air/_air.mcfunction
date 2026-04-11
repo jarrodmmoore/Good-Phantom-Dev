@@ -34,6 +34,7 @@ execute if score @s fallFlying matches 1 run return 0
 #=====
 
 #perform pad jump?
+scoreboard players set #botSprintJump value 0
 execute if entity @s[tag=botPadJumpWhenMidAir,scores={airTime=12..}] run function phan:bots/movement/1_air/perform_pad_jump
 
 #perform a coyote jump?
@@ -49,3 +50,6 @@ execute store result entity @s Motion[0] double 0.0004 run scoreboard players ge
 execute store result score #test2 value run data get entity @s Motion[2] 2500
 scoreboard players operation #test2 value += #coord_z2 value
 execute store result entity @s Motion[2] double 0.0004 run scoreboard players get #test2 value
+
+#add extra velocity for a sprint jump
+execute if score #botSprintJump value matches 1 run function phan:bots/movement/jump/sprint_jump_horizontal_velocity
