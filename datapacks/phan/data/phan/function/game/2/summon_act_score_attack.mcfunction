@@ -15,7 +15,7 @@ $data modify storage phan:level_index tag set value 'actPreviewImage$(act)'
 execute positioned ~1 ~2.4 ~1 run function phan:level_manager/load/summon_act_preview_score_attack with storage phan:level_index
 
 #summon name text
-$execute positioned ~-1 ~ ~1 run summon text_display ~ ~-10 ~ {Tags:["lobbyProp","rotateMe"],billboard:"fixed",alignment:"center",text:[{nbt:"act_name",storage:"phan_dream_$(level_id):sa_act_$(act)",interpret:false}]}
+$execute positioned ~-1 ~ ~1 run summon text_display ~ ~-10 ~ {Tags:["lobbyProp","rotateMe"],billboard:"fixed",alignment:"center",text:[{nbt:"act_name",storage:"phan_dream_$(level_id):sa_act_$(act)",interpret:true}]}
 execute as @e[type=text_display,tag=rotateMe] at @s run tp @s ~.4 ~10.45 ~ 90 ~
 tag @e[type=text_display,tag=rotateMe] remove rotateMe
 
