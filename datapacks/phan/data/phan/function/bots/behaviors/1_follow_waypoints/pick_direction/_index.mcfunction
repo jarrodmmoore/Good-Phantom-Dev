@@ -6,6 +6,9 @@
 #if we're a tryhard+ bot and haven't already checked routes for traps, try to restrict paths that have traps sitting on them
 execute unless score #botCheckTrapsAltRoute value matches 1 if score @s botSkill matches 5.. unless score @s racePosDisplay < #botRivalPosition value if entity @e[type=item_display,tag=enemyMine,distance=..20] run function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_for_traps
 
+#try not to backtrack
+function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_for_backtracking
+
 #nothing viable until we say otherwise
 execute in overworld run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] remove directionViable
 

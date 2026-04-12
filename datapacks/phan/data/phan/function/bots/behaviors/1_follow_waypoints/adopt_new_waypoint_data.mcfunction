@@ -2,6 +2,9 @@
 execute if score #waypointJumpBoost value matches 1 run function phan:bots/movement/jump_pad_short
 execute if score #waypointJumpBoost value matches 2 run function phan:bots/movement/jump_pad_high
 
+#keep a list of the last 3 waypoints we visited (useful in battle mode for helping avoid repeated backtracking)
+function phan:bots/behaviors/1_follow_waypoints/record_last_3_visited_waypoints
+
 #handle and reset any old event stuff
 scoreboard players reset @s[scores={botRouteAfterExplosionBoost=-2147483648..2147483647}] botRouteAfterExplosionBoost
 execute if entity @s[tag=botSetMineAtNextWaypoint] run function phan:bots/behaviors/1_follow_waypoints/event/13_mine_logic/try_place_mine_at_waypoint

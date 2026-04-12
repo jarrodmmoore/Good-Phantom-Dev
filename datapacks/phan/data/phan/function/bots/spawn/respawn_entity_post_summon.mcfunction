@@ -86,6 +86,10 @@ scoreboard players set @s botBattleThinkTime 30
 scoreboard players set @s botProjectileThinkTime 40
 scoreboard players set @s botBiteThinkTime 40
 scoreboard players set @s botChaseTime 0
+scoreboard players set @s botLastVisitedWPPointer 0
+scoreboard players set @s botLastVisitedWP1 0
+scoreboard players set @s botLastVisitedWP2 0
+scoreboard players set @s botLastVisitedWP3 0
 
 #get spawn invulnerability in battle mode
 scoreboard players set @s spawnInvulnerability 0

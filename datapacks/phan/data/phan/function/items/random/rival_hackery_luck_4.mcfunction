@@ -10,7 +10,7 @@ execute if score @s picksSinceBigSpeed matches 2.. unless entity @e[limit=1,tag=
 
 #override 2
 #get warp if possible
-execute if score @s picksSinceBigSpeed matches 2.. if score #hasWarp value matches ..0 if score #hasFirework value matches ..0 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] add tempItemBan
-execute if score @s picksSinceBigSpeed matches 2.. if score #hasWarp value matches ..0 if score #hasFirework value matches ..0 run tag 00000000-0000-0328-0000-000000000012 remove tempItemBan
+execute if score #BAN_WARP_ITEM_RACE_MODE value matches 0 if score @s picksSinceBigSpeed matches 2.. if score #hasWarp value matches ..0 if score #hasFirework value matches ..0 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] add tempItemBan
+execute if score #BAN_WARP_ITEM_RACE_MODE value matches 0 if score @s picksSinceBigSpeed matches 2.. if score #hasWarp value matches ..0 if score #hasFirework value matches ..0 run tag 00000000-0000-0328-0000-000000000012 remove tempItemBan
 
 #(note that the overrides never banned lightning! that's random slot 21)

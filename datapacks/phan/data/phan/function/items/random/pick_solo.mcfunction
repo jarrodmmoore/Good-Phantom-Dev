@@ -8,6 +8,9 @@ execute if score #hasEnergyPotion value matches 1.. run tag 00000000-0000-0328-0
 execute if score #hasFirework value matches 1.. run tag 00000000-0000-0328-0000-00000000000b add tempItemBan
 execute if score #hasWarp value matches 1.. run tag 00000000-0000-0328-0000-00000000000c add tempItemBan
 
+#is warp banned? don't give it out... ever!
+execute if score #BAN_WARP_ITEM_RACE_MODE value matches 1 run tag 00000000-0000-0328-0000-00000000000c add tempItemBan
+
 #don't get same speed item twice in a row
 #speed pad
 execute if score @s lastItemPicked matches 7..8 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=4..6}] add tempItemBan

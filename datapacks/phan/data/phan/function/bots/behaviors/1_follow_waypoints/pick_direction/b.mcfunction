@@ -6,6 +6,8 @@ execute if score #waypointDir4 value matches 1.. run tag 00000000-0000-0328-0000
 
 #ignore any directions we previously banned
 execute if score #wpRestrictDirections value matches 1.. run function phan:bots/behaviors/1_follow_waypoints/pick_direction/b_restrict
+#ignore any directions we don't want to backtrack to
+execute unless score #wpRestrictDirections value matches 1.. if score #wpRestrictDirectionsBT value matches 1.. run function phan:bots/behaviors/1_follow_waypoints/pick_direction/b_restrict_backtrack
 
 #pick one
 scoreboard players set #random value 0

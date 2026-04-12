@@ -371,6 +371,7 @@ scoreboard objectives add highestCombo dummy
 #skybox
 scoreboard objectives add skybox dummy
 scoreboard objectives add skyboxSet dummy
+scoreboard objectives add skyboxSync dummy
 #debug
 scoreboard objectives add debug dummy
 #movement pattern of some entities
@@ -554,6 +555,10 @@ scoreboard objectives add botIgnoreEyeID dummy
 scoreboard objectives add botProjectileThinkTime dummy
 scoreboard objectives add botBiteThinkTime dummy
 scoreboard objectives add botChaseTime dummy
+scoreboard objectives add botLastVisitedWPPointer dummy
+scoreboard objectives add botLastVisitedWP1 dummy
+scoreboard objectives add botLastVisitedWP2 dummy
+scoreboard objectives add botLastVisitedWP3 dummy
 #bot inventory
 scoreboard objectives add botHasItem1 dummy
 scoreboard objectives add botHasItem2 dummy

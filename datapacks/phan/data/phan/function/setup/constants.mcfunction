@@ -6,6 +6,9 @@ scoreboard players set #MAX_BOT_COUNT value 24
 scoreboard players set #BOT_ALLOWED_REROUTES value 1
 scoreboard players set #BOT_ALLOWED_REROUTES_ROAM value 5
 
+#ban warp item in race mode?
+scoreboard players set #BAN_WARP_ITEM_RACE_MODE value 1
+
 #ban sprinting? y/n
 scoreboard players set #SPRINTING_ALLOWED value 1
 #i considered disabling sprinting, but unfortunately it ruins levels with underwater sections since you can't swim properly

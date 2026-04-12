@@ -61,6 +61,7 @@ execute if score @s pGameTime matches 80.. run scoreboard players set @s specDon
 execute if score @s pGameTime matches 70 run function phan:game/1/load_area_info
 
 #spectate the camera
+execute if score @s pGameTime matches 79 run scoreboard players operation @s skyboxSet = @s skybox
 execute if score @s pGameTime matches 80 run effect clear @a[distance=..5] blindness
 execute if score @s pGameTime matches 80 run gamemode spectator @s
 execute if score @s pGameTime matches 80..180 run spectate @e[limit=1,type=armor_stand,tag=currentCamera] @s

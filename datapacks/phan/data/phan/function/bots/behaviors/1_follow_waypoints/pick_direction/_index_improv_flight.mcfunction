@@ -18,6 +18,9 @@ execute if score #waypointDir3 value matches 1.. run function phan:bots/behavior
 execute if score #waypointDir4 value matches 1.. run function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_flight_dir4
 execute if score #botChoseAltRoute value matches 1 run function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_flight_dir5
 
+#try not to backtrack
+function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_for_backtracking
+
 #if we want to go an alternate route but the alternate route sucks for flying, ignore it
 #(reminder: setting #botChoseAltRoute value to 2 will skip this check and make the bot fly the route no matter what)
 execute if score #botChoseAltRoute value matches 1 if score #wpRestrictDirections value matches 1.. if score #wpAllowDir5 value matches 0 run scoreboard players set #botChoseAltRoute value 0

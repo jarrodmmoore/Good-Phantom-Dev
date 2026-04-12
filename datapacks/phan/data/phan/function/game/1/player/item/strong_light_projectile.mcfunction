@@ -13,8 +13,8 @@ execute if score #test value matches 1 run summon armor_stand ~ ~-1.1 ~ {Tags:["
 execute if score #test value matches 0 positioned ~ ~1.8 ~ run particle dust{color:[1,0,0],scale:1} ^ ^ ^2 0.25 0.25 0.25 0 5 force
 execute if score #test value matches 1 positioned ~ ~0.7 ~ run particle dust{color:[1,0,0],scale:1} ^ ^ ^2 0.25 0.25 0.25 0 5 force
 scoreboard players operation @e[tag=setLife,type=armor_stand,distance=..4] playerID = @s playerID
-execute if score #test value matches 0 at @s run tp @e[tag=setLife,type=armor_stand,distance=..4] ~ ~ ~ ~ ~
-execute if score #test value matches 1 at @s positioned ~ ~-1.1 ~ run tp @e[tag=setLife,type=armor_stand,distance=..4] ~ ~ ~ ~ ~
+execute if score #test value matches 0 at @s run tp @e[tag=setLife,type=armor_stand,distance=..4] ^ ^ ^1 ~ ~
+execute if score #test value matches 1 at @s positioned ~ ~-1.1 ~ run tp @e[tag=setLife,type=armor_stand,distance=..4] ^ ^ ^1 ~ ~
 scoreboard players set @e[tag=setLife,type=armor_stand,distance=..4] lifespan 120
 tag @e[tag=setLife,type=armor_stand,distance=..4] remove setLife
 
