@@ -22,7 +22,7 @@ execute if score #mapVersionRead value matches 102005.. run function phan:level_
 
 #tell player if it worked or not
 execute if score #success value matches 0 run tellraw @s ["",{translate:"gp.level_manager.error.unexpected_import_error",color:"red"}]
-$execute if score #success value matches 1 run tellraw @s ["",{translate:"gp.level_manager.successful_import",color:"green",with:[{text:"saves/.../data/command_storage_$(filename).dat",color:"white"}]}]
+$execute if score #success value matches 1 run tellraw @s ["",{translate:"gp.level_manager.successful_import",color:"green",with:[{text:"saves/.../data/$(filename)/command_storage.dat",color:"white"}]}]
 
 #resummon any relevant props in lobby
 function phan:level_manager/import_dream_do_resummon with storage phan:level_index

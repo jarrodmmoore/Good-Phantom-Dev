@@ -17,4 +17,4 @@ function phan:level_manager/export_dream_go with storage phan:level_index
 
 #tell player if it worked or not
 execute if score #success value matches 0 run tellraw @s ["",{translate:"gp.level_manager.error.illegal_filename",color:"red"}]
-$execute if score #success value matches 1 run tellraw @s ["",{translate:"gp.level_manager.successful_export",color:"green",with:[{text:"saves/.../data/command_storage_$(filename).dat",color:"white"}]}]
+$execute if score #success value matches 1 run tellraw @s ["",{translate:"gp.level_manager.successful_export",color:"green",with:[{text:"saves/.../data/$(filename)/command_storage.dat",color:"white"}]}]
