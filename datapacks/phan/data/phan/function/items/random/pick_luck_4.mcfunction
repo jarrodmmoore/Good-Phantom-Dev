@@ -26,7 +26,7 @@ execute if score #hasBlindingSquid value matches 1.. run tag 00000000-0000-0328-
 execute if score #hasLightning value matches 1.. run tag 00000000-0000-0328-0000-000000000015 add tempItemBan
 
 #is warp banned? don't give it out... ever!
-execute if score #BAN_WARP_ITEM_RACE_MODE value matches 1 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=15..18}] add tempItemBan
+execute if score #BAN_WARP_ITEM_RACE_MODE value matches 1 run tag 00000000-0000-0328-0000-000000000012 add tempItemBan
 
 #don't roll high speed items if we already have a very powerful one
 execute if entity @s[type=player] if score #hasHighSpeedItem value matches 1.. run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=7..11}] add tempItemBan
