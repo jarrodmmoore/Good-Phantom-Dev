@@ -16,6 +16,12 @@ scoreboard players set #SPRINTING_ALLOWED value 1
 #value dictating how much turning your view quickly eats your momentum
 scoreboard players set #CONST_YAW_LOSS value 8
 
+#point bonuses for act ranks in score attack mode
+scoreboard players set #C_RANK_BONUS value 1000
+scoreboard players set #B_RANK_BONUS value 2500
+scoreboard players set #A_RANK_BONUS value 5000
+scoreboard players set #S_RANK_BONUS value 10000
+
 #multipliers (150 = 1.5x)
 
 #"Easy" time limit multiplier (Assist Mode)
