@@ -1,5 +1,5 @@
 #findID is still in memory so let's use it again
-execute as @e[tag=claimedPresent,type=item_display] if score @s playerID = #findID value at @s run function phan:game/1/player/handle_present_entity_open
+execute as @e[type=item_display,tag=claimedPresent] if score @s playerID = #findID value at @s run function phan:game/1/player/handle_present_entity_open
 
 #get item depending on what the chest had inside it
 execute if score #returnItem value matches 1 run give @s minecraft:yellow_wool[custom_name={translate:"gp.game.stardust",color:"yellow",italic:false},item_model="gp/object/stardust"] 15

@@ -51,8 +51,8 @@ scoreboard players set @s targetsShot 0
 scoreboard players set @s lap 0
 
 #clean-up
-kill @e[tag=currentCamera,type=armor_stand]
-kill @e[tag=currentSoul,type=armor_stand]
+kill @e[type=armor_stand,tag=currentCamera]
+kill @e[type=armor_stand,tag=currentSoul]
 
 #start loading nodes for this area
 function phan:game/1/start_loading_area

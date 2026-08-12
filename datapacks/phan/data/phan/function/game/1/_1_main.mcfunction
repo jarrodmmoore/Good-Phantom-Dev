@@ -56,7 +56,7 @@ execute if entity @a[tag=playing,scores={pCurrentArea=3}] as @e[type=marker,tag=
 
 
 #interpolation effect on player soul after images
-execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp
+execute as @e[type=area_effect_cloud,tag=soulNeedsInterp] at @s run function phan:game/1/player_soul_visuals_interp
 
 #objects do their thing
 execute as @e[tag=checkValid] at @s run function phan:game/1/objects/_index
@@ -68,7 +68,7 @@ execute as @e[type=arrow] run function phan:game/1/objects/enemy/skeleton_arrow
 scoreboard players reset @a[scores={damage=1..}] damage
 
 #projectiles do stuff
-execute as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
+execute as @e[type=armor_stand,tag=projectile] at @s run function phan:game/1/projectile/_index
 
 #can use triggers
 execute if score #playersOnServer value matches ..1 if score #gameTime value matches 100.. run scoreboard players enable @a[tag=playing] restart

@@ -29,7 +29,7 @@ execute if score #5Hz value matches 3 as @a[gamemode=!creative] if items entity 
 
 #zzz... players are asleep
 execute as @e[type=armor_stand,tag=levelEntry] at @s positioned ~ ~.2 ~ run function phan:game/0/z_generator
-execute as @e[tag=floatUp] at @s run tp @s ~ ~.04 ~
+execute as @e[type=armor_stand,tag=floatUp] at @s run tp @s ~ ~.04 ~
 
 #players run some code on themselves
 scoreboard players set #practiceLogic value 0

@@ -27,12 +27,12 @@ function phan:game/1/spawning/spawn__give_generic_data
 execute if score #inWater value matches 1 run scoreboard players set @e[type=area_effect_cloud,tag=itemHolder,distance=..2] lifespan 10
 
 #we're unshootable for a few ticks if we were dropped as loot
-execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe,type=item,distance=..2] hitstun 10
+execute if score #noShoot value matches 1 run scoreboard players set @e[type=item,tag=setMe,distance=..2] hitstun 10
 
 #gravity? ok
-execute if score #getGravity value matches 1 as @e[tag=setMe,type=item,distance=..2] run data merge entity @s {NoGravity:0b}
+execute if score #getGravity value matches 1 as @e[type=item,tag=setMe,distance=..2] run data merge entity @s {NoGravity:0b}
 
-tag @e[tag=setMe,type=item,distance=..2] remove setMe
+tag @e[type=item,tag=setMe,distance=..2] remove setMe
 #=====
 
 

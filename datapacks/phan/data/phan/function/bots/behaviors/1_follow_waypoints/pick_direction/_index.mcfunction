@@ -10,7 +10,7 @@ execute unless score #botCheckTrapsAltRoute value matches 1 if score @s botSkill
 function phan:bots/behaviors/1_follow_waypoints/pick_direction/check_for_backtracking
 
 #nothing viable until we say otherwise
-execute in overworld run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..20}] remove directionViable
+execute in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..20}] remove directionViable
 
 #battle mode: there's a chance we'll favor directions that get us closer to what we want
 execute if score #vGameType value matches 2 run function phan:bots/behaviors/1_follow_waypoints/pick_direction/battle_think_about_directions

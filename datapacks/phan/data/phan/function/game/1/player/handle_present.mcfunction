@@ -69,7 +69,7 @@ execute if score #percent value matches ..-1 run title @a[tag=tellMe] subtitle [
 
 #the brightness of our present entity is controlled by #percent
 scoreboard players operation #findID value = @s playerID
-execute if entity @s[scores={presentGoal=1..}] as @e[tag=claimedPresent,type=item_display] if score @s playerID = #findID value at @s run function phan:game/1/player/handle_present_entity
+execute if entity @s[scores={presentGoal=1..}] as @e[type=item_display,tag=claimedPresent] if score @s playerID = #findID value at @s run function phan:game/1/player/handle_present_entity
 
 #open present if we meet the goal
 execute if entity @s[scores={presentGoal=0,presentTime=1..}] run function phan:game/1/player/handle_present_open

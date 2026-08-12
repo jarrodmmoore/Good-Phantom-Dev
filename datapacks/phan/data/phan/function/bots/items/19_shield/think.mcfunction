@@ -28,7 +28,7 @@ execute if score @s botSkill matches 3.. as @e[tag=sonicBlastDestroys,distance=.
 execute as @e[tag=playing,distance=..16] unless score @s playerID = #checkID value run scoreboard players set #test value 1
 
 #normal+: use if rocket nearby
-execute if score @s botSkill matches 3.. as @e[tag=rocket,type=armor_stand,distance=..14] unless score @s playerID = #checkID value run scoreboard players set #test value 1
+execute if score @s botSkill matches 3.. as @e[type=armor_stand,tag=rocket,distance=..14] unless score @s playerID = #checkID value run scoreboard players set #test value 1
 
 #=====
 #abort if we didn't decide to use

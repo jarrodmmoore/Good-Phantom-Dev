@@ -13,6 +13,6 @@ execute if score #inWater value matches 1 run summon area_effect_cloud ~ ~ ~ {cu
 function phan:game/1/spawning/spawn__give_generic_data
 
 #execute if score #noShoot value matches 1 run tag @e[tag=setMe] remove shootable
-execute if score #noShoot value matches 1 run scoreboard players set @e[tag=setMe,type=item,distance=..2] hitstun 10
+execute if score #noShoot value matches 1 run scoreboard players set @e[type=item,tag=setMe,distance=..2] hitstun 10
 
-tag @e[tag=setMe,type=item,distance=..2] remove setMe
+tag @e[type=item,tag=setMe,distance=..2] remove setMe

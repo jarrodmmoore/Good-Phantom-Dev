@@ -7,4 +7,4 @@ tag @s add tellMe
 
 #levelEntry armor_stand will handle this
 scoreboard players operation #checkID value = @s levelUID
-execute as @e[tag=levelEntry,type=armor_stand] if score @s levelUID = #checkID value run function phan:level_manager/panel/erase/_menu
+execute as @e[type=armor_stand,tag=levelEntry] if score @s levelUID = #checkID value run function phan:level_manager/panel/erase/_menu

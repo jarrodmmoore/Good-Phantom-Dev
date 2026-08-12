@@ -72,12 +72,12 @@ execute if score @s pGameTime matches 80.. if entity @s[tag=getNightVisionInSA] 
 execute if score @s pGameTime matches 80 as @e[type=armor_stand,tag=currentCamera] at @s positioned ^ ^ ^70 run function phan:game/1/start_sequence_soul_spawn
 
 #camera faces entity while entity flies towards camera
-execute if score @s pGameTime matches 80.. as @e[type=armor_stand,tag=currentCamera] at @s facing entity @e[tag=currentSoul,type=armor_stand,limit=1] feet run tp @s ~ ~ ~ ~ ~
-execute if score @s pGameTime matches 81.. unless score @s soulAngle matches 10.. as @e[tag=currentSoul,type=armor_stand] at @s facing entity @e[type=armor_stand,tag=currentCamera,limit=1] eyes run tp @s ^.23 ^ ^1
-execute if score @s pGameTime matches 81.. if score @s soulAngle matches 10.. as @e[tag=currentSoul,type=armor_stand] at @s facing entity @e[type=armor_stand,tag=currentCamera,limit=1] eyes run tp @s ^.03 ^-.03 ^1
-execute if score @s pGameTime matches 81.. as @e[tag=currentSoul,type=armor_stand] at @s run function phan:game/1/player_soul_visuals
-execute if score @s pGameTime matches 121.. as @e[tag=currentSoul,type=armor_stand] at @s if entity @e[type=armor_stand,tag=currentCamera,distance=..2] run scoreboard players set @a[tag=self] pGameTime 500
-execute if score @s pGameTime matches 81.. if score #10Hz value matches 0 as @e[tag=currentSoul,type=armor_stand] at @s run playsound minecraft:entity.allay.item_thrown master @a[distance=..60] ~ ~ ~ 1 2 .5
+execute if score @s pGameTime matches 80.. as @e[type=armor_stand,tag=currentCamera] at @s facing entity @e[type=armor_stand,tag=currentSoul,limit=1] feet run tp @s ~ ~ ~ ~ ~
+execute if score @s pGameTime matches 81.. unless score @s soulAngle matches 10.. as @e[type=armor_stand,tag=currentSoul] at @s facing entity @e[type=armor_stand,tag=currentCamera,limit=1] eyes run tp @s ^.23 ^ ^1
+execute if score @s pGameTime matches 81.. if score @s soulAngle matches 10.. as @e[type=armor_stand,tag=currentSoul] at @s facing entity @e[type=armor_stand,tag=currentCamera,limit=1] eyes run tp @s ^.03 ^-.03 ^1
+execute if score @s pGameTime matches 81.. as @e[type=armor_stand,tag=currentSoul] at @s run function phan:game/1/player_soul_visuals
+execute if score @s pGameTime matches 121.. as @e[type=armor_stand,tag=currentSoul] at @s if entity @e[type=armor_stand,tag=currentCamera,distance=..2] run scoreboard players set @a[tag=self] pGameTime 500
+execute if score @s pGameTime matches 81.. if score #10Hz value matches 0 as @e[type=armor_stand,tag=currentSoul] at @s run playsound minecraft:entity.allay.item_thrown master @a[distance=..60] ~ ~ ~ 1 2 .5
 execute if score @s pGameTime matches 80 as @a[distance=..5] at @s run function phan:common/playsound_positionless_macro {sound:"minecraft:block.beacon.activate",targets:"@s",pitch:"1"}
 
 #if we're at pGameTime=150 and the camera never spawned, let's just get started already...
@@ -88,5 +88,5 @@ execute if score @s pGameTime matches 500.. run function phan:game/1/start_go
 tag @s remove self
 
 #clean up tags
-tag @e[tag=currentCamera] remove currentCamera
-tag @e[tag=currentSoul] remove currentSoul
+tag @e[type=armor_stand,tag=currentCamera] remove currentCamera
+tag @e[type=armor_stand,tag=currentSoul] remove currentSoul

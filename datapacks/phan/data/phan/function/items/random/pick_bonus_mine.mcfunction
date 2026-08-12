@@ -7,12 +7,12 @@
 tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,tag=tempItemBan] remove tempItemBan
 
 #cooldown on rolling trap items
-execute if score @s picksSinceTrap matches ..2 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=9..11}] add tempItemBan
+execute if score @s picksSinceTrap matches ..2 run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=9..11}] add tempItemBan
 
 #don't get a bonus mine if we're on the final(ish) lap
 scoreboard players operation #eyeCheck value = #vEyesNeeded value
 scoreboard players operation #eyeCheck value -= @s enderEyes
-execute if score #eyeCheck value matches ..4 run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=9..11}] add tempItemBan
+execute if score #eyeCheck value matches ..4 run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=9..11}] add tempItemBan
 #the point of this is to give 1st place a hard time. can't do that if we're on the final lap ;(
 
 

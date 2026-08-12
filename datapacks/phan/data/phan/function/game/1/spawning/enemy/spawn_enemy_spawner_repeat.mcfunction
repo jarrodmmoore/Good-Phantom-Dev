@@ -15,18 +15,18 @@ execute if score @s editArg2 matches 11 run summon area_effect_cloud ~ ~ ~ {Tags
 execute if score @s editArg2 matches 12 run summon area_effect_cloud ~ ~ ~ {Tags:["checkValid","setMe","groupB","spawner","repeatSpawn","spawnMine"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:69420}
 
 #setMe gets rotation of the node that spawned it
-execute as @e[tag=setMe,type=area_effect_cloud,distance=..2] run tp @s ~ ~ ~ ~ ~
+execute as @e[type=area_effect_cloud,tag=setMe,distance=..2] run tp @s ~ ~ ~ ~ ~
 
 #spawned node will inherit our movement pattern
-execute if score @s editArg3 matches 1.. run scoreboard players operation @e[tag=setMe,type=area_effect_cloud,distance=..2] movementPattern = @s editArg3
+execute if score @s editArg3 matches 1.. run scoreboard players operation @e[type=area_effect_cloud,tag=setMe,distance=..2] movementPattern = @s editArg3
 
 #get unique identifier so we can track if our entity exists
 scoreboard players add #enemyID value 1
-scoreboard players operation @e[tag=setMe,type=area_effect_cloud,distance=..2] enemyID = #enemyID value
+scoreboard players operation @e[type=area_effect_cloud,tag=setMe,distance=..2] enemyID = #enemyID value
 
 #random delay on first spawn
-execute store result score @e[tag=setMe,type=area_effect_cloud,distance=..2] age run random value -10..30
+execute store result score @e[type=area_effect_cloud,tag=setMe,distance=..2] age run random value -10..30
 
 #generic data and cleanup
 function phan:game/1/spawning/spawn__give_generic_data
-tag @e[tag=setMe,type=area_effect_cloud,distance=..2] remove setMe
+tag @e[type=area_effect_cloud,tag=setMe,distance=..2] remove setMe

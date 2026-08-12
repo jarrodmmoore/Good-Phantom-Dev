@@ -14,10 +14,10 @@ scoreboard players set @e[type=armor_stand,tag=giveID,distance=..4] itemValidSpa
 #we did this. it was us.
 scoreboard players operation @e[limit=1,type=armor_stand,tag=giveID,distance=..4] playerID = @s playerID
 scoreboard players operation @e[limit=1,type=armor_stand,tag=giveID,distance=..4] originalID = @s playerID
-team join colorRed @e[limit=1,tag=setLife,type=item_display,distance=..4]
-scoreboard players set @e[tag=setLife,type=item_display,distance=..4] lifespan 3
+team join colorRed @e[limit=1,type=item_display,tag=setLife,distance=..4]
+scoreboard players set @e[type=item_display,tag=setLife,distance=..4] lifespan 3
 tag @e[limit=1,type=armor_stand,tag=giveID,distance=..4] remove giveID
-tag @e[tag=setLife,type=item_display,distance=..4] remove setLife
+tag @e[type=item_display,tag=setLife,distance=..4] remove setLife
 
 #cooldown
 scoreboard players reset @s carrotInput

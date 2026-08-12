@@ -26,10 +26,10 @@ execute if score @s botSkill matches 3 as @e[tag=playing,distance=..8] unless sc
 execute if score @s botSkill matches 4.. as @e[tag=playing,distance=..7] unless score @s playerID = #checkID value run scoreboard players set #test value 1
 
 #normal+: use if rocket nearby
-execute if score @s botSkill matches 3.. as @e[tag=rocket,type=armor_stand,distance=..12] unless score @s playerID = #checkID value run scoreboard players set #test value 1
+execute if score @s botSkill matches 3.. as @e[type=armor_stand,tag=rocket,distance=..12] unless score @s playerID = #checkID value run scoreboard players set #test value 1
 
 #don't use if rival nearby
-execute if entity @s[tag=!botRival] if entity @e[tag=botRival,type=mannequin,distance=..8] run scoreboard players set #test value 0
+execute if entity @s[tag=!botRival] if entity @e[type=mannequin,tag=botRival,distance=..8] run scoreboard players set #test value 0
 
 #low level bots won't use in the first 20-30 seconds of the game
 execute if score @s botSkill matches ..1 if score #gameTime value matches ..820 run scoreboard players set #test value 0

@@ -3,7 +3,7 @@ execute store result storage phan:bot_args id int 1 run scoreboard players get @
 function phan:game/5/top_3/assign_position_bot_name_macro with storage phan:bot_args
 
 #we are bot (1 = bot)
-scoreboard players set @e[tag=setMe,type=area_effect_cloud,distance=..1] editArg2 2
+scoreboard players set @e[type=area_effect_cloud,tag=setMe,distance=..1] editArg2 2
 
 #record what botSkill we are
-scoreboard players operation @e[tag=setMe,type=area_effect_cloud,distance=..1] editArg3 = @s botSkill
+scoreboard players operation @e[type=area_effect_cloud,tag=setMe,distance=..1] editArg3 = @s botSkill

@@ -29,22 +29,22 @@ tag @s add noInventory
 
 #summon camera!
 summon armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["camera","setup"]}
-scoreboard players operation @e[tag=setup] playerID = @s playerID
-tp @e[tag=camera,tag=setup,type=armor_stand] @s
+scoreboard players operation @e[type=armor_stand,tag=setup,distance=..2] playerID = @s playerID
+tp @e[type=armor_stand,tag=camera,tag=setup,distance=..2] @s
 gamemode spectator @s
-spectate @e[limit=1,type=armor_stand,tag=camera,tag=setup] @s
+spectate @e[limit=1,type=armor_stand,tag=camera,tag=setup,distance=..2] @s
 scoreboard players set @s spectatingObject 2
 
 #summon soul
-execute at @e[limit=1,sort=nearest,tag=portalCore,type=marker] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/soul"}}}]}
-scoreboard players operation @e[tag=setup2] playerID = @s playerID
+execute at @e[limit=1,sort=nearest,type=marker,tag=portalCore] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/soul"}}}]}
+scoreboard players operation @e[type=armor_stand,tag=setup2,distance=..2] playerID = @s playerID
 
 #camera and soul are temporary
-scoreboard players set @e[type=armor_stand,tag=camera,tag=setup] lifespan 20
-scoreboard players set @e[type=armor_stand,tag=playerSoul,tag=setup2] lifespan 20
-execute as @e[type=armor_stand,tag=setup2] on passengers run scoreboard players set @s lifespan 20
-tag @e[tag=setup] remove setup
-tag @e[tag=setup2] remove setup2
+scoreboard players set @e[type=armor_stand,tag=camera,tag=setup,distance=..2] lifespan 20
+scoreboard players set @e[type=armor_stand,tag=playerSoul,tag=setup2,distance=..2] lifespan 20
+execute as @e[type=armor_stand,tag=setup2,distance=..2] on passengers run scoreboard players set @s lifespan 20
+tag @e[type=armor_stand,tag=setup,distance=..2] remove setup
+tag @e[type=armor_stand,tag=setup2,distance=..2] remove setup2
 
 #reset spawns
 execute if score @s pCurrentArea matches 1 run function phan:game/1/spawning/reset_all_a

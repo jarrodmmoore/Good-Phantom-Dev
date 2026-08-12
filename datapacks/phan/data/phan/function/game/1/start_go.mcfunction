@@ -23,8 +23,8 @@ scoreboard players add #startMusic value 1
 function phan:bgm/play_level_music
 
 #clean-up
-kill @e[tag=currentCamera,type=armor_stand]
-execute as @e[tag=currentSoul,type=armor_stand] on passengers run scoreboard players set @s lifespan 1
+kill @e[type=armor_stand,tag=currentCamera]
+execute as @e[type=armor_stand,tag=currentSoul] on passengers run scoreboard players set @s lifespan 1
 kill @e[tag=currentSoul,type=item_display]
 
 #get game going!
@@ -67,7 +67,7 @@ scoreboard players set @s lap 0
 
 #players get spawn invulnerability!
 scoreboard players set @a[tag=playing] spawnInvulnerability 40
-execute if score #botsEnabled value matches 1.. run scoreboard players set @e[tag=ai,type=mannequin] spawnInvulnerability 40
+execute if score #botsEnabled value matches 1.. run scoreboard players set @e[type=mannequin,tag=ai] spawnInvulnerability 40
 
 #refresh skybox (sometimes it gets messed up...)
 scoreboard players operation @s skyboxSet = @s skybox

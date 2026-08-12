@@ -6,7 +6,7 @@
 #enderman thief
 
 #start with nothing viable
-execute in overworld run tag @e[tag=randomize,type=armor_stand,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] remove improvViable
+execute in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1] remove improvViable
 
 #make things viable depending on what items we have
 

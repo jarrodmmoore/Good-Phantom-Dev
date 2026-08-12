@@ -46,7 +46,7 @@ execute if score #desiredGamemode value matches 2 positioned 209 -18 118 positio
 execute unless score #grandPrixActive value matches 1.. if score #desiredGamemode value matches 3 positioned 209 -18 118 positioned ~ ~-59.5 ~ run summon text_display ~ ~ ~ {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:[{translate:"gp.mode_select.versus",bold:true,color:"light_purple"},{text:"\n"},{translate:"gp.mode_select.1_to_24_players",bold:false,color:"gray"}]}
 #rotate it
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~ ~50.4 ~ 90 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+tag @e[type=text_display,tag=rotateText] remove rotateText
 
 #stop spectating admin if they exist
 execute if score #forceSpecAdmin value matches 1 positioned 198 -30 118 run function phan:game/2/force_spectate_admin_exit

@@ -8,4 +8,4 @@ execute if score #a3_temp_platforms value matches 1.. run function phan:levels/d
 execute unless score #a3_temp_platforms value matches 1.. run function phan:levels/deep_dive/a3_platforms_disabled
 
 #listen for targets and synchronize their state
-execute if entity @e[tag=bigTarget,tag=act3Spawn,type=item_display,scores={editArg1=19..}] run function phan:levels/deep_dive/a3_target_hit
+execute if entity @e[type=item_display,tag=bigTarget,tag=act3Spawn,scores={editArg1=19..}] run function phan:levels/deep_dive/a3_target_hit

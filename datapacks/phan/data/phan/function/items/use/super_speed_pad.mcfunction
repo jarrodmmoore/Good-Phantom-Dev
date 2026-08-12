@@ -31,7 +31,7 @@ execute as @e[type=armor_stand,tag=giveID,distance=..4] at @s on passengers run 
 #get a unique ID (for bot temporary target system)
 scoreboard players add #uniqieBoxID value 1
 execute if score #uniqieBoxID value matches 0 run scoreboard players add #uniqieBoxID value 1
-scoreboard players operation @e[tag=setLife,type=item_display,distance=..4] ringID = #uniqieBoxID value
+scoreboard players operation @e[type=item_display,tag=setLife,distance=..4] ringID = #uniqieBoxID value
 
 #spawn temporary barriers to stand on
 execute at @s rotated ~ 0 positioned ^ ^ ^1 positioned ~.5 ~-.7 ~.5 if block ~ ~ ~ air run function phan:items/use/speed_pad_temporary_floor
@@ -47,14 +47,14 @@ scoreboard players set @s speedDecayDelay 0
 execute at @s run function phan:movement/speed_pad_super
 
 #entity can only exist in this current game session
-scoreboard players set @e[tag=giveID,type=armor_stand,distance=..4] itemValidSpawn 1
+scoreboard players set @e[type=armor_stand,tag=giveID,distance=..4] itemValidSpawn 1
 
 #we did this. it was us.
-scoreboard players operation @e[limit=1,tag=giveID,type=armor_stand,distance=..4] playerID = @s playerID
-scoreboard players set @e[tag=setLife,type=item_display,distance=..4] lifespan 3
-scoreboard players set @e[tag=giveID,type=armor_stand,distance=..4] lifespan 300
-tag @e[limit=1,tag=giveID,type=armor_stand,distance=..4] remove giveID
-tag @e[tag=setLife,type=item_display,distance=..4] remove setLife
+scoreboard players operation @e[limit=1,type=armor_stand,tag=giveID,distance=..4] playerID = @s playerID
+scoreboard players set @e[type=item_display,tag=setLife,distance=..4] lifespan 3
+scoreboard players set @e[type=armor_stand,tag=giveID,distance=..4] lifespan 300
+tag @e[limit=1,type=armor_stand,tag=giveID,distance=..4] remove giveID
+tag @e[type=item_display,tag=setLife,distance=..4] remove setLife
 
 #cooldown
 scoreboard players reset @s carrotInput

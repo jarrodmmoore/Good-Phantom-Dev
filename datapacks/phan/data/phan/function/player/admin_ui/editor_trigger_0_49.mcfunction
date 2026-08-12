@@ -28,8 +28,8 @@ execute if score @s tEditor matches 1026 run return run function phan:editor/pan
 execute if score @s tEditor matches 1027 run return run function phan:editor/panel/button/editarg3_increment
 execute if score @s tEditor matches 1028 run return run function phan:editor/panel/zero
 execute if score @s tEditor matches 1029 run return run function phan:editor/panel/copy_nearest
-execute if score @s tEditor matches 1030 run return run execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_tags
-execute if score @s tEditor matches 1031 run return run execute as @e[tag=node,type=marker] run function phan:editor/panel/repair_timers_and_presents
+execute if score @s tEditor matches 1030 run return run execute as @e[type=marker,tag=node] run function phan:editor/panel/repair_tags
+execute if score @s tEditor matches 1031 run return run execute as @e[type=marker,tag=node] run function phan:editor/panel/repair_timers_and_presents
 execute if score @s tEditor matches 1032 run return run function phan:editor/checkpoint/toggle_position_calc
 execute if score @s tEditor matches 1033 run return run function phan:editor/checkpoint/toggle_launch_upward
 execute if score @s tEditor matches 1034 run return run function phan:editor/checkpoint/disable_visual
@@ -46,5 +46,5 @@ execute if score @s tEditor matches 1044 run return run function phan:editor/pan
 execute if score @s tEditor matches 1045 run return run function phan:editor/panel/ai_waypoint/select_nearest
 execute if score @s tEditor matches 1046 run return run function phan:editor/panel/ai_waypoint/select_none
 execute if score @s tEditor matches 1047 run return run function phan:editor/panel/ai_waypoint/erase_selected
-execute if score @s tEditor matches 1048 run return run execute as @e[tag=AIBC,type=marker] run function phan:editor/panel/ai_waypoint/repair_tags
+execute if score @s tEditor matches 1048 run return run execute as @e[type=marker,tag=AIBC] run function phan:editor/panel/ai_waypoint/repair_tags
 execute if score @s tEditor matches 1049 run return run function phan:editor/panel/ai_waypoint/zero

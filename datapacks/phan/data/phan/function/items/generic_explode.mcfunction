@@ -6,8 +6,8 @@ execute if entity @s[type=!player] run summon armor_stand ~ ~.2 ~ {Marker:1b,Inv
 execute at @s if entity @a[gamemode=adventure,scores={fallFlying=1},distance=..3] at @a[limit=1,sort=nearest,gamemode=adventure,scores={fallFlying=1},distance=..3] positioned ^ ^ ^-.2 run tp @e[tag=setme] ~ ~ ~
 
 #run part 2 at location of explosion
-execute at @e[tag=setme,limit=1] run function phan:items/generic_explode_part2
+execute at @e[type=armor_stand,tag=setme,limit=1] run function phan:items/generic_explode_part2
 
 #bye
-scoreboard players set @e[tag=setme,tag=explosion] lifespan 5
-tag @e[tag=setme] remove setme
+scoreboard players set @e[type=armor_stand,tag=setme,tag=explosion] lifespan 5
+tag @e[type=armor_stand,tag=setme] remove setme

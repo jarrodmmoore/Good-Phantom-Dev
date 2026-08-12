@@ -3,10 +3,10 @@
 #(otherwise things get insanely buggy)
 
 #identify the camera
-execute as @e[tag=camera,type=armor_stand] if score @s playerID = #spectatingID value run tag @s add specTargetObj
+execute as @e[type=armor_stand,tag=camera] if score @s playerID = #spectatingID value run tag @s add specTargetObj
 
 #spectate the camera
-spectate @e[limit=1,tag=specTargetObj,type=armor_stand] @s
+spectate @e[limit=1,type=armor_stand,tag=specTargetObj] @s
 #need the hudNode and skybox of the target player and need to adopt pShowHUD
 function phan:game/1/spectator/spectator_inherit_from_target
 
@@ -17,4 +17,4 @@ title @s[scores={actionbarDelay=..0}] actionbar ["",{translate:"gp.game.spectato
 execute if score #5Hz value matches 1 run function phan:game/1/spectator/spectator_buck_check
 
 #tag clean-up
-tag @e[tag=specTargetObj,type=armor_stand] remove specTargetObj
+tag @e[type=armor_stand,tag=specTargetObj] remove specTargetObj

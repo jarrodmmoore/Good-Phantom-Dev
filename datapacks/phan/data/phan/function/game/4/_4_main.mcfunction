@@ -51,7 +51,7 @@ execute if score #5Hz value matches 0 if score #vAct value matches 4 unless scor
 
 #interpolation effect on player soul after images
 #(not used in this mode)
-#execute as @e[tag=soulNeedsInterp,type=area_effect_cloud] at @s run function phan:game/1/player_soul_visuals_interp
+#execute as @e[type=area_effect_cloud,tag=soulNeedsInterp] at @s run function phan:game/1/player_soul_visuals_interp
 
 #objects do their thing
 execute as @e[tag=checkValid] at @s run function phan:game/1/objects/_index
@@ -63,8 +63,8 @@ execute as @e[type=arrow] run function phan:game/1/objects/enemy/skeleton_arrow
 scoreboard players reset @a[scores={damage=1..}] damage
 
 #projectiles do stuff
-execute if score #botsEnabled value matches ..0 as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index
-execute if score #botsEnabled value matches 1.. as @e[tag=projectile,type=armor_stand] at @s run function phan:game/1/projectile/_index_bot_inclusive
+execute if score #botsEnabled value matches ..0 as @e[type=armor_stand,tag=projectile] at @s run function phan:game/1/projectile/_index
+execute if score #botsEnabled value matches 1.. as @e[type=armor_stand,tag=projectile] at @s run function phan:game/1/projectile/_index_bot_inclusive
 
 #can use triggers
 execute if score #playersOnServer value matches ..1 if score #freePlay value matches 1.. if score #subGameState value matches 0 run scoreboard players enable @a[tag=nonSpectator] restart
@@ -85,4 +85,4 @@ tag @a[tag=nonSpectator] remove nonSpectator
 
 #force end if no active player is found
 execute if score #gameState value matches 4 if score #botsOnly value matches 0 if score #gameTime value matches 100.. unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early
-execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[tag=botController,type=block_display] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early
+execute if score #gameState value matches 4 if score #botsOnly value matches 1 if score #gameTime value matches 100.. unless entity @e[type=block_display,tag=botController] unless entity @a[tag=playing] unless entity @a[tag=playerReservation] run function phan:game/4/_4_exit_early

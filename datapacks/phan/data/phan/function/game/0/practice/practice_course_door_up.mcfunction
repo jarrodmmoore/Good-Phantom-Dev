@@ -1,8 +1,8 @@
 scoreboard players add #practiceTarget1 value 1
 
 #after the door has been open for a while, close it again reset the target block's state
-execute if score #practiceTarget1 value matches 100.. as @e[tag=node,scores={editNode=14},x=829,y=38,z=-1030,distance=..2] run function phan:game/1/spawning/target_setup
-execute if score #practiceTarget1 value matches 100.. run scoreboard players set @e[tag=node,scores={editNode=14}] editArg1 0
+execute if score #practiceTarget1 value matches 100.. as @e[type=marker,tag=node,scores={editNode=14},x=829,y=38,z=-1030,distance=..2] run function phan:game/1/spawning/target_setup
+execute if score #practiceTarget1 value matches 100.. run scoreboard players set @e[type=marker,tag=node,scores={editNode=14}] editArg1 0
 execute if score #practiceTarget1 value matches 100.. run setblock 829 38 -1030 target
 execute if score #practiceTarget1 value matches 100.. run scoreboard players set #practiceTarget1 value 15
 

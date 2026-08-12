@@ -9,7 +9,7 @@ scoreboard players set #test1 value 0
 #=====
 #all the objects of interest within 10 meters of us should be analyzed
 tag @s add botSelf
-execute as @e[tag=botObjectOfInterest,tag=!botSelf,distance=..10,tag=enemyMine,type=item_display,sort=nearest] run function phan:bots/reaction/_object_index_mine_boost
+execute as @e[tag=botObjectOfInterest,tag=!botSelf,distance=..10,type=item_display,tag=enemyMine,sort=nearest] run function phan:bots/reaction/_object_index_mine_boost
 #=====
 
 #viable_targets exist? pick one

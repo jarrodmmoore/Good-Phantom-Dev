@@ -19,7 +19,7 @@ execute if score @s inputCooldownC matches 1.. run return 0
 
 #look at one of our viable targets and shoot at it
 scoreboard players set #test value 0
-execute as @e[tag=viableTarget,type=item_display,distance=..60,limit=1,sort=random] run function phan:bots/battle/targeting/consider_shooting_at_ever_eye_pick_me
+execute as @e[type=item_display,tag=viableTarget,distance=..60,limit=1,sort=random] run function phan:bots/battle/targeting/consider_shooting_at_ever_eye_pick_me
 execute if entity 0001e453-0000-0000-0000-000000000007 facing entity 0001e453-0000-0000-0000-000000000007 feet run function phan:bots/items/b1_heavy_projectile/use
 execute unless score #test value matches 0 run scoreboard players operation @s botIgnoreEyeID = #test value
 

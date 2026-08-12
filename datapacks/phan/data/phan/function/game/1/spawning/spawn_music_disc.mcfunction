@@ -32,6 +32,6 @@ function phan:game/1/spawning/spawn__give_generic_data
 
 #50% chance we start the bobbing animation going down instead of up
 execute store result score #random value run random value 1..2
-execute if score #random value matches 1 run tag @e[tag=setMe,type=item_display,distance=..2] add goUp
+execute if score #random value matches 1 run tag @e[type=item_display,tag=setMe,distance=..2] add goUp
 
-tag @e[tag=setMe,type=item_display,distance=..2] remove setMe
+tag @e[type=item_display,tag=setMe,distance=..2] remove setMe

@@ -5,13 +5,13 @@ summon item_display ~ ~.5 ~ {brightness:{sky:10,block:15},Tags:["checkValid","se
 function phan:game/1/spawning/spawn__give_generic_data
 
 #random start value for spin
-execute as @e[tag=setMe,type=item_display,distance=..1] store result score @s bobTime run random value 0..40
+execute as @e[type=item_display,tag=setMe,distance=..1] store result score @s bobTime run random value 0..40
 
 #item box gets our boxID and groupID
-execute if entity @s[tag=itemBoxSpawner] run scoreboard players operation @e[tag=setMe,type=item_display,distance=..1] boxID = @s boxID
-execute if entity @s[tag=itemBoxSpawner] run scoreboard players operation @e[tag=setMe,type=item_display,distance=..1] editArg1 = @s editArg1
-execute if entity @s[tag=itemBoxSpawner,scores={editArg3=1..}] run tag @e[tag=setMe,type=item_display,distance=..1] remove botObjectOfInterest
-execute as @e[tag=setMe,type=item_display,distance=..1] run function phan:game/4/spawning/spawn_item_box_post_summon
+execute if entity @s[tag=itemBoxSpawner] run scoreboard players operation @e[type=item_display,tag=setMe,distance=..1] boxID = @s boxID
+execute if entity @s[tag=itemBoxSpawner] run scoreboard players operation @e[type=item_display,tag=setMe,distance=..1] editArg1 = @s editArg1
+execute if entity @s[tag=itemBoxSpawner,scores={editArg3=1..}] run tag @e[type=item_display,tag=setMe,distance=..1] remove botObjectOfInterest
+execute as @e[type=item_display,tag=setMe,distance=..1] run function phan:game/4/spawning/spawn_item_box_post_summon
 
 #node will wait for signal until it can spawn another one
 execute if entity @s[tag=itemBoxSpawner] run scoreboard players set @s age -1

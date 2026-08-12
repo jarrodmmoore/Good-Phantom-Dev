@@ -6,7 +6,7 @@ execute if score @s age matches 10 run function phan:items/tnt_bot_recogntion_se
 #get a unique ID (for bot temporary target system)
 scoreboard players add #uniqieBoxID value 1
 execute if score #uniqieBoxID value matches 0 run scoreboard players add #uniqieBoxID value 1
-scoreboard players operation @e[tag=setMe,type=item_display,distance=..4] ringID = #uniqieBoxID value
+scoreboard players operation @e[type=item_display,tag=setMe,distance=..4] ringID = #uniqieBoxID value
 
 #don't use vanilla explosions! they will destroy everything and everyone we care about
 data merge entity @s {fuse:10000}

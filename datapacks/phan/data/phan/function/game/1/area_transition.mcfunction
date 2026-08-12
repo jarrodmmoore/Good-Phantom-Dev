@@ -20,7 +20,7 @@ scoreboard players set @e[type=armor_stand,tag=currentSoul] lifespan 3
 execute as @e[type=armor_stand,tag=currentSoul] on passengers run scoreboard players set @s lifespan 3
 
 #camera backs up a lil bit first
-execute if score @s pGameTime matches ..100024 as @e[type=armor_stand,tag=currentCamera] at @s facing entity @e[limit=1,tag=portalCore,type=marker,sort=nearest] feet rotated ~ 0 if block ^ ^1 ^-.3 #phan:not_solid run tp @s ^ ^ ^-.125 ~ ~
+execute if score @s pGameTime matches ..100024 as @e[type=armor_stand,tag=currentCamera] at @s facing entity @e[limit=1,type=marker,tag=portalCore,sort=nearest] feet rotated ~ 0 if block ^ ^1 ^-.3 #phan:not_solid run tp @s ^ ^ ^-.125 ~ ~
 
 #spectate the camera?
 spectate @e[limit=1,type=armor_stand,tag=currentCamera] @s
@@ -35,19 +35,19 @@ scoreboard players operation #pTransitionProgress value = @s pTransitionProgress
 #soul flies toward the next portal (based on index)
 scoreboard players set #followStraightUp value 0
 scoreboard players set #followStraightUpSpeed value 1
-execute if score #pGameTime value matches 100040.. as @e[tag=currentSoul,type=armor_stand] at @s run function phan:levels/_index_area_transition
-execute as @e[tag=currentSoul,type=armor_stand] at @s run function phan:game/1/player_soul_visuals_reduced
+execute if score #pGameTime value matches 100040.. as @e[type=armor_stand,tag=currentSoul] at @s run function phan:levels/_index_area_transition
+execute as @e[type=armor_stand,tag=currentSoul] at @s run function phan:game/1/player_soul_visuals_reduced
 execute if score #pGameTime value matches 100040.. if score #gameState value matches 3 if score @s stardustCollected matches 1.. run function phan:game/3/area_transition_speedup
-execute if score #pGameTime value matches 100120.. as @e[tag=currentSoul,type=armor_stand] at @s if entity @e[type=marker,tag=startPoint,distance=..5] run scoreboard players set #pGameTime value 100500
-execute if score #pTransitionProgress value matches 100040.. if score #10Hz value matches 0 as @e[tag=currentSoul,type=armor_stand] at @s run playsound minecraft:entity.allay.item_thrown master @a[tag=doneWithIntro,distance=..20] ~ ~ ~ 1 2 .5
+execute if score #pGameTime value matches 100120.. as @e[type=armor_stand,tag=currentSoul] at @s if entity @e[type=marker,tag=startPoint,distance=..5] run scoreboard players set #pGameTime value 100500
+execute if score #pTransitionProgress value matches 100040.. if score #10Hz value matches 0 as @e[type=armor_stand,tag=currentSoul] at @s run playsound minecraft:entity.allay.item_thrown master @a[tag=doneWithIntro,distance=..20] ~ ~ ~ 1 2 .5
 #re-sync pGameTime variable in case the soul modified it
 scoreboard players operation @s pGameTime = #pGameTime value
 scoreboard players operation @s pTransitionProgress = #pTransitionProgress value
 
 #camera looks at playerSoul and follows it when it gets too far away
-execute if score #pTransitionProgress value matches 100040.. if score #followStraightUp value matches 0 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow
-execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches 1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_final
-execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches -1 as @e[tag=currentCamera,type=armor_stand] at @s run function phan:game/1/area_transition_cam_follow_final_stationary
+execute if score #pTransitionProgress value matches 100040.. if score #followStraightUp value matches 0 as @e[type=armor_stand,tag=currentCamera] at @s run function phan:game/1/area_transition_cam_follow
+execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches 1 as @e[type=armor_stand,tag=currentCamera] at @s run function phan:game/1/area_transition_cam_follow_final
+execute if score #pTransitionProgress value matches 100040..100140 if score #followStraightUp value matches -1 as @e[type=armor_stand,tag=currentCamera] at @s run function phan:game/1/area_transition_cam_follow_final_stationary
 
 #=====
 
@@ -83,5 +83,5 @@ execute if score @s pGameTime matches 100500.. if score #replayStartAnim value m
 execute if score @s pGameTime matches 100140.. if score @s pCurrentArea matches 4.. run function phan:game/1/start_showing_final_results
 
 #remove tags
-tag @e[tag=currentCamera] remove currentCamera
-tag @e[tag=currentSoul] remove currentSoul
+tag @e[type=armor_stand,tag=currentCamera] remove currentCamera
+tag @e[type=armor_stand,tag=currentSoul] remove currentSoul

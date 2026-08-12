@@ -21,9 +21,9 @@ scoreboard players set @e[type=armor_stand,tag=currentCamera] lifespan 20
 #scoreboard players set @e[type=armor_stand,tag=playerSoul] lifespan 20
 
 #soul flies upwards
-execute as @e[tag=currentSoul,type=armor_stand] at @s run function phan:game/1/player_soul_visuals
-execute as @e[tag=currentSoul,type=armor_stand] at @s run function phan:levels/_index_area_transition
-execute if score #10Hz value matches 0 as @e[tag=currentSoul,type=armor_stand] at @s run playsound minecraft:entity.allay.item_thrown master @a[tag=doneWithIntro] ~ ~ ~ 1 2 .5
+execute as @e[type=armor_stand,tag=currentSoul] at @s run function phan:game/1/player_soul_visuals
+execute as @e[type=armor_stand,tag=currentSoul] at @s run function phan:levels/_index_area_transition
+execute if score #10Hz value matches 0 as @e[type=armor_stand,tag=currentSoul] at @s run playsound minecraft:entity.allay.item_thrown master @a[tag=doneWithIntro] ~ ~ ~ 1 2 .5
 #re-sync pGameTime variable in case the soul modified it
 scoreboard players operation @s pGameTime = #pGameTime value
 scoreboard players operation @s pTransitionProgress = #pTransitionProgress value
@@ -69,9 +69,9 @@ scoreboard players operation @s pGameTime = #pGameTime value
 
 
 #run home jack
-execute if score @s pGameTime matches 300.. run kill @e[tag=currentCamera,type=armor_stand]
+execute if score @s pGameTime matches 300.. run kill @e[type=armor_stand,tag=currentCamera]
 execute if score @s pGameTime matches 300.. run function phan:game/0/_0_init
 
 #clean up tags
-tag @e[tag=currentCamera] remove currentCamera
-tag @e[tag=currentSoul] remove currentSoul
+tag @e[type=armor_stand,tag=currentCamera] remove currentCamera
+tag @e[type=armor_stand,tag=currentSoul] remove currentSoul

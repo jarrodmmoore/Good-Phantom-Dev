@@ -8,4 +8,4 @@ tag @s add tellMe
 #levelEntry armor_stand will handle this
 scoreboard players operation #checkID value = @s levelUID
 execute store result storage phan:level_index level_id int 1 run scoreboard players get @s levelUID
-execute as @e[tag=levelEntry,type=armor_stand] if score @s levelUID = #checkID value run function phan:level_manager/panel/general/_menu with storage phan:level_index
+execute as @e[type=armor_stand,tag=levelEntry] if score @s levelUID = #checkID value run function phan:level_manager/panel/general/_menu with storage phan:level_index

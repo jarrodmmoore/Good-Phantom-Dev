@@ -33,8 +33,8 @@ scoreboard players operation #test2 value -= @s botTargetYY
 execute if score @s botBehavior matches 1 if score #test2 value matches ..200 run scoreboard players set #test value 0
 
 #bot WILL use if they're in a panic
-execute if entity @e[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run scoreboard players set #test value 1
-execute if entity @e[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run tag @s remove botFlightPanic
+execute if entity @s[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run scoreboard players set #test value 1
+execute if entity @s[tag=botFlightPanic] unless entity @s[scores={botSkill=5..,energy=3..}] run tag @s remove botFlightPanic
 
 
 #exit out if we're not using this

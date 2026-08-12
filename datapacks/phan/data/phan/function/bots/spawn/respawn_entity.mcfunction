@@ -13,7 +13,7 @@ $summon mannequin ~ ~-100 ~ {Tags:["ai","setMe","playing","formerlyAI","tntCanHi
 execute if entity @s[tag=botRival] run scoreboard players set #setBotAsRival value 1
 
 #if we respawned the bot at the location of a marker, quickly record coordinates and send back to botController
-execute if entity @s[tag=botNeedMarkerToRespawn] as @e[tag=setMe,type=mannequin] at @s run function phan:bots/spawn/respawn_entity_post_summon_coordinates
+execute if entity @s[tag=botNeedMarkerToRespawn] as @e[type=mannequin,tag=setMe] at @s run function phan:bots/spawn/respawn_entity_post_summon_coordinates
 execute if entity @s[tag=botNeedMarkerToRespawn] run function phan:bots/spawn/update_coordinates
 
 #important post-summon stuff on mannequin
@@ -22,7 +22,7 @@ scoreboard players operation #editArg1 value = @s botInstance
 scoreboard players operation #editArg2 value = @s botID
 scoreboard players operation #editArg3 value = @s botSkill
 scoreboard players operation #editPitch value = @s startGrid
-execute as @e[tag=setMe,type=mannequin] run function phan:bots/spawn/respawn_entity_post_summon
+execute as @e[type=mannequin,tag=setMe] run function phan:bots/spawn/respawn_entity_post_summon
 #(setMe tag removed during function)
 
 #send data to bot

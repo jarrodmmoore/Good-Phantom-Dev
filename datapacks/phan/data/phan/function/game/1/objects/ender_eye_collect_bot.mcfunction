@@ -1,6 +1,6 @@
 #we can assume gameState=4
 
-tag @e[limit=1,sort=nearest,tag=ai,type=mannequin,distance=..3] add catcher
+tag @e[limit=1,sort=nearest,type=mannequin,tag=ai,distance=..3] add catcher
 execute at @e[limit=1,tag=catcher,type=mannequin,distance=..3] positioned ~ ~1 ~ run tp @s ~ ~ ~
 execute as @e[limit=1,tag=catcher,type=mannequin,distance=..3] run scoreboard players add @s eyesToAdd 1
 #execute if score #gameState value matches 4 as @e[limit=1,tag=catcher,type=mannequin,distance=..2] run function phan:player/tell_spectators

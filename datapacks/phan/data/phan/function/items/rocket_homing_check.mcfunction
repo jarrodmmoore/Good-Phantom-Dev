@@ -1,7 +1,7 @@
 #home in on things that are NOT our owner
 scoreboard players operation #checkID value = @s playerID
 execute as @a if score @s playerID = #checkID value run tag @s add rocketOwner
-execute if score #botsEnabled value matches 1.. as @e[tag=ai,type=mannequin] if score @s playerID = #checkID value run tag @s add rocketOwner
+execute if score #botsEnabled value matches 1.. as @e[type=mannequin,tag=ai] if score @s playerID = #checkID value run tag @s add rocketOwner
 
 #check in a big sphere ahead of where we're moving to
 execute positioned ^ ^ ^11 run tag @e[tag=tntCanHit,tag=!rocketOwner,distance=..10] add homingTarget

@@ -24,14 +24,14 @@ tag @s add noInventory
 
 #summon camera!
 summon armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["camera","setup"]}
-scoreboard players operation @e[tag=setup] playerID = @s playerID
-tp @e[tag=camera,tag=setup,type=armor_stand] @s
+scoreboard players operation @e[type=armor_stand,tag=setup] playerID = @s playerID
+tp @e[type=armor_stand,tag=camera,tag=setup] @s
 gamemode spectator @s
 spectate @e[limit=1,type=armor_stand,tag=camera,tag=setup] @s
 scoreboard players set @s spectatingObject 2
 
 #summon soul
-execute at @e[limit=1,sort=nearest,tag=portalCore,type=marker] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/soul"}}}]}
+execute at @e[limit=1,sort=nearest,type=marker,tag=portalCore] positioned ~ ~1 ~ run summon armor_stand ~ ~ ~ {Tags:["playerSoul","setup2"],Marker:1b,Invulnerable:1b,NoGravity:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:red_wool",count:1b,components:{"item_model":"gp/object/soul"}}}]}
 scoreboard players operation @e[tag=setup2] playerID = @s playerID
 
 #camera and soul are temporary

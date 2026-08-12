@@ -93,5 +93,5 @@ execute if score @s AIBC_event matches -1 if score @s AIBC_modifier matches 1 ru
 #=====
 
 #generic lifespan set for item displays
-scoreboard players set @e[tag=setMe,type=item_display] lifespan 41
-tag @e[tag=setMe,type=item_display] remove setMe
+scoreboard players set @e[type=item_display,tag=setMe] lifespan 41
+tag @e[type=item_display,tag=setMe] remove setMe

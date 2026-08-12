@@ -9,7 +9,7 @@
 #$(level_id)
 
 #associated armor stands gets its recorded scores wiped
-$execute as @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={levelUID=$(level_id)}] run function phan:high_score/erase_level_scores
+$execute as @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={levelUID=$(level_id)}] run function phan:high_score/erase_level_scores
 
 #re-summon all score displays
 execute if score #gameState value matches 0 run function phan:high_score/display_start

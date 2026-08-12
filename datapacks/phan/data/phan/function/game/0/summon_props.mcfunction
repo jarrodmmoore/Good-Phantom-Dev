@@ -21,7 +21,7 @@ function phan:high_score/display_start
 execute if score #scoresRecorded value matches 1.. unless block 194 -8 125 redstone_wire run setblock 194 -8 125 redstone_wire
 execute if score #scoresRecorded value matches 1.. unless block 194 -7 125 redstone_lamp run setblock 194 -7 125 redstone_lamp
 execute if score #scoresRecorded value matches 1.. unless block 194 -6 125 lever run setblock 194 -6 125 lever[face=floor,facing=west]
-tag @e[tag=rotateText,type=text_display] remove rotateText
+tag @e[type=text_display,tag=rotateText] remove rotateText
 execute if score #scoresRecorded value matches 0 run setblock 194 -8 125 spruce_planks
 execute if score #scoresRecorded value matches 0 run fill 194 -7 125 194 -6 125 air
 
@@ -31,7 +31,7 @@ function phan:game/0/summon_trophies
 #practice area text
 summon text_display 192 -4 118 {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:{translate:"gp.practice.practice_area","fallback":"Practice Area",color:"white"}}
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~-.3 ~.6 ~ 270 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+tag @e[type=text_display,tag=rotateText] remove rotateText
 
 #practice area disc, if found
 execute if score #disc_found_6 value matches 1.. positioned 192 -7 121 positioned ~.03 ~.025 ~-.05 run summon item_display ~ ~ ~ {Tags:["lobbyProp"],Rotation:[250.0f,-90.0f],item:{id:"minecraft:music_disc_blocks",count:1b},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[0.5f,0.5f,0.5f]}}
@@ -128,11 +128,11 @@ execute if score #disc_found_9 value matches 1.. positioned 200 -6 99 positioned
 #bonus dreams text
 execute if score #unlockedBonusRooms value matches 1.. run summon text_display 236 -7 104 {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:{translate:"gp.lobby.bonus_dreams","fallback":"Bonus Dreams",color:"white"}}
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~.8 ~-.4 ~ ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+tag @e[type=text_display,tag=rotateText] remove rotateText
 #custom dreams text
 execute if score #unlockedBonusRooms value matches 1.. run summon text_display 236 -7 132 {Tags:["lobbyProp","rotateText"],alignment:"center",line_width:1000,brightness:{sky:0,block:15},billboard:"fixed",background:16711680,text:{translate:"gp.lobby.custom_dreams","fallback":"Custom Dreams",color:"white"}}
 execute as @e[type=text_display,tag=rotateText] at @s run tp @s ~.5 ~.8 ~.4 ~180 ~
-tag @e[tag=rotateText,type=text_display] remove rotateText
+tag @e[type=text_display,tag=rotateText] remove rotateText
 #tv
 execute positioned 246 -6 118 run summon item_display ~ ~ ~ {Tags:["lobbyProp"],Rotation:[90.0f,0.0f],item:{id:"stone",components:{"item_model":"gp/object/big_tv"}},transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[4.0f,4.0f,4.0f]}}
 #console, controller, tv screen

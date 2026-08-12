@@ -1,8 +1,8 @@
 #determine which directions exist
-execute if score #waypointDir1 value matches 1.. in overworld run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=1..13}] add directionViable
-execute if score #waypointDir2 value matches 1.. in overworld run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=14..16}] add directionViable
+execute if score #waypointDir1 value matches 1.. in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=1..13}] add directionViable
+execute if score #waypointDir2 value matches 1.. in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=14..16}] add directionViable
 execute if score #waypointDir3 value matches 1.. run tag 00000000-0000-0328-0000-000000000011 add directionViable
-execute if score #waypointDir4 value matches 1.. in overworld run tag @e[tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,type=armor_stand,scores={r=18..20}] add directionViable
+execute if score #waypointDir4 value matches 1.. in overworld run tag @e[type=armor_stand,tag=randomize,x=-1,y=-64,z=-1,dx=1,dy=1,dz=1,scores={r=18..20}] add directionViable
 
 #ignore any directions we previously banned
 execute if score #wpRestrictDirections value matches 1.. run function phan:bots/behaviors/1_follow_waypoints/pick_direction/a_restrict

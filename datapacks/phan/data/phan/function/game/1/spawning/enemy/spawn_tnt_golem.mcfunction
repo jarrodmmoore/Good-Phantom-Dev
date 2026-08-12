@@ -4,9 +4,9 @@ summon item_display ~ ~ ~ {Tags:["checkValid","setMe","baddy","groupB","shootabl
 #Q: wouldn't it be easier to make this an armor stand? it has the perfect proportions and would interpolate its own rotation
 #A: yes, but changes to the armor stand head slot don't always render when we need it to. so item_display wins out, here.
 #update: i later discovered that teleport_duration is a thing. looks like i get to have my cake and eat it, too!
-scoreboard players set @e[tag=setMe,type=item_display,distance=..2] enemyMaxHP 540
-execute if score #assist_enemies value matches 0 run scoreboard players set @e[tag=setMe,type=item_display,distance=..2] enemyHP 540
-execute if score #assist_enemies value matches 1 run scoreboard players set @e[tag=setMe,type=item_display,distance=..2] enemyHP 520
+scoreboard players set @e[type=item_display,tag=setMe,distance=..2] enemyMaxHP 540
+execute if score #assist_enemies value matches 0 run scoreboard players set @e[type=item_display,tag=setMe,distance=..2] enemyHP 540
+execute if score #assist_enemies value matches 1 run scoreboard players set @e[type=item_display,tag=setMe,distance=..2] enemyHP 520
 #note: you can add tag "startHideHP" to make HP not show until damage is taken
 
 #if we were spawned by a spawner, do some fancy stuff
@@ -19,10 +19,10 @@ execute if entity @s[tag=spawner] run function phan:game/1/spawning/spawn__give_
 execute if entity @s[tag=!spawner] run function phan:game/1/spawning/spawn__give_generic_data
 
 #entity gets same rotation as whatever spawned it
-execute as @e[tag=setMe,type=item_display,distance=..2] run tp @s ~ ~ ~ ~ ~
+execute as @e[type=item_display,tag=setMe,distance=..2] run tp @s ~ ~ ~ ~ ~
 
 #join team for glowing color
-team join colorRed @e[tag=setMe,type=item_display,distance=..2]
+team join colorRed @e[type=item_display,tag=setMe,distance=..2]
 
 #clean up tag
-tag @e[tag=setMe,type=item_display,distance=..2] remove setMe
+tag @e[type=item_display,tag=setMe,distance=..2] remove setMe
