@@ -5,7 +5,7 @@ time set 18000
 weather clear
 
 #skybox
-scoreboard players set @a skyboxSet 1
+scoreboard players set @a skyboxSet 4
 
 #location (by default, this is the fountain in the practice area)
 scoreboard players set #podiumSequenceX value 840

@@ -13,7 +13,7 @@ execute unless entity @e[tag=randomize,type=armor_stand,scores={r=1..}] run tell
 execute unless entity @e[tag=randomize,type=armor_stand,scores={r=1..}] run function phan:world_setup
 
 #gameState is zero, adopt skybox but don't do anything else
-execute if score #gameState value matches 0 run scoreboard players set @s skyboxSet 1
+execute if score #gameState value matches 0 run scoreboard players set @s skyboxSet 4
 
 #gameState is NOT zero, lose the doneWithIntro tag right away and let the game TP us to our player.
 execute if score #gameState value matches 1 run function phan:join/intro/mid_game_join_gameplay

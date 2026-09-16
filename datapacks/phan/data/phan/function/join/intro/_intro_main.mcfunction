@@ -17,12 +17,14 @@ scoreboard players set @s[scores={introProgress=20..59,joinCount=2..}] introProg
 execute if score @s introProgress matches 60 if score @s carrotInput matches 1.. run function phan:join/intro/advance
 
 #screen 2
-scoreboard players add @s[scores={introProgress=61..99}] introProgress 1
-execute if score @s introProgress matches 62 run title @s actionbar [""]
-execute if score @s introProgress matches 62..100 run title @s title ["",{text:"\uE003",shadow_color:[0,0,0,0]}]
-execute if score @s introProgress matches 100 run title @s actionbar ["",{translate:"gp.lobby.press_key_to_continue",color:"#F0F0B0",with:[{keybind:"key.use",color:"white"}]}]
-scoreboard players set @s[scores={introProgress=76..99,joinCount=2..}] introProgress 100
-execute if score @s introProgress matches 100 if score @s carrotInput matches 1.. run function phan:join/intro/advance
+#NO LONGER NEEDED! players are no longer required to use Improved Transparency to see skyboxes
+scoreboard players set @s[scores={introProgress=61..99}] introProgress 101
+#scoreboard players add @s[scores={introProgress=61..99}] introProgress 1
+#execute if score @s introProgress matches 62 run title @s actionbar [""]
+#execute if score @s introProgress matches 62..100 run title @s title ["",{text:"\uE003",shadow_color:[0,0,0,0]}]
+#execute if score @s introProgress matches 100 run title @s actionbar ["",{translate:"gp.lobby.press_key_to_continue",color:"#F0F0B0",with:[{keybind:"key.use",color:"white"}]}]
+#scoreboard players set @s[scores={introProgress=76..99,joinCount=2..}] introProgress 100
+#execute if score @s introProgress matches 100 if score @s carrotInput matches 1.. run function phan:join/intro/advance
 
 #screen 3
 scoreboard players add @s[scores={introProgress=101..139}] introProgress 1

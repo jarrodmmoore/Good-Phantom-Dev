@@ -13,7 +13,7 @@ execute if score @s introProgress matches 160 run gamemode spectator @s
 execute if score @s joinCount matches ..1 if score @s introProgress matches 160.. run spectate @e[limit=1,type=armor_stand,tag=flyBuddy] @s
 execute if score @s joinCount matches 2.. if score @s introProgress matches 160..180 run spectate @e[limit=1,type=armor_stand,tag=flyBuddy] @s
 execute if score @s joinCount matches 2.. if score @s introProgress matches 180 run title @s actionbar ["",{keybind:"key.sneak"},{text:" "},{text:"--",color:"gray"},{text:" "},{translate:"gp.lobby.skip_intro",color:"gray"}]
-execute if score @s joinCount matches 2.. if entity @s[gamemode=spectator] if score @s introProgress matches 180.. unless entity @e[limit=1,type=armor_stand,tag=flyBuddy,distance=..2] run function phan:join/intro/finished_flying_early
+execute if score @s joinCount matches 2.. if entity @s[gamemode=spectator] if score @s introProgress matches 161.. unless entity @e[limit=1,type=armor_stand,tag=flyBuddy,distance=..2] run function phan:join/intro/finished_flying_early
 
 #armor stand movement path
 execute if score @s introProgress matches 144..257 as @e[tag=flyBuddy,type=armor_stand] at @s facing 113 37 147 run tp @s ^1 ^ ^ ~-90 20

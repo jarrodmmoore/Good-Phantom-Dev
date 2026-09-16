@@ -2,7 +2,7 @@
 tp @s 859 33 -1054 90 0
 effect give @s blindness 2 1 true
 effect give @s slow_falling 1 0 true
-scoreboard players set @s skyboxSet 1
+scoreboard players set @s skyboxSet 4
 execute if score #gameState value matches 0 run tag @s add playing
 
 #reset scores and clear inventory

@@ -127,7 +127,7 @@ function phan:levels/_dream_discovery
 #=====
 
 #set skybox and conditions
-scoreboard players set @a skyboxSet 1
+scoreboard players set @a skyboxSet 4
 scoreboard players set #nightVision value 0
 tag @a remove getNightVisionInSA
 

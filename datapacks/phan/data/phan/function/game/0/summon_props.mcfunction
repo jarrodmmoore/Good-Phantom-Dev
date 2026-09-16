@@ -106,7 +106,7 @@ execute positioned 203 -7 139 positioned ~ ~-.3 ~ run summon armor_stand ~ ~ ~ {
 #player
 execute positioned 204 -8 138 positioned ~.5 ~-.2 ~.75 run function phan:level_manager/load/spawn_sleeping_player {level_uid:4,head_rotation:'[0.0f,0.0f,0.0f]'}
 #kick drum
-execute positioned 207 -7 137 run summon block_display ~ ~ ~-.5 {Tags:["lobbyProp"],block_state:{Name:"minecraft:netherite_block"}}
+execute positioned 207 -7 137 run summon block_display ~ ~ ~-.5 {Tags:["lobbyProp"],block_state:{id:"minecraft:netherite_block"}}
 #title
 execute if score #dream4Completed value matches 1.. positioned 204 -3 139 run function phan:level_manager/load/spawn_name_display {level_uid:4,rotation:180,offset_x:'.5',offset_y:'.25',offset_z:'.4'}
 #discs, if found

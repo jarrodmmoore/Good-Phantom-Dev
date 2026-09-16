@@ -1,5 +1,5 @@
 #summon aec
-summon area_effect_cloud ~ ~ ~ {Tags:["podiumData","setMe"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:400}
+summon area_effect_cloud ~ ~ ~ {Tags:["podiumData","setMe"],custom_particle:{type:"block",block_state:{id:"air"}},WaitTime:0,Duration:400}
 
 #name is our name
 tag @s add self

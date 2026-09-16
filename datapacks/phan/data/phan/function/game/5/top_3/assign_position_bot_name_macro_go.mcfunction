@@ -1,2 +1,2 @@
 #summon aec
-$summon area_effect_cloud ~ ~ ~ {Tags:["podiumData","setMe"],custom_particle:{type:"block",block_state:{Name:"air"}},WaitTime:0,Duration:400,CustomName:[{text:"\uE$(colortag) ",color:"white"},{text:"$(username)",color:"aqua"}]}
+$summon area_effect_cloud ~ ~ ~ {Tags:["podiumData","setMe"],custom_particle:{type:"block",block_state:{id:"air"}},WaitTime:0,Duration:400,CustomName:[{text:"\uE$(colortag) ",color:"white"},{text:"$(username)",color:"aqua"}]}

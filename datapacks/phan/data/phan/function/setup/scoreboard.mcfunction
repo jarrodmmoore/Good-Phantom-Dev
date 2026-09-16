@@ -371,7 +371,6 @@ scoreboard objectives add highestCombo dummy
 #skybox
 scoreboard objectives add skybox dummy
 scoreboard objectives add skyboxSet dummy
-scoreboard objectives add skyboxSync dummy
 #debug
 scoreboard objectives add debug dummy
 #movement pattern of some entities

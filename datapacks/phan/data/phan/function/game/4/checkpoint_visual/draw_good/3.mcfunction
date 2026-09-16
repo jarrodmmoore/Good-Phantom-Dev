@@ -1,4 +1,4 @@
-particle block_marker{block_state:{Name:"minecraft:light",Properties:{level:"15"}}} ~ ~1 ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=2}]
+particle block_marker{block_state:{id:"minecraft:light",properties:{level:"15"}}} ~ ~1 ~ 0 0 0 1 1 force @a[tag=!vsHomeStretch,scores={check=2}]
 execute if entity @s[tag=checkWarn] run particle block_marker{block_state:"barrier"} ~ ~1 ~ 0 0 0 1 1 normal @a[tag=playing,scores={check=..1,inputCooldownB=..0}]
 execute if entity @s[tag=checkWrongWay] run particle block_marker{block_state:"barrier"} ~ ~1 ~ 0 0 0 1 1 normal @a[tag=playing,scores={checkFake=4..}]
 

@@ -1,7 +1,7 @@
 #go to the place
 tp @s 879 2 -972 315 0
 effect give @s blindness 1 1 true
-scoreboard players set @s skyboxSet 1
+scoreboard players set @s skyboxSet 4
 
 #is anyone in the practice course? if not, set a few extra things up
 execute unless entity @a[tag=practiceCourse] run function phan:game/0/player/start_practice_course_first_player
